@@ -2,7 +2,7 @@
 export default function Home() {
   return (
     <div className="">
-      <h1>Clamo Projects</h1>
+      <h1>Clamo Projects s</h1>
     </div>
   );
 }
