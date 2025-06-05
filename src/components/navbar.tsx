@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Phone from "../../public/icons/phone.png";
-import Flag from "../../public/icons/uzbekistan.png";
-import LogoClamo from "../../public/icons/LogoClamo.svg";
-import Down from "../../public/icons/down.png";
+import Phone from "../assets/icons/phone.png";
+import Flag from "../assets/icons/uzbekistan.png";
+import LogoClamo from "../assets/icons/LogoClamo.svg";
+import Down from "../assets/icons/down.png";
 
 export default function Navbar() {
   return (
