@@ -3,12 +3,23 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { TeamMemberCard } from "@/Components/TeamMemberCard";
+import img1 from "../assets/1.png";
+import img2 from "../assets/2.png";
+import img3 from "../assets/3.png";
+import img4 from "../assets/4.png";
+import img5 from "../assets/1.png";
+import img6 from "../assets/2.png";
+import img7 from "../assets/3.png";
+import img8 from "../assets/4.png";
+import { StaticImageData } from "next/image";
+
+
 
 type TeamMember = {
   id: number;
   name: string;
   title?: string;
-  image: string;
+  image: StaticImageData;
 };
 
 const members: TeamMember[] = [
@@ -16,63 +27,68 @@ const members: TeamMember[] = [
     id: 1,
     name: "Sativaldiyev Sanjar Yuldashvayevich",
     title: "Akkreditatsiyalash standartlarini tashkillashtirish, takomillashtirish va tashqi kompleks baholash bo‘limi boshlig‘i",
-    image: "/src/assets/1.png",
+    image: img1,
   },
   {
     id: 2,
     name: "Sativaldiyev Sanjar Yuldashvayevich",
     title: "Akkreditatsiyalash standartlarini tashkillashtirish, takomillashtirish va tashqi kompleks baholash bo‘limi boshlig‘i",
-    image: "/src/assets/2.png",
+    image: img2,
   },
   {
     id: 3,
     name: "Sativaldiyev Sanjar Yuldashvayevich",
     title: "Akkreditatsiyalash standartlarini tashkillashtirish, takomillashtirish va tashqi kompleks baholash bo‘limi boshlig‘i",
-    image: "/src/assets/3.png",
+    image: img3,
   },
   {
     id: 4,
     name: "Sativaldiyev Sanjar Yuldashvayevich",
     title: "Akkreditatsiyalash standartlarini tashkillashtirish, takomillashtirish va tashqi kompleks baholash bo‘limi boshlig‘i",
-    image: "/src/assets/4.png",
-  },
-    {
-    id: 1,
-    name: "Sativaldiyev Sanjar Yuldashvayevich",
-    title: "Akkreditatsiyalash standartlarini tashkillashtirish, takomillashtirish va tashqi kompleks baholash bo‘limi boshlig‘i",
-    image: "/src/assets/1.png",
+    image: img4,
   },
   {
-    id: 2,
+    id: 5,
     name: "Sativaldiyev Sanjar Yuldashvayevich",
     title: "Akkreditatsiyalash standartlarini tashkillashtirish, takomillashtirish va tashqi kompleks baholash bo‘limi boshlig‘i",
-    image: "/src/assets/2.png",
+    image: img5,
   },
   {
-    id: 3,
+    id: 6,
     name: "Sativaldiyev Sanjar Yuldashvayevich",
     title: "Akkreditatsiyalash standartlarini tashkillashtirish, takomillashtirish va tashqi kompleks baholash bo‘limi boshlig‘i",
-    image: "/src/assets/3.png",
+    image: img6,
   },
   {
-    id: 4,
+    id: 7,
     name: "Sativaldiyev Sanjar Yuldashvayevich",
     title: "Akkreditatsiyalash standartlarini tashkillashtirish, takomillashtirish va tashqi kompleks baholash bo‘limi boshlig‘i",
-    image: "/src/assets/4.png",
+    image: img7,
+  },
+  {
+    id: 8,
+    name: "Sativaldiyev Sanjar Yuldashvayevich",
+    title: "Akkreditatsiyalash standartlarini tashkillashtirish, takomillashtirish va tashqi kompleks baholash bo‘limi boshlig‘i",
+    image: img8,
   },
 ];
 
 export default function TeamCarousel() {
-  const [index, setIndex] = useState(0);
+  const visibleCount = 4; // 1 sahifada ko'rinadigan kartalar soni
+  const totalCount = members.length;
 
-  const visible = members.slice(index, index + 4);
+  // Maksimal index - shu holatda, shuni hisoblash kerakki,
+  // oxirgi ko'rinadigan karta 4-chi bo'lsa, indeks 4 ta qolgan bo'lishi kerak:
+  const maxIndex = totalCount - visibleCount; // 8 - 4 = 4
 
-  const next = () => {
-    if (index < members.length - 4) setIndex(index + 1);
-  };
+  const [index, setIndex] = useState(0); // karta indeksi (qayerdan boshlanadi)
 
   const prev = () => {
     if (index > 0) setIndex(index - 1);
+  };
+
+  const next = () => {
+    if (index < maxIndex) setIndex(index + 1);
   };
 
   return (
@@ -82,26 +98,42 @@ export default function TeamCarousel() {
         Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda...
       </p>
 
-      <div className="flex justify-center gap-6">
-        {visible.map((member) => (
-          <TeamMemberCard key={member.id} member={member} />
-        ))}
+      <div className="overflow-hidden">
+        <div
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{
+            // Siljish bitta kartaning kengligi * index (foizda)
+            transform: `translateX(-${(100 / totalCount) * index}%)`,
+            // To'liq kenglik (karta soni * har bir kartaning kengligi %)
+            width: `${(100 / visibleCount) * totalCount}%`,
+          }}
+        >
+          {members.map((member) => (
+            <div
+              key={member.id}
+              style={{ width: `${100 / totalCount}%` }} // har karta kengligi
+              className="flex-shrink-0"
+            >
+              <TeamMemberCard member={member} />
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="mt-6 flex justify-center items-center gap-4">
         <button
           onClick={prev}
           disabled={index === 0}
-          className="p-2 bg-white shadow rounded-full disabled:opacity-30"
+          className="group p-2 bg-white border rounded-full hover:bg-[#23B3FC] transition-all duration-200 disabled:opacity-50"
         >
-          <ChevronLeft />
+          <ChevronLeft className="stroke-[1.5] group-hover:stroke-white transition-all duration-200" />
         </button>
         <button
           onClick={next}
-          disabled={index >= members.length - 3}
-          className="p-2 bg-white shadow rounded-full disabled:opacity-30"
+          disabled={index >= maxIndex}
+          className="group p-2 bg-white border rounded-full hover:bg-[#23B3FC] transition-all duration-200 disabled:opacity-50"
         >
-          <ChevronRight />
+          <ChevronRight className="stroke-[1.5] group-hover:stroke-white transition-all duration-200" />
         </button>
       </div>
     </div>
