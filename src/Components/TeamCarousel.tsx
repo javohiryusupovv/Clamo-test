@@ -124,14 +124,14 @@ export default function TeamCarousel() {
         <button
           onClick={prev}
           disabled={index === 0}
-          className="group p-2 bg-white border rounded-full hover:bg-[#23B3FC] transition-all duration-200 disabled:opacity-50"
+          className="group p-2 bg-white border rounded-full hover:border-transparent hover:bg-[#23B3FC] transition-all duration-200 disabled:opacity-50"
         >
           <ChevronLeft className="stroke-[1.5] group-hover:stroke-white transition-all duration-200" />
         </button>
         <button
           onClick={next}
           disabled={index >= maxIndex}
-          className="group p-2 bg-white border rounded-full hover:bg-[#23B3FC] transition-all duration-200 disabled:opacity-50"
+          className="group p-2 bg-white border rounded-full hover:border-transparent hover:bg-[#23B3FC] transition-all duration-200 disabled:opacity-50"
         >
           <ChevronRight className="stroke-[1.5] group-hover:stroke-white transition-all duration-200" />
         </button>
