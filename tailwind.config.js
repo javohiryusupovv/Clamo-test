@@ -20,6 +20,10 @@ module.exports = {
         xl: '1184px',
       }
     },
+    boxShadow: {
+        'hero-left': '84px 100px 200px 12px rgb(166,217,242)',
+        'box-shadow': '-119px 161px 240px -116px rgba(255,255,255,0.75)',
+      },
     },
   },
   plugins: [],
