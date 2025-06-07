@@ -1,36 +1,33 @@
 import Image from "next/image";
 import Doctors from "@/assets/Doctors.png";
+import gbCircle from "../../public/herobg.png"
+import shape from "../../public/shape.png"
+import "../styles/hero.css"
+
+
+import { ChevronRight } from 'lucide-react';
+
 
 export default function Hero() {
   return (
-    <div>
+    <div className="container w-full h-[310px] ">
       {/* Shifokorlar */}
-      <div className=" w-full h-[620px] rounded-[36px] bg-[#0653C9] -z-[2] container mb-[150px] relative flex flex-col justify-between gap-16 p-12">
-        <div>
-          <div>
-            <p className="font-medium text-sm uppercase text-[#FFFFFF] opacity-[60%] pb-2">
-              biz haqimizda
-            </p>
-            <h1 className="font-bold text-[32px] leading-[110%] text-[#FFFFFF] pb-7">
-              Tibbiyot sohasidagi xalqaro <br /> hamkorlik va tajriba <br />{" "}
-              almashinuvi
-            </h1>
-          </div>
-          <div>
-            <Image
-              src={Doctors}
-              width={400}
-              height={400}
-              alt="Doctors"
-              className="object-cover pt-[5px] pl-[58px] absolute z-10"
-            />
-          </div>
-          <div className="">
-            <div className="bg-[url('@/assets/circleBlue.png')] bg-no-repeat bg-contain w-[550px] h-[200px] absolute -rotate-[20deg] top-[215px] left-[17px] -z-[1]"></div>
-          </div>
+      <div className="flex justify-between items-center w-full h-[310px] rounded-[36px] bg-[#0653C9] overflow-hidden circleCover">
+        <div className="h-1/4">
+          <Image
+            src={Doctors}
+            alt="Doctors"
+            className=" absolute bottom-0 left-14 w-[290px] z-10"
+          />
+          <Image src={shape} alt="shape" className="absolute bottom-0 left-0" />
         </div>
-        <div className="bg-white">
-          <p className=" absolute z-10 bottom-8 text-sm font-medium leading-[130%] text-[#FFFFFF]">CLAMO jahon standartlariga mos tibbiy xizmat ko‘rsatish maqsadida yetakchi xalqaro tibbiyot muassasalari va tashkilotlari bilan hamkorlik qiladi. Biz eng so‘nggi <br /> innovatsiyalar, ilg‘or texnologiyalar va tajriba almashinuviga tayanamiz.</p>
+        <div className="w-7/12">
+          <Image src={gbCircle} alt="bg Cirlce" className=" absolute right-0 top-0 z-[22]" />
+          <article className="relative top-0 left-0 z-[22]">
+            <h3 className=" text-[40px] font-bold text-white leading-[50px] mb-2">Tibbiyot Sohasidagi Xalqaro Hamkorlik va Tajriba Almashinuvi</h3>
+            <p className="text-[16px] opacity-60 text-white mb-7">Soha bo'yicha har qanday savolingizga javob beramiz</p>
+            <button className="px-10 py-2 cursor-pointer rounded-md flex items-center gap-1 text-white bg-[#23B3FC] hover:bg-[#23B3FC]">Batafsil tanishish <ChevronRight className="stroke-white" /></button>
+          </article>
         </div>
       </div>
     </div>
