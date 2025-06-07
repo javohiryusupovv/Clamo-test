@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <div>
       {/* Shifokorlar */}
-      <div className=" w-full h-[620px] rounded-[36px] bg-[#0653C9] -z-[2] container mb-[150px] relative flex justify-between gap-16 p-12">
+      <div className=" w-full h-[620px] rounded-[36px] bg-[#0653C9] -z-[2] container mb-[150px] relative flex flex-col justify-between gap-16 p-12">
         <div>
           <div>
             <p className="font-medium text-sm uppercase text-[#FFFFFF] opacity-[60%] pb-2">

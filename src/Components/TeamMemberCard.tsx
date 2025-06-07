@@ -1,11 +1,11 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 
 type TeamMember = {
   id: number;
   name: string;
   title?: string;
-  image: string;
+  image: StaticImageData;
 };
 
 type Props = {
