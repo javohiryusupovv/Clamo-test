@@ -1,11 +1,12 @@
 import React from 'react';
-import AboutUs from "./AboutUs/page";
+import AboutUs from "./aboutus/page";
+import Main from '@/section/main/main';
 
 export default function page() {
   return (
-    <div>
-        <Main/>
-    <AboutUs />
+    <>
+      <Main />
+      <AboutUs />
     </>
   )
 }
