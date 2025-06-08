@@ -1,0 +1,60 @@
+import Image from "next/image";
+import Link from "next/link";
+import Marquee from "react-fast-marquee";
+
+import myTaxi from "../../assets/logo/mytaxi.svg";
+import suvtaminot from "../../assets/logo/uzsuvozi 1.svg";
+import asakabank from "../../assets/logo/horizontal.svg";
+import yoshlarishlar from "../../assets/logo/yoshlar.svg";
+import universitetyuridik from "../../assets/logo/yuridik.png";
+
+export default function Partnyor() {
+    const logos = [asakabank, suvtaminot, universitetyuridik, myTaxi, yoshlarishlar, universitetyuridik, myTaxi];
+
+    return (
+        <div className="py-16 mb-9">
+            <article className="container text-center mb-10">
+                <h3 className="text-4xl font-bold mb-2 text-[#012548]">Hamkorlarimiz</h3>
+                <p className="text-lg text-[#012548] font-medium">
+                    Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.
+                </p>
+            </article>
+
+            <div className="space-y-6 overflow-hidden">
+                {/* 1-qator: o‘ngga qarab harakat */}
+                <Marquee direction="right" speed={30} gradient={false} pauseOnHover>
+                    {logos.map((img, i) => (
+                        <Link
+                            href={"#"}
+                            key={i}
+                            className="mx-[18px] bg-[#eaecef] border-[white] border-[3px] rounded-xl flex items-center justify-center h-[110px] w-[220px] p-8"
+                        >
+                            <Image
+                                src={img}
+                                alt={`Logo ${i}`}
+                                className="object-center h-full w-auto"
+                            />
+                        </Link>
+                    ))}
+                </Marquee>
+
+                {/* 2-qator: chapga qarab harakat */}
+                <Marquee direction="left" speed={30} gradient={false} pauseOnHover>
+                    {logos.reverse().map((img, i) => (
+                        <Link
+                            href={"#"}
+                            key={i}
+                            className="mx-[18px] bg-[#eaecef] border-[white] border-[3px] rounded-xl flex items-center justify-center h-[110px] w-[220px] p-8"
+                        >
+                            <Image
+                                src={img}
+                                alt={`Logo ${i}`}
+                                className="object-center h-full w-auto"
+                            />
+                        </Link>
+                    ))}
+                </Marquee>
+            </div>
+        </div>
+    );
+}
