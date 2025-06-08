@@ -2,7 +2,7 @@
 export default function DirectionsSection() {
   return (
     <section className="py-20 px-4 sm:px-8 text-center container mt-50px">
-      <h2 className="text-[48px] font-bold mb-3 text-start text-[#3D445E]">Ishlash yo‘nalishlari</h2>
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3D445E] mb-3 text-start">Ishlash yo‘nalishlari</h2>
       <p className="text-gray-600 mx-auto mb-10 text-start">
         Bo‘limlarimiz bilan tanishing, bizda barcha bo‘limlar xizmati juda qulay va siz uchun mos keladi.
       </p>

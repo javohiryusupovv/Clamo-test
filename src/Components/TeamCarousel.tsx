@@ -82,7 +82,7 @@ export default function TeamCarousel() {
   return (
     <div className="bg-[#F8FAFC]">
       <div className="w-full py-12 container">
-        <h2 className="text-3xl font-bold mb-2 text-[#3D445E]">Markaz jamoasi</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3D445E] mb-3 text-start">Markaz jamoasi</h2>
         <p className="text-gray-600 mb-8 ">
           Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda...
         </p>
@@ -96,9 +96,7 @@ export default function TeamCarousel() {
             nextEl: nextRef.current,
           }}
           onInit={(swiper) => {
-            // @ts-ignore
             swiper.params.navigation.prevEl = prevRef.current;
-            // @ts-ignore
             swiper.params.navigation.nextEl = nextRef.current;
             swiper.navigation.init();
             swiper.navigation.update();
