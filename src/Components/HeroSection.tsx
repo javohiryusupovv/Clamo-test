@@ -26,10 +26,11 @@ export default function Hero() {
           <article className="relative top-0 left-0 z-[22]">
             <h3 className=" text-[40px] font-bold text-white leading-[50px] mb-2">Tibbiyot Sohasidagi Xalqaro Hamkorlik va Tajriba Almashinuvi</h3>
             <p className="text-[16px] opacity-60 text-white mb-7">Soha bo'yicha har qanday savolingizga javob beramiz</p>
-            <button className="px-10 py-2 cursor-pointer rounded-md flex items-center gap-1 text-white bg-[#23B3FC] hover:bg-[#23B3FC]">Batafsil tanishish <ChevronRight className="stroke-white" /></button>
+            <button className="px-10 py-2 cursor-pointer rounded-md flex items-center gap-1 text-white bg-[#23B3FC] hover:bg-[#30B9FF]">Batafsil tanishish <ChevronRight className="stroke-white" /></button>
           </article>
         </div>
       </div>
+      
     </div>
   );
 }
