@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Icon from "@/app/license/Icon";
 import StepIcon from "./Iconstep";
+import Klinikalar from "./klinikalar";
 
 const Page = () => {
   const steps: {
@@ -111,11 +112,11 @@ const Page = () => {
                 muddatda qoʻlga kiriting!
               </p>
 
-              <button className="group flex items-center justify-center gap-[4px] w-full sm:w-[273px] px-[12px] py-[10px] bg-[#23B3FC] text-[#FFFFFF] rounded-lg hover:bg-[#2f2ff3] hover:text-white transition">
+              <button className="group flex justify-center items-center gap-[4px] border-2 w-full sm:w-[273px] px-[24px] py-[10px] bg-[#23B3FC1F] text-[#FFFFFFFF] rounded-lg hover:bg-[#FFFFFFFF] hover:text-[#23B3FC] transition">
                 <span className="text-[14px] font-medium">
                   Litsenziya olish portaliga o‘tish
                 </span>
-                <Icon className="w-5 h-5 text-[white] group-hover:text-[#23B3FC] transition" />
+                <Icon className="w-5 h-5 text-[#FFFFFF] group-hover:text-[#23B3FC] transition" />
               </button>
             </div>
 
@@ -137,6 +138,12 @@ const Page = () => {
           </div>
         </section>
       </div>
+
+      <section className="container mx-auto px-4">
+        <div className="py-[80px]">
+              <Klinikalar/>
+        </div>
+      </section>
     </>
   );
 };
