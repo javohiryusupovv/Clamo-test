@@ -3,25 +3,31 @@ import Phone from "../assets/icons/phone.png";
 import Flag from "../assets/icons/uzbekistan.png";
 import LogoClamo from "../assets/icons/LogoClamo.svg";
 import Down from "../assets/icons/down.png";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
     <div className="container">
       <nav className="flex items-center justify-between py-10">
-        <ul>
-          <Image
-            src={LogoClamo}
-            alt="Phone icons"
-            width={55}
-            height={55}
-            className="w-[155.71px] h-[40px]"
-          />
-        </ul>
+        <Link href="/">
+          <ul>
+            <Image
+              src={LogoClamo}
+              alt="Phone icons"
+              width={55}
+              height={55}
+              className="w-[155.71px] h-[40px]"
+            />
+          </ul>
+        </Link>
+
         <ul className="flex items-center gap-10">
           <article className="flex items-center gap-[9px]">
-            <li className="text-sm font-medium text-[#3D445E]">
-              Biz haqimizda
-            </li>
+            <Link href="/about">
+              <li className="text-sm font-medium text-[#3D445E]">
+                Biz haqimizda
+              </li>
+            </Link>
             <div className="w-5 h-5 flex items-center">
               <Image
                 src={Down}

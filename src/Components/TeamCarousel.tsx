@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 import { TeamMemberCard } from "@/Components/TeamMemberCard";
 import img1 from "../assets/1.png";
 import img2 from "../assets/2.png";
@@ -12,8 +14,8 @@ import img6 from "../assets/2.png";
 import img7 from "../assets/3.png";
 import img8 from "../assets/4.png";
 import { StaticImageData } from "next/image";
-
-
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useRef } from "react";
 
 type TeamMember = {
   id: number;
@@ -74,67 +76,62 @@ const members: TeamMember[] = [
 ];
 
 export default function TeamCarousel() {
-  const visibleCount = 4; // 1 sahifada ko'rinadigan kartalar soni
-  const totalCount = members.length;
-
-  // Maksimal index - shu holatda, shuni hisoblash kerakki,
-  // oxirgi ko'rinadigan karta 4-chi bo'lsa, indeks 4 ta qolgan bo'lishi kerak:
-  const maxIndex = totalCount - visibleCount; // 8 - 4 = 4
-
-  const [index, setIndex] = useState(0); // karta indeksi (qayerdan boshlanadi)
-
-  const prev = () => {
-    if (index > 0) setIndex(index - 1);
-  };
-
-  const next = () => {
-    if (index < maxIndex) setIndex(index + 1);
-  };
+  const prevRef = useRef<HTMLButtonElement>(null);
+  const nextRef = useRef<HTMLButtonElement>(null);
 
   return (
-    <div className="w-full py-12 container">
-      <h2 className="text-3xl font-bold mb-2 text-[#3D445E]">Markaz jamoasi</h2>
-      <p className="text-gray-600 mb-8 ">
-        Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda...
-      </p>
+    <div className="bg-[#F8FAFC]">
+      <div className="w-full py-12 container">
+        <h2 className="text-3xl font-bold mb-2 text-[#3D445E]">Markaz jamoasi</h2>
+        <p className="text-gray-600 mb-8 ">
+          Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda...
+        </p>
 
-      <div className="overflow-hidden">
-        <div
-          className="flex transition-transform duration-500 ease-in-out"
-          style={{
-            // Siljish bitta kartaning kengligi * index (foizda)
-            transform: `translateX(-${(100 / totalCount) * index}%)`,
-            // To'liq kenglik (karta soni * har bir kartaning kengligi %)
-            width: `${(100 / visibleCount) * totalCount}%`,
+        <Swiper
+          modules={[Navigation]}
+          spaceBetween={24}
+          slidesPerView={4}
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          onInit={(swiper) => {
+            // @ts-ignore
+            swiper.params.navigation.prevEl = prevRef.current;
+            // @ts-ignore
+            swiper.params.navigation.nextEl = nextRef.current;
+            swiper.navigation.init();
+            swiper.navigation.update();
+          }}
+          className="!pb-8"
+          breakpoints={{
+            320: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
+            1000: { slidesPerView: 3 },
+            1200: { slidesPerView: 4},
           }}
         >
           {members.map((member) => (
-            <div
-              key={member.id}
-              style={{ width: `${100 / totalCount}%` }} // har karta kengligi
-              className="flex-shrink-0"
-            >
+            <SwiperSlide key={member.id}>
               <TeamMemberCard member={member} />
-            </div>
+            </SwiperSlide>
           ))}
+        </Swiper>
+        {/* Navigation buttons pastda joylashadi */}
+        <div className="flex justify-center items-center gap-4 mt-6">
+          <button
+            ref={prevRef}
+            className="group p-2 bg-white border rounded-full hover:border-transparent hover:bg-[#23B3FC] transition-all duration-200 disabled:opacity-50"
+          >
+            <ChevronLeft className="stroke-[1.5] group-hover:stroke-white transition-all duration-200" />
+          </button>
+          <button
+            ref={nextRef}
+            className="group p-2 bg-white border rounded-full hover:border-transparent hover:bg-[#23B3FC] transition-all duration-200 disabled:opacity-50"
+          >
+            <ChevronRight className="stroke-[1.5] group-hover:stroke-white transition-all duration-200" />
+          </button>
         </div>
-      </div>
-
-      <div className="mt-6 flex justify-center items-center gap-4">
-        <button
-          onClick={prev}
-          disabled={index === 0}
-          className="group p-2 bg-white border rounded-full hover:border-transparent hover:bg-[#23B3FC] transition-all duration-200 disabled:opacity-50"
-        >
-          <ChevronLeft className="stroke-[1.5] group-hover:stroke-white transition-all duration-200" />
-        </button>
-        <button
-          onClick={next}
-          disabled={index >= maxIndex}
-          className="group p-2 bg-white border rounded-full hover:border-transparent hover:bg-[#23B3FC] transition-all duration-200 disabled:opacity-50"
-        >
-          <ChevronRight className="stroke-[1.5] group-hover:stroke-white transition-all duration-200" />
-        </button>
       </div>
     </div>
   );
