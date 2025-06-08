@@ -45,63 +45,65 @@ export default function Hero() {
       </div>
 
       {/* Shifokorlar */}
-      <div className=" w-full h-[620px] rounded-[36px] bg-[#0653C9] -z-[2] container mb-[150px] relative flex justify-between gap-16 p-12">
-        <div>
-          <p className="font-medium text-sm uppercase text-[#FFFFFF] opacity-[60%] pb-2">
-            biz haqimizda
-          </p>
-          <h1 className="font-bold text-[32px] leading-[110%] text-[#FFFFFF] pb-7">
-            Tibbiyot sohasidagi xalqaro <br /> hamkorlik va tajriba <br />{" "}
-            almashinuvi
-          </h1>
-          <LearnMore />
-          <Image
-            src={Doctors}
-            alt="Doctors"
-            className="object-cover pt-[5px] pl-[58px] absolute z-10"
-          />
-          <div>
-            <div className="bg-[url('../assets/images/circleBlue.png')] bg-no-repeat bg-contain w-[550px] h-[200px] absolute -rotate-[20deg] top-[215px] left-[17px] -z-[1]"></div>
+      <div className="w-full min-h-[620px] rounded-[36px] bg-[#0653C9] relative z-0 container mb-[150px] flex flex-col lg:flex-row justify-between gap-16 p-3 shadow-2xl shadow-blue-900/30">
+        <div className="lg:flex block gap-6 lg:gap-10 w-full justify-center items-center">
+          {/* Chap tomondagi matn va rasm */}
+          <div className="relative flex-1 mb-[30px] lg:mb-0">
+            <p className="font-medium text-sm uppercase text-white/60 pb-2 pl-6">biz haqimizda</p>
+            <h1 className="font-bold text-2xl sm:text-3xl lg:text-[32px] leading-tight text-white pb-7 pl-6">
+              Tibbiyot sohasidagi xalqaro <br /> hamkorlik va tajriba <br /> almashinuvi
+            </h1>
+            <LearnMore />
+            <Image
+              src={Doctors}
+              alt="Doctors"
+              className="object-cover pt-4 pl-4 sm:pl-[58px] max-w-[90%] sm:max-w-[70%]"
+            />
+
+
+            {/* Background circle */}
+            <div className="absolute top-[270px] left-[1px] -z-10 w-[550px] h-[200px] bg-[url('../assets/images/circleBlue.png')] bg-no-repeat bg-contain"></div>
+            <div className="absolute bottom-0 left-0 w-full h-[80px] sm:h-[200px] md:h-[250px] bg-gradient-to-t from-blue-700/100 to-transparent" />
+            <p className="absolute z-10 bottom-1 left-6 right-6 text-xs sm:text-sm font-medium leading-relaxed text-white">
+              CLAMO jahon standartlariga mos tibbiy xizmat ko‘rsatish maqsadida yetakchi xalqaro tibbiyot muassasalari va tashkilotlari bilan hamkorlik qiladi. <br className="hidden md:block" />
+              Biz eng so‘nggi innovatsiyalar, ilg‘or texnologiyalar va tajriba almashinuviga tayanamiz.
+            </p>
+          </div>
+
+          {/* O'ng tomondagi statistik kartalar */}
+          <div className="flex-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Card 1 */}
+              <div className="w-full bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl text-white flex flex-col p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <Image src={Home} alt="HomeIcons" width={48} height={48} />
+                <div className="pt-10">
+                  <h1 className="text-[32px] sm:text-[40px] lg:text-[48px] font-bold">10 300+</h1>
+                  <p className="text-sm font-medium">Litsenziya soni</p>
+                </div>
+              </div>
+
+              {/* Card 2 */}
+              <div className="w-full bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl text-white flex flex-col p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <Image src={True} alt="HomeIcons" width={48} height={48} />
+                <div className="pt-10">
+                  <h1 className="text-[32px] sm:text-[40px] lg:text-[48px] font-bold">125+</h1>
+                  <p className="text-sm font-medium">Ko&apos;rsatilgan konsalting xizmati</p>
+                </div>
+              </div>
+
+              {/* Card 3 */}
+              <div className="bg-gradient-to-br from-blue-400 to-blue-600 p-6 rounded-2xl text-white flex flex-col md:col-span-2 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <Image src={File} alt="HomeIcons" width={48} height={48} />
+                <div className="pt-10">
+                  <h1 className="text-[32px] sm:text-[40px] lg:text-[48px] font-bold">8 300+</h1>
+                  <p className="text-sm font-medium">Tashkilot tomonidan berilgan litsenziyalar soni</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="w-[283px] bg-gradient-to-br from-blue-400 to-blue-600  rounded-2xl text-white flex flex-col p-6">
-              <Image src={Home} alt="HomeIcons" width={48} height={48} />
-              <div className="pt-12">
-                <h1 className="text-[48px] font-bold">10 300+</h1>
-                <p className="text-sm font-medium">Litsenziya soni</p>
-              </div>
-            </div>
-
-            <div className="w-[283px] bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl text-white flex flex-col p-6">
-              <Image src={True} alt="HomeIcons" width={48} height={48} />
-              <div className="pt-12">
-                <h1 className="text-[48px] font-bold">125+</h1>
-                <p className="text-sm font-medium">
-                  Ko&apos;rsatilgan konsalting xizmati
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-blue-400 to-blue-600 p-6 rounded-2xl text-white flex flex-col space-x-4 items-start md:col-span-2 bg-no-repeat bg-cover">
-              <Image src={File} alt="HomeIcons" width={48} height={48} />
-              <div className="pt-12">
-                <h1 className="text-[48px] font-bold">8 300+</h1>
-                <p className="text-sm font-medium">
-                  Tashkilot tomonidan berilgan litsenziyalar soni
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p className=" absolute z-10 bottom-8 text-sm font-medium leading-[130%] text-[#FFFFFF]">
-          CLAMO jahon standartlariga mos tibbiy xizmat ko‘rsatish maqsadida
-          yetakchi xalqaro tibbiyot muassasalari va tashkilotlari bilan
-          hamkorlik qiladi. Biz eng so‘nggi <br /> innovatsiyalar, ilg‘or
-          texnologiyalar va tajriba almashinuviga tayanamiz.
-        </p>
       </div>
+
     </div>
   );
 }
