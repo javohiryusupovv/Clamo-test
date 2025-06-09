@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { FaChevronRight, FaPhoneAlt } from "react-icons/fa";
 import "@/style/linerMainserver.css";
-import ServicesSection from "@/Components/AboutService";
+import ServicesSection from "@/app/about/_components/AboutService";
 
 const platforms = [
   {
