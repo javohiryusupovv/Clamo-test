@@ -1,6 +1,7 @@
 import Image from "next/image";
 import "@/style/linerMainserver.css"
 import { commentOpinion } from "@/types/type";
+import Marquee from "react-fast-marquee";
 export default function Izohlar() {
 
     const opinion = [
@@ -98,7 +99,7 @@ export default function Izohlar() {
     return (
         <div className="pb-[64px]">
             <div className="container">
-                {opinion.map((item: commentOpinion, id:number) => (
+                {opinion.map((item: commentOpinion, id: number) => (
                     <div key={id}>
                         <Image src={item.icons} alt="Sharh Icons" width={124} height={32} className=" pb-1" />
                         <h1 className="font-bold lg:text-[48px] sm:text-[44px] text-[20px] text-[#3D445E]">{item.subtitle}</h1>
@@ -109,53 +110,57 @@ export default function Izohlar() {
             </div>
             <article className=" max-w-[1444px] m-auto">
                 <div className="overflow-hidden w-full mb-[24px]">
-                    <div className="flex gap-4 animate-marquee" style={{ width: 'max-content' }}>
-                        {cardComment.map((item, id) => (
-                            <div key={id} className="max-w-[343px] border border-[#E3E8E9] rounded-[16px] p-[16px] bg-white">
-                                {/* Kartaning ichki qismi */}
-                                <div className="flex items-center gap-2">
-                                    <Image src={item.img} alt="Person people" width={44} height={44} className="rounded-full object-contain border border-[#C6CFD733]" />
-                                    <div>
-                                        <h2>{item.name}</h2>
-                                        <p className="text-xs font-normal text-[#8E9BA8]">
-                                            {item.title} <span className="text-[#4489F7] font-medium">{item.badge}</span>
-                                        </p>
+                    <div className="flex gap-4">
+                        <Marquee direction="right" speed={30} gradient={false} pauseOnHover>
+                            {cardComment.map((item, id) => (
+                                <div key={id} className="max-w-[343px] mx-4 border border-[#E3E8E9] rounded-[16px] p-[16px] bg-white">
+                                    {/* Kartaning ichki qismi */}
+                                    <div className="flex items-center gap-2">
+                                        <Image src={item.img} alt="Person people" width={44} height={44} className="rounded-full object-contain border border-[#C6CFD733]" />
+                                        <div>
+                                            <h2>{item.name}</h2>
+                                            <p className="text-xs font-normal text-[#8E9BA8]">
+                                                {item.title} <span className="text-[#4489F7] font-medium">{item.badge}</span>
+                                            </p>
+                                        </div>
                                     </div>
+                                    <hr className="my-[10px] text-[#F5F6F7]" />
+                                    <div className="flex items-center gap-1 ">
+                                        <Image src={item.staricon} alt="staricons" width={88} height={16} className="object-contain" />
+                                        <p className=" font-normal text-[14px] text-[#8E9BA8]">{item.time}</p>
+                                    </div>
+                                    <p className="font-normal text-[14px]">{item.comment}</p>
                                 </div>
-                                <hr className="my-[10px] text-[#F5F6F7]" />
-                                <div className="flex items-center gap-1 ">
-                                    <Image src={item.staricon} alt="staricons" width={88} height={16} className="object-contain" />
-                                    <p className=" font-normal text-[14px] text-[#8E9BA8]">{item.time}</p>
-                                </div>
-                                <p className="font-normal text-[14px]">{item.comment}</p>
-                            </div>
-                        ))}
+                            ))}
+                        </Marquee>
                     </div>
                 </div>
 
 
-                 <div className="overflow-hidden w-full">
-                    <div className="flex gap-4 animate-marquee" style={{ width: 'max-content' }}>
-                        {cardComment.map((item, id) => (
-                            <div key={id} className="max-w-[343px] border border-[#E3E8E9] rounded-[16px] p-[16px] bg-white">
-                                {/* Kartaning ichki qismi */}
-                                <div className="flex items-center gap-2">
-                                    <Image src={item.img} alt="Person people" width={44} height={44} className="rounded-full object-contain border border-[#C6CFD733]" />
-                                    <div>
-                                        <h2>{item.name}</h2>
-                                        <p className="text-xs font-normal text-[#8E9BA8]">
-                                            {item.title} <span className="text-[#4489F7] font-medium">{item.badge}</span>
-                                        </p>
+                <div className="overflow-hidden w-full mb-[24px]">
+                    <div className="flex gap-4">
+                        <Marquee direction="left" speed={30} gradient={false} pauseOnHover>
+                            {cardComment.slice().reverse().map((item, id) => (
+                                <div key={id} className="max-w-[343px] mx-4 border border-[#E3E8E9] rounded-[16px] p-[16px] bg-white">
+                                    {/* Kartaning ichki qismi */}
+                                    <div className="flex items-center gap-2">
+                                        <Image src={item.img} alt="Person people" width={44} height={44} className="rounded-full object-contain border border-[#C6CFD733]" />
+                                        <div>
+                                            <h2>{item.name}</h2>
+                                            <p className="text-xs font-normal text-[#8E9BA8]">
+                                                {item.title} <span className="text-[#4489F7] font-medium">{item.badge}</span>
+                                            </p>
+                                        </div>
                                     </div>
+                                    <hr className="my-[10px] text-[#F5F6F7]" />
+                                    <div className="flex items-center gap-1 ">
+                                        <Image src={item.staricon} alt="staricons" width={88} height={16} className="object-contain" />
+                                        <p className=" font-normal text-[14px] text-[#8E9BA8]">{item.time}</p>
+                                    </div>
+                                    <p className="font-normal text-[14px]">{item.comment}</p>
                                 </div>
-                                <hr className="my-[10px] text-[#F5F6F7]" />
-                                <div className="flex items-center gap-1 ">
-                                    <Image src={item.staricon} alt="staricons" width={88} height={16} className="object-contain" />
-                                    <p className=" font-normal text-[14px] text-[#8E9BA8]">{item.time}</p>
-                                </div>
-                                <p className="font-normal text-[14px]">{item.comment}</p>
-                            </div>
-                        ))}
+                            ))}
+                        </Marquee>
                     </div>
                 </div>
             </article>
