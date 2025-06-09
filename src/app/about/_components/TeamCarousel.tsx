@@ -15,7 +15,7 @@ import img7 from "../../../assets/3.png";
 import img8 from "../../../assets/4.png";
 import { StaticImageData } from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type TeamMember = {
   id: number;
@@ -76,8 +76,19 @@ const members: TeamMember[] = [
 ];
 
 export default function TeamCarousel() {
-  const prevRef = useRef<HTMLButtonElement>(null);
-  const nextRef = useRef<HTMLButtonElement>(null);
+  const prevRef = useRef<HTMLButtonElement | null>(null);
+  const nextRef = useRef<HTMLButtonElement | null>(null);
+  const [swiperInstance, setSwiperInstance] = useState<any>(null);
+
+  useEffect(() => {
+    if (swiperInstance && prevRef.current && nextRef.current) {
+      // `navigation` tugmalarini ulab va yangilab qo'yamiz
+      swiperInstance.params.navigation.prevEl = prevRef.current;
+      swiperInstance.params.navigation.nextEl = nextRef.current;
+      swiperInstance.navigation.init();
+      swiperInstance.navigation.update();
+    }
+  }, [swiperInstance]);
 
   return (
     <div className="bg-[#F8FAFC]">
@@ -91,20 +102,13 @@ export default function TeamCarousel() {
           modules={[Navigation]}
           spaceBetween={24}
           slidesPerView={4}
-          navigation={{
-            prevEl: prevRef.current,
-            nextEl: nextRef.current,
-          }}
-          onInit={(swiper) => {
-            swiper.navigation.init();
-            swiper.navigation.update();
-          }}
+          onSwiper={setSwiperInstance}
           className="!pb-8"
           breakpoints={{
             320: { slidesPerView: 1 },
             640: { slidesPerView: 2 },
             1000: { slidesPerView: 3 },
-            1200: { slidesPerView: 4},
+            1200: { slidesPerView: 4 },
           }}
         >
           {members.map((member) => (
@@ -114,14 +118,12 @@ export default function TeamCarousel() {
           ))}
         </Swiper>
         <div className="flex justify-center items-center gap-4 mt-6">
-          <button
-            ref={prevRef}
+          <button ref={prevRef}
             className="group p-2 bg-white border rounded-full hover:border-transparent hover:bg-[#23B3FC] transition-all duration-200 disabled:opacity-50"
           >
             <ChevronLeft className="stroke-[1.5] group-hover:stroke-white transition-all duration-200" />
           </button>
-          <button
-            ref={nextRef}
+          <button ref={nextRef}
             className="group p-2 bg-white border rounded-full hover:border-transparent hover:bg-[#23B3FC] transition-all duration-200 disabled:opacity-50"
           >
             <ChevronRight className="stroke-[1.5] group-hover:stroke-white transition-all duration-200" />
