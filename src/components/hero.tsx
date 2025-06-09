@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Down from "@/assets/icons/whiteDown.png";
 import BlueDown from "@/assets/icons/blueDown.png";
-import LearnMore from "./LearnMore";
 import Doctors from "@/assets/images/doctors.png";
 import Home from "@/assets/images/home.png";
 import File from "@/assets/images/file.png";
 import True from "@/assets/images/true.png";
 import ImageClamo from "@/assets/images/ImageClamo.png";
+import LearnMore from "./learnMore";
 
 export default function Hero() {
   return (
