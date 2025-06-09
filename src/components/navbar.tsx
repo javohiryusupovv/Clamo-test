@@ -38,7 +38,11 @@ export default function Navbar() {
               />
             </div>
           </article>
-          <li className="text-sm font-medium text-[#3D445E]">Litsenziyalash</li>
+          <Link href="/license">
+            <li className="text-sm font-medium text-[#3D445E]">
+              Litsenziyalash
+            </li>
+          </Link>
           <li className="text-sm font-medium text-[#3D445E]">
             Akkreditsiyalash
           </li>

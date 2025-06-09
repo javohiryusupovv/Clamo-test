@@ -1,17 +1,17 @@
-import LearnMore from "./learnMore";
+import LearnMore from "./LearnMore";
 import ClamoFlag from "@/assets/images/clamoFlag.png";
 import Image from "next/image";
 
-export default function MedicalLegal() {
-  interface MedicalLegalProps {
-    title: string;
-    subtitle: string;
-    badge: string;
-    description: string;
-    bgCircle: string;
-    clamoFlag: string;
-  }
+interface MedicalLegalProps {
+  title: string;
+  subtitle: string;
+  badge: string;
+  description: string;
+  bgCircle: string;
+  clamoFlag: string;
+}
 
+export default function MedicalLegal() {
   const medical: MedicalLegalProps[] = [
     {
       subtitle: "Sizning sog'lig'ingiz biz uchun",
@@ -25,36 +25,38 @@ export default function MedicalLegal() {
   ];
 
   return (
-    <div className="container mb-[132px] max-[380px]:mb-[80px]">
+    <div className="container">
       {medical.map((item, id) => (
-        <div key={id} className="flex items-start justify-between relative">
-          <div className="sm:w-1/2">
-            <p className="font-medium text-sm uppercase pb-3 max-[380px]:text-xs">
-              {item.subtitle}{" "}
-              <span className="bg-[#23B3FC] rounded-md px-2 py-[3px] text-white max-[380px]:text-[10px]">
+        <div
+          key={id}
+          className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12"
+        >
+          <div className="w-full lg:w-1/2">
+            <div className="flex items-center gap-2 mb-3">
+              <p className="font-medium text-sm uppercase text-gray-900">
+                {item.subtitle}
+              </p>
+              <span className="bg-[#23B3FC] rounded-md px-2 py-1 text-white text-xs">
                 {item.badge}
               </span>
-            </p>
-            <h1 className="font-bold lg:text-[48px] md:text-[44px] text-[36px] leading-[110%] pb-[10px] max-[380px]:text-[28px] max-[380px]:pb-2">
+            </div>
+            <h1 className="font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl leading-tight text-gray-900 mb-4">
               {item.title}
             </h1>
-            <p className="font-medium text-[20px] text-[#012548CC] pb-7 max-[380px]:text-[14px] max-[380px]:pb-4">
+            <p className="font-medium text-base sm:text-lg lg:text-xl text-gray-700 mb-6">
               {item.description}
             </p>
             <LearnMore />
           </div>
-          <div className="">
-            <div
-              className="bg-[url('@/assets/images/twoCircle.png')] bg-no-repeat bg-contain bg-center w-[500px] h-[500px] rotate-180 scale-125 absolute top-10 right-8"
 
-            />
+          <div className="relative">
+            <div className="bg-[url('@/assets/images/twoCircle.png')] bg-no-repeat bg-cover bg-center w-full h-[500px] rotate-180 absolute -z-[1]"></div>
             <Image
               src={ClamoFlag}
-              alt="TwoCircLe"
-              width={500}
-              height={450}
-              className="absolute z-[1]  left-1/2 -top-4 max-[380px]:hidden"
-            />
+              alt="Clamo Flag"
+              width={420}
+              height={380}
+              />
           </div>
         </div>
       ))}

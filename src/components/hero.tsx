@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Down from "@/assets/icons/whiteDown.png";
 import BlueDown from "@/assets/icons/blueDown.png";
-import LearnMore from "./learnMore";
+import LearnMore from "./LearnMore";
 import Doctors from "@/assets/images/doctors.png";
 import Home from "@/assets/images/home.png";
 import File from "@/assets/images/file.png";
@@ -54,7 +54,7 @@ export default function Hero() {
 
 
       {/* Shifokorlar */}
-      <div className="w-full min-h-[620px] rounded-[36px] bg-[#0653C9] relative z-0 container lg:mb-[150px] md:mb-[80px] mb-[50px] flex flex-col lg:flex-row justify-between gap-16 p-3 shadow-2xl shadow-blue-900/30">
+      <div className="w-full min-h-[620px] sm:rounded-[36px] bg-[#0653C9] relative z-0 container lg:mb-[150px] md:mb-[80px] mb-[50px] flex flex-col lg:flex-row justify-between gap-16 p-3 shadow-2xl shadow-blue-900/30">
         <div className="lg:flex block gap-6 lg:gap-10 w-full justify-center items-center p-[28px]">
           <div className="relative flex-1 mb-[30px] lg:mb-0">
             <p className="font-medium text-sm uppercase text-white/60 pb-2">
@@ -70,6 +70,7 @@ export default function Hero() {
               className="object-cover pt-4 pl-4 sm:pl-[58px] max-w-[90%] sm:max-w-[70%]"
             />
             <div className="absolute top-[270px] -left-[38px] -z-10 sm:w-[550px] w-[350px] h-[200px] bg-[url('../assets/images/circleBlue.png')] bg-no-repeat bg-contain"></div>
+            {/* shifokor ustidagi soya */}
             <div className="absolute bottom-0 left-0 w-full h-[80px] sm:h-[200px] md:h-[250px] bg-gradient-to-t from-blue-700/100 to-transparent" />
             <p className="absolute z-10 bottom-1 left-6 right-6 text-xs sm:text-sm font-medium leading-relaxed text-white">
               CLAMO jahon standartlariga mos tibbiy xizmat ko&apos;rsatish maqsadida

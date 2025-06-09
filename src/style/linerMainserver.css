@@ -1,10 +1,32 @@
-.backgroundLiner{
+/* .backgroundLiner{
     background-image: url("../assets/images/lianer.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 60%;
     height: 100%;
+} */
+
+.backgroundLiner {
+    background-image: url("../assets/images/lianer.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 55%;
+    height: 100%;
+    position: relative;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backgroundLiner img {
+    position: relative;
+    z-index: 1;
+    width: 473px;
+    height: 273px;
+    border-radius: 16px;
 }
 
 @keyframes marquee {
