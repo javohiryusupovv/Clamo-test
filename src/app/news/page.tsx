@@ -45,7 +45,7 @@ function Card({
 }) {
   return (
     <div
-      className={`bg-white rounded-2xl border border-gray-200 shadow-sm ${className}`}
+      className={`bg-white rounded-2xl border border-[#ffff] hover:border-[#23B3FC] hover:border-2 ${className}`}
       {...props}
     >
       {children}
