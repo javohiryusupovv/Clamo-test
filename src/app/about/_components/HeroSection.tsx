@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Doctors from "@/assets/Doctors.png";
-import gbCircle from "../../public/herobg.png"
-import shape from "../../public/shape.png"
-import "../styles/hero.css"
+import gbCircle from "../../../../public/herobg.png"
+import shape from "../../../../public/shape.png"
+import "../../../styles/hero.css"
 
 
 import { ChevronRight } from 'lucide-react';

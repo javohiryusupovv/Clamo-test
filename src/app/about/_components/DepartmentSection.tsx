@@ -10,8 +10,8 @@
 
   const DepartmentCard: FC<DepartmentCardProps> = ({ title, description }) => {
     return (
-      <div className='group rounded-2xl p-6 pt-10 pb-10 flex items-start gap-4 bg-[#F6F9FC] duration-1000  hover:bg-gradient-to-r from-blue-500 to-blue-700 hover:text-white hover:cursor-pointer mb-4'>
-        <div className='rounded-full p-2 group-hover:bg-white group-hover:text-blue-700 bg-[#0653C9] text-white'>
+      <div className='group rounded-2xl p-6 pt-10 pb-10 flex items-start gap-4 bg-[#F6F9FC]  hover:bg-gradient-to-r from-blue-500 to-blue-700 hover:text-white hover:cursor-pointer mb-4 transition-transform duration-300'>
+        <div className='rounded-full p-2 group-hover:bg-white group-hover:text-blue-700 bg-[#0653C9] text-white transition-transform duration-300'>
           <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
           </svg>
