@@ -1,12 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
-import Servicec from "@/Components/AboutService"
-import TeamCarousel from '@/Components/TeamCarousel';
-import DirectionsSection from '@/Components/DirectionsSection';
+import Servicec from "./_components/AboutService";
+import TeamCarousel from './_components/TeamCarousel';
 import Screenpage from '@/assets/Screenpagee.png';
 import NavBuilding from '@/assets/NavBuilding.png';
-import HeroSection from '@/Components/HeroSection';
-import DepartmentSection from '@/Components/DepartmentSection';
+import HeroSection from './_components/HeroSection';
+import DepartmentSection from './_components/DepartmentSection';
 
 export default function page() {
     return (
@@ -62,7 +61,6 @@ export default function page() {
             <DepartmentSection />
             <TeamCarousel />
             <HeroSection />
-            <DirectionsSection />
         </div>
     )
 }

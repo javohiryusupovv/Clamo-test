@@ -48,7 +48,7 @@ const ServicesSection: React.FC = () => {
         {/* Section Title */}
         <div className="mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3D445E] mb-3 text-start">
-            Markaz ko'rsatadigan xizmatlar
+            Markaz ko&apos;rsatadigan xizmatlar
           </h2>
           <p className="text-sm sm:text-base text-gray-600 md:max-w-full max-w-2xl text-start">
             Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.

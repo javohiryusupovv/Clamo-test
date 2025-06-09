@@ -3,7 +3,6 @@ import Image from "next/image";
 import location from "../../../assets/icons/location.png"
 import phone from "../../../assets/icons/phone.png"
 import email from "../../../assets/icons/mail.png"
-import share from "../../../assets/icons/share.png"
 
 
 export default function Contact() {
@@ -12,7 +11,7 @@ export default function Contact() {
       <div className="container relative left-0 flex items-center justify-between w-full bg-[#0653C9] rounded-[36px]">
         <div className="w-[450px] pl-14 py-14">
           <h6 className="text-[32px] font-semibold text-white mb-2">Bog‘lanish uchun</h6>
-          <p className="text-[16px] font-normal text-white text-opacity-[60%] mb-9">Siz tizimdan chiqishingiz mumkin bo'lgan quyidagi usullardan foydalangan holda biz bilan bog'laning</p>
+          <p className="text-[16px] font-normal text-white text-opacity-[60%] mb-9">Siz tizimdan chiqishingiz mumkin bo&apos;lgan quyidagi usullardan foydalangan holda biz bilan bog&apos;laning</p>
           <div className="flex flex-col gap-3">
             <div className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
               <article className="bg-white p-3 inline-flex justify-center items-center rounded-lg">
