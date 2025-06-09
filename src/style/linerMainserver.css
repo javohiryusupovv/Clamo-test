@@ -1,0 +1,26 @@
+.backgroundLiner{
+    background-image: url("../assets/images/lianer.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 60%;
+    height: 100%;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%); /* Kartalar soniga qarab moslang */
+  }
+}
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+/* tuxtab turadi  */
+/* 10% {
+    transform: translateX(0);
+  } */
