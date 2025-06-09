@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.teamcarousel {
+  fill: radial-gradient(
+    270.21% 86.02% at 50% 6.8%,
+    rgba(0, 0, 0, 0) 50.69%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  border-radius: 36px;
+  background: linear-gradient(180deg, #b2c0d2 0%, #d8dde3 100%);
+}
+
+.teamcaruselimg {
+  scale: 1.2;
+}
+
+@font-face {
+  font-family: "VK Sans Display";
+  src: url("/fonts/VKSansDisplay-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "VK Sans Display", sans-serif;
+  background-color: #F6F9FC;
+}

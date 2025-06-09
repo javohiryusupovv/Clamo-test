@@ -52,6 +52,7 @@ export default function Hero() {
         </section>
       </div>
 
+
       {/* Shifokorlar */}
       <div className="w-full min-h-[620px] rounded-[36px] bg-[#0653C9] relative z-0 container lg:mb-[150px] md:mb-[80px] mb-[50px] flex flex-col lg:flex-row justify-between gap-16 p-3 shadow-2xl shadow-blue-900/30">
         <div className="lg:flex block gap-6 lg:gap-10 w-full justify-center items-center p-[28px]">
