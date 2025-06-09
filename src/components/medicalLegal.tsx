@@ -1,6 +1,6 @@
 import ClamoFlag from "@/assets/images/clamoFlag.png";
 import Image from "next/image";
-import LearnMore from "./learnMore";
+import LearnMore from "./LearnMore";
 
 interface MedicalLegalProps {
   title: string;
