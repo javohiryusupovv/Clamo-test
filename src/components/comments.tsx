@@ -159,10 +159,6 @@ export default function Izohlar() {
                     </div>
                 </div>
             </article>
-
-
-
-
         </div>
     )
 }

@@ -50,12 +50,13 @@ export default function MedicalLegal() {
           </div>
 
           <div className="relative">
-            <div className="bg-[url('@/assets/images/twoCircle.png')] bg-no-repeat bg-cover bg-center w-full h-[500px] rotate-180 absolute -z-[1]"></div>
+            <div className="bg-[url('@/assets/images/twoCircle.png')] bg-no-repeat bg-cover bg-center w-full md:h-[500px] h-[350px] top-20 rotate-180 scale-125 absolute -z-[1]"></div>
             <Image
               src={ClamoFlag}
               alt="Clamo Flag"
-              width={420}
-              height={380}
+              width={220}
+              height={180}
+              className="scale-125 md:w-[420px] md:h-[380px] w-full h-full"
               />
           </div>
         </div>
