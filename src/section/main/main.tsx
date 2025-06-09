@@ -1,20 +1,22 @@
-import Izohlar from "@/Components/comments";
-import Hero from "@/Components/hero";
-import InstallPage from "@/Components/installPage";
-import MedicalLegal from "@/Components/medicalLegal";
-import NewsPage from "@/Components/news";
-import QuestionsPage from "@/Components/questionsPage";
-
+import Hero from "@/Components/Hero";
+import MedicalLegal from "@/Components/MedicalLegal";
+import MainService from "@/Components/MainServes";
+import Comments from "@/Components/Comments";
+import NewsPage from "@/Components/News";
+import InstallPage from "@/Components/InstallPage";
+import QuestionsPage from "@/Components/QuestionsPage";
+import Partnyor from "@/Components/Partnyor/Partnyor";
 
 export default function Main() {
   return (
     <div>
         <Hero/>
         <MedicalLegal/>
-        {/* <MainService/> */}
-        <Izohlar/>
+        <MainService/>
+        <Comments/>
         <NewsPage/>
         <InstallPage/>
+        <Partnyor/>
         <QuestionsPage/>
     </div>
   )

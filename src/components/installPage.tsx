@@ -6,7 +6,7 @@ import QR from "@/assets/icons/QR.png";
 
 export default function InstallPage() {
   return (
-    <section className="w-full flex max-md:flex-col justify-center items-center bg-[#0666e6] sm:rounded-[36px] container relative mb-16">
+    <section className="w-full flex max-md:flex-col justify-center items-center bg-[#0666e6] sm:rounded-[36px] container relative">
       <div className="">
         <Image
           src="/Imgs/iPhone15Pro.png"

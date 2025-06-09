@@ -22,11 +22,11 @@ export default function MainService() {
     <section className="pt-16 bg-[#F6F9FC]">
       <ServicesSection />
 
-      <section className="container">
+      {/* <section className="container">
         {platforms.map((item) => (
           <div
             key={item.id}
-            className="flex flex-col md:flex-row items-center justify-between rounded-[36px] text-white bg-[#0653C9] mb-52"
+            className="flex flex-col md:flex-row items-center justify-between rounded-[36px] text-white bg-[#0653C9] mb-7"
           >
             <div className="w-full md:w-1/2 flex justify-start backgroundLiner py-10 relative">
               <Image
@@ -63,7 +63,7 @@ export default function MainService() {
             </div>
           </div>
         ))}
-      </section>
+      </section> */}
     </section>
   );
 }
