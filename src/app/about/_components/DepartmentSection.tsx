@@ -42,7 +42,7 @@ const DepartmentSection: FC = () => {
   useEffect(() => {
     const fetchDepartments = async () => {
 
-      const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ5NTU2NDIzLCJpYXQiOjE3NDk1NTYxMjMsImp0aSI6IjFiNjk3Mjg1NDE3ODRkYzE5MDg1MzMzNWZlYjVhZjk5IiwidXNlcl9pZCI6Mn0.EzPDM9Y3VuFxbW4tr8fi961pS5HwigvSoH31Rw9fplo"
+      const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ5NTU4MDkzLCJpYXQiOjE3NDk1NTc3OTMsImp0aSI6IjAxYzVkOWRiY2EwOTRmMTRiMzZiOGVjMzk1MzlhOTdiIiwidXNlcl9pZCI6Mn0.1iR00mZ9JnjZDK4RxJkbUj0au63xPqSo0gwIwIzc_i8"
       if (!token) {
         throw new Error('No token found. Please log in.');
       }
