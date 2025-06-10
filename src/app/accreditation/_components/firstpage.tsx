@@ -13,7 +13,7 @@ const inter = Inter({
 function FirstPage() {
   return (
     <div
-      className={`container relative bg-transparent h-auto xl:h-[720px] lg:h-[650px] flex flex-col lg:flex-row lg:gap-10 lg:gap-[68px] px-4 md:px-10 ${inter.className} font-inter`}
+      className={`container relative bg-transparent h-auto xl:h-[720px] lg:h-[650px] flex flex-col lg:flex-row lg:gap-10 px-4 md:px-10 ${inter.className} font-inter`}
     >
       {/* Left Content */}
       <div className="z-10 flex-1">
