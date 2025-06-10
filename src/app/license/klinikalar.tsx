@@ -98,7 +98,7 @@ export default function KlinikalarReyesteri() {
         {paginatedData.map((clinic) => (
           <div
             key={clinic.id}
-            className="bg-white border border-gray-200 shadow-sm rounded-xl p-3 sm:p-4 md:p-6"
+            className="bg-[#F6F9FC] border border-gray-200 shadow-sm rounded-xl p-3 sm:p-4 md:p-6"
           >
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start flex-wrap sm:flex-nowrap gap-2">
               {/* Left Side */}

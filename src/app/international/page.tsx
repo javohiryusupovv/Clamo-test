@@ -9,7 +9,6 @@ import FlagLogo2 from "../../assets/flag/flag2.png";
 import acredetIcons from "../../assets/icons/1inter.png";
 import litsenziyaIcons from "../../assets/icons/litsenziyaicons.png";
 import memorandumIcons from "../../assets/icons/memorandum.png";
-import FooterLayout from "../_components/Footer/Footer";
 
 export default function InternationalMain() {
     return (
@@ -82,8 +81,6 @@ export default function InternationalMain() {
                     </div>
                 </div>
             </div>
-
-            <FooterLayout />
         </div>
     );
 }
