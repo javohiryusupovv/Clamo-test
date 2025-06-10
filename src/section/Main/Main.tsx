@@ -1,4 +1,5 @@
 
+import FooterLayout from "@/app/_components/Footer/Footer";
 import Izohlar from "@/Components/Comments";
 import Hero from "@/Components/Hero";
 import InstallPage from "@/Components/InstallPage";
@@ -22,6 +23,7 @@ export default function Main() {
           <Partnyor/>
         </div>
         <QuestionsPage/>
+        <FooterLayout/>
     </div>
   )
 }

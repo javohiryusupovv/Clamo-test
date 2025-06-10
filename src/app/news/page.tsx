@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, X as XIcon } from "lucide-react";
+import FooterLayout from "../_components/Footer/Footer";
 
 // Local Button component
 function Button({
@@ -200,6 +201,7 @@ export default function NewsGrid() {
           </div>
         </div>
       </div>
+      <FooterLayout/>
     </div>
   );
 }
