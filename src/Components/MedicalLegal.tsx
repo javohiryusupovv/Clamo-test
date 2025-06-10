@@ -1,4 +1,4 @@
-import ClamoFlag from "@/assets/images/clamoFlag.png";
+import ClamoFlag from "@/assets/flag/flag1.png";
 import Image from "next/image";
 import LearnMore from "./LearnMoreButton";
 
@@ -20,7 +20,7 @@ export default function MedicalLegal() {
       description:
         "Biz tibbiy tashkilotlarga O'zbekistonda ruxsatnoma va litsenziya olishda yordam beramiz. CLAMO bilan faoliyatingizni qonuniy boshlang va sifatli xizmat ko'rsatishga yo'l oching!",
       bgCircle: "/images/twoCircle.png",
-      clamoFlag: "@/assets/images/clamoFlag.png",
+      clamoFlag: "@/assets/flag/flag1.png",
     },
   ];
 
@@ -29,7 +29,7 @@ export default function MedicalLegal() {
       {medical.map((item, id) => (
         <div
           key={id}
-          className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12"
+          className="flex justify-between flex-col lg:flex-row items-center gap-8 "
         >
           <div className="w-full lg:w-1/2">
             <div className="flex items-center gap-2 mb-3">
@@ -40,7 +40,7 @@ export default function MedicalLegal() {
                 {item.badge}
               </span>
             </div>
-            <h1 className="font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl leading-tight text-gray-900 mb-4">
+            <h1 className="font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl leading-tight text-[#3D445E] mb-4">
               {item.title}
             </h1>
             <p className="font-medium text-base sm:text-lg lg:text-xl text-gray-700 mb-6">
@@ -49,14 +49,12 @@ export default function MedicalLegal() {
             <LearnMore />
           </div>
 
-          <div className="relative">
-            <div className="bg-[url('@/assets/images/twoCircle.png')] bg-no-repeat bg-cover bg-center w-full md:h-[500px] h-[350px] top-20 rotate-180 scale-125 absolute -z-[1]"></div>
+          <div className="relative z-[60]">
+            <div className="bg-[url('@/assets/images/twoCircle.png')] bg-no-repeat bg-cover bg-center w-full h-[900px] top-20 rotate-180 absolute -z-[1] max-sm:hidden"></div>
             <Image
               src={ClamoFlag}
               alt="Clamo Flag"
-              width={220}
-              height={180}
-              className="scale-125 md:w-[420px] md:h-[380px] w-full h-full"
+              className="w-full h-full scale-[0.9] object-fill object-center"
             />
           </div>
         </div>
