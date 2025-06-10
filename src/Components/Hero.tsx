@@ -6,7 +6,7 @@ import Home from "@/assets/images/home.png";
 import File from "@/assets/images/file.png";
 import True from "@/assets/images/true.png";
 import ImageClamo from "@/assets/images/ImageClamo.png";
-import LearnMore from "./learnMore";
+import LearnMore from "./LearnMoreButton";
 
 export default function Hero() {
   return (
