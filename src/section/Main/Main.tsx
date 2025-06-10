@@ -1,11 +1,13 @@
+
+import Izohlar from "@/Components/Comments";
 import Hero from "@/Components/Hero";
-import MedicalLegal from "@/Components/MedicalLegal";
-import MainService from "@/Components/MainServes";
-import Comments from "@/Components/Comments";
-import NewsPage from "@/Components/News";
 import InstallPage from "@/Components/InstallPage";
-import QuestionsPage from "@/Components/QuestionsPage";
+import MainService from "@/Components/MainServes";
+import MedicalLegal from "@/Components/MedicalLegal";
+import NewsPage from "@/Components/News";
 import Partnyor from "@/Components/Partnyor/Partnyor";
+import QuestionsPage from "@/Components/QuestionsPage";
+
 
 export default function Main() {
   return (
@@ -13,10 +15,12 @@ export default function Main() {
         <Hero/>
         <MedicalLegal/>
         <MainService/>
-        <Comments/>
+        <Izohlar/>
         <NewsPage/>
-        <InstallPage/>
-        <Partnyor/>
+        <div className="bg-[#f6f9fc] py-[60px]">
+          <InstallPage/>
+          <Partnyor/>
+        </div>
         <QuestionsPage/>
     </div>
   )

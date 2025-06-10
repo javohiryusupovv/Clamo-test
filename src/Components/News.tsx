@@ -44,11 +44,11 @@ export default function NewsPage() {
   if (news.length === 0) return <div>Loading...</div>;
 
   return (
-    <div className="container pb-10 px-4">
-      <h1 className="font-bold text-[18px] sm:text-[28px] md:text-[36px] lg:text-[44px] text-[#3D445E] leading-[120%]">
+    <div className="container pb-10">
+      <h1 className="font-bold text-[18px] sm:text-[28px] md:text-[36px] lg:text-[44px] xl:text-[48px] text-[#3D445E] leading-[120%]">
         Yangiliklar
       </h1>
-      <p className="font-medium text-[12px] sm:text-[14px] md:text-[16px] text-[#012548CC] pb-[16px] sm:pb-[20px] md:pb-[28px] leading-[150%]">
+      <p className="font-medium text-[12px] sm:text-[14px] md:text-[16px] lg:text-[20px] text-[#012548CC] pb-[16px] sm:pb-[20px] md:pb-[28px] leading-[150%]">
         Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha
         xizmatlar bir joyda, qulay va samarali yechimlar bilan.
       </p>
@@ -62,12 +62,12 @@ export default function NewsPage() {
             width={300}
             height={200}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#051425]/85 via-[#051425]/60 to-[#051425]/40"></div>
           <p className="absolute top-4 left-4 text-[#EDF0EF] font-normal text-[10px] sm:text-[14px] z-10">
             {news[0].date}
           </p>
           <div className="absolute bottom-4 left-4 right-4 text-white z-10">
-            <h2 className="text-[14px] sm:text-[18px] md:text-[22px] font-bold leading-[130%] pb-2">
+            <h2 className="text-[14px] sm:text-[18px] md:text-[22px] xl:text-[28px] font-bold leading-[130%] pb-2">
               {news[0].title}
             </h2>
             <Link
@@ -84,7 +84,7 @@ export default function NewsPage() {
 
         <div className="grid grid-cols-1 gap-4">
           {news.slice(1, 2).map((item) => (
-            <div key={item.id} className="bg-[#f5f8fa] rounded-[16px] p-4">
+            <div key={item.id} className="bg-[#F6F9FC] rounded-[16px] p-4">
               <p className="text-[10px] sm:text-[12px] md:text-[14px] pb-[48px]">
                 {item.date}
               </p>
@@ -104,7 +104,7 @@ export default function NewsPage() {
           ))}
           <div className="flex flex-col sm:flex-row gap-4">
             {news.slice(2, 4).map((item) => (
-              <div key={item.id} className="bg-[#f5f8fa] rounded-[16px] p-4 w-full">
+              <div key={item.id} className="bg-[#F6F9FC] rounded-[16px] p-4 w-full">
                 <p className="text-[10px] sm:text-[12px] md:text-[14px] pb-[48px]">
                   {item.date}
                 </p>
