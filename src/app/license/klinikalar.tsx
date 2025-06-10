@@ -56,7 +56,7 @@ export default function KlinikalarReyesteri() {
 
   return (
     <div className="max-w-7xl mx-auto p-3 sm:p-4 md:p-6">
-      <div className="flex justify-between items-center">
+      <div className="md:flex justify-between items-center max-md:flex-col ">
         <h1 className="text-2xl sm:text-[28px] md:text-[32px] font-semibold mb-4 sm:mb-6 text-gray-800">
           Klinikalar reyesteri
         </h1>
