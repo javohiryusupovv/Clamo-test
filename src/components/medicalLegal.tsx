@@ -1,6 +1,6 @@
 import ClamoFlag from "@/assets/images/clamoFlag.png";
 import Image from "next/image";
-import LearnMore from "./LearnMore";
+import LearnMore from "./LearnMoreButton";
 
 interface MedicalLegalProps {
   title: string;
@@ -57,7 +57,7 @@ export default function MedicalLegal() {
               width={220}
               height={180}
               className="scale-125 md:w-[420px] md:h-[380px] w-full h-full"
-              />
+            />
           </div>
         </div>
       ))}
