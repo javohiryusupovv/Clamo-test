@@ -1,12 +1,13 @@
 
+import Izohlar from "@/Components/Comments";
+import Hero from "@/Components/Hero";
+import InstallPage from "@/Components/InstallPage";
 import MainService from "@/Components/MainServes";
+import MedicalLegal from "@/Components/MedicalLegal";
+import NewsPage from "@/Components/News";
 import Partnyor from "@/Components/Partnyor/Partnyor";
-import Izohlar from "@/Components/comments";
-import Hero from "@/Components/hero";
-import InstallPage from "@/Components/installPage";
-import MedicalLegal from "@/Components/medicalLegal";
-import NewsPage from "@/Components/news";
-import QuestionsPage from "@/Components/questionsPage";
+import QuestionsPage from "@/Components/QuestionsPage";
+
 
 export default function Main() {
   return (
