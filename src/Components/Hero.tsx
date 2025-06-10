@@ -27,11 +27,11 @@ export default function Hero() {
             </h1>
             <div className="bg-white border border-white max-w-max mb-4 px-4 rounded-[17px]">
               <article className="flex items-center gap-3 pb-4 pt-4">
-                <button className="md:w-[183px] w-[150px] md:h-[40px] h-[35px] flex items-center justify-center gap-[11.5px] bg-[#23B3FC] rounded-lg text-sm font-medium text-white leading-[130%]">
-                  Xizmatlarimiz <Image src={Down} alt="down strelka" />
+                <button className="group hover:bg-[#23B3FC]/[80%] md:w-[183px] w-[150px] md:h-[40px] h-[35px] flex items-center justify-center gap-[11.5px] bg-[#23B3FC] rounded-lg text-sm font-medium text-white leading-[130%]">
+                  Xizmatlarimiz <Image className="group-hover:translate-x-1 transition-all duration-200" src={Down} alt="down strelka" />
                 </button>
-                <button className="md:w-[183px] w-[150px] md:h-[40px] h-[35px] flex items-center justify-center gap-[11.5px] bg-[#23B3FC33] rounded-lg text-sm font-medium text-[#23B3FC] leading-[130%]">
-                  Murojaat qilish <Image src={BlueDown} alt="down strelka" />
+                <button className="group hover:bg-[#23b4fc4d] transition-all duration-150 md:w-[183px] w-[150px] md:h-[40px] h-[35px] flex items-center justify-center gap-[11.5px] bg-[#23B3FC33] rounded-lg text-sm font-medium text-[#23B3FC] leading-[130%]">
+                  Murojaat qilish <Image className="group-hover:translate-x-1 transition-all duration-200" src={BlueDown} alt="down strelka" />
                 </button>
               </article>
               <p className="font-medium text-xs pb-4 sm:w-[379px]">
