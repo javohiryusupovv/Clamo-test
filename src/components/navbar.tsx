@@ -26,7 +26,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="container px-5 md:px-0">
+    <div className="container px-5 md:px-0 z-99999999999 relative">
       <nav className="flex items-center justify-between py-[30px] flex-wrap relative">
         {/* Hamburger Button */}
         <button
@@ -121,7 +121,7 @@ export default function Navbar() {
                   }}
                 >
                   <li className="text-sm font-medium text-[#3D445E] py-2 px-4 hover:bg-gray-100">
-                    Sovg'a
+                    Sovg&apos;a
                   </li>
                 </Link>
               </ul>
@@ -136,7 +136,7 @@ export default function Navbar() {
             Akkreditsiyalash
           </li>
           <li className="text-sm font-medium text-[#3D445E] py-2 lg:p-0 w-full lg:w-auto">
-            Bog'lanish
+            Bog&apos;lanish
           </li>
         </ul>
 
