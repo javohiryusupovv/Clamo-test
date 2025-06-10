@@ -1,10 +1,9 @@
-import Main from '@/section/main/main';
-import React from 'react';
+import MainPage from '@/section/Main/Main';
 
-export default function page() {
+export default function Main() {
   return (
     <>
-      <Main/>
+      <MainPage/>
     </>
   )
 }
