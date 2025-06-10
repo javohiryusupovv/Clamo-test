@@ -51,7 +51,7 @@ export default function QuestionsPage() {
   };
 
   return (
-    <div className="container pb-16">
+    <div className="container py-16">
       <div className="flex items-center justify-between md:pb-[28px] pb-[20px]">
         <h1 className="lg:text-[48px] sm:text-[44px] text-[20px] font-bold text-[#3D445E]">
           Tez-tez beriladigan savollar

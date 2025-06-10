@@ -1,0 +1,14 @@
+.footer-shadow{
+    &::before{
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        right: 0;
+        width: 50%;
+        height: 120px;
+        filter: blur(15px);
+        background-color: white;
+        z-index: 11;
+    }
+}
+
