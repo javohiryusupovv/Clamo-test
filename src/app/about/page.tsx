@@ -6,6 +6,7 @@ import Screenpage from '@/assets/Screenpagee.png';
 import NavBuilding from '@/assets/NavBuilding.png';
 import HeroSection from './_components/HeroSection';
 import DepartmentSection from './_components/DepartmentSection';
+import SecondPage from '../consulting/_components/secondpage';
 
 export default function page() {
     return (
@@ -61,6 +62,7 @@ export default function page() {
             <DepartmentSection />
             <TeamCarousel />
             <HeroSection />
+            <SecondPage/>
         </div>
     )
 }
