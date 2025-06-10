@@ -79,7 +79,7 @@ const ServicesSection: React.FC = () => {
               </div>
 
               {/* Bottom CTA */}
-              <div className="mt-6 flex justify-between items-center">
+              <div className="mt-6 flex justify-end items-center gap-4">
                 <Link
                   href={service.link}
                   className="text-sm text-[#23B3FC] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
