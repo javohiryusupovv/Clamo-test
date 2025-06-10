@@ -59,9 +59,9 @@ export default function FooterLayout() {
           </div>
         </div>
         <div className="footer-shadow hidden lg:block">
-          <Image className="absolute bottom-1 w-[700px] right-56 xl:block hidden" src={cirlceBG} alt="bg-Cirlce" />
+          <Image className="absolute bottom-1 w-[700px] right-0 xl:block hidden" src={cirlceBG} alt="bg-Cirlce" />
           <div className="container relative top-0 right-0">
-            <Image className="absolute top-14 right-6 w-[400px] lg:w-[300px]" src={Flags} alt="Flag Clamo" />
+            <Image className="absolute top-14 right-6 w-[400px]" src={Flags} alt="Flag Clamo" />
           </div>
         </div>
         <div className="absolute bottom-0 right-0 z-[11] w-full py-5">

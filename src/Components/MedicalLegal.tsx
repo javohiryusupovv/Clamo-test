@@ -1,4 +1,4 @@
-import ClamoFlag from "@/assets/flag/flag1.png";
+import ClamoFlag from "../assets/images/clamoFlag.png";
 import Image from "next/image";
 import LearnMore from "./LearnMoreButton";
 
@@ -29,7 +29,7 @@ export default function MedicalLegal() {
       {medical.map((item, id) => (
         <div
           key={id}
-          className="flex justify-between flex-col lg:flex-row items-center gap-8 "
+          className="flex justify-between flex-col lg:flex-row items-center gap-8 pb-[80px]"
         >
           <div className="w-full lg:w-1/2">
             <div className="flex items-center gap-2 mb-3">
@@ -49,12 +49,12 @@ export default function MedicalLegal() {
             <LearnMore />
           </div>
 
-          <div className="relative z-[60]">
-            <div className="bg-[url('@/assets/images/twoCircle.png')] bg-no-repeat bg-cover bg-center w-full h-[900px] top-20 rotate-180 absolute -z-[1] max-sm:hidden"></div>
+          <div className="relative bottom-0 z-[60] h-[400px] overflow-hidden">
+            <div className="bg-[url('../assets/images/twoCircle.png')] bg-no-repeat bg-center bg-contain w-full h-[950px] absolute -top-[480px] hidden lg:block -z-[1]"></div>
             <Image
               src={ClamoFlag}
               alt="Clamo Flag"
-              className="w-full h-full scale-[0.9] object-fill object-center"
+              className="object-fill object-center overflow-hidden"
             />
           </div>
         </div>
