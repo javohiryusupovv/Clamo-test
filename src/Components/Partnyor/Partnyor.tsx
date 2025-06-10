@@ -9,10 +9,10 @@ import yoshlarishlar from "../../assets/logo/yoshlar.svg";
 import universitetyuridik from "../../assets/logo/yuridik.png";
 
 export default function Partnyor() {
-    const logos = [asakabank, suvtaminot, universitetyuridik, myTaxi, yoshlarishlar, universitetyuridik, myTaxi];
+    const logos = [asakabank, suvtaminot, universitetyuridik, myTaxi, yoshlarishlar, universitetyuridik, myTaxi, suvtaminot, universitetyuridik];
 
     return (
-        <div className="py-16 mb-9">
+        <div className="py-16 mb-9 bg-[#F6F9FC]">
             <article className="container text-center mb-10">
                 <h3 className="text-4xl font-bold mb-2 text-[#012548]">Hamkorlarimiz</h3>
                 <p className="text-lg text-[#012548] font-medium">
@@ -20,9 +20,9 @@ export default function Partnyor() {
                 </p>
             </article>
 
-            <div className="space-y-6 overflow-hidden">
+            <div className="w-full space-y-6 overflow-hidden">
                 {/* 1-qator: o‘ngga qarab harakat */}
-                <Marquee direction="right" speed={30} gradient={false} pauseOnHover>
+                <Marquee direction="right" speed={30} gradient={true} pauseOnHover>
                     {logos.map((img, i) => (
                         <Link
                             href={"#"}
@@ -39,7 +39,7 @@ export default function Partnyor() {
                 </Marquee>
 
                 {/* 2-qator: chapga qarab harakat */}
-                <Marquee direction="left" speed={30} gradient={false} pauseOnHover>
+                <Marquee direction="left" speed={30} gradient={true} pauseOnHover>
                     {logos.reverse().map((img, i) => (
                         <Link
                             href={"#"}

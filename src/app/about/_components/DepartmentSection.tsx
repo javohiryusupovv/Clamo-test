@@ -42,7 +42,7 @@ const DepartmentSection: FC = () => {
   useEffect(() => {
     const fetchDepartments = async () => {
 
-      const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ5NTUwMzY3LCJpYXQiOjE3NDk1NTAwNjcsImp0aSI6Ijc0MzQ3NzkxYzZlODRlMmI4ZjY4NDk4MDc5NjNjYzY3IiwidXNlcl9pZCI6Mn0.IvLU80d9sUQaXC6XL747sLl92jPNhbDVRxK2f2Y11sM"
+      const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ5NTU2NDIzLCJpYXQiOjE3NDk1NTYxMjMsImp0aSI6IjFiNjk3Mjg1NDE3ODRkYzE5MDg1MzMzNWZlYjVhZjk5IiwidXNlcl9pZCI6Mn0.EzPDM9Y3VuFxbW4tr8fi961pS5HwigvSoH31Rw9fplo"
       if (!token) {
         throw new Error('No token found. Please log in.');
       }
@@ -65,7 +65,6 @@ const DepartmentSection: FC = () => {
 
     fetchDepartments();
   }, []);
-  console.log(departments);
   
   const fallbackDescription =
     'Shifokorlarimiz yuqori malakali mutaxassislardan iborat bo‘lib, ular zamonaviy usullar asosida tashxis qo‘yish, individual davolash rejasini tuzish va bemorlarni qo‘llab-quvvatlashga intiladilar.';

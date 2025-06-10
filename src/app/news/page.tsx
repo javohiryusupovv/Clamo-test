@@ -45,7 +45,7 @@ function Card({
 }) {
   return (
     <div
-      className={`bg-white rounded-2xl border border-[#ffff] hover:border-[#23B3FC] hover:border-2 ${className}`}
+      className={`bg-white rounded-2xl border border-[#ffff] hover:border-[#23B3FC] hover:border-1 ${className}`}
       {...props}
     >
       {children}
@@ -138,7 +138,7 @@ export default function NewsGrid() {
             {paginated.map((item) => (
               <Card
                 key={item.id}
-                className="hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+                className="transition duration-300 cursor-pointer"
                 onClick={() => setSelectedNews(item)}
               >
                 <div className="m-3">
