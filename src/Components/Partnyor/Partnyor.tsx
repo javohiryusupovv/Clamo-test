@@ -1,28 +1,41 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
 
-import myTaxi from "../../assets/logo/mytaxi.svg";
-import suvtaminot from "../../assets/logo/uzsuvozi 1.svg";
-import asakabank from "../../assets/logo/horizontal.svg";
-import yoshlarishlar from "../../assets/logo/yoshlar.svg";
-import universitetyuridik from "../../assets/logo/yuridik.png";
+// import myTaxi from "../../assets/logo/mytaxi.svg";
+// import suvtaminot from "../../assets/logo/uzsuvozi 1.svg";
+// import asakabank from "../../assets/logo/horizontal.svg";
+// import yoshlarishlar from "../../assets/logo/yoshlar.svg";
+// import universitetyuridik from "../../assets/logo/yuridik.png";
+import { useEffect, useState } from "react";
 
 export default function Partnyor() {
-  const logos = [
-    asakabank,
-    suvtaminot,
-    universitetyuridik,
-    myTaxi,
-    yoshlarishlar,
-    universitetyuridik,
-    myTaxi,
-    suvtaminot,
-    universitetyuridik,
-  ];
+  type Partner = {
+    id: number;
+    image: string;
+    title: string;
+  };
+
+  const [partners, setPartners] = useState<Partner[]>([]);
+
+  useEffect(() => {
+    const fetchPartners = async () => {
+      try {
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_API_BASE_URL}/home/partners/?page=1&page_size=177`
+        );
+        const data = await res.json();
+        setPartners(data.results);
+      } catch (error) {}
+    };
+    fetchPartners();
+  }, []);
+  console.log(partners);
 
   return (
-    <div className="py-16 mb-9 bg-[#F6F9FC]">
+    <div className="md:py-16 pt-9 mb-9 bg-[#F6F9FC]">
       <article className="container text-center mb-10 px-4 sm:px-0">
         <h3 className="text-2xl sm:text-4xl font-bold mb-2 text-[#012548]">
           Hamkorlarimiz
@@ -36,7 +49,7 @@ export default function Partnyor() {
       <div className="w-full space-y-6 overflow-hidden">
         {/* 1-qator: o‘ngga qarab harakat */}
         <Marquee direction="right" speed={30} gradient={true} pauseOnHover>
-          {logos.map((img, i) => (
+          {partners.map((img, i) => (
             <Link
               href={"#"}
               key={i}
@@ -44,9 +57,11 @@ export default function Partnyor() {
                                        h-[80px] sm:h-[110px] w-[160px] sm:w-[220px] p-6 sm:p-8"
             >
               <Image
-                src={img}
+                src={img.image}
                 alt={`Logo ${i}`}
                 className="object-contain h-full w-auto"
+                width={57}
+                height={57}
               />
             </Link>
           ))}
@@ -54,20 +69,21 @@ export default function Partnyor() {
 
         {/* 2-qator: chapga qarab harakat */}
         <Marquee direction="left" speed={30} gradient={true} pauseOnHover>
-          {logos
-            .slice() // clone array to avoid reversing original
+          {partners
+            .slice()
             .reverse()
             .map((img, i) => (
               <Link
                 href={"#"}
                 key={i}
-                className="mx-2 sm:mx-[18px] bg-[#eaecef] border-white border-[3px] rounded-xl flex items-center justify-center 
-                                           h-[80px] sm:h-[110px] w-[160px] sm:w-[220px] p-6 sm:p-8"
+                className="mx-2 sm:mx-[18px] bg-[#eaecef] border-white border-[3px] rounded-xl flex items-center justify-center h-[80px] sm:h-[110px] w-[160px] sm:w-[220px] p-6 sm:p-8"
               >
                 <Image
-                  src={img}
-                  alt={`Logo ${i}`}
+                  src={img.image}
+                  alt={img.title}
                   className="object-contain h-full w-auto"
+                  width={57}
+                  height={57}
                 />
               </Link>
             ))}
