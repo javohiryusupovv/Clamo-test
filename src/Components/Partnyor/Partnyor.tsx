@@ -22,7 +22,7 @@ export default function Partnyor() {
   ];
 
   return (
-    <div className="py-16 mb-9 bg-[#F6F9FC]">
+    <div className="md:py-16 pt-9 mb-9 bg-[#F6F9FC]">
       <article className="container text-center mb-10 px-4 sm:px-0">
         <h3 className="text-2xl sm:text-4xl font-bold mb-2 text-[#012548]">
           Hamkorlarimiz

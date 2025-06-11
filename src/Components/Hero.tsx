@@ -47,6 +47,7 @@ export default function Hero() {
             alt="HeroImage"
             className=" lg:ml-40 lg:absolute -right-44 -top-12 -z-[1] max-sm:-mb-16 max-md:-mb-[78px] max-lg:mb-[-90px]"
           />
+          {/* oq soya */}
           <div className="absolute lg:-bottom-20 md:-bottom-64 sm:-bottom-[120px] -bottom-[100px] max-lg:left-0  lg:-right-40 xl:w-2/3 lg:w-3/4 w-[100%] h-[270px] bg-gradient-to-t from-white/60 to-transparent" />
 
         </section>

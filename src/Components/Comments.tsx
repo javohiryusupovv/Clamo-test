@@ -105,7 +105,7 @@ export default function Izohlar() {
   ];
 
   return (
-    <div className="py-[64px]">
+    <div className="md:py-[64px] py-[30px]">
       <div className="container">
         {opinion.map((item: commentOpinion, id: number) => (
           <div key={id}>
