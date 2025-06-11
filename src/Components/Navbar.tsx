@@ -28,8 +28,9 @@ export default function Navbar() {
   };
 
   return (
+    <div className=" bg-[#FFFFFF]">
     <div className="container px-5 md:px-0">
-      <nav className="flex items-center justify-between py-[30px] flex-wrap relative">
+      <nav className="flex items-center justify-between py-[20px] flex-wrap relative z-50 bg-[#FFFFFF]">
         {/* Hamburger Button */}
         <button
           className="flex flex-col gap-1.5 z-50 lg:hidden"
@@ -136,6 +137,7 @@ export default function Navbar() {
           </article>
         </ul>
       </nav>
+    </div>
     </div>
   );
 }

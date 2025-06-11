@@ -37,8 +37,8 @@ const cardData = [
 ];
 function secondpage() {
   return (
-    <div className=" h-[518px] w-full bg-[#ffffff]">
-      <div className=" flex flex-col font-vksans lg:mb-[44px] md:mb-[37px] mb-[25px] lg:gap-1 pt-[64px] container">
+    <div className=" h-[518px] second-div w-full bg-[#ffffff]">
+      <div className=" flex flex-col font-vksans lg:mb-[44px] md:mb-[37px] mb-[25px] lg:gap-1 sm:pt-[40px] md:pt-[50px] lg:pt-[64px] container">
         <h1 className=" font-bold text-[#3D445E] md:text-[40px] sm:text-[35px] text-[32px] lg:text-[48px] leading-[100% ]">
           Ishlash yo‘nalishlari
         </h1>
