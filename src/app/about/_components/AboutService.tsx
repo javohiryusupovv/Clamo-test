@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import { useEffect } from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -42,6 +43,16 @@ const services: ServiceCardProps[] = [
 ];
 
 const ServicesSection: React.FC = () => {
+
+    useEffect(() => {
+    if (typeof window !== "undefined") {
+      import("aos").then(AOS => {
+        AOS.init({ duration: 1000 });
+      });
+    }
+  }, []);
+
+
   return (
     <section className="py-16 bg-[#F6F9FC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,6 +72,7 @@ const ServicesSection: React.FC = () => {
             <div
               key={index}
               className="group bg-white rounded-2xl shadow-sm hover:shadow-md p-6 flex flex-col justify-between transition duration-300 hover:-translate-y-1"
+              data-aos="zoom-out"
             >
               <div>
                 <Image

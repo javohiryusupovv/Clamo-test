@@ -1,6 +1,8 @@
+"use client"
 import "../styles/linerMainserver.css";
 import ServicesSection from "@/app/about/_components/AboutService";
 import Image from "next/image";
+import { useEffect } from "react";
 import { FaChevronRight, FaPhoneAlt } from "react-icons/fa";
 // import "@/style/linerMainserver.css";
 
@@ -19,11 +21,24 @@ const platforms = [
 ];
 
 export default function MainService() {
+
+  useEffect(() => {
+    const loadAOS = async () => {
+      const AOS = await import("aos");
+      AOS.init({ duration: 1000 });
+    };
+
+    if (typeof window !== "undefined") {
+      loadAOS();
+    }
+  }, []);
+
+
   return (
     <section className="pt-16 bg-[#F6F9FC]">
       <ServicesSection />
 
-      <section className="container max-sm:bg-[#0653C9] sm:pb-[58px]">
+      <section className="container max-sm:bg-[#0653C9] sm:pb-[58px] overflow-hidden">
         {platforms.map((item) => (
           <div
             key={item.id}
@@ -37,6 +52,7 @@ export default function MainService() {
                   width={500}
                   height={273}
                   className="w-[510px] h-[300px] rounded-bl-[36px]"
+                  data-aos="fade-right"
                 />
               </div>
             </div>

@@ -1,16 +1,16 @@
 "use client";
-
 import Image from "next/image";
 import Phone from "../assets/icons/phone.png";
 import Flag from "../assets/icons/uzbekistan.png";
 import LogoClamo from "../assets/icons/LogoClamo.svg";
 import Down from "../assets/icons/down.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [header, setHeader] = useState(false)
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -20,10 +20,27 @@ export default function Navbar() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+
+  const scrollHeader = ()=>{
+    if(window.scrollY >= 20){
+      setHeader(true)
+    }else{
+      setHeader(false)
+    }
+  }
+
+  useEffect(()=>{
+    window.addEventListener('scroll', scrollHeader)
+    return()=>{
+      window.addEventListener('scroll', scrollHeader)
+    }
+  },[])
+
+
   return (
-    <div className="">
-      <div className="container">
-        <nav className="flex items-center justify-between lg:py-10 py-5 ">
+    <div className="  m-auto">
+      <div className={header ? " bg-gray-100 fixed top-0 z-[999] w-full  transition-transform duration-500 ease-in-out " : "bg-transparent"}>
+        <nav className={`flex items-center justify-between py-3 lg:py-7 z-[999] container`} >
           <ul>
             <Link href="/">
               <Image
@@ -70,13 +87,13 @@ export default function Navbar() {
                   </div>
                 </li>
                 {isDropdownOpen && (
-                  <ul className="absolute z-50 top-full left-0 mt-2 bg-white shadow-md rounded py-2 w-40">
+                  <ul className="absolute z-[999] bg-white  top-full left-0 mt-2  shadow-md rounded py-2 w-40">
                     <Link href="/about">
                       <li className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100">
                         Markaz haqida
                       </li>
                     </Link>
-                    <Link href="/">
+                    <Link href="/regulatorydocuments">
                       <li className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100">
                         Normativ hujjatlar
                       </li>
@@ -137,7 +154,7 @@ export default function Navbar() {
 
           {/* Mobile Menu */}
           {isMobileMenuOpen && (
-            <div className="fixed inset-0 bg-black bg-opacity-50 z-10 lg:hidden" onClick={toggleMobileMenu}>
+            <div className="fixed inset-0 bg-black  bg-opacity-50 z-[999] lg:hidden" onClick={toggleMobileMenu}>
               <div className="flex  flex-col items-center absolute top-0 left-0 w-full bg-white p-6 transform transition-transform duration-300 ease-in-out" style={{ transform: isMobileMenuOpen ? 'translateY(0)' : 'translateY(-100%)' }}>
                 <ul className="flex flex-col items-start gap-6">
                   <article className="relative">
@@ -160,13 +177,13 @@ export default function Navbar() {
                       </div>
                     </li>
                     {isDropdownOpen && (
-                      <ul className="mt-2 bg-white shadow-md rounded py-2 w-40 absolute z-10">
+                      <ul className="mt-2 bg-white  shadow-md rounded py-2 w-40 absolute z-[999]">
                         <Link href="/about">
                           <li className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100">
                             Markaz haqida
                           </li>
                         </Link>
-                        <Link href="/">
+                        <Link href="/regulatorydocuments">
                           <li className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100">
                             Normativ hujjatlar
                           </li>
