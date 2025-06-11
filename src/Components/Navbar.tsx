@@ -112,6 +112,7 @@ export default function Navbar() {
                 )}
               </article>
               <Link href="/license">
+
                 <li className="text-sm font-medium text-[#3D445E]">Litsenziyalash</li>
               </Link>
               <Link href="/accreditation">
@@ -189,6 +190,7 @@ export default function Navbar() {
                           </li>
                         </Link>
                         <Link href="/international">
+
                           <li className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100">
                             Xalqaro hamkorlik
                           </li>
