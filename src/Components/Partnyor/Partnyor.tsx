@@ -19,20 +19,26 @@ export default function Partnyor() {
   };
 
   const [partners, setPartners] = useState<Partner[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchPartners = async () => {
       try {
         const res = await fetch(
-          `${process.env.NEXT_PUBLIC_API_BASE_URL}/home/partners/?page=1&page_size=177`
+          `${process.env.NEXT_PUBLIC_API_BASE_URL}/home/partners/`
         );
         const data = await res.json();
-        setPartners(data.results);
-      } catch (error) {}
+        setPartners(data || []);
+      } catch (error) {
+        setPartners([]);
+      } finally {
+        setLoading(false);
+      }
     };
     fetchPartners();
   }, []);
-  console.log(partners);
+
+  if (loading) return <div>Loading...</div>;
 
   return (
     <div className="md:py-16 pt-9 mb-9 bg-[#F6F9FC]">

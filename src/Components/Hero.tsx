@@ -11,7 +11,7 @@ import LearnMore from "./LearnMoreButton";
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { FaChevronRight } from "react-icons/fa";
-// import "aos/dist/aos.css";
+import "aos/dist/aos.css";
 
 function useCountUp(target: number, duration = 1500) {
   const [count, setCount] = useState(0);
@@ -54,7 +54,7 @@ export default function Hero() {
     axios
       .get(`${API_URL}/home/stats/`)
       .then((response) => {
-        setLicenseData(response.data.results || []);
+        setLicenseData(response.data || []);
       })
       .catch((error) => console.error("Failed to fetch license data:", error));
   }, [API_URL]);
@@ -97,7 +97,7 @@ export default function Hero() {
                 Tibbiyot tashkilotlarini
               </span>
             </p>
-            <h1 className="lg:w-[582px] lg:text-[40px] sm:text-[32px] text-[25px] font-bold uppercase text-[#3D445E] md:pb-5 pb-3 leading-[110%]">
+            <h1 className="lg:w-[582px] lg:text-[40px] sm:text-[32px] text-[25px] font-bold uppercase text-[#3D445E] md:pb-5 pb-3 leading-[110%]" data-aos="fade-up">
               litsenziyalash va akkreditatsiyalash markazi davlat muassasi
             </h1>
             <div className="bg-white border border-white lg:max-w-max max-lg:w-full mb-4 sm:px-4 rounded-[17px]">
@@ -144,6 +144,16 @@ export default function Hero() {
               Tibbiyot sohasidagi xalqaro hamkorlik va tajriba almashinuvi
             </h1>
             <LearnMore />
+<<<<<<< uzb
+            <Image
+              src={Doctors}
+              alt="Doctors"
+              width={359}
+              height={370}
+              className="object-cover pt-4 pl-4 sm:pl-[58px] lg:w-[75%]"
+              data-aos="fade-up"
+            />
+=======
             <div className=" flex justify-center">
               <Image
                 src={Doctors}
@@ -154,6 +164,7 @@ export default function Hero() {
                 // data-aos="fade-up"
               />
             </div>
+>>>>>>> javoxir
             {/* <div className="absolute bottom-0 -left-[38px] -z-10 max-md:hidden w-[600px] h-[300px]  bg-[url('../assets/images/circleBlue.png')] bg-no-repeat bg-contain"></div> */}
             <div className="absolute lg:-bottom-10 bottom-0 left-0 w-full h-[180px] bg-gradient-to-t from-blue-700/100 to-transparent" />
             <p className="md:w-[96%] absolute lg:bottom-6 bottom-0 sm:left-6 sm:right-6 text-xs sm:text-sm font-medium leading-relaxed text-white">
