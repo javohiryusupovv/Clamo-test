@@ -1,47 +1,34 @@
+"use client";
+
 import Image from "next/image";
 import { FaArrowRightLong } from "react-icons/fa6";
 import WhiteDown from "@/assets/icons/whiteDown.png";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function NewsPage() {
-  const news = [
-    {
-      id: 1,
-      title:
-        "O’zbekistonda yangi zamonaviy tibbiy markazlar tashkil etildi — CLAMO bilan ruxsatnoma va litsenziyalarni tez va oson oling!",
-      description:
-        "O’zbekistonda yangi zamonaviy tibbiy markazlar tashkil etildi...",
-      image: "/Imgs/Shahar.png",
-      date: "10.08.2023",
-      link: "/news/1",
-    },
-    {
-      id: 2,
-      title: "CLAMO bilan yangi imkoniyatlarni kashf eting!",
-      description: "CLAMO bilan yangi imkoniyatlarni kashf eting...",
-      image: "",
-      date: "10.08.2023",
-      link: "/news/2",
-    },
-    {
-      id: 3,
-      title: "CLAMO — Sifatli tibbiy xizmatlar rivojiga hissa qo‘shing!",
-      description: "",
-      image: "",
-      date: "10.08.2023",
-      link: "/news/3",
-    },
-    {
-      id: 4,
-      title: "CLAMO bilan yangi imkoniyatlar eshigi ochildi!",
-      description: "",
-      image: "",
-      date: "10.08.2023",
-      link: "/news/4",
-    },
-  ];
+  const [news, setNews] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  if (news.length === 0) return <div>Loading...</div>;
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_API_BASE_URL}/news/news/`
+        );
+        const data = await res.json();
+        setNews(data.slice(0, 4));
+      } catch (error) {
+        setNews([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchNews();
+  }, []);
+
+
+  if (!news || news.length === 0) return <div>No news found.</div>;
 
   return (
     <div className="container pb-10">
@@ -54,70 +41,84 @@ export default function NewsPage() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="relative rounded-[16px] sm:rounded-[24px] overflow-hidden">
-          <Image
-            src={news[0].image}
-            alt="City image"
-            className="w-full h-full object-cover"
-            width={300}
-            height={200}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#051425]/85 via-[#051425]/60 to-[#051425]/40"></div>
-          <p className="absolute top-4 left-4 text-[#EDF0EF] font-normal text-[10px] sm:text-[14px] z-10">
-            {news[0].date}
-          </p>
-          <div className="absolute bottom-4 left-4 right-4 text-white z-10">
-            <h2 className="text-[14px] sm:text-[18px] md:text-[22px] xl:text-[28px] font-bold leading-[130%] pb-2">
-              {news[0].title}
-            </h2>
-            <Link
-              href={news[0].link}
-              className="hover:underline text-white font-medium text-[12px] sm:text-[14px] flex items-center gap-3"
-            >
-              Batafsil
-              <div className="border border-[#74807B] py-2 px-2 rounded-full relative">
-                <FaArrowRightLong className="w-4 h-4" />
-              </div>
-            </Link>
+        {news[0] && (
+          <div className="group relative rounded-[16px] sm:rounded-[24px] overflow-hidden">
+            <Image
+              src={news[0].image || "/Imgs/Shahar.png"}
+              alt="City image"
+              className="w-full h-full object-cover"
+              width={300}
+              height={200}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#051425]/85 via-[#051425]/60 to-[#051425]/40"></div>
+            <p className="absolute top-4 left-4 text-[#EDF0EF] font-normal text-[10px] sm:text-[14px] z-10">
+              {news[0].created_at
+                ? new Date(news[0].created_at).toLocaleDateString()
+                : ""}
+            </p>
+            <div className="absolute bottom-4 left-4 right-4 text-white z-10">
+              <h2 className="text-[14px] sm:text-[18px] md:text-[22px] xl:text-[28px] font-bold leading-[130%] pb-2">
+                {news[0].title_uz || news[0].title}
+              </h2>
+              <Link
+                href={`/news/${news[0].slug}`}
+                className="hover:underline text-white font-medium text-[12px] sm:text-[14px] flex items-center gap-4"
+              >
+                Batafsil
+                <div className="border border-[#74807B] py-2 px-2 rounded-full relative group-hover:border-[#23B3FC]">
+                  <FaArrowRightLong className="w-4 h-4 -translate-x-2 transition-all duration-200 group-hover:translate-x-0" />
+                </div>
+              </Link>
+            </div>
           </div>
-        </div>
+        )}
 
         <div className="grid grid-cols-1 gap-4">
           {news.slice(1, 2).map((item) => (
-            <div key={item.id} className="bg-[#F6F9FC] rounded-[16px] p-4">
+            <div
+              key={item.id}
+              className="group bg-[#F6F9FC] rounded-[16px] p-4"
+            >
               <p className="text-[10px] sm:text-[12px] md:text-[14px] pb-[48px]">
-                {item.date}
+                {item.created_at
+                  ? new Date(item.created_at).toLocaleDateString()
+                  : ""}
               </p>
               <h3 className="font-bold text-[13px] sm:text-[16px] md:text-[18px] leading-[130%] pb-[24px]">
-                {item.title}
+                {item.title_uz || item.title}
               </h3>
               <Link
-                href={item.link}
-                className="hover:underline text-[#74807B] font-medium text-[12px] sm:text-[14px] flex items-center gap-3"
+                href={`/news/${item.slug}`}
+                className="hover:underline text-[#74807B] font-medium text-[12px] sm:text-[14px] flex items-center gap-4"
               >
                 Batafsil
-                <div className="border border-[#74807B] py-2 px-2 rounded-full relative">
-                  <FaArrowRightLong className="w-4 h-4" />
+                <div className="border border-[#74807B] py-2 px-2 rounded-full relative group-hover:border-[#23B3FC]">
+                  <FaArrowRightLong className="w-4 h-4 -translate-x-2 transition-all duration-200 group-hover:translate-x-0" />
                 </div>
               </Link>
             </div>
           ))}
           <div className="flex flex-col sm:flex-row gap-4">
-            {news.slice(2, 4).map((item) => (
-              <div key={item.id} className="bg-[#F6F9FC] rounded-[16px] p-4 w-full">
+            {news.slice(1, 4).map((item) => (
+              <div
+                key={item.id}
+                className="group bg-[#F6F9FC] rounded-[16px] p-4 w-full"
+              >
                 <p className="text-[10px] sm:text-[12px] md:text-[14px] pb-[48px]">
-                  {item.date}
+                  {item.created_at
+                    ? new Date(item.created_at).toLocaleDateString()
+                    : ""}
                 </p>
                 <h3 className="font-bold text-[12px] md:text-[15px] lg:text-[18px] leading-[130%] pb-3">
-                  {item.title}
+                  {item.title_uz || item.title}
                 </h3>
                 <Link
-                  href={item.link}
-                  className="hover:underline text-[#74807B] font-medium text-[12px] sm:text-[14px] flex items-center gap-3"
+                  href={`/news/${item.id}`}
+                  className="hover:underline text-[#74807B] font-medium text-[12px] sm:text-[14px] flex items-center gap-4"
                 >
                   Batafsil
-                  <div className="border border-[#74807B] py-2 px-2 rounded-full relative">
-                    <FaArrowRightLong className="w-4 h-4" />
+                  <div className="border border-[#74807B] py-2 px-2 rounded-full relative group-hover:border-[#23B3FC]">
+                    <FaArrowRightLong className="w-4 h-4 -translate-x-2 transition-all duration-200 group-hover:translate-x-0" />
                   </div>
                 </Link>
               </div>
@@ -128,9 +129,13 @@ export default function NewsPage() {
 
       {/* Button */}
       <div className="flex md:justify-end justify-center pt-6">
-        <button className="w-full max-w-[200px] h-[35px] sm:w-[250px] sm:h-[40px] flex items-center justify-center gap-3 bg-[#23B3FC] rounded-lg text-xs sm:text-sm md:text-base font-medium text-white">
+        <button className="group w-full max-w-[200px] h-[35px] sm:w-[250px] sm:h-[40px] flex items-center justify-center gap-3 bg-[#23B3FC] hover:bg-[#23B3FC]/[80%] rounded-lg text-xs sm:text-sm md:text-base font-medium text-white">
           Batafsil tanishish
-          <Image src={WhiteDown} alt="down strelka" className="w-4 h-4" />
+          <Image
+            src={WhiteDown}
+            alt="down strelka"
+            className="w-4 h-4 group-hover:translate-x-2 transition-all duration-200"
+          />
         </button>
       </div>
     </div>

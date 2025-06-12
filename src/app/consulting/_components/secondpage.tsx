@@ -37,8 +37,8 @@ const cardData = [
 ];
 function secondpage() {
   return (
-    <div className=" h-[518px] w-full bg-[#ffffff]">
-      <div className=" flex flex-col font-vksans lg:mb-[44px] md:mb-[37px] mb-[25px] lg:gap-1 pt-[64px] container">
+    <div className=" h-[518px] second-div w-full bg-[#ffffff]">
+      <div className=" flex flex-col font-vksans lg:mb-[44px] md:mb-[37px] mb-[25px] lg:gap-1 sm:pt-[40px] md:pt-[50px] lg:pt-[64px] container">
         <h1 className=" font-bold text-[#3D445E] md:text-[40px] sm:text-[35px] text-[32px] lg:text-[48px] leading-[100% ]">
           Ishlash yo‘nalishlari
         </h1>
@@ -72,8 +72,8 @@ function secondpage() {
             slidesPerView: 3,
           },
         }}
-        loop={true} // 🔁 doimiy aylanish
-        allowTouchMove={true} // ✋ foydalanuvchi swipelashi mumkin
+        loop={true}
+        allowTouchMove={true}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
@@ -83,7 +83,7 @@ function secondpage() {
       >
         {cardData.map((card, index) => (
           <SwiperSlide key={index}>
-            <div className="hover:bg-[#0653C9] text-[#3D445E] hover:text-[#FFFFFF] border duration-300 p-4 sm:p-6 !border-[#E3E8E9] rounded-[28px] h-full flex flex-col">
+            <div className="hover:bg-[#0653C9] text-[#3D445E] hover:text-[#FFFFFF] border duration-300 p-4 sm:p-6 !border-[#E3E8E9] rounded-[28px] h-full flex flex-col cursor-pointer">
               <h3 className="sm:mb-2 font-bold md:text-[28px] sm:text-[25px] font-vksans leading-[150%]">
                 {card.title}
               </h3>

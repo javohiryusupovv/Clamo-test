@@ -56,7 +56,6 @@ export default function TeamCarousel() {
         <p className="text-gray-600 mb-8">
           Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda...
         </p>
-
         {members.length > 0 ? (
           <Swiper
             modules={[Navigation]}
@@ -88,7 +87,6 @@ export default function TeamCarousel() {
         ) : (
           <p>Loading...</p>
         )}
-
         <div className="flex justify-center items-center gap-4 mt-6">
           <button
             ref={prevRef}
