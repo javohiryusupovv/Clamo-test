@@ -117,6 +117,7 @@ export default function Navbar() {
                         onClick={() => setIsDropdownOpen(false)}
                         className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100"
                       >
+
                         Xalqaro hamkorlik
                       </li>
                     </Link>
@@ -189,6 +190,7 @@ export default function Navbar() {
               }`}
             ></span>
           </button>
+
 
           {/* Mobile Menu */}
           {isMobileMenuOpen && (
@@ -281,6 +283,7 @@ export default function Navbar() {
                       <div className="w-5 h-5 flex items-center">
                         <Image
                           src={Down}
+
                           alt="Down arrow"
                           width={11}
                           height={11}

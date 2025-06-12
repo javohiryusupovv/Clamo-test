@@ -1,3 +1,4 @@
+
 "use client";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
@@ -75,17 +76,20 @@ export default function Contact() {
   };
 
   return (
-    <div>
-      <div className="container relative left-0 z-[40] flex items-center justify-between w-full bg-[#0653C9] rounded-[36px]">
-        <div className="w-[450px] pl-14 py-14">
-          <h6 className="text-[32px] font-semibold text-white mb-2">
+    <div className="px-4 py-8">
+      <div className="container relative left-0 z-[40] flex flex-col lg:flex-row items-center justify-between w-full bg-[#0653C9] rounded-[36px]">
+        
+        {/* Contact Info */}
+        <div className="w-full lg:w-[450px] pl-6 pr-6 py-10 lg:pl-14 lg:py-14">
+          <h6 className="text-[28px] lg:text-[32px] font-semibold text-white mb-2">
             Bog‘lanish uchun
           </h6>
-          <p className="text-[16px] font-normal text-white text-opacity-[60%] mb-9">
-            Siz tizimdan chiqishingiz mumkin bo'lgan quyidagi usullardan
-            foydalangan holda biz bilan bog'laning
+          <p className="text-[14px] lg:text-[16px] font-normal text-white text-opacity-[60%] mb-6 lg:mb-9">
+            Siz tizimdan chiqishingiz mumkin bo&apos;lgan quyidagi usullardan
+            foydalangan holda biz bilan bog&apos;laning
           </p>
           <div className="flex flex-col gap-3">
+            {/* Location */}
             <div className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
               <article className="bg-white p-3 inline-flex justify-center items-center rounded-lg">
                 <Image className="w-5 h-4" src={location} alt="Location" />
@@ -99,6 +103,7 @@ export default function Contact() {
                 </p>
               </article>
             </div>
+            {/* Phone */}
             <div className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
               <article className="bg-white p-3 inline-flex items-center justify-center rounded-lg">
                 <Image className="w-5 h-5" src={phone} alt="Phone" />
@@ -112,6 +117,7 @@ export default function Contact() {
                 </p>
               </article>
             </div>
+            {/* Email */}
             <div className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
               <article className="bg-white p-3 inline-flex rounded-lg">
                 <Image className="w-5 h-4" src={email} alt="Email" />
@@ -128,6 +134,7 @@ export default function Contact() {
           </div>
         </div>
 
+        {/* Contact Form */}
         <div className="py-6 px-8 absolute border border-gray-200 right-16 w-[500px] h-[576px] bg-white rounded-[36px]">
           <article className="mb-[26px]">
             <h5 className="text-[32px] font-bold leading-[120%] text-[#3D445E] mb-3">
@@ -158,6 +165,7 @@ export default function Contact() {
                 <p className="text-red-500 text-sm">{errors.names.message}</p>
               )}
             </article>
+            {/* Organization */}
 
             <article className="w-full mb-6">
               <label
@@ -179,6 +187,7 @@ export default function Contact() {
                 </p>
               )}
             </article>
+            {/* Phone */}
             <article className="w-full mb-6">
               <label
                 htmlFor="phoneNumber"

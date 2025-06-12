@@ -16,7 +16,7 @@ export default function FooterLayout() {
   return (
     <div className="pt-20 bg-[#F6F9FC]">
       <Contact />
-      <div className="relative top-0 right-0 z-[10] w-full sm:h-[500px] h-[720px] bg-[#F6F9FC] overflow-hidden">
+      <div className="relative top-0 right-0 z-[10] w-full sm:h-[500px] h-[750px] bg-[#F6F9FC] overflow-hidden">
         <div className="container relative top-0 right-0 z-[50]">
           <div className="block sm:flex gap-20 absolute top-0 left-0 py-28 sm:py-20 sm:px-0 px-[30px]">
             <div>
@@ -25,11 +25,7 @@ export default function FooterLayout() {
                   <Image src={ClamoLogo} alt="Clamo Logo" />
                   <Image src={TibbiyotVazirlik} alt="Tibbiyot Vazirligi logo" />
                 </article>
-                <p className="text-[16px] text-[#3D445E]">
-                  Raqamli texnologiyalarni joriy etish orqali litsenziyalash va
-                  akkreditatsiya jarayonlarini soddalashtirish, Xalqaro
-                  standartlarni to&apos;liq integratsiya qilish
-                </p>
+                <p className="text-[12px] sm:text-[16px] text-[#3D445E] sm:w-auto w-[350px]">Raqamli texnologiyalarni joriy etish orqali litsenziyalash va akkreditatsiya jarayonlarini soddalashtirish, Xalqaro standartlarni to&apos;liq integratsiya qilish</p>
               </div>
               <div>
                 <p className="text-[#3D445E] text-[14px] mb-4 uppercase">
@@ -122,12 +118,12 @@ export default function FooterLayout() {
         </div>
         <div className="absolute bottom-0 right-0 z-[11] w-full py-5">
           <article className="container flex justify-between items-center">
-            <p className="text-[#3D445E]/[60%] text-[14px]">
+            <p className="text-[#3D445E]/[60%] text-[7px] sm:text-[14px]">
               Copyright {new Date().getFullYear()} - “CLAMO” LLC
             </p>
             <article className="flex justify-between items-center gap-4">
-              <span className="text-[#3D445E]">Developed by</span>
-              <Image src={DevLogos} alt="Logo Developed" />
+              <span className="text-[#3D445E test-[7px]">Developed by</span>
+              <Image src={DevLogos} alt="Logo Developed"/>
             </article>
           </article>
         </div>
