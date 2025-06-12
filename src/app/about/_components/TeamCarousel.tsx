@@ -105,9 +105,9 @@ export default function TeamCarousel() {
           onSwiper={setSwiperInstance}
           className="!pb-8"
           breakpoints={{
-            320: { slidesPerView: 1 },
-            640: { slidesPerView: 2 },
-            1000: { slidesPerView: 3 },
+            320: { slidesPerView: 3 },
+            640: { slidesPerView: 3 },
+            1184: { slidesPerView: 3 },
             1200: { slidesPerView: 4 },
           }}
         >

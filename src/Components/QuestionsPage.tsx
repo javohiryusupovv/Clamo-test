@@ -52,8 +52,6 @@ export default function QuestionsPage() {
                 {openIndex === idx ? "−" : "+"}
               </span>
             </button>
-
-            {/* Border tashqi divda qoladi. Ichki content max-height bilan animatsiya qiladi */}
             <div
               className={`overflow-hidden transition-all duration-300 ease-in-out ${
                 openIndex === idx ? "max-h-[500px] py-3 px-6" : "max-h-0 px-6"
