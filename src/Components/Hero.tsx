@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Down from "@/assets/icons/whiteDown.png";
-import BlueDown from "@/assets/icons/blueDown.png";
 import Doctors from "@/assets/images/doctors.png";
 import Home from "@/assets/images/home.png";
 import File from "@/assets/images/file.png";
@@ -112,7 +111,8 @@ export default function Hero() {
                   />
                 </button>
                 <button className="group hover:bg-[#23B3FC] bg-[#23B3FC33] transition-all duration-200 lg:w-[183px] h-[40px] w-full flex items-center justify-center gap-[11.5px] rounded-lg text-sm font-medium text-[#23B3FC] hover:text-white leading-[130%]">
-                  Murojaat qilish <FaChevronRight className="group-hover:translate-x-1 transition-all duration-200" />
+                  Murojaat qilish{" "}
+                  <FaChevronRight className="group-hover:translate-x-1 transition-all duration-200" />
                 </button>
               </article>
               <p className="font-medium text-[12px] pb-4 lg:w-[379px]">
@@ -144,17 +144,19 @@ export default function Hero() {
               Tibbiyot sohasidagi xalqaro hamkorlik va tajriba almashinuvi
             </h1>
             <LearnMore />
-            <Image
-              src={Doctors}
-              alt="Doctors"
-              width={359}
-              height={370}
-              className="object-cover pt-4 pl-4 sm:pl-[58px] lg:w-[75%]"
-              // data-aos="fade-up"
-            />
+            <div className=" flex justify-center">
+              <Image
+                src={Doctors}
+                alt="Doctors"
+                width={359}
+                height={370}
+                className="object-cover pt-4 pl-4 sm:pl-[58px] lg:w-[75%] w-[60%]"
+                // data-aos="fade-up"
+              />
+            </div>
             {/* <div className="absolute bottom-0 -left-[38px] -z-10 max-md:hidden w-[600px] h-[300px]  bg-[url('../assets/images/circleBlue.png')] bg-no-repeat bg-contain"></div> */}
             <div className="absolute lg:-bottom-10 bottom-0 left-0 w-full h-[180px] bg-gradient-to-t from-blue-700/100 to-transparent" />
-            <p className="md:w-[96%] absolute lg:bottom-6 bottom-0 left-6 right-6 text-xs sm:text-sm font-medium leading-relaxed text-white">
+            <p className="md:w-[96%] absolute lg:bottom-6 bottom-0 sm:left-6 sm:right-6 text-xs sm:text-sm font-medium leading-relaxed text-white">
               CLAMO jahon standartlariga mos tibbiy xizmat ko&apos;rsatish
               maqsadida yetakchi xalqaro tibbiyot muassasalari va tashkilotlari
               bilan hamkorlik qiladi. Biz eng so&apos;nggi innovatsiyalar,
