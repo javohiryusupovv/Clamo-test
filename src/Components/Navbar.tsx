@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [header, setHeader] = useState(false)
+  const [header, setHeader] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -20,27 +20,33 @@ export default function Navbar() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-
-  const scrollHeader = ()=>{
-    if(window.scrollY >= 20){
-      setHeader(true)
-    }else{
-      setHeader(false)
+  const scrollHeader = () => {
+    if (window.scrollY >= 20) {
+      setHeader(true);
+    } else {
+      setHeader(false);
     }
-  }
+  };
 
-  useEffect(()=>{
-    window.addEventListener('scroll', scrollHeader)
-    return()=>{
-      window.addEventListener('scroll', scrollHeader)
-    }
-  },[])
-
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHeader);
+    return () => {
+      window.addEventListener("scroll", scrollHeader);
+    };
+  }, []);
 
   return (
     <div className="  m-auto">
-      <div className={header ? " bg-gray-100 fixed top-0 z-[999] w-full  transition-transform duration-500 ease-in-out " : "bg-transparent"}>
-        <nav className={`flex items-center justify-between py-3 lg:py-7 z-[999] container`} >
+      <div
+        className={
+          header
+            ? " bg-gray-100 fixed top-0 z-[999] w-full  transition-transform duration-500 ease-in-out "
+            : "bg-transparent relative z-[999]"
+        }
+      >
+        <nav
+          className={`flex items-center justify-between py-3 lg:py-7 z-[999] container`}
+        >
           <ul>
             <Link href="/">
               <Image
@@ -82,29 +88,43 @@ export default function Navbar() {
                       alt="Down arrow"
                       width={11}
                       height={11}
-                      className={`mt-[6px] transition-transform ${isDropdownOpen ? "rotate-180" : ""}`}
+                      className={`mt-[6px] transition-transform ${
+                        isDropdownOpen ? "rotate-180" : ""
+                      }`}
                     />
                   </div>
                 </li>
                 {isDropdownOpen && (
-                  <ul className="absolute z-[999] bg-white  top-full left-0 mt-2  shadow-md rounded py-2 w-40">
+                  <ul className="absolute z-[999] bg-white top-full left-0 mt-2 shadow-md rounded py-2 w-40">
                     <Link href="/about">
-                      <li className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100">
+                      <li
+                        onClick={() => setIsDropdownOpen(false)}
+                        className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100"
+                      >
                         Markaz haqida
                       </li>
                     </Link>
                     <Link href="/regulatorydocuments">
-                      <li className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100">
+                      <li
+                        onClick={() => setIsDropdownOpen(false)}
+                        className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100"
+                      >
                         Normativ hujjatlar
                       </li>
                     </Link>
                     <Link href="/international">
-                      <li className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100">
+                      <li
+                        onClick={() => setIsDropdownOpen(false)}
+                        className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100"
+                      >
                         Xalqaro hamkorlik
                       </li>
                     </Link>
                     <Link href="/consulting">
-                      <li className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100">
+                      <li
+                        onClick={() => setIsDropdownOpen(false)}
+                        className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100"
+                      >
                         Konsultatsiya
                       </li>
                     </Link>
@@ -112,11 +132,14 @@ export default function Navbar() {
                 )}
               </article>
               <Link href="/license">
-
-                <li className="text-sm font-medium text-[#3D445E]">Litsenziyalash</li>
+                <li className="text-sm font-medium text-[#3D445E]">
+                  Litsenziyalash
+                </li>
               </Link>
               <Link href="/accreditation">
-                <li className="text-sm font-medium text-[#3D445E]">Akkreditsiyalash</li>
+                <li className="text-sm font-medium text-[#3D445E]">
+                  Akkreditsiyalash
+                </li>
               </Link>
               <li className="text-sm font-medium text-[#3D445E]">Bog'lanish</li>
             </ul>
@@ -130,7 +153,9 @@ export default function Navbar() {
                   className="object-contain"
                 />
                 <article className="flex items-center gap-[9px]">
-                  <p className="text-sm uppercase text-[#3D445E] font-medium">uz</p>
+                  <p className="text-sm uppercase text-[#3D445E] font-medium">
+                    uz
+                  </p>
                   <div className="w-5 h-5 flex items-center">
                     <Image src={Down} alt="Down arrow" width={11} height={11} />
                   </div>
@@ -148,15 +173,37 @@ export default function Navbar() {
             className="lg:hidden flex flex-col gap-[6px] z-20"
             onClick={toggleMobileMenu}
           >
-            <span className={`w-5 h-[2px] bg-[#3D445E] block transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-            <span className={`w-5 h-[2px] bg-[#3D445E] block transition-opacity duration-300 ease-in-out ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-            <span className={`w-5 h-[2px] bg-[#3D445E] block transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+            <span
+              className={`w-5 h-[2px] bg-[#3D445E] block transition-transform duration-300 ease-in-out ${
+                isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
+              }`}
+            ></span>
+            <span
+              className={`w-5 h-[2px] bg-[#3D445E] block transition-opacity duration-300 ease-in-out ${
+                isMobileMenuOpen ? "opacity-0" : ""
+              }`}
+            ></span>
+            <span
+              className={`w-5 h-[2px] bg-[#3D445E] block transition-transform duration-300 ease-in-out ${
+                isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
+              }`}
+            ></span>
           </button>
 
           {/* Mobile Menu */}
           {isMobileMenuOpen && (
-            <div className="fixed inset-0 bg-black  bg-opacity-50 z-[999] lg:hidden" onClick={toggleMobileMenu}>
-              <div className="flex  flex-col items-center absolute top-0 left-0 w-full bg-white p-6 transform transition-transform duration-300 ease-in-out" style={{ transform: isMobileMenuOpen ? 'translateY(0)' : 'translateY(-100%)' }}>
+            <div
+              className="fixed inset-0 bg-black  bg-opacity-50 z-[999] lg:hidden"
+              onClick={toggleMobileMenu}
+            >
+              <div
+                className="flex  flex-col items-center absolute top-0 left-0 w-full bg-white p-6 transform transition-transform duration-300 ease-in-out"
+                style={{
+                  transform: isMobileMenuOpen
+                    ? "translateY(0)"
+                    : "translateY(-100%)",
+                }}
+              >
                 <ul className="flex flex-col items-start gap-6">
                   <article className="relative">
                     <li
@@ -173,7 +220,9 @@ export default function Navbar() {
                           alt="Down arrow"
                           width={11}
                           height={11}
-                          className={`mt-[6px] transition-transform ${isDropdownOpen ? "rotate-180" : ""}`}
+                          className={`mt-[6px] transition-transform ${
+                            isDropdownOpen ? "rotate-180" : ""
+                          }`}
                         />
                       </div>
                     </li>
@@ -190,7 +239,6 @@ export default function Navbar() {
                           </li>
                         </Link>
                         <Link href="/international">
-
                           <li className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100">
                             Xalqaro hamkorlik
                           </li>
@@ -204,12 +252,18 @@ export default function Navbar() {
                     )}
                   </article>
                   <Link href="/license">
-                    <li className="text-sm font-medium text-[#3D445E]">Litsenziyalash</li>
+                    <li className="text-sm font-medium text-[#3D445E]">
+                      Litsenziyalash
+                    </li>
                   </Link>
                   <Link href="/accreditation">
-                    <li className="text-sm font-medium text-[#3D445E]">Akkreditsiyalash</li>
+                    <li className="text-sm font-medium text-[#3D445E]">
+                      Akkreditsiyalash
+                    </li>
                   </Link>
-                  <li className="text-sm font-medium text-[#3D445E]">Bog'lanish</li>
+                  <li className="text-sm font-medium text-[#3D445E]">
+                    Bog'lanish
+                  </li>
                 </ul>
                 <ul className="flex flex-col items-start gap-6 mt-6">
                   <article className="flex items-center gap-3">
@@ -221,14 +275,26 @@ export default function Navbar() {
                       className="object-contain"
                     />
                     <article className="flex items-center gap-[9px]">
-                      <p className="text-sm uppercase text-[#3D445E] font-medium">uz</p>
+                      <p className="text-sm uppercase text-[#3D445E] font-medium">
+                        uz
+                      </p>
                       <div className="w-5 h-5 flex items-center">
-                        <Image src={Down} alt="Down arrow" width={11} height={11} />
+                        <Image
+                          src={Down}
+                          alt="Down arrow"
+                          width={11}
+                          height={11}
+                        />
                       </div>
                     </article>
                   </article>
                   <article className="flex items-center gap-[6px]">
-                    <Image src={Phone} alt="Phone icon" width={17} height={17} />
+                    <Image
+                      src={Phone}
+                      alt="Phone icon"
+                      width={17}
+                      height={17}
+                    />
                     <p className="text-base font-bold text-[#3D445E]">1369</p>
                   </article>
                 </ul>
@@ -237,7 +303,6 @@ export default function Navbar() {
           )}
         </nav>
       </div>
-
     </div>
   );
 }
