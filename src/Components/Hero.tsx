@@ -144,7 +144,6 @@ export default function Hero() {
               Tibbiyot sohasidagi xalqaro hamkorlik va tajriba almashinuvi
             </h1>
             <LearnMore />
-<<<<<<< uzb
             <Image
               src={Doctors}
               alt="Doctors"
@@ -153,18 +152,6 @@ export default function Hero() {
               className="object-cover pt-4 pl-4 sm:pl-[58px] lg:w-[75%]"
               data-aos="fade-up"
             />
-=======
-            <div className=" flex justify-center">
-              <Image
-                src={Doctors}
-                alt="Doctors"
-                width={359}
-                height={370}
-                className="object-cover pt-4 pl-4 sm:pl-[58px] lg:w-[75%] w-[60%]"
-                // data-aos="fade-up"
-              />
-            </div>
->>>>>>> javoxir
             {/* <div className="absolute bottom-0 -left-[38px] -z-10 max-md:hidden w-[600px] h-[300px]  bg-[url('../assets/images/circleBlue.png')] bg-no-repeat bg-contain"></div> */}
             <div className="absolute lg:-bottom-10 bottom-0 left-0 w-full h-[180px] bg-gradient-to-t from-blue-700/100 to-transparent" />
             <p className="md:w-[96%] absolute lg:bottom-6 bottom-0 sm:left-6 sm:right-6 text-xs sm:text-sm font-medium leading-relaxed text-white">
