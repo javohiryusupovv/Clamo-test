@@ -1,17 +1,37 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "clamo-production.up.railway.app",
+        port: "",
+        pathname: "/media/team_members/**",
+      },
+      {
+        protocol: "https",
+        hostname: "clamo-production.up.railway.app",
+        port: "",
+        pathname: "/media/news/**",
+      },
+      {
+        protocol: "https",
+        hostname: "clamo-production.up.railway.app",
+        port: "",
+        pathname: "/media/partners/**",
+      },
+    ],
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
-      use: ['@svgr/webpack'],
+      use: ["@svgr/webpack"],
     });
 
     return config;
   },
-  images: {
-    domains: ['clamo-production.up.railway.app'], // API-dan keladigan rasm domenini shu yerga qo'sh
-  },
 };
 
 export default nextConfig;
+

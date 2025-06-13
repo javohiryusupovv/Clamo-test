@@ -1,12 +1,13 @@
 import Firstpage from "./_components/firstpage"
+import FAQSection from "./_components/questions"
 import Secondpage from "./_components/secondpage"
-import Question from "./_components/questions"
+
 export default function page() {
   return (
     <div>
       <Firstpage/>
       <Secondpage/>
-      <Question/>
+      <FAQSection/>
       </div>
   )
 }
