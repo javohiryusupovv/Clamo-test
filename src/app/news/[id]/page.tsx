@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft as BackIcon } from "lucide-react";
-import { notFound } from "next/navigation";
 
 // This should match your dummy data structure
 interface NewsItem {
@@ -33,7 +32,7 @@ export default async function NewsDetailPage({ params }: { params: Promise<{id: 
   const newsItem = await getNewsItem(Number(id));
 
   if (!newsItem) {
-    return notFound();
+    return <h5>Yangiliklar topilmadi !!!</h5>;
   }
 
   return (
@@ -50,19 +49,19 @@ export default async function NewsDetailPage({ params }: { params: Promise<{id: 
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
           <div className="relative h-60 sm:h-80 w-full">
             <Image
-              src={newsItem.image}
-              alt={newsItem.title}
+              src={newsItem?.image}
+              alt={newsItem?.title}
               fill
               className="object-cover"
             />
           </div>
           <div className="p-6 space-y-4">
             <div className="text-sm text-gray-500">
-              {newsItem.date} • {newsItem.time}
+              {newsItem?.date} • {newsItem?.time}
             </div>
-            <h1 className="text-2xl sm:text-3xl font-bold">{newsItem.title}</h1>
+            <h1 className="text-2xl sm:text-3xl font-bold">{newsItem?.title}</h1>
             <div className="prose max-w-none">
-              <p className="text-gray-700">{newsItem.description}</p>
+              <p className="text-gray-700">{newsItem?.description}</p>
               {/* Add more content here as needed */}
             </div>
           </div>
