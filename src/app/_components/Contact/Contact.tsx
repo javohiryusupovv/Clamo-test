@@ -55,7 +55,7 @@ export default function Contact() {
           throw new Error(
             errorData.message || "Serverda ichki xatolik yuz berdi"
           );
-        } catch (e: any) {
+        } catch{
           console.error("Non-JSON Error Response:", responseText);
           throw new Error("Serverdan noto‘g‘ri javob keldi");
         }
@@ -206,7 +206,7 @@ export default function Contact() {
                   type="text"
                   maxLength={12} // 2 + 1 + 3 + 1 + 2 + 1 + 2 = 12 (with spaces)
                   onInput={(e) => {
-                    let value = e.currentTarget.value
+                    const value = e.currentTarget.value
                       .replace(/\D/g, "")
                       .slice(0, 9); // Only digits, max 9
                     let formatted = "";
