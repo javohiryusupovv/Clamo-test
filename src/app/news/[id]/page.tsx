@@ -29,7 +29,8 @@ async function getNewsItem(id: number): Promise<NewsItem | undefined> {
 }
 
 export default async function NewsDetailPage({ params }: { params: Promise<{id: string}>}) {
-  const newsItem = await getNewsItem(Number((await params).id));
+  const { id } = await params;
+  const newsItem = await getNewsItem(Number(id));
 
   if (!newsItem) {
     notFound()
