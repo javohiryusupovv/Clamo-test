@@ -60,7 +60,10 @@ export default function TeamCarousel() {
               nextEl: nextRef.current!,
             }}
             onBeforeInit={(swiper) => {
-              if (typeof swiper.params.navigation !== 'boolean') {
+              if (
+                swiper.params.navigation &&
+                typeof swiper.params.navigation !== 'boolean'
+              ) {
                 swiper.params.navigation.prevEl = prevRef.current;
                 swiper.params.navigation.nextEl = nextRef.current;
               }
