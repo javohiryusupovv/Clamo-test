@@ -13,6 +13,14 @@ import axios from "axios";
 import { FaChevronRight } from "react-icons/fa";
 import "aos/dist/aos.css";
 
+// Types
+interface LicenseStats {
+  clinics_number: number;
+  consulting_number: number;
+  licenses_number: number;
+}
+
+// Hook for animated count up
 function useCountUp(target: number, duration = 1500) {
   const [count, setCount] = useState(0);
   const raf = useRef<number | null>(null);
@@ -43,8 +51,7 @@ function useCountUp(target: number, duration = 1500) {
 
 export default function Hero() {
   const API_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
-
-  const [licenseData, setLicenseData] = useState<any[]>([]);
+  const [licenseData, setLicenseData] = useState<LicenseStats[]>([]);
 
   useEffect(() => {
     if (!API_URL) {
@@ -52,10 +59,8 @@ export default function Hero() {
       return;
     }
     axios
-      .get(`${API_URL}/home/stats/`)
-      .then((response) => {
-        setLicenseData(response.data || []);
-      })
+      .get<LicenseStats[]>(`${API_URL}/home/stats/`)
+      .then((response) => setLicenseData(response.data || []))
       .catch((error) => console.error("Failed to fetch license data:", error));
   }, [API_URL]);
 
@@ -67,24 +72,13 @@ export default function Hero() {
     }
   }, []);
 
-  const clinicsNumber =
-    licenseData.length > 0 && licenseData[0]?.clinics_number
-      ? Number(licenseData[0].clinics_number)
-      : 0;
-  const consultingNumber =
-    licenseData.length > 0 && licenseData[0]?.consulting_number
-      ? Number(licenseData[0].consulting_number)
-      : 0;
-  const licensesNumber =
-    licenseData.length > 0 && licenseData[0]?.licenses_number
-      ? Number(licenseData[0].licenses_number)
-      : 0;
+  const clinicsNumber = licenseData[0]?.clinics_number ?? 0;
+  const consultingNumber = licenseData[0]?.consulting_number ?? 0;
+  const licensesNumber = licenseData[0]?.licenses_number ?? 0;
 
   const animatedClinics = useCountUp(clinicsNumber);
   const animatedConsulting = useCountUp(consultingNumber);
   const animatedLicenses = useCountUp(licensesNumber);
-
-
   return (
     <div className=" overflow-x-hidden">
       <div>
@@ -137,7 +131,6 @@ export default function Hero() {
         </section>
       </div>
 
-
       {/* Shifokorlar */}
       <div className="container">
         <div className="w-full sm:rounded-[36px] rounded-2xl bg-[#0653C9] overflow-hidden relative z-0 lg:mb-[150px] md:mb-[80px] mb-[50px]">
@@ -157,7 +150,7 @@ export default function Hero() {
                   width={359}
                   height={370}
                   className="object-contain pt-4 pl-4 sm:pl-[58px] lg:w-[75%] sm:w-[60%] w-[75%]"
-                //   data-aos="fade-up"
+                  //   data-aos="fade-up"
                 />
               </div>
               {/* <div className="absolute bottom-0 -left-[38px] -z-10 max-md:hidden w-[600px] h-[300px]  bg-[url('../assets/images/circleBlue.png')] bg-no-repeat bg-contain"></div> */}
@@ -205,7 +198,6 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>

@@ -5,13 +5,13 @@ import Link from "next/link";
 import Marquee from "react-fast-marquee";
 import { useEffect, useState } from "react";
 
-export default function Partnyor() {
-  type Partner = {
-    id: number;
-    image: string;
-    title: string;
-  };
+type Partner = {
+  id: number;
+  image: string;
+  title: string;
+};
 
+export default function Partnyor() {
   const [partners, setPartners] = useState<Partner[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -23,7 +23,7 @@ export default function Partnyor() {
         );
         const data = await res.json();
         setPartners(data || []);
-      } catch (error) {
+      } catch {
         setPartners([]);
       } finally {
         setLoading(false);
@@ -47,17 +47,16 @@ export default function Partnyor() {
       </article>
 
       <div className="w-full space-y-6 overflow-hidden">
-        {/* 1-qator: o‘ngga qarab harakat */}
-        <Marquee direction="right" speed={30} gradient={true} pauseOnHover>
-          {partners.map((img, i) => (
+        <Marquee direction="right" speed={30} gradient pauseOnHover>
+          {partners.map((img) => (
             <Link
-              href={"#"}
-              key={i}
-              className="mx-2 sm:mx-[18px] bg-[#eaecef] border-white border-[3px] rounded-xl flex items-center justify-center  h-[80px] sm:h-[110px] w-[160px] sm:w-[220px] p-6 sm:p-8"
+              href="#"
+              key={img.id}
+              className="mx-2 sm:mx-[18px] bg-[#eaecef] border-white border-[3px] rounded-xl flex items-center justify-center h-[80px] sm:h-[110px] w-[160px] sm:w-[220px] p-6 sm:p-8"
             >
               <Image
                 src={img.image}
-                alt={`Logo ${i}`}
+                alt={img.title}
                 className="object-contain h-full w-auto"
                 width={57}
                 height={57}
@@ -66,26 +65,22 @@ export default function Partnyor() {
           ))}
         </Marquee>
 
-        {/* 2-qator: chapga qarab harakat */}
-        <Marquee direction="left" speed={30} gradient={true} pauseOnHover>
-          {partners
-            .slice()
-            .reverse()
-            .map((img, i) => (
-              <Link
-                href={"#"}
-                key={i}
-                className="mx-2 sm:mx-[18px] bg-[#eaecef] border-white border-[3px] rounded-xl flex items-center justify-center h-[80px] sm:h-[110px] w-[160px] sm:w-[220px] p-6 sm:p-8"
-              >
-                <Image
-                  src={img.image}
-                  alt={img.title}
-                  className="object-contain h-full w-auto"
-                  width={57}
-                  height={57}
-                />
-              </Link>
-            ))}
+        <Marquee direction="left" speed={30} gradient pauseOnHover>
+          {[...partners].reverse().map((img) => (
+            <Link
+              href="#"
+              key={img.id}
+              className="mx-2 sm:mx-[18px] bg-[#eaecef] border-white border-[3px] rounded-xl flex items-center justify-center h-[80px] sm:h-[110px] w-[160px] sm:w-[220px] p-6 sm:p-8"
+            >
+              <Image
+                src={img.image}
+                alt={img.title}
+                className="object-contain h-full w-auto"
+                width={57}
+                height={57}
+              />
+            </Link>
+          ))}
         </Marquee>
       </div>
     </div>
