@@ -16,6 +16,8 @@ type NewsType = {
   image?: string;
 };
 
+export const dynamic = 'force-dynamic';
+
 export default function NewsPage() {
   const [news, setNews] = useState<NewsType[]>([]);
 
