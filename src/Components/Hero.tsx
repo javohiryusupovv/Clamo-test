@@ -84,6 +84,7 @@ export default function Hero() {
   const animatedConsulting = useCountUp(consultingNumber);
   const animatedLicenses = useCountUp(licensesNumber);
 
+
   return (
     <div className=" overflow-x-hidden">
       <div>
@@ -135,6 +136,7 @@ export default function Hero() {
           <div className="absolute lg:-bottom-20 md:-bottom-96 sm:-bottom-[250px] -bottom-[250px] max-lg:left-0  lg:-right-40 xl:w-2/3 lg:w-3/4 w-[100%] h-[270px] bg-gradient-to-t from-white/60 to-transparent" />
         </section>
       </div>
+
 
       {/* Shifokorlar */}
       <div className="container">
@@ -203,6 +205,7 @@ export default function Hero() {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>

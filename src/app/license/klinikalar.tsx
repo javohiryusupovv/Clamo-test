@@ -1,78 +1,137 @@
 "use client";
 
-import { useState, useMemo } from "react";
-import { ChevronDown, Search } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { ChevronDown, Search as SearchIcon } from "lucide-react";
 import Image from "next/image";
 
-const clinicData = Array(20)
-  .fill(null)
-  .map((_, i) => ({
-    id: i + 1,
-    name: '"ALFA TERAPIYA" mas`uliyati cheklangan jamiyati',
-    address: "Andijon viloyati, Andijon sh. 3-kichik dahа, 38-uy, 46-manzil",
-    status:
-      i % 3 === 0
-        ? "Faoliyatni tugatish"
-        : i % 3 === 1
-        ? "Hujjatni o'zgartirish"
-        : "Qayta ro'yhat",
-    code: "L-29082988",
-    date: "12.12.2024",
-    reviews: 100,
-    website: "Alfaterapiya.uz",
-    email: "alfaterapiya@mail.ru",
-    phone: "+998 90 123 45 67",
-    image: "/location.png",
-  }));
+type Clinic = {
+  id: number;
+  title: string;
+  location: string;
+  license: string;
+  website?: string;
+  email?: string;
+  phone?: string;
+  status?: string;
+  reyester_type?: Array<{
+    // Change this to array
+    id?: number;
+    name?: string;
+    name_uz?: string;
+    name_en?: string;
+    name_ru?: string;
+    [key: string]: unknown;
+  }>;
+};
 
-const filters = [
-  "Faoliyatni boshlash",
-  "Qayta ro'yhat",
-  "Muddatni uzaytirish",
-  "Hujjatni o'zgartirish",
-  "Faoliyatni tugatish",
-  "Faoliyatni vaqtincha to'xtatish",
-];
+type ReyesterType = {
+  id: number;
+  name: string;
+  name_uz: string;
+  name_en: string;
+  name_ru: string;
+};
 
-export default function KlinikalarReyesteri() {
-  const [selectedFilter, setSelectedFilter] = useState("");
-  const [searchQuery, setSearchQuery] = useState("");
+function KlinikalarReyesteri() {
+  const [filters, setFilters] = useState<ReyesterType[]>([]);
+  const [clinics, setClinics] = useState<Clinic[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [search, setSearch] = useState("");
+  const [selectedFilter, setSelectedFilter] = useState<string>("0"); // Default to "All"
   const [page, setPage] = useState(1);
-  const pageSize = 4;
+  const clinicsPerPage = 5;
 
-  const filteredClinics = useMemo(() => {
-    return clinicData.filter(
-      (clinic) =>
-        (!selectedFilter || clinic.status === selectedFilter) &&
-        clinic.name.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-  }, [selectedFilter, searchQuery]);
+  // Fetch filters from API
+  useEffect(() => {
+    async function fetchFilters() {
+      const response = await fetch(
+        "https://clamo-production.up.railway.app/api/reyester/types/"
+      );
+      if (!response.ok) throw new Error("Failed to fetch filters");
+      const data = await response.json();
+      // Add "All" option at the beginning
+      setFilters([
+        {
+          id: 0,
+          name: "Barchasi",
+          name_uz: "Barchasi",
+          name_en: "All",
+          name_ru: "Все",
+        },
+        ...(data.results || []),
+      ]);
+    }
+    fetchFilters();
+  }, []);
 
-  const pageCount = Math.ceil(filteredClinics.length / pageSize);
-  const paginatedData = filteredClinics.slice(
-    (page - 1) * pageSize,
-    page * pageSize
+  // console.log("====================================");
+  // console.log("Filters:", filters);
+  // console.log("====================================");
+
+  useEffect(() => {
+    async function fetchClinics() {
+      setLoading(true);
+      setError(null);
+      try {
+        let typeParam = "";
+        if (selectedFilter && selectedFilter !== "0") {
+          typeParam = `&reyester_type=${selectedFilter}`;
+        }
+        const response = await fetch(
+          `${
+            process.env.NEXT_PUBLIC_API_BASE_URL
+          }/reyester/?search=${encodeURIComponent(
+            search
+          )}${typeParam}&page=${page}&page_size=${clinicsPerPage}`
+        );
+        if (!response.ok) {
+          throw new Error("Server error");
+        }
+        const data = await response.json();
+
+        setClinics(data.results || []);
+      } catch {
+        setError("Klinikalarni yuklashda xatolik yuz berdi.");
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchClinics();
+  }, [search, page, selectedFilter]);
+
+  // Pagination logic (pageCount from API if available, else fallback)
+  const pageCount = Math.max(
+    1,
+    Math.ceil((clinics.length || 1) / clinicsPerPage)
   );
+  const paginatedData = clinics;
+
+  console.log("====================================");
+  console.log(clinics);
+  console.log("====================================");
 
   return (
     <div className="max-w-7xl mx-auto p-3 sm:p-4 md:p-6">
       <div className="md:flex justify-between items-center max-md:flex-col ">
         <h1 className="text-2xl sm:text-[28px] md:text-[32px] font-semibold mb-4 sm:mb-6 text-gray-800">
-          Klinikalar reyesteri
+          Klinikalar Reyesteri
         </h1>
-
         {/* Filter + Search */}
         <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
           <div className="relative w-full sm:w-64">
             <select
               className="w-full appearance-none bg-white border border-gray-300 rounded-lg px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500"
               value={selectedFilter}
-              onChange={(e) => setSelectedFilter(e.target.value)}
+              onChange={(e) => {
+                setSelectedFilter(e.target.value);
+                setPage(1);
+              }}
             >
-              <option value="">Ariza turlari</option>
               {filters.map((filter) => (
-                <option key={filter} value={filter}>
-                  {filter}
+                <option key={filter.id} value={filter.id}>
+                  {filter.name_uz || filter.name}
                 </option>
               ))}
             </select>
@@ -80,46 +139,50 @@ export default function KlinikalarReyesteri() {
           </div>
 
           <div className="relative w-full sm:flex-1">
-            <Search className="absolute left-2 sm:left-3 top-2 sm:top-2.5 w-3 sm:w-4 h-3 sm:h-4 text-gray-400" />
+            <SearchIcon className="absolute left-2 sm:left-3 top-2 sm:top-2.5 w-3 sm:w-4 h-3 sm:h-4 text-gray-400" />
             <input
               type="text"
               placeholder="Klinikalarni izlash"
               className="w-full pl-8 sm:pl-10 pr-3 sm:pr-4 py-1.5 sm:py-2 border border-gray-300 rounded-lg text-xs sm:text-sm text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
             />
           </div>
         </div>
       </div>
-      {/* Sarlavha */}
+
+      {loading && <p>Yuklanmoqda...</p>}
+      {error && <p className="text-red-500">{error}</p>}
 
       {/* Card list */}
       <div className="flex flex-col gap-3 sm:gap-4">
         {paginatedData.map((clinic) => (
           <div
             key={clinic.id}
-            className="bg-[#F6F9FC] border border-gray-200 shadow-sm rounded-xl p-3 sm:p-4 md:p-6"
+            className="bg-white border border-gray-200 shadow-sm rounded-xl p-3 sm:p-4 md:p-6"
           >
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start flex-wrap sm:flex-nowrap gap-2">
               {/* Left Side */}
               <div>
                 <h2 className="text-sm sm:text-[16px] md:text-[20px] font-semibold mb-1 text-gray-800">
-                  {clinic.name}
+                  {clinic.title}
                 </h2>
 
                 <div className="flex flex-col sm:flex-row sm:items-center sm:flex-nowrap gap-1 sm:gap-1">
                   <div className="flex items-center gap-1">
                     <Image
-                      src={clinic.image}
+                      src="/location.png"
                       alt="map location icon"
                       width={24}
                       height={24}
                     />
-                    <span className="text-[14px]">{clinic.address}</span>
+                    <span className="text-[14px]">{clinic.location}</span>
                   </div>
 
                   <span className="bg-gray-100 text-gray-700 text-[10px] sm:text-xs px-[12px] sm:px-2 py-[4px] rounded-[8px] mt-1 sm:mt-0">
-                    {clinic.status}
+                    {clinic.reyester_type?.[0]?.name_uz ||
+                      clinic.reyester_type?.[0]?.name ||
+                      ""}
                   </span>
                 </div>
               </div>
@@ -140,51 +203,51 @@ export default function KlinikalarReyesteri() {
                       Akkreditatsiya raqami
                     </p>
                     <p className="font-bold text-xs sm:text-sm md:text-base ml-[-10px] md:ml-[-15px]">
-                      {clinic.code}
+                      {clinic.license}
                     </p>
                   </div>
                   <div className="flex-1 min-w-[120px] sm:min-w-[150px] md:min-w-[200px] p-1 sm:p-2 md:border-r md:border-gray-200 mt-2 sm:mt-3 ml-0 md:ml-4 border-b sm:border-b-0">
                     <p className="text-gray-500 m-0 text-[10px] sm:text-xs md:text-sm">
-                      Akkreditatsiya berilgan sana
+                      Email manzil
                     </p>
                     <p className="font-bold text-xs sm:text-sm md:text-base">
-                      {clinic.date}
+                      {clinic.email || "N/A"}
                     </p>
                   </div>
                   <div className="flex-1 min-w-[120px] sm:min-w-[150px] md:min-w-[200px] p-1 sm:p-2 mt-2 sm:mt-3 border-b sm:border-b-0">
                     <p className="text-gray-500 m-0 text-[10px] sm:text-xs md:text-sm">
-                      Email manzil
+                      Telefon raqam
                     </p>
                     <p className="font-bold text-xs sm:text-sm md:text-base">
-                      {clinic.email}
+                      {clinic.phone || "N/A"}
                     </p>
                   </div>
                 </div>
 
                 {/* 2-row */}
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
-                  <div className="flex-1 min-w-[120px] sm:min-w-[150px] md:min-w-[200px] p-1 sm:p-2  md:border-r md:border-gray-200 ml-3 md:ml-4 border-b sm:border-b-0">
+                  <div className="flex-1 min-w-[120px] sm:min-w-[150px] md:min-w-[200px] p-1 sm:p-2 md:border-r md:border-gray-200 ml-3 md:ml-4 border-b sm:border-b-0">
                     <p className="text-gray-500 m-0 text-[10px] sm:text-xs md:text-sm ml-[-10px] md:ml-[-15px]">
-                      Sharhlar
+                      Vebsayt
                     </p>
                     <p className="font-bold text-xs sm:text-sm md:text-base ml-[-10px] md:ml-[-15px]">
-                      {clinic.reviews}
+                      {clinic.website || "N/A"}
                     </p>
                   </div>
                   <div className="flex-1 min-w-[120px] sm:min-w-[150px] md:min-w-[200px] p-1 sm:p-2 ml-0 md:ml-4 border-b sm:border-b-0">
                     <p className="text-gray-500 m-0 text-[10px] sm:text-xs md:text-sm">
-                      Vebsayt
+                      Joylashuv
                     </p>
                     <p className="font-bold text-xs sm:text-sm md:text-base">
-                      {clinic.website}
+                      {clinic.location}
                     </p>
                   </div>
                   <div className="flex-1 min-w-[120px] border-l sm:min-w-[150px] md:min-w-[200px] p-1 sm:p-2 mt-2 sm:mt-3">
                     <p className="text-gray-500 m-0 text-[10px] sm:text-xs md:text-sm">
-                      Telefon raqam
+                      Klinika nomi
                     </p>
                     <p className="font-bold text-xs sm:text-sm md:text-base">
-                      {clinic.phone}
+                      {clinic.title}
                     </p>
                   </div>
                 </div>
@@ -201,10 +264,10 @@ export default function KlinikalarReyesteri() {
             <button
               key={p}
               onClick={() => setPage(p)}
-              className={`w-6 h-6 sm:w-7 md:w-8  sm:h-7 md:h-8 rounded-md text-[10px] sm:text-xs md:text-sm flex items-center justify-center border ${
+              className={`w-6 h-6 sm:w-7 md:w-8 sm:h-1 md:h-8 rounded-md text-[10px] sm:text-xs md:text-sm flex items-center justify-center border ${
                 p === page
                   ? "bg-blue-600 text-white border-blue-600"
-                  : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
+                  : "bg-white text-gray-700 border-gray-2  hover:bg-gray-100"
               } transition-colors`}
             >
               {p}
@@ -215,3 +278,5 @@ export default function KlinikalarReyesteri() {
     </div>
   );
 }
+
+export default KlinikalarReyesteri;
