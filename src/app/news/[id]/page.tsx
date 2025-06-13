@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ArrowLeft as BackIcon } from "lucide-react";
 import { notFound } from "next/navigation";
 
-// This should match your dummy data structure
 interface NewsItem {
   id: number;
   title: string;
@@ -13,7 +12,6 @@ interface NewsItem {
   description: string;
 }
 
-// Fetch the news item (in a real app, this would be an API call)
 async function getNewsItem(id: number): Promise<NewsItem | undefined> {
   const dummyData = new Array(20).fill(null).map((_, i) => ({
     id: i + 1,
@@ -25,16 +23,15 @@ async function getNewsItem(id: number): Promise<NewsItem | undefined> {
       "O'zbekistonda yangi zamonaviy tibbiy markazlar tashkil etildi — CLAMO bilan rusumtona va litsenziyalangan xizmatlar taqdim etiladi. Ko'proq ma'lumotlar bu yerda...",
   }));
 
-  return dummyData.find(item => item.id === Number(id));
+  return dummyData.find(item => item.id === id);
 }
 
-export default async function NewsDetailPage({ params }: { params: Promise<{id: string}>}) {
-  const { id } = await params;
-  const newsItem = await getNewsItem(Number(id));
+export default async function NewsDetailPage({ params }: { params: { id: string } }) {
+  const id = Number(params.id);
+  if (isNaN(id)) return notFound();
 
-  if (!newsItem) {
-    return notFound();
-  }
+  const newsItem = await getNewsItem(id);
+  if (!newsItem) return notFound();
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -46,24 +43,23 @@ export default async function NewsDetailPage({ params }: { params: Promise<{id: 
           <BackIcon size={20} className="mr-1" />
           Orqaga
         </Link>
-        
+
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
           <div className="relative h-60 sm:h-80 w-full">
             <Image
-              src={newsItem?.image}
-              alt={newsItem?.title}
+              src={newsItem.image}
+              alt={newsItem.title}
               fill
               className="object-cover"
             />
           </div>
           <div className="p-6 space-y-4">
             <div className="text-sm text-gray-500">
-              {newsItem?.date} • {newsItem?.time}
+              {newsItem.date} • {newsItem.time}
             </div>
-            <h1 className="text-2xl sm:text-3xl font-bold">{newsItem?.title}</h1>
+            <h1 className="text-2xl sm:text-3xl font-bold">{newsItem.title}</h1>
             <div className="prose max-w-none">
-              <p className="text-gray-700">{newsItem?.description}</p>
-              {/* Add more content here as needed */}
+              <p className="text-gray-700">{newsItem.description}</p>
             </div>
           </div>
         </div>
