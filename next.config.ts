@@ -9,6 +9,18 @@ const nextConfig: NextConfig = {
         port: "",
         pathname: "/media/team_members/**",
       },
+      {
+        protocol: "https",
+        hostname: "clamo-production.up.railway.app",
+        port: "",
+        pathname: "/media/news/**",
+      },
+      {
+        protocol: "https",
+        hostname: "clamo-production.up.railway.app",
+        port: "",
+        pathname: "/media/partners/**",
+      },
     ],
   },
   webpack(config) {

@@ -14,7 +14,8 @@ export default function NewsPage() {
     const fetchNews = async () => {
       try {
         const res = await fetch(
-          `${process.env.NEXT_PUBLIC_API_BASE_URL}/news/news/`
+          `${process.env.NEXT_PUBLIC_API_BASE_URL}/news/news/?t=${Date.now()}`,
+          { cache: "no-store" }
         );
         const data = await res.json();
         setNews(data.slice(0, 4));
@@ -26,7 +27,6 @@ export default function NewsPage() {
     };
     fetchNews();
   }, []);
-
 
   if (!news || news.length === 0) return <div>No news found.</div>;
 
