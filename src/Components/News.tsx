@@ -5,7 +5,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import WhiteDown from "@/assets/icons/whiteDown.png";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Shahar from "../../public/Imgs/Shahar.png";
+// import Shahar from "../../public/Imgs/Shahar.png";
 
 type NewsType = {
   id: number;
@@ -49,7 +49,7 @@ export default function NewsPage() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {news[0] && (
+        {/* {news[0] && (
           <div className="group relative rounded-[16px] sm:rounded-[24px] overflow-hidden">
             <Image
               src={news[0].image || Shahar}
@@ -79,7 +79,7 @@ export default function NewsPage() {
               </Link>
             </div>
           </div>
-        )}
+        )} */}
 
         <div className="grid grid-cols-1 gap-4">
           {news.slice(1, 2).map((item) => (
