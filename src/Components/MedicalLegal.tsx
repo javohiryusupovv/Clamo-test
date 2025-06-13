@@ -40,9 +40,9 @@ export default function MedicalLegal() {
       {medical.map((item, id) => (
         <div
           key={id}
-          className="flex justify-between flex-col lg:flex-row items-center gap-8"
+          className="flex justify-between flex-col lg:flex-row items-center gap-8 md:pb-[132px] pb-5"
         >
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 ">
             <div className="flex items-center gap-2 mb-3">
               <p className="font-medium text-sm uppercase text-gray-900">
                 {item.subtitle}
@@ -66,8 +66,7 @@ export default function MedicalLegal() {
               src={ClamoFlag}
               alt="Clamo Flag"
               className="object-fill object-center overflow-hidden"
-              data-aos="fade-up"
-
+              data-aos="fade-up"  
             />
           </div>
         </div>

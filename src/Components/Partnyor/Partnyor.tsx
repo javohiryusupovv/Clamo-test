@@ -3,12 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
-
-// import myTaxi from "../../assets/logo/mytaxi.svg";
-// import suvtaminot from "../../assets/logo/uzsuvozi 1.svg";
-// import asakabank from "../../assets/logo/horizontal.svg";
-// import yoshlarishlar from "../../assets/logo/yoshlar.svg";
-// import universitetyuridik from "../../assets/logo/yuridik.png";
 import { useEffect, useState } from "react";
 
 export default function Partnyor() {
