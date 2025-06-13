@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft as BackIcon } from "lucide-react";
+import { notFound } from "next/navigation";
 
 // This should match your dummy data structure
 interface NewsItem {
@@ -27,17 +28,11 @@ async function getNewsItem(id: number): Promise<NewsItem | undefined> {
   return dummyData.find(item => item.id === Number(id));
 }
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
-
-export default async function NewsDetailPage({ params }: PageProps) {
-  const newsItem = await getNewsItem(Number(params.id));
+export default async function NewsDetailPage({ params }: { params: Promise<{id: string}>}) {
+  const newsItem = await getNewsItem(Number((await params).id));
 
   if (!newsItem) {
-    return <div>Yangilik topilmadi</div>;
+    notFound()
   }
 
   return (
