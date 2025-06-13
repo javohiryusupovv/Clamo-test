@@ -59,8 +59,7 @@ export default function Partnyor() {
             <Link
               href={"#"}
               key={i}
-              className="mx-2 sm:mx-[18px] bg-[#eaecef] border-white border-[3px] rounded-xl flex items-center justify-center 
-                                       h-[80px] sm:h-[110px] w-[160px] sm:w-[220px] p-6 sm:p-8"
+              className="mx-2 sm:mx-[18px] bg-[#eaecef] border-white border-[3px] rounded-xl flex items-center justify-center  h-[80px] sm:h-[110px] w-[160px] sm:w-[220px] p-6 sm:p-8"
             >
               <Image
                 src={img.image}

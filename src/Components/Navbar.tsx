@@ -40,7 +40,7 @@ export default function Navbar() {
       <div
         className={
           header
-            ? " bg-gray-100 fixed top-0 z-[999] w-full  transition-transform duration-500 ease-in-out "
+            ? " bg-gray-100 fixed top-0 z-[999] w-full transition-transform duration-500 ease-in-out shadow-xl"
             : "bg-transparent relative z-[999]"
         }
       >
