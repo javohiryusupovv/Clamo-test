@@ -18,25 +18,14 @@ type TeamMember = {
 export default function TeamCarousel() {
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
-  const [swiperInstance, setSwiperInstance] = useState<any>(null);
   const [members, setMembers] = useState<TeamMember[]>([]);
-
-  useEffect(() => {
-    if (swiperInstance && prevRef.current && nextRef.current) {
-      swiperInstance.params.navigation.prevEl = prevRef.current;
-      swiperInstance.params.navigation.nextEl = nextRef.current;
-      swiperInstance.navigation.init();
-      swiperInstance.navigation.update();
-    }
-  }, [swiperInstance]);
+  const [swiperReady, setSwiperReady] = useState(false);
 
   useEffect(() => {
     const fetchTeamMembers = async () => {
       try {
         const response = await fetch('https://clamo-production.up.railway.app/api/about/team/');
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const data = await response.json();
         setMembers(data);
       } catch (error) {
@@ -46,6 +35,13 @@ export default function TeamCarousel() {
 
     fetchTeamMembers();
   }, []);
+
+  // Swiper buttons rendering check
+  useEffect(() => {
+    if (prevRef.current && nextRef.current) {
+      setSwiperReady(true);
+    }
+  }, [prevRef, nextRef]);
 
   return (
     <div className="bg-[#F8FAFC]">
@@ -57,26 +53,28 @@ export default function TeamCarousel() {
           Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda...
         </p>
 
-        {members.length > 0 ? (
+        {members.length > 0 && swiperReady ? (
           <Swiper
             modules={[Navigation]}
+            navigation={{
+              prevEl: prevRef.current!,
+              nextEl: nextRef.current!,
+            }}
+            onBeforeInit={(swiper) => {
+              if (typeof swiper.params.navigation !== 'boolean') {
+                swiper.params.navigation.prevEl = prevRef.current;
+                swiper.params.navigation.nextEl = nextRef.current;
+              }
+            }}
             spaceBetween={24}
             slidesPerView={4}
-            onSwiper={(swiper) => {
-              setSwiperInstance(swiper);
-              setTimeout(() => {
-                if (swiper.params.navigation) {
-                  swiper.navigation.init();
-                  swiper.navigation.update();
-                }
-              }, 0);
-            }}
+            centeredSlides={true} // bu yer markazlash uchun
             className="!pb-8"
             breakpoints={{
-              320: { slidesPerView: 1 },
-              640: { slidesPerView: 2 },
-              1000: { slidesPerView: 3 },
-              1200: { slidesPerView: 4 },
+              320: { slidesPerView: 1, centeredSlides: true },
+              640: { slidesPerView: 2, centeredSlides: false },
+              1000: { slidesPerView: 3, centeredSlides: false },
+              1200: { slidesPerView: 4, centeredSlides: false },
             }}
           >
             {members.map((member) => (
@@ -113,13 +111,12 @@ type Props = {
 };
 
 const TeamMemberCard = ({ member }: Props) => {
-  // To‘liq rasm URLsi:
   const imageUrl = member.image.startsWith('http')
     ? member.image
     : `https://clamo-production.up.railway.app${member.image}`;
 
   return (
-    <div className="relative rounded-2xl overflow-hidden w-64 h-96 shadow-md bg-white cursor-pointer teamcarousel group">
+    <div className="relative rounded-2xl overflow-hidden w-64 h-96 shadow-md bg-white cursor-pointer teamcarousel group mx-auto">
       <Image
         src={imageUrl}
         alt={member.full_name_uz}
@@ -130,7 +127,6 @@ const TeamMemberCard = ({ member }: Props) => {
       <div className="absolute bottom-0 left-0 right-0 p-4 z-10 text-white transform transition-transform duration-300 group-hover:-translate-y-[80px]">
         <p className="font-semibold">{member.full_name_uz}</p>
       </div>
-
       {member.description_uz && (
         <div className="absolute bottom-0 left-0 right-0 h-[250px] bg-gradient-to-t from-[#002b66] to-transparent px-4 text-white flex items-end opacity-0 transition-opacity duration-300 group-hover:opacity-100">
           <div className="text-sm mb-[10px]">{member.description_uz}</div>
