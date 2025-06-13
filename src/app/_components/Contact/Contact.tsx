@@ -55,7 +55,7 @@ export default function Contact() {
           throw new Error(
             errorData.message || "Serverda ichki xatolik yuz berdi"
           );
-        } catch (e) {
+        } catch (e: any) {
           console.error("Non-JSON Error Response:", responseText);
           throw new Error("Serverdan noto‘g‘ri javob keldi");
         }
