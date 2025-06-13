@@ -5,12 +5,24 @@ import { Inter } from "next/font/google";
 import Flag from "../../../../public/Images/Flag.png";
 import Flag1 from "../../../../public/Images/Flag2.png";
 import "./style.css";
+import { useEffect } from "react";
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
 });
+import "aos/dist/aos.css";
+
 
 function FirstPage() {
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      import("aos").then((AOS) => {
+        AOS.init({ duration: 1000 });
+      });
+    }
+  }, []);
+
   return (
     <div
       className={`container relative bg-transparent h-auto xl:h-[720px] lg:h-[650px] flex flex-col lg:flex-row lg:gap-10 px-4 md:px-10 ${inter.className} font-inter`}
@@ -33,11 +45,19 @@ function FirstPage() {
           </div>
           {/* Buttons */}
           <div className="mt-[10px] md:mt-[30px] lg:mt-[40px] flex flex-col sm:flex-row items-start sm:items-center gap-3">
-            <button className="bg-[#23B3FC] w-full sm:w-[200px] md:w-[240px] lg:w-[272px] py-[10px] gap-[5px] border-0 rounded-lg justify-center flex items-center text-[#FFFFFF] text-[14px] leading-[1.3] font-medium">
-              Xizmatlarimiz <ChevronRight size={22} />
+            <button className="group bg-[#23B3FC] hover:bg-[#23B3FC]/80 w-full sm:w-[200px] md:w-[240px] lg:w-[272px] py-[10px] gap-[5px] border-0 rounded-lg justify-center flex items-center text-[#FFFFFF] text-[14px] leading-[1.3] font-medium">
+              Xizmatlarimiz{" "}
+              <ChevronRight
+                className="group-hover:translate-x-2 transition-all duration-200"
+                size={22}
+              />
             </button>
-            <button className="bg-[#23B3FC1F] w-full sm:w-[200px] md:w-[240px] lg:w-[272px] py-[10px] gap-[5px] border-0 rounded-lg justify-center flex items-center text-[#23B3FC] text-[14px] leading-[1.3] font-medium">
-              Murojaat qilish <ChevronRight size={22} />
+            <button className="group bg-[#23B3FC1F] hover:bg-[#23B3FC] hover:text-white w-full sm:w-[200px] md:w-[240px] lg:w-[272px] py-[10px] gap-[5px] border-0 rounded-lg justify-center flex items-center text-[#23B3FC] text-[14px] leading-[1.3] font-medium">
+              Murojaat qilish{" "}
+              <ChevronRight
+                className="group-hover:translate-x-2 transition-all duration-200"
+                size={22}
+              />
             </button>
           </div>
         </div>
@@ -53,8 +73,11 @@ function FirstPage() {
           width={580}
           height={800}
           className="object-contain w-full max-w-[580px]"
+          data-aos="fade-up"
+
         />
       </div>
+
       <div className="hidden lg:flex lg:pt-20 xl:hidden w-full justify-end">
         <Image
           src={Flag1}
@@ -62,6 +85,7 @@ function FirstPage() {
           width={580}
           height={800}
           className="object-contain w-full max-w-[580px]"
+          data-aos="fade-up"
         />
       </div>
 
