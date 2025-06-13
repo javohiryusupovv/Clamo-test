@@ -6,9 +6,17 @@ import WhiteDown from "@/assets/icons/whiteDown.png";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+type NewsType = {
+  id: number;
+  slug: string;
+  title: string;
+  title_uz?: string;
+  created_at?: string;
+  image?: string;
+};
+
 export default function NewsPage() {
-  const [news, setNews] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [news, setNews] = useState<NewsType[]>([]);
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -19,10 +27,8 @@ export default function NewsPage() {
         );
         const data = await res.json();
         setNews(data.slice(0, 4));
-      } catch (error) {
+      } catch {
         setNews([]);
-      } finally {
-        setLoading(false);
       }
     };
     fetchNews();
