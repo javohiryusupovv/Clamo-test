@@ -2,7 +2,7 @@
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
 
-export default function FAQSection() {
+export default function     FAQSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const faqs = [

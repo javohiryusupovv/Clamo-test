@@ -41,7 +41,7 @@ export default function MainService() {
         {platforms.map((item) => (
           <div
             key={item.id}
-            className="grid grid-cols-1 lg:grid-cols-2  bg-[#0653C9] sm:rounded-[36px] rounded-[20px] text-white  mb-7"
+            className="grid grid-cols-1 lg:grid-cols-2  bg-[#0653C9] sm:rounded-[36px] rounded-2xl text-white  mb-7"
           >
             <div className="lg:block hidden">
               <div className="flex justify-start bg-[url('/Images/bgMain.png')] bg-no-repeat bg-cover bg-center">
@@ -56,15 +56,14 @@ export default function MainService() {
               </div>
             </div>
 
-            <div className="lg:w-[436px] max-w-[800px] flex flex-col justify-center lg:h-[246px] md:h-[300px] gap-4 mt-6 lg:p-0 max-sm:mx-1 mx-6 my-6 px-4">
-              <h1 className="font-bold lg:text-[40px] md:text-[34px] text-[28px] leading-[110%]">
+            <div className=" mt-6 lg:p-0 max-sm:mx-1 mx-6 my-6 px-4">
+              <h1 className="font-bold lg:text-[40px] md:text-[34px] text-[28px] leading-[110%] pb-[8px]">
                 {item.title}
               </h1>
               <p className="font-medium text-base text-white/60 md:pb-7 pb-2">
                 {item.description}
               </p>
-
-              <div className="flex md:gap-[28px] gap-3   items-center">
+              <div className="flex md:gap-[28px] gap-3 items-center">
                 <button className="md:w-[185px] w-[150px] h-[40px] flex items-center justify-center sm:gap-[11.5px] gap-1 bg-[#23B3FC] group hover:bg-[#23B3FC]/[80%] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] cursor-pointer">
                   {item.buttonText}
                   <FaChevronRight className="group-hover:translate-x-2 transition-all duration-200" />
