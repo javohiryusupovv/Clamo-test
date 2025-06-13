@@ -33,7 +33,7 @@ export default async function NewsDetailPage({ params }: { params: Promise<{id: 
   const newsItem = await getNewsItem(Number(id));
 
   if (!newsItem) {
-    notFound()
+    return notFound();
   }
 
   return (
