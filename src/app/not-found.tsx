@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react'; // lucide-react ikonalar kutubxonasi
 
@@ -17,4 +19,3 @@ export default function Custom404() {
         </div>
     );
 }
-
