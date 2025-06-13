@@ -142,7 +142,7 @@ export default function Navbar() {
                   Akkreditsiyalash
                 </li>
               </Link>
-              <li className="text-sm font-medium text-[#3D445E]">Bog'lanish</li>
+              <li className="text-sm font-medium text-[#3D445E]">Bog&apos;lanish</li>
             </ul>
             <ul className="flex items-center gap-8">
               <article className="flex items-center gap-3">
@@ -264,7 +264,7 @@ export default function Navbar() {
                     </li>
                   </Link>
                   <li className="text-sm font-medium text-[#3D445E]">
-                    Bog'lanish
+                    Bog&apos;lanish
                   </li>
                 </ul>
                 <ul className="flex flex-col items-start gap-6 mt-6">

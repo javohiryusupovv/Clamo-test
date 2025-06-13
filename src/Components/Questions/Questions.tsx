@@ -1,10 +1,14 @@
 "use client";
-import axios from "axios";
 import { useEffect, useState } from "react";
-export default function Questions() {
-  const API_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
-  const [answer, setAnswer] = useState<any[]>([]);
+interface FAQ {
+  id: number;
+  question: string;
+  answer: string;
+}
+
+export default function Questions() {
+  const [answer, setAnswer] = useState<FAQ[]>([]);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   useEffect(() => {
@@ -15,7 +19,7 @@ export default function Questions() {
         );
         const data = await res.json();
         setAnswer(data);
-      } catch (error) {
+      } catch {
         setAnswer([]);
       }
     };
@@ -25,6 +29,7 @@ export default function Questions() {
   const handleToggle = (idx: number) => {
     setOpenIndex(openIndex === idx ? null : idx);
   };
+
   return (
     <div className="flex flex-col gap-4">
       {answer.map((q, idx) => (
@@ -36,7 +41,7 @@ export default function Questions() {
         >
           <button
             onClick={() => handleToggle(idx)}
-            className={`w-full text-left px-6 py-5 text-lg font-medium cursor-pointer flex items-center justify-between  ${
+            className={`w-full text-left px-6 py-5 text-lg font-medium cursor-pointer flex items-center justify-between ${
               openIndex === idx
                 ? "border-x border-t border-blue-500 rounded-t-lg"
                 : ""

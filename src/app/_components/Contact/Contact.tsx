@@ -142,8 +142,8 @@ export default function Contact() {
               Biz bilan aloqa
             </h5>
             <p className="text-[#838CAF] text-[16px] font-normal leading-[130%]">
-              Agar sizda biron bir savol bo'lsa yoki ma'lumotga muhtoj
-              bo'lsangiz, biz bilan bog'laning.
+              Agar sizda biron bir savol bo&apos;lsa yoki ma&apos;lumotga muhtoj
+              bo&apos;lsangiz, biz bilan bog&apos;laning.
             </p>
           </article>
 
@@ -167,7 +167,6 @@ export default function Contact() {
               )}
             </article>
             {/* Organization */}
-
             <article className="w-full mb-6">
               <label
                 htmlFor="tashkilot"
