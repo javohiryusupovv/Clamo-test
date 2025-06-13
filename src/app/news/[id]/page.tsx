@@ -27,11 +27,13 @@ async function getNewsItem(id: number): Promise<NewsItem | undefined> {
   return dummyData.find(item => item.id === Number(id));
 }
 
-export default async function NewsDetailPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+interface PageProps {
+  params: {
+    id: string;
+  };
+}
+
+export default async function NewsDetailPage({ params }: PageProps) {
   const newsItem = await getNewsItem(Number(params.id));
 
   if (!newsItem) {
