@@ -1,5 +1,5 @@
 "use client"
-import ClamoFlag from "../assets/images/clamoFlag.png";
+import ClamoFlag from "../../assets/images/clamoFlag.png";
 import Image from "next/image";
 import LearnMore from "./LearnMoreButton";
 import { useEffect } from "react";

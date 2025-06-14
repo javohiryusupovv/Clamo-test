@@ -1,5 +1,5 @@
 "use client"
-import "../styles/linerMainserver.css";
+import "../../styles/linerMainserver.css";
 import Image from "next/image";
 import ServicesSection from "@/app/about/_components/AboutService";
 import { useEffect } from "react";

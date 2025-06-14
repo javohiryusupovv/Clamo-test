@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import Phone from "../assets/icons/phone.png";
-import Flag from "../assets/icons/uzbekistan.png";
-import LogoClamo from "../assets/icons/LogoClamo.svg";
-import Down from "../assets/icons/down.png";
+import Phone from "../../assets/icons/phone.png";
+import Flag from "../../assets/icons/uzbekistan.png";
+import LogoClamo from "../../assets/icons/LogoClamo.svg";
+import Down from "../../assets/icons/down.png";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 

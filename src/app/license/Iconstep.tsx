@@ -17,7 +17,7 @@ const StepIcon: FC<StepIconProps> = ({ className = "", type }) => {
   return (
     <div className={`relative w-[24px] h-[32px] sm:w-[28px] sm:h-[37px] ${className}`}>
       <Image
-        src={iconPath[type] || "/icons/default.svg"}
+        src={iconPath[type]}
         alt={`${type} step icon`}
         layout="fill"
         objectFit="contain"

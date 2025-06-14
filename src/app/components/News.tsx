@@ -49,38 +49,6 @@ export default function NewsPage() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* {news[0] && (
-          <div className="group relative rounded-[16px] sm:rounded-[24px] overflow-hidden">
-            <Image
-              src={news[0].image || Shahar}
-              alt="City image"
-              className="w-full h-full object-cover"
-              width={300}
-              height={200}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#051425]/85 via-[#051425]/60 to-[#051425]/40"></div>
-            <p className="absolute top-4 left-4 text-[#EDF0EF] font-normal text-[10px] sm:text-[14px] z-10">
-              {news[0].created_at
-                ? new Date(news[0].created_at).toLocaleDateString()
-                : ""}
-            </p>
-            <div className="absolute bottom-4 left-4 right-4 text-white z-10">
-              <h2 className="text-[14px] sm:text-[18px] md:text-[22px] xl:text-[28px] font-bold leading-[130%] pb-2">
-                {news[0].title_uz || news[0].title}
-              </h2>
-              <Link
-                href={`/news/${news[0].slug}`}
-                className="hover:underline text-white font-medium text-[12px] sm:text-[14px] flex items-center gap-4"
-              >
-                Batafsil
-                <div className="border border-[#74807B] py-2 px-2 rounded-full relative group-hover:border-[#23B3FC]">
-                  <FaArrowRightLong className="w-4 h-4 -translate-x-2 transition-all duration-200 group-hover:translate-x-0" />
-                </div>
-              </Link>
-            </div>
-          </div>
-        )} */}
-
         <div className="grid grid-cols-1 gap-4">
           {news.slice(1, 2).map((item) => (
             <div

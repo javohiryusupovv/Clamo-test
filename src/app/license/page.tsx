@@ -4,6 +4,7 @@ import Image from "next/image";
 import Icon from "@/app/license/Icon";
 import StepIcon from "./Iconstep";
 import Klinikalar from "./klinikalar";
+import BG from "../../../public/Bg.png"
 
 const steps = [
   {
@@ -76,7 +77,7 @@ const Page = () => {
 
             <div className="hidden md:flex md:flex-1 justify-center items-center w-full md:w-[55%] h-auto mt-8 md:mt-0 md:absolute z-[-10] md:right-[-50px]">
               <Image
-                src="/Bg.png"
+                src={BG}
                 alt="Illyustratsiya"
                 width={694}
                 height={684}

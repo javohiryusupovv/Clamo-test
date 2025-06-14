@@ -4,8 +4,8 @@ import { FaGooglePlay } from "react-icons/fa";
 import { SiApple } from "react-icons/si";
 import Huawie from "@/assets/icons/huawie.png";
 import QR from "@/assets/icons/QR.png";
-import Phone from "../../public/Imgs/iPhone15Pro.png";
-import "../styles/InstalPage.css";
+import Phone from "../../../public/Imgs/iPhone15Pro.png";
+import "../../styles/InstalPage.css";
 import { useEffect } from "react";
 
 export default function InstallPage() {

@@ -1,11 +1,11 @@
-import Izohlar from "@/Components/Comments";
-import Hero from "@/Components/Hero";
-import InstallPage from "@/Components/InstallPage";
-import MainService from "@/Components/MainServes";
-import MedicalLegal from "@/Components/MedicalLegal";
-import NewsPage from "@/Components/News";
-import Partnyor from "@/Components/partnyor/Partnyor";
-import QuestionsPage from "@/Components/QuestionsPage";
+import Izohlar from "@/app/components/Comments";
+import Hero from "@/app/components/Hero";
+import InstallPage from "@/app/components/InstallPage";
+import MainService from "@/app/components/MainServes";
+import MedicalLegal from "@/app/components/MedicalLegal";
+import NewsPage from "@/app/components/News";
+import QuestionsPage from "@/app/components/QuestionsPage";
+import Partnyor from "./components/partnyor/Partnyor";
 
 
 
@@ -20,7 +20,7 @@ export default function Main() {
            <NewsPage />
            <div className="bg-[#f6f9fc] py-[60px]">
              <InstallPage />
-             <Partnyor />
+             <Partnyor/>
            </div>
            <QuestionsPage />
          </div>

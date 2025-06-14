@@ -7,11 +7,11 @@ import Home from "@/assets/images/home.png";
 import File from "@/assets/images/file.png";
 import True from "@/assets/images/true.png";
 import ImageClamo from "@/assets/images/ImageClamo.png";
-import LearnMore from "./LearnMoreButton";
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { FaChevronRight } from "react-icons/fa";
 import "aos/dist/aos.css";
+import LearnMore from "./LearnMoreButton";
 
 // Types
 interface LicenseStats {

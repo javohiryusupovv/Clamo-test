@@ -1,5 +1,5 @@
 import Image from "next/image";
-import "../styles/linerMainserver.css";
+import "../../styles/linerMainserver.css";
 import { commentOpinion } from "@/types/type";
 import Marquee from "react-fast-marquee";
 export default function Izohlar() {

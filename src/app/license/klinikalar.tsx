@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { ChevronDown, Search as SearchIcon } from "lucide-react";
 import Image from "next/image";
+import Locationicons from "../../assets/icons/location.png"
 
 type Clinic = {
   id: number;
@@ -108,10 +109,6 @@ function KlinikalarReyesteri() {
   );
   const paginatedData = clinics;
 
-  console.log("====================================");
-  console.log(clinics);
-  console.log("====================================");
-
   return (
     <div className="max-w-7xl mx-auto p-3 sm:p-4 md:p-6">
       <div className="md:flex justify-between items-center max-md:flex-col ">
@@ -171,7 +168,7 @@ function KlinikalarReyesteri() {
                 <div className="flex flex-col sm:flex-row sm:items-center sm:flex-nowrap gap-1 sm:gap-1">
                   <div className="flex items-center gap-1">
                     <Image
-                      src="/location.png"
+                      src={Locationicons}
                       alt="map location icon"
                       width={24}
                       height={24}
