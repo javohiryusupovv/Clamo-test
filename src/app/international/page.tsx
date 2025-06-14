@@ -2,13 +2,13 @@ import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 import "../../styles/international.css";
-import Partnyor from "@/Components/Partnyor/Partnyor";
 
 import FlagLogo1 from "../../assets/flag/flag1.png";
 import FlagLogo2 from "../../assets/flag/flag2.png";
 import acredetIcons from "../../assets/icons/1inter.png";
 import litsenziyaIcons from "../../assets/icons/litsenziyaicons.png";
 import memorandumIcons from "../../assets/icons/memorandum.png";
+import Partnyor from "../components/partnyor/Partnyor";
 
 export default function InternationalMain() {
     return (
@@ -45,7 +45,7 @@ export default function InternationalMain() {
                 <div className="shape" />
             </div>
 
-            <Partnyor />
+            <Partnyor/>
 
             <div className="w-full py-16 mb-32">
                 <div className="container">

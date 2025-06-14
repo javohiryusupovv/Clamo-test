@@ -1,4 +1,4 @@
-import Questions from "@/Components/Questions/Questions";
+import QuestionsPage from "@/app/components/QuestionsPage";
 
 export default function  FAQSection() {
 
@@ -9,7 +9,7 @@ export default function  FAQSection() {
           Tez-tez beriladigan savollar
         </h2>
 
-        <Questions/>
+        <QuestionsPage/>
       </div>
     </section>
   );
