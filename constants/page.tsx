@@ -1,4 +1,4 @@
-import { ServiceCardProps } from "@/app.types";
+import { Department, ServiceCardProps } from "@/app.types";
 
 
 
@@ -30,5 +30,23 @@ export const getServices: ServiceCardProps[] = [
     description:
       "Shifokorlar, tibbiyot xodimlari va boshqalar uchun malaka oshirish kurslarini tashkil etamiz",
     link: "#",
+  },
+];
+
+export const getDepartments: Department[] = [
+  {
+    id: 1,
+    title: "Kardiologiya",
+    description: "Yurak va qon tomir tizimi kasalliklarini tashxislash va davolash bo'limi.",
+  },
+  {
+    id: 2,
+    title: "Nevrologiya",
+    description: "Asab tizimi kasalliklarini tashxislash va davolash bo'limi.",
+  },
+  {
+    id: 3,
+    title: "Gastroenterologiya",
+    description: "Oshqozon-ichak trakti kasalliklarini tashxislash va davolash bo'limi.",
   },
 ];

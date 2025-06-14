@@ -3,6 +3,9 @@ import Servicec from "./_components/AboutService";
 import HeroSection from './_components/HeroSection';
 import DepartmentSection from './_components/DepartmentSection';
 import SecondPage from '../consulting/_components/secondpage';
+import College from "../../../public/Images/Screenpagee.png"
+
+import Image from "next/image";
 
 export default function About() {
     return (
@@ -39,7 +42,7 @@ export default function About() {
                     Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.
                 </p>
                 <div className="flex justify-center">
-                 
+                    <Image src={College} alt="Strukture college" />
                 </div>
             </div>
 
