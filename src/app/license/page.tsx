@@ -1,10 +1,3 @@
-"use client";
-
-import Image from "next/image";
-import Icon from "@/app/license/Icon";
-import StepIcon from "./Iconstep";
-import Klinikalar from "./klinikalar";
-import BG from "../../../public/Bg.png"
 
 const steps = [
   {
@@ -69,21 +62,13 @@ const Page = () => {
                     className="group flex items-center justify-center gap-[4px] w-full sm:w-[273px] px-[24px] py-[10px] bg-[#23B3FC1F] text-[#23B3FC] rounded-lg hover:bg-[#23B3FC] hover:text-white transition"
                   >
                     <span className="text-[14px] font-medium">{text}</span>
-                    <Icon className="w-5 h-5 text-[#23B3FC] group-hover:text-white transition" />
                   </button>
                 ))}
               </div>
             </div>
 
             <div className="hidden md:flex md:flex-1 justify-center items-center w-full md:w-[55%] h-auto mt-8 md:mt-0 md:absolute z-[-10] md:right-[-50px]">
-              <Image
-                src={BG}
-                alt="Illyustratsiya"
-                width={694}
-                height={684}
-                priority
-                className="w-full h-[684px] object-contain"
-              />
+            
             </div>
           </div>
         </div>
@@ -109,7 +94,6 @@ const Page = () => {
                 <span className="text-[14px] font-medium">
                   Litsenziya olish portaliga o‘tish
                 </span>
-                <Icon className="w-5 h-5 text-[#FFFFFF] group-hover:text-[#23B3FC] transition" />
               </button>
             </div>
 
@@ -120,7 +104,7 @@ const Page = () => {
                   className="bg-white bg-opacity-10 rounded-2xl p-4 flex flex-col items-start"
                 >
                   <div className="bg-white bg-opacity-20 p-[16px] rounded-[18px] mb-3">
-                    <StepIcon type={step.icon as "form" | "check" | "review" | "decision"} />
+                   
                   </div>
                   <h3 className="font-bold text-[20px] mb-2">{step.title}</h3>
                   <p className="text-sm">{step.description}</p>
@@ -133,7 +117,6 @@ const Page = () => {
 
       {/* Klinikalar section */}
       <section className="container mx-auto px-4 py-[80px]">
-        <Klinikalar />
       </section>
     </>
   );

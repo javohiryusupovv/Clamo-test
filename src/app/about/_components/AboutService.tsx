@@ -1,6 +1,5 @@
 "use client"
 import { useEffect } from "react";
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -75,13 +74,7 @@ const ServicesSection: React.FC = () => {
               data-aos="zoom-out"
             >
               <div>
-                <Image
-                  src={service.icon}
-                  alt={service.title}
-                  width={48}
-                  height={48}
-                  className="mb-4"
-                />
+               
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
                   {service.title}
                 </h3>

@@ -1,7 +1,6 @@
 // components/CenterRegulations.tsx
 import React from 'react';
-import WhiteDown from "@/assets/icons/whiteDown.png";
-import Image from 'next/image'; 
+
 
 const CenterRegulations: React.FC = () => {
     return (
@@ -42,7 +41,7 @@ const CenterRegulations: React.FC = () => {
                         Markazning barcha faoliyati belgilangan ustuvor yo&apos;nalishlar va yillik ish rejasiga muvofiq amalga oshiriladi.
                     </p>
                     <button className="w-[272px] h-[40px] flex items-center justify-center gap-[11.5px] bg-[#23B3FC] rounded-lg text-sm font-medium  leading-[130%] mt-[50px] text-[white]">
-                        Ma&apos;lumotni yuklab olish <Image src={WhiteDown} alt="down strelka" />
+                        Ma&apos;lumotni yuklab olish
                     </button>
                 </div>
             </div>

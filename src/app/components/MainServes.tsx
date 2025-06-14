@@ -1,6 +1,5 @@
 "use client"
 import "../../styles/linerMainserver.css";
-import Image from "next/image";
 import ServicesSection from "@/app/about/_components/AboutService";
 import { useEffect } from "react";
 import { FaChevronRight, FaPhoneAlt } from "react-icons/fa";
@@ -45,14 +44,6 @@ export default function MainService() {
           >
             <div className="lg:block hidden">
               <div className="flex justify-start bg-[url('/Images/bgMain.png')] bg-no-repeat bg-cover bg-center">
-                <Image
-                  src={item.image}
-                  alt="Clamo Logo on Laptop"
-                  width={500}
-                  height={273}
-                  className="w-[510px] h-[300px] rounded-bl-[36px]"
-                  data-aos="fade-right"
-                />
               </div>
             </div>
 

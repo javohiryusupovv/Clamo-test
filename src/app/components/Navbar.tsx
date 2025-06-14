@@ -1,9 +1,5 @@
 "use client";
-import Image from "next/image";
-import Phone from "../../assets/icons/phone.png";
-import Flag from "../../assets/icons/uzbekistan.png";
-import LogoClamo from "../../assets/icons/LogoClamo.svg";
-import Down from "../../assets/icons/down.png";
+
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -49,13 +45,7 @@ export default function Navbar() {
         >
           <ul>
             <Link href="/">
-              <Image
-                src={LogoClamo}
-                alt="Logo"
-                width={155.71}
-                height={40}
-                className="w-[105px] h-[40px] lg:hidden"
-              />
+            
             </Link>
           </ul>
 
@@ -63,13 +53,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center justify-between w-full gap-10">
             <ul>
               <Link href="/">
-                <Image
-                  src={LogoClamo}
-                  alt="Logo"
-                  width={155.71}
-                  height={40}
-                  className="w-[155.71px] h-[40px]"
-                />
+                <li className="text-sm font-medium text-[#3D445E]">Bosh sahifa</li>
               </Link>
             </ul>
             <ul className="flex items-center gap-10">
@@ -83,15 +67,7 @@ export default function Navbar() {
                 >
                   Biz haqimizda
                   <div className="w-5 h-5 flex items-center">
-                    <Image
-                      src={Down}
-                      alt="Down arrow"
-                      width={11}
-                      height={11}
-                      className={`mt-[6px] transition-transform ${
-                        isDropdownOpen ? "rotate-180" : ""
-                      }`}
-                    />
+                    
                   </div>
                 </li>
                 {isDropdownOpen && (
@@ -146,24 +122,18 @@ export default function Navbar() {
             </ul>
             <ul className="flex items-center gap-8">
               <article className="flex items-center gap-3">
-                <Image
-                  src={Flag}
-                  alt="Flag icon"
-                  width={24}
-                  height={24}
-                  className="object-contain"
-                />
+              
                 <article className="flex items-center gap-[9px]">
                   <p className="text-sm uppercase text-[#3D445E] font-medium">
                     uz
                   </p>
                   <div className="w-5 h-5 flex items-center">
-                    <Image src={Down} alt="Down arrow" width={11} height={11} />
+                    
                   </div>
                 </article>
               </article>
               <article className="flex items-center gap-[6px]">
-                <Image src={Phone} alt="Phone icon" width={17} height={17} />
+                
                 <p className="text-base font-bold text-[#3D445E]">1369</p>
               </article>
             </ul>
@@ -217,15 +187,7 @@ export default function Navbar() {
                     >
                       Biz haqimizda
                       <div className="w-5 h-5 flex items-center">
-                        <Image
-                          src={Down}
-                          alt="Down arrow"
-                          width={11}
-                          height={11}
-                          className={`mt-[6px] transition-transform ${
-                            isDropdownOpen ? "rotate-180" : ""
-                          }`}
-                        />
+                        
                       </div>
                     </li>
                     {isDropdownOpen && (
@@ -269,35 +231,18 @@ export default function Navbar() {
                 </ul>
                 <ul className="flex flex-col items-start gap-6 mt-6">
                   <article className="flex items-center gap-3">
-                    <Image
-                      src={Flag}
-                      alt="Flag icon"
-                      width={24}
-                      height={24}
-                      className="object-contain"
-                    />
+                    
                     <article className="flex items-center gap-[9px]">
                       <p className="text-sm uppercase text-[#3D445E] font-medium">
                         uz
                       </p>
                       <div className="w-5 h-5 flex items-center">
-                        <Image
-                          src={Down}
-
-                          alt="Down arrow"
-                          width={11}
-                          height={11}
-                        />
+                      
                       </div>
                     </article>
                   </article>
                   <article className="flex items-center gap-[6px]">
-                    <Image
-                      src={Phone}
-                      alt="Phone icon"
-                      width={17}
-                      height={17}
-                    />
+                   
                     <p className="text-base font-bold text-[#3D445E]">1369</p>
                   </article>
                 </ul>

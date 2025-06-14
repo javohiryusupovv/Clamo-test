@@ -1,6 +1,5 @@
 "use server";
 
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft as BackIcon } from "lucide-react";
 
@@ -50,12 +49,7 @@ export default async function NewsDetailPage({ params }: { params: Promise<{id: 
         
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
           <div className="relative h-60 sm:h-80 w-full">
-            <Image
-              src={newsItem?.image}
-              alt={newsItem?.title}
-              fill
-              className="object-cover"
-            />
+          
           </div>
           <div className="p-6 space-y-4">
             <div className="text-sm text-gray-500">

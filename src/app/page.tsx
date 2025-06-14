@@ -1,7 +1,7 @@
 
 
 import Izohlar from "@/app/components/Comments";
-import Hero from "@/app/components/Hero";
+// import Hero from "@/app/components/Hero";
 import InstallPage from "@/app/components/InstallPage";
 import MainService from "@/app/components/MainServes";
 import MedicalLegal from "@/app/components/MedicalLegal";
@@ -15,7 +15,7 @@ export default function Main() {
   return (
     <>
      <div className="overflow-hidden">
-           <Hero />
+           {/* <Hero /> */}
            <MedicalLegal />
            <MainService />
            <Izohlar />

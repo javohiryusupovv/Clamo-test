@@ -1,17 +1,12 @@
 
 
 "use client";
-import Image from "next/image";
+
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import location from "../../../assets/icons/location.png";
-import phone from "../../../assets/icons/phone.png";
-import email from "../../../assets/icons/mail.png";
-import submiticons from "../../../assets/icons/submiticons.png";
-import uzbflag from "../../../assets/flag/flagicons.png";
 import formSchema from "@/schemas/formSchema";
 
 type FormData = z.infer<typeof formSchema>;
@@ -83,7 +78,7 @@ export default function Contact() {
         {/* Contact Info */}
         <div className="w-full lg:w-[450px] pl-6 pr-6 py-10 lg:pl-14 lg:py-14">
           <h6 className="text-[28px] lg:text-[32px] font-semibold text-white mb-2">
-            Bog&apos;lanish uchun
+            Bog‘lanish uchun
           </h6>
           <p className="text-[14px] lg:text-[16px] font-normal text-white text-opacity-[60%] mb-6 lg:mb-9">
             Siz tizimdan chiqishingiz mumkin bo&apos;lgan quyidagi usullardan
@@ -93,7 +88,7 @@ export default function Contact() {
             {/* Location */}
             <div className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
               <article className="bg-white p-3 inline-flex justify-center items-center rounded-lg">
-                <Image className="w-5 h-4" src={location} alt="Location" />
+              
               </article>
               <article>
                 <span className="text-[14px] font-normal text-opacity-[60%] text-white">
@@ -107,7 +102,7 @@ export default function Contact() {
             {/* Phone */}
             <div className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
               <article className="bg-white p-3 inline-flex items-center justify-center rounded-lg">
-                <Image className="w-5 h-5" src={phone} alt="Phone" />
+                
               </article>
               <article>
                 <span className="text-[14px] font-normal text-opacity-[60%] text-white">
@@ -121,7 +116,7 @@ export default function Contact() {
             {/* Email */}
             <div className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
               <article className="bg-white p-3 inline-flex rounded-lg">
-                <Image className="w-5 h-4" src={email} alt="Email" />
+                
               </article>
               <article>
                 <span className="text-[14px] font-normal text-opacity-[60%] text-white">
@@ -197,7 +192,7 @@ export default function Contact() {
               </label>
               <div className="w-full bg-[#F7F7F8] flex gap-2 px-3 h-10 rounded-lg border border-transparent focus-within:border-[#1a60cd]">
                 <article className="flex items-center gap-1">
-                  <Image src={uzbflag} className="w-9" alt="Flag Icons" />
+                  
                   <span className="text-[#3D445E] text-[14px]">+998</span>
                 </article>
                 <input
@@ -243,11 +238,7 @@ export default function Contact() {
                 className="group flex items-center gap-1 text-[14px] font-medium text-white px-6 py-[10px] rounded-lg bg-[#0653C9] hover:bg-[#0761e9]"
               >
                 Jo‘natish
-                <Image
-                  className="transition-all duration-300 group-hover:rotate-[43deg]"
-                  src={submiticons}
-                  alt="Send Icon"
-                />
+           
               </button>
             </div>
           </form>

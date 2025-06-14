@@ -1,5 +1,3 @@
-"use client";
-import Image from "next/image";
 import Img1 from "../../../../public/Images/img1.png";
 import Img2 from "../../../../public/Images/img2.png";
 import Img3 from "../../../../public/Images/img3.png";
@@ -46,15 +44,6 @@ function SecondPage() {
             <div className="w-full flex justify-start mb-4">
               {/* import Image from "next/image"; */}
 
-              <Image
-                src={step.icon}
-                alt={step.title}
-                width={80}
-                height={80}
-                sizes="(max-width: 640px) 48px, (max-width: 1024px) 64px, 80px"
-                className="object-contain w-12 h-12 sm:w-16 sm:h-16  lg:w-20 lg:h-20"
-                priority
-              />
 
             </div>
             <h3 className="text-[20px] font-bold font-vksans text-[#3D445E] leading-snug mb-2">

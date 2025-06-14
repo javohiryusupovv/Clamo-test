@@ -1,9 +1,6 @@
-import React from 'react'
-import Image from 'next/image'
+
 import Servicec from "./_components/AboutService";
 import TeamCarousel from './_components/TeamCarousel';
-import Screenpage from '@/assets/Screenpagee.png';
-import NavBuilding from '@/assets/NavBuilding.png';
 import HeroSection from './_components/HeroSection';
 import DepartmentSection from './_components/DepartmentSection';
 import SecondPage from '../consulting/_components/secondpage';
@@ -28,13 +25,7 @@ export default function page() {
 
                     {/* Rasm bo‘limi */}
                     <div className="relative w-full">
-                        <Image
-                            src={NavBuilding}
-                            alt="Building"
-                            width={1500}
-                            height={600}
-                            className="w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[600px] object-cover rounded-xl"
-                        />
+                       
                         <div className="absolute bottom-0 left-0 w-full h-[150px] sm:h-[200px] md:h-[250px] bg-gradient-to-t from-white/100 to-transparent" />
                     </div>
                 </div>
@@ -49,13 +40,7 @@ export default function page() {
                     Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.
                 </p>
                 <div className="flex justify-center">
-                    <Image
-                        src={Screenpage}
-                        alt="Markaz tuzilmasi"
-                        width={1000}
-                        height={700}
-                        className="w-full max-w-5xl h-auto rounded-xl shadow-sm"
-                    />
+                 
                 </div>
             </div>
 

@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -53,14 +52,7 @@ export default function NewsGrid() {
           <Link key={item.id} href={`/news/${item.id}`} passHref>
             <div className="bg-white rounded-2xl border border-white hover:border-blue-400 hover:shadow-md transition duration-300 cursor-pointer">
               <div className="m-3">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-40 object-cover rounded-2xl"
-                  width={349}
-                  height={196}
-                  priority={false}
-                />
+             
               </div>
               <div className="p-4 space-y-2">
                 <div className="text-sm text-gray-500">

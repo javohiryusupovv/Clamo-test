@@ -1,6 +1,5 @@
 "use client"
-import ClamoFlag from "../../assets/images/clamoFlag.png";
-import Image from "next/image";
+
 import LearnMore from "./LearnMoreButton";
 import { useEffect } from "react";
 
@@ -62,12 +61,7 @@ export default function MedicalLegal() {
 
           <div className="relative bottom-0 z-[60] lg:h-[400px] overflow-hidden">
             <div className="bg-[url('../assets/images/twoCircle.png')] bg-no-repeat bg-center bg-contain w-full h-[950px] absolute -top-[480px] hidden lg:block -z-[1]"></div>
-            <Image
-              src={ClamoFlag}
-              alt="Clamo Flag"
-              className="object-fill object-center overflow-hidden"
-              data-aos="fade-up"  
-            />
+        
           </div>
         </div>
       ))}

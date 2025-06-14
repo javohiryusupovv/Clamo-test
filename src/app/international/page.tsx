@@ -1,10 +1,7 @@
 import { ChevronRight } from "lucide-react";
-import Image from "next/image";
 
 import "../../styles/international.css";
 
-import FlagLogo1 from "../../assets/flag/flag1.png";
-import FlagLogo2 from "../../assets/flag/flag2.png";
 import acredetIcons from "../../assets/icons/1inter.png";
 import litsenziyaIcons from "../../assets/icons/litsenziyaicons.png";
 import memorandumIcons from "../../assets/icons/memorandum.png";
@@ -38,8 +35,7 @@ export default function InternationalMain() {
                         </article>
                     </article>
                     <div className="w-full md:w-[55%] flex justify-center items-center relative">
-                        <Image className="w-full max-w-[694px] z-[3]" src={FlagLogo1} alt="Flag Logo" />
-                        <Image className="absolute top-10 right-0 z-[2] hidden md:block" src={FlagLogo2} alt="Flag blur Logo" />
+                       
                     </div>
                 </div>
                 <div className="shape" />
@@ -72,7 +68,6 @@ export default function InternationalMain() {
                         ].map((item, index) => (
                             <div key={index} className="relative z-[5] flex flex-col items-center bg-[#0653C9] px-6 pb-6 pt-16 rounded-[24px] md:rounded-[36px] cardhamkorlar">
                                 <article className="absolute top-6 z-[5] inline-flex p-5 rounded-full bg-white -translate-y-16">
-                                    <Image className="w-10 h-10 max-md:w-8 max-md:h-8" src={item.icon} alt={`Icon ${item.title}`} />
                                 </article>
                                 <h6 className="text-xl md:text-2xl font-bold text-white mb-3 md:mb-4">{item.title}</h6>
                                 <p className="text-[14px] font-normal text-white text-center">{item.desc}</p>

@@ -1,10 +1,6 @@
 "use client"
-import Image from "next/image";
 import { FaGooglePlay } from "react-icons/fa";
 import { SiApple } from "react-icons/si";
-import Huawie from "@/assets/icons/huawie.png";
-import QR from "@/assets/icons/QR.png";
-import Phone from "../../../public/Imgs/iPhone15Pro.png";
 import "../../styles/InstalPage.css";
 import { useEffect } from "react";
 
@@ -27,12 +23,7 @@ export default function InstallPage() {
 
         {/* Phone Image */}
         <div className="absolute bottom-0 left-[-40px] lg:left-[-60px] z-10 max-w-full sm:max-w-[200px] lg:max-w-none overflow-hidden">
-          <Image
-            src={Phone}
-            alt="Sharh Phone Share"
-            className="object-contain lg:block hidden max-sm:flex max-sm:object-cover"
-            data-aos="fade-up" 
-          />
+        
         </div>
 
         {/* Content Section */}
@@ -64,7 +55,7 @@ export default function InstallPage() {
 
             {/* Huawei AppGallery */}
             <button className="flex items-center px-4 py-2 bg-white/20 rounded-lg gap-2">
-              <Image src={Huawie} alt="Huawei logo" className="w-8 h-8 object-contain" />
+              
               <div className="text-left">
                 <p className="text-xs text-white uppercase">Explore it on</p>
                 <p className="text-base text-white font-medium">AppGallery</p>
@@ -75,13 +66,7 @@ export default function InstallPage() {
 
         {/* QR Code */}
         <div className="w-full lg:w-auto mt-6 lg:mt-0 z-20 flex justify-center lg:justify-end">
-          <Image
-            src={QR}
-            alt="QR code"
-            width={180}
-            height={180}
-            className="object-contain hidden md:block"
-          />
+        
         </div>
       </div>
     </section>

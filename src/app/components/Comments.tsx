@@ -1,4 +1,3 @@
-import Image from "next/image";
 import "../../styles/linerMainserver.css";
 import { commentOpinion } from "@/types/type";
 import Marquee from "react-fast-marquee";
@@ -109,13 +108,7 @@ export default function Izohlar() {
       <div className="container">
         {opinion.map((item: commentOpinion, id: number) => (
           <div key={id}>
-            <Image
-              src={item.icons}
-              alt="Sharh Icons"
-              width={124}
-              height={32}
-              className="pb-1 max-sm:w-[95px] max-sm:h-[30px]"
-            />
+           
             <h1 className="font-bold lg:text-[48px] md:text-[44px] text-[20px] text-[#3D445E]">
               {item.subtitle}
             </h1>
@@ -135,13 +128,7 @@ export default function Izohlar() {
                 className="lg:max-w-[343px] max-w-[300px] mx-4 border border-[#E3E8E9] rounded-[16px] sm:p-[16px] p-[8px] bg-white"
               >
                 <div className="flex items-center gap-2">
-                  <Image
-                    src={item.img}
-                    alt="Person people"
-                    width={44}
-                    height={44}
-                    className="rounded-full max-sm:w-[35px] max-sm:h-[35px] object-contain border border-[#C6CFD733]"
-                  />
+                  
                   <div>
                     <h2 className="font-semibold sm:text-[16px] text-[12px]">
                       {item.name}
@@ -156,13 +143,7 @@ export default function Izohlar() {
                 </div>
                 <hr className="my-[10px] text-[#F5F6F7]" />
                 <div className="flex items-center gap-1 sm:pb-[8px] pb-1">
-                  <Image
-                    src={item.staricon}
-                    alt="staricons"
-                    width={88}
-                    height={16}
-                    className="object-contain"
-                  />
+                
                   <p className=" font-normal sm:text-[14px] text-[12px] text-[#8E9BA8]">
                     {item.time}
                   </p>
@@ -188,13 +169,7 @@ export default function Izohlar() {
                   className="lg:max-w-[343px] max-w-[300px] mx-4 border border-[#E3E8E9] rounded-[16px] sm:p-[16px] p-[8px] bg-white"
                 >
                   <div className="flex items-center gap-2">
-                    <Image
-                      src={item.img}
-                      alt="Person people"
-                      width={44}
-                      height={44}
-                      className="rounded-full max-sm:w-[35px] max-sm:h-[35px] object-contain border border-[#C6CFD733]"
-                    />
+                   
                     <div>
                       <h2 className="font-semibold sm:text-[16px] text-[12px]">
                         {item.name}
@@ -209,13 +184,6 @@ export default function Izohlar() {
                   </div>
                   <hr className="my-[10px] text-[#F5F6F7]" />
                   <div className="flex items-center gap-1 sm:pb-[8px] pb-1">
-                    <Image
-                      src={item.staricon}
-                      alt="staricons"
-                      width={88}
-                      height={16}
-                      className="object-contain"
-                    />
                     <p className=" font-normal sm:text-[14px] text-[12px] text-[#8E9BA8]">
                       {item.time}
                     </p>

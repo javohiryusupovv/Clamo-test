@@ -1,9 +1,6 @@
 "use client";
-import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { Inter } from "next/font/google";
-import Flag from "../../../../public/Images/Flag.png";
-import Flag1 from "../../../../public/Images/Flag2.png";
 import "./style.css";
 import { useEffect } from "react";
 const inter = Inter({
@@ -67,26 +64,11 @@ function FirstPage() {
 
       {/* Right Image — faqat lg (≥1024px) da ko‘rinadi */}
       <div className="hidden xl:flex w-full justify-end">
-        <Image
-          src={Flag}
-          alt="bayroq"
-          width={580}
-          height={800}
-          className="object-contain w-full max-w-[580px]"
-          data-aos="fade-up"
-
-        />
+        
       </div>
 
       <div className="hidden lg:flex lg:pt-20 xl:hidden w-full justify-end">
-        <Image
-          src={Flag1}
-          alt="bayroq"
-          width={580}
-          height={800}
-          className="object-contain w-full max-w-[580px]"
-          data-aos="fade-up"
-        />
+            
       </div>
 
       {/* Bottom Gradient */}

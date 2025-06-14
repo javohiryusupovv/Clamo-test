@@ -1,7 +1,4 @@
-import Image from "next/image";
-import Doctors from "@/assets/Doctors.png";
-import gbCircle from "../../../../public/herobg.png"
-import shape from "../../../../public/shape.png"
+
 import "../../../styles/hero.css"
 
 
@@ -15,15 +12,10 @@ export default function Hero() {
         {/* Shifokorlar */}
         <div className="flex justify-between items-center w-full md:h-[310px] h-[450px] rounded-[36px] bg-[#0653C9] overflow-hidden circleCover">
           <div className="h-1/4">
-            <Image
-              src={Doctors}
-              alt="Doctors"
-              className=" absolute bottom-0 left-32 md:left-14 w-[290px] z-10"
-            />
-            <Image src={shape} alt="shape" className="absolute bottom-0 left-0" />
+
           </div>
           <div className="w-11/12 md:w-7/12">
-            <Image src={gbCircle} alt="bg Cirlce" className=" absolute right-0 top-0 z-[22]" />
+           
             <article className="relative top-0 left-0 z-[22]">
               <h3 className=" text-[24px] sm:text-[30px] md:text-[40px] font-bold text-white leading-[50px] md:mr-0 mr-[70px] md:mt-0 mt-[90px] sm:mt-[160px]">Tibbiyot Sohasidagi Xalqaro Hamkorlik va Tajriba Almashinuvi</h3>
               <p className="text-[16px] opacity-60 text-white mb-7">Soha bo&apos;yicha har qanday savolingizga javob beramiz</p>

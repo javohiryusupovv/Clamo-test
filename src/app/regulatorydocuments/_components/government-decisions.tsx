@@ -1,6 +1,5 @@
 import React from 'react';
-import WhiteDown from "@/assets/icons/whiteDown.png";
-import Image from 'next/image';
+
 
 const GovernmentDecisions: React.FC = () => {
     return (
@@ -25,7 +24,7 @@ const GovernmentDecisions: React.FC = () => {
                         </div>
                         {/* Responsive button width and margin-top */}
                         <button className="w-full sm:w-[272px] h-10 flex items-center justify-center gap-2 bg-[#23B3FC] rounded-lg text-sm font-medium leading-tight mt-6 sm:mt-8 lg:mt-12 text-white mx-auto lg:mx-0">
-                            Ma&apos;lumotni yuklab olish <Image src={WhiteDown} alt="down strelka" />
+                            Ma&apos;lumotni yuklab olish
                         </button>
                     </div>
                     {/* Decision 1 Description - Responsive width and text size, removed fixed height */}
@@ -51,7 +50,7 @@ const GovernmentDecisions: React.FC = () => {
                         </div>
                         {/* Responsive button width and margin-top */}
                         <button className="w-full sm:w-[272px] h-10 flex items-center justify-center gap-2 bg-[#23B3FC] rounded-lg text-sm font-medium text-white leading-tight mt-6 sm:mt-8 lg:mt-12 mx-auto lg:mx-0">
-                            Ma&apos;lumotni yuklab olish <Image src={WhiteDown} alt="down strelka" />
+                            Ma&apos;lumotni yuklab olish
                         </button>
                     </div>
                 </div>
@@ -65,7 +64,7 @@ const GovernmentDecisions: React.FC = () => {
                         </div>
                         {/* Responsive button width and margin-top */}
                         <button className="w-full sm:w-[272px] h-10 flex items-center justify-center gap-2 bg-[#23B3FC] rounded-lg text-sm font-medium text-white leading-tight mt-6 sm:mt-8 lg:mt-12 mx-auto lg:mx-0">
-                            Ma&apos;lumotni yuklab olish <Image src={WhiteDown} alt="down strelka" />
+                            Ma&apos;lumotni yuklab olish
                         </button>
                     </div>
                     {/* Decision 3 Description - Responsive width and text size, removed fixed height */}
