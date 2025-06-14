@@ -2,12 +2,7 @@
 
 import { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
-
-type AccordionItemProps = {
-  title: string;
-  content: string;
-  link?: string;
-};
+import { AccordionItemProps } from "../../../app.types"
 
 const AccordionItem = ({ title, content, link }: AccordionItemProps) => {
   const [isOpen, setIsOpen] = useState(false);

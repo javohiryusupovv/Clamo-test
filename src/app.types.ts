@@ -52,3 +52,14 @@ export type Partner = {
   image: string;
   title: string;
 };
+
+export type AccordionItemProps = {
+  title: string;
+  content: string;
+  link?: string;
+};
+
+export type FAQItem = {
+  question: string;
+  answer: string;
+};
