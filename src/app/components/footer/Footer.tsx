@@ -1,9 +1,7 @@
 import Image from "next/image";
 import cirlceBG from "../../../assets/images/twoCircle.png";
-import Flags from "../../../../public/flag/groupFlag.png";
 import DevLogos from "../../../assets/logo/uicLogo.png";
 import lnkdn from "../../../assets/logo/ln.svg";
-import ClamoLogo from "../../../../public/LogoClamo.svg";
 import TibbiyotVazirlik from "../../../assets/logo/TibbiyotVazirlik.png";
 import "./Footer.css";
 import Link from "next/link";
@@ -19,7 +17,7 @@ export default function FooterLayout() {
             <div>
               <div className="w-[400px] mb-[88px]">
                 <article className="flex items-center gap-7 mb-5">
-                  <Image src={ClamoLogo} alt="Clamo Logo" />
+                  <Image src="/LogoClamo.svg" alt="Clamo Logo" />
                   <Image src={TibbiyotVazirlik} alt="Tibbiyot Vazirligi logo" />
                 </article>
                 <p className="text-[12px] sm:text-[16px] text-[#3D445E] sm:w-auto w-[350px]">Raqamli texnologiyalarni joriy etish orqali litsenziyalash va akkreditatsiya jarayonlarini soddalashtirish, Xalqaro standartlarni to&apos;liq integratsiya qilish</p>
@@ -108,7 +106,7 @@ export default function FooterLayout() {
           <div className="container relative top-0 right-0">
             <Image
               className="absolute top-14 right-6 w-[400px]"
-              src={Flags}
+              src="/flag//groupFlag.png"
               alt="Flag Clamo"
             />
           </div>
