@@ -1,5 +1,5 @@
-import Firstpage from "./_components/firstpage";
-import Secondpage from "./_components/secondpage"
+import Firstpage from "./_components/Firstpage";
+import Secondpage from "./_components/Secondpage"
 function page() {
   return (
     <div>
