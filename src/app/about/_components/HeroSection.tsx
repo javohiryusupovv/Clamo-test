@@ -32,7 +32,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="hidden xl:flex absolute top-[270px] w-[1008px] h-[130px] mb-[40px] items-center justify-center z-[20] bg-white rounded-lg left-1/2 transform -translate-x-1/2">
-          <p className="w-[950px]">CLAMO jahon standartlariga mos tibbiy xizmat ko‘rsatish maqsadida yetakchi xalqaro tibbiyot muassasalari va tashkilotlari bilan hamkorlik qiladi. Biz eng so‘nggi innovatsiyalar, ilg‘or texnologiyalar va tajriba almashinuviga tayanamiz.</p>
+          <p className="w-[950px]">CLAMO jahon standartlariga mos tibbiy xizmat ko&apos;rsatish maqsadida yetakchi xalqaro tibbiyot muassasalari va tashkilotlari bilan hamkorlik qiladi. Biz eng so&apos;nggi innovatsiyalar, ilg&apos;or texnologiyalar va tajriba almashinuviga tayanamiz.</p>
         </div>
       </div>
     </div>
