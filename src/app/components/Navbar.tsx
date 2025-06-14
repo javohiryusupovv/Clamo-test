@@ -6,11 +6,13 @@ import LogoClamo from "../../../public/LogoClamo.svg";
 import Down from "../../assets/icons/down.png";
 import Flag from "../../assets/icons/uzbekistan.png";
 import Phone from "../../assets/icons/phone.png";
+import { getImg } from "../../../constants/page";
 
 export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [header, setHeader] = useState(false);
+  const imgg = getImg
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -48,29 +50,38 @@ export default function Navbar() {
           className={`flex items-center justify-between py-3 lg:py-7 z-[999] container`}
         >
           <ul>
-            <Link href="/">
-              <Image
-                src={LogoClamo}
-                alt="Logo"
-                width={155.71}
-                height={40}
-                className="w-[105px] h-[40px] lg:hidden"
-              />
-            </Link>
+            {imgg.map((item) => (
+
+              <Link href="/" key={item.id}>
+                <Image
+                  src={item.img}
+                  alt="Logo"
+                  width={155.71}
+                  height={40}
+                  className="w-[105px] h-[40px] lg:hidden"
+                />
+              </Link>
+            ))
+            }
+
           </ul>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center justify-between w-full gap-10">
             <ul>
-              <Link href="/">
-                <Image
-                  src={LogoClamo}
-                  alt="Logo"
-                  width={155.71}
-                  height={40}
-                  className="w-[155.71px] h-[40px]"
-                />
-              </Link>
+              {imgg.map((item) => (
+
+                <Link href="/" key={item.id}>
+                  <Image
+                    src={item.img}
+                    alt="Logo"
+                    width={155.71}
+                    height={40}
+                    className="w-[155.71px] h-[40px]"
+                  />
+                </Link>
+              ))
+              }
             </ul>
             <ul className="flex items-center gap-10">
               <article className="relative">
@@ -88,9 +99,8 @@ export default function Navbar() {
                       alt="Down arrow"
                       width={11}
                       height={11}
-                      className={`mt-[6px] transition-transform ${
-                        isDropdownOpen ? "rotate-180" : ""
-                      }`}
+                      className={`mt-[6px] transition-transform ${isDropdownOpen ? "rotate-180" : ""
+                        }`}
                     />
                   </div>
                 </li>
@@ -177,19 +187,16 @@ export default function Navbar() {
             onClick={toggleMobileMenu}
           >
             <span
-              className={`w-5 h-[2px] bg-[#3D445E] block transition-transform duration-300 ease-in-out ${
-                isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
-              }`}
+              className={`w-5 h-[2px] bg-[#3D445E] block transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
+                }`}
             ></span>
             <span
-              className={`w-5 h-[2px] bg-[#3D445E] block transition-opacity duration-300 ease-in-out ${
-                isMobileMenuOpen ? "opacity-0" : ""
-              }`}
+              className={`w-5 h-[2px] bg-[#3D445E] block transition-opacity duration-300 ease-in-out ${isMobileMenuOpen ? "opacity-0" : ""
+                }`}
             ></span>
             <span
-              className={`w-5 h-[2px] bg-[#3D445E] block transition-transform duration-300 ease-in-out ${
-                isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
-              }`}
+              className={`w-5 h-[2px] bg-[#3D445E] block transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
+                }`}
             ></span>
           </button>
 
@@ -223,9 +230,8 @@ export default function Navbar() {
                           alt="Down arrow"
                           width={11}
                           height={11}
-                          className={`mt-[6px] transition-transform ${
-                            isDropdownOpen ? "rotate-180" : ""
-                          }`}
+                          className={`mt-[6px] transition-transform ${isDropdownOpen ? "rotate-180" : ""
+                            }`}
                         />
                       </div>
                     </li>

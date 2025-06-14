@@ -1,4 +1,4 @@
-import { Department, ServiceCardProps, TeamMember, MedicalLegalProps,Partner,FAQItem,DoctorImg,enterThePortal,backgroundImage,FilterItem,PaginatedDataItem } from "@/app.types";
+import { Department, ServiceCardProps, TeamMember, MedicalLegalProps,Partner,FAQItem,DoctorImg,enterThePortal,backgroundImage,FilterItem,PaginatedDataItem,Imagee } from "@/app.types";
 
 export const getServices: ServiceCardProps[] = [
   {
@@ -23,7 +23,7 @@ export const getServices: ServiceCardProps[] = [
     link: "#",
   },
   {
-    icon: "/imgs/Malaka.svg",
+    icon: "/Imgs/Malaka.svg",
     title: "Malaka oshirish",
     description:
       "Shifokorlar, tibbiyot xodimlari va boshqalar uchun malaka oshirish kurslarini tashkil etamiz",
@@ -555,3 +555,10 @@ export const getPaginatedData:PaginatedDataItem[] = [
     comment_number: 100,
   },
 ];
+
+export const getImg: Imagee[] = [
+  {
+    id:1,
+    img:"https://utmlgylkkghbjocewude.supabase.co/storage/v1/object/sign/data/EcommerImage/LogoClamo.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNjAzNzdiYS0xZjNjLTRkODUtOTA3OS1mNzVlZDdiOTk4NDgiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkYXRhL0Vjb21tZXJJbWFnZS9Mb2dvQ2xhbW8uc3ZnIiwiaWF0IjoxNzQ5OTIzMjM2LCJleHAiOjE3ODE0NTkyMzZ9.TvDECpUdKZcKIWJOd6SbgHh8yu4X3Iys82jQyLK1QkA"
+  }
+]

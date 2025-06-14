@@ -120,3 +120,8 @@ export interface PaginatedDataItem {
   comment: string;
   comment_number: number;
 }
+
+export interface Imagee {
+  id:number
+  img:string;
+}
