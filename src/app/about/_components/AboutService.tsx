@@ -1,55 +1,19 @@
-"use client"
-import { useEffect } from "react";
+
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-
-interface ServiceCardProps {
-  icon: string;
-  title: string;
-  description: string;
-  link: string;
-}
-
-const services: ServiceCardProps[] = [
-  {
-    icon: "/Imgs/License.svg",
-    title: "Litsenziyalash",
-    description:
-      "Markangizni tibbiyot muassasalariga litsenziya olishda yordam beradi. Hujjat tayyorlash, ariza topshirish",
-    link: "#",
-  },
-  {
-    icon: "/Imgs/Accreditation.svg",
-    title: "Akkreditatsiyalash",
-    description:
-      "Tibbiyot tashkilotlarining xizmat sifatini baholaymiz va akkreditatsiya qilishni ta'minlaymiz",
-    link: "#",
-  },
-  {
-    icon: "/Imgs/Konsulting.svg",
-    title: "Konsalting xizmati",
-    description:
-      "Klinikalar va shifoxonalar tashkil etish jarayonida huquqiy, metodik va texnik maslahatlar beramiz",
-    link: "#",
-  },
-  {
-    icon: "/imgs/Malaka.svg",
-    title: "Malaka oshirish",
-    description:
-      "Shifokorlar, tibbiyot xodimlari va boshqalar uchun malaka oshirish kurslarini tashkil etamiz",
-    link: "#",
-  },
-];
+import { getServices } from "../../../../constants/page";
+import Image from "next/image";
 
 const ServicesSection: React.FC = () => {
+  const services = getServices
 
-    useEffect(() => {
-    if (typeof window !== "undefined") {
-      import("aos").then(AOS => {
-        AOS.init({ duration: 1000 });
-      });
-    }
-  }, []);
+  //   useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     import("aos").then(AOS => {
+  //       AOS.init({ duration: 1000 });
+  //     });
+  //   }
+  // }, []);
 
 
   return (
@@ -74,7 +38,13 @@ const ServicesSection: React.FC = () => {
               data-aos="zoom-out"
             >
               <div>
-               
+                <Image
+                  src={service.icon}
+                  alt={service.title}
+                  width={48}
+                  height={48}
+                  className="mb-4"
+                />
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
                   {service.title}
                 </h3>
