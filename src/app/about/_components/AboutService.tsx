@@ -4,7 +4,7 @@ import Link from "next/link";
 import { getServices } from "../../../../constants/page";
 import Image from "next/image";
 
-const ServicesSection: React.FC = () => {
+export default function ServicesSection() {
   const services = getServices
 
   //   useEffect(() => {
@@ -72,5 +72,3 @@ const ServicesSection: React.FC = () => {
     </section>
   );
 };
-
-export default ServicesSection;

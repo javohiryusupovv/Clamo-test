@@ -1,4 +1,3 @@
-"use server"
 
 import Servicec from "./_components/AboutService";
 import TeamCarousel from './_components/TeamCarousel';
@@ -6,7 +5,7 @@ import HeroSection from './_components/HeroSection';
 import DepartmentSection from './_components/DepartmentSection';
 import SecondPage from '../consulting/_components/secondpage';
 
-export default function page() {
+export default function About() {
     return (
         <div className=''>
             <div className="container">
