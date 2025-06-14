@@ -1,18 +1,14 @@
 "use client"
 
+import { getMedical } from "../../../constants/page";
 import LearnMore from "./LearnMoreButton";
 import { useEffect } from "react";
+import Image from "next/image";
+import ClamoFlag from "../../assets/images/clamoFlag.png";
 
-interface MedicalLegalProps {
-  title: string;
-  subtitle: string;
-  badge: string;
-  description: string;
-  bgCircle: string;
-  clamoFlag: string;
-}
 
 export default function MedicalLegal() {
+  const medical = getMedical
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -21,18 +17,6 @@ export default function MedicalLegal() {
       });
     }
   }, []);
-
-  const medical: MedicalLegalProps[] = [
-    {
-      subtitle: "Sizning sog'lig'ingiz biz uchun",
-      badge: "Muhim!",
-      title: "CLAMO bilan tibbiy faoliyatingizni qonuniylashtiring!",
-      description:
-        "Biz tibbiy tashkilotlarga O'zbekistonda ruxsatnoma va litsenziya olishda yordam beramiz. CLAMO bilan faoliyatingizni qonuniy boshlang va sifatli xizmat ko'rsatishga yo'l oching!",
-      bgCircle: "/images/twoCircle.png",
-      clamoFlag: "@/assets/flag/flag1.png",
-    },
-  ];
 
   return (
     <div className="container">
@@ -61,7 +45,12 @@ export default function MedicalLegal() {
 
           <div className="relative bottom-0 z-[60] lg:h-[400px] overflow-hidden">
             <div className="bg-[url('../assets/images/twoCircle.png')] bg-no-repeat bg-center bg-contain w-full h-[950px] absolute -top-[480px] hidden lg:block -z-[1]"></div>
-        
+            <Image
+              src={ClamoFlag}
+              alt="Clamo Flag"
+              className="object-fill object-center overflow-hidden"
+              data-aos="fade-up"
+            />
           </div>
         </div>
       ))}

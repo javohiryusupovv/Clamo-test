@@ -1,4 +1,4 @@
-import { Department, ServiceCardProps, TeamMember } from "@/app.types";
+import { Department, ServiceCardProps, TeamMember, MedicalLegalProps } from "@/app.types";
 
 export const getServices: ServiceCardProps[] = [
   {
@@ -88,3 +88,129 @@ export const getTeamCarousel: TeamMember[] = [
     image: "/team/2.webp",
   },
 ];
+
+export const getMedical: MedicalLegalProps[] = [
+        {
+      subtitle: "Sizning sog'lig'ingiz biz uchun",
+      badge: "Muhim!",
+      title: "CLAMO bilan tibbiy faoliyatingizni qonuniylashtiring!",
+      description:
+        "Biz tibbiy tashkilotlarga O'zbekistonda ruxsatnoma va litsenziya olishda yordam beramiz. CLAMO bilan faoliyatingizni qonuniy boshlang va sifatli xizmat ko'rsatishga yo'l oching!",
+      bgCircle: "/images/twoCircle.png",
+      clamoFlag: "@/assets/flag/flag1.png",
+    },
+]
+
+export const getPlatforms = [
+  {
+    id: 1,
+    title: "Litsenziyalash va akkreditatsiyalash platformasiga o‘ting",
+    description: "Soha bo‘yicha har qanday savolingizga javob beramiz",
+    buttonText: "Platformaga kirish",
+    buttonLink: "#",
+    phoneTitle: "Qisqa raqam",
+    phoneNumber: "1369",
+    image: "/Imgs/Mockup.png",
+  },
+];
+
+export const getCardComment = [
+    {
+      id: 1,
+      img: "/Imgs/Umid.png",
+      name: "Умид Гафуров",
+      title: "Отзыв о",
+      badge: "CLAMO",
+      staricon: "/Imgs/Stars.png",
+      time: "15 минут назад",
+      comment:
+        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
+    },
+    {
+      id: 2,
+      img: "/Imgs/Umid.png",
+      name: "Умид Гафуров",
+      title: "Отзыв о",
+      badge: "CLAMO",
+      staricon: "/Imgs/Stars.png",
+      time: "15 минут назад",
+      comment:
+        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
+    },
+    {
+      id: 3,
+      img: "/Imgs/Umid.png",
+      name: "Умид Гафуров",
+      title: "Отзыв о",
+      badge: "CLAMO",
+      staricon: "/Imgs/Stars.png",
+      time: "15 минут назад",
+      comment:
+        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
+    },
+    {
+      id: 4,
+      img: "/Imgs/Umid.png",
+      name: "Умид Гафуров",
+      title: "Отзыв о",
+      badge: "CLAMO",
+      staricon: "/Imgs/Stars.png",
+      time: "15 минут назад",
+      comment:
+        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
+    },
+    {
+      id: 5,
+      img: "/Imgs/Umid.png",
+      name: "Умид Гафуров",
+      title: "Отзыв о",
+      badge: "CLAMO",
+      staricon: "/Imgs/Stars.png",
+      time: "15 минут назад",
+      comment:
+        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
+    },
+    {
+      id: 6,
+      img: "/Imgs/Umid.png",
+      name: "Умид Гафуров",
+      title: "Отзыв о",
+      badge: "CLAMO",
+      staricon: "/Imgs/Stars.png",
+      time: "15 минут назад",
+      comment:
+        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
+    },
+    {
+      id: 7,
+      img: "/Imgs/Umid.png",
+      name: "Умид Гафуров",
+      title: "Отзыв о",
+      badge: "CLAMO",
+      staricon: "/Imgs/Stars.png",
+      time: "15 минут назад",
+      comment:
+        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
+    },
+    {
+      id: 8,
+      img: "/Imgs/Umid.png",
+      name: "Умид Гафуров",
+      title: "Отзыв о",
+      badge: "CLAMO",
+      staricon: "/Imgs/Stars.png",
+      time: "15 минут назад",
+      comment:
+        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
+    },
+  ];
+
+export const getOpinion = [
+    {
+      id: 1,
+      icons: "/Imgs/sharh-logo.png",
+      subtitle: "Fikr-mulohazalar",
+      description:
+        "O‘z fikr-mulohazalaringizni platformada qoldirishingiz mumkin",
+    },
+  ];

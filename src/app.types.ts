@@ -37,3 +37,12 @@ export interface NewsType {
   created_at?: string;
   image?: string;
 };
+
+export interface MedicalLegalProps {
+  title: string;
+  subtitle: string;
+  badge: string;
+  description: string;
+  bgCircle: string;
+  clamoFlag: string;
+}
