@@ -7,41 +7,21 @@ import 'swiper/css/navigation';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-
-type TeamMember = {
-  id: number;
-  full_name_uz: string;
-  description_uz?: string;
-  image: string;
-};
+import { getTeamCarousel } from '../../../../constants/page';
+import { TeamMember } from '@/app.types';
 
 export default function TeamCarousel() {
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
-  const [members, setMembers] = useState<TeamMember[]>([]);
   const [swiperReady, setSwiperReady] = useState(false);
 
-  useEffect(() => {
-    const fetchTeamMembers = async () => {
-      try {
-        const response = await fetch('https://clamo-production.up.railway.app/api/about/team/');
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        const data = await response.json();
-        setMembers(data);
-      } catch (error) {
-        console.error('Failed to fetch team members:', error);
-      }
-    };
+  const members: TeamMember[] = getTeamCarousel;
 
-    fetchTeamMembers();
-  }, []);
-
-  // Swiper buttons rendering check
   useEffect(() => {
     if (prevRef.current && nextRef.current) {
       setSwiperReady(true);
     }
-  }, [prevRef, nextRef]);
+  }, []);
 
   return (
     <div className="bg-[#F8FAFC]">
@@ -70,7 +50,7 @@ export default function TeamCarousel() {
             }}
             spaceBetween={24}
             slidesPerView={4}
-            centeredSlides={true} // bu yer markazlash uchun
+            centeredSlides={true}
             className="!pb-8"
             breakpoints={{
               320: { slidesPerView: 1, centeredSlides: true },
@@ -112,25 +92,21 @@ type Props = {
 };
 
 const TeamMemberCard = ({ member }: Props) => {
-  const imageUrl = member.image.startsWith('http')
-    ? member.image
-    : `https://clamo-production.up.railway.app${member.image}`;
-
   return (
     <div className="relative rounded-2xl overflow-hidden w-64 h-96 shadow-md bg-white cursor-pointer teamcarousel group mx-auto">
       <Image
-        src={imageUrl}
-        alt={member.full_name_uz}
+        src={member.image}
+        alt={member.name}
         width={256}
         height={384}
         className="object-cover w-full h-full"
       />
-      <div className="absolute bottom-0 left-0 right-0 p-4 z-10 text-white transform transition-transform duration-300 group-hover:-translate-y-[80px]">
-        <p className="font-semibold">{member.full_name_uz}</p>
+      <div className="absolute bottom-0 left-0 right-0 p-4 z-10 text-white transform transition-transform duration-300 group-hover:-translate-y-[60px]">
+        <p className="font-semibold">{member.name}</p>
       </div>
-      {member.description_uz && (
+      {member.description && (
         <div className="absolute bottom-0 left-0 right-0 h-[250px] bg-gradient-to-t from-[#002b66] to-transparent px-4 text-white flex items-end opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-          <div className="text-sm mb-[10px]">{member.description_uz}</div>
+          <div className="text-sm mb-[10px]">{member.description}</div>
         </div>
       )}
     </div>

@@ -6,6 +6,7 @@ import SecondPage from '../consulting/_components/secondpage';
 import College from "../../../public/Images/Screenpagee.png"
 
 import Image from "next/image";
+import TeamCarousel from "./_components/TeamCarousel";
 
 export default function About() {
     return (
@@ -47,6 +48,7 @@ export default function About() {
             </div>
 
             <DepartmentSection />
+            <TeamCarousel/>
             <HeroSection />
             <SecondPage/>
         </div>

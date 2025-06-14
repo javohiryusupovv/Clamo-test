@@ -11,3 +11,11 @@ export interface Department {
   title: string;
   description: string;
 }
+
+export type TeamMember = {
+  id: number;
+  name: string;
+  position: string;
+  description: string;
+  image: string;
+};
