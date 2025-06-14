@@ -5,7 +5,9 @@ import { getServices } from "../../../../constants/page";
 import Image from "next/image";
 
 export default function ServicesSection() {
-  const services = getServices
+  const services = getServices;
+  console.log(services);
+  
 
   //   useEffect(() => {
   //   if (typeof window !== "undefined") {
