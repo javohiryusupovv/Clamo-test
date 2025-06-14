@@ -75,3 +75,48 @@ export type DoctorImg = {
   man: string;
   woman: string;
 };
+
+export interface enterThePortal {
+  id: number;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface backgroundImage {
+  id: number;
+  bgImg: string;
+}
+
+export interface FilterItem {
+  id: number;
+  created_at: string;
+  updated_at: string;
+  name: string;
+}
+
+export interface ReyesterType {
+  id: number;
+  created_at: string;
+  updated_at: string;
+  name: string;
+}
+export interface PaginatedDataItem {
+  id: number;
+  reyester_type: ReyesterType[];
+  data: string;
+  dayMonthYear: string;
+  emailLocation: string;
+  created_at: string;
+  updated_at: string;
+  title: string;
+  location: string;
+  accreditation_number: string;
+  website: string;
+  websiteName: string;
+  websiteLink: string;
+  email: string;
+  phone: string;
+  comment: string;
+  comment_number: number;
+}

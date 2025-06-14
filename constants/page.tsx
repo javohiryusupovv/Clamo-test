@@ -1,4 +1,4 @@
-import { Department, ServiceCardProps, TeamMember, MedicalLegalProps,Partner,FAQItem,DoctorImg } from "@/app.types";
+import { Department, ServiceCardProps, TeamMember, MedicalLegalProps,Partner,FAQItem,DoctorImg,enterThePortal,backgroundImage,FilterItem,PaginatedDataItem } from "@/app.types";
 
 export const getServices: ServiceCardProps[] = [
   {
@@ -384,3 +384,174 @@ export const getDoctorImg: DoctorImg = {
   man: "/Images/man.png",
   woman: "/Images/woman.png"
 }
+
+export const getLicense: enterThePortal[] = [
+  {
+    id: 1,
+    title: "Ariza topshirish",
+    description:
+      "Markazning rasmiy platformasi orqali litsenziya olish uchun murojaat qilish",
+    icon: "/Vector2.png",
+  },
+  {
+    id: 2,
+    title: "Hujjatlarni tekshirish",
+    description:
+      "Muassasning sanitariya, texnik va huquqiy talablariga muvofiqligini tekshirish",
+    icon: "/Vector.png",
+  },
+  {
+    id: 3,
+    title: "Ekspert baholovi",
+    description: "Mutaxassislar tomonidan tayyorgarlik darajasini baholash",
+    icon: "/Vector3.png",
+  },
+  {
+    id: 4,
+    title: "Litsenziya qarori",
+    description:
+      "Talablar bajarilganda muassasalarga rasmiy litsenziya beriladi",
+    icon: "/Vector4.png",
+  },
+];
+
+export const getBgImg: backgroundImage[] = [
+  {
+    id: 1,
+    bgImg: "/Bg.png",
+  },
+];
+
+export const getFilter:FilterItem[] = [
+  {
+    id: 2,
+    created_at: "2025-06-12T10:10:57.941260Z",
+    updated_at: "2025-06-12T10:10:57.941280Z",
+    name: "Ariza topshirish",
+  },
+  {
+    id: 1,
+    created_at: "2025-06-10T10:28:57.997185Z",
+    updated_at: "2025-06-12T10:11:20.437644Z",
+    name: "Litsenziya qarori",
+  },
+  {
+    id: 3,
+    created_at: "2025-06-13T14:11:24.372312Z",
+    updated_at: "2025-06-13T14:11:24.372335Z",
+    name: "Hujjatni tekshirish",
+  },
+  {
+    id: 4,
+    created_at: "2025-06-13T14:13:01.719466Z",
+    updated_at: "2025-06-13T14:13:01.719490Z",
+    name: "Ekspert baholovi",
+  },
+];
+
+export const getPaginatedData:PaginatedDataItem[] = [
+  {
+    id: 1,
+    reyester_type: [
+      {
+        id: 1,
+        created_at: "2025-06-10T10:28:57.997185Z",
+        updated_at: "2025-06-12T10:11:20.437644Z",
+        name: "Muddatni uzaytirish",
+      },
+    ],
+    data: "Akkreditsiya berilgan sana",
+    dayMonthYear: "12.12.2024",
+    emailLocation: "Email manzil",
+    created_at: "2025-06-10T10:29:44.944262Z",
+    updated_at: "2025-06-10T10:29:44.944285Z",
+    title: '"ALFA TERAPIYA" mas`uliyati cheklangan jamiyati',
+    location: "Andijon viloyati, Andijon sh. 3-kichik daha, 38-uy, 46-manzil",
+    accreditation_number: "L-29082988",
+    website: "Vabsayt",
+    websiteName: "Alfaterapia.uz",
+    websiteLink: "http://Alfaterapia.uz",
+    email: "alfaterapiya@mail.ru",
+    phone: "+998712007007",
+    comment: "Sharhlar",
+    comment_number: 100,
+  },
+  {
+    id: 2,
+    reyester_type: [
+      {
+        id: 1,
+        created_at: "2025-06-10T10:28:57.997185Z",
+        updated_at: "2025-06-12T10:11:20.437644Z",
+        name: "Hujjatni o’zgartirish",
+      },
+    ],
+    data: "Akkreditsiya berilgan sana",
+    dayMonthYear: "12.12.2024",
+    emailLocation: "Email manzil",
+    created_at: "2025-06-10T10:29:44.944262Z",
+    updated_at: "2025-06-10T10:29:44.944285Z",
+    title: '"ALFA TERAPIYA" mas`uliyati cheklangan jamiyati',
+    location: "Andijon viloyati, Andijon sh. 3-kichik daha, 38-uy, 46-manzil",
+    accreditation_number: "L-29082988",
+    website: "Vabsayt",
+    websiteName: "Alfaterapia.uz",
+    websiteLink: "http://Alfaterapia.uz",
+    email: "alfaterapiya@mail.ru",
+    phone: "+998712007007",
+    comment: "Sharhlar",
+    comment_number: 100,
+  },
+  {
+    id: 3,
+    reyester_type: [
+      {
+        id: 1,
+        created_at: "2025-06-10T10:28:57.997185Z",
+        updated_at: "2025-06-12T10:11:20.437644Z",
+        name: "Faoliyatni tugatish",
+      },
+    ],
+    data: "Akkreditsiya berilgan sana",
+    dayMonthYear: "12.12.2024",
+    emailLocation: "Email manzil",
+    created_at: "2025-06-10T10:29:44.944262Z",
+    updated_at: "2025-06-10T10:29:44.944285Z",
+    title: '"ALFA TERAPIYA" mas`uliyati cheklangan jamiyati',
+    location: "Andijon viloyati, Andijon sh. 3-kichik daha, 38-uy, 46-manzil",
+    accreditation_number: "L-29082988",
+    website: "Vabsayt",
+    websiteName: "Alfaterapia.uz",
+    websiteLink: "http://Alfaterapia.uz",
+    email: "alfaterapiya@mail.ru",
+    phone: "+998712007007",
+    comment: "Sharhlar",
+    comment_number: 100,
+  },
+  {
+    id: 4,
+    reyester_type: [
+      {
+        id: 1,
+        created_at: "2025-06-10T10:28:57.997185Z",
+        updated_at: "2025-06-12T10:11:20.437644Z",
+        name: "Qayta ro’yxat",
+      },
+    ],
+    data: "Akkreditsiya berilgan sana",
+    dayMonthYear: "12.12.2024",
+    emailLocation: "Email manzil",
+    created_at: "2025-06-10T10:29:44.944262Z",
+    updated_at: "2025-06-10T10:29:44.944285Z",
+    title: '"ALFA TERAPIYA" mas`uliyati cheklangan jamiyati',
+    location: "Andijon viloyati, Andijon sh. 3-kichik daha, 38-uy, 46-manzil",
+    accreditation_number: "L-29082988",
+    website: "Vabsayt",
+    websiteName: "Alfaterapia.uz",
+    websiteLink: "http://Alfaterapia.uz",
+    email: "alfaterapiya@mail.ru",
+    phone: "+998712007007",
+    comment: "Sharhlar",
+    comment_number: 100,
+  },
+];

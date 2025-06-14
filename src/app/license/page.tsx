@@ -1,35 +1,10 @@
+import Image from "next/image";
+import { getBgImg, getLicense } from "../../../constants/page";
+import Clinics from "./_components/Clinics";
 
-const steps = [
-  {
-    id: 1,
-    title: "Ariza topshirish",
-    description:
-      "Markazning rasmiy platformasi orqali litsenziya olish uchun murojaat qilish",
-    icon: "form",
-  },
-  {
-    id: 2,
-    title: "Hujjatlarni tekshirish",
-    description:
-      "Muassasning sanitariya, texnik va huquqiy talablariga muvofiqligini tekshirish",
-    icon: "check",
-  },
-  {
-    id: 3,
-    title: "Ekspert baholovi",
-    description: "Mutaxassislar tomonidan tayyorgarlik darajasini baholash",
-    icon: "review",
-  },
-  {
-    id: 4,
-    title: "Litsenziya qarori",
-    description:
-      "Talablar bajarilganda muassasalarga rasmiy litsenziya beriladi",
-    icon: "decision",
-  },
-];
-
-const Page = () => {
+export default function Page() {
+  const steps = getLicense;
+  const imageBg = getBgImg;  
   return (
     <>
       {/* Hero section */}
@@ -56,19 +31,31 @@ const Page = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row items-center gap-3 pt-8 justify-center md:justify-start">
-                {["Xizmatlarimiz", "Murojaat qilish"].map((text, index) => (
-                  <button
-                    key={index}
-                    className="group flex items-center justify-center gap-[4px] w-full sm:w-[273px] px-[24px] py-[10px] bg-[#23B3FC1F] text-[#23B3FC] rounded-lg hover:bg-[#23B3FC] hover:text-white transition"
-                  >
-                    <span className="text-[14px] font-medium">{text}</span>
-                  </button>
-                ))}
+                <button className="group flex items-center justify-center gap-[4px] w-full sm:w-[273px] px-[24px] py-[10px] bg-[#23B3FC1F] text-[#23B3FC] rounded-lg hover:bg-[#23B3FC] hover:text-white transition">
+                  <span className="text-[14px] font-medium">Xizmatlarimiz</span>
+                </button>
+
+                <button className="group flex items-center justify-center gap-[4px] w-full sm:w-[273px] px-[24px] py-[10px] bg-[#23B3FC1F] text-[#23B3FC] rounded-lg hover:bg-[#23B3FC] hover:text-white transition">
+                  <span className="text-[14px] font-medium">
+                    Murojaat qilish
+                  </span>
+                </button>
               </div>
             </div>
 
             <div className="hidden md:flex md:flex-1 justify-center items-center w-full md:w-[55%] h-auto mt-8 md:mt-0 md:absolute z-[-10] md:right-[-50px]">
-            
+              {imageBg.map((item) => (
+                <div key={item.id}>
+                  <Image
+                    src={item.bgImg}
+                    alt="Illyustratsiya"
+                    width={694}
+                    height={684}
+                    priority
+                    className="w-full h-[684px] object-contain"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -87,12 +74,12 @@ const Page = () => {
                 Faoliyatingizni qonuniylashtirishni rejalashtiryapsizmi? Endi bu
                 jarayonni onlayn va oson boshlang! Ruxsatnoma olish uchun ariza
                 topshiring, hujjatlaringizni yuklang va litsenziyani qisqa
-                muddatda qoʻlga kiriting!
+                muddatda qo&apos;lga kiriting!
               </p>
 
               <button className="group flex justify-center items-center gap-[4px] border-2 w-full sm:w-[273px] px-[24px] py-[10px] bg-[#23B3FC1F] text-[#FFFFFFFF] rounded-lg hover:bg-[#FFFFFFFF] hover:text-[#23B3FC] transition">
                 <span className="text-[14px] font-medium">
-                  Litsenziya olish portaliga o‘tish
+                  Litsenziya olish portaliga o&apos;tish
                 </span>
               </button>
             </div>
@@ -104,7 +91,12 @@ const Page = () => {
                   className="bg-white bg-opacity-10 rounded-2xl p-4 flex flex-col items-start"
                 >
                   <div className="bg-white bg-opacity-20 p-[16px] rounded-[18px] mb-3">
-                   
+                    <Image
+                      src={step.icon}
+                      alt="step.title"
+                      width={33}
+                      height={33}
+                    />
                   </div>
                   <h3 className="font-bold text-[20px] mb-2">{step.title}</h3>
                   <p className="text-sm">{step.description}</p>
@@ -117,9 +109,8 @@ const Page = () => {
 
       {/* Klinikalar section */}
       <section className="container mx-auto px-4 py-[80px]">
+        <Clinics/>
       </section>
     </>
   );
-};
-
-export default Page;
+}
