@@ -3,6 +3,11 @@ import { FaGooglePlay } from "react-icons/fa";
 import { SiApple } from "react-icons/si";
 import "../../styles/InstalPage.css";
 import { useEffect } from "react";
+import Image from "next/image";
+import Phone from "../../../public/Imgs/iPhone15Pro.png";
+import QR from "@/assets/icons/QR.png";
+
+
 
 export default function InstallPage() {
 
@@ -23,7 +28,12 @@ export default function InstallPage() {
 
         {/* Phone Image */}
         <div className="absolute bottom-0 left-[-40px] lg:left-[-60px] z-10 max-w-full sm:max-w-[200px] lg:max-w-none overflow-hidden">
-        
+           <Image
+            src={Phone}
+            alt="Sharh Phone Share"
+            className="object-contain lg:block hidden max-sm:flex max-sm:object-cover"
+            data-aos="fade-up" 
+          />
         </div>
 
         {/* Content Section */}
@@ -66,8 +76,14 @@ export default function InstallPage() {
 
         {/* QR Code */}
         <div className="w-full lg:w-auto mt-6 lg:mt-0 z-20 flex justify-center lg:justify-end">
-        
-        </div>
+           <Image
+            src={QR}
+            alt="QR code"
+            width={180}
+            height={180}
+            className="object-contain hidden md:block"
+          />
+        </div>  
       </div>
     </section>
   );

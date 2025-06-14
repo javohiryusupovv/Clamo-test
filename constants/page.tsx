@@ -1,4 +1,4 @@
-import { Department, ServiceCardProps, TeamMember, MedicalLegalProps } from "@/app.types";
+import { Department, ServiceCardProps, TeamMember, MedicalLegalProps,Partner } from "@/app.types";
 
 export const getServices: ServiceCardProps[] = [
   {
@@ -214,3 +214,56 @@ export const getOpinion = [
         "O‘z fikr-mulohazalaringizni platformada qoldirishingiz mumkin",
     },
   ];
+
+export const getPartners: Partner[] = [
+  {
+    id: 1,
+    image: "/logo/mytaxi.svg",
+    title: "MyTaxi",
+  },
+  {
+    id: 2,
+    image: "/logo/sharhlogo.png",
+    title: "Sharh.uz",
+  },
+  {
+    id: 3,
+    image: "/logo/uzsuvozi.svg",
+    title: "Suv Ta'minoti",
+  },
+  {
+    id: 4,
+    image: "/logo/yoshlar.svg",
+    title: "Yoshlar Ishlar Agentligi",
+  },
+  {
+    id: 5,
+    image: "/logo/yuridik.png",
+    title: "Yuridik",
+  },
+  {
+    id: 6,
+    image: "/logo/mytaxi.svg",
+    title: "MyTaxi",
+  },
+  {
+    id: 7,
+    image: "/logo/sharhlogo.png",
+    title: "Sharh.uz",
+  },
+  {
+    id: 8,
+    image: "/logo/uzsuvozi.svg",
+    title: "Suv Ta'minoti",
+  },
+  {
+    id: 9,
+    image: "/logo/yoshlar.svg",
+    title: "Yoshlar Ishlar Agentligi",
+  },
+  {
+    id: 10,
+    image: "/logo/yuridik.png",
+    title: "Yuridik",
+  },
+];

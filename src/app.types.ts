@@ -46,3 +46,9 @@ export interface MedicalLegalProps {
   bgCircle: string;
   clamoFlag: string;
 }
+
+export type Partner = {
+  id: number;
+  image: string;
+  title: string;
+};
