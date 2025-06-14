@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import LogoClamo from "../../assets/icons/LogoClamo.svg";
+import LogoClamo from "@/assets/icons/LogoClamo.svg";
 import Down from "../../assets/icons/down.png";
 import Flag from "../../assets/icons/uzbekistan.png";
 import Phone from "../../assets/icons/phone.png";
