@@ -1,4 +1,5 @@
-"use client";
+"use server";
+
 import "./style.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

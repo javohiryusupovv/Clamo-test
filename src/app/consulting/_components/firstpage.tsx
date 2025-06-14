@@ -1,3 +1,5 @@
+"use server"
+
 import { Inter } from "next/font/google";
 import Man from "../../../../public/Images/man.png";
 import Woman from "../../../../public/Images/woman.png";
