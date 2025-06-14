@@ -2,12 +2,12 @@ import { ChevronRight } from "lucide-react";
 
 import "../../styles/international.css";
 
-import acredetIcons from "../../assets/icons/1inter.png";
-import litsenziyaIcons from "../../assets/icons/litsenziyaicons.png";
-import memorandumIcons from "../../assets/icons/memorandum.png";
 import Partnyor from "../components/partnyor/Partnyor";
+import Image from "next/image";
+import { getHamkorlar } from "../../../constants/page";
 
 export default function InternationalMain() {
+    const hamkorlar = getHamkorlar;
     return (
         <div className="">
             <div className="internationalparent overflow-hidden py-20">
@@ -35,7 +35,8 @@ export default function InternationalMain() {
                         </article>
                     </article>
                     <div className="w-full md:w-[55%] flex justify-center items-center relative">
-                       
+                        <Image className="w-full max-w-[694px] z-[3]" width={400} height={200} src={"/flag/flag1.png"} alt="Flag Logo" />
+                        <Image className="absolute top-10 right-0 z-[2] hidden md:block" width={400} height={200} src={"/flag/flag2.png"} alt="Flag blur Logo" />
                     </div>
                 </div>
                 <div className="shape" />
@@ -49,25 +50,10 @@ export default function InternationalMain() {
                         Hamkorlik loyihalari
                     </h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 max-md:pt-8 md:gap-10">
-                        {[
-                            {
-                                icon: acredetIcons,
-                                title: "Akkreditatsiyalash",
-                                desc: "Tibbiyot tashkilotlarini akkreditatsiyalash va sifat menejmenti sohasida xalqaro hamkorlikni mustahkamlash maqsadida Hindiston Respublikasi Kasalxonalar va sog'liqni saqlash xizmatlarini akkreditatsiyalash milliy kengashi (NABH) bilan anglashuv memorandumi imzolandi. Ushbu memorandum tajriba almashinuvi, o'quv dasturlari va sifat standartlarini uyg'unlashtirish bo'yicha hamkorlikni nazarda tutadi.",
-                            },
-                            {
-                                icon: litsenziyaIcons,
-                                title: "Litsenziyalash",
-                                desc: "Qozog'iston Respublikasi bilan hamkorlikda tibbiyot sohasida litsenziyalash tizimini takomillashtirishga qaratilgan qo'shma loyiha amalga oshirilmoqda. Loyihaning asosiy maqsadi — ikki davlat tajribasini o'rganish, ilg'or xalqaro standartlar asosida litsenziyalash jarayonini raqamlashtirish va tibbiyot tashkilotlariga qulay, ochiq va samarali tizim yaratishdan iborat.",
-                            },
-                            {
-                                icon: memorandumIcons,
-                                title: "Memorandum",
-                                desc: "\"CLAMO\" loyihasi tibbiyot sohasida hamkorlikni rivojlantirishga qaratilgan platformadir. Ushbu loyiha tibbiyot mutaxassislari, tadqiqotchilar va tibbiy tashkilotlarni bir joyga jamlab, ularning o'zaro tajriba almashishiga, ilmiy hamkorlikni kuchaytirishga va innovatsion yechimlar ishlab chiqishiga yordam beradi.",
-                            },
-                        ].map((item, index) => (
+                        {hamkorlar.map((item, index) => (
                             <div key={index} className="relative z-[5] flex flex-col items-center bg-[#0653C9] px-6 pb-6 pt-16 rounded-[24px] md:rounded-[36px] cardhamkorlar">
                                 <article className="absolute top-6 z-[5] inline-flex p-5 rounded-full bg-white -translate-y-16">
+                                    <Image className="w-10 h-10 max-md:w-8 max-md:h-8" width={200} height={100} src={item.icon} alt={`Icon ${item.title}`} />
                                 </article>
                                 <h6 className="text-xl md:text-2xl font-bold text-white mb-3 md:mb-4">{item.title}</h6>
                                 <p className="text-[14px] font-normal text-white text-center">{item.desc}</p>

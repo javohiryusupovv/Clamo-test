@@ -302,3 +302,47 @@ export const getfaqData: FAQItem[] = [
     answer: 'Приложение предназначено для пользователей старше 16 лет.',
   },
 ]; 
+
+export const getHamkorlar = [
+  {
+    icon: "/icons/1inter.png",
+    title: "Akkreditatsiyalash",
+    desc: "Tibbiyot tashkilotlarini akkreditatsiyalash va sifat menejmenti sohasida xalqaro hamkorlikni mustahkamlash maqsadida Hindiston Respublikasi Kasalxonalar va sog'liqni saqlash xizmatlarini akkreditatsiyalash milliy kengashi (NABH) bilan anglashuv memorandumi imzolandi. Ushbu memorandum tajriba almashinuvi, o'quv dasturlari va sifat standartlarini uyg'unlashtirish bo'yicha hamkorlikni nazarda tutadi.",
+  },
+  {
+    icon: "/icons/litsenziyaicons.png",
+    title: "Litsenziyalash",
+    desc: "Qozog'iston Respublikasi bilan hamkorlikda tibbiyot sohasida litsenziyalash tizimini takomillashtirishga qaratilgan qo'shma loyiha amalga oshirilmoqda. Loyihaning asosiy maqsadi — ikki davlat tajribasini o'rganish, ilg'or xalqaro standartlar asosida litsenziyalash jarayonini raqamlashtirish va tibbiyot tashkilotlariga qulay, ochiq va samarali tizim yaratishdan iborat.",
+  },
+  {
+    icon: "/icons/memorandum.png",
+    title: "Memorandum",
+    desc: '"CLAMO" loyihasi tibbiyot sohasida hamkorlikni rivojlantirishga qaratilgan platformadir. Ushbu loyiha tibbiyot mutaxassislari, tadqiqotchilar va tibbiy tashkilotlarni bir joyga jamlab, ularning o\'zaro tajriba almashishiga, ilmiy hamkorlikni kuchaytirishga va innovatsion yechimlar ishlab chiqishiga yordam beradi.',
+  },
+];
+
+export const getSteps = [
+  {
+    icon: "/Images/img1.png",
+    title: "Ariza topshirish",
+    description:
+      "Markazning rasmiy platformasi orqali litsenziya olish uchun murojaat qilish",
+  },
+  {
+    icon: "/Images/img2.png",
+    title: "Hujjatlarni tekshirish",
+    description:
+      "Muassasaning sanitariya, texnik va huquqiy talablariga muvofiqligini tekshirish",
+  },
+  {
+    icon: "/Images/img3.png",
+    title: "Ekspert baholovi",
+    description: "Mutaxassislar tomonidan tayyorgarlik darajasini baholash",
+  },
+  {
+    icon: "/Images/img4.png",
+    title: "Litsenziya qarori",
+    description:
+      "Talablar bajarilganda muassasalarga rasmiy litsenziya beriladi",
+  },
+];
