@@ -1,3 +1,5 @@
+
+
 import Izohlar from "@/app/components/Comments";
 import Hero from "@/app/components/Hero";
 import InstallPage from "@/app/components/InstallPage";
