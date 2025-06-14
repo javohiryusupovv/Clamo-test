@@ -1,19 +1,9 @@
 "use client";
 
-
 import { FaArrowRightLong } from "react-icons/fa6";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-// import Shahar from "../../public/Imgs/Shahar.png";
-
-type NewsType = {
-  id: number;
-  slug: string;
-  title: string;
-  title_uz?: string;
-  created_at?: string;
-  image?: string;
-};
+import { NewsType } from "@/app.types";
 
 
 export default function NewsPage() {

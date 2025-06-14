@@ -18,4 +18,22 @@ export type TeamMember = {
   position: string;
   description: string;
   image: string;
+}
+
+export interface NewsItem {
+  id: number;
+  title: string;
+  date: string;
+  time: string;
+  image: string;
+  description: string;
+}
+
+export interface NewsType {
+  id: number;
+  slug: string;
+  title: string;
+  title_uz?: string;
+  created_at?: string;
+  image?: string;
 };
