@@ -3,7 +3,7 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { NewsType } from "@/app.types";
+import { NewsType } from "../../app.types";
 
 
 export default function NewsPage() {

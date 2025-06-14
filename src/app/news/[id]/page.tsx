@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft as BackIcon } from "lucide-react";
-import { NewsItem } from "@/app.types";
+import { NewsItem } from "../../../app.types";
 
 // Fetch the news item (in a real app, this would be an API call)
 async function getNewsItem(id: number): Promise<NewsItem | undefined> {
