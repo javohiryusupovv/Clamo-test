@@ -1,5 +1,3 @@
-"use clinet";
-import { useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { getServices } from "../../../../constants/page";
@@ -7,16 +5,6 @@ import Image from "next/image";
 
 export default function ServicesSection() {
   const services = getServices;
-  console.log(services);
-  
-
-    useEffect(() => {
-    if (typeof window !== "undefined") {
-      import("aos").then(AOS => {
-        AOS.init({ duration: 1000 });
-      });
-    }
-  }, []);
 
 
   return (
