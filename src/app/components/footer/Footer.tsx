@@ -1,4 +1,3 @@
-import Contact from "../Contact/Contact";
 import cirlceBG from "../../../assets/images/twoCircle.png";
 import Flags from "../../../assets/flag/groupFlag.png";
 import Image from "next/image";
@@ -11,6 +10,7 @@ import lnkdn from "../../../assets/logo/ln.svg";
 
 import "./Footer.css";
 import Link from "next/link";
+import Contact from "../contact/Contact";
 
 export default function FooterLayout() {
   return (
