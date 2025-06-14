@@ -83,7 +83,7 @@ export default function Contact() {
         {/* Contact Info */}
         <div className="w-full lg:w-[450px] pl-6 pr-6 py-10 lg:pl-14 lg:py-14">
           <h6 className="text-[28px] lg:text-[32px] font-semibold text-white mb-2">
-            Bog‘lanish uchun
+            Bog&apos;lanish uchun
           </h6>
           <p className="text-[14px] lg:text-[16px] font-normal text-white text-opacity-[60%] mb-6 lg:mb-9">
             Siz tizimdan chiqishingiz mumkin bo&apos;lgan quyidagi usullardan
