@@ -1,7 +1,7 @@
-'use client'; // Next.js app router uchun client component
+'use client';
 
 import { useState } from 'react';
-import { Plus, Minus } from 'lucide-react'; // npm install lucide-react
+import { Plus, Minus } from 'lucide-react';
 
 type AccordionItemProps = {
   title: string;

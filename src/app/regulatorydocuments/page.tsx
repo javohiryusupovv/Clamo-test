@@ -1,5 +1,6 @@
-
-
+import Image from 'next/image';
+import Folder from "@/assets/images/Folder.png"
+import WhiteDown from "@/assets/icons/WhiteDown.png";
 import "../../../src/styles/documents.css"
 import NormativeAccordion from './_components/NormativeAccordion';
 import GovernmentDecisionsPage from './_components/government-decisions';
@@ -23,17 +24,23 @@ export default function NormativeDocuments() {
                         </p>
                         <div className="flex flex-col md:flex-row gap-4 md:gap-6">
                             <button className="w-full md:w-[272px] h-[40px] flex items-center justify-center gap-[11.5px] bg-[#23B3FC] rounded-lg text-sm font-medium text-white leading-[130%]">
-                                Xizmatlarimiz
+                                Xizmatlarimiz <Image src={WhiteDown} alt="down strelka" />
                             </button>
                             <button className="w-full md:w-[272px] h-[40px] flex items-center justify-center gap-[11.5px] bg-[#23B3FC] rounded-lg text-sm font-medium text-white leading-[130%]">
-                                Murojat qilish
+                                Murojat qilish <Image src={WhiteDown} alt="down strelka" />
                             </button>
                         </div>
                     </div>
                     {/* Rasm qismi */}
                     <div className="absolute right-0 -top-24 -z-10 hidden xl:block">
                         <div className="relative">
-                           
+                            <Image
+                                src={Folder} // Rasmni public papkaga joylashtiring
+                                alt="Normativ hujjatlar"
+                                width={2000}
+                                height={1381}
+                                className="object-cover"
+                            />
                         </div>
                     </div>
                 </section>
