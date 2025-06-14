@@ -1,4 +1,4 @@
-"use server";
+"use client";
 
 import "./style.css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -7,7 +7,7 @@ import { Autoplay } from "swiper/modules"; // 🔹 autoplay moduli
 import { getcardData } from '../../../../constants/page';
 
 
-function secondpage() {
+export default function secondpage() {
 
   const cardData = getcardData
 
@@ -72,5 +72,3 @@ function secondpage() {
     </div>
   );
 }
-
-export default secondpage;

@@ -8,7 +8,7 @@ const inter = Inter({
   weight: ["400", "600", "700"],
 });
 
-function firstpage() {
+export default function firstpage() {
   return (
     <div className=" ">
       <div className=" bg-[#FFFFFF] relative z-10">
@@ -88,5 +88,3 @@ function firstpage() {
     </div>
   );
 }
-
-export default firstpage;
