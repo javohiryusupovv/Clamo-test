@@ -1,6 +1,6 @@
 
 import { FaAngleRight } from "react-icons/fa";
-import Questions from "../app/accreditation/_components/questions";
+import Questions from "./questions/Questions";
 
 export default function QuestionsPage() {
 

@@ -1,11 +1,11 @@
-import Izohlar from "../components/Comments";
-import Hero from "../components/Hero";
-import InstallPage from "../components/InstallPage";
-import MainService from "../components/MainServes";
-import MedicalLegal from "../components/MedicalLegal";
-import NewsPage from "../components/News";
-import Partnyor from "../components/partnyor/Partnyor";
-import QuestionsPage from "../components/QuestionsPage";
+import Izohlar from "@/Components/Comments";
+import Hero from "@/Components/Hero";
+import InstallPage from "@/Components/InstallPage";
+import MainService from "@/Components/MainServes";
+import MedicalLegal from "@/Components/MedicalLegal";
+import NewsPage from "@/Components/News";
+import Partnyor from "@/Components/partnyor/Partnyor";
+import QuestionsPage from "@/Components/QuestionsPage";
 
 
 
