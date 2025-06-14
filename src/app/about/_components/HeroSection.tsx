@@ -10,7 +10,7 @@ import { ChevronRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <div className="bg-[#F6F9FC] h-[480px] pt-[50px]">
+    <div className="bg-[#F6F9FC] h-[480px] pt-[50px] lg:mb-0 max-sm:mb-16 max-xxs:mb-28">
       <div className="container w-full h-[310px] relative">
         {/* Shifokorlar */}
         <div className="flex justify-between items-center w-full md:h-[310px] h-[450px] rounded-[36px] bg-[#0653C9] overflow-hidden circleCover">

@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google";
-
+import Man from "../../../../public/Images/man.png";
+import Woman from "../../../../public/Images/woman.png";
+import Image from "next/image";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -56,11 +58,29 @@ function firstpage() {
             </div>
           </div>
           <div className=" bg-[#F6F9FC] bloc w-[559px] overflow-hidden relative  flex h-auto mt-9">
-          
+            <Image
+              src={Man}
+              alt="bayroq"
+              className="object-contain ml-[-35px] z-0 absolute max-w-[494px] h-[704px] img1"
+            />
+            <Image
+              src={Woman}
+              alt="bayroq"
+              className="object-contain absolute z-10 ml-36 mt-8 max-w-[494px] h-[704px] img2"
+            />
             <div className="absolute bottom-0 left-0 w-full h-[120px] md:h-[180px] lg:h-[430px] bg-gradient-to-t z-20 from-[#F6F9FC]/100 opacity- to-transparent"></div>
           </div>
           <div className=" bg-[#F6F9FC] img-flex w-[559px] flex">
-           
+            <Image
+              src={Man}
+              alt="bayroq"
+              className="object-contain man ml-[-35px] z-0 absolute max-w-[494px] h-[704px]"
+            />
+            <Image
+              src={Woman}
+              alt="bayroq"
+              className="object-contain woman absolute z-10 ml-36 mt-8 max-w-[494px] h-[704px]"
+            />
             <div className="absolute bottom-0 left-0 w-full h-[120px] md:h-[180px] lg:h-[430px] bg-gradient-to-t z-20 from-[#F6F9FC]/100 opacity- to-transparent"></div>
           </div>
         </div>

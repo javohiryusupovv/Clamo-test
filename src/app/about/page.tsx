@@ -4,6 +4,7 @@ import HeroSection from './_components/HeroSection';
 import DepartmentSection from './_components/DepartmentSection';
 import SecondPage from '../consulting/_components/secondpage';
 import College from "../../../public/Images/Screenpagee.png"
+import NavBuilding from "@/assets/NavBuilding.png"
 
 import Image from "next/image";
 import TeamCarousel from "./_components/TeamCarousel";
@@ -28,7 +29,13 @@ export default function About() {
 
                     {/* Rasm bo‘limi */}
                     <div className="relative w-full">
-                       
+                         <Image
+                            src={NavBuilding}
+                            alt="Building"
+                            width={1500}
+                            height={600}
+                            className="w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[600px] object-cover rounded-xl"
+                        />
                         <div className="absolute bottom-0 left-0 w-full h-[150px] sm:h-[200px] md:h-[250px] bg-gradient-to-t from-white/100 to-transparent" />
                     </div>
                 </div>

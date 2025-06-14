@@ -1,4 +1,4 @@
-import { Department, ServiceCardProps, TeamMember, MedicalLegalProps,Partner,FAQItem } from "@/app.types";
+import { Department, ServiceCardProps, TeamMember, MedicalLegalProps,Partner,FAQItem,DoctorImg } from "@/app.types";
 
 export const getServices: ServiceCardProps[] = [
   {
@@ -346,3 +346,41 @@ export const getSteps = [
       "Talablar bajarilganda muassasalarga rasmiy litsenziya beriladi",
   },
 ];
+
+export const getcardData = [
+  {
+    title: "Litsenziyalash",
+    description:
+      "Markazimiz tibbiyot tashkilotlarining litsenziyalash jarayonini boshqaradi va rasmiy hujjatlarni tayyorlashda yordam beradi. Bizning maqsadimiz — tibbiyot muassasalarining faoliyatini qonuniy va xavfsiz amalga oshirishini ta’minlashdir.",
+  },
+  {
+    title: "Akkreditatsiyalash",
+    description:
+      "Akkreditatsiya tibbiyot muassasalarining xizmat sifatini va xavfsizligini baholash va xalqaro standartlarga mosligini tasdiqlash jarayonidir. Markazimiz bu jarayonni samarali tashkil etish va tibbiyot sohasining sifatini yaxshilashga yordam beradi.",
+  },
+  {
+    title: "Malaka oshirish",
+    description:
+      "Shifokorlar va tibbiyot xodimlari uchun malaka oshirish kurslari orqali ularning bilim va ko‘nikmalarini muntazam yangilashga ko‘maklashamiz.",
+  },
+  {
+    title: "Litsenziyalash",
+    description:
+      "Markazimiz tibbiyot tashkilotlarining litsenziyalash jarayonini boshqaradi va rasmiy hujjatlarni tayyorlashda yordam beradi. Bizning maqsadimiz — tibbiyot muassasalarining faoliyatini qonuniy va xavfsiz amalga oshirishini ta’minlashdir.",
+  },
+  {
+    title: "Akkreditatsiyalash",
+    description:
+      "Akkreditatsiya tibbiyot muassasalarining xizmat sifatini va xavfsizligini baholash va xalqaro standartlarga mosligini tasdiqlash jarayonidir. Markazimiz bu jarayonni samarali tashkil etish va tibbiyot sohasining sifatini yaxshilashga yordam beradi.",
+  },
+  {
+    title: "Malaka oshirish",
+    description:
+      "Shifokorlar va tibbiyot xodimlari uchun malaka oshirish kurslari orqali ularning bilim va ko‘nikmalarini muntazam yangilashga ko‘maklashamiz.",
+  },
+];
+
+export const getDoctorImg: DoctorImg = {
+  man: "/Images/man.png",
+  woman: "/Images/woman.png"
+}

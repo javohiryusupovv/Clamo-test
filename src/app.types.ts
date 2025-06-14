@@ -63,3 +63,15 @@ export type FAQItem = {
   question: string;
   answer: string;
 };
+
+
+export type CardData = {
+  title: string;
+  description: string;
+};
+
+
+export type DoctorImg = {
+  man: string;
+  woman: string;
+};
