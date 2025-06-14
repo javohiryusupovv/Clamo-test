@@ -1,6 +1,5 @@
 
 import Servicec from "./_components/AboutService";
-import TeamCarousel from './_components/TeamCarousel';
 import HeroSection from './_components/HeroSection';
 import DepartmentSection from './_components/DepartmentSection';
 import SecondPage from '../consulting/_components/secondpage';
@@ -45,7 +44,6 @@ export default function About() {
             </div>
 
             <DepartmentSection />
-            <TeamCarousel />
             <HeroSection />
             <SecondPage/>
         </div>
