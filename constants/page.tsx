@@ -1,3 +1,5 @@
+
+
 import { ServiceCardProps } from "@/app.types";
 
 import litsenziya from "../public/Imgs/License.svg"

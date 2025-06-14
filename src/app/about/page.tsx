@@ -1,3 +1,4 @@
+"use server"
 
 import Servicec from "./_components/AboutService";
 import TeamCarousel from './_components/TeamCarousel';
