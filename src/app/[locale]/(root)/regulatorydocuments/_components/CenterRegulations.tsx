@@ -7,7 +7,7 @@ const CenterRegulations: React.FC = () => {
         <div className="container mt-[100px]">
             {/* Header Section */}
             <div className="mb-8 text-start">
-                <h1 className="text-[48px] md:text-4xl font-bold text-[#3D445E] mb-2">Markaz Nizomi va Ichki qoidalari</h1>
+                <h1 className="text-[48px] max-md:text-[26px]  font-bold text-[#3D445E] mb-2">Markaz Nizomi va Ichki qoidalari</h1>
                 <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
                     Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.
                 </p>
