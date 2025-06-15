@@ -1,4 +1,4 @@
-import { Department, ServiceCardProps, TeamMember, MedicalLegalProps,Partner,FAQItem,DoctorImg,enterThePortal,backgroundImage,FilterItem,PaginatedDataItem,Imagee } from "../app.types";
+import { Department, ServiceCardProps, TeamMember, MedicalLegalProps,Partner,FAQItem,DoctorImg,enterThePortal,backgroundImage,FilterItem,PaginatedDataItem,Imagee,ContactData,SochealMedia } from "../app.types";
 
 export const getServices: ServiceCardProps[] = [
   {
@@ -562,3 +562,38 @@ export const getImg: Imagee[] = [
     img:"https://utmlgylkkghbjocewude.supabase.co/storage/v1/object/sign/data/EcommerImage/LogoClamo.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNjAzNzdiYS0xZjNjLTRkODUtOTA3OS1mNzVlZDdiOTk4NDgiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkYXRhL0Vjb21tZXJJbWFnZS9Mb2dvQ2xhbW8uc3ZnIiwiaWF0IjoxNzQ5OTIzMjM2LCJleHAiOjE3ODE0NTkyMzZ9.TvDECpUdKZcKIWJOd6SbgHh8yu4X3Iys82jQyLK1QkA"
   }
 ]
+export const getContactInfo: ContactData[] = [
+  {
+    phone: "+998 (55) 514 30 03",
+    email: "clamosocial@gmail.com",
+    website: "Clamo.uz",
+    address: "улица Мирзакалон Исмоилий, дом 2A",
+  },
+];
+
+export const getSochealMedia: SochealMedia[] = [
+  {
+    id: 1,
+    name: "Telegram",
+    icon: "/icons/telegram.png",
+    link: "t.me/CLAMO_uz",
+  },
+  {
+    id: 2,
+    name: "Instagram",
+    icon: "/icons/instagram.png",
+    link: "@clamo.uz",
+  },
+  {
+    id: 3,
+    name: "Facebook",
+    icon: "/icons/facebook.png",
+    link: "@CLAMORasmiy",
+  },
+  {
+    id: 4,
+    name: "Linkedin",
+    icon: "/icons/instagram.png",
+    link: "@CLAMO Social",
+  },
+];

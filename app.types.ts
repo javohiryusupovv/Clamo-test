@@ -125,3 +125,17 @@ export interface Imagee {
   id:number
   img:string;
 }
+
+export interface  ContactData {
+    phone: string;
+    email: string;
+    website: string;
+    address: string;
+  };
+
+  export interface SochealMedia {
+    id:number;
+    icon:string;
+    name: string;
+    link:string;
+  }

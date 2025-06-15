@@ -195,7 +195,7 @@ export default function Navbar() {
                   {t("accredation")}
                 </li>
               </Link>
-              <Link href={`/${locale}/contact`} className="text-sm font-medium text-[#3D445E]">
+              <Link href={`/${locale}/contacts`} className="text-sm font-medium text-[#3D445E]">
                 {t("contact")}
               </Link>
             </ul>
