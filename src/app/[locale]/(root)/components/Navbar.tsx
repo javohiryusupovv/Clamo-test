@@ -28,11 +28,18 @@ export default function Navbar() {
 
 
 
-  const [selectedLang, setSelectedLang] = useState<Language>({
-    code: "uz",
-    label: "Uz",
-    flag: Flag,
+  const [selectedLang, setSelectedLang] = useState<Language>(() => {
+    switch (locale) {
+      case "ru":
+        return { code: "ru", label: "Rus", flag: rusFlag };
+      case "en":
+        return { code: "en", label: "Eng", flag: engFlag };
+      default:
+        return { code: "uz", label: "Uzb", flag: Flag };
+    }
   });
+  
+
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -108,7 +115,7 @@ export default function Navbar() {
             <ul>
               {imgg.map((item) => (
 
-                <Link href="/" key={item.id}>
+                <Link href={`/${locale}`} key={item.id}>
                   <Image
                     src={item.img}
                     alt="Logo"
