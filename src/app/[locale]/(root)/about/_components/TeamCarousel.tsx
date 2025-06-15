@@ -9,12 +9,13 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { getTeamCarousel } from '../../../../../../constants/page';
 import { TeamMember } from '../../../../../../app.types';
+import { useTranslations } from 'next-intl';
 
 export default function TeamCarousel() {
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
   const [swiperReady, setSwiperReady] = useState(false);
-
+  const t = useTranslations("AboutPage")
   const members: TeamMember[] = getTeamCarousel;
 
   useEffect(() => {
@@ -27,10 +28,10 @@ export default function TeamCarousel() {
     <div className="bg-[#F8FAFC]">
       <div className="w-full py-12 container mx-auto">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3D445E] mb-3 text-start">
-          Markaz jamoasi
+          {t("abouttitle4")}
         </h2>
         <p className="text-gray-600 mb-8">
-          Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda...
+          {t("about_des4")}
         </p>
         {members.length > 0 && swiperReady ? (
           <Swiper

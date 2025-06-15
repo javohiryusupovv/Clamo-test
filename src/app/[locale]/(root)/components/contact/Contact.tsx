@@ -10,10 +10,13 @@ import email from "../../../../../assets/icons/mail.png";
 import submiticons from "../../../../../assets/icons/submiticons.png";
 import uzbflag from "../../../../../../public/flag/flagicons.png";
 import formSchema from "@/schemas/formSchema";
+import { useTranslations } from "next-intl";
 
 type FormData = z.infer<typeof formSchema>;
 
 export default function Contact() {
+  const t = useTranslations("ContactPage")
+
   const {
     register,
     handleSubmit,
@@ -36,11 +39,10 @@ export default function Contact() {
         {/* Contact Info */}
         <div className="w-full lg:w-[450px] pl-4 pr-4 py-8 sm:pl-6 sm:pr-6 sm:py-10 lg:pl-14 lg:py-14">
           <h6 className="text-[24px] sm:text-[28px] lg:text-[32px] font-semibold text-white mb-2">
-            Bog‘lanish uchun
+            {t("contactTitle")}
           </h6>
           <p className="text-[12px] sm:text-[14px] lg:text-[16px] font-normal text-white text-opacity-[60%] mb-6 lg:mb-9">
-            Siz tizimdan chiqishingiz mumkin bo&apos;lgan quyidagi usullardan
-            foydalangan holda biz bilan bog&apos;laning
+            {t("contactDescription")}
           </p>
           <div className="flex flex-col gap-3">
             {/* Location */}
@@ -50,7 +52,7 @@ export default function Contact() {
               </article>
               <article>
                 <span className="text-[12px] sm:text-[14px] font-normal text-opacity-[60%] text-white">
-                  Ofisimizga tashrif buyuring
+                  {t("addressLabel")}
                 </span>
                 <p className="text-[14px] sm:text-[16px] font-medium text-white line-clamp-1">
                   улица Мирзакалон Исмоилий, дом 2А, Ташкент
@@ -65,7 +67,7 @@ export default function Contact() {
               </article>
               <article>
                 <span className="text-[12px] sm:text-[14px] font-normal text-opacity-[60%] text-white">
-                  Telefon raqam
+                  {t("phoneLabel")}
                 </span>
                 <p className="text-[14px] sm:text-[16px] font-medium text-white line-clamp-1">
                   +998 (71) 200 70 07
@@ -80,7 +82,7 @@ export default function Contact() {
               </article>
               <article>
                 <span className="text-[12px] sm:text-[14px] font-normal text-opacity-[60%] text-white">
-                  Elektron pochta manzili
+                  {t("emailLabel")}
                 </span>
                 <p className="text-[14px] sm:text-[16px] font-medium text-white line-clamp-1">
                   infoclamo@gmail.com
@@ -94,11 +96,10 @@ export default function Contact() {
         <div className="py-6 px-4 sm:px-6 md:px-8 w-full lg:w-[500px] lg:h-[576px] lg:absolute lg:right-16 bg-white rounded-[36px] border border-gray-200 mt-6 lg:mt-0">
           <article className="mb-6 lg:mb-[26px]">
             <h5 className="text-[24px] sm:text-[28px] lg:text-[32px] font-bold leading-[120%] text-[#3D445E] mb-3">
-              Biz bilan aloqa
+              {t("formTitle")}
             </h5>
             <p className="text-[#838CAF] text-[14px] sm:text-[16px] font-normal leading-[130%]">
-              Agar sizda biron bir savol bo&apos;lsa yoki ma&apos;lumotga muhtoj
-              bo&apos;lsangiz, biz bilan bog&apos;laning.
+              {t("formSubtitle")}
             </p>
           </article>
 
@@ -109,14 +110,14 @@ export default function Contact() {
                 htmlFor="names"
                 className="inline-flex mb-2 text-[14px] sm:text-[16px] font-medium text-[#3D445E]"
               >
-                Ism-familiya
+                {t("fullName")}
               </label>
               <input
                 id="names"
                 {...register("names")}
                 type="text"
                 className="w-full bg-[#F7F7F8] px-3 h-10 rounded-lg text-[14px] outline-none border border-transparent focus:border-[#1a60cd]"
-                placeholder="Ismingizni kiriting"
+                placeholder={t("enterFullName")}
               />
               {errors.names && (
                 <p className="text-red-500 text-sm">{errors.names.message}</p>
@@ -129,14 +130,14 @@ export default function Contact() {
                 htmlFor="tashkilot"
                 className="inline-flex mb-2 text-[14px] sm:text-[16px] font-medium text-[#3D445E]"
               >
-                Tashkilot
+                {t("organization")}
               </label>
               <input
                 id="tashkilot"
                 {...register("tashkilot")}
                 type="text"
                 className="w-full bg-[#F7F7F8] px-3 h-10 rounded-lg text-[14px] sm:text-[16px] outline-none border border-transparent focus:border-[#1a60cd]"
-                placeholder="Tashkilotingiz nomini yozing"
+                placeholder={t("enterOrganization")}
               />
               {errors.tashkilot && (
                 <p className="text-red-500 text-sm">{errors.tashkilot.message}</p>
@@ -149,7 +150,7 @@ export default function Contact() {
                 htmlFor="phoneNumber"
                 className="inline-flex mb-2 text-[14px] sm:text-[16px] font-medium text-[#3D445E]"
               >
-                Telefon raqam
+                {t("phonee")}
               </label>
               <div className="w-full bg-[#F7F7F8] flex flex-col sm:flex-row gap-2 px-3 py-2 sm:py-0 sm:h-10 rounded-lg border border-transparent focus-within:border-[#1a60cd]">
                 <article className="flex items-center gap-1">
@@ -196,7 +197,7 @@ export default function Contact() {
                 type="submit"
                 className="group w-full sm:w-auto flex justify-center items-center gap-1 text-[14px] font-medium text-white px-6 py-[10px] rounded-lg bg-[#0653C9] hover:bg-[#0761e9]"
               >
-                Jo‘natish
+                {t("send")}
                 <Image
                   className="transition-all duration-300 group-hover:rotate-[43deg]"
                   src={submiticons}

@@ -2,19 +2,20 @@ import Link from "next/link";
 import Marquee from "react-fast-marquee";
 import { getPartners } from "../../../../../../constants/page";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function Partnyor() {
   const partnyors = getPartners;
+  const t = useTranslations("InternationalPage");
 
   return (
     <div className="md:py-16 pt-9 mb-9 bg-[#F6F9FC]">
       <article className="container text-center mb-10 px-4 sm:px-0">
         <h3 className="text-2xl sm:text-4xl font-bold mb-2 text-[#012548]">
-          Hamkorlarimiz
+          {t("hamkorlar")}
         </h3>
         <p className="text-base sm:text-lg text-[#012548] font-medium">
-          Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha
-          xizmatlar bir joyda, qulay va samarali yechimlar bilan.
+          {t("hamkorlar_des")}
         </p>
       </article>
 

@@ -1,15 +1,17 @@
-import { getDepartments } from "../../../../../../constants/page";
+"use client"
 
+import { getDepartments } from "../../../../../../constants/page";
+import { useTranslations } from "next-intl";
 export default function DepartmentSection() {
   const departments = getDepartments;
+  const t = useTranslations("AboutPage")
   return (
     <section className="px-4 py-10 max-w-6xl mx-auto">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3D445E] mb-3 text-start">
-        Markaz bo&apos;limlari
+        {t("abouttitle3")}
       </h2>
       <p className="text-gray-600 mb-8">
-        Bizning bo&apos;limlarimiz bilan tanishing, bizda barcha
-        bo&apos;limlarimiz xizmati juda qulay va siz uchun mos keladi.
+        {t("about_des3")}
       </p>
 
       <div className="grid md:grid-cols-2 gap-4">

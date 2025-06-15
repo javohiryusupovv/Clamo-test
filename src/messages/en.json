@@ -1,8 +1,157 @@
 {
-    "NavbarPage": {
-        "abouts": "About us",
-        "licens": "Licensing",
-        "accredation": "Accreditation",
-        "contacts": "Contact"
+  "NavbarPage": {
+    "abouts": "About Us",
+    "licens": "Licensing",
+    "accredation": "Accreditation",
+    "contacts": "Contact",
+    "aboutss": "About the Center",
+    "international": "International Cooperation",
+    "consulting": "Consulting",
+    "regulatorydocuments": "Regulatory Documents"
+  },
+  "AboutPage": {
+    "plan": "Our plans:",
+    "abouttitle": "Enhancing the quality and safety of medical institutions.",
+    "about_des1": "Simplifying licensing and accreditation processes through the introduction of digital technologies, fully integrating international standards, expanding the qualification system for doctors and medical institutions, and more.",
+    "service": "Services provided by the center",
+    "service_des": "All the necessary services to improve the quality and processes of medicine in one place, with convenient and effective solutions.",
+    "seervices": {
+      "license": {
+        "icon": "/Imgs/License.svg",
+        "title": "Licensing",
+        "description": "Helps your center obtain a license for medical institutions. Document preparation, application submission",
+        "link": "#"
+      },
+      "acredetion": {
+        "icon": "/Imgs/Accreditation.svg",
+        "title": "Accreditation",
+        "description": "We assess the quality of services of medical organizations and ensure accreditation",
+        "link": "#"
+      },
+      "malaka": {
+        "icon": "/Imgs/Malaka.svg",
+        "title": "Professional Development",
+        "description": "We organize professional development courses for doctors, medical staff, and others",
+        "link": "#"
+      },
+      "consult": {
+        "icon": "/Imgs/Konsulting.svg",
+        "title": "Consulting Service",
+        "description": "We provide legal, methodological, and technical advice in the process of establishing clinics and hospitals",
+        "link": "#"
+      }
+    },
+    "batafsil": "In detail",
+    "abouttitle2": "Center Structure",
+    "about_des2": "All the necessary services to improve the quality and processes of medicine in one place, with convenient and effective solutions.",
+    "abouttitle3": "Center Departments",
+    "about_des3": "Get acquainted with our departments; all our services are very convenient and suitable for you.",
+    "abouttitle4": "Center Team",
+    "about_des4": "All the necessary services to improve the quality and processes of medicine in one place...",
+    "hero_title": "International Cooperation and Exchange of Experience in the Field of Medicine",
+    "hero_des": "We answer any questions about the field",
+    "hero_clamo": "CLAMO cooperates with leading international medical institutions and organizations to provide medical services that meet world standards. We rely on the latest innovations, advanced technologies, and exchange of experience.",
+    "hero_btn": "Learn More"
+  },
+  "FooterPage": {
+    "footer_des": "Simplifying licensing and accreditation processes through the introduction of digital technologies, fully integrating international standards",
+    "ijtimoiy": "Social Networks",
+    "bo'limlar": "Sections",
+    "bog'lanish": "Contact",
+    "menu": {
+      "about": "About Us",
+      "regulatorydocuments": "Regulatory Documents",
+      "center": "About the Center",
+      "license": "Licensing",
+      "accreditation": "Accreditation"
+    },
+    "developed": "Developed by"
+  },
+  "InternationalPage": {
+    "firstletter": "International Cooperation",
+    "international22": "Accreditation with — a modern approach",
+    "international_title": "Clamo — ",
+    "international_des": "Get the necessary license for your organization quickly and reliably. Clamo is your reliable partner in legality",
+    "hamkorlar": "Our Partners",
+    "hamkorlarr": "Collaboration projects",
+    "hamkorlar_des": "All the necessary services to improve the quality and processes of medicine in one place, with convenient and effective solutions.",
+    "hamkorlar_btn": "Our services",
+    "hamkorlar_btn2": "Applying",
+    "Hamkorlar": {
+      "akredatsiyalash": {
+        "icon": "/icons/1inter.png",
+        "title": "Accreditation",
+        "description": "To strengthen international cooperation in medical accreditation and quality management, a memorandum of understanding was signed with the National Accreditation Board for Hospitals and Healthcare Providers (NABH) of the Republic of India. This memorandum outlines cooperation on experience exchange, training programs, and harmonization of quality standards.",
+        "link": "#"
+      },
+      "litsensiyalash": {
+        "icon": "/icons/litsenziyaicons.png",
+        "title": "Licensing",
+        "description": "A joint project is being implemented with the Republic of Kazakhstan to improve the licensing system in healthcare. The main goal is to study the experience of both countries, digitize the licensing process based on advanced international standards, and create a convenient, transparent, and efficient system for medical institutions.",
+        "link": "#"
+      },
+      "memorandum": {
+        "icon": "/icons/memorandum.png",
+        "title": "Memorandum",
+        "description": "The \"CLAMO\" project is a platform aimed at developing cooperation in the medical field. This project brings together medical professionals, researchers, and institutions to facilitate experience exchange, strengthen scientific collaboration, and develop innovative solutions.",
+        "link": "#"
+      }
     }
+  },
+  "ContactPage": {
+    "contactTitle": "Contact Us",
+    "contactDescription": "Get in touch with us through one of the methods below",
+    "addressLabel": "Visit our office",
+    "phoneLabel": "Phone number",
+    "emailLabel": "Email address",
+    "formTitle": "Get in Touch",
+    "formSubtitle": "If you have any questions or need information, feel free to contact us.",
+    "fullName": "Full Name",
+    "enterFullName": "Enter your name",
+    "organization": "Organization",
+    "enterOrganization": "Enter your organization's name",
+    "phonee": "Phone Number",
+    "send": "Submit",
+    "flagCode": "+998",
+    "phonePlaceholder": "99 123 45 67"
+  },
+  "RegulatorydocumentsPage": {
+    "linkText": "Link",
+    "exampleTitle": "Question 1",
+    "exampleContent": "The answer to this question is located here.",
+    "pageTitle": "Regulatory Documents",
+    "pageDescription": "All essential services to improve the quality and processes of healthcare in one place, with convenient and effective solutions.",
+    "law1Title": "Law on Licensing",
+    "law1Content": "Regarding the 'Procedures for licensing, permitting, and notification processes'.",
+    "law2Title": "First Law on Accreditation",
+    "law2Content": "This is a brief description of the first law on accreditation.",
+    "law3Title": "Second Law on Accreditation",
+    "law3Content": "This is a brief description of the second law on accreditation.",
+    "linkText2": "Link",
+    "centerRegulationsTitle": "Center Regulations and Internal Rules",
+    "centerRegulationsDescription": "All essential services to improve healthcare quality and processes in one place with convenient and efficient solutions.",
+    "centerRegulationsSubtitle": "Center Regulations",
+    "centerRegulationsParagraph1": "Our center's operations are carried out in accordance with the laws of the Republic of Uzbekistan, regulatory legal acts in the healthcare sector, as well as the internal regulations and assigned tasks of the Center.",
+    "centerRegulationsParagraph2": "According to the regulations, the Center operates on the basis of the following principles:",
+    "centerRegulationsList1": "Transparency, openness, and legality;",
+    "centerRegulationsList2": "Providing high-quality services and methodological assistance to medical organizations; implementing accreditation and licensing standards based on international experience;",
+    "centerRegulationsList3": "Fighting corruption and avoiding conflicts of interest;",
+    "centerRegulationsList4": "Supporting continuous development of specialists.",
+    "centerRegulationsParagraph3": "All activities of the Center are carried out in accordance with defined priority areas and the annual work plan.",
+    "downloadButton": "Download Information",
+    "govDecisionsTitle": "Government Decisions",
+    "govDecisionsDesc": "All essential services to improve healthcare quality and processes in one place with convenient and efficient solutions.",
+    "govDecision1Title": "Decree of the President of the Republic of Uzbekistan",
+    "govDecision1Text": "According to clause b of section 7 of the Presidential Decree PQ-197 dated June 20, 2023, a state institution for licensing and accreditation in the healthcare system was established.",
+    "govDecision2Title": "Decree of the Cabinet of Ministers of the Republic of Uzbekistan",
+    "govDecision2Text": "According to the Decree No. 444 of the Cabinet of Ministers of July 24, 2024, the center for licensing and accreditation of medical institutions under the Ministry of Health of the Republic of Uzbekistan was launched.",
+    "govDecision3Title": "Order of the Minister of Health of the Republic of Uzbekistan",
+    "govDecision3Text": "According to the Minister of Health’s Order No. 311 dated October 4, 2024, measures were taken to organize the activities of the center for licensing and accreditation of medical institutions under the Ministry of Health of the Republic of Uzbekistan...",
+    "downloadBtn": "Download Information",
+    "normativeSectionTag": "NORMATIVE DOCUMENTS",
+    "normativeSectionTitle": "Key regulatory documents in healthcare",
+    "normativeSectionDesc": "Quickly and reliably obtain the necessary license for your organization. Clamo is your trusted partner in legal compliance.",
+    "servicesBtn": "Our Services",
+    "contactBtn": "Contact Us"
+  }
 }

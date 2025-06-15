@@ -1,36 +1,39 @@
+"use client"
+
 import { ChevronRight } from "lucide-react";
 
 import "../../../../styles/international.css";
-
+import { useTranslations } from "next-intl";
 import Partnyor from "../components/partnyor/Partnyor";
 import Image from "next/image";
 import { getHamkorlar } from "../../../../../constants/page";
 
 export default function InternationalMain() {
-    const hamkorlar = getHamkorlar;
+    const t = useTranslations("InternationalPage")
+    const hamkorlar = getHamkorlar(t);
     return (
         <div className="">
             <div className="internationalparent overflow-hidden py-20">
                 <div className="container pt-3 relative top-0 left-0 flex flex-col md:flex-row gap-10 md:gap-[65px] justify-between items-center w-full mb-12">
                     <article className="w-full md:w-[45%] relative z-[10]">
                         <p className="inline-flex px-2 py-1 bg-[#23B3FC] text-white rounded-md text-[14px] font-medium uppercase mb-4">
-                            Xalqaro hamkorlik
+                           {t("firstletter")}
                         </p>
                         <h3 className="font-semibold text-[24px] md:text-[32px] leading-9 md:leading-10 mb-2">
                             <span className="uppercase text-[#23B3FC] font-semibold">
-                                Clamo
+                                {t("international_title")}
                             </span>{" "}
-                            bilan akkreditsiyalash — zamonaviy yondashuv
+                            {t("international22")}
                         </h3>
                         <p className="text-[#012548] text-base md:text-xl font-medium mb-6 md:mb-10">
-                            Tashkilotingiz uchun zarur litsenziyani tez va ishonchli tarzda oling. Clamo sizning qonuniylikdagi ishonchli hamkoringiz
+                            {t("international_des")}
                         </p>
                         <article className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
                             <button className="flex justify-center items-center gap-1 bg-[#23B3FC] text-white w-full sm:w-[272px] h-10 rounded-lg cursor-pointer text-[14px] font-medium transition-all duration-200 hover:bg-[#3cbeff]">
-                                Xizmatlarimiz <ChevronRight className="w-5 h-5" />
+                                {t("hamkorlar_btn")} <ChevronRight className="w-5 h-5" />
                             </button>
                             <button className="flex justify-center items-center gap-1 bg-[#23B3FC]/[12%] text-[#23B3FC] w-full sm:w-[272px] h-10 rounded-lg cursor-pointer text-[14px] font-medium transition-all duration-200 hover:bg-[#23B3FC]/[30%]">
-                                Murojaat qilish <ChevronRight className="w-5 h-5" />
+                                {t("hamkorlar_btn2")} <ChevronRight className="w-5 h-5" />
                             </button>
                         </article>
                     </article>
@@ -47,7 +50,7 @@ export default function InternationalMain() {
             <div className="w-full py-16 mb-32">
                 <div className="container">
                     <h3 className="text-center font-bold text-3xl md:text-5xl text-[#3D445E] mb-[40px] md:mb-[71px]">
-                        Hamkorlik loyihalari
+                        {t("hamkorlarr")}
                     </h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 max-md:pt-8 md:gap-10">
                         {hamkorlar.map((item, index) => (

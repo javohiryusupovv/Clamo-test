@@ -1,3 +1,4 @@
+"use client"
 
 import Servicec from "./_components/AboutService";
 import HeroSection from './_components/HeroSection';
@@ -5,11 +6,12 @@ import DepartmentSection from './_components/DepartmentSection';
 import SecondPage from '../consulting/_components/secondpage';
 import College from "../../../../../public/Images/Screenpagee.png"
 import NavBuilding from "@/assets/NavBuilding.png"
-
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import TeamCarousel from "./_components/TeamCarousel";
 
 export default function About() {
+    const t = useTranslations("AboutPage")
     return (
         <div className=''>
             <div className="container">
@@ -17,13 +19,13 @@ export default function About() {
                     {/* Matn bo‘limi */}
                     <div className="flex flex-col justify-center gap-4">
                         <p className="rounded-md bg-[#23B3FC] text-white text-sm sm:text-base px-4 py-1 w-fit">
-                            Bizning rejalar:
+                            {t("plan")}
                         </p>
                         <h2 className="text-[20px] sm:text-[28px] lg:text-[32px] text-[#1B1B1B] font-semibold leading-snug">
-                            Tibbiyot muassasalarining sifati va xavfsizligini yanada oshirish.
+                            {t("abouttitle")}
                         </h2>
                         <p className="text-[14px] sm:text-[16px] md:text-[18px] text-[rgba(1,37,72,0.8)] leading-relaxed">
-                            Raqamli texnologiyalarni joriy etish orqali litsenziyalash va akkreditatsiya jarayonlarini soddalashtirish, xalqaro standartlarni to‘liq integratsiya qilish, shifokor va tibbiyot muassasalari uchun malaka oshirish tizimini kengaytirish va boshqalar.
+                            {t("about_des1")}
                         </p>
                     </div>
 
@@ -44,10 +46,10 @@ export default function About() {
             <Servicec />
             <div className="container ">
                 <h1 className="text-[#3D445E] text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4">
-                    Markaz tuzilmasi
+                    {t("abouttitle2")}
                 </h1>
                 <p className="text-[rgba(1, 37, 72, 0.80)] text-sm sm:text-base md:text-lg font-medium text-center mb-8 ">
-                    Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.
+                    {t("about_des2")}
                 </p>
                 <div className="flex justify-center">
                     <Image src={College} alt="Strukture college" />
