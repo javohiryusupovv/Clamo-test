@@ -3,7 +3,7 @@ import Servicec from "./_components/AboutService";
 import HeroSection from './_components/HeroSection';
 import DepartmentSection from './_components/DepartmentSection';
 import SecondPage from '../consulting/_components/secondpage';
-import College from "../../../public/Images/Screenpagee.png"
+import College from "../../../../../public/Images/Screenpagee.png"
 import NavBuilding from "@/assets/NavBuilding.png"
 
 import Image from "next/image";

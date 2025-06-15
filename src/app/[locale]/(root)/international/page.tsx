@@ -1,6 +1,6 @@
 import { ChevronRight } from "lucide-react";
 
-import "../../styles/international.css";
+import "../../../../styles/international.css";
 
 import Partnyor from "../components/partnyor/Partnyor";
 import Image from "next/image";

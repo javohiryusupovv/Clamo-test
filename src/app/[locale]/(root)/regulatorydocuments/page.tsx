@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Folder from "@/assets/images/Folder.png"
 import WhiteDown from "@/assets/icons/whiteDown.png";
-import "../../../src/styles/documents.css"
+import "../../../../styles/documents.css"
 import NormativeAccordion from './_components/NormativeAccordion';
 import GovernmentDecisionsPage from './_components/government-decisions';
 import CenterRegulations from './_components/CenterRegulations';
