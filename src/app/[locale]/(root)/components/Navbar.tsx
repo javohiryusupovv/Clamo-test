@@ -196,7 +196,7 @@ export default function Navbar() {
                 </li>
               </Link>
               <Link href={`/${locale}/contacts`} className="text-sm font-medium text-[#3D445E]">
-                {t("contact")}
+                {t("contacts")}
               </Link>
             </ul>
             <ul className="flex items-center gap-8">
