@@ -1,4 +1,19 @@
-import { Department, ServiceCardProps, TeamMember, MedicalLegalProps,Partner,FAQItem,DoctorImg,enterThePortal,backgroundImage,FilterItem,PaginatedDataItem,Imagee,ContactData,SochealMedia } from "../app.types";
+import {
+  Department,
+  ServiceCardProps,
+  TeamMember,
+  MedicalLegalProps,
+  Partner,
+  FAQItem,
+  DoctorImg,
+  enterThePortal,
+  backgroundImage,
+  FilterItem,
+  PaginatedDataItem,
+  Imagee,
+  ContactData,
+  SochealMedia,
+} from "../app.types";
 
 export const getServices: ServiceCardProps[] = [
   {
@@ -56,14 +71,16 @@ export const getTeamCarousel: TeamMember[] = [
     id: 1,
     name: "Dr. John Smith",
     position: "Kardiolog",
-    description: "20 yillik tajribaga ega yurak kasalliklari bo‘yicha yetakchi mutaxassis.",
+    description:
+      "20 yillik tajribaga ega yurak kasalliklari bo‘yicha yetakchi mutaxassis.",
     image: "/team/2.webp",
   },
   {
     id: 2,
     name: "Dr. Jane Doe",
     position: "Nevrolog",
-    description: "Asab tizimi kasalliklarini davolashda 15 yillik tajribaga ega shifokor.",
+    description:
+      "Asab tizimi kasalliklarini davolashda 15 yillik tajribaga ega shifokor.",
     image: "/team/4.avif",
   },
   {
@@ -77,29 +94,31 @@ export const getTeamCarousel: TeamMember[] = [
     id: 4,
     name: "Dr. Michael Lee",
     position: "Nevrolog",
-    description: "Miya insultlari va surunkali bosh og‘riqlari bo‘yicha ixtisoslashgan.",
+    description:
+      "Miya insultlari va surunkali bosh og‘riqlari bo‘yicha ixtisoslashgan.",
     image: "/team/4.avif",
   },
   {
     id: 5,
     name: "Dr. Sarah Kim",
     position: "Gastroenterolog",
-    description: "Ichki kasalliklar va ovqat hazm qilish muammolarini davolashda tajribali.",
+    description:
+      "Ichki kasalliklar va ovqat hazm qilish muammolarini davolashda tajribali.",
     image: "/team/2.webp",
   },
 ];
 
 export const getMedical: MedicalLegalProps[] = [
-        {
-      subtitle: "Sizning sog'lig'ingiz biz uchun",
-      badge: "Muhim!",
-      title: "CLAMO bilan tibbiy faoliyatingizni qonuniylashtiring!",
-      description:
-        "Biz tibbiy tashkilotlarga O'zbekistonda ruxsatnoma va litsenziya olishda yordam beramiz. CLAMO bilan faoliyatingizni qonuniy boshlang va sifatli xizmat ko'rsatishga yo'l oching!",
-      bgCircle: "/images/twoCircle.png",
-      clamoFlag: "@/assets/flag/flag1.png",
-    },
-]
+  {
+    subtitle: "Sizning sog'lig'ingiz biz uchun",
+    badge: "Muhim!",
+    title: "CLAMO bilan tibbiy faoliyatingizni qonuniylashtiring!",
+    description:
+      "Biz tibbiy tashkilotlarga O'zbekistonda ruxsatnoma va litsenziya olishda yordam beramiz. CLAMO bilan faoliyatingizni qonuniy boshlang va sifatli xizmat ko'rsatishga yo'l oching!",
+    bgCircle: "/images/twoCircle.png",
+    clamoFlag: "@/assets/flag/flag1.png",
+  },
+];
 
 export const getPlatforms = [
   {
@@ -115,105 +134,105 @@ export const getPlatforms = [
 ];
 
 export const getCardComment = [
-    {
-      id: 1,
-      img: "/Imgs/Umid.png",
-      name: "Умид Гафуров",
-      title: "Отзыв о",
-      badge: "CLAMO",
-      staricon: "/Imgs/Stars.png",
-      time: "15 минут назад",
-      comment:
-        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-    },
-    {
-      id: 2,
-      img: "/Imgs/Umid.png",
-      name: "Умид Гафуров",
-      title: "Отзыв о",
-      badge: "CLAMO",
-      staricon: "/Imgs/Stars.png",
-      time: "15 минут назад",
-      comment:
-        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-    },
-    {
-      id: 3,
-      img: "/Imgs/Umid.png",
-      name: "Умид Гафуров",
-      title: "Отзыв о",
-      badge: "CLAMO",
-      staricon: "/Imgs/Stars.png",
-      time: "15 минут назад",
-      comment:
-        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-    },
-    {
-      id: 4,
-      img: "/Imgs/Umid.png",
-      name: "Умид Гафуров",
-      title: "Отзыв о",
-      badge: "CLAMO",
-      staricon: "/Imgs/Stars.png",
-      time: "15 минут назад",
-      comment:
-        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-    },
-    {
-      id: 5,
-      img: "/Imgs/Umid.png",
-      name: "Умид Гафуров",
-      title: "Отзыв о",
-      badge: "CLAMO",
-      staricon: "/Imgs/Stars.png",
-      time: "15 минут назад",
-      comment:
-        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-    },
-    {
-      id: 6,
-      img: "/Imgs/Umid.png",
-      name: "Умид Гафуров",
-      title: "Отзыв о",
-      badge: "CLAMO",
-      staricon: "/Imgs/Stars.png",
-      time: "15 минут назад",
-      comment:
-        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-    },
-    {
-      id: 7,
-      img: "/Imgs/Umid.png",
-      name: "Умид Гафуров",
-      title: "Отзыв о",
-      badge: "CLAMO",
-      staricon: "/Imgs/Stars.png",
-      time: "15 минут назад",
-      comment:
-        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-    },
-    {
-      id: 8,
-      img: "/Imgs/Umid.png",
-      name: "Умид Гафуров",
-      title: "Отзыв о",
-      badge: "CLAMO",
-      staricon: "/Imgs/Stars.png",
-      time: "15 минут назад",
-      comment:
-        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-    },
-  ];
+  {
+    id: 1,
+    img: "/Imgs/Umid.png",
+    name: "Умид Гафуров",
+    title: "Отзыв о",
+    badge: "CLAMO",
+    staricon: "/Imgs/Stars.png",
+    time: "15 минут назад",
+    comment:
+      "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
+  },
+  {
+    id: 2,
+    img: "/Imgs/Umid.png",
+    name: "Умид Гафуров",
+    title: "Отзыв о",
+    badge: "CLAMO",
+    staricon: "/Imgs/Stars.png",
+    time: "15 минут назад",
+    comment:
+      "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
+  },
+  {
+    id: 3,
+    img: "/Imgs/Umid.png",
+    name: "Умид Гафуров",
+    title: "Отзыв о",
+    badge: "CLAMO",
+    staricon: "/Imgs/Stars.png",
+    time: "15 минут назад",
+    comment:
+      "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
+  },
+  {
+    id: 4,
+    img: "/Imgs/Umid.png",
+    name: "Умид Гафуров",
+    title: "Отзыв о",
+    badge: "CLAMO",
+    staricon: "/Imgs/Stars.png",
+    time: "15 минут назад",
+    comment:
+      "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
+  },
+  {
+    id: 5,
+    img: "/Imgs/Umid.png",
+    name: "Умид Гафуров",
+    title: "Отзыв о",
+    badge: "CLAMO",
+    staricon: "/Imgs/Stars.png",
+    time: "15 минут назад",
+    comment:
+      "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
+  },
+  {
+    id: 6,
+    img: "/Imgs/Umid.png",
+    name: "Умид Гафуров",
+    title: "Отзыв о",
+    badge: "CLAMO",
+    staricon: "/Imgs/Stars.png",
+    time: "15 минут назад",
+    comment:
+      "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
+  },
+  {
+    id: 7,
+    img: "/Imgs/Umid.png",
+    name: "Умид Гафуров",
+    title: "Отзыв о",
+    badge: "CLAMO",
+    staricon: "/Imgs/Stars.png",
+    time: "15 минут назад",
+    comment:
+      "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
+  },
+  {
+    id: 8,
+    img: "/Imgs/Umid.png",
+    name: "Умид Гафуров",
+    title: "Отзыв о",
+    badge: "CLAMO",
+    staricon: "/Imgs/Stars.png",
+    time: "15 минут назад",
+    comment:
+      "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
+  },
+];
 
 export const getOpinion = [
-    {
-      id: 1,
-      icons: "/Imgs/sharh-logo.png",
-      subtitle: "Fikr-mulohazalar",
-      description:
-        "O‘z fikr-mulohazalaringizni platformada qoldirishingiz mumkin",
-    },
-  ];
+  {
+    id: 1,
+    icons: "/Imgs/sharh-logo.png",
+    subtitle: "Fikr-mulohazalar",
+    description:
+      "O‘z fikr-mulohazalaringizni platformada qoldirishingiz mumkin",
+  },
+];
 
 export const getPartners: Partner[] = [
   {
@@ -270,38 +289,45 @@ export const getPartners: Partner[] = [
 
 export const getfaqData: FAQItem[] = [
   {
-    question: 'Есть ли бесплатные материалы?',
-    answer: 'Да, мы предлагаем ряд бесплатных курсов и лекций, чтобы вы могли ознакомиться с качеством наших материалов и методик. Бесплатные материалы доступны в разделе "Бесплатные курсы" и включают как видеоуроки, так и аудиолекции. Вы можете начать обучение с бесплатных материалов и затем перейти к более углубленным платным курсам.',
+    question: "Есть ли бесплатные материалы?",
+    answer:
+      'Да, мы предлагаем ряд бесплатных курсов и лекций, чтобы вы могли ознакомиться с качеством наших материалов и методик. Бесплатные материалы доступны в разделе "Бесплатные курсы" и включают как видеоуроки, так и аудиолекции. Вы можете начать обучение с бесплатных материалов и затем перейти к более углубленным платным курсам.',
   },
   {
-    question: 'Как записаться на курс?',
-    answer: 'Вы можете записаться на курс, выбрав интересующий вас курс и нажав кнопку "Записаться". Далее следуйте инструкциям на экране.',
+    question: "Как записаться на курс?",
+    answer:
+      'Вы можете записаться на курс, выбрав интересующий вас курс и нажав кнопку "Записаться". Далее следуйте инструкциям на экране.',
   },
   {
-    question: 'Можно ли получить сертификат по окончании курса?',
-    answer: 'Да, после успешного завершения курса и выполнения всех заданий вы получите сертификат.',
+    question: "Можно ли получить сертификат по окончании курса?",
+    answer:
+      "Да, после успешного завершения курса и выполнения всех заданий вы получите сертификат.",
   },
   {
-    question: 'Как я могу связаться с поддержкой?',
-    answer: 'Вы можете связаться с нашей службой поддержки через форму обратной связи на сайте или по электронной почте support@example.com.',
+    question: "Как я могу связаться с поддержкой?",
+    answer:
+      "Вы можете связаться с нашей службой поддержки через форму обратной связи на сайте или по электронной почте support@example.com.",
   },
   {
-    question: 'Нужно ли подключение к интернету для использования приложения?',
-    answer: 'Да, для полноценной работы приложения требуется стабильное подключение к интернету.',
+    question: "Нужно ли подключение к интернету для использования приложения?",
+    answer:
+      "Да, для полноценной работы приложения требуется стабильное подключение к интернету.",
   },
   {
-    question: 'Можно ли вернуть деньги за приобретенный курс?',
-    answer: 'Да, вы можете оформить возврат средств в течение 14 дней после покупки при соблюдении условий возврата.',
+    question: "Можно ли вернуть деньги за приобретенный курс?",
+    answer:
+      "Да, вы можете оформить возврат средств в течение 14 дней после покупки при соблюдении условий возврата.",
   },
   {
-    question: 'Как часто обновляются курсы?',
-    answer: 'Мы регулярно обновляем курсы, чтобы они соответствовали последним изменениям и требованиям.',
+    question: "Как часто обновляются курсы?",
+    answer:
+      "Мы регулярно обновляем курсы, чтобы они соответствовали последним изменениям и требованиям.",
   },
   {
-    question: 'Есть ли ограничения по возрасту для пользователей приложения?',
-    answer: 'Приложение предназначено для пользователей старше 16 лет.',
+    question: "Есть ли ограничения по возрасту для пользователей приложения?",
+    answer: "Приложение предназначено для пользователей старше 16 лет.",
   },
-]; 
+];
 
 export const getHamkorlar = [
   {
@@ -382,8 +408,8 @@ export const getcardData = [
 
 export const getDoctorImg: DoctorImg = {
   man: "/Images/man.png",
-  woman: "/Images/woman.png"
-}
+  woman: "/Images/woman.png",
+};
 
 export const getLicense: enterThePortal[] = [
   {
@@ -422,7 +448,7 @@ export const getBgImg: backgroundImage[] = [
   },
 ];
 
-export const getFilter:FilterItem[] = [
+export const getFilter: FilterItem[] = [
   {
     id: 2,
     created_at: "2025-06-12T10:10:57.941260Z",
@@ -449,7 +475,7 @@ export const getFilter:FilterItem[] = [
   },
 ];
 
-export const getPaginatedData:PaginatedDataItem[] = [
+export const getPaginatedData: PaginatedDataItem[] = [
   {
     id: 1,
     reyester_type: [
@@ -467,11 +493,14 @@ export const getPaginatedData:PaginatedDataItem[] = [
     updated_at: "2025-06-10T10:29:44.944285Z",
     title: '"ALFA TERAPIYA" mas`uliyati cheklangan jamiyati',
     location: "Andijon viloyati, Andijon sh. 3-kichik daha, 38-uy, 46-manzil",
+    license_btn: "Litsenziyani ko'rish",
+    accreditation_name: "Akkreditatsiya raqami",
     accreditation_number: "L-29082988",
     website: "Vabsayt",
     websiteName: "Alfaterapia.uz",
     websiteLink: "http://Alfaterapia.uz",
     email: "alfaterapiya@mail.ru",
+    phoneNumber: "Telfon raqam",
     phone: "+998712007007",
     comment: "Sharhlar",
     comment_number: 100,
@@ -483,7 +512,7 @@ export const getPaginatedData:PaginatedDataItem[] = [
         id: 1,
         created_at: "2025-06-10T10:28:57.997185Z",
         updated_at: "2025-06-12T10:11:20.437644Z",
-        name: "Hujjatni o’zgartirish",
+        name: "Muddatni uzaytirish",
       },
     ],
     data: "Akkreditsiya berilgan sana",
@@ -493,11 +522,14 @@ export const getPaginatedData:PaginatedDataItem[] = [
     updated_at: "2025-06-10T10:29:44.944285Z",
     title: '"ALFA TERAPIYA" mas`uliyati cheklangan jamiyati',
     location: "Andijon viloyati, Andijon sh. 3-kichik daha, 38-uy, 46-manzil",
+    license_btn: "Litsenziyani ko'rish",
+    accreditation_name: "Akkreditatsiya raqami",
     accreditation_number: "L-29082988",
     website: "Vabsayt",
     websiteName: "Alfaterapia.uz",
     websiteLink: "http://Alfaterapia.uz",
     email: "alfaterapiya@mail.ru",
+    phoneNumber: "Telfon raqam",
     phone: "+998712007007",
     comment: "Sharhlar",
     comment_number: 100,
@@ -509,7 +541,7 @@ export const getPaginatedData:PaginatedDataItem[] = [
         id: 1,
         created_at: "2025-06-10T10:28:57.997185Z",
         updated_at: "2025-06-12T10:11:20.437644Z",
-        name: "Faoliyatni tugatish",
+        name: "Muddatni uzaytirish",
       },
     ],
     data: "Akkreditsiya berilgan sana",
@@ -519,11 +551,14 @@ export const getPaginatedData:PaginatedDataItem[] = [
     updated_at: "2025-06-10T10:29:44.944285Z",
     title: '"ALFA TERAPIYA" mas`uliyati cheklangan jamiyati',
     location: "Andijon viloyati, Andijon sh. 3-kichik daha, 38-uy, 46-manzil",
+    license_btn: "Litsenziyani ko'rish",
+    accreditation_name: "Akkreditatsiya raqami",
     accreditation_number: "L-29082988",
     website: "Vabsayt",
     websiteName: "Alfaterapia.uz",
     websiteLink: "http://Alfaterapia.uz",
     email: "alfaterapiya@mail.ru",
+    phoneNumber: "Telfon raqam",
     phone: "+998712007007",
     comment: "Sharhlar",
     comment_number: 100,
@@ -535,7 +570,7 @@ export const getPaginatedData:PaginatedDataItem[] = [
         id: 1,
         created_at: "2025-06-10T10:28:57.997185Z",
         updated_at: "2025-06-12T10:11:20.437644Z",
-        name: "Qayta ro’yxat",
+        name: "Muddatni uzaytirish",
       },
     ],
     data: "Akkreditsiya berilgan sana",
@@ -545,11 +580,14 @@ export const getPaginatedData:PaginatedDataItem[] = [
     updated_at: "2025-06-10T10:29:44.944285Z",
     title: '"ALFA TERAPIYA" mas`uliyati cheklangan jamiyati',
     location: "Andijon viloyati, Andijon sh. 3-kichik daha, 38-uy, 46-manzil",
+    license_btn: "Litsenziyani ko'rish",
+    accreditation_name: "Akkreditatsiya raqami",
     accreditation_number: "L-29082988",
     website: "Vabsayt",
     websiteName: "Alfaterapia.uz",
     websiteLink: "http://Alfaterapia.uz",
     email: "alfaterapiya@mail.ru",
+    phoneNumber: "Telfon raqam",
     phone: "+998712007007",
     comment: "Sharhlar",
     comment_number: 100,
@@ -558,10 +596,10 @@ export const getPaginatedData:PaginatedDataItem[] = [
 
 export const getImg: Imagee[] = [
   {
-    id:1,
-    img:"https://utmlgylkkghbjocewude.supabase.co/storage/v1/object/sign/data/EcommerImage/LogoClamo.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNjAzNzdiYS0xZjNjLTRkODUtOTA3OS1mNzVlZDdiOTk4NDgiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkYXRhL0Vjb21tZXJJbWFnZS9Mb2dvQ2xhbW8uc3ZnIiwiaWF0IjoxNzQ5OTIzMjM2LCJleHAiOjE3ODE0NTkyMzZ9.TvDECpUdKZcKIWJOd6SbgHh8yu4X3Iys82jQyLK1QkA"
-  }
-]
+    id: 1,
+    img: "https://utmlgylkkghbjocewude.supabase.co/storage/v1/object/sign/data/EcommerImage/LogoClamo.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNjAzNzdiYS0xZjNjLTRkODUtOTA3OS1mNzVlZDdiOTk4NDgiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkYXRhL0Vjb21tZXJJbWFnZS9Mb2dvQ2xhbW8uc3ZnIiwiaWF0IjoxNzQ5OTIzMjM2LCJleHAiOjE3ODE0NTkyMzZ9.TvDECpUdKZcKIWJOd6SbgHh8yu4X3Iys82jQyLK1QkA",
+  },
+];
 export const getContactInfo: ContactData[] = [
   {
     phone: "+998 (55) 514 30 03",

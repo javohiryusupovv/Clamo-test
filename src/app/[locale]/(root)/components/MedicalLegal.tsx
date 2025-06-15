@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { getMedical } from "../../../../../constants/page";
 import LearnMore from "./LearnMoreButton";
@@ -6,13 +6,12 @@ import { useEffect } from "react";
 import Image from "next/image";
 import ClamoFlag from "../../../../assets/images/clamoFlag.png";
 
-
 export default function MedicalLegal() {
-  const medical = getMedical
+  const medical = getMedical;
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      import("aos").then(AOS => {
+      import("aos").then((AOS) => {
         AOS.init({ duration: 1000 });
       });
     }

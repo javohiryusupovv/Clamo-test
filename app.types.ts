@@ -111,11 +111,14 @@ export interface PaginatedDataItem {
   updated_at: string;
   title: string;
   location: string;
+  accreditation_name: string;
+  license_btn: string;
   accreditation_number: string;
   website: string;
   websiteName: string;
   websiteLink: string;
   email: string;
+  phoneNumber:string;
   phone: string;
   comment: string;
   comment_number: number;
