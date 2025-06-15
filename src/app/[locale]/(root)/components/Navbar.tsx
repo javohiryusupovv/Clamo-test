@@ -12,6 +12,7 @@ import engFlag from "../../../../../public/icons/united-kingdom.png"
 import { getImg } from "../../../../../constants/page";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
+import { Language } from "@/types/type";
 
 export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -27,7 +28,7 @@ export default function Navbar() {
 
 
 
-  const [selectedLang, setSelectedLang] = useState({
+  const [selectedLang, setSelectedLang] = useState<Language>({
     code: "uz",
     label: "Uz",
     flag: Flag,
@@ -35,11 +36,11 @@ export default function Navbar() {
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  const handleLangChange = (lang: { code: string; label: string; flag: any }) => {
+  const handleLangChange = (lang: Language) => {
     setSelectedLang(lang);
     setDropdownOpen(false);
     const segments = pathname.split("/").filter(Boolean);
-    const hasLocale = locale.includes(segments[0] as any);
+    const hasLocale = locale.includes(segments[0] as string);
 
     if (hasLocale) {
       segments[0] = lang.code;

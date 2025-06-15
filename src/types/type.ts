@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export interface MainServiceCardProps {
     icon: string;
     title: string;
@@ -32,3 +34,9 @@ export interface MainServiceCardProps {
     time: string,
     comment: string
   }
+
+  export type Language = {
+    code: string;
+    label: string;
+    flag: string | StaticImageData;
+  };

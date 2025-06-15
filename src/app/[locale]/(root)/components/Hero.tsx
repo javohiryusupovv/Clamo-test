@@ -12,7 +12,6 @@ import { useEffect, useState, useRef } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import "aos/dist/aos.css";
 
-import dynamic from 'next/dynamic';
 
 function useCountUp(target: number, duration = 1500) {
   const [count, setCount] = useState(0);
