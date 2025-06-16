@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Department } from "../../../../../../app.types";
