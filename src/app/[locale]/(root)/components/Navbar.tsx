@@ -769,7 +769,7 @@ export default function Navbar() {
                       </div>
                     </li>
                     {isDropdownOpen && (
-                      <ul className="mt-2 bg-white shadow-md rounded py-2 w-40 absolute z-[999]">
+                      <ul className="mt-2 bg-white border shadow-md -left-8 rounded py-2 w-40 absolute z-[999]">
                         <Link href={`/${locale}/about`}>
                           <li
                             onClick={() => setIsDropdownOpen(false)}
@@ -822,7 +822,7 @@ export default function Navbar() {
                   </Link>
                 </ul>
                 <ul className="flex flex-col items-start gap-6 mt-6">
-                  <article className="flex items-center gap-3">
+                  {/* <article className="flex items-center gap-3">
                     <Image
                       src={selectedLang.flag}
                       alt={`${selectedLang.label} flag`}
@@ -843,7 +843,107 @@ export default function Navbar() {
                         />
                       </div>
                     </article>
-                  </article>
+                  </article> */}
+                  <div
+                    className="relative top-0 left-0"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                    //   DropdownOpen();
+                    }}
+                  >
+                    <article
+                      onClick={() => setDropdownOpen(!dropdownOpen)}
+                      className="group flex items-center gap-3 cursor-pointer px-2 py-1 rounded"
+                    >
+                      <Image
+                        src={selectedLang.flag}
+                        alt={`${selectedLang.label} flag`}
+                        width={24}
+                        height={24}
+                        className="object-contain"
+                      />
+                      <article className="flex items-center gap-[9px]">
+                        <p className="text-sm uppercase text-[#3D445E] font-medium">
+                          {selectedLang.code}
+                        </p>
+                        <div className="w-5 h-5 flex items-center">
+                          <Image
+                            src={Down}
+                            alt="Down arrow"
+                            width={11}
+                            height={11}
+                          />
+                        </div>
+                      </article>
+                    </article>
+
+                    {dropdownOpen && (
+                      <div className="absolute top-10 bg-[#E8F4FC] w-[100px] border rounded-md shadow">
+                        <ul className="py-1 flex flex-col gap-2">
+                          <li
+                            onClick={() =>
+                              handleLangChange({
+                                code: "uz",
+                                label: "Uzb",
+                                flag: Flag,
+                              })
+                            }
+                            className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
+                          >
+                            <Image
+                              src={Flag}
+                              alt="uzbek flag"
+                              width={24}
+                              height={24}
+                            />
+                            <p className="text-sm uppercase text-[#3D445E] font-medium">
+                              Uzb
+                            </p>
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleLangChange({
+                                code: "ru",
+                                label: "Rus",
+                                flag: rusFlag,
+                              })
+                            }
+                            className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
+                          >
+                            <Image
+                              src={rusFlag}
+                              alt="Rus flag"
+                              width={24}
+                              height={24}
+                            />
+                            <p className="text-sm uppercase text-[#3D445E] font-medium">
+                              Rus
+                            </p>
+                          </li>
+                          <li
+                            onClick={() =>
+                              handleLangChange({
+                                code: "en",
+                                label: "Eng",
+                                flag: engFlag,
+                              })
+                            }
+                            className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
+                          >
+                            <Image
+                              src={engFlag}
+                              alt="Eng flag"
+                              width={24}
+                              height={24}
+                            />
+                            <p className="text-sm uppercase text-[#3D445E] font-medium">
+                              Eng
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                    )}
+                  </div>
                   <article className="flex items-center gap-[6px]">
                     <Image
                       src={Phone}
