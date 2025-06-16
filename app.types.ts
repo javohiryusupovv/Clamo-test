@@ -14,11 +14,14 @@ export interface Department {
 
 export type TeamMember = {
   id: number;
-  name: string;
-  position: string;
-  description: string;
   image: string;
-}
+  full_name_uz: string;
+  full_name_ru: string;
+  full_name_en: string;
+  description_uz: string;
+  description_ru: string;
+  description_en: string;
+};
 
 export interface NewsItem {
   id: number;

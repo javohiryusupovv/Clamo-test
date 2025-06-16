@@ -1,4 +1,4 @@
-import { Department, ServiceCardProps, TeamMember, MedicalLegalProps,Partner,FAQItem,DoctorImg,enterThePortal,backgroundImage,FilterItem,PaginatedDataItem,Imagee,ContactData,SochealMedia } from "../app.types";
+import { Department, ServiceCardProps, MedicalLegalProps,Partner,FAQItem,DoctorImg,enterThePortal,backgroundImage,FilterItem,PaginatedDataItem,Imagee,ContactData,SochealMedia } from "../app.types";
 
 // import { TFunction } from "next-intl";
 type TFunction = (key: string) => string;
@@ -47,44 +47,6 @@ export const getDepartments: Department[] = [
     title: "Gastroenterologiya",
     description:
       "Oshqozon-ichak trakti kasalliklarini tashxislash va davolash bo'limi.",
-  },
-];
-
-export const getTeamCarousel: TeamMember[] = [
-  {
-    id: 1,
-    name: "Dr. John Smith",
-    position: "Kardiolog",
-    description: "20 yillik tajribaga ega yurak kasalliklari bo‘yicha yetakchi mutaxassis.",
-    image: "/team/2.webp",
-  },
-  {
-    id: 2,
-    name: "Dr. Jane Doe",
-    position: "Nevrolog",
-    description: "Asab tizimi kasalliklarini davolashda 15 yillik tajribaga ega shifokor.",
-    image: "/team/4.avif",
-  },
-  {
-    id: 3,
-    name: "Dr. Emily Johnson",
-    position: "Gastroenterolog",
-    description: "Oshqozon-ichak muammolari bo‘yicha malakali mutaxassis.",
-    image: "/team/2.webp",
-  },
-  {
-    id: 4,
-    name: "Dr. Michael Lee",
-    position: "Nevrolog",
-    description: "Miya insultlari va surunkali bosh og‘riqlari bo‘yicha ixtisoslashgan.",
-    image: "/team/4.avif",
-  },
-  {
-    id: 5,
-    name: "Dr. Sarah Kim",
-    position: "Gastroenterolog",
-    description: "Ichki kasalliklar va ovqat hazm qilish muammolarini davolashda tajribali.",
-    image: "/team/2.webp",
   },
 ];
 

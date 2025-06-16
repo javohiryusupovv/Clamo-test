@@ -5,26 +5,7 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts")
 
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "clamo-production.up.railway.app",
-        port: "",
-        pathname: "/media/team_members/**",
-      },
-      {
-        protocol: "https",
-        hostname: "clamo-production.up.railway.app",
-        port: "",
-        pathname: "/media/news/**",
-      },
-      {
-        protocol: "https",
-        hostname: "clamo-production.up.railway.app",
-        port: "",
-        pathname: "/media/partners/**",
-      },
-    ],
+    domains: ['clamo-production.up.railway.app'],
   },
   webpack(config) {
     config.module.rules.push({
