@@ -1,13 +1,10 @@
 "use client";
-import Image from "next/image";
+
 import { useEffect, useState } from "react";
 import { ChevronDown, SearchIcon } from "lucide-react";
 import { getFilter, getPaginatedData } from "../../../../../../constants/page";
-// import Location from "../../../../../../public/Map.svg";
 import { IoLocationOutline } from "react-icons/io5";
-
 import Link from "next/link";
-// import ClinikStrelka from "../../../../../../public/CliniksStrelka.svg";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useTranslations } from "next-intl";
 
