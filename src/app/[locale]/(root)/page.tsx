@@ -7,7 +7,8 @@ import NewsPage from "@/app/[locale]/(root)/components/News";
 import QuestionsPage from "@/app/[locale]/(root)/components/QuestionsPage";
 import Partnyor from "./components/partnyor/Partnyor";
 
-// API'dan ma'lumot olish funktsiyasi
+
+
 async function getData() {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/home/stats/`,
@@ -43,7 +44,7 @@ export default async function Main() {
       <MedicalLegal />
       <MainService />
       <Izohlar />
-      <NewsPage news={datas[1]} /> {/* prop orqali uzatish */}
+      <NewsPage news={datas[1]} />{" "}
       <div className="bg-[#f6f9fc] py-[60px]">
         <InstallPage />
         <Partnyor />

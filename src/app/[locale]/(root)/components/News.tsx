@@ -3,7 +3,6 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image";
-import Shahar from "../../../../../public/Imgs/Shahar.png";
 import { useTranslations } from "next-intl";
 import Down from "@/assets/icons/whiteDown.png";
 import { NewsTypes } from "../../../../../app.types";
@@ -22,13 +21,17 @@ export default function NewsPage({ news }: { news: NewsTypes }) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="group relative rounded-[16px] sm:rounded-[24px] overflow-hidden">
-          <Image
-            src={news?.image || "/default-image.png"}
-            alt="City image"
-            className="w-full h-full"
-            width={300}
-            height={200}
-          />
+          {news?.image ? (
+            <Image
+              src={news.image}
+              alt="City image"
+              className="w-full h-full"
+              width={300}
+              height={200}
+            />
+          ) : (
+            <div className="w-[300px] h-[200px] bg-gray-200">No image</div>
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-[#051425]/85 via-[#051425]/60 to-[#051425]/40"></div>
           <p className="absolute top-4 left-4 text-[#EDF0EF] font-normal text-[10px] sm:text-[14px] z-10">
             {news?.created_at?.slice(0, 10)}
