@@ -148,37 +148,37 @@ export default function Navbar() {
                   </div>
                 </li>
                 {isDropdownOpen && (
-                  <ul className="absolute z-[999] bg-white top-full left-0 mt-2 shadow-md rounded py-2 w-40">
-                    <Link href="/about">
+                  <ul className="absolute z-[999] bg-white top-full left-0 mt-2 shadow-md rounded py-2 w-[180px]">
+                    <Link href={`/${locale}/about`}>
                       <li
                         onClick={() => setIsDropdownOpen(false)}
                         className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100"
                       >
-                        Markaz haqida
+                        {t("aboutss")}
                       </li>
                     </Link>
-                    <Link href="/regulatorydocuments">
+                    <Link href={`/${locale}/regulatorydocuments`}>
                       <li
                         onClick={() => setIsDropdownOpen(false)}
                         className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100"
                       >
-                        Normativ hujjatlar
+                        {t("regulatorydocuments")}
                       </li>
                     </Link>
-                    <Link href="/international">
+                    <Link href={`/${locale}/international`}>
                       <li
                         onClick={() => setIsDropdownOpen(false)}
                         className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100"
                       >
-                        Xalqaro hamkorlik
+                        {t("international")}
                       </li>
                     </Link>
-                    <Link href="/consulting">
+                    <Link href={`/${locale}/consulting`}>
                       <li
                         onClick={() => setIsDropdownOpen(false)}
                         className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100"
                       >
-                        Konsultatsiya
+                        {t("consulting")}
                       </li>
                     </Link>
                   </ul>

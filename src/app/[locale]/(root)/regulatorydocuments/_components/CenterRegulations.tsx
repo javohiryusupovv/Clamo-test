@@ -1,15 +1,18 @@
-// components/CenterRegulations.tsx
-import React from 'react';
+"use client"
 
+import React from 'react';
+import { useTranslations } from 'next-intl';
 
 const CenterRegulations: React.FC = () => {
+    const t = useTranslations("RegulatorydocumentsPage")
     return (
+
         <div className="container mt-[100px]">
             {/* Header Section */}
             <div className="mb-8 text-start">
-                <h1 className="text-[48px] max-md:text-[26px]  font-bold text-[#3D445E] mb-2">Markaz Nizomi va Ichki qoidalari</h1>
+                <h1 className="text-[48px] max-md:text-[26px]  font-bold text-[#3D445E] mb-2">{t("centerRegulationsTitle")}</h1>
                 <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
-                    Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.
+                    {t("centerRegulationsDescription")}
                 </p>
             </div>
 
@@ -23,25 +26,24 @@ const CenterRegulations: React.FC = () => {
                 </div>
 
                 <div className="relative z-10"> {/* Ensure content is above the watermark */}
-                    <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">Markaz nizomlari</h2>
+                    <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">{t("centerRegulationsSubtitle")}</h2>
                     <p className="text-gray-700 leading-relaxed mb-4">
-                        Markazimiz faoliyati O&apos;    zbekiston Respublikasi qonunlariga, sog&apos;liqni saqlash sohasidagi normativ-huquqiy hujjatlarga,
-                        shuningdek, Markazning ichki nizomi va belgilangan vazifalariga muvofiq amalga oshiriladi.
+                        {t("centerRegulationsParagraph1")}
                     </p>
                     <p className="text-gray-700 leading-relaxed mb-6">
-                        Nizomga ko&apos;ra, Markaz quyidagi tamoyillar asosida ish yuritadi:
+                        {t("centerRegulationsParagraph2")}
                     </p>
                     <ul className="list-disc pl-5 space-y-2 text-gray-700 mb-6">
-                        <li>Ochiqlik, shaffoflik va qonuniylik;</li>
-                        <li>Tibbiy tashkilotlarga sifatli xizmat ko&apos;rsatish va metodik ko&apos;mak berish; Xalqaro tajribaga asoslangan akkreditatsiya va litsenziyalash standartlarini joriy etish;</li>
-                        <li>Korrupsiyaga qarshi kurashish va manfaatlarni to&apos;qnashuviga yo&apos;l qo&apos;ymaslik;</li>
-                        <li>Mutaxassislarning uzluksiz rivojlanishini qo&apos;llab-quvvatlash.</li>
+                        <li>{t("centerRegulationsList1")}</li>
+                        <li>{t("centerRegulationsList2")}</li>
+                        <li>{t("centerRegulationsList3")}</li>
+                        <li>{t("centerRegulationsList4")}</li>
                     </ul>
                     <p className="text-gray-700 leading-relaxed mb-6">
-                        Markazning barcha faoliyati belgilangan ustuvor yo&apos;nalishlar va yillik ish rejasiga muvofiq amalga oshiriladi.
+                        {t("centerRegulationsParagraph3")}
                     </p>
                     <button className="w-[272px] h-[40px] flex items-center justify-center gap-[11.5px] bg-[#23B3FC] rounded-lg text-sm font-medium  leading-[130%] mt-[50px] text-[white]">
-                        Ma&apos;lumotni yuklab olish
+                        {t("downloadButton")}
                     </button>
                 </div>
             </div>

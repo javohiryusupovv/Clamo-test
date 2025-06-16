@@ -1,21 +1,23 @@
-import { getDepartments } from "../../../../../../constants/page";
+"use client"
 
+import { getDepartments } from "../../../../../../constants/page";
+import { useTranslations } from "next-intl";
 export default function DepartmentSection() {
   const departments = getDepartments;
+  const t = useTranslations("AboutPage")
   return (
     <section className="px-4 py-10 max-w-6xl mx-auto">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3D445E] mb-3 text-start">
-        Markaz bo&apos;limlari
+        {t("abouttitle3")}
       </h2>
       <p className="text-gray-600 mb-8">
-        Bizning bo&apos;limlarimiz bilan tanishing, bizda barcha
-        bo&apos;limlarimiz xizmati juda qulay va siz uchun mos keladi.
+        {t("about_des3")}
       </p>
 
       <div className="grid md:grid-cols-2 gap-4">
         {departments.map((departments) => (
           <div key={departments.id}
-            className={`group rounded-2xl p-6 pt-10 pb-10 flex items-start gap-4 bg-[#F6F9FC] hover:bg-gradient-to-r from-blue-500 to-blue-700 hover:text-white hover:cursor-pointer mb-4 transition-all duration-200 ease-in-out`}
+            className="group rounded-2xl p-6 pt-10 pb-10 flex items-start gap-4 bg-[#F6F9FC] hover:bg-gradient-to-r from-blue-500 to-blue-700 hover:text-white hover:cursor-pointer mb-4 transition-all duration-200 ease-in-out"
           >
             <div className="rounded-full p-2 bg-[#0653C9] text-white group-hover:bg-white group-hover:text-blue-700 transition-all duration-200 ease-in-out">
               <svg

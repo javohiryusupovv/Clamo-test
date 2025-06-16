@@ -3,10 +3,11 @@
 import { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 import { AccordionItemProps } from "../../../../../../app.types"
+import { useTranslations } from 'next-intl';
 
 const AccordionItem = ({ title, content, link }: AccordionItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const t = useTranslations("RegulatorydocumentsPage")
   const toggleAccordion = () => setIsOpen(!isOpen);
 
   return (
@@ -34,7 +35,7 @@ const AccordionItem = ({ title, content, link }: AccordionItemProps) => {
               rel="noopener noreferrer"
               className="inline-block mt-2 text-blue-600 underline hover:text-blue-800 transition"
             >
-              Havola
+              {t("linkText2")}
             </a>
           )}
         </div>

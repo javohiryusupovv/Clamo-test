@@ -91,6 +91,7 @@ type Props = {
   member: TeamMember;
 };
 
+
 const TeamMemberCard = ({ member }: Props) => {
   return (
     <div className="relative rounded-2xl overflow-hidden w-64 h-96 shadow-md bg-white cursor-pointer teamcarousel group mx-auto">

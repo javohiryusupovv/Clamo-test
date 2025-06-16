@@ -1,22 +1,24 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { getServices } from "../../../../../../constants/page";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function ServicesSection() {
-  const services = getServices;
-
+  const t = useTranslations("AboutPage");
+  const services = getServices(t); // t functionni argument sifatida berildi
 
   return (
     <section className="py-16 bg-[#F6F9FC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Title */}
         <div className="mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3D445E] mb-3 text-start">
-            Markaz ko&apos;rsatadigan xizmatlar
+            {t("service")}
           </h2>
           <p className="text-sm sm:text-base text-gray-600 md:max-w-full max-w-2xl text-start">
-            Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.
+            {t("service_des")}
           </p>
         </div>
 
@@ -50,7 +52,7 @@ export default function ServicesSection() {
                   href={service.link}
                   className="text-sm text-[#23B3FC] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 >
-                  Batafsil
+                  {t("batafsil")}
                 </Link>
                 <div className="bg-blue-100 p-3 rounded-full group-hover:bg-[#23B3FC] transition-all duration-300">
                   <ArrowRight className="w-5 h-5 text-[#23B3FC] group-hover:text-white group-hover:-rotate-45 transition-transform duration-300" />
@@ -62,4 +64,4 @@ export default function ServicesSection() {
       </div>
     </section>
   );
-};
+}

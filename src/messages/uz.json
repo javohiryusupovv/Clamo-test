@@ -3,7 +3,11 @@
     "abouts": "Biz Haqimizda",
     "licens": "Litsenziyalash",
     "accredation": "Akkreditsiyalash",
-    "contacts": "Bog'lanish"
+    "contacts": "Bog'lanish",
+    "aboutss": "Markaz haqida",
+    "international": "Xalqaro hamkorlik",
+    "consulting": "Konsultatsiya",
+    "regulatorydocuments": "Normativ Hujjatlar"
   },
   "HomePage": {
     "health_message": "Sog'liqni saqlash vazirligi qoshidagi Tibbiyot tashkilotlarini",
@@ -34,9 +38,7 @@
     "partnyor_title": "Hamkorkarimiz",
     "partnyor_subtitle": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.",
     "question_title": "Tez-tez beriladigan savollar",
-    "all_question": "Barcha savollar",
-
-    "medical": {
+    "all_question": "Barcha savollar","medical": {
       "subtitle": "Sizning sog'lig'ingiz biz uchun",
       "badge": "Muhim!",
       "title": "CLAMO bilan tibbiy faoliyatingizni qonuniylashtiring!",
@@ -65,6 +67,7 @@
     "get_permit": "CLAMO ruxsatnoma Olishning Yangi Standarti",
     "trusted_partner": "Tashkilotingiz uchun zarur litsenziyani tez va ishonchli tarzda oling. Clamo sizning qonuniylikdagi ishonchli hamkoringiz.",
     "get_license": "Litsenziya olish bosqichlari",
+
     "online_start": "Faoliyatingizni qonuniylashtirishni rejalashtiryapsizmi? Endi bu jarayonni onlayn va oson boshlang! Ruxsatnoma olish uchun ariza topshiring, hujjatlaringizni yuklang va litsenziyani qisqa muddatda qo'lga kiriting!",
     "get_license_button": "Litsenziya olish portaliga o'tish",
     "clinics_titile": "Klinikalar Reyesteri",
@@ -96,5 +99,152 @@
     "active_place": "Faolga oshirish joyi va ixtisoslik turlari haqida ma’lumotlar",
     "work_direction": "Ishlash yo‘nalishlari",
     "work_direction_subtitle": "Bizning bo‘limlariz bilan tanishing, bizda barcha bo‘limlariz xizmati juda qulay va siz uchun mos keladi."
+  },
+  "AboutPage": {
+    "plan": "Bizning rejalar:",
+    "abouttitle": "Tibbiyot muassasalarining sifati va xavfsizligini yanada oshirish.",
+    "about_des1": "Raqamli texnologiyalarni joriy etish orqali litsenziyalash va akkreditatsiya jarayonlarini soddalashtirish, Xalqaro standartlarni to‘liq integratsiya qilish, Shifokor va tibbiyot muassasalari uchun malaka oshirish tizimini kengaytirish va boshqalar.",
+    "service": "Markaz ko'rsatadigan xizmatlar",
+    "service_des": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.",
+    "services": {
+      "license": {
+        "icon": "/Imgs/License.svg",
+        "title": "Litsenziyalash",
+        "description": "Markangizni tibbiyot muassasalariga litsenziya olishda yordam beradi. Hujjat tayyorlash, ariza topshirish",
+        "link": "#"
+      },
+      "acredetion": {
+        "icon": "/Imgs/Accreditation.svg",
+        "title": "Akkreditatsiyalash",
+        "description": "Tibbiyot tashkilotlarining xizmat sifatini baholaymiz va akkreditatsiya qilishni ta'minlaymiz",
+        "link": "#"
+      },
+      "malaka": {
+        "icon": "/Imgs/Malaka.svg",
+        "title": "Malaka oshirish",
+        "description": "Shifokorlar, tibbiyot xodimlari va boshqalar uchun malaka oshirish kurslarini tashkil etamiz",
+        "link": "#"
+      },
+      "consult": {
+        "icon": "/Imgs/Konsulting.svg",
+        "title": "Konsalting xizmati",
+        "description": "Klinikalar va shifoxonalar tashkil etish jarayonida huquqiy, metodik va texnik maslahatlar beramiz",
+        "link": "#"
+      }
+    },
+    "batafsil": "Batafsil",
+    "abouttitle2": "Markaz tuzilmasi",
+    "about_des2": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.",
+    "abouttitle3": "Markaz bo'limlari",
+    "about_des3": "Bizning bo'limlarimiz bilan tanishing, bizda barcha bo'limlarimiz xizmati juda qulay va siz uchun mos keladi.",
+    "abouttitle4": "Markaz jamoasi",
+    "about_des4": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda...",
+    "hero_title": "Tibbiyot Sohasidagi Xalqaro Hamkorlik va Tajriba Almashinuvi",
+    "hero_des": "Soha bo'yicha har qanday savolingizga javob beramiz",
+
+    "hero_clamo": "CLAMO jahon standartlariga mos tibbiy xizmat ko'rsatish maqsadida yetakchi xalqaro tibbiyot muassasalari va tashkilotlari bilan hamkorlik qiladi. Biz eng so'nggi innovatsiyalar, ilg'or texnologiyalar va tajriba almashinuviga tayanamiz.",
+    "hero_btn": "Batafsil tanishish"
+  },
+  "FooterPage": {
+    "footer_des": "Raqamli texnologiyalarni joriy etish orqali litsenziyalash va akkreditatsiya jarayonlarini soddalashtirish, Xalqaro standartlarni to‘liq integratsiya qilish",
+    "ijtimoiy": "Ijtimoiy tarmoqlar",
+    "bo'limlar": "Bo'limlar",
+    "bog'lanish": "Bog'lanish",
+    "menu": {
+      "about": "Biz haqimizda",
+      "regulatorydocuments": "Normativ hujjatlar",
+      "center": "Markaz haqida",
+      "license": "Litsenziyalash",
+      "accreditation": "Akkreditsiyalash"
+    },
+    "developed": "Developed by"
+  },
+  "InternationalPage": {
+    "firstletter": "Xalqaro hamkorlik",
+    "international22": "bilan akkreditsiyalash — zamonaviy yondashuv",
+    "international_title": "Clamo —",
+    "international_des": "Tashkilotingiz uchun zarur litsenziyani tez va ishonchli tarzda oling. Clamo sizning qonuniylikdagi ishonchli hamkoringiz",
+    "hamkorlar": "Hamkorlarimiz",
+    "hamkorlar_des": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.",
+    "hamkorlarr": "Hamkorlik loyihalari",
+    "hamkorlar_btn": "Xizmatlarimiz",
+    "hamkorlar_btn2": "Murojaat qilish",
+    "Hamkorlar": {
+      "akredatsiyalash": {
+        "icon": "/icons/1inter.png",
+        "title": "Akkreditatsiyalash",
+        "description": "Tibbiyot tashkilotlarini akkreditatsiyalash va sifat menejmenti sohasida xalqaro hamkorlikni mustahkamlash maqsadida Hindiston Respublikasi Kasalxonalar va sog'liqni saqlash xizmatlarini akkreditatsiyalash milliy kengashi (NABH) bilan anglashuv memorandumi imzolandi. Ushbu memorandum tajriba almashinuvi, o'quv dasturlari va sifat standartlarini uyg'unlashtirish bo'yicha hamkorlikni nazarda tutadi.",
+        "link": "#"
+      },
+      "litsensiyalash": {
+        "icon": "/icons/litsenziyaicons.png",
+        "title": "Litsenziyalash",
+        "description": "Qozog'iston Respublikasi bilan hamkorlikda tibbiyot sohasida litsenziyalash tizimini takomillashtirishga qaratilgan qo'shma loyiha amalga oshirilmoqda. Loyihaning asosiy maqsadi — ikki davlat tajribasini o'rganish, ilg'or xalqaro standartlar asosida litsenziyalash jarayonini raqamlashtirish va tibbiyot tashkilotlariga qulay, ochiq va samarali tizim yaratishdan iborat.",
+        "link": "#"
+      },
+      "memorandum": {
+        "icon": "/icons/memorandum.png",
+        "title": "Memorandum",
+        "description": "\"CLAMO\" loyihasi tibbiyot sohasida hamkorlikni rivojlantirishga qaratilgan platformadir. Ushbu loyiha tibbiyot mutaxassislari, tadqiqotchilar va tibbiy tashkilotlarni bir joyga jamlab, ularning o'zaro tajriba almashishiga, ilmiy hamkorlikni kuchaytirishga va innovatsion yechimlar ishlab chiqishiga yordam beradi.",
+        "link": "#"
+      }
+    }
+  },
+  "ContactPage": {
+    "contactTitle": "Bog‘lanish uchun",
+    "contactDescription": "Siz tizimdan chiqishingiz mumkin bo'lgan quyidagi usullardan foydalanib biz bilan bog'laning",
+    "addressLabel": "Ofisimizga tashrif buyuring",
+    "phoneLabel": "Telefon raqam",
+    "emailLabel": "Elektron pochta manzili",
+    "formTitle": "Biz bilan aloqa",
+    "formSubtitle": "Agar sizda biron bir savol bo‘lsa yoki ma’lumotga muhtoj bo‘lsangiz, biz bilan bog‘laning.",
+    "fullName": "Ism-familiya",
+    "enterFullName": "Ismingizni kiriting",
+    "organization": "Tashkilot",
+    "enterOrganization": "Tashkilotingiz nomini yozing",
+    "phonee": "Telefon raqam",
+    "send": "Jo‘natish",
+    "flagCode": "+998",
+    "phonePlaceholder": "99 123 45 67"
+  },
+  "RegulatorydocumentsPage": {
+    "linkText": "Havola",
+    "exampleTitle": "Savol 1",
+    "exampleContent": "Bu savolga javob shu yerda joylashgan.",
+    "pageTitle": "Normativ hujjatlar",
+
+    "pageDescription": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.",
+    "law1Title": "Litsensiyalash bo‘yicha qonun",
+    "law1Content": "\"Litsensiyalash, ruxsat berish va xabardor qilish tartib-taomillari to‘g‘risidagi\"dagi",
+    "law2Title": "Akkreditatsiyalash bo‘yicha 1-qonun",
+    "law2Content": "Bu yerda akkreditatsiya bo‘yicha birinchi qonunning qisqacha tavsifi.",
+    "law3Title": "Akkreditatsiyalash bo‘yicha 2-qonun",
+    "law3Content": "Bu yerda akkreditatsiya bo‘yicha ikkinchi qonunning qisqacha tavsifi.",
+    "linkText2": "Havola",
+    "centerRegulationsTitle": "Markaz Nizomi va Ichki qoidalari",
+    "centerRegulationsDescription": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.",
+    "centerRegulationsSubtitle": "Markaz nizomlari",
+    "centerRegulationsParagraph1": "Markazimiz faoliyati O'zbekiston Respublikasi qonunlariga, sog'liqni saqlash sohasidagi normativ-huquqiy hujjatlarga, shuningdek, Markazning ichki nizomi va belgilangan vazifalariga muvofiq amalga oshiriladi.",
+    "centerRegulationsParagraph2": "Nizomga ko'ra, Markaz quyidagi tamoyillar asosida ish yuritadi:",
+    "centerRegulationsList1": "Ochiqlik, shaffoflik va qonuniylik;",
+    "centerRegulationsList2": "Tibbiy tashkilotlarga sifatli xizmat ko'rsatish va metodik ko'mak berish; Xalqaro tajribaga asoslangan akkreditatsiya va litsenziyalash standartlarini joriy etish;",
+    "centerRegulationsList3": "Korrupsiyaga qarshi kurashish va manfaatlarni to'qnashuviga yo'l qo'ymaslik;",
+    "centerRegulationsList4": "Mutaxassislarning uzluksiz rivojlanishini qo'llab-quvvatlash.",
+    "centerRegulationsParagraph3": "Markazning barcha faoliyati belgilangan ustuvor yo'nalishlar va yillik ish rejasiga muvofiq amalga oshiriladi.",
+    "downloadButton": "Ma'lumotni yuklab olish",
+    "govDecisionsTitle": "Hukumat qarorlari",
+    "govDecisionsDesc": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.",
+    "govDecision1Title": "O'zbekiston Respublikasi Prezidentining qarori",
+    "govDecision1Text": "O'zbekiston Respublikasi Prezidentining 2023-yil 20-iyundagi PQ-197 sonli qarorining 7-bo‘lim b bandiga ko‘ra sog‘liqni saqlash tizimida litsenziyalash va akkreditatsiyalash davlat muassasasi tashkil etildi.",
+    "govDecision2Title": "O'zbekiston Respublikasi Vazirlar Mahkamasining qarori",
+    "govDecision2Text": "O'zbekiston Respublikasi Vazirlar Mahkamasining 2024-yil 24-iyuldagi 444-sonli qaroriga binoan O'zbekiston Respublikasi Sog'liqni Saqlash vazirligi huzuridagi tibbiyot tashkilotlarini litsenziyalash va akkreditatsiyalash markazi faoliyati yo‘lga qo‘yildi.",
+    "govDecision3Title": "O'zbekiston Respublikasi Sog'liqni Saqlash Vazirining buyrug‘i",
+    "govDecision3Text": "O'zbekiston Respublikasi Sog'liqni Saqlash vazirining 2024-yil 04-oktabrdagi 311-sonli qaroriga binoan O'zbekiston Respublikasi Sog'liqni Saqlash vazirligi huzuridagi tibbiyot tashkilotlarini litsenziyalash va akkreditatsiyalash markazini faoliyatini tashkil etish chora-tadbirilari to‘g‘risidagi...",
+    "downloadBtn": "Ma'lumotni yuklab olish",
+    "normativeSectionTag": "NORMATIV HUJJATLAR",
+    "normativeSectionTitle": "Tibbiyotdagi asosiy meʼyoriy hujjatlar",
+    "normativeSectionDesc": "Tashkilotingiz uchun zarur litsenziyani tez va ishonchli tarzda oling. Clamo sizning qonuniylikdagi ishonchli hamkoringiz.",
+    "servicesBtn": "Xizmatlarimiz",
+    "contactBtn": "Murojat qilish"
   }
 }
