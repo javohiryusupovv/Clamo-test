@@ -4,7 +4,6 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image";
 import Shahar from "../../../../../public/Imgs/Shahar.png";
-import WhiteDown from "@/assets/icons/whiteDown.png";
 import { useTranslations } from "next-intl";
 import Down from "@/assets/icons/whiteDown.png";
 
