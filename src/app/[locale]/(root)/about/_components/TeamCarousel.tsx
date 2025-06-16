@@ -8,8 +8,17 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
-import { TeamMember } from '../../../../../../app.types';
 
+type TeamMember = {
+  id: number;
+  image: string;
+  full_name_uz: string;
+  full_name_ru: string;
+  full_name_en: string;
+  description_uz: string;
+  description_ru: string;
+  description_en: string;
+};
 
 export default function TeamCarousel() {
   const prevRef = useRef<HTMLButtonElement | null>(null);
