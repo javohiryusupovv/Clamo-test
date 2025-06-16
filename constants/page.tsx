@@ -1,7 +1,49 @@
-import { ServiceCardProps, MedicalLegalProps,Partner,FAQItem,DoctorImg,enterThePortal,backgroundImage,FilterItem,PaginatedDataItem,Imagee,ContactData,SochealMedia } from "../app.types";
+import { ServiceCardProps,Department, MedicalLegalProps,Partner,FAQItem,DoctorImg,enterThePortal,backgroundImage,FilterItem,PaginatedDataItem,Imagee,ContactData,SochealMedia,TeamMember } from "../app.types";
 
 // import { TFunction } from "next-intl";
 type TFunction = (key: string) => string;
+
+export const getTeamCarousel: TeamMember[] = [
+  {
+    id: 1,
+    name: "Dr. John Smith",
+    position: "Kardiolog",
+    description:
+      "20 yillik tajribaga ega yurak kasalliklari bo‘yicha yetakchi mutaxassis.",
+    image: "/team/2.webp",
+  },
+  {
+    id: 2,
+    name: "Dr. Jane Doe",
+    position: "Nevrolog",
+    description:
+      "Asab tizimi kasalliklarini davolashda 15 yillik tajribaga ega shifokor.",
+    image: "/team/4.avif",
+  },
+  {
+    id: 3,
+    name: "Dr. Emily Johnson",
+    position: "Gastroenterolog",
+    description: "Oshqozon-ichak muammolari bo‘yicha malakali mutaxassis.",
+    image: "/team/2.webp",
+  },
+  {
+    id: 4,
+    name: "Dr. Michael Lee",
+    position: "Nevrolog",
+    description:
+      "Miya insultlari va surunkali bosh og‘riqlari bo‘yicha ixtisoslashgan.",
+    image: "/team/4.avif",
+  },
+  {
+    id: 5,
+    name: "Dr. Sarah Kim",
+    position: "Gastroenterolog",
+    description:
+      "Ichki kasalliklar va ovqat hazm qilish muammolarini davolashda tajribali.",
+    image: "/team/2.webp",
+  },
+];
 
 export const getServices = (t: TFunction): ServiceCardProps[] => [
   {
@@ -27,6 +69,26 @@ export const getServices = (t: TFunction): ServiceCardProps[] => [
     title: t("services.malaka.title"),
     description: t("services.malaka.description"),
     link: "#",
+  },
+];
+
+export const getDepartments: Department[] = [
+  {
+    id: 1,
+    title: "Kardiologiya",
+    description:
+      "Yurak va qon tomir tizimi kasalliklarini tashxislash va davolash bo'limi.",
+  },
+  {
+    id: 2,
+    title: "Nevrologiya",
+    description: "Asab tizimi kasalliklarini tashxislash va davolash bo'limi.",
+  },
+  {
+    id: 3,
+    title: "Gastroenterologiya",
+    description:
+      "Oshqozon-ichak trakti kasalliklarini tashxislash va davolash bo'limi.",
   },
 ];
 

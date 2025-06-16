@@ -7,44 +7,15 @@ import 'swiper/css/navigation';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { useTranslations, useLocale } from 'next-intl';
-
-type TeamMember = {
-  id: number;
-  image: string;
-  full_name_uz: string;
-  full_name_ru: string;
-  full_name_en: string;
-  description_uz: string;
-  description_ru: string;
-  description_en: string;
-};
+import { getTeamCarousel } from '../../../../../../constants/page';
+import { TeamMember } from '../../../../../../app.types';
 
 export default function TeamCarousel() {
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
   const [swiperReady, setSwiperReady] = useState(false);
-  const [members, setMembers] = useState<TeamMember[]>([]);
-  const [loading, setLoading] = useState(true);
-  const t = useTranslations("AboutPage");
-  const locale = useLocale(); // ✅ tilni aniqlaymiz
 
-  useEffect(() => {
-    const fetchTeamMembers = async () => {
-      try {
-        const res = await fetch("https://clamo-production.up.railway.app/api/about/team/");
-        if (!res.ok) throw new Error("Team API fetch failed");
-        const data = await res.json();
-        setMembers(data);
-      } catch (error) {
-        console.error("Team fetch error:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchTeamMembers();
-  }, []);
+  const members: TeamMember[] = getTeamCarousel;
 
   useEffect(() => {
     if (prevRef.current && nextRef.current) {
@@ -56,13 +27,12 @@ export default function TeamCarousel() {
     <div className="bg-[#F8FAFC]">
       <div className="w-full py-12 container mx-auto">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3D445E] mb-3 text-start">
-          {t("abouttitle4")}
+          Markaz jamoasi
         </h2>
-        <p className="text-gray-600 mb-8">{t("about_des4")}</p>
-
-        {loading ? (
-          <p>Loading...</p>
-        ) : members.length > 0 && swiperReady ? (
+        <p className="text-gray-600 mb-8">
+          Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda...
+        </p>
+        {members.length > 0 && swiperReady ? (
           <Swiper
             modules={[Navigation]}
             navigation={{
@@ -91,14 +61,13 @@ export default function TeamCarousel() {
           >
             {members.map((member) => (
               <SwiperSlide key={member.id}>
-                <TeamMemberCard member={member} locale={locale} />
+                <TeamMemberCard member={member} />
               </SwiperSlide>
             ))}
           </Swiper>
         ) : (
-          <p>No team members found.</p>
+          <p>Loading...</p>
         )}
-
         <div className="flex justify-center items-center gap-4 mt-6">
           <button
             ref={prevRef}
@@ -118,30 +87,27 @@ export default function TeamCarousel() {
   );
 }
 
-type CardProps = {
+type Props = {
   member: TeamMember;
-  locale: string;
 };
 
-const TeamMemberCard = ({ member, locale }: CardProps) => {
-  const fullName = member[`full_name_${locale}` as keyof TeamMember] || member.full_name_en;
-  const description = member[`description_${locale}` as keyof TeamMember] || member.description_en;
 
+const TeamMemberCard = ({ member }: Props) => {
   return (
     <div className="relative rounded-2xl overflow-hidden w-64 h-96 shadow-md bg-white cursor-pointer teamcarousel group mx-auto">
       <Image
         src={member.image}
-        alt={String(fullName)}
+        alt={member.name}
         width={256}
         height={384}
         className="object-cover w-full h-full"
       />
-      <div className="absolute bottom-0 left-0 right-0 p-4 z-10 text-white transform transition-transform duration-300 group-hover:-translate-y-[80px]">
-        <p className="font-semibold">{fullName}</p>
+      <div className="absolute bottom-0 left-0 right-0 p-4 z-10 text-white transform transition-transform duration-300 group-hover:-translate-y-[60px]">
+        <p className="font-semibold">{member.name}</p>
       </div>
-      {description && (
+      {member.description && (
         <div className="absolute bottom-0 left-0 right-0 h-[250px] bg-gradient-to-t from-[#002b66] to-transparent px-4 text-white flex items-end opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-          <div className="text-sm mb-[10px]">{description}</div>
+          <div className="text-sm mb-[10px]">{member.description}</div>
         </div>
       )}
     </div>

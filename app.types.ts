@@ -6,26 +6,19 @@ export interface ServiceCardProps {
   link: string;
 }
 
-export type Department = {
+export interface Department {
   id: number;
-  title_uz: string;
-  title_ru: string;
-  title_en: string;
-  description_uz: string;
-  description_ru: string;
-  description_en: string;
-};
+  title: string;
+  description: string;
+}
 
 export type TeamMember = {
   id: number;
+  name: string;
+  position: string;
+  description: string;
   image: string;
-  full_name_uz: string;
-  full_name_ru: string;
-  full_name_en: string;
-  description_uz: string;
-  description_ru: string;
-  description_en: string;
-};
+}
 
 export interface NewsItem {
   id: number;
