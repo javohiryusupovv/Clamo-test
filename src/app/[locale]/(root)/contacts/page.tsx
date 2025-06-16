@@ -3,7 +3,7 @@ import Map from "./_components/Map";
 import SochealMedia from "./_components/Sochealmedia";
 
 export default function Contacts() {
-    const t = useTranslations("ContactPage")
+    const t = useTranslations("ContactPageLayout")
 
   return (
     <div className="container">

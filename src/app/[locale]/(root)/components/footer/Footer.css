@@ -2,7 +2,7 @@
     &::before{
         content: "";
         position: absolute;
-        bottom: -20px;
+        bottom: -50px;
         right: 0;
         width: 50%;
         height: 120px;
@@ -11,4 +11,3 @@
         z-index: 11;
     }
 }
-
