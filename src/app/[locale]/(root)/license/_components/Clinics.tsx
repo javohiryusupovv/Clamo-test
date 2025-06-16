@@ -6,8 +6,10 @@ import { getFilter, getPaginatedData } from "../../../../../../constants/page";
 import Location from "../../../../../../public/Map.svg";
 import Link from "next/link";
 import ClinikStrelka from "../../../../../../public/CliniksStrelka.svg"
+import { useTranslations } from "next-intl";
 
 export default function Clinics() {
+    const t = useTranslations("LicensePage")
   const [search, setSearch] = useState("");
   const [selectedFilter, setSelectedFilter] = useState<string>("0");
   const [page, setPage] = useState(1);
@@ -54,7 +56,7 @@ export default function Clinics() {
     <div className="max-w-7xl mx-auto p-3 sm:p-4 md:p-6">
       <div className="md:flex justify-between items-center max-md:flex-col ">
         <h1 className="text-2xl sm:text-[28px] md:text-[32px] font-semibold mb-4 sm:mb-6 text-gray-800">
-          Klinikalar Reyesteri
+          {t("clinics_titile")}
         </h1>
         <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
           <div className="relative w-full sm:w-64">
@@ -65,7 +67,7 @@ export default function Clinics() {
                 setSelectedFilter(e.target.value);
               }}
             >
-              <option value="0">Barchasi</option>
+              <option value="0">{t("all_section")}</option>
               {filter.map((filter) => (
                 <option key={filter.id} value={filter.id}>
                   {filter.name}
@@ -121,7 +123,7 @@ export default function Clinics() {
                 </div>
 
                 <button className="group flex items-center gap-1 mt-2 sm:mt-0 text-[10px] sm:text-xs md:text-sm text-[#23B3FC] font-medium bg-blue-50 px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-2 rounded-md hover:bg-blue-100 transition-colors">
-                  Litsenziyani ko&apos;rish
+                  {clinic.license_btn}
                   <Image src={ClinikStrelka} alt="Strelka" className=" group-hover:rotate-45 group-hover:scale-105 transition-all duration-100"/>
                 </button>
               </div>
@@ -132,7 +134,7 @@ export default function Clinics() {
                   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
                     <div className="flex-1 min-w-[120px] sm:min-w-[150px] md:min-w-[200px] p-1 sm:p-2 md:border-r md:border-gray-200 mt-2 sm:mt-3 ml-3 md:ml-4 border-b sm:border-b-0">
                       <p className="text-[#808597] font-normal text-[10px] sm:text-[14px] md:text-sm ml-[-10px] md:ml-[-15px] pb-[8px]">
-                        Akkreditatsiya raqami
+                        {clinic.accreditation_name}
                       </p>
                       <p className="font-semibold text-xs sm:text-sm md:text-[18px] ml-[-10px] md:ml-[-15px] text-[#3D445E]">
                         {clinic.accreditation_number}
@@ -168,7 +170,7 @@ export default function Clinics() {
                     </div>
                     <div className="flex-1 min-w-[120px] sm:min-w-[150px] md:min-w-[200px] p-1 sm:p-2 ml-0 md:ml-4 border-b sm:border-b-0">
                       <p className="text-[#808597] m-0 text-[10px] sm:text-xs md:text-sm pb-2">
-                        Vebsayt
+                        {clinic.website}
                       </p>
                       <Link href={clinic.websiteLink || "#"} target="blank">
                         <p className="font-semibold text-[#3D445E] text-xs sm:text-sm md:text-[18px]">
@@ -178,7 +180,7 @@ export default function Clinics() {
                     </div>
                     <div className="flex-1 min-w-[120px] md:border-l sm:min-w-[150px] md:min-w-[200px] p-1 sm:p-2 mt-2 sm:mt-3">
                       <p className="text-[#808597] m-0 text-[10px] sm:text-xs md:text-sm pb-2">
-                        Telfon raqam
+                        {clinic.phoneNumber}
                       </p>
                       <p className="font-bold text-xs sm:text-sm md:text-[18px] text-[#3D445E]">
                         {clinic.phone}

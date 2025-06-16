@@ -1,18 +1,19 @@
-"use client"
+"use client";
 
 import { getMedical } from "../../../../../constants/page";
 import LearnMore from "./LearnMoreButton";
 import { useEffect } from "react";
 import Image from "next/image";
 import ClamoFlag from "../../../../assets/images/clamoFlag.png";
-
+import { useTranslations } from "next-intl";
 
 export default function MedicalLegal() {
-  const medical = getMedical
+  const t = useTranslations("HomePage");
+  const medical = getMedical(t);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      import("aos").then(AOS => {
+      import("aos").then((AOS) => {
         AOS.init({ duration: 1000 });
       });
     }
@@ -57,3 +58,4 @@ export default function MedicalLegal() {
     </div>
   );
 }
+

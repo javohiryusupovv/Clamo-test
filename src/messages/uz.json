@@ -1,8 +1,100 @@
 {
-    "NavbarPage": {
-        "abouts": "Biz Haqimizda",
-        "licens": "Litsenziyalash",
-        "accredation": "Akkreditsiyalash",
-        "contacts": "Bog'lanish"
+  "NavbarPage": {
+    "abouts": "Biz Haqimizda",
+    "licens": "Litsenziyalash",
+    "accredation": "Akkreditsiyalash",
+    "contacts": "Bog'lanish"
+  },
+  "HomePage": {
+    "health_message": "Sog'liqni saqlash vazirligi qoshidagi Tibbiyot tashkilotlarini",
+    "litsenziya_title": "litsenziyalash va akkreditatsiyalash markazi davlat muassasi",
+    "service_button": "Xizmatlarimiz",
+    "applying": "Murojaat qilish",
+    "specialists": "Biz bilan tibbiy xizmat endi yanada yaqin! CLAMO orqali eng yaxshi mutaxassislar bilan bog'laning va sog'lig'ingizni nazorat qiling",
+    "aboutUs": "biz haqimizda",
+    "international_cooperation": "Tibbiyot sohasidagi xalqaro hamkorlik va tajriba almashinuvi",
+    "world_standards": "CLAMO jahon standartlariga mos tibbiy xizmat ko'rsatish maqsadida yetakchi xalqaro tibbiyot muassasalari va tashkilotlari bilan hamkorlik qiladi. Biz eng so'nggi innovatsiyalar, ilg'or texnologiyalar va tajriba almashinuviga tayanamiz.",
+    "detailed_button": "Batafsil",
+    "license_number": "Litsenziya soni",
+    "consulting_service": "Ko'rsatilgan konsalting xizmati",
+    "number_license": "Tashkilot tomonidan berilgan litsenziyalar soni",
+    "news_title": "Yangiliklar",
+    "all_servises": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.",
+    "img_title": "O‘zbekistonda yangi zamonaviy tibbiy markazlar tashkil etildi — CLAMO bilan ruxsatnoma va litsenziyalarni tez va oson oling!",
+    "new_chance": "CLAMO bilan yangi imkoniyatlarni kashf eting!",
+    "learn_more_button": "Batafsil tanishish",
+    "install_app": "Mobil ilovamizni yuklab oling",
+    "appeal_title": "Xususiy klinikalar faoliyatidan norozi bo‘lsangiz, klinikaga o‘rnatilgan QR-kod orqali yoki 1369 qisqa raqami orqali murojaat qiling. Sizning fikringiz muhim!",
+    "donwnload_title": "Ga yuklab oling",
+    "app_store": "App Store",
+    "get_title": "Qabul qiling",
+    "play_market": "Google Play",
+    "huawie_title": "Uni o'rganing",
+    "install_huawie": "AppGallery",
+    "partnyor_title": "Hamkorkarimiz",
+    "partnyor_subtitle": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.",
+    "question_title": "Tez-tez beriladigan savollar",
+    "all_question": "Barcha savollar",
+
+    "medical": {
+      "subtitle": "Sizning sog'lig'ingiz biz uchun",
+      "badge": "Muhim!",
+      "title": "CLAMO bilan tibbiy faoliyatingizni qonuniylashtiring!",
+      "description": "Biz tibbiy tashkilotlarga O'zbekistonda ruxsatnoma va litsenziya olishda yordam beramiz. CLAMO bilan faoliyatingizni qonuniy boshlang va sifatli xizmat ko'rsatishga yo'l oching!"
+    },
+    "main": {
+      "title": "Litsenziyalash va akkreditatsiyalash platformasiga o'ting",
+      "description": "Soha bo‘yicha har qanday savolingizga javob beramiz",
+      "button": "Platformaga kirish",
+      "phone": "Qisqa raqam"
+    },
+    "comments": {
+      "thought": "Fikr-mulohazalar",
+      "your_opinion": "O‘z fikr-mulohazalaringizni platformada qoldirishingiz mumkin"
+    },
+    "cardComment":{
+        "name": "Umid G'afurov",
+        "title": "Ko'rib chiqish",
+        "badge": "CLAMO",
+        "time": "15 daqiqa oldin",
+        "comment": "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi."
     }
+  },
+  "LicensePage": {
+    "license_title": "Litsenziyalash",
+    "get_permit": "CLAMO ruxsatnoma Olishning Yangi Standarti",
+    "trusted_partner": "Tashkilotingiz uchun zarur litsenziyani tez va ishonchli tarzda oling. Clamo sizning qonuniylikdagi ishonchli hamkoringiz.",
+    "get_license": "Litsenziya olish bosqichlari",
+    "online_start": "Faoliyatingizni qonuniylashtirishni rejalashtiryapsizmi? Endi bu jarayonni onlayn va oson boshlang! Ruxsatnoma olish uchun ariza topshiring, hujjatlaringizni yuklang va litsenziyani qisqa muddatda qo'lga kiriting!",
+    "get_license_button": "Litsenziya olish portaliga o'tish",
+    "clinics_titile": "Klinikalar Reyesteri",
+    "all_section": "Barchasi"
+  },
+  "AccreditationPage": {
+    "accerditation_title": "AKKREDITSIYALASH",
+    "modern_accerditation": "CLAMO bilan akkreditsiyalash — zamonaviy yondashuv",
+    "necessary_license": " Tashkilotingiz uchun zarur litsenziyani tez va ishonchli tarzda oling. Clamo sizning qonuniylikdagi ishonchli hamkoringiz.",
+    "get_accerditation": "Akkreditsiya olish bosqichlari"
+  },
+  "ContactPage": {
+    "contact_title": "Bog'lanish",
+    "contact_subtitle": "Bizning ofis manzilimizdagi aloqa ma'lumotlarimiz",
+    "phone_info": "Aloqa ma'lumotlari",
+    "phone_number": "Telefon raqami",
+    "email": "Elektron pochta",
+    "website": "Rasmiy sayt",
+    "addres": "Manzil"
+  },
+  "ConsultingPage": {
+    "about_we": "Biz haqimizda",
+    "consalting": "Konsalting",
+    "email_letter": "E-MAIL ORQALI MUROJAAT XATI YUBORING",
+    "easy_sever": "KONSULTATSIYA XIZMATI — ENDI YANADA OSON",
+    "step_one": "1-qadam",
+    "info_person": "Yuridik shaxs haqida ma’lumotlar",
+    "step_two": "2-qadam",
+    "active_place": "Faolga oshirish joyi va ixtisoslik turlari haqida ma’lumotlar",
+    "work_direction": "Ishlash yo‘nalishlari",
+    "work_direction_subtitle": "Bizning bo‘limlariz bilan tanishing, bizda barcha bo‘limlariz xizmati juda qulay va siz uchun mos keladi."
+  }
 }
