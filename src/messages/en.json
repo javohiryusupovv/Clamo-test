@@ -15,7 +15,7 @@
     "about_des1": "Simplifying licensing and accreditation processes through the introduction of digital technologies, fully integrating international standards, expanding the qualification system for doctors and medical institutions, and more.",
     "service": "Services provided by the center",
     "service_des": "All the necessary services to improve the quality and processes of medicine in one place, with convenient and effective solutions.",
-    "services": {
+    "services": { 
       "license": {
         "icon": "/Imgs/License.svg",
         "title": "Licensing",
