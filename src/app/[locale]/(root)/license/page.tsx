@@ -1,10 +1,26 @@
+"use client";
+
 import Image from "next/image";
 import { getBgImg, getLicense } from "../../../../../constants/page";
 import Clinics from "./_components/Clinics";
+import { useTranslations } from "next-intl";
+import { FaChevronRight } from "react-icons/fa";
+import Down from "@/assets/icons/whiteDown.png";
 
 export default function Page() {
+  const t = useTranslations("LicensePage");
+  const btn = useTranslations("HomePage");
+  const [
+    firstTitle,
+    secondTitle,
+    thirtTitle,
+    fourTitle,
+    fiveTitle,
+    sexTitle,
+    sevenTitle,
+  ] = t("get_permit").split(" ");
   const steps = getLicense;
-  const imageBg = getBgImg;  
+  const imageBg = getBgImg;
   return (
     <>
       {/* Hero section */}
@@ -15,30 +31,37 @@ export default function Page() {
           <div className="w-full my-20 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10 pt-12 md:h-[400px] md:pt-0">
             <div className="flex-1 space-y-6 text-center md:text-left">
               <h1 className="rounded-md bg-[#23B3FC] text-white px-3 py-2 text-sm font-medium w-max mx-auto md:mx-0">
-                Litsenziyalash
+                {t("license_title")}
               </h1>
 
               <div className="space-y-6 md:w-[45%] mx-auto md:mx-0">
                 <h1 className="text-[28px] sm:text-[30px] md:text-[32px] font-semibold text-[#1B1B1B]">
-                  <span className="text-[#23B3FC]">CLAMO</span> ruxsatnoma
-                  Olishning Yangi Standarti
+                  <span className="text-[#23B3FC]">{firstTitle}</span>{" "}
+                  {secondTitle} {thirtTitle}
+                  {fourTitle} {fiveTitle} {sexTitle} {sevenTitle}
                 </h1>
                 <p className="text-[#012548CC] leading-[140%] text-[18px] sm:text-[20px] font-medium">
-                  Tashkilotingiz uchun zarur litsenziyani tez va ishonchli
-                  tarzda oling. Clamo sizning qonuniylikdagi ishonchli
-                  hamkoringiz.
+                  {t("trusted_partner")}
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row items-center gap-3 pt-8 justify-center md:justify-start">
-                <button className="group flex items-center justify-center gap-[4px] w-full sm:w-[273px] px-[24px] py-[10px] bg-[#23B3FC1F] text-[#23B3FC] rounded-lg hover:bg-[#23B3FC] hover:text-white transition">
-                  <span className="text-[14px] font-medium">Xizmatlarimiz</span>
+                <button className="group flex items-center justify-center gap-[4px] w-full sm:w-[273px] px-[24px] py-[10px] text-white rounded-lg bg-[#23B3FC] hover:bg-[#23B3FC]/80 hover:text-white transition">
+                  <span className="text-[14px] font-medium">
+                    {btn("service_button")}
+                  </span>
+                  <Image
+                    src={Down}
+                    alt="down strelka"
+                    className="group-hover:translate-x-1 transition-all duration-200"
+                  />
                 </button>
 
                 <button className="group flex items-center justify-center gap-[4px] w-full sm:w-[273px] px-[24px] py-[10px] bg-[#23B3FC1F] text-[#23B3FC] rounded-lg hover:bg-[#23B3FC] hover:text-white transition">
                   <span className="text-[14px] font-medium">
-                    Murojaat qilish
+                    {btn("applying")}
                   </span>
+                  <FaChevronRight className="group-hover:translate-x-1 transition-all duration-200" />
                 </button>
               </div>
             </div>
@@ -67,19 +90,16 @@ export default function Page() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="flex flex-col gap-4">
               <h2 className="text-3xl md:text-5xl font-bold mb-4 sm:w-[80%]">
-                Litsenziya olish bosqichlari
+                {t("get_license")}
               </h2>
 
               <p className="text-base md:text-[20px] leading-[150%] mb-6 sm:w-[72%]">
-                Faoliyatingizni qonuniylashtirishni rejalashtiryapsizmi? Endi bu
-                jarayonni onlayn va oson boshlang! Ruxsatnoma olish uchun ariza
-                topshiring, hujjatlaringizni yuklang va litsenziyani qisqa
-                muddatda qo&apos;lga kiriting!
+                {t("online_start")}
               </p>
 
               <button className="group flex justify-center items-center gap-[4px] border-2 w-full sm:w-[273px] px-[24px] py-[10px] bg-[#23B3FC1F] text-[#FFFFFFFF] rounded-lg hover:bg-[#FFFFFFFF] hover:text-[#23B3FC] transition">
                 <span className="text-[14px] font-medium">
-                  Litsenziya olish portaliga o&apos;tish
+                  {t("get_license_button")}
                 </span>
               </button>
             </div>
@@ -109,7 +129,7 @@ export default function Page() {
 
       {/* Klinikalar section */}
       <section className="container mx-auto px-4 py-[80px]">
-        <Clinics/>
+        <Clinics />
       </section>
     </>
   );

@@ -1,8 +1,100 @@
 {
-    "NavbarPage": {
-        "abouts": "About us",
-        "licens": "Licensing",
-        "accredation": "Accreditation",
-        "contacts": "Contact"
+  "NavbarPage": {
+    "abouts": "About us",
+    "licens": "Licensing",
+    "accredation": "Accreditation",
+    "contacts": "Contact"
+  },
+  "HomePage": {
+    "health_message": "Medical organizations under the Ministry of Health",
+    "litsenziya_title": "Licensing and Accreditation Center state institution",
+    "service_button": "Our services",
+    "applying": "Applying",
+    "specialists": "With us, medical care is now even closer! Connect with the best specialists through CLAMO and take control of your health",
+    "aboutUs": "about Us",
+    "international_cooperation": "International cooperation and exchange of experience in the field of medicine",
+    "world_standards": "CLAMO collaborates with leading international medical institutions and organizations to provide world-class medical services. We rely on the latest innovations, advanced technologies, and experience sharing.",
+    "detailed_button": "In detail",
+    "license_number": "License number",
+    "consulting_service": "Consulting service provided",
+    "number_license": "Number of licenses issued by the organization",
+    "news_title": "News",
+    "all_servises": "All the services you need to improve medical quality and processes in one place, with convenient and effective solutions.",
+    "img_title": "New modern medical centers have been established in Uzbekistan — get permits and licenses quickly and easily with CLAMO!",
+    "new_chance": "Discover new opportunities with CLAMO!",
+    "learn_more_button": "Learn more",
+    "install_app": "Download our mobile app",
+    "appeal_title": "Esli vy dopolnonny deyatelnostyu chastnyx klinik, svyajites s klinikoy po ustanovlennomu ili po korotkomu nomeru 1369. Vashe mnenie imeet znachenie!",
+    "donwnload_title": "Download on the",
+    "app_store": "App Store",
+    "get_title": "Get it on",
+    "play_market": "Google Play",
+    "huawie_title": "Explore it on",
+    "install_huawie": "AppGallery",
+    "partnyor_title": "Partnyor",
+    "partnyor_subtitle": "All the services you need to improve medical quality and processes in one place, with convenient and effective solutions.",
+    "question_title": "Frequently asked questions",
+    "all_question": "All questions",
+
+    "medical": {
+      "subtitle": "Your health matters to us",
+      "badge": "Important!",
+      "title": "Legalize your medical practice with CLAMO!",
+      "description": "We help medical organizations in Uzbekistan obtain permits and licenses. Start your activity legally with CLAMO and open the way to providing quality services!"
+    },
+    "main": {
+      "title": "Go to the licensing and accreditation platform",
+      "description": "We will answer any questions you have in the field",
+      "button": "Access the platform",
+      "phone": "Short number"
+    },
+    "comments": {
+      "thought": "Feedback",
+      "your_opinion": "You can leave your feedback on the platform"
+    },
+    "cardComment": {
+      "name": "Umid G'afurov",
+      "title": "Review",
+      "badge": "CLAMO",
+      "time": "15 minutes ago",
+      "comment": "The process of obtaining a license was even faster and more transparent than expected. The digitization of all stages made our work much easier."
     }
+  },
+  "LicensePage": {
+    "license_title": "Licensing",
+    "get_permit": "A New Standard for Obtaining CLAMO Permits",
+    "trusted_partner": "Quickly and reliably obtain the license your organization needs. Clamo is your trusted partner in legal compliance.",
+    "get_license": "Steps to Obtain a License",
+    "online_start": "Planning to legalize your activities? Now you can start the process online and with ease! Submit your application, upload your documents, and receive your license in a short time!",
+    "get_license_button": "Go to License Portal",
+    "clinics_titile": "Clinics Registry",
+    "all_section": "All"
+  },
+  "AccreditationPage": {
+    "accerditation_title": "ACCREDITATION",
+    "modern_accerditation": "Accreditation with CLAMO — A Modern Approach",
+    "necessary_license": "Quickly and reliably obtain the necessary license for your organization. Clamo is your trusted partner in legal compliance.",
+    "get_accerditation": "Steps to Obtain Accreditation"
+  },
+  "ContactPage": {
+    "contact_title": "Contact",
+    "contact_subtitle": "Our contact information at the office address",
+    "phone_info": "Contact information",
+    "phone_number": "Phone number",
+    "email": "Email",
+    "website": "Official Website",
+    "addres": "Address"
+  },
+  "ConsultingPage": {
+    "about_we": "About Us",
+    "consalting": "Consulting",
+    "email_letter": "SEND A REQUEST LETTER VIA EMAIL",
+    "easy_sever": "CONSULTING SERVICE — NOW EVEN EASIER",
+    "step_one": "Step 1",
+    "info_person": "Information about the legal entity",
+    "step_two": "Step 2",
+    "active_place": "Information about the location of operation and types of specialization",
+    "work_direction": "Work Directions",
+    "work_direction_subtitle": "Explore our departments — all of our services are convenient and tailored to your needs."
+  }
 }

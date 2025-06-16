@@ -1,4 +1,5 @@
 "use client"
+
 import { FaGooglePlay } from "react-icons/fa";
 import { SiApple } from "react-icons/si";
 import "../../../../styles/InstalPage.css";
@@ -6,10 +7,11 @@ import { useEffect } from "react";
 import Image from "next/image";
 import Phone from "../../../../../public/Imgs/iPhone15Pro.png";
 import QR from "@/assets/icons/QR.png";
-
-
+import { useTranslations } from "next-intl";
 
 export default function InstallPage() {
+
+    const t = useTranslations("HomePage")
 
   useEffect(() => {
     const loadAOS = async () => {
@@ -32,17 +34,17 @@ export default function InstallPage() {
             src={Phone}
             alt="Sharh Phone Share"
             className="object-contain lg:block hidden max-sm:flex max-sm:object-cover"
-            data-aos="fade-up" 
+            data-aos="fade-up"
           />
         </div>
 
         {/* Content Section */}
         <div className="w-full lg:w-1/2 z-20 mt-6 lg:mt-0">
           <h6 className="text-[20px] sm:text-[24px] font-bold text-white mb-2">
-            Mobil ilovamizni yuklab oling
+            {t("install_app")}
           </h6>
           <p className="text-sm text-white opacity-60 leading-relaxed mb-4">
-            Xususiy klinikalar faoliyatidan norozi bo‘lsangiz, klinikaga o‘rnatilgan QR-kod orqali yoki 1369 qisqa raqami orqali murojaat qiling. Sizning fikringiz muhim!
+            {t("appeal_title")}
           </p>
           <article className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
             {/* App Store Button */}
@@ -65,7 +67,7 @@ export default function InstallPage() {
 
             {/* Huawei AppGallery */}
             <button className="flex items-center px-4 py-2 bg-white/20 rounded-lg gap-2">
-              
+
               <div className="text-left">
                 <p className="text-xs text-white uppercase">Explore it on</p>
                 <p className="text-base text-white font-medium">AppGallery</p>
@@ -83,7 +85,7 @@ export default function InstallPage() {
             height={180}
             className="object-contain hidden md:block"
           />
-        </div>  
+        </div>
       </div>
     </section>
   );

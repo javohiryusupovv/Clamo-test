@@ -11,7 +11,7 @@ import LearnMore from "./LearnMoreButton";
 import { useEffect, useState, useRef } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import "aos/dist/aos.css";
-
+import { useTranslations } from "next-intl";
 
 function useCountUp(target: number, duration = 1500) {
   const [count, setCount] = useState(0);
@@ -42,6 +42,17 @@ function useCountUp(target: number, duration = 1500) {
 }
 
 export default function Hero() {
+  const t = useTranslations("HomePage");
+
+  const [
+    firstTitle,
+    secondTitle,
+    thirtTitle,
+    fourTitle,
+    fiveTitle,
+    sexTitle,
+    sevenTitle,
+  ] = t("health_message").split(" ");
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -51,7 +62,6 @@ export default function Hero() {
     }
   }, []);
 
-  // Static values
   const clinicsNumber = 250;
   const consultingNumber = 800;
   const licensesNumber = 1200;
@@ -68,21 +78,21 @@ export default function Hero() {
         <section className="container grid lg:grid-cols-2 grid-cols-1 lg:gap-20 lg:pb-10 lg:relative">
           <div className="lg:mt-[163px] md:mt-[90px] mt-[50px]">
             <p className="uppercase text-[#3D445E] md:text-[14px] text-[12px] font-medium lg:w-[582px] pb-[11px] max-sm:w-[250px]">
-              Sog&apos;liqni saqlash vazirligi qoshidagi {""}
+              {firstTitle} {secondTitle} {thirtTitle} {fourTitle} {""}
               <span className="md:text-sm text-[10px] font-bold bg-[#23B3FC] text-white py-[3px] px-2 rounded-md">
-                Tibbiyot tashkilotlarini
+                {fiveTitle} {sexTitle} {sevenTitle}
               </span>
             </p>
             <h1
               className="lg:w-[582px] lg:text-[40px] sm:text-[32px] text-[25px] font-bold uppercase text-[#3D445E] md:pb-5 pb-3 leading-[110%]"
               data-aos="fade-up"
             >
-              litsenziyalash va akkreditatsiyalash markazi davlat muassasi
+              {t("litsenziya_title")}
             </h1>
             <div className="bg-white border border-white lg:max-w-max max-lg:w-full mb-4 sm:px-4 rounded-[17px]">
               <article className="flex items-center max-md:justify-between gap-3 pb-4 pt-4">
                 <button className="group lg:w-[183px] h-[40px] w-full flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[80%] bg-[#23B3FC] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">
-                  Xizmatlarimiz{" "}
+                  {t("service_button")}{" "}
                   <Image
                     src={Down}
                     alt="down strelka"
@@ -90,14 +100,12 @@ export default function Hero() {
                   />
                 </button>
                 <button className="group hover:bg-[#23B3FC] bg-[#23B3FC33] transition-all duration-200 lg:w-[183px] h-[40px] w-full flex items-center justify-center gap-[11.5px] rounded-lg text-sm font-medium text-[#23B3FC] hover:text-white leading-[130%]">
-                  Murojaat qilish{" "}
+                  {t("applying")}{" "}
                   <FaChevronRight className="group-hover:translate-x-1 transition-all duration-200" />
                 </button>
               </article>
               <p className="font-medium text-[12px] pb-4 lg:w-[379px]">
-                Biz bilan tibbiy xizmat endi yanada yaqin! ClAMO orqali eng
-                yaxshi mutaxassislar bilan bog&apos;laning va
-                sog&apos;lig&apos;ingizni nazorat qiling
+                {t("specialists")}
               </p>
             </div>
           </div>
@@ -118,10 +126,10 @@ export default function Hero() {
           <div className="lg:flex block gap-6 lg:gap-10 w-full justify-center pt-10">
             <div className="relative flex-1 mb-[30px] lg:mb-0 lg:pl-8 px-4">
               <p className="font-medium text-sm uppercase text-white/60 pb-2">
-                biz haqimizda
+                {t("aboutUs")}
               </p>
               <h1 className="font-bold text-2xl sm:text-3xl lg:text-[32px] leading-tight text-white pb-7">
-                Tibbiyot sohasidagi xalqaro hamkorlik va tajriba almashinuvi
+                {t("international_cooperation")}
               </h1>
               <LearnMore />
               <div className=" flex justify-center">
@@ -135,11 +143,7 @@ export default function Hero() {
               </div>
               <div className="absolute lg:-bottom-10 bottom-0 left-0 w-full h-[180px] bg-gradient-to-t from-blue-700/100 to-transparent" />
               <p className="md:w-[96%] absolute lg:bottom-6 bottom-0 sm:left-6 sm:right-6 text-xs sm:text-sm font-medium leading-relaxed text-white">
-                CLAMO jahon standartlariga mos tibbiy xizmat ko&apos;rsatish
-                maqsadida yetakchi xalqaro tibbiyot muassasalari va
-                tashkilotlari bilan hamkorlik qiladi. Biz eng so&apos;nggi
-                innovatsiyalar, ilg&apos;or texnologiyalar va tajriba
-                almashinuviga tayanamiz.
+                {t("world_standards")}
               </p>
             </div>
             <div className="flex-1 lg:pr-8 px-4 max-xl:pb-10">
@@ -150,7 +154,7 @@ export default function Hero() {
                     <h1 className="xl:text-[48px] lg:text-[39px] text-[36px] font-bold">
                       {animatedClinics.toLocaleString("ru-RU")}+
                     </h1>
-                    <p className="text-sm font-medium">Litsenziya soni</p>
+                    <p className="text-sm font-medium">{t("license_number")}</p>
                   </div>
                 </div>
                 <div className="w-full bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl text-white flex flex-col p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -160,7 +164,7 @@ export default function Hero() {
                       {animatedConsulting.toLocaleString("ru-RU")}+
                     </h1>
                     <p className="text-sm font-medium">
-                      Ko&apos;rsatilgan konsalting xizmati
+                      {t("consulting_service")}
                     </p>
                   </div>
                 </div>
@@ -170,14 +174,11 @@ export default function Hero() {
                     <h1 className="xl:text-[48px] lg:text-[39px] text-[36px] font-bold">
                       {animatedLicenses.toLocaleString("ru-RU")}+
                     </h1>
-                    <p className="text-sm font-medium">
-                      Tashkilot tomonidan berilgan litsenziyalar soni
-                    </p>
+                    <p className="text-sm font-medium">{t("number_license")}</p>
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
