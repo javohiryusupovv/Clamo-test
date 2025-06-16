@@ -22,8 +22,20 @@ async function getData() {
   return res.json();
 }
 
+async function getNews() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/news/news`, {
+    next: { revalidate: 60 },
+    cache: "no-store",
+  });
+
+  if (!res.ok) throw new Error("Yangiliklarni olishda xatolik");
+
+  return res.json();
+}
+
 export default async function Main() {
   const data = await getData();
+  const datas = await getNews();
 
   return (
     <div className="overflow-hidden">
@@ -31,7 +43,7 @@ export default async function Main() {
       <MedicalLegal />
       <MainService />
       <Izohlar />
-      <NewsPage /> {/* prop orqali uzatish */}
+      <NewsPage news={datas[1]} /> {/* prop orqali uzatish */}
       <div className="bg-[#f6f9fc] py-[60px]">
         <InstallPage />
         <Partnyor />

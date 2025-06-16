@@ -6,8 +6,9 @@ import Image from "next/image";
 import Shahar from "../../../../../public/Imgs/Shahar.png";
 import { useTranslations } from "next-intl";
 import Down from "@/assets/icons/whiteDown.png";
+import { NewsTypes } from "../../../../../app.types";
 
-export default function NewsPage() {
+export default function NewsPage({ news }: { news: NewsTypes }) {
   const t = useTranslations("HomePage");
 
   return (
@@ -22,19 +23,19 @@ export default function NewsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="group relative rounded-[16px] sm:rounded-[24px] overflow-hidden">
           <Image
-            src={Shahar}
+            src={news?.image || "/default-image.png"}
             alt="City image"
-            className="w-full h-full object-cover"
+            className="w-full h-full"
             width={300}
             height={200}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#051425]/85 via-[#051425]/60 to-[#051425]/40"></div>
           <p className="absolute top-4 left-4 text-[#EDF0EF] font-normal text-[10px] sm:text-[14px] z-10">
-            10.08.2023
+            {news?.created_at?.slice(0, 10)}
           </p>
           <div className="absolute bottom-4 left-4 right-4 text-white z-10">
             <h2 className="text-[14px] sm:text-[18px] md:text-[22px] xl:text-[28px] font-bold leading-[130%] pb-2">
-              {t("img_title")}
+              {news?.description}
             </h2>
             <Link
               href={`/news/1`}
@@ -51,10 +52,10 @@ export default function NewsPage() {
           <div className="flex flex-col sm:flex-row gap-4 mb-4">
             <div className="group bg-[#F6F9FC] rounded-[16px] p-4 w-full">
               <p className="text-[10px] sm:text-[12px] md:text-[14px] pb-[48px]">
-                10.08.2023
+                {news?.created_at?.slice(0, 10)}
               </p>
               <h3 className="font-bold text-[12px] md:text-[15px] lg:text-[18px] leading-[130%] pb-3">
-                {t("new_chance")}
+                {news?.title}
               </h3>
               <Link
                 href={`/news/2`}
@@ -71,10 +72,10 @@ export default function NewsPage() {
             <div className="flex flex-col sm:flex-row gap-4 mb-4">
               <div className="group bg-[#F6F9FC] rounded-[16px] p-4 w-full">
                 <p className="text-[10px] sm:text-[12px] md:text-[14px] pb-[48px]">
-                  10.08.2023
+                  {news?.created_at?.slice(0, 10)}
                 </p>
                 <h3 className="font-bold text-[12px] md:text-[15px] lg:text-[18px] leading-[130%] pb-3">
-                  {t("new_chance")}
+                  {news?.title}
                 </h3>
                 <Link
                   href={`/news/2`}
@@ -90,10 +91,10 @@ export default function NewsPage() {
             <div className="flex flex-col sm:flex-row gap-4 mb-4">
               <div className="group bg-[#F6F9FC] rounded-[16px] p-4 w-full">
                 <p className="text-[10px] sm:text-[12px] md:text-[14px] pb-[48px]">
-                  10.08.2023
+                  {news?.created_at?.slice(0, 10)}
                 </p>
                 <h3 className="font-bold text-[12px] md:text-[15px] lg:text-[18px] leading-[130%] pb-3">
-                  {t("new_chance")}
+                  {news?.title}
                 </h3>
                 <Link
                   href={`/news/2`}
