@@ -3,9 +3,9 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ChevronDown, SearchIcon } from "lucide-react";
 import { getFilter, getPaginatedData } from "../../../../../../constants/page";
-import Location from "../../../../../../public/Map.svg";
+import Location from "/Map.svg";
 import Link from "next/link";
-import ClinikStrelka from "../../../../../../public/CliniksStrelka.svg"
+import ClinikStrelka from "/CliniksStrelka.svg"
 import { useTranslations } from "next-intl";
 
 export default function Clinics() {
