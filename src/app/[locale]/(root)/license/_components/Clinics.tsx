@@ -105,7 +105,11 @@ export default function Clinics() {
 
                   <div className="flex flex-col sm:flex-row sm:items-center sm:flex-nowrap gap-2 sm:gap-4">
                     <div className="flex items-center gap-1">
-                      <IoLocationOutline className=" text-blue-700" width={24} height={24} />
+                      <IoLocationOutline
+                        className="text-[#23B3FC]"
+                        width={24}
+                        height={24}
+                      />
                       <span className="text-[14px] font-normal text-[#3D445E]">
                         {clinic.location}
                       </span>
@@ -121,7 +125,7 @@ export default function Clinics() {
 
                 <button className="group flex items-center justify-center gap-1 mt-2 sm:mt-0 text-[10px] sm:text-xs md:text-sm text-[#23B3FC] font-medium bg-blue-50 px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-2 rounded-md hover:bg-blue-100 transition-colors">
                   {clinic.license_btn}
-                    <FaArrowRightLong className="group-hover:rotate-[1deg] group-hover:scale-105 transition-all duration-100 -rotate-45"/>
+                  <FaArrowRightLong className="group-hover:rotate-[1deg] group-hover:scale-105 transition-all duration-100 -rotate-45" />
                 </button>
               </div>
 
