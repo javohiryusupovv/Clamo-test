@@ -1,3 +1,6 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { Inter } from "next/font/google";
 import Man from "../../../../../../public/Images/man.png";
 import Woman from "../../../../../../public/Images/woman.png";
@@ -9,14 +12,17 @@ const inter = Inter({
 });
 
 export default function firstpage() {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const t = useTranslations("ConsultingPage");
+
   return (
     <div className=" ">
       <div className=" bg-[#FFFFFF] relative z-10">
         <div
           className={` flex gap-[20px] container items-center text-[12px] font-inter ${inter.className} font-medium w-full h-[35px] `}
         >
-          <h1 className=" text-[#3D445E]">Biz haqimizda</h1>
-          <h1 className=" text-[#838CAF]">Konsalting</h1>
+          <h1 className=" text-[#3D445E]">{t("about_we")}</h1>
+          <h1 className=" text-[#838CAF]">{t("consalting")}</h1>
         </div>
       </div>
       <div className=" bg-[#F6F9FC] car">
@@ -28,31 +34,31 @@ export default function firstpage() {
                   INFO@CLAMO.UZ
                 </h1>
                 <h1 className=" text-[#3D445E] email-none">
-                  E-MAIL ORQALI MUROJAAT XATI YUBORING
+                  {t("email_letter")}
                 </h1>
                 <h1 className=" text-[#3D445E] email-flex">
-                 E-mail orqali murojaat xati yuboring
+                  {t("email_letter")}
                 </h1>
               </div>
               <h1 className=" konsul text-[#3D445E] leading-[100%] max-w-[509px] text-[32px] font-inter font-bold">
-                KONSULTATSIYA XIZMATI — ENDI YANADA OSON
+                {t("easy_sever")}
               </h1>
             </div>
             <div className=" w-full h-[320px] flex flex-col gap-[20px]">
               <div className=" w-full card11 little-card1 h-[137px] div bg-[#FFFFFF] rounded-3xl flex flex-col justify-center gap-[16px]">
                 <h1 className=" ml-[24px] borders rounded-[40px] border w-[136px] text-[#23B3FC] font-inter font-bold text-[24px] leading-[1.3] h-[47px] flex items-center justify-center border-[#23B3FC]">
-                  1-qadam
+                  {t("step_one")}
                 </h1>
                 <h1 className=" ml-[24px] text-[20px] whites text-[#3D445E] leading-[1.3] font-inter font-medium">
-                  Yuridik shaxs haqida ma’lumotlar
+                  {t("info_person")}
                 </h1>
               </div>
               <div className=" bg-[#FFFFFF] div card12 little-card2 rounded-3xl w-full h-[163px] flex flex-col justify-center gap-[16px]">
                 <h1 className=" ml-[24px] border borders rounded-[40px] w-[136px] text-[#FFFFFF] md:text-[#23B3FC] font-inter font-bold text-[24px] leading-[1.3] h-[47px] flex items-center justify-center border-[#FFFFFF] sm:border-[#23B3FC]">
-                  2-qadam
+                  {t("step_two")}
                 </h1>
                 <h1 className=" ml-[24px] whites text-[20px] text-[#FFFFFF] sm:text-[#3D445E] leading-[1.3] font-inter font-medium">
-                  Faolga oshirish joyi va ixtisoslik turlari haqida ma’lumotlar
+                  {t("active_place")}
                 </h1>
               </div>
             </div>

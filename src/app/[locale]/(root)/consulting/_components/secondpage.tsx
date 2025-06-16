@@ -5,21 +5,22 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules"; // 🔹 autoplay moduli
 import { getcardData } from '../../../../../../constants/page';
+import { useTranslations } from "next-intl";
 
 
 export default function secondpage() {
-
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const t = useTranslations("ConsultingPage")
   const cardData = getcardData
 
   return (
     <div className=" h-[518px] second-div w-full bg-[#ffffff]">
       <div className=" flex flex-col font-vksans lg:mb-[44px] md:mb-[37px] mb-[25px] lg:gap-1 sm:pt-[40px] md:pt-[50px] lg:pt-[64px] container">
         <h1 className=" font-bold text-[#3D445E] md:text-[40px] sm:text-[35px] text-[32px] lg:text-[48px] leading-[100% ]">
-          Ishlash yo‘nalishlari
+          {t("work_direction")}
         </h1>
         <p className=" text-[#012548CC] leading-[140%] font-medium md:text-lg lg:text-[20px]">
-          Bizning bo‘limlariz bilan tanishing, bizda barcha bo‘limlariz xizmati
-          juda qulay va siz uchun mos keladi.
+          {t("work_direction_subtitle")}
         </p>
       </div>
       <Swiper

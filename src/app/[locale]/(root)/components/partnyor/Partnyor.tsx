@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
 import { getPartners } from "../../../../../../constants/page";
@@ -27,7 +29,6 @@ export default function Partnyor() {
               key={img.id}
               className="mx-2 sm:mx-[18px] bg-[#eaecef] border-white border-[3px] rounded-xl flex items-center justify-center h-[80px] sm:h-[110px] w-[160px] sm:w-[220px] p-6 sm:p-8"
             >
-
               <Image
                 src={img.image}
                 alt={img.title}
@@ -46,7 +47,7 @@ export default function Partnyor() {
               key={img.id}
               className="mx-2 sm:mx-[18px] bg-[#eaecef] border-white border-[3px] rounded-xl flex items-center justify-center h-[80px] sm:h-[110px] w-[160px] sm:w-[220px] p-6 sm:p-8"
             >
-             <Image
+              <Image
                 src={img.image}
                 alt={img.title}
                 className="h-full w-full object-contain"

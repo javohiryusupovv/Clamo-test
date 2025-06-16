@@ -1,6 +1,23 @@
-import { ServiceCardProps,Department, MedicalLegalProps,Partner,FAQItem,DoctorImg,enterThePortal,backgroundImage,FilterItem,PaginatedDataItem,Imagee,ContactData,SochealMedia,TeamMember } from "../app.types";
+import {
+  Department,
+  ServiceCardProps,
+  TeamMember,
+  MedicalLegalProps,
+  Partner,
+  FAQItem,
+  DoctorImg,
+  enterThePortal,
+  backgroundImage,
+  FilterItem,
+  PaginatedDataItem,
+  Imagee,
+  ContactData,
+  SochealMedia,
+  PlatformsServiceProps,
+  OpinionCard,
+  CardComment,
+} from "../app.types";
 
-// import { TFunction } from "next-intl";
 type TFunction = (key: string) => string;
 
 export const getTeamCarousel: TeamMember[] = [
@@ -92,131 +109,122 @@ export const getDepartments: Department[] = [
   },
 ];
 
-export const getMedical: MedicalLegalProps[] = [
-        {
-      subtitle: "Sizning sog'lig'ingiz biz uchun",
-      badge: "Muhim!",
-      title: "CLAMO bilan tibbiy faoliyatingizni qonuniylashtiring!",
-      description:
-        "Biz tibbiy tashkilotlarga O'zbekistonda ruxsatnoma va litsenziya olishda yordam beramiz. CLAMO bilan faoliyatingizni qonuniy boshlang va sifatli xizmat ko'rsatishga yo'l oching!",
-      bgCircle: "/images/twoCircle.png",
-      clamoFlag: "@/assets/flag/flag1.png",
-    },
-]
+export const getMedical = (t: TFunction): MedicalLegalProps[] => [
+  {
+    subtitle: t("medical.subtitle"),
+    badge: t("medical.badge"),
+    title: t("medical.title"),
+    description: t("medical.description"),
+    bgCircle: "/images/twoCircle.png",
+    clamoFlag: "@/assets/flag/flag1.png",
+  },
+];
 
-export const getPlatforms = [
+export const getPlatforms = (t: TFunction): PlatformsServiceProps[] => [
   {
     id: 1,
-    title: "Litsenziyalash va akkreditatsiyalash platformasiga o‘ting",
-    description: "Soha bo‘yicha har qanday savolingizga javob beramiz",
-    buttonText: "Platformaga kirish",
+    title: t("main.title"),
+    description: t("main.description"),
+    buttonText: t("main.button"),
     buttonLink: "#",
-    phoneTitle: "Qisqa raqam",
+    phoneTitle: t("main.phone"),
     phoneNumber: "1369",
     image: "/Imgs/Mockup.png",
   },
 ];
 
-export const getCardComment = [
-    {
-      id: 1,
-      img: "/Imgs/Umid.png",
-      name: "Умид Гафуров",
-      title: "Отзыв о",
-      badge: "CLAMO",
-      staricon: "/Imgs/Stars.png",
-      time: "15 минут назад",
-      comment:
-        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-    },
-    {
-      id: 2,
-      img: "/Imgs/Umid.png",
-      name: "Умид Гафуров",
-      title: "Отзыв о",
-      badge: "CLAMO",
-      staricon: "/Imgs/Stars.png",
-      time: "15 минут назад",
-      comment:
-        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-    },
-    {
-      id: 3,
-      img: "/Imgs/Umid.png",
-      name: "Умид Гафуров",
-      title: "Отзыв о",
-      badge: "CLAMO",
-      staricon: "/Imgs/Stars.png",
-      time: "15 минут назад",
-      comment:
-        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-    },
-    {
-      id: 4,
-      img: "/Imgs/Umid.png",
-      name: "Умид Гафуров",
-      title: "Отзыв о",
-      badge: "CLAMO",
-      staricon: "/Imgs/Stars.png",
-      time: "15 минут назад",
-      comment:
-        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-    },
-    {
-      id: 5,
-      img: "/Imgs/Umid.png",
-      name: "Умид Гафуров",
-      title: "Отзыв о",
-      badge: "CLAMO",
-      staricon: "/Imgs/Stars.png",
-      time: "15 минут назад",
-      comment:
-        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-    },
-    {
-      id: 6,
-      img: "/Imgs/Umid.png",
-      name: "Умид Гафуров",
-      title: "Отзыв о",
-      badge: "CLAMO",
-      staricon: "/Imgs/Stars.png",
-      time: "15 минут назад",
-      comment:
-        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-    },
-    {
-      id: 7,
-      img: "/Imgs/Umid.png",
-      name: "Умид Гафуров",
-      title: "Отзыв о",
-      badge: "CLAMO",
-      staricon: "/Imgs/Stars.png",
-      time: "15 минут назад",
-      comment:
-        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-    },
-    {
-      id: 8,
-      img: "/Imgs/Umid.png",
-      name: "Умид Гафуров",
-      title: "Отзыв о",
-      badge: "CLAMO",
-      staricon: "/Imgs/Stars.png",
-      time: "15 минут назад",
-      comment:
-        "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-    },
-  ];
 
-export const getOpinion = [
+export const getCardComment = (t:TFunction): CardComment[] => [
+  {
+    id: 1,
+    img: "/Imgs/Umid.png",
+    name: t("cardComment.name"),
+    title: t("cardComment.title"),
+    badge: t("cardComment.badge"),
+    staricon: "/Imgs/Stars.png",
+    time: t("cardComment.time"),
+    comment: t("cardComment.comment"),
+  },
     {
-      id: 1,
-      icons: "/Imgs/sharh-logo.png",
-      subtitle: "Fikr-mulohazalar",
-      description:
-        "O‘z fikr-mulohazalaringizni platformada qoldirishingiz mumkin",
+        id: 2,
+        img: "/Imgs/Umid.png",
+        name: t("cardComment.name"),
+        title: t("cardComment.title"),
+        badge: t("cardComment.badge"),
+        staricon: "/Imgs/Stars.png",
+        time: t("cardComment.time"),
+        comment: t("cardComment.comment"),
     },
-  ];
+    {
+        id: 3,
+        img: "/Imgs/Umid.png",
+        name: t("cardComment.name"),
+        title: t("cardComment.title"),
+        badge: t("cardComment.badge"),
+        staricon: "/Imgs/Stars.png",
+        time: t("cardComment.time"),
+        comment: t("cardComment.comment"),
+    },
+    {
+        id: 4,
+        img: "/Imgs/Umid.png",
+        name: t("cardComment.name"),
+        title: t("cardComment.title"),
+        badge: t("cardComment.badge"),
+        staricon: "/Imgs/Stars.png",
+        time: t("cardComment.time"),
+        comment: t("cardComment.comment"),
+    },
+    {
+        id: 5,
+        img: "/Imgs/Umid.png",
+        name: t("cardComment.name"),
+        title: t("cardComment.title"),
+        badge: t("cardComment.badge"),
+        staricon: "/Imgs/Stars.png",
+        time: t("cardComment.time"),
+        comment: t("cardComment.comment"),
+    },
+    {
+        id: 6,
+        img: "/Imgs/Umid.png",
+        name: t("cardComment.name"),
+        title: t("cardComment.title"),
+        badge: t("cardComment.badge"),
+        staricon: "/Imgs/Stars.png",
+        time: t("cardComment.time"),
+        comment: t("cardComment.comment"),
+    },
+    {
+        id: 7,
+        img: "/Imgs/Umid.png",
+        name: t("cardComment.name"),
+        title: t("cardComment.title"),
+        badge: t("cardComment.badge"),
+        staricon: "/Imgs/Stars.png",
+        time: t("cardComment.time"),
+        comment: t("cardComment.comment"),
+    },
+    {
+        id: 8,
+        img: "/Imgs/Umid.png",
+        name: t("cardComment.name"),
+        title: t("cardComment.title"),
+        badge: t("cardComment.badge"),
+        staricon: "/Imgs/Stars.png",
+        time: t("cardComment.time"),
+        comment: t("cardComment.comment"),
+    },
+];
+
+export const getOpinion = (t:TFunction): OpinionCard[] => [
+  {
+    id: 1,
+    icons: "/Imgs/sharh-logo.png",
+    subtitle: t("comments.thought"),
+    description: t("comments.your_opinion"),
+  },
+];
 
 export const getPartners: Partner[] = [
   {
@@ -271,40 +279,48 @@ export const getPartners: Partner[] = [
   },
 ];
 
+
 export const getfaqData: FAQItem[] = [
   {
-    question: 'Есть ли бесплатные материалы?',
-    answer: 'Да, мы предлагаем ряд бесплатных курсов и лекций, чтобы вы могли ознакомиться с качеством наших материалов и методик. Бесплатные материалы доступны в разделе "Бесплатные курсы" и включают как видеоуроки, так и аудиолекции. Вы можете начать обучение с бесплатных материалов и затем перейти к более углубленным платным курсам.',
+    question: "Есть ли бесплатные материалы?",
+    answer:
+      'Да, мы предлагаем ряд бесплатных курсов и лекций, чтобы вы могли ознакомиться с качеством наших материалов и методик. Бесплатные материалы доступны в разделе "Бесплатные курсы" и включают как видеоуроки, так и аудиолекции. Вы можете начать обучение с бесплатных материалов и затем перейти к более углубленным платным курсам.',
   },
   {
-    question: 'Как записаться на курс?',
-    answer: 'Вы можете записаться на курс, выбрав интересующий вас курс и нажав кнопку "Записаться". Далее следуйте инструкциям на экране.',
+    question: "Как записаться на курс?",
+    answer:
+      'Вы можете записаться на курс, выбрав интересующий вас курс и нажав кнопку "Записаться". Далее следуйте инструкциям на экране.',
   },
   {
-    question: 'Можно ли получить сертификат по окончании курса?',
-    answer: 'Да, после успешного завершения курса и выполнения всех заданий вы получите сертификат.',
+    question: "Можно ли получить сертификат по окончании курса?",
+    answer:
+      "Да, после успешного завершения курса и выполнения всех заданий вы получите сертификат.",
   },
   {
-    question: 'Как я могу связаться с поддержкой?',
-    answer: 'Вы можете связаться с нашей службой поддержки через форму обратной связи на сайте или по электронной почте support@example.com.',
+    question: "Как я могу связаться с поддержкой?",
+    answer:
+      "Вы можете связаться с нашей службой поддержки через форму обратной связи на сайте или по электронной почте support@example.com.",
   },
   {
-    question: 'Нужно ли подключение к интернету для использования приложения?',
-    answer: 'Да, для полноценной работы приложения требуется стабильное подключение к интернету.',
+    question: "Нужно ли подключение к интернету для использования приложения?",
+    answer:
+      "Да, для полноценной работы приложения требуется стабильное подключение к интернету.",
   },
   {
-    question: 'Можно ли вернуть деньги за приобретенный курс?',
-    answer: 'Да, вы можете оформить возврат средств в течение 14 дней после покупки при соблюдении условий возврата.',
+    question: "Можно ли вернуть деньги за приобретенный курс?",
+    answer:
+      "Да, вы можете оформить возврат средств в течение 14 дней после покупки при соблюдении условий возврата.",
   },
   {
-    question: 'Как часто обновляются курсы?',
-    answer: 'Мы регулярно обновляем курсы, чтобы они соответствовали последним изменениям и требованиям.',
+    question: "Как часто обновляются курсы?",
+    answer:
+      "Мы регулярно обновляем курсы, чтобы они соответствовали последним изменениям и требованиям.",
   },
   {
-    question: 'Есть ли ограничения по возрасту для пользователей приложения?',
-    answer: 'Приложение предназначено для пользователей старше 16 лет.',
+    question: "Есть ли ограничения по возрасту для пользователей приложения?",
+    answer: "Приложение предназначено для пользователей старше 16 лет.",
   },
-]; 
+];
 
 export const getHamkorlar=(t: TFunction) => [
   {
@@ -350,6 +366,7 @@ export const getSteps = [
   },
 ];
 
+
 export const getcardData = [
   {
     title: "Litsenziyalash",
@@ -385,8 +402,8 @@ export const getcardData = [
 
 export const getDoctorImg: DoctorImg = {
   man: "/Images/man.png",
-  woman: "/Images/woman.png"
-}
+  woman: "/Images/woman.png",
+};
 
 export const getLicense: enterThePortal[] = [
   {
@@ -425,7 +442,7 @@ export const getBgImg: backgroundImage[] = [
   },
 ];
 
-export const getFilter:FilterItem[] = [
+export const getFilter: FilterItem[] = [
   {
     id: 2,
     created_at: "2025-06-12T10:10:57.941260Z",
@@ -452,7 +469,8 @@ export const getFilter:FilterItem[] = [
   },
 ];
 
-export const getPaginatedData:PaginatedDataItem[] = [
+
+export const getPaginatedData: PaginatedDataItem[] = [
   {
     id: 1,
     reyester_type: [
@@ -470,11 +488,14 @@ export const getPaginatedData:PaginatedDataItem[] = [
     updated_at: "2025-06-10T10:29:44.944285Z",
     title: '"ALFA TERAPIYA" mas`uliyati cheklangan jamiyati',
     location: "Andijon viloyati, Andijon sh. 3-kichik daha, 38-uy, 46-manzil",
+    license_btn: "Litsenziyani ko'rish",
+    accreditation_name: "Akkreditatsiya raqami",
     accreditation_number: "L-29082988",
     website: "Vabsayt",
     websiteName: "Alfaterapia.uz",
     websiteLink: "http://Alfaterapia.uz",
     email: "alfaterapiya@mail.ru",
+    phoneNumber: "Telfon raqam",
     phone: "+998712007007",
     comment: "Sharhlar",
     comment_number: 100,
@@ -486,7 +507,7 @@ export const getPaginatedData:PaginatedDataItem[] = [
         id: 1,
         created_at: "2025-06-10T10:28:57.997185Z",
         updated_at: "2025-06-12T10:11:20.437644Z",
-        name: "Hujjatni o’zgartirish",
+        name: "Muddatni uzaytirish",
       },
     ],
     data: "Akkreditsiya berilgan sana",
@@ -496,11 +517,14 @@ export const getPaginatedData:PaginatedDataItem[] = [
     updated_at: "2025-06-10T10:29:44.944285Z",
     title: '"ALFA TERAPIYA" mas`uliyati cheklangan jamiyati',
     location: "Andijon viloyati, Andijon sh. 3-kichik daha, 38-uy, 46-manzil",
+    license_btn: "Litsenziyani ko'rish",
+    accreditation_name: "Akkreditatsiya raqami",
     accreditation_number: "L-29082988",
     website: "Vabsayt",
     websiteName: "Alfaterapia.uz",
     websiteLink: "http://Alfaterapia.uz",
     email: "alfaterapiya@mail.ru",
+    phoneNumber: "Telfon raqam",
     phone: "+998712007007",
     comment: "Sharhlar",
     comment_number: 100,
@@ -512,7 +536,7 @@ export const getPaginatedData:PaginatedDataItem[] = [
         id: 1,
         created_at: "2025-06-10T10:28:57.997185Z",
         updated_at: "2025-06-12T10:11:20.437644Z",
-        name: "Faoliyatni tugatish",
+        name: "Muddatni uzaytirish",
       },
     ],
     data: "Akkreditsiya berilgan sana",
@@ -522,11 +546,14 @@ export const getPaginatedData:PaginatedDataItem[] = [
     updated_at: "2025-06-10T10:29:44.944285Z",
     title: '"ALFA TERAPIYA" mas`uliyati cheklangan jamiyati',
     location: "Andijon viloyati, Andijon sh. 3-kichik daha, 38-uy, 46-manzil",
+    license_btn: "Litsenziyani ko'rish",
+    accreditation_name: "Akkreditatsiya raqami",
     accreditation_number: "L-29082988",
     website: "Vabsayt",
     websiteName: "Alfaterapia.uz",
     websiteLink: "http://Alfaterapia.uz",
     email: "alfaterapiya@mail.ru",
+    phoneNumber: "Telfon raqam",
     phone: "+998712007007",
     comment: "Sharhlar",
     comment_number: 100,
@@ -538,7 +565,7 @@ export const getPaginatedData:PaginatedDataItem[] = [
         id: 1,
         created_at: "2025-06-10T10:28:57.997185Z",
         updated_at: "2025-06-12T10:11:20.437644Z",
-        name: "Qayta ro’yxat",
+        name: "Muddatni uzaytirish",
       },
     ],
     data: "Akkreditsiya berilgan sana",
@@ -548,23 +575,27 @@ export const getPaginatedData:PaginatedDataItem[] = [
     updated_at: "2025-06-10T10:29:44.944285Z",
     title: '"ALFA TERAPIYA" mas`uliyati cheklangan jamiyati',
     location: "Andijon viloyati, Andijon sh. 3-kichik daha, 38-uy, 46-manzil",
+    license_btn: "Litsenziyani ko'rish",
+    accreditation_name: "Akkreditatsiya raqami",
     accreditation_number: "L-29082988",
     website: "Vabsayt",
     websiteName: "Alfaterapia.uz",
     websiteLink: "http://Alfaterapia.uz",
     email: "alfaterapiya@mail.ru",
+    phoneNumber: "Telfon raqam",
     phone: "+998712007007",
     comment: "Sharhlar",
     comment_number: 100,
   },
 ];
 
+
 export const getImg: Imagee[] = [
   {
-    id:1,
-    img:"https://utmlgylkkghbjocewude.supabase.co/storage/v1/object/sign/data/EcommerImage/LogoClamo.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNjAzNzdiYS0xZjNjLTRkODUtOTA3OS1mNzVlZDdiOTk4NDgiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkYXRhL0Vjb21tZXJJbWFnZS9Mb2dvQ2xhbW8uc3ZnIiwiaWF0IjoxNzQ5OTIzMjM2LCJleHAiOjE3ODE0NTkyMzZ9.TvDECpUdKZcKIWJOd6SbgHh8yu4X3Iys82jQyLK1QkA"
-  }
-]
+    id: 1,
+    img: "https://utmlgylkkghbjocewude.supabase.co/storage/v1/object/sign/data/EcommerImage/LogoClamo.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNjAzNzdiYS0xZjNjLTRkODUtOTA3OS1mNzVlZDdiOTk4NDgiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkYXRhL0Vjb21tZXJJbWFnZS9Mb2dvQ2xhbW8uc3ZnIiwiaWF0IjoxNzQ5OTIzMjM2LCJleHAiOjE3ODE0NTkyMzZ9.TvDECpUdKZcKIWJOd6SbgHh8yu4X3Iys82jQyLK1QkA",
+  },
+];
 export const getContactInfo: ContactData[] = [
   {
     phone: "+998 (55) 514 30 03",
@@ -600,7 +631,6 @@ export const getSochealMedia: SochealMedia[] = [
     link: "@CLAMO Social",
   },
 ];
-
 export const getsocialLinks = [
     {
       href: "https://facebook.com",
@@ -631,6 +661,7 @@ export const getsocialLinks = [
       href: "https://linkedin.com",
       icon: (
         <svg className="w-6 h-6 fill-[#0650C3] group-hover:fill-white transition" viewBox="0 0 24 24">
+
           <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.024-3.037-1.849-3.037-1.851 0-2.134 1.445-2.134 2.939v5.667H9.356V9h3.414v1.561h.048c.476-.9 1.637-1.849 3.372-1.849 3.604 0 4.271 2.372 4.271 5.456v6.284zM5.337 7.433c-1.144 0-2.07-.927-2.07-2.07 0-1.144.926-2.07 2.07-2.07 1.144 0 2.07.926 2.07 2.07 0 1.143-.926 2.07-2.07 2.07zM6.814 20.452H3.861V9h2.953v11.452z"/>
         </svg>
       ),
