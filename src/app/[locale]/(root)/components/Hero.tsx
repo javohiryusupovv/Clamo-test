@@ -12,6 +12,7 @@ import { useEffect, useState, useRef } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import "aos/dist/aos.css";
 import { useTranslations } from "next-intl";
+import { NumbersType } from "@/types/type";
 
 function useCountUp(target: number, duration = 1500) {
   const [count, setCount] = useState(0);
@@ -41,7 +42,7 @@ function useCountUp(target: number, duration = 1500) {
   return count;
 }
 
-export default function Hero() {
+export default function Hero({ numbers }: { numbers: NumbersType }) {
   const t = useTranslations("HomePage");
 
   const [
@@ -62,13 +63,13 @@ export default function Hero() {
     }
   }, []);
 
-  const clinicsNumber = 250;
-  const consultingNumber = 800;
-  const licensesNumber = 1200;
+  // const clinicsNumber = 250;
+  // const consultingNumber = 800;
+  // const licensesNumber = 1200;
 
-  const animatedClinics = useCountUp(clinicsNumber);
-  const animatedConsulting = useCountUp(consultingNumber);
-  const animatedLicenses = useCountUp(licensesNumber);
+  const animatedClinics = useCountUp(Number(numbers.clinics_number));
+  const animatedConsulting = useCountUp(Number(numbers.consulting_number));
+  const animatedLicenses = useCountUp(Number(numbers.licenses_number));
 
   return (
     <div className=" overflow-x-hidden">
