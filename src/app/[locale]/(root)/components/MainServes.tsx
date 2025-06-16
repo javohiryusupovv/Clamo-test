@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import "../../../../styles/linerMainserver.css";
 import ServicesSection from "@/app/[locale]/(root)/about/_components/AboutService";
@@ -6,9 +6,11 @@ import Image from "next/image";
 import { useEffect } from "react";
 import { FaChevronRight, FaPhoneAlt } from "react-icons/fa";
 import { getPlatforms } from "../../../../../constants/page";
+import { useTranslations } from "next-intl";
 
 export default function MainService() {
-  const platforms = getPlatforms;
+  const t = useTranslations("HomePage");
+  const platforms = getPlatforms(t);
 
   useEffect(() => {
     const loadAOS = async () => {
@@ -21,15 +23,14 @@ export default function MainService() {
     }
   }, []);
 
-
   return (
     <section className="pt-16 bg-[#F6F9FC]">
       <ServicesSection />
 
       <section className="container  sm:pb-[58px] overflow-hidden">
-        {platforms.map((item) => (
+        {platforms.map((item, id) => (
           <div
-            key={item.id}
+            key={id}
             className="grid grid-cols-1 lg:grid-cols-2  bg-[#0653C9] sm:rounded-[36px] rounded-2xl text-white  mb-7"
           >
             <div className="lg:block hidden">
@@ -62,7 +63,9 @@ export default function MainService() {
                     <FaPhoneAlt size={19.83} />
                   </div>
                   <div>
-                    <p className="md:text-sm text-xs font-normal">{item.phoneTitle}</p>
+                    <p className="md:text-sm text-xs font-normal">
+                      {item.phoneTitle}
+                    </p>
                     <p className="text-2xl font-bold">{item.phoneNumber}</p>
                   </div>
                 </div>

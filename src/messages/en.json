@@ -34,7 +34,31 @@
     "partnyor_title": "Partnyor",
     "partnyor_subtitle": "All the services you need to improve medical quality and processes in one place, with convenient and effective solutions.",
     "question_title": "Frequently asked questions",
-    "all_question": "All questions"
+    "all_question": "All questions",
+
+    "medical": {
+      "subtitle": "Your health matters to us",
+      "badge": "Important!",
+      "title": "Legalize your medical practice with CLAMO!",
+      "description": "We help medical organizations in Uzbekistan obtain permits and licenses. Start your activity legally with CLAMO and open the way to providing quality services!"
+    },
+    "main": {
+      "title": "Go to the licensing and accreditation platform",
+      "description": "We will answer any questions you have in the field",
+      "button": "Access the platform",
+      "phone": "Short number"
+    },
+    "comments": {
+      "thought": "Feedback",
+      "your_opinion": "You can leave your feedback on the platform"
+    },
+    "cardComment": {
+      "name": "Umid G'afurov",
+      "title": "Review",
+      "badge": "CLAMO",
+      "time": "15 minutes ago",
+      "comment": "The process of obtaining a license was even faster and more transparent than expected. The digitization of all stages made our work much easier."
+    }
   },
   "LicensePage": {
     "license_title": "Licensing",

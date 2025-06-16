@@ -34,7 +34,31 @@
     "partnyor_title": "Hamkorkarimiz",
     "partnyor_subtitle": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.",
     "question_title": "Tez-tez beriladigan savollar",
-    "all_question": "Barcha savollar"
+    "all_question": "Barcha savollar",
+
+    "medical": {
+      "subtitle": "Sizning sog'lig'ingiz biz uchun",
+      "badge": "Muhim!",
+      "title": "CLAMO bilan tibbiy faoliyatingizni qonuniylashtiring!",
+      "description": "Biz tibbiy tashkilotlarga O'zbekistonda ruxsatnoma va litsenziya olishda yordam beramiz. CLAMO bilan faoliyatingizni qonuniy boshlang va sifatli xizmat ko'rsatishga yo'l oching!"
+    },
+    "main": {
+      "title": "Litsenziyalash va akkreditatsiyalash platformasiga o'ting",
+      "description": "Soha bo‘yicha har qanday savolingizga javob beramiz",
+      "button": "Platformaga kirish",
+      "phone": "Qisqa raqam"
+    },
+    "comments": {
+      "thought": "Fikr-mulohazalar",
+      "your_opinion": "O‘z fikr-mulohazalaringizni platformada qoldirishingiz mumkin"
+    },
+    "cardComment":{
+        "name": "Umid G'afurov",
+        "title": "Ko'rib chiqish",
+        "badge": "CLAMO",
+        "time": "15 daqiqa oldin",
+        "comment": "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi."
+    }
   },
   "LicensePage": {
     "license_title": "Litsenziyalash",
@@ -55,7 +79,7 @@
   "ContactPage": {
     "contact_title": "Bog'lanish",
     "contact_subtitle": "Bizning ofis manzilimizdagi aloqa ma'lumotlarimiz",
-    "phone_info":"Aloqa ma'lumotlari",
+    "phone_info": "Aloqa ma'lumotlari",
     "phone_number": "Telefon raqami",
     "email": "Elektron pochta",
     "website": "Rasmiy sayt",
@@ -70,7 +94,7 @@
     "info_person": "Yuridik shaxs haqida ma’lumotlar",
     "step_two": "2-qadam",
     "active_place": "Faolga oshirish joyi va ixtisoslik turlari haqida ma’lumotlar",
-    "work_direction":"Ishlash yo‘nalishlari",
-    "work_direction_subtitle":"Bizning bo‘limlariz bilan tanishing, bizda barcha bo‘limlariz xizmati juda qulay va siz uchun mos keladi."
+    "work_direction": "Ishlash yo‘nalishlari",
+    "work_direction_subtitle": "Bizning bo‘limlariz bilan tanishing, bizda barcha bo‘limlariz xizmati juda qulay va siz uchun mos keladi."
   }
 }

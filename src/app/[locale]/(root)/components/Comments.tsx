@@ -1,12 +1,16 @@
+"use client";
+
 import "../../../../styles/linerMainserver.css";
 import { commentOpinion } from "@/types/type";
 import Marquee from "react-fast-marquee";
 import { getCardComment, getOpinion } from "../../../../../constants/page";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function Izohlar() {
-  const cardComment = getCardComment;
-  const opinion = getOpinion;
+  const t = useTranslations("HomePage");
+  const cardComment = getCardComment(t);
+  const opinion = getOpinion(t);
 
   return (
     <div className="md:py-[64px] py-[30px]">

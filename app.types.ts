@@ -142,3 +142,32 @@ export interface  ContactData {
     name: string;
     link:string;
   }
+
+  export interface PlatformsServiceProps {
+    id: number;
+    title: string;
+    description: string;
+    buttonText: string;
+    buttonLink: string;
+    phoneTitle: string;
+    phoneNumber: string;
+    image: string;
+  }
+
+  export interface OpinionCard{
+    id: number;
+    icons: string;
+    subtitle: string;
+    description: string;
+  }
+
+  export interface CardComment {
+    id: number;
+    img: string;
+    name: string;
+    title: string;
+    badge: string;
+    staricon: string;
+    time: string;
+    comment: string;
+  }

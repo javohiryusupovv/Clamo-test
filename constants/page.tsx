@@ -13,7 +13,13 @@ import {
   Imagee,
   ContactData,
   SochealMedia,
+  PlatformsServiceProps,
+  OpinionCard,
+  CardComment,
 } from "../app.types";
+
+// import { TFunction } from "next-intl";
+type TFunction = (key: string) => string;
 
 export const getServices: ServiceCardProps[] = [
   {
@@ -108,129 +114,120 @@ export const getTeamCarousel: TeamMember[] = [
   },
 ];
 
-export const getMedical: MedicalLegalProps[] = [
+
+export const getMedical = (t: TFunction): MedicalLegalProps[] => [
   {
-    subtitle: "Sizning sog'lig'ingiz biz uchun",
-    badge: "Muhim!",
-    title: "CLAMO bilan tibbiy faoliyatingizni qonuniylashtiring!",
-    description:
-      "Biz tibbiy tashkilotlarga O'zbekistonda ruxsatnoma va litsenziya olishda yordam beramiz. CLAMO bilan faoliyatingizni qonuniy boshlang va sifatli xizmat ko'rsatishga yo'l oching!",
+    subtitle: t("medical.subtitle"),
+    badge: t("medical.badge"),
+    title: t("medical.title"),
+    description: t("medical.description"),
     bgCircle: "/images/twoCircle.png",
     clamoFlag: "@/assets/flag/flag1.png",
   },
 ];
 
-export const getPlatforms = [
+export const getPlatforms = (t: TFunction): PlatformsServiceProps[] => [
   {
     id: 1,
-    title: "Litsenziyalash va akkreditatsiyalash platformasiga o‘ting",
-    description: "Soha bo‘yicha har qanday savolingizga javob beramiz",
-    buttonText: "Platformaga kirish",
+    title: t("main.title"),
+    description: t("main.description"),
+    buttonText: t("main.button"),
     buttonLink: "#",
-    phoneTitle: "Qisqa raqam",
+    phoneTitle: t("main.phone"),
     phoneNumber: "1369",
     image: "/Imgs/Mockup.png",
   },
 ];
 
-export const getCardComment = [
+export const getCardComment = (t:TFunction): CardComment[] => [
   {
     id: 1,
     img: "/Imgs/Umid.png",
-    name: "Умид Гафуров",
-    title: "Отзыв о",
-    badge: "CLAMO",
+    name: t("cardComment.name"),
+    title: t("cardComment.title"),
+    badge: t("cardComment.badge"),
     staricon: "/Imgs/Stars.png",
-    time: "15 минут назад",
-    comment:
-      "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
+    time: t("cardComment.time"),
+    comment: t("cardComment.comment"),
   },
-  {
-    id: 2,
-    img: "/Imgs/Umid.png",
-    name: "Умид Гафуров",
-    title: "Отзыв о",
-    badge: "CLAMO",
-    staricon: "/Imgs/Stars.png",
-    time: "15 минут назад",
-    comment:
-      "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-  },
-  {
-    id: 3,
-    img: "/Imgs/Umid.png",
-    name: "Умид Гафуров",
-    title: "Отзыв о",
-    badge: "CLAMO",
-    staricon: "/Imgs/Stars.png",
-    time: "15 минут назад",
-    comment:
-      "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-  },
-  {
-    id: 4,
-    img: "/Imgs/Umid.png",
-    name: "Умид Гафуров",
-    title: "Отзыв о",
-    badge: "CLAMO",
-    staricon: "/Imgs/Stars.png",
-    time: "15 минут назад",
-    comment:
-      "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-  },
-  {
-    id: 5,
-    img: "/Imgs/Umid.png",
-    name: "Умид Гафуров",
-    title: "Отзыв о",
-    badge: "CLAMO",
-    staricon: "/Imgs/Stars.png",
-    time: "15 минут назад",
-    comment:
-      "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-  },
-  {
-    id: 6,
-    img: "/Imgs/Umid.png",
-    name: "Умид Гафуров",
-    title: "Отзыв о",
-    badge: "CLAMO",
-    staricon: "/Imgs/Stars.png",
-    time: "15 минут назад",
-    comment:
-      "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-  },
-  {
-    id: 7,
-    img: "/Imgs/Umid.png",
-    name: "Умид Гафуров",
-    title: "Отзыв о",
-    badge: "CLAMO",
-    staricon: "/Imgs/Stars.png",
-    time: "15 минут назад",
-    comment:
-      "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-  },
-  {
-    id: 8,
-    img: "/Imgs/Umid.png",
-    name: "Умид Гафуров",
-    title: "Отзыв о",
-    badge: "CLAMO",
-    staricon: "/Imgs/Stars.png",
-    time: "15 минут назад",
-    comment:
-      "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi.",
-  },
+    {
+        id: 2,
+        img: "/Imgs/Umid.png",
+        name: t("cardComment.name"),
+        title: t("cardComment.title"),
+        badge: t("cardComment.badge"),
+        staricon: "/Imgs/Stars.png",
+        time: t("cardComment.time"),
+        comment: t("cardComment.comment"),
+    },
+    {
+        id: 3,
+        img: "/Imgs/Umid.png",
+        name: t("cardComment.name"),
+        title: t("cardComment.title"),
+        badge: t("cardComment.badge"),
+        staricon: "/Imgs/Stars.png",
+        time: t("cardComment.time"),
+        comment: t("cardComment.comment"),
+    },
+    {
+        id: 4,
+        img: "/Imgs/Umid.png",
+        name: t("cardComment.name"),
+        title: t("cardComment.title"),
+        badge: t("cardComment.badge"),
+        staricon: "/Imgs/Stars.png",
+        time: t("cardComment.time"),
+        comment: t("cardComment.comment"),
+    },
+    {
+        id: 5,
+        img: "/Imgs/Umid.png",
+        name: t("cardComment.name"),
+        title: t("cardComment.title"),
+        badge: t("cardComment.badge"),
+        staricon: "/Imgs/Stars.png",
+        time: t("cardComment.time"),
+        comment: t("cardComment.comment"),
+    },
+    {
+        id: 6,
+        img: "/Imgs/Umid.png",
+        name: t("cardComment.name"),
+        title: t("cardComment.title"),
+        badge: t("cardComment.badge"),
+        staricon: "/Imgs/Stars.png",
+        time: t("cardComment.time"),
+        comment: t("cardComment.comment"),
+    },
+    {
+        id: 7,
+        img: "/Imgs/Umid.png",
+        name: t("cardComment.name"),
+        title: t("cardComment.title"),
+        badge: t("cardComment.badge"),
+        staricon: "/Imgs/Stars.png",
+        time: t("cardComment.time"),
+        comment: t("cardComment.comment"),
+    },
+    {
+        id: 8,
+        img: "/Imgs/Umid.png",
+        name: t("cardComment.name"),
+        title: t("cardComment.title"),
+        badge: t("cardComment.badge"),
+        staricon: "/Imgs/Stars.png",
+        time: t("cardComment.time"),
+        comment: t("cardComment.comment"),
+    },
 ];
 
-export const getOpinion = [
+export const getOpinion = (t:TFunction): OpinionCard[] => [
   {
     id: 1,
     icons: "/Imgs/sharh-logo.png",
-    subtitle: "Fikr-mulohazalar",
-    description:
-      "O‘z fikr-mulohazalaringizni platformada qoldirishingiz mumkin",
+    subtitle: t("comments.thought"),
+    description: t("comments.your_opinion"),
   },
 ];
 

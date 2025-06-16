@@ -5,9 +5,11 @@ import LearnMore from "./LearnMoreButton";
 import { useEffect } from "react";
 import Image from "next/image";
 import ClamoFlag from "../../../../assets/images/clamoFlag.png";
+import { useTranslations } from "next-intl";
 
 export default function MedicalLegal() {
-  const medical = getMedical;
+  const t = useTranslations("HomePage");
+  const medical = getMedical(t);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -56,3 +58,4 @@ export default function MedicalLegal() {
     </div>
   );
 }
+
