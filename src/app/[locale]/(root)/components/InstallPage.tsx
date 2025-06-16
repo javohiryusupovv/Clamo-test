@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { FaGooglePlay } from "react-icons/fa";
 import { SiApple } from "react-icons/si";
@@ -7,11 +7,12 @@ import { useEffect } from "react";
 import Image from "next/image";
 import Phone from "../../../../../public/Imgs/iPhone15Pro.png";
 import QR from "@/assets/icons/QR.png";
+import Huawie from "@/assets/icons/huawie.png";
 import { useTranslations } from "next-intl";
 
-export default function InstallPage() {
 
-    const t = useTranslations("HomePage")
+export default function InstallPage() {
+  const t = useTranslations("HomePage");
 
   useEffect(() => {
     const loadAOS = async () => {
@@ -26,11 +27,10 @@ export default function InstallPage() {
 
   return (
     <section className="w-full px-4">
-      <div className="container mx-auto bg-[#0653C9] flex flex-wrap lg:flex-nowrap justify-end items-center max-sm:items-start w-full min-h-[304px] max-sm:h-[700px] max-xxs:h-[670px] rounded-[36px] max-sm:rounded-2xl p-4 lg:p-8 relative   ">
-
+      <div className="container mx-auto bg-[#0653C9] flex flex-wrap lg:flex-nowrap justify-end items-center max-sm:items-start w-full min-h-[304px] max-sm:h-[700px] max-xxs:h-[670px] rounded-[36px] max-sm:rounded-2xl p-4 lg:p-8 relative">
         {/* Phone Image */}
         <div className="absolute bottom-0 left-[-40px] lg:left-[-60px] z-10 max-w-full sm:max-w-[200px] lg:max-w-none overflow-hidden">
-           <Image
+          <Image
             src={Phone}
             alt="Sharh Phone Share"
             className="object-contain lg:block hidden max-sm:flex max-sm:object-cover"
@@ -39,7 +39,7 @@ export default function InstallPage() {
         </div>
 
         {/* Content Section */}
-        <div className="w-full lg:w-1/2 z-20 mt-6 lg:mt-0">
+        <div className="w-full lg:w-1/2 z-20 mt-6 lg:mt-0 max-xl:translate-x-3 max-lg:translate-x-0">
           <h6 className="text-[20px] sm:text-[24px] font-bold text-white mb-2">
             {t("install_app")}
           </h6>
@@ -67,6 +67,11 @@ export default function InstallPage() {
 
             {/* Huawei AppGallery */}
             <button className="flex items-center px-4 py-2 bg-white/20 rounded-lg gap-2">
+              <Image
+                src={Huawie}
+                alt="Huawei logo"
+                className="w-8 h-8 object-contain"
+              />
 
               <div className="text-left">
                 <p className="text-xs text-white uppercase">Explore it on</p>
@@ -78,7 +83,7 @@ export default function InstallPage() {
 
         {/* QR Code */}
         <div className="w-full lg:w-auto mt-6 lg:mt-0 z-20 flex justify-center lg:justify-end">
-           <Image
+          <Image
             src={QR}
             alt="QR code"
             width={180}

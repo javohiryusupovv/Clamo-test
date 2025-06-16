@@ -74,7 +74,7 @@ export default function Hero() {
     <div className=" overflow-x-hidden">
       <div>
         {/* Ko'k soya */}
-        <div className="absolute -top-[-230px] left-[-200px] w-4/5 h-[280px] bg-[rgb(35,179,252)] opacity-25 blur-[120px] rounded-full z-0"></div>
+        <div className="absolute -top-[-230px] left-[-200px] w-4/5 h-[280px] bg-[rgb(35,179,252)] opacity-25 blur-[120px] rounded-full x`-z-[1]"></div>
         <section className="container grid lg:grid-cols-2 grid-cols-1 lg:gap-20 lg:pb-10 lg:relative">
           <div className="lg:mt-[163px] md:mt-[90px] mt-[50px]">
             <p className="uppercase text-[#3D445E] md:text-[14px] text-[12px] font-medium lg:w-[582px] pb-[11px] max-sm:w-[250px]">

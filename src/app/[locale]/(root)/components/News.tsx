@@ -6,6 +6,7 @@ import Image from "next/image";
 import Shahar from "../../../../../public/Imgs/Shahar.png";
 import WhiteDown from "@/assets/icons/whiteDown.png";
 import { useTranslations } from "next-intl";
+import Down from "@/assets/icons/whiteDown.png";
 
 export default function NewsPage() {
   const t = useTranslations("HomePage");
@@ -114,12 +115,12 @@ export default function NewsPage() {
       <div className="flex md:justify-end justify-center pt-6">
         <button className="group w-full max-w-[200px] h-[35px] sm:w-[250px] sm:h-[40px] flex items-center justify-center gap-3 bg-[#23B3FC] hover:bg-[#23B3FC]/[80%] rounded-lg text-xs sm:text-sm md:text-base font-medium text-white">
           {t("learn_more_button")}
+          <Image
+            src={Down}
+            alt="down strelka"
+            className="group-hover:translate-x-2 transition-all duration-200"
+          />
         </button>
-        <Image
-          src={WhiteDown}
-          alt="down strelka"
-          className="w-4 h-4 group-hover:translate-x-2 transition-all duration-200"
-        />
       </div>
     </div>
   );
