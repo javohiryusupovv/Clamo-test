@@ -1,4 +1,3 @@
-import { JSX } from "react";
 
 export interface ServiceCardProps {
   icon: string;
@@ -184,9 +183,3 @@ export interface  ContactData {
       image: string;
       description: string;
   };
-
-  export interface CarouselData {
-    map(arg0: (ssss: any, index: any) => JSX.Element): import("react").ReactNode;
-    title: string;
-    description: string;
-  }

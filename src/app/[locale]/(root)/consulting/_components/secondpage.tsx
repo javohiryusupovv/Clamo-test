@@ -6,10 +6,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import { useTranslations } from "next-intl";
-import { CarouselData } from "../../../../../../app.types";
 
+export interface CarouselData {
+    title: string;
+    description: string;
+  }
 
-export default function secondpage({carousel}: {carousel:CarouselData }) {
+export default function secondpage({carousel}: {carousel:CarouselData[] }) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const t = useTranslations("ConsultingPage")
 
@@ -57,7 +60,7 @@ export default function secondpage({carousel}: {carousel:CarouselData }) {
         modules={[Autoplay]}
         className="md:h-[254px] sm:h-[210px] h-[170px] container swipers sm:pl-12 md:pl-2"
       >
-        {carousel.map((ssss, index) => (
+        {carousel.map((ssss: CarouselData, index: number) => (
           <SwiperSlide key={index}>
             <div className="hover:bg-[#0653C9] text-[#3D445E] hover:text-[#FFFFFF] border duration-300 p-4 sm:p-6 !border-[#E3E8E9] rounded-[28px] h-full flex flex-col cursor-pointer">
               <h3 className="sm:mb-2 font-bold md:text-[28px] sm:text-[25px] font-vksans leading-[150%]">
