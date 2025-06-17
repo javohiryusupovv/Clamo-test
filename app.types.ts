@@ -211,3 +211,20 @@ export interface  ContactData {
     icon: string;
     link: string;
   }
+
+
+
+export interface TeamMembers {
+    id: number;
+    created_at: string;
+    updated_at: string;
+    image: string;
+    full_name: string;
+    full_name_uz: string;
+    full_name_en: string;
+    full_name_ru: string;
+    description: string;
+    description_uz: string;
+    description_en: string;
+    description_ru: string;
+  };
