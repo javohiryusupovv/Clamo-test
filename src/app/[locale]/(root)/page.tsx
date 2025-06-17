@@ -7,8 +7,6 @@ import NewsPage from "@/app/[locale]/(root)/components/News";
 import QuestionsPage from "@/app/[locale]/(root)/components/QuestionsPage";
 import Partnyor from "./components/partnyor/Partnyor";
 
-
-
 async function getData() {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/home/stats/`,
@@ -34,6 +32,8 @@ async function getNews() {
   return res.json();
 }
 
+
+
 export default async function Main() {
   const data = await getData();
   const datas = await getNews();
@@ -44,12 +44,12 @@ export default async function Main() {
       <MedicalLegal />
       <MainService />
       <Izohlar />
-      <NewsPage news={datas[1]} />{" "}
+      <NewsPage news={datas[2]} />
       <div className="bg-[#f6f9fc] py-[60px]">
         <InstallPage />
         <Partnyor />
       </div>
-      <QuestionsPage />
+      <QuestionsPage  />
     </div>
   );
 }

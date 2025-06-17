@@ -8,6 +8,8 @@ import Down from "@/assets/icons/whiteDown.png";
 import { NewsTypes } from "../../../../../app.types";
 
 export default function NewsPage({ news }: { news: NewsTypes }) {
+    // console.log(news);
+
   const t = useTranslations("HomePage");
 
   return (

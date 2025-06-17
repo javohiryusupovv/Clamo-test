@@ -64,6 +64,7 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
   }, []);
 
 
+
   const animatedClinics = useCountUp(Number(numbers.clinics_number));
   const animatedConsulting = useCountUp(Number(numbers.consulting_number));
   const animatedLicenses = useCountUp(Number(numbers.licenses_number));
