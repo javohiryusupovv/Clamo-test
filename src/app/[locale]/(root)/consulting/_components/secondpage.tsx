@@ -6,11 +6,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import { useTranslations } from "next-intl";
+import { CarouselData } from "../../../../../../app.types";
 
-export interface CarouselData {
-    title: string;
-    description: string;
-  }
+
 
 export default function secondpage({carousel}: {carousel:CarouselData[] }) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
