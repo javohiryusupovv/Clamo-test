@@ -9,7 +9,7 @@ import { getContactInfo } from "../../../../../../constants/page";
 import { useTranslations } from "next-intl";
 
 export default function ContactPage() {
-  const t = useTranslations("ContactPage");
+  const t = useTranslations("ContactPageLayout");
   const contact = getContactInfo;
   return (
     <div className="relative w-full h-[550px] mb-20 ">

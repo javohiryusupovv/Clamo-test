@@ -1,15 +1,15 @@
 "use client";
-import Image from "next/image";
+
 import { useEffect, useState } from "react";
 import { ChevronDown, SearchIcon } from "lucide-react";
 import { getFilter, getPaginatedData } from "../../../../../../constants/page";
-import Location from "../../../../../../public/Map.svg";
+import { IoLocationOutline } from "react-icons/io5";
 import Link from "next/link";
-import ClinikStrelka from "../../../../../../public/CliniksStrelka.svg"
+import { FaArrowRightLong } from "react-icons/fa6";
 import { useTranslations } from "next-intl";
 
 export default function Clinics() {
-    const t = useTranslations("LicensePage")
+  const t = useTranslations("LicensePage");
   const [search, setSearch] = useState("");
   const [selectedFilter, setSelectedFilter] = useState<string>("0");
   const [page, setPage] = useState(1);
@@ -105,13 +105,14 @@ export default function Clinics() {
 
                   <div className="flex flex-col sm:flex-row sm:items-center sm:flex-nowrap gap-2 sm:gap-4">
                     <div className="flex items-center gap-1">
-                      <Image
-                        src={Location}
-                        alt="map location icon"
+                      <IoLocationOutline
+                        className="text-[#23B3FC]"
                         width={24}
                         height={24}
                       />
-                      <span className="text-[14px] font-normal text-[#3D445E]">{clinic.location}</span>
+                      <span className="text-[14px] font-normal text-[#3D445E]">
+                        {clinic.location}
+                      </span>
                     </div>
 
                     <span className="bg-[#E3E8ED] rounded-lg text-[#3D445E] text-[10px] sm:text-xs sm:px-[14px] py-[4px] mt-1 sm:mt-0">
@@ -122,9 +123,9 @@ export default function Clinics() {
                   </div>
                 </div>
 
-                <button className="group flex items-center gap-1 mt-2 sm:mt-0 text-[10px] sm:text-xs md:text-sm text-[#23B3FC] font-medium bg-blue-50 px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-2 rounded-md hover:bg-blue-100 transition-colors">
+                <button className="group flex items-center justify-center gap-1 mt-2 sm:mt-0 text-[10px] sm:text-xs md:text-sm text-[#23B3FC] font-medium bg-blue-50 px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-2 rounded-md hover:bg-blue-100 transition-colors">
                   {clinic.license_btn}
-                  <Image src={ClinikStrelka} alt="Strelka" className=" group-hover:rotate-45 group-hover:scale-105 transition-all duration-100"/>
+                  <FaArrowRightLong className="group-hover:rotate-[1deg] group-hover:scale-105 transition-all duration-100 -rotate-45" />
                 </button>
               </div>
 

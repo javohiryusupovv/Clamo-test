@@ -79,7 +79,7 @@
     "necessary_license": " Tashkilotingiz uchun zarur litsenziyani tez va ishonchli tarzda oling. Clamo sizning qonuniylikdagi ishonchli hamkoringiz.",
     "get_accerditation": "Akkreditsiya olish bosqichlari"
   },
-  "ContactPage": {
+  "ContactPageLayout": {
     "contact_title": "Bog'lanish",
     "contact_subtitle": "Bizning ofis manzilimizdagi aloqa ma'lumotlarimiz",
     "phone_info": "Aloqa ma'lumotlari",

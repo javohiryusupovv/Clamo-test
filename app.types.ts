@@ -33,9 +33,9 @@ export interface NewsType {
   id: number;
   slug: string;
   title: string;
-  title_uz?: string;
-  created_at?: string;
-  image?: string;
+  title_uz: string;
+  created_at: string;
+  image: string;
 };
 
 export interface MedicalLegalProps {
@@ -171,3 +171,15 @@ export interface  ContactData {
     time: string;
     comment: string;
   }
+
+
+
+  export interface NewsTypes {
+      id: number;
+      slug: string;
+      title: string;
+      title_uz: string;
+      created_at: string;
+      image: string;
+      description: string;
+  };
