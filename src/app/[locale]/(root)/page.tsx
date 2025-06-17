@@ -6,32 +6,8 @@ import MedicalLegal from "@/app/[locale]/(root)/components/MedicalLegal";
 import NewsPage from "@/app/[locale]/(root)/components/News";
 import QuestionsPage from "@/app/[locale]/(root)/components/QuestionsPage";
 import Partnyor from "./components/partnyor/Partnyor";
-
-async function getData() {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/home/stats/`,
-    {
-      next: { revalidate: 60 },
-      cache: "no-store",
-    }
-  );
-
-  if (!res.ok) throw new Error("Ma'lumotni olishda xatolik");
-
-  return res.json();
-}
-
-async function getNews() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/news/news`, {
-    next: { revalidate: 60 },
-    cache: "no-store",
-  });
-
-  if (!res.ok) throw new Error("Yangiliklarni olishda xatolik");
-
-  return res.json();
-}
-
+import { getData } from "@/lib/getData";
+import { getNews } from "@/lib/getNews";
 
 
 export default async function Main() {
@@ -49,7 +25,7 @@ export default async function Main() {
         <InstallPage />
         <Partnyor />
       </div>
-      <QuestionsPage  />
+      <QuestionsPage />
     </div>
   );
 }
