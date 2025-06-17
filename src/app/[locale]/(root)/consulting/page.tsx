@@ -14,7 +14,7 @@ export async function getCarousel() {
 
   return res.json();
 }
-export default async function page() {
+export default async function Page() {
   const carouselData = await getCarousel();
   return (
     <div>
