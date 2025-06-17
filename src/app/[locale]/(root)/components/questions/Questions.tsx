@@ -6,7 +6,7 @@ import {  getfaqData } from '../../../../../../constants/page';
 
 
 
-const FaqAccordion: React.FC = () => {
+export default function FaqAccordion() {
   const faqData = getfaqData
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -33,5 +33,3 @@ const FaqAccordion: React.FC = () => {
     </div>
   );
 };
-
-export default FaqAccordion;

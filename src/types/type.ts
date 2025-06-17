@@ -40,3 +40,20 @@ export interface MainServiceCardProps {
     label: string;
     flag: string | StaticImageData;
   };
+
+
+
+  export type NumbersType = {
+  consulting_number: string;
+  licenses_number: string;
+  clinics_number: string;
+};
+
+export type StatsType = {
+  id: number;
+  consulting_number: string;
+  licenses_number: string;
+  clinics_number: string;
+  created_at: string;
+  updated_at: string;
+};
