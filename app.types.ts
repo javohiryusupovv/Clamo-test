@@ -189,3 +189,15 @@ export interface  ContactData {
     title: string;
     description: string;
   }
+
+  export interface FaqItem {
+    id: number;
+    question: string;
+    question_uz: string;
+    question_en: string;
+    question_ru: string;
+    answer: string;
+    answer_uz: string;
+    answer_en: string;
+    answer_ru: string;
+  }

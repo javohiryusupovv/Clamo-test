@@ -1,35 +1,58 @@
+"use client";
 
-'use client';
-
-import React, { useState } from 'react';
-import {  getfaqData } from '../../../../../../constants/page';
-
-
+import { useEffect, useState } from "react";
+import { FaqItem } from "../../../../../../app.types";
 
 export default function FaqAccordion() {
-  const faqData = getfaqData
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [faqData, setFaqData] = useState<FaqItem[]>([]);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/home/faqs/`)
+      .then((res) => res.json())
+      .then((data) => setFaqData(data))
+      .catch((err) => console.error("FAQ fetch error:", err));
+  }, []);
 
   const toggleAccordion = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+    setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
   return (
-    <div className="w-auto mx-auto py-4">
-      {faqData.map((item, index) => (
-        <div key={index} className="px-4 py-4 rounded-[16px] bg-[#F5F5F533]/20% mb-4 border hover:border-[#0653C9] hover:cursor-pointer">
-          <button
-            className="w-full text-left flex justify-between items-center"
-            onClick={() => toggleAccordion(index)}
+    <div className="container md:py-16 py-8">
+      <div className="flex flex-col gap-4">
+        {faqData.map((item, index) => (
+          <div
+            key={item.id}
+            className={`${
+              openIndex === index ? "" : "bg-white"
+            } rounded-lg border border-blue-100 hover:bg-slate-50`}
           >
-            <span className="font-medium text-lg">{item.question}</span>
-            <span>{openIndex === index ? '-' : '+'}</span>
-          </button>
-          {openIndex === index && (
-            <p className="mt-2 text-gray-600">{item.answer}</p>
-          )}
-        </div>
-      ))}
+            <button
+              onClick={() => toggleAccordion(index)}
+              className={`w-full text-left px-6 py-5 text-lg font-medium cursor-pointer flex items-center justify-between ${
+                openIndex === index
+                  ? "border-x border-t border-blue-500 rounded-t-lg"
+                  : ""
+              }`}
+            >
+              <span>{item.question_uz}</span>
+              <span
+                className={`text-2xl ${
+                  openIndex === index ? "text-blue-500" : "text-slate-400"
+                }`}
+              >
+                {openIndex === index ? "−" : "+"}
+              </span>
+            </button>
+            {openIndex === index && (
+              <div className="px-6 pb-5 text-base text-slate-700 leading-relaxed border-x border-b border-blue-500 rounded-b-lg">
+                {item.answer_uz}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
-};
+}

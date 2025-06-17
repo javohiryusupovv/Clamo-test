@@ -8,8 +8,8 @@ import { useTranslations } from "next-intl";
 
 export default function ServicesSection() {
   const t = useTranslations("AboutPage");
-  const services = getServices(t); // t functionni argument sifatida berildi
-
+  const services = getServices(t);
+  
   return (
     <section className="py-16 bg-[#F6F9FC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
