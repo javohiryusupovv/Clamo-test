@@ -7,8 +7,6 @@ import { useTranslations } from "next-intl";
 import { Partner } from "../../../../../../app.types";
 
 export default function Partnyor({partners}: {partners: Partner[]}) {
-    console.log("PaPrtners:", partners);
-
   const t = useTranslations("InternationalPage");
 
   return (

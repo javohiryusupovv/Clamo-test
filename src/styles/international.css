@@ -15,7 +15,7 @@
         filter: blur(200px);
         z-index:-2;
     }
-   
+
     &::after{
         content: "";
         position: absolute;
@@ -42,7 +42,6 @@
     filter: blur(30px);
     z-index: 20;
   }
-  /*Shadow ya'ni 1-sahifani 2-sahifaga ulashda alohida bulib qolmasligi uchun*/
 
 
   .cardhamkorlar{
