@@ -4,7 +4,6 @@ import "./style.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules"; // 🔹 autoplay moduli
-import { getcardData } from '../../../../../../constants/page';
 import { useTranslations } from "next-intl";
 import { CarouselData } from "../../../../../../app.types";
 
@@ -12,8 +11,6 @@ import { CarouselData } from "../../../../../../app.types";
 export default function secondpage({carousel}: {carousel:CarouselData }) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const t = useTranslations("ConsultingPage")
-  const cardData = getcardData
-
 
   return (
     <div className=" h-[518px] second-div w-full bg-[#ffffff]">
@@ -59,18 +56,19 @@ export default function secondpage({carousel}: {carousel:CarouselData }) {
         modules={[Autoplay]}
         className="md:h-[254px] sm:h-[210px] h-[170px] container swipers sm:pl-12 md:pl-2"
       >
-        {cardData.map((carousel, index) => (
+        {carousel.map((ssss, index) => (
           <SwiperSlide key={index}>
             <div className="hover:bg-[#0653C9] text-[#3D445E] hover:text-[#FFFFFF] border duration-300 p-4 sm:p-6 !border-[#E3E8E9] rounded-[28px] h-full flex flex-col cursor-pointer">
               <h3 className="sm:mb-2 font-bold md:text-[28px] sm:text-[25px] font-vksans leading-[150%]">
-                {carousel.title}
+                {ssss.title}
               </h3>
               <p className="font-normal font-vksans text-[14px] sm:text-[15px] md:text-[16px] leading-[150%]">
-                {carousel.description}
+                {ssss.description}
               </p>
             </div>
           </SwiperSlide>
         ))}
+
       </Swiper>
     </div>
   );
