@@ -1,13 +1,13 @@
 import Firstpage from "./_components/firstpage"
-import FAQSection from "./_components/questions"
 import Secondpage from "./_components/secondpage"
-
-export default function page() {
+import QuestionsPage from "@/app/[locale]/(root)/components/QuestionsPage";
+import { FaqItem } from "../../../../../app.types";
+export default function page({faqData}: {faqData: FaqItem[]}) {
   return (
     <div>
       <Firstpage/>
       <Secondpage/>
-      <FAQSection/>
+      <QuestionsPage faqData={faqData}/>
       </div>
   )
 }
