@@ -80,12 +80,12 @@ export default function Navbar() {
       <div
         className={
           header
-            ? "bg-gray-100 fixed top-0 z-[999] w-full transition-transform duration-500 ease-in-out shadow-xl"
+            ? "backdrop-blur-3xl fixed top-0 z-[999] w-full transition-transform duration-500 ease-in-out"
             : "bg-transparent relative z-[999]"
         }
       >
         <nav
-          className={`flex items-center justify-between py-3 lg:py-7 z-[999] container`}
+          className={`flex items-center justify-between py-3 z-[999] container`}
         >
           <ul>
             {imgg.map((item) => (

@@ -1,17 +1,13 @@
 "use client";
-import { useEffect, useState } from "react";
-import { FaqItem } from "../../../../../../app.types";
+import { useState } from "react";
+import { FAQItem } from "../../../../../../app.types";
 
-export default function FaqAccordion() {
-  const [faqData, setFaqData] = useState<FaqItem[]>([]);
+interface Props {
+  faqData: FAQItem[];
+}
+
+export default function FaqAccordion({ faqData }: Props) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/home/faqs/`)
-      .then((res) => res.json())
-      .then((data) => setFaqData(data))
-      .catch((err) => console.error("FAQ fetch error:", err));
-  }, []);
 
   const toggleAccordion = (index: number) => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
@@ -22,7 +18,7 @@ export default function FaqAccordion() {
       <div className="flex flex-col gap-4">
         {faqData.map((item, index) => (
           <div
-            key={item.id}
+            key={index}
             className={`${
               openIndex === index ? "" : "bg-white"
             } rounded-lg border border-blue-100 hover:bg-slate-50`}
@@ -35,7 +31,7 @@ export default function FaqAccordion() {
                   : ""
               }`}
             >
-              <span>{item.question_uz}</span>
+              <span>{item.question}</span>
               <span
                 className={`text-2xl ${
                   openIndex === index ? "text-blue-500" : "text-slate-400"
@@ -46,7 +42,7 @@ export default function FaqAccordion() {
             </button>
             {openIndex === index && (
               <div className="px-6 pb-5 text-base text-slate-700 leading-relaxed border-x border-b border-blue-500 rounded-b-lg">
-                {item.answer_uz}
+                {item.answer}
               </div>
             )}
           </div>

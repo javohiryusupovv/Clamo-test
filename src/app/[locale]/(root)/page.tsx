@@ -8,11 +8,15 @@ import QuestionsPage from "@/app/[locale]/(root)/components/QuestionsPage";
 import Partnyor from "./components/partnyor/Partnyor";
 import { getData } from "@/lib/getData";
 import { getNews } from "@/lib/getNews";
+import { getPartners } from "@/lib/getPartners";
+import { getFaqs } from "@/lib/getFaqs";
 
 
 export default async function Main() {
   const data = await getData();
   const datas = await getNews();
+  const part = await getPartners()
+  const faqData = await getFaqs()
 
   return (
     <div className="overflow-hidden">
@@ -23,9 +27,10 @@ export default async function Main() {
       <NewsPage news={datas[2]} />
       <div className="bg-[#f6f9fc] py-[60px]">
         <InstallPage />
-        <Partnyor />
+        {/* partniyor fayliga props junatdim hali to'liq emas */}
+        <Partnyor partners={part} />
       </div>
-      <QuestionsPage />
+      <QuestionsPage faqData={faqData} />
     </div>
   );
 }

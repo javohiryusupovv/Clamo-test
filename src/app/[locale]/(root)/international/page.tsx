@@ -4,7 +4,7 @@ import { ChevronRight } from "lucide-react";
 
 import "../../../../styles/international.css";
 import { useTranslations } from "next-intl";
-import Partnyor from "../components/partnyor/Partnyor";
+// import Partnyor from "../components/partnyor/Partnyor";
 import Image from "next/image";
 import { getHamkorlar } from "../../../../../constants/page";
 
@@ -45,7 +45,7 @@ export default function InternationalMain() {
                 <div className="shape" />
             </div>
 
-            <Partnyor/>
+            {/* <Partnyor /> */}
 
             <div className="w-full py-16 mb-32">
                 <div className="container">

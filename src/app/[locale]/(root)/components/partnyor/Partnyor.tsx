@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
-import { getPartners } from "../../../../../../constants/page";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { Partner } from "../../../../../../app.types";
 
-export default function Partnyor() {
-  const partnyors = getPartners;
+export default function Partnyor({partners}: {partners: Partner[]}) {
+    console.log("PaPrtners:", partners);
+
   const t = useTranslations("InternationalPage");
 
   return (
@@ -23,7 +24,7 @@ export default function Partnyor() {
 
       <div className="w-full space-y-6 overflow-hidden">
         <Marquee direction="right" speed={30} gradient pauseOnHover>
-          {partnyors.map((img) => (
+          {partners.map((img) => (
             <Link
               href="#"
               key={img.id}
@@ -41,7 +42,7 @@ export default function Partnyor() {
         </Marquee>
 
         <Marquee direction="left" speed={30} gradient pauseOnHover>
-          {partnyors.reverse().map((img) => (
+          {partners.reverse().map((img) => (
             <Link
               href="#"
               key={img.id}
