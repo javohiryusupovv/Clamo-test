@@ -3,7 +3,7 @@
 import "./style.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Autoplay } from "swiper/modules"; // 🔹 autoplay moduli
+import { Autoplay } from "swiper/modules"; 
 import { useTranslations } from "next-intl";
 import { CarouselData } from "../../../../../../app.types";
 

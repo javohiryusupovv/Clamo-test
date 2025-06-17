@@ -1,7 +1,7 @@
 import Firstpage from "./_components/firstpage";
 import Secondpage from "./_components/secondpage";
 
-async function getCarousel() {
+export async function getCarousel() {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/about/directions/`,
     {
