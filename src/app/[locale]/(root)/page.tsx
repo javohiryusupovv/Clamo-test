@@ -6,10 +6,12 @@ import MedicalLegal from "@/app/[locale]/(root)/components/MedicalLegal";
 import NewsPage from "@/app/[locale]/(root)/components/News";
 import QuestionsPage from "@/app/[locale]/(root)/components/QuestionsPage";
 import Partnyor from "./components/partnyor/Partnyor";
+import ServicesSection from "./about/_components/AboutService";
 import { getData } from "@/lib/getData";
 import { getNews } from "@/lib/getNews";
 import { getPartners } from "@/lib/getPartners";
 import { getFaqs } from "@/lib/getFaqs";
+import { getServicec } from "@/lib/getServicec";
 
 
 export default async function Main() {
@@ -17,17 +19,18 @@ export default async function Main() {
   const datas = await getNews();
   const part = await getPartners()
   const faqData = await getFaqs()
+  const service = await getServicec();
 
   return (
     <div className="overflow-hidden">
       <Hero numbers={data[0]} />
       <MedicalLegal />
+      <ServicesSection servicec={service} />
       <MainService />
       <Izohlar />
-      <NewsPage news={datas[2]} />
+      <NewsPage news={datas[1]} />
       <div className="bg-[#f6f9fc] py-[60px]">
         <InstallPage />
-        {/* partniyor fayliga props junatdim hali to'liq emas */}
         <Partnyor partners={part} />
       </div>
       <QuestionsPage faqData={faqData} />

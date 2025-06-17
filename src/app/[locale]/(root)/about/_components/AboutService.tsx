@@ -2,14 +2,15 @@
 
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { getServices } from "../../../../../../constants/page";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { ServiceData } from "../../../../../../app.types";
 
-export default function ServicesSection() {
+export default function ServicesSection({servicec}: { servicec: ServiceData[] }) {
   const t = useTranslations("AboutPage");
-  const services = getServices(t);
-  
+  console.log(servicec);
+
+
   return (
     <section className="py-16 bg-[#F6F9FC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,7 +25,7 @@ export default function ServicesSection() {
 
         {/* Service Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
+          {servicec.map((service, index) => (
             <div
               key={index}
               className="group bg-white rounded-2xl shadow-sm hover:shadow-md p-6 flex flex-col justify-between transition duration-300 hover:-translate-y-1"
@@ -49,7 +50,7 @@ export default function ServicesSection() {
               {/* Bottom CTA */}
               <div className="mt-6 flex justify-end items-center gap-4">
                 <Link
-                  href={service.link}
+                  href={service.title}
                   className="text-sm text-[#23B3FC] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 >
                   {t("batafsil")}

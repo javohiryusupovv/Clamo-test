@@ -201,3 +201,13 @@ export interface  ContactData {
     answer_en: string;
     answer_ru: string;
   }
+
+  export interface ServiceData {
+    id: number;
+    title: string;
+    title_uz: string;
+    description: string;
+    description_uz: string;
+    icon: string;
+    link: string;
+  }

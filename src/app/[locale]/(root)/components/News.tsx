@@ -26,7 +26,7 @@ export default function NewsPage({ news }: { news: NewsTypes }) {
           {news?.image ? (
             <Image
               src={news.image}
-              alt="City image"
+              alt={news.title}
               className="w-full h-full"
               width={300}
               height={200}
