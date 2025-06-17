@@ -183,3 +183,8 @@ export interface  ContactData {
       image: string;
       description: string;
   };
+
+  export interface CarouselData {
+    title: string;
+    description: string;
+  }
