@@ -33,7 +33,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="px-4 py-8">
+    <div className="px-0 py-8">
       <div className="container relative z-[40] flex flex-col lg:flex-row items-center justify-between w-full bg-[#0653C9] rounded-[36px]">
         
         {/* Contact Info */}
@@ -152,7 +152,7 @@ export default function Contact() {
               >
                 {t("phonee")}
               </label>
-              <div className="w-full bg-[#F7F7F8] flex flex-col sm:flex-row gap-2 px-3 py-2 sm:py-0 sm:h-10 rounded-lg border border-transparent focus-within:border-[#1a60cd]">
+              <div className="w-full bg-[#F7F7F8] flex flex-row gap-2 px-3 py-2 sm:py-0 sm:h-10 rounded-lg border border-transparent focus-within:border-[#1a60cd]">
                 <article className="flex items-center gap-1">
                   <Image src={uzbflag} className="w-9" alt="Flag Icons" />
                   <span className="text-[#3D445E] text-[14px]">+998</span>
