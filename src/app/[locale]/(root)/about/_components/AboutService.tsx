@@ -30,9 +30,7 @@ export default function ServicesSection({ servicec }: { servicec: ServiceData[] 
         {/* Service Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {servicec.map((service, index) => {
-            const localizedTitle = getLocalizedValue(service, "title", locale);
-            const localizedDescription = getLocalizedValue(service, "description", locale);
-            
+           
             return (
               <div
                 key={index}
