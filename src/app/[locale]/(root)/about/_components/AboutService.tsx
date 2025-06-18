@@ -47,10 +47,10 @@ export default function ServicesSection({ servicec }: { servicec: ServiceData[] 
                     className="mb-4"
                   />
                   <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                    {service.title}
+                    {localizedTitle}
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    { service.description}
+                    { localizedDescription}
                   </p>
                 </div>
 
