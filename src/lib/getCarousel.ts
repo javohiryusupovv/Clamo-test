@@ -1,4 +1,3 @@
-// src/lib/getCarousel.ts
 export async function getCarousel() {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/about/directions/`,
