@@ -38,6 +38,7 @@ export default function MedicalLegal() {
             <h1 className="font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl leading-tight text-[#3D445E] mb-4">
               {item.title}
             </h1>
+            {/* <p></p> */}
             <p className="font-medium text-base sm:text-lg lg:text-xl text-gray-700 mb-6">
               {item.description}
             </p>
