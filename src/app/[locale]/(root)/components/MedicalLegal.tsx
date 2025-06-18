@@ -44,7 +44,7 @@ export default function MedicalLegal() {
             <LearnMore />
           </div>
 
-          <div className="relative bottom-0 z-[60] lg:h-[400px] overflow-hidden">
+          <div className="relative bottom-0 z-[60] lg:h-[400px]">
             <div className="bg-[url('../assets/images/twoCircle.png')] bg-no-repeat bg-center bg-contain w-full h-[950px] absolute -top-[480px] hidden lg:block -z-[1]"></div>
             <Image
               src={ClamoFlag}
