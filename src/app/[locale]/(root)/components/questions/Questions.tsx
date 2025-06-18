@@ -32,6 +32,7 @@ export default function FaqAccordion({ faqData }: Props) {
               }`}
             >
               <span>{item.question}</span>
+              {/* <span></span> */}
               <span
                 className={`text-2xl ${
                   openIndex === index ? "text-blue-500" : "text-slate-400"
