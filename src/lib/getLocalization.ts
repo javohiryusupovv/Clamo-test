@@ -1,7 +1,7 @@
-
-export function getLocalizedValue(obj: Record<string, any>, key: string, locale: string): string {
-  const localizedKey = `${key}_${locale}`;
-  console.log(localizedKey);
-  
-  return obj[localizedKey] || obj[key] || "";
+export function getLocalizedValue( data: Record<string, any>,key: string, lang: string, fallback: string = "uz"): string {
+    return (
+        data[`${key}_${lang}`] ||
+        data[`${key}_${fallback}`] ||
+        data[key] || ""
+    );
 }
