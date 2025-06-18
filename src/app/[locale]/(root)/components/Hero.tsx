@@ -70,7 +70,7 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
   const animatedLicenses = useCountUp(Number(numbers.licenses_number));
 
   console.log(animatedConsulting);
-
+  
 
   return (
     <div className=" overflow-x-hidden">

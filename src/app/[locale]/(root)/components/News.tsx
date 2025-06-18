@@ -3,14 +3,20 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Down from "@/assets/icons/whiteDown.png";
 import { NewsTypes } from "../../../../../app.types";
+import { getLocalizedValue } from "@/lib/getLocalization";
 
 export default function NewsPage({ news }: { news: NewsTypes }) {
-    // console.log(news);
-
   const t = useTranslations("HomePage");
+
+  const locale = useLocale();
+
+  const localDescription = getLocalizedValue(news, "description", locale);
+  const localTitle = getLocalizedValue(news, "title", locale);
+  news.description = localDescription;
+  news.title = localTitle;
 
   return (
     <div className="container pb-10">
