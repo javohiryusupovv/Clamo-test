@@ -5,13 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { ServiceData } from "../../../../../../app.types";
-import { getLocalizedValue } from "@/lib/getLocalization";
+import { getLocalizedValue, pickStringProps } from "@/lib/getLocalization";
 
 export default function ServicesSection({ servicec }: { servicec: ServiceData[] }) {
   const t = useTranslations("AboutPage");
   const locale = useLocale();
-  console.log(locale);
-  console.log(servicec);
   
 
 
@@ -30,7 +28,10 @@ export default function ServicesSection({ servicec }: { servicec: ServiceData[] 
         {/* Service Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {servicec.map((service, index) => {
-           
+            const serviceData = pickStringProps(service)
+            const localizedTitle = getLocalizedValue(serviceData, "title", locale);
+            const localizedDescription = getLocalizedValue(serviceData, "description", locale);
+            
             return (
               <div
                 key={index}

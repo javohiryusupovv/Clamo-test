@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { FAQItem } from "../../../../../../app.types";
 import { useLocale } from "next-intl";
-import { getLocalizedValue } from "@/lib/getLocalization";
+import { getLocalizedValue, pickStringProps } from "@/lib/getLocalization";
 
 interface Props {
   faqData: FAQItem[];
@@ -20,8 +20,9 @@ export default function FaqAccordion({ faqData }: Props) {
     <div className="container md:py-16 py-8">
       <div className="flex flex-col gap-4">
         {faqData.map((item, index) => {
-          const localQuestion = getLocalizedValue(item, "question", locale);
-          const localAnswer = getLocalizedValue(item, "answer", locale);
+          const stringItem = pickStringProps(item);
+          const localQuestion = getLocalizedValue(stringItem, "question", locale);
+          const localAnswer = getLocalizedValue(stringItem, "answer", locale);
           return (
             <div
               key={index}
