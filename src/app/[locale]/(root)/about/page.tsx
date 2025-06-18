@@ -9,6 +9,8 @@ import { getTeamCarousel } from "@/lib/getTeamCarousel";
 export default async function About() {
 const service = await getServicec();
 const members = await getTeamCarousel();
+console.log(service);
+
 
   return (
     <div>

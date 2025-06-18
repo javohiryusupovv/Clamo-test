@@ -28,7 +28,7 @@ export default async function Main() {
       <ServicesSection servicec={service} />
       <MainService />
       <Izohlar />
-      <NewsPage news={datas[1]} />
+      <NewsPage news={datas[0]} />
       <div className="bg-[#f6f9fc] py-[60px]">
         <InstallPage />
         <Partnyor partners={part} />
