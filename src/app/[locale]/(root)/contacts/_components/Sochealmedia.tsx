@@ -1,10 +1,5 @@
-"use client";
-
-import Image from "next/image";
-import { getSochealMedia } from "../../../../../../constants/page";
 
 export default function SochealMedia() {
-  const media = getSochealMedia;
   return (
     <div className="grid lg:grid-cols-4 gap-6 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-3 items-center justify-center bg-[#F6F9FC] mb-10 py-6 max-md:mt-[420px] rounded-2xl">
       <div className="flex items-center md:justify-center md:gap-5 ml-5 gap-2 group hover:cursor-pointer">
