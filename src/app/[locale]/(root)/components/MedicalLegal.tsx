@@ -24,7 +24,7 @@ export default function MedicalLegal() {
       {medical.map((item, id) => (
         <div
           key={id}
-          className="flex justify-between flex-col lg:flex-row items-center gap-8 md:pb-[132px] pb-5"
+          className="flex justify-between flex-col lg:flex-row items-center gap-8 pb-5"
         >
           <div className="w-full lg:w-1/2 ">
             <div className="flex items-center gap-2 mb-3">
@@ -44,7 +44,7 @@ export default function MedicalLegal() {
             <LearnMore />
           </div>
 
-          <div className="relative bottom-0 z-[60] lg:h-[400px]">
+          <div className="relative bottom-0 z-[60] lg:h-[500px] overflow-hidden">
             <div className="bg-[url('../assets/images/twoCircle.png')] bg-no-repeat bg-center bg-contain w-full h-[950px] absolute -top-[480px] hidden lg:block -z-[1]"></div>
             <Image
               src={ClamoFlag}
