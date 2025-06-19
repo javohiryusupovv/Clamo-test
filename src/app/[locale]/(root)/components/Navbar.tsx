@@ -331,20 +331,19 @@ export default function Navbar() {
                 }}
               >
                 {/* Header with Logo and Close Icon */}
-                <div className="w-full flex sm:max-w-[60%] sm:justify-between justify-around items-center -translate-y-3 -translate-x-2">
-                  <ul>
-                    {imgg.map((item) => (
-                      <Link href="/" key={item.id}>
-                        <Image
-                          src={item.img}
-                          alt="Logo"
-                          width={105}
-                          height={40}
-                          className="w-[90px] h-[40px]"
-                        />
-                      </Link>
-                    ))}
-                  </ul>
+                <div className="w-full flex sm:max-w-[60%] max-w-[90%] justify-between items-center -translate-y-3 -translate-x-2 pb-2">
+                  {imgg.map((item) => (
+                    <Link href="/" key={item.id}>
+                      <Image
+                        src={item.img}
+                        alt="Logo"
+                        width={105}
+                        height={40}
+                        className="w-[90px] h-[40px]"
+                      />
+                    </Link>
+                  ))}
+
                   <ul className="flex items-center">
                     <div
                       className="relative top-0 left-0"

@@ -8,7 +8,6 @@ import {
   DoctorImg,
   enterThePortal,
   backgroundImage,
-  FilterItem,
   PaginatedDataItem,
   Imagee,
   ContactData,
