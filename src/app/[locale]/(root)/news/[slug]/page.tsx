@@ -11,11 +11,11 @@ interface NewsDetail {
   created_at: string;
 }
 
-export default async function NewsDetailPage({
-  params,
-}: {
+interface PageProps {
   params: { slug: string };
-}) {
+}
+
+export default async function NewsDetailPage({ params }: PageProps) {
   const res = await fetch(
     `https://clamo-production.up.railway.app/api/news/news/${params.slug}`,
     {
@@ -31,8 +31,6 @@ export default async function NewsDetailPage({
     return { __html: data.content };
   }
 
-  console.log(data);
-
   return (
     <div className="container mt-12">
       <h1 className="text-3xl font-bold mb-4">{data.title}</h1>
@@ -46,7 +44,7 @@ export default async function NewsDetailPage({
         alt={data.title}
         width={300}
         height={100}
-        className=" object-cover object-center w-full lg:h-[500px] sm:h-[350px] rounded-[20px] mb-10"
+        className="object-cover object-center w-full lg:h-[500px] sm:h-[350px] rounded-[20px] mb-10"
       />
       <div dangerouslySetInnerHTML={createMarkup()} className="mb-16" />
     </div>
