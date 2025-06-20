@@ -5,18 +5,18 @@ import TeamCarousel from "./_components/TeamCarousel";
 import AboutMain from "./_components/AboutMain";
 import { getServicec } from "@/lib/getServicec";
 import { getTeamCarousel } from "@/lib/getTeamCarousel";
+import { getSection } from "@/lib/getSection";
 
 export default async function About() {
-const service = await getServicec();
-const members = await getTeamCarousel();
-console.log(service);
-
+  const department = await getSection();
+  const service = await getServicec();
+  const members = await getTeamCarousel();
 
   return (
     <div>
       <AboutMain />
       <Servicec servicec={service} />
-      <DepartmentSection />
+      <DepartmentSection agentsection={department} />
       <TeamCarousel members={members} />
       <HeroSection />
     </div>
