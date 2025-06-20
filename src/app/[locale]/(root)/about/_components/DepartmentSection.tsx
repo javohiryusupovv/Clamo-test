@@ -3,7 +3,6 @@
 import { getLocalizedValue, pickStringProps } from "@/lib/getLocalization";
 import { Department } from "../../../../../../app.types";
 import { useLocale, useTranslations } from "next-intl";
-import Image from "next/image";
 export default function DepartmentSection({
   agentsection,
 }: {
@@ -56,7 +55,6 @@ export default function DepartmentSection({
                     fill=""
                   />
                 </svg>
-                {/* <Image src={departments.icon} alt={departments.title} width={48} height={48} className="w-8"/> */}
               </div>
               <div className="transition-all duration-200 ease-in-out">
                 <h3 className="text-lg font-semibold group-hover:text-white transition-colors duration-200 ease-in-out">
