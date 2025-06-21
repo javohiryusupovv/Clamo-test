@@ -71,7 +71,17 @@
     "online_start": "Faoliyatingizni qonuniylashtirishni rejalashtiryapsizmi? Endi bu jarayonni onlayn va oson boshlang! Ruxsatnoma olish uchun ariza topshiring, hujjatlaringizni yuklang va litsenziyani qisqa muddatda qo'lga kiriting!",
     "get_license_button": "Litsenziya olish portaliga o'tish",
     "clinics_titile": "Klinikalar Reyesteri",
-    "all_section": "Barchasi"
+    "all_section": "Barchasi",
+    "document":{
+        "application_title": "Ariza topshirish",
+        "application_description": "Markazning rasmiy platformasi orqali litsenziya olish uchun murojaat qilish",
+        "documents_title": "Hujjatlarni tekshirish",
+        "documents_description": "Muassasning sanitariya, texnik va huquqiy talablariga muvofiqligini tekshirish",
+        "expert_title":"Ekspert baholovi",
+        "expert_description": "Mutaxassislar tomonidan tayyorgarlik darajasini baholash",
+        "license_title": "Litsenziya qarori",
+        "license_description": "Talablar bajarilganda muassasalarga rasmiy litsenziya beriladi"
+    }
   },
   "AccreditationPage": {
     "accerditation_title": "AKKREDITSIYALASH",

@@ -257,7 +257,6 @@ export const getPartners: Partner[] = [
   },
 ];
 
-
 export const getfaqData: FAQItem[] = [
   {
     question: "Есть ли бесплатные материалы?",
@@ -382,33 +381,31 @@ export const getDoctorImg: DoctorImg = {
   man: "/Images/man.png",
   woman: "/Images/woman.png",
 };
-
-export const getLicense: enterThePortal[] = [
+// arizatopshirish
+export const getLicense = (t:TFunction): enterThePortal[] => [
   {
     id: 1,
-    title: "Ariza topshirish",
+    title: t("document.application_title"),
     description:
-      "Markazning rasmiy platformasi orqali litsenziya olish uchun murojaat qilish",
+      t("document.application_description"),
     icon: "/Vector2.png",
   },
   {
     id: 2,
-    title: "Hujjatlarni tekshirish",
-    description:
-      "Muassasning sanitariya, texnik va huquqiy talablariga muvofiqligini tekshirish",
+    title: t("document.documents_title"),
+    description:t("document.documents_description"),
     icon: "/Vector.png",
   },
   {
     id: 3,
-    title: "Ekspert baholovi",
-    description: "Mutaxassislar tomonidan tayyorgarlik darajasini baholash",
+    title: t("document.expert_title"),
+    description: t("document.expert_description"),
     icon: "/Vector3.png",
   },
   {
     id: 4,
-    title: "Litsenziya qarori",
-    description:
-      "Talablar bajarilganda muassasalarga rasmiy litsenziya beriladi",
+    title: t("document.license_title"),
+    description: t("document.license_description"),
     icon: "/Vector4.png",
   },
 ];

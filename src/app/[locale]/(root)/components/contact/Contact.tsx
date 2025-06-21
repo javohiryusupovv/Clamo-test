@@ -80,16 +80,191 @@ export default function Contact() {
   };
 
   return (
-    <div className="px-4 py-8">
-      <div className="container relative left-0 z-[40] flex flex-col lg:flex-row items-center justify-between w-full bg-[#0653C9] rounded-[36px]">
+    // <div className="px-4 py-8">
+    //   <div className="container relative left-0 z-[40] flex flex-col lg:flex-row items-center justify-between w-full bg-[#0653C9] rounded-[36px]">
+    //     {/* Contact Info */}
+    //     <div className="w-full lg:w-[450px] pl-6 pr-6 py-10 lg:pl-14 lg:py-14">
+    //       <h6 className="text-[28px] lg:text-[32px] font-semibold text-white mb-2">
+    //         {t("contactTitle")}
+    //       </h6>
+    //       <p className="text-[14px] lg:text-[16px] font-normal text-white text-opacity-[60%] mb-6 lg:mb-9">
+    //         {t("contactDescription")}
+    //       </p>
+    //       <div className="flex flex-col gap-3">
+    //         {/* Location */}
+    //         <div className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
+    //           <article className="bg-white p-3 inline-flex justify-center items-center rounded-lg">
+    //             <Image className="w-5 h-4" src={location} alt="Location" />
+    //           </article>
+    //           <article>
+    //             <span className="text-[14px] font-normal text-opacity-[60%] text-white">
+    //               {t("addressLabel")}
+    //             </span>
+    //             <p className="text-[16px] font-medium text-white line-clamp-1">
+    //               улица Мирзакалон Исмоилий, дом 2А, Ташкент
+    //             </p>
+    //           </article>
+    //         </div>
+    //         {/* Phone */}
+    //         <div className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
+    //           <article className="bg-white p-3 inline-flex items-center justify-center rounded-lg">
+    //             <Image className="w-5 h-5" src={phone} alt="Phone" />
+    //           </article>
+    //           <article>
+    //             <span className="text-[14px] font-normal text-opacity-[60%] text-white">
+    //               {t("phonee")}
+    //             </span>
+    //             <p className="text-[16px] font-medium text-white line-clamp-1">
+    //               +998 (71) 200 70 07
+    //             </p>
+    //           </article>
+    //         </div>
+    //         {/* Email */}
+    //         <div className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
+    //           <article className="bg-white p-3 inline-flex rounded-lg">
+    //             <Image className="w-5 h-4" src={email} alt="Email" />
+    //           </article>
+    //           <article>
+    //             <span className="text-[14px] font-normal text-opacity-[60%] text-white">
+    //               {t("emailLabel")}
+    //             </span>
+    //             <p className="text-[16px] font-medium text-white line-clamp-1">
+    //               infoclamo@gmail.com
+    //             </p>
+    //           </article>
+    //         </div>
+    //       </div>
+    //     </div>
+
+    //     {/* Contact Form */}
+    //     <div className="py-6 px-8 absolute border border-gray-200 right-16 w-[500px] h-[576px] bg-white rounded-[36px]">
+    //       <article className="mb-[26px]">
+    //         <h5 className="text-[32px] font-bold leading-[120%] text-[#3D445E] mb-3">
+    //           {t("formTitle")}
+    //         </h5>
+    //         <p className="text-[#838CAF] text-[16px] font-normal leading-[130%]">
+    //           {t("formSubtitle")}
+    //         </p>
+    //       </article>
+
+    //       <form onSubmit={handleSubmit(handleSubmitted)}>
+    //         <article className="w-full mb-6">
+    //           <label
+    //             htmlFor="names"
+    //             className="inline-flex mb-2 text-[16px] font-medium text-[#3D445E]"
+    //           >
+    //             {t("fullName")}
+    //           </label>
+    //           <input
+    //             id="names"
+    //             {...register("names")}
+    //             type="text"
+    //             className="w-full bg-[#F7F7F8] px-3 h-10 rounded-lg text-[14px] outline-none border border-transparent focus:border-[#1a60cd]"
+    //             placeholder={t("enterFullName")}
+    //           />
+    //           {errors.names && (
+    //             <p className="text-red-500 text-sm">{errors.names.message}</p>
+    //           )}
+    //         </article>
+    //         {/* Organization */}
+    //         <article className="w-full mb-6">
+    //           <label
+    //             htmlFor="tashkilot"
+    //             className="inline-flex mb-2 text-[16px] font-medium text-[#3D445E]"
+    //           >
+    //             {t("organization")}
+    //           </label>
+    //           <input
+    //             id="tashkilot"
+    //             {...register("tashkilot")}
+    //             type="text"
+    //             className="w-full bg-[#F7F7F8] px-3 h-10 rounded-lg text-[16px] outline-none border border-transparent focus:border-[#1a60cd]"
+    //             placeholder={t("enterOrganization")}
+    //           />
+    //           {errors.tashkilot && (
+    //             <p className="text-red-500 text-sm">
+    //               {errors.tashkilot.message}
+    //             </p>
+    //           )}
+    //         </article>
+    //         {/* Phone */}
+    //         <article className="w-full mb-6">
+    //           <label
+    //             htmlFor="phoneNumber"
+    //             className="inline-flex mb-2 text-[16px] font-medium text-[#3D445E]"
+    //           >
+    //             {t("phonee")}
+    //           </label>
+    //           <div className="w-full bg-[#F7F7F8] flex gap-2 px-3 h-10 rounded-lg border border-transparent focus-within:border-[#1a60cd]">
+    //             <article className="flex items-center gap-1">
+    //               <Image src={uzbflag} className="w-9" alt="Flag Icons" />
+    //               <span className="text-[#3D445E] text-[14px]">+998</span>
+    //             </article>
+    //             <input
+    //               id="phoneNumber"
+    //               {...register("phoneNumber")}
+    //               type="text"
+    //               maxLength={12} // 2 + 1 + 3 + 1 + 2 + 1 + 2 = 12 (with spaces)
+    //               onInput={(e) => {
+    //                 const value = e.currentTarget.value
+    //                   .replace(/\D/g, "")
+    //                   .slice(0, 9); // Only digits, max 9
+    //                 let formatted = "";
+    //                 if (value.length > 0) formatted += value.slice(0, 2);
+    //                 if (value.length > 2) formatted += " " + value.slice(2, 5);
+    //                 if (value.length > 5) formatted += " " + value.slice(5, 7);
+    //                 if (value.length > 7) formatted += " " + value.slice(7, 9);
+    //                 e.currentTarget.value = formatted;
+    //               }}
+    //               onBlur={(e) => {
+    //                 const value = e.currentTarget.value.replace(/\D/g, "");
+    //                 if (value.length !== 9) {
+    //                   e.currentTarget.setCustomValidity(
+    //                     "Telefon raqami aniq 9 ta raqam bo‘lishi kerak"
+    //                   );
+    //                 } else {
+    //                   e.currentTarget.setCustomValidity("");
+    //                 }
+    //               }}
+    //               className="w-full outline-none bg-[#F7F7F8]"
+    //               placeholder="99 123 45 67"
+    //             />
+    //           </div>
+    //           {errors.phoneNumber && (
+    //             <p className="text-red-500 text-sm">
+    //               {errors.phoneNumber.message}
+    //             </p>
+    //           )}
+    //         </article>
+
+    //         <div className="flex justify-end">
+    //           <button
+    //             type="submit"
+    //             className="group flex items-center gap-1 text-[14px] font-medium text-white px-6 py-[10px] rounded-lg bg-[#0653C9] hover:bg-[#0761e9]"
+    //           >
+    //             {t("send")}
+    //             <Image
+    //               className="transition-all duration-300 group-hover:rotate-[43deg]"
+    //               src={submiticons}
+    //               alt="Send Icon"
+    //             />
+    //           </button>
+    //         </div>
+    //       </form>
+    //     </div>
+    //   </div>
+    // </div>
+    <div className="py-8">
+      <div className="container relative left-0 z-[40] flex flex-col  md:flex-row items-center justify-between w-full bg-[#0653C9] rounded-[36px]">
         {/* Contact Info */}
         <div className="w-full lg:w-[450px] pl-6 pr-6 py-10 lg:pl-14 lg:py-14">
-          <h6 className="text-[28px] lg:text-[32px] font-semibold text-white mb-2">
+          <h6 className="text-[24px] sm:text-[28px] lg:text-[32px] font-semibold text-white mb-2">
             {t("contactTitle")}
           </h6>
-          <p className="text-[14px] lg:text-[16px] font-normal text-white text-opacity-[60%] mb-6 lg:mb-9">
+          <p className="text-[14px] sm:text-[15px] lg:text-[16px] font-normal text-white text-opacity-[60%] mb-6 lg:mb-9">
             {t("contactDescription")}
           </p>
+
           <div className="flex flex-col gap-3">
             {/* Location */}
             <div className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
@@ -97,38 +272,40 @@ export default function Contact() {
                 <Image className="w-5 h-4" src={location} alt="Location" />
               </article>
               <article>
-                <span className="text-[14px] font-normal text-opacity-[60%] text-white">
+                <span className="text-[13px] sm:text-[14px] font-normal text-opacity-[60%] text-white">
                   {t("addressLabel")}
                 </span>
-                <p className="text-[16px] font-medium text-white line-clamp-1">
+                <p className="text-[14px] sm:text-[16px] font-medium text-white line-clamp-1">
                   улица Мирзакалон Исмоилий, дом 2А, Ташкент
                 </p>
               </article>
             </div>
+
             {/* Phone */}
             <div className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
               <article className="bg-white p-3 inline-flex items-center justify-center rounded-lg">
                 <Image className="w-5 h-5" src={phone} alt="Phone" />
               </article>
               <article>
-                <span className="text-[14px] font-normal text-opacity-[60%] text-white">
+                <span className="text-[13px] sm:text-[14px] font-normal text-opacity-[60%] text-white">
                   {t("phonee")}
                 </span>
-                <p className="text-[16px] font-medium text-white line-clamp-1">
+                <p className="text-[14px] sm:text-[16px] font-medium text-white line-clamp-1">
                   +998 (71) 200 70 07
                 </p>
               </article>
             </div>
+
             {/* Email */}
             <div className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
               <article className="bg-white p-3 inline-flex rounded-lg">
                 <Image className="w-5 h-4" src={email} alt="Email" />
               </article>
               <article>
-                <span className="text-[14px] font-normal text-opacity-[60%] text-white">
+                <span className="text-[13px] sm:text-[14px] font-normal text-opacity-[60%] text-white">
                   {t("emailLabel")}
                 </span>
-                <p className="text-[16px] font-medium text-white line-clamp-1">
+                <p className="text-[14px] sm:text-[16px] font-medium text-white line-clamp-1">
                   infoclamo@gmail.com
                 </p>
               </article>
@@ -137,21 +314,22 @@ export default function Contact() {
         </div>
 
         {/* Contact Form */}
-        <div className="py-6 px-8 absolute border border-gray-200 right-16 w-[500px] h-[576px] bg-white rounded-[36px]">
+        <div className="py-6 px-4 sm:px-8 mt-8 lg:mt-0 border border-gray-200 w-full sm:w-[500px] lg:absolute lg:right-16 h-auto sm:h-[576px] bg-white rounded-[36px]">
           <article className="mb-[26px]">
-            <h5 className="text-[32px] font-bold leading-[120%] text-[#3D445E] mb-3">
+            <h5 className="text-[24px] sm:text-[28px] lg:text-[32px] font-bold leading-[120%] text-[#3D445E] mb-3">
               {t("formTitle")}
             </h5>
-            <p className="text-[#838CAF] text-[16px] font-normal leading-[130%]">
+            <p className="text-[#838CAF] text-[14px] sm:text-[15px] lg:text-[16px] font-normal leading-[130%]">
               {t("formSubtitle")}
             </p>
           </article>
 
           <form onSubmit={handleSubmit(handleSubmitted)}>
+            {/* Full Name */}
             <article className="w-full mb-6">
               <label
                 htmlFor="names"
-                className="inline-flex mb-2 text-[16px] font-medium text-[#3D445E]"
+                className="inline-flex mb-2 text-[14px] sm:text-[16px] font-medium text-[#3D445E]"
               >
                 {t("fullName")}
               </label>
@@ -166,11 +344,12 @@ export default function Contact() {
                 <p className="text-red-500 text-sm">{errors.names.message}</p>
               )}
             </article>
+
             {/* Organization */}
             <article className="w-full mb-6">
               <label
                 htmlFor="tashkilot"
-                className="inline-flex mb-2 text-[16px] font-medium text-[#3D445E]"
+                className="inline-flex mb-2 text-[14px] sm:text-[16px] font-medium text-[#3D445E]"
               >
                 {t("organization")}
               </label>
@@ -178,7 +357,7 @@ export default function Contact() {
                 id="tashkilot"
                 {...register("tashkilot")}
                 type="text"
-                className="w-full bg-[#F7F7F8] px-3 h-10 rounded-lg text-[16px] outline-none border border-transparent focus:border-[#1a60cd]"
+                className="w-full bg-[#F7F7F8] px-3 h-10 rounded-lg text-[14px] outline-none border border-transparent focus:border-[#1a60cd]"
                 placeholder={t("enterOrganization")}
               />
               {errors.tashkilot && (
@@ -187,28 +366,33 @@ export default function Contact() {
                 </p>
               )}
             </article>
-            {/* Phone */}
+
+            {/* Phone Number */}
             <article className="w-full mb-6">
               <label
                 htmlFor="phoneNumber"
-                className="inline-flex mb-2 text-[16px] font-medium text-[#3D445E]"
+                className="inline-flex mb-2 text-[14px] sm:text-[16px] font-medium text-[#3D445E]"
               >
                 {t("phonee")}
               </label>
               <div className="w-full bg-[#F7F7F8] flex gap-2 px-3 h-10 rounded-lg border border-transparent focus-within:border-[#1a60cd]">
                 <article className="flex items-center gap-1">
-                  <Image src={uzbflag} className="w-9" alt="Flag Icons" />
+                  <Image
+                    src={uzbflag}
+                    className="w-6 sm:w-9"
+                    alt="Flag Icons"
+                  />
                   <span className="text-[#3D445E] text-[14px]">+998</span>
                 </article>
                 <input
                   id="phoneNumber"
                   {...register("phoneNumber")}
                   type="text"
-                  maxLength={12} // 2 + 1 + 3 + 1 + 2 + 1 + 2 = 12 (with spaces)
+                  maxLength={12}
                   onInput={(e) => {
                     const value = e.currentTarget.value
                       .replace(/\D/g, "")
-                      .slice(0, 9); // Only digits, max 9
+                      .slice(0, 9);
                     let formatted = "";
                     if (value.length > 0) formatted += value.slice(0, 2);
                     if (value.length > 2) formatted += " " + value.slice(2, 5);
@@ -237,6 +421,7 @@ export default function Contact() {
               )}
             </article>
 
+            {/* Submit */}
             <div className="flex justify-end">
               <button
                 type="submit"
