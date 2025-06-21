@@ -12,12 +12,13 @@ interface NewsDetail {
 }
 
 interface PageProps {
-  params: { slug: string };
+  params: { slug: string | string[] };
 }
 
 export default async function NewsDetailPage({ params }: PageProps) {
+  const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug;
   const res = await fetch(
-    `https://clamo-production.up.railway.app/api/news/news/${params.slug}`,
+    `https://clamo-production.up.railway.app/api/news/news/${slug}`,
     {
       cache: "no-store",
     }
