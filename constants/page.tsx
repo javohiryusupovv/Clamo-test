@@ -1,5 +1,4 @@
 import {
-  Department,
   ServiceCardProps,
   TeamMember,
   MedicalLegalProps,
@@ -85,26 +84,6 @@ export const getServices = (t: TFunction): ServiceCardProps[] => [
     title: t("services.malaka.title"),
     description: t("services.malaka.description"),
     link: "#",
-  },
-];
-
-export const getDepartments: Department[] = [
-  {
-    id: 1,
-    title: "Kardiologiya",
-    description:
-      "Yurak va qon tomir tizimi kasalliklarini tashxislash va davolash bo'limi.",
-  },
-  {
-    id: 2,
-    title: "Nevrologiya",
-    description: "Asab tizimi kasalliklarini tashxislash va davolash bo'limi.",
-  },
-  {
-    id: 3,
-    title: "Gastroenterologiya",
-    description:
-      "Oshqozon-ichak trakti kasalliklarini tashxislash va davolash bo'limi.",
   },
 ];
 
