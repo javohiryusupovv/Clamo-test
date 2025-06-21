@@ -72,7 +72,17 @@
     "online_start": "Planning to legalize your activities? Now you can start the process online and with ease! Submit your application, upload your documents, and receive your license in a short time!",
     "get_license_button": "Go to License Portal",
     "clinics_titile": "Clinics Registry",
-    "all_section": "All"
+    "all_section": "All",
+    "document": {
+      "application_title": "Application Submission",
+      "application_description": "Apply for a license through the official platform of the Center",
+      "documents_title": "Document Verification",
+      "documents_description": "Check the compliance of the institution with sanitary, technical, and legal requirements",
+      "expert_title": "Expert Evaluation",
+      "expert_description": "Assessment of the level of preparation by specialists",
+      "license_title": "License Decision",
+      "license_description": "An official license is issued to institutions when requirements are met"
+    }
   },
   "AccreditationPage": {
     "accerditation_title": "ACCREDITATION",

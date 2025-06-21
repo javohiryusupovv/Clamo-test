@@ -25,11 +25,11 @@ export default function NormativeDocuments() {
                             {t("normativeSectionDesc")}
                         </p>
                         <div className="flex flex-col md:flex-row gap-4 md:gap-6">
-                            <button className="w-full md:w-[272px] h-[40px] flex items-center justify-center gap-[11.5px] bg-[#23B3FC] rounded-lg text-sm font-medium text-white leading-[130%]">
-                                {t("servicesBtn")} <Image src={WhiteDown} alt="down strelka" />
+                            <button className="group hover:bg-[#23B3FC]/[80%] transition-all duration-200 w-full md:w-[272px] h-[40px] flex items-center justify-center gap-[11.5px] bg-[#23B3FC] rounded-lg text-sm font-medium text-white leading-[130%]">
+                                {t("servicesBtn")} <Image src={WhiteDown} alt="down strelka" className="md:group-hover:translate-x-2 transition-all duration-200" />
                             </button>
-                            <button className="w-full md:w-[272px] h-[40px] flex items-center justify-center gap-[11.5px] bg-[#23B3FC] rounded-lg text-sm font-medium text-white leading-[130%]">
-                                {t("contactBtn")} <Image src={WhiteDown} alt="down strelka" />
+                            <button className="group hover:bg-[#23B3FC]/[80%] transition-all duration-200 w-full md:w-[272px] h-[40px] flex items-center justify-center gap-[11.5px] bg-[#23B3FC] rounded-lg text-sm font-medium text-white leading-[130%]">
+                                {t("contactBtn")} <Image src={WhiteDown} alt="down strelka" className="md:group-hover:translate-x-2 transition-all duration-200"/>
                             </button>
                         </div>
                     </div>

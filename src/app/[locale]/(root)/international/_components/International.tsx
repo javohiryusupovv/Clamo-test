@@ -24,11 +24,11 @@ export default function International() {
             {t("international_des")}
           </p>
           <article className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-            <button className="flex justify-center items-center gap-1 bg-[#23B3FC] text-white w-full sm:w-[272px] h-10 rounded-lg cursor-pointer text-[14px] font-medium transition-all duration-200 hover:bg-[#3cbeff]">
-              {t("hamkorlar_btn")} <ChevronRight className="w-5 h-5" />
+            <button className="group flex justify-center items-center gap-1 bg-[#23B3FC] text-white w-full sm:w-[272px] h-10 rounded-lg cursor-pointer text-[14px] font-medium transition-all duration-200 hover:bg-[#3cbeff]">
+              {t("hamkorlar_btn")} <ChevronRight className="w-5 h-5 md:group-hover:translate-x-2 transition-all duration-200" />
             </button>
-            <button className="flex justify-center items-center gap-1 bg-[#23B3FC]/[12%] text-[#23B3FC] w-full sm:w-[272px] h-10 rounded-lg cursor-pointer text-[14px] font-medium transition-all duration-200 hover:bg-[#23B3FC]/[30%]">
-              {t("hamkorlar_btn2")} <ChevronRight className="w-5 h-5" />
+            <button className="group flex justify-center items-center gap-1 bg-[#23B3FC]/[12%] text-[#23B3FC] w-full sm:w-[272px] h-10 rounded-lg cursor-pointer text-[14px] font-medium transition-all duration-200 hover:bg-[#23B3FC]/[30%]">
+              {t("hamkorlar_btn2")} <ChevronRight className="w-5 h-5 md:group-hover:translate-x-2 transition-all duration-200" />
             </button>
           </article>
         </article>

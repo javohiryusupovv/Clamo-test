@@ -104,8 +104,10 @@ export default function Page() {
               </button>
             </div>
 
+
+            {/* Ariza topshirirsh */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {steps.map((step) => (
+              {steps(t).map((step) => (
                 <div
                   key={step.id}
                   className="bg-white bg-opacity-10 rounded-2xl p-4 flex flex-col items-start"
