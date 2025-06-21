@@ -80,12 +80,12 @@ export default function Navbar() {
       <div
         className={
           header
-            ? "bg-gray-100 fixed top-0 z-[999] w-full transition-transform duration-500 ease-in-out shadow-xl"
+            ? "backdrop-blur-3xl fixed top-0 z-[999] w-full transition-transform duration-500 ease-in-out"
             : "bg-transparent relative z-[999]"
         }
       >
         <nav
-          className={`flex items-center justify-between py-3 lg:py-7 z-[999] container`}
+          className={`flex items-center justify-between py-3 z-[999] container`}
         >
           <ul>
             {imgg.map((item) => (
@@ -331,209 +331,188 @@ export default function Navbar() {
                 }}
               >
                 {/* Header with Logo and Close Icon */}
-                <div className="w-full flex justify-between items-center -translate-y-3 -translate-x-2">
-                  <ul>
-                    {imgg.map((item) => (
-                      <Link href="/" key={item.id}>
+                <div className="w-full flex sm:max-w-[60%] max-w-[90%] justify-between items-center -translate-y-3 -translate-x-2 pb-2">
+                  {imgg.map((item) => (
+                    <Link href="/" key={item.id}>
+                      <Image
+                        src={item.img}
+                        alt="Logo"
+                        width={105}
+                        height={40}
+                        className="w-[90px] h-[40px]"
+                      />
+                    </Link>
+                  ))}
+
+                  <ul className="flex items-center">
+                    <div
+                      className="relative top-0 left-0"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        //   DropdownOpen();
+                      }}
+                    >
+                      <article
+                        onClick={() => setDropdownOpen(!dropdownOpen)}
+                        className="group flex items-center justify-center gap-2 cursor-pointer px-2 py-1 rounded"
+                      >
                         <Image
-                          src={item.img}
-                          alt="Logo"
-                          width={105}
-                          height={40}
-                          className="w-[90px] h-[40px]"
+                          src={selectedLang.flag}
+                          alt={`${selectedLang.label} flag`}
+                          width={20}
+                          height={20}
+                          className="object-contain"
                         />
-                      </Link>
-                    ))}
+                        <article className="flex items-center gap-[5px]">
+                          <p className="text-xs uppercase text-[#3D445E] font-medium">
+                            {selectedLang.code}
+                          </p>
+                          <div className="w-5 h-5 flex items-center">
+                            <Image
+                              src={Down}
+                              alt="Down arrow"
+                              width={11}
+                              height={11}
+                            />
+                          </div>
+                        </article>
+                      </article>
+
+                      {dropdownOpen && (
+                        <div className="absolute top-10 bg-[#E8F4FC] w-[85px] border rounded-md shadow">
+                          <ul className="py-1 flex flex-col gap-2">
+                            <li
+                              onClick={() =>
+                                handleLangChange({
+                                  code: "uz",
+                                  label: "Uzb",
+                                  flag: Flag,
+                                })
+                              }
+                              className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
+                            >
+                              <Image
+                                src={Flag}
+                                alt="uzbek flag"
+                                width={20}
+                                height={20}
+                              />
+                              <p className="text-xs uppercase text-[#3D445E] font-medium">
+                                Uzb
+                              </p>
+                            </li>
+                            <li
+                              onClick={() =>
+                                handleLangChange({
+                                  code: "ru",
+                                  label: "Rus",
+                                  flag: rusFlag,
+                                })
+                              }
+                              className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
+                            >
+                              <Image
+                                src={rusFlag}
+                                alt="Rus flag"
+                                width={20}
+                                height={20}
+                              />
+                              <p className="text-xs uppercase text-[#3D445E] font-medium">
+                                Rus
+                              </p>
+                            </li>
+                            <li
+                              onClick={() =>
+                                handleLangChange({
+                                  code: "en",
+                                  label: "Eng",
+                                  flag: engFlag,
+                                })
+                              }
+                              className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
+                            >
+                              <Image
+                                src={engFlag}
+                                alt="Eng flag"
+                                width={20}
+                                height={20}
+                              />
+                              <p className="text-xs uppercase text-[#3D445E] font-medium">
+                                Eng
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                    <article className="flex items-center gap-[4px] translate-x-2">
+                      <Image
+                        src={Phone}
+                        alt="Phone icon"
+                        width={14}
+                        height={14}
+                      />
+                      <p className="text-sm font-bold text-[#3D445E]">1369</p>
+                    </article>
                   </ul>
                 </div>
 
                 {/* Navigation Links */}
-                <ul className="flex flex-col items-start gap-6">
-                  <article className="relative">
-                    <li
-                      className="text-sm font-medium text-[#3D445E] cursor-pointer flex items-center gap-[9px]"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        toggleDropdown();
-                      }}
-                    >
-                      {t("abouts")}
-                      <div className="w-5 h-5 flex items-center">
-                        <Image
-                          src={Down}
-                          alt="Down arrow"
-                          width={11}
-                          height={11}
-                          className={`mt-[6px] transition-transform ${
-                            isDropdownOpen ? "rotate-180" : ""
-                          }`}
-                        />
-                      </div>
-                    </li>
-                    {isDropdownOpen && (
-                      <ul className="mt-2 bg-white border shadow-md -left-8 rounded py-2 w-40 absolute z-[999]">
-                        <Link href={`/${locale}/about`}>
-                          <li
-                            onClick={() => setIsDropdownOpen(false)}
-                            className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100"
-                          >
-                            {t("aboutss")}
-                          </li>
-                        </Link>
-                        <Link href={`/${locale}/regulatorydocuments`}>
-                          <li
-                            onClick={() => setIsDropdownOpen(false)}
-                            className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100"
-                          >
-                            {t("regulatorydocuments")}
-                          </li>
-                        </Link>
-                        <Link href={`/${locale}/international`}>
-                          <li
-                            onClick={() => setIsDropdownOpen(false)}
-                            className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100"
-                          >
-                            {t("international")}
-                          </li>
-                        </Link>
-                        <Link href={`/${locale}/consulting`}>
-                          <li
-                            onClick={() => setIsDropdownOpen(false)}
-                            className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100"
-                          >
-                            {t("consulting")}
-                          </li>
-                        </Link>
-                      </ul>
-                    )}
-                  </article>
-                  <Link href={`/${locale}/license`}>
-                    <li className="text-sm font-medium text-[#3D445E]">
-                      {t("licens")}
-                    </li>
-                  </Link>
-                  <Link href={`/${locale}/accreditation`}>
-                    <li className="text-sm font-medium text-[#3D445E]">
-                      {t("accredation")}
-                    </li>
-                  </Link>
-                  <Link href={`/${locale}/contacts`}>
-                    <li className="text-sm font-medium text-[#3D445E]">
-                      {t("contacts")}
-                    </li>
-                  </Link>
-                </ul>
-                <ul className="flex flex-col items-start gap-6 mt-6">
-                  <div
-                    className="relative top-0 left-0"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                    //   DropdownOpen();
-                    }}
-                  >
-                    <article
-                      onClick={() => setDropdownOpen(!dropdownOpen)}
-                      className="group flex items-center gap-3 cursor-pointer px-2 py-1 rounded"
-                    >
-                      <Image
-                        src={selectedLang.flag}
-                        alt={`${selectedLang.label} flag`}
-                        width={24}
-                        height={24}
-                        className="object-contain"
-                      />
-                      <article className="flex items-center gap-[9px]">
-                        <p className="text-sm uppercase text-[#3D445E] font-medium">
-                          {selectedLang.code}
-                        </p>
-                        <div className="w-5 h-5 flex items-center">
-                          <Image
-                            src={Down}
-                            alt="Down arrow"
-                            width={11}
-                            height={11}
-                          />
-                        </div>
-                      </article>
-                    </article>
+                <article className="flex w-full justify-evenly gap-10">
+                  <ul className="flex flex-col items-start gap-6">
+                    <Link href={`/${locale}/about`}>
+                      <li
+                        onClick={() => setIsDropdownOpen(false)}
+                        className="text-sm font-medium text-[#3D445E]"
+                      >
+                        {t("aboutss")}
+                      </li>
+                    </Link>
+                    <Link href={`/${locale}/regulatorydocuments`}>
+                      <li
+                        onClick={() => setIsDropdownOpen(false)}
+                        className="text-sm font-medium text-[#3D445E]"
+                      >
+                        {t("regulatorydocuments")}
+                      </li>
+                    </Link>
+                    <Link href={`/${locale}/international`}>
+                      <li
+                        onClick={() => setIsDropdownOpen(false)}
+                        className="text-sm font-medium text-[#3D445E]"
+                      >
+                        {t("international")}
+                      </li>
+                    </Link>
+                    <Link href={`/${locale}/consulting`}>
+                      <li
+                        onClick={() => setIsDropdownOpen(false)}
+                        className="text-sm font-medium text-[#3D445E]"
+                      >
+                        {t("consulting")}
+                      </li>
+                    </Link>
+                  </ul>
+                  <ul className="flex flex-col items-start gap-6">
+                    <Link href={`/${locale}/license`}>
+                      <li className="text-sm font-medium text-[#3D445E]">
+                        {t("licens")}
+                      </li>
+                    </Link>
+                    <Link href={`/${locale}/accreditation`}>
+                      <li className="text-sm font-medium text-[#3D445E]">
+                        {t("accredation")}
+                      </li>
+                    </Link>
+                    <Link href={`/${locale}/contacts`}>
+                      <li className="text-sm font-medium text-[#3D445E]">
+                        {t("contacts")}
+                      </li>
+                    </Link>
+                  </ul>
+                </article>
 
-                    {dropdownOpen && (
-                      <div className="absolute top-10 bg-[#E8F4FC] w-[100px] border rounded-md shadow">
-                        <ul className="py-1 flex flex-col gap-2">
-                          <li
-                            onClick={() =>
-                              handleLangChange({
-                                code: "uz",
-                                label: "Uzb",
-                                flag: Flag,
-                              })
-                            }
-                            className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
-                          >
-                            <Image
-                              src={Flag}
-                              alt="uzbek flag"
-                              width={24}
-                              height={24}
-                            />
-                            <p className="text-sm uppercase text-[#3D445E] font-medium">
-                              Uzb
-                            </p>
-                          </li>
-                          <li
-                            onClick={() =>
-                              handleLangChange({
-                                code: "ru",
-                                label: "Rus",
-                                flag: rusFlag,
-                              })
-                            }
-                            className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
-                          >
-                            <Image
-                              src={rusFlag}
-                              alt="Rus flag"
-                              width={24}
-                              height={24}
-                            />
-                            <p className="text-sm uppercase text-[#3D445E] font-medium">
-                              Rus
-                            </p>
-                          </li>
-                          <li
-                            onClick={() =>
-                              handleLangChange({
-                                code: "en",
-                                label: "Eng",
-                                flag: engFlag,
-                              })
-                            }
-                            className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
-                          >
-                            <Image
-                              src={engFlag}
-                              alt="Eng flag"
-                              width={24}
-                              height={24}
-                            />
-                            <p className="text-sm uppercase text-[#3D445E] font-medium">
-                              Eng
-                            </p>
-                          </li>
-                        </ul>
-                      </div>
-                    )}
-                  </div>
-                  <article className="flex items-center gap-[6px] translate-x-2">
-                    <Image
-                      src={Phone}
-                      alt="Phone icon"
-                      width={17}
-                      height={17}
-                    />
-                    <p className="text-base font-bold text-[#3D445E]">1369</p>
-                  </article>
-                </ul>
+                {/* flag and phone number */}
               </div>
             </div>
           )}

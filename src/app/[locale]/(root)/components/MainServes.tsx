@@ -1,7 +1,6 @@
 "use client";
 
 import "../../../../styles/linerMainserver.css";
-import ServicesSection from "@/app/[locale]/(root)/about/_components/AboutService";
 import Image from "next/image";
 import { useEffect } from "react";
 import { FaChevronRight, FaPhoneAlt } from "react-icons/fa";
@@ -25,8 +24,6 @@ export default function MainService() {
 
   return (
     <section className="pt-16 bg-[#F6F9FC]">
-      <ServicesSection />
-
       <section className="container  sm:pb-[58px] overflow-hidden">
         {platforms.map((item, id) => (
           <div

@@ -2,13 +2,16 @@
 
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { getServices } from "../../../../../../constants/page";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { ServiceData } from "../../../../../../app.types";
+import { getLocalizedValue, pickStringProps } from "@/lib/getLocalization";
 
-export default function ServicesSection() {
+export default function ServicesSection({ servicec }: { servicec: ServiceData[] }) {
   const t = useTranslations("AboutPage");
-  const services = getServices(t); // t functionni argument sifatida berildi
+  const locale = useLocale();
+  
+
 
   return (
     <section className="py-16 bg-[#F6F9FC]">
@@ -24,42 +27,48 @@ export default function ServicesSection() {
 
         {/* Service Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="group bg-white rounded-2xl shadow-sm hover:shadow-md p-6 flex flex-col justify-between transition duration-300 hover:-translate-y-1"
-              data-aos="zoom-out"
-            >
-              <div>
-                <Image
-                  src={service.icon}
-                  alt={service.title}
-                  width={48}
-                  height={48}
-                  className="mb-4"
-                />
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
+          {servicec.map((service, index) => {
+            const serviceData = pickStringProps(service)
+            const localizedTitle = getLocalizedValue(serviceData, "title", locale);
+            const localizedDescription = getLocalizedValue(serviceData, "description", locale);
+            
+            return (
+              <div
+                key={index}
+                className="group bg-white rounded-2xl shadow-sm hover:shadow-md p-6 flex flex-col justify-between transition duration-300 hover:-translate-y-1"
+                data-aos="zoom-out"
+              >
+                <div>
+                  <Image
+                    src={service.icon}
+                    alt={service.title}
+                    width={48}
+                    height={48}
+                    className="mb-4"
+                  />
+                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                    {localizedTitle}
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    { localizedDescription}
+                  </p>
+                </div>
 
-              {/* Bottom CTA */}
-              <div className="mt-6 flex justify-end items-center gap-4">
-                <Link
-                  href={service.link}
-                  className="text-sm text-[#23B3FC] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                >
-                  {t("batafsil")}
-                </Link>
-                <div className="bg-blue-100 p-3 rounded-full group-hover:bg-[#23B3FC] transition-all duration-300">
-                  <ArrowRight className="w-5 h-5 text-[#23B3FC] group-hover:text-white group-hover:-rotate-45 transition-transform duration-300" />
+                {/* Bottom CTA */}
+                <div className="mt-6 flex justify-end items-center gap-4">
+                  <Link
+                    href={service.title}
+                    className="text-sm text-[#23B3FC] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    {t("batafsil")}
+                  </Link>
+                  <div className="bg-blue-100 p-3 rounded-full group-hover:bg-[#23B3FC] transition-all duration-300">
+                    <ArrowRight className="w-5 h-5 text-[#23B3FC] group-hover:text-white group-hover:-rotate-45 transition-transform duration-300" />
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

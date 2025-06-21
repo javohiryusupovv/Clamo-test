@@ -8,7 +8,6 @@ import {
   DoctorImg,
   enterThePortal,
   backgroundImage,
-  FilterItem,
   PaginatedDataItem,
   Imagee,
   ContactData,
@@ -442,32 +441,9 @@ export const getBgImg: backgroundImage[] = [
   },
 ];
 
-export const getFilter: FilterItem[] = [
-  {
-    id: 2,
-    created_at: "2025-06-12T10:10:57.941260Z",
-    updated_at: "2025-06-12T10:10:57.941280Z",
-    name: "Ariza topshirish",
-  },
-  {
-    id: 1,
-    created_at: "2025-06-10T10:28:57.997185Z",
-    updated_at: "2025-06-12T10:11:20.437644Z",
-    name: "Litsenziya qarori",
-  },
-  {
-    id: 3,
-    created_at: "2025-06-13T14:11:24.372312Z",
-    updated_at: "2025-06-13T14:11:24.372335Z",
-    name: "Hujjatni tekshirish",
-  },
-  {
-    id: 4,
-    created_at: "2025-06-13T14:13:01.719466Z",
-    updated_at: "2025-06-13T14:13:01.719490Z",
-    name: "Ekspert baholovi",
-  },
-];
+// export const getFilter: FilterItem[] = [
+//   ... (removed, use getFilterFromAPI instead)
+// ];
 
 
 export const getPaginatedData: PaginatedDataItem[] = [

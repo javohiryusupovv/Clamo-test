@@ -1,15 +1,8 @@
-
 export interface ServiceCardProps {
   icon: string;
   title: string;
   description: string;
   link: string;
-}
-
-export interface Department {
-  id: number;
-  title: string;
-  description: string;
 }
 
 export type TeamMember = {
@@ -18,7 +11,7 @@ export type TeamMember = {
   position: string;
   description: string;
   image: string;
-}
+};
 
 export interface NewsItem {
   id: number;
@@ -36,7 +29,7 @@ export interface NewsType {
   title_uz: string;
   created_at: string;
   image: string;
-};
+}
 
 export interface MedicalLegalProps {
   title: string;
@@ -64,12 +57,10 @@ export type FAQItem = {
   answer: string;
 };
 
-
 export type CardData = {
   title: string;
   description: string;
 };
-
 
 export type DoctorImg = {
   man: string;
@@ -118,73 +109,125 @@ export interface PaginatedDataItem {
   websiteName: string;
   websiteLink: string;
   email: string;
-  phoneNumber:string;
+  phoneNumber: string;
   phone: string;
   comment: string;
   comment_number: number;
 }
 
 export interface Imagee {
-  id:number
-  img:string;
+  id: number;
+  img: string;
 }
 
-export interface  ContactData {
-    phone: string;
-    email: string;
-    website: string;
-    address: string;
-  };
+export interface ContactData {
+  phone: string;
+  email: string;
+  website: string;
+  address: string;
+}
 
-  export interface SochealMedia {
-    id:number;
-    icon:string;
-    name: string;
-    link:string;
-  }
+export interface SochealMedia {
+  id: number;
+  icon: string;
+  name: string;
+  link: string;
+}
 
-  export interface PlatformsServiceProps {
-    id: number;
-    title: string;
-    description: string;
-    buttonText: string;
-    buttonLink: string;
-    phoneTitle: string;
-    phoneNumber: string;
-    image: string;
-  }
+export interface PlatformsServiceProps {
+  id: number;
+  title: string;
+  description: string;
+  buttonText: string;
+  buttonLink: string;
+  phoneTitle: string;
+  phoneNumber: string;
+  image: string;
+}
 
-  export interface OpinionCard{
-    id: number;
-    icons: string;
-    subtitle: string;
-    description: string;
-  }
+export interface OpinionCard {
+  id: number;
+  icons: string;
+  subtitle: string;
+  description: string;
+}
 
-  export interface CardComment {
-    id: number;
-    img: string;
-    name: string;
-    title: string;
-    badge: string;
-    staricon: string;
-    time: string;
-    comment: string;
-  }
+export interface CardComment {
+  id: number;
+  img: string;
+  name: string;
+  title: string;
+  badge: string;
+  staricon: string;
+  time: string;
+  comment: string;
+}
 
+export interface NewsTypes {
+  id: number;
+  slug: string;
+  title: string;
+  title_uz: string;
+  created_at: string;
+  image: string;
+  description: string;
+}
 
+export interface CarouselData {
+  title: string;
+  description: string;
+}
 
-  export interface NewsTypes {
-      id: number;
-      slug: string;
-      title: string;
-      title_uz: string;
-      created_at: string;
-      image: string;
-      description: string;
-  };
+export interface FaqItem {
+  id: number;
+  question: string;
+  question_uz: string;
+  question_en: string;
+  question_ru: string;
+  answer: string;
+  answer_uz: string;
+  answer_en: string;
+  answer_ru: string;
+}
 
-  export interface CarouselData {
-    title: string;
-    description: string;
-  }
+export interface ServiceData {
+  id: number;
+  title: string;
+  title_uz: string;
+  title_en: string;
+  title_ru: string;
+  description: string;
+  description_uz: string;
+  description_en: string;
+  description_ru: string;
+  icon: string;
+  created_at?: string;
+  updated_at?: string;
+}
+
+export interface TeamMembers {
+  id: number;
+  created_at: string;
+  updated_at: string;
+  image: string;
+  full_name: string;
+  full_name_uz: string;
+  full_name_en: string;
+  full_name_ru: string;
+  description: string;
+  description_uz: string;
+  description_en: string;
+  description_ru: string;
+}
+
+export interface Department {
+  id: number;
+  created_at: string; 
+  updated_at: string;
+  icon: string; 
+  title: string;
+  title_uz: string;
+  title_en: string;
+  title_ru: string;
+  description: string;
+}

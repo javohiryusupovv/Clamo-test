@@ -1,8 +1,9 @@
 import { FaAngleRight } from "react-icons/fa";
 import Questions from "./questions/Questions";
 import { useTranslations } from "next-intl";
+import { FAQItem } from "../../../../../app.types";
 
-export default function QuestionsPage() {
+export default function QuestionsPage({faqData}: {faqData: FAQItem[]}) {
   const t = useTranslations("HomePage");
 
   return (
@@ -16,7 +17,7 @@ export default function QuestionsPage() {
           <FaAngleRight className=" group-hover:translate-x-2 transition" />
         </p>
       </div>
-      <Questions />
+      <Questions faqData={faqData} />
     </div>
   );
 }

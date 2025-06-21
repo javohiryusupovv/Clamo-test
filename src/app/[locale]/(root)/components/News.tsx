@@ -3,14 +3,20 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Down from "@/assets/icons/whiteDown.png";
 import { NewsTypes } from "../../../../../app.types";
+import { getLocalizedValue, pickStringProps } from "@/lib/getLocalization";
 
 export default function NewsPage({ news }: { news: NewsTypes }) {
-    // console.log(news);
-
   const t = useTranslations("HomePage");
+
+  const locale = useLocale();
+  const stringNews = pickStringProps(news);
+
+  const localDescription = getLocalizedValue(stringNews, "description", locale);
+  const localTitle = getLocalizedValue(stringNews, "title", locale);
+
 
   return (
     <div className="container pb-10">
@@ -26,7 +32,7 @@ export default function NewsPage({ news }: { news: NewsTypes }) {
           {news?.image ? (
             <Image
               src={news.image}
-              alt="City image"
+              alt={news.title}
               className="w-full h-full"
               width={300}
               height={200}
@@ -40,7 +46,7 @@ export default function NewsPage({ news }: { news: NewsTypes }) {
           </p>
           <div className="absolute bottom-4 left-4 right-4 text-white z-10">
             <h2 className="text-[14px] sm:text-[18px] md:text-[22px] xl:text-[28px] font-bold leading-[130%] pb-2">
-              {news?.description}
+              {localDescription}
             </h2>
             <Link
               href={`/news/1`}
@@ -60,7 +66,7 @@ export default function NewsPage({ news }: { news: NewsTypes }) {
                 {news?.created_at?.slice(0, 10)}
               </p>
               <h3 className="font-bold text-[12px] md:text-[15px] lg:text-[18px] leading-[130%] pb-3">
-                {news?.title}
+                {localTitle}
               </h3>
               <Link
                 href={`/news/2`}
@@ -118,14 +124,16 @@ export default function NewsPage({ news }: { news: NewsTypes }) {
 
       {/* Button */}
       <div className="flex md:justify-end justify-center pt-6">
-        <button className="group w-full max-w-[200px] h-[35px] sm:w-[250px] sm:h-[40px] flex items-center justify-center gap-3 bg-[#23B3FC] hover:bg-[#23B3FC]/[80%] rounded-lg text-xs sm:text-sm md:text-base font-medium text-white">
-          {t("learn_more_button")}
-          <Image
-            src={Down}
-            alt="down strelka"
-            className="group-hover:translate-x-2 transition-all duration-200"
-          />
-        </button>
+        <Link href={`${locale}/news`}>
+          <button className="group w-48 h-[35px] sm:w-[250px] sm:h-[40px] flex items-center justify-center gap-3 bg-[#23B3FC] hover:bg-[#23B3FC]/[80%] rounded-lg text-xs sm:text-sm md:text-base font-medium text-white">
+            {t("learn_more_button")}
+            <Image
+              src={Down}
+              alt="down strelka"
+              className="sm:group-hover:translate-x-2 transition-all duration-200"
+            />
+          </button>
+        </Link>
       </div>
     </div>
   );

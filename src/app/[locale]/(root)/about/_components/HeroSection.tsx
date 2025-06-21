@@ -26,10 +26,10 @@ export default function Hero() {
             />
             <Image src={shape} alt="shape" className="absolute bottom-0 left-0" />
           </div>
-          <div className="w-11/12 md:w-7/12 py-4">
+          <div className="w-11/12 md:w-7/12">
             <Image src={gbCircle} alt="bg Cirlce" className=" absolute right-0 top-0 z-[22]" />
             <article className="relative top-0 left-0 z-[22]">
-              <h3 className=" text-[16px] sm:text-[30px] md:text-[40px] font-bold text-white leading-[30px] md:leading-[40px] md:mr-0 mr-[80px] md:mt-0 mt-[240px] sm:mt-[200px]">{t("hero_title")}</h3>
+              <h3 className=" text-[24px] sm:text-[30px] md:text-[40px] font-bold text-white leading-[50px] md:mr-0 mr-[70px] md:mt-0 mt-[90px] sm:mt-[160px]">{t("hero_title")}</h3>
               <p className="text-[16px] opacity-60 text-white mb-7">{t("hero_des")}</p>
               <button className="px-10 py-2 cursor-pointer rounded-md flex items-center gap-1 text-white bg-[#23B3FC] hover:bg-[#30B9FF]">{t("hero_btn")}<ChevronRight className="stroke-white" /></button>
             </article>

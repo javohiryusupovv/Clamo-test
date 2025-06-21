@@ -40,7 +40,6 @@
     "question_title": "Frequently asked questions",
     "all_question": "All questions",
 
-
     "medical": {
       "subtitle": "Your health matters to us",
       "badge": "Important!",
@@ -108,7 +107,9 @@
     "about_des1": "Simplifying licensing and accreditation processes through the introduction of digital technologies, fully integrating international standards, expanding the qualification system for doctors and medical institutions, and more.",
     "service": "Services provided by the center",
     "service_des": "All the necessary services to improve the quality and processes of medicine in one place, with convenient and effective solutions.",
-    "services": { 
+    "team_title": "Our Team",
+    "team_subtitle": "All the services you need in one place to improve medical quality and processes...",
+    "services": {
       "license": {
         "icon": "/Imgs/License.svg",
         "title": "Licensing",

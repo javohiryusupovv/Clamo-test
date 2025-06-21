@@ -106,6 +106,8 @@
     "about_des1": "Raqamli texnologiyalarni joriy etish orqali litsenziyalash va akkreditatsiya jarayonlarini soddalashtirish, Xalqaro standartlarni to‘liq integratsiya qilish, Shifokor va tibbiyot muassasalari uchun malaka oshirish tizimini kengaytirish va boshqalar.",
     "service": "Markaz ko'rsatadigan xizmatlar",
     "service_des": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.",
+    "team_title": "Markaz jamoasi",
+    "team_subtitle": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda...",
     "services": {
       "license": {
         "icon": "/Imgs/License.svg",

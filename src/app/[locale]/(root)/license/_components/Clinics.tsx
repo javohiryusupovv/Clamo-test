@@ -2,11 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { ChevronDown, SearchIcon } from "lucide-react";
-import { getFilter, getPaginatedData } from "../../../../../../constants/page";
+import { getPaginatedData } from "../../../../../../constants/page";
 import { IoLocationOutline } from "react-icons/io5";
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useTranslations } from "next-intl";
+import { getFilterFromAPI } from "../../../../../lib/getFilter";
+import { FilterItem } from "../../../../../../app.types";
 
 export default function Clinics() {
   const t = useTranslations("LicensePage");
@@ -14,10 +16,25 @@ export default function Clinics() {
   const [selectedFilter, setSelectedFilter] = useState<string>("0");
   const [page, setPage] = useState(1);
   const clinicsPerPage = 5;
-  const filter = getFilter;
+  const [filter, setFilter] = useState<FilterItem[]>([]);
+  const [filterLoading, setFilterLoading] = useState(true);
 
   const allClinics = getPaginatedData;
   const [filteredClinics, setFilteredClinics] = useState(allClinics);
+
+  useEffect(() => {
+    async function fetchFilter() {
+      setFilterLoading(true);
+      try {
+        const data = await getFilterFromAPI();
+        setFilter(data);
+      } catch {
+        setFilter([]);
+      }
+      setFilterLoading(false);
+    }
+    fetchFilter();
+  }, []);
 
   useEffect(() => {
     let result = allClinics;
@@ -66,13 +83,18 @@ export default function Clinics() {
               onChange={(e) => {
                 setSelectedFilter(e.target.value);
               }}
+              disabled={filterLoading}
             >
               <option value="0">{t("all_section")}</option>
-              {filter.map((filter) => (
-                <option key={filter.id} value={filter.id}>
-                  {filter.name}
-                </option>
-              ))}
+              {filterLoading ? (
+                <option disabled>Loading...</option>
+              ) : (
+                filter.map((filter) => (
+                  <option key={filter.id} value={filter.id}>
+                    {filter.name}
+                  </option>
+                ))
+              )}
             </select>
             <ChevronDown className="absolute right-2 sm:right-3 top-2 sm:top-2.5 w-3 sm:w-4 h-3 sm:h-4 text-gray-400 pointer-events-none" />
           </div>
