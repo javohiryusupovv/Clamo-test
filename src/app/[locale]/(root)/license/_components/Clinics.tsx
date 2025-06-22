@@ -6,9 +6,10 @@ import { getPaginatedData } from "../../../../../../constants/page";
 import { IoLocationOutline } from "react-icons/io5";
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { getFilterFromAPI } from "../../../../../lib/getFilter";
 import { FilterItem } from "../../../../../../app.types";
+import { getLocalizedValue, pickStringProps } from "@/lib/getLocalization";
 
 export default function Clinics() {
   const t = useTranslations("LicensePage");
@@ -18,6 +19,7 @@ export default function Clinics() {
   const clinicsPerPage = 5;
   const [filter, setFilter] = useState<FilterItem[]>([]);
   const [filterLoading, setFilterLoading] = useState(true);
+  const locale = useLocale();
 
   const allClinics = getPaginatedData;
   const [filteredClinics, setFilteredClinics] = useState(allClinics);
@@ -86,15 +88,15 @@ export default function Clinics() {
               disabled={filterLoading}
             >
               <option value="0">{t("all_section")}</option>
-              {filterLoading ? (
-                <option disabled>Loading...</option>
-              ) : (
-                filter.map((filter) => (
+              {filter.map((filter) => {
+                const filterData = pickStringProps(filter);
+                const localeName = getLocalizedValue(filterData, "name", locale);
+                return (
                   <option key={filter.id} value={filter.id}>
-                    {filter.name}
+                    {localeName}
                   </option>
-                ))
-              )}
+                );
+              })}
             </select>
             <ChevronDown className="absolute right-2 sm:right-3 top-2 sm:top-2.5 w-3 sm:w-4 h-3 sm:h-4 text-gray-400 pointer-events-none" />
           </div>
