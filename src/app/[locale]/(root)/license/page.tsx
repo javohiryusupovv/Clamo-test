@@ -5,18 +5,13 @@ import ReyesterClient from "./_components/ReyesterClinet";
 export default async function Page() {
   const reyesters = await getReyestersFromAPI();
   const types = await getReyesterTypes();
-  console.log(reyesters);
-  console.log(types);
-  
-  
 
   return (
     <>
       <LicenseHero />
-      {/* Klinikalar section */}
+      
       <section className="container mx-auto px-4 py-[80px]">
-
-       <ReyesterClient reyesters={reyesters} types={types} />
+        <ReyesterClient reyesters={reyesters} types={types} />
       </section>
     </>
   );
