@@ -231,3 +231,16 @@ export interface Department {
   title_ru: string;
   description: string;
 }
+
+
+export interface ReyesterItem {
+  id: number;
+  title_uz: string;
+  location_uz: string;
+  accreditation_number: string;
+  registration_date: string;
+  website: string;
+  shares?: number;
+  email?: string;
+  phone?: string;
+}
