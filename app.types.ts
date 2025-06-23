@@ -91,6 +91,11 @@ export interface ReyesterType {
   created_at: string;
   updated_at: string;
   name: string;
+  slug: string;
+  name_uz: string;
+  name_en: string;
+  name_ru: string; 
+  
 }
 export interface PaginatedDataItem {
   id: number;
@@ -239,8 +244,10 @@ export interface ReyesterItem {
   location_uz: string;
   accreditation_number: string;
   registration_date: string;
+  reyester_type?: ReyesterType[]; // Reyester turi, optional
   website: string;
-  shares?: number;
-  email?: string;
-  phone?: string;
+  shares: number;
+  email: string;
+  phone: string;
+  type: string; // Reyester turi
 }

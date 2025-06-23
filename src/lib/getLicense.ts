@@ -15,3 +15,12 @@ export async function getReyestersFromAPI(): Promise<ReyesterItem[]> {
 
   return data.results; // Backend `results` ichida bo'lsa
 }
+
+export async function getReyesterTypes() {
+  const res = await fetch("https://clamo-production.up.railway.app/api/reyester/types/", {
+    cache: "no-store", // yoki ISR qilsangiz: next: { revalidate: 60 }
+  });
+  if (!res.ok) throw new Error("Turlarni olishda xatolik");
+  const data = await res.json();
+  return data.results; // Backend `results` ichida bo'lsa
+}
