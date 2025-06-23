@@ -201,6 +201,7 @@ export default function Clinics() {
                         <p className="font-semibold text-[#3D445E] text-xs sm:text-sm md:text-[18px]">
                           {clinic.websiteName}
                         </p>
+                        {/* <p></p> */}
                       </Link>
                     </div>
                     <div className="flex-1 min-w-[120px] md:border-l sm:min-w-[150px] md:min-w-[200px] p-1 sm:p-2 mt-2 sm:mt-3">
