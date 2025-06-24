@@ -8,7 +8,6 @@ import Flag from "../../../../assets/icons/uzbekistan.png";
 import Phone from "../../../../assets/icons/phone.png";
 import rusFlag from "../../../../../public/icons/russia.png";
 import engFlag from "../../../../../public/icons/united-kingdom.png";
-import { getImg } from "../../../../../constants/page";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { Language } from "@/types/type";
@@ -17,7 +16,6 @@ export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [header, setHeader] = useState(false);
-  const imgg = getImg;
 
   const t = useTranslations("NavbarPage");
   const locale = useLocale();
@@ -93,33 +91,33 @@ export default function Navbar() {
           className={`flex items-center justify-between py-3 z-[999] container`}
         >
           <ul>
-            {imgg.map((item) => (
-              <Link href="/" key={item.id}>
+           
+              <Link href="/">
                 <Image
-                  src={item.img}
+                  src="/LogoClamo.svg"
                   alt="Logo"
                   width={155.71}
                   height={40}
                   className="w-[105px] h-[40px] lg:hidden"
                 />
               </Link>
-            ))}
+           
           </ul>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center justify-between w-full gap-10">
             <ul>
-              {imgg.map((item) => (
-                <Link href={`/${locale}`} key={item.id}>
+              
+                <Link href={`/${locale}`}>
                   <Image
-                    src={item.img}
+                    src="/LogoClamo.svg"
                     alt="Logo"
                     width={155.71}
                     height={40}
                     className="w-[155.71px] h-[40px]"
                   />
                 </Link>
-              ))}
+           
             </ul>
             <ul className="flex items-center gap-10">
               <article className="relative">
@@ -370,17 +368,17 @@ export default function Navbar() {
               >
                 {/* Header with Logo and Close Icon */}
                 <div className="w-full flex sm:max-w-[60%] max-w-[90%] justify-between items-center -translate-y-3 -translate-x-2 pb-2">
-                  {imgg.map((item) => (
-                    <Link href="/" key={item.id}>
+                  
+                    <Link href="/">
                       <Image
-                        src={item.img}
+                        src="/LogoClamo.svg"
                         alt="Logo"
                         width={105}
                         height={40}
                         className="w-[90px] h-[40px]"
                       />
                     </Link>
-                  ))}
+                  
 
                   <ul className="flex items-center">
                     <div
