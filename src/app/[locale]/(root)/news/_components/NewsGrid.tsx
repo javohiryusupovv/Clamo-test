@@ -13,6 +13,9 @@ export default function NewsGrid({ news }: { news: NewsTypes[] }) {
   const locale = useLocale();
 
 
+  console.log(news);
+  
+
   return (
     <section className=" bg-[#f6f9fc]">
       <div className="container px-4 py-8">
@@ -63,7 +66,7 @@ export default function NewsGrid({ news }: { news: NewsTypes[] }) {
               );
               return (
                 <Link key={item.id} href={`/${locale}/news/${item.slug}`}>
-                  <div className="bg-white rounded-2xl border border-white hover:border-blue-400 hover:shadow-md transition duration-300 cursor-pointer h-[380px]">
+                  <div className="bg-white rounded-2xl border border-white hover:border-blue-400 hover:shadow-md transition duration-300 cursor-pointer h-[378px]">
                     <div className="m-3">
                       <Image
                         src={item.image}

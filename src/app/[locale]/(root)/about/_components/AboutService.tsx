@@ -10,8 +10,8 @@ import { getLocalizedValue, pickStringProps } from "@/lib/getLocalization";
 export default function ServicesSection({ servicec }: { servicec: ServiceData[] }) {
   const t = useTranslations("AboutPage");
   const locale = useLocale();
+  const slugs = ["accreditation", "license", "consulting", ""];
   
-
 
   return (
     <section className="py-16 bg-[#F6F9FC]">
@@ -30,8 +30,8 @@ export default function ServicesSection({ servicec }: { servicec: ServiceData[] 
           {servicec.map((service, index) => {
             const serviceData = pickStringProps(service)
             const localizedTitle = getLocalizedValue(serviceData, "title", locale);
-            const localizedDescription = getLocalizedValue(serviceData, "description", locale);
-            
+            const localizedDescription = getLocalizedValue(serviceData, "description", locale); 
+            const slug = slugs[index];      
             return (
               <div
                 key={index}
@@ -57,7 +57,7 @@ export default function ServicesSection({ servicec }: { servicec: ServiceData[] 
                 {/* Bottom CTA */}
                 <div className="mt-6 flex justify-end items-center gap-4">
                   <Link
-                    href={service.title}
+                    href={`/${locale}/${slug}`}
                     className="text-sm text-[#23B3FC] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   >
                     {t("batafsil")}

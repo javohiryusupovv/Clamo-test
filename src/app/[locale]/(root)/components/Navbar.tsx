@@ -148,7 +148,7 @@ export default function Navbar() {
                         onClick={() => setIsDropdownOpen(false)}
                         className={`text-sm font-medium py-1 px-4 transition-all duration-200 ${
                           isActive(`/${locale}/about`)
-                            ? "text-[#23B3FC]"
+                            ? "text-[#23B3FC] font-bold"
                             : "text-[#3D445E] hover:bg-gray-100 hover:text-[#23B3FC]"
                         }`}
                       >
@@ -160,7 +160,7 @@ export default function Navbar() {
                         onClick={() => setIsDropdownOpen(false)}
                         className={`text-sm font-medium py-1 px-4 transition-all duration-200 ${
                           isActive(`/${locale}/regulatorydocuments`)
-                            ? "text-[#23B3FC]"
+                            ? "text-[#23B3FC] font-bold"
                             : "text-[#3D445E] hover:bg-gray-100 hover:text-[#23B3FC]"
                         }`}
                       >
@@ -172,7 +172,7 @@ export default function Navbar() {
                         onClick={() => setIsDropdownOpen(false)}
                         className={`text-sm font-medium py-1 px-4 transition-all duration-200 ${
                           isActive(`/${locale}/international`)
-                            ? "text-[#23B3FC]"
+                            ? "text-[#23B3FC] font-bold"
                             : "text-[#3D445E] hover:bg-gray-100 hover:text-[#23B3FC]"
                         }`}
                       >
@@ -184,7 +184,7 @@ export default function Navbar() {
                         onClick={() => setIsDropdownOpen(false)}
                         className={`text-sm font-medium py-1 px-4 transition-all duration-200 ${
                           isActive(`/${locale}/consulting`)
-                            ? "text-[#23B3FC]"
+                            ? "text-[#23B3FC] font-bold font"
                             : "text-[#3D445E] hover:bg-gray-100 hover:text-[#23B3FC]"
                         }`}
                       >
@@ -198,7 +198,7 @@ export default function Navbar() {
                 <li
                   className={`text-sm font-medium transition-all duration-200 ${
                     isActive(`/${locale}/license`)
-                      ? "text-[#23B3FC]"
+                      ? "text-[#23B3FC] font-bold"
                       : "text-[#3D445E] hover:text-[#23B3FC]"
                   }`}
                 >
@@ -209,7 +209,7 @@ export default function Navbar() {
                 <li
                   className={`text-sm font-medium transition-all duration-200 ${
                     isActive(`/${locale}/accreditation`)
-                      ? "text-[#23B3FC]"
+                      ? "text-[#23B3FC] font-bold"
                       : "text-[#3D445E] hover:text-[#23B3FC]"
                   }`}
                 >
@@ -220,7 +220,7 @@ export default function Navbar() {
                 <li
                   className={`text-sm font-medium transition-all duration-200 ${
                     isActive(`/${locale}/contacts`)
-                      ? "text-[#23B3FC]"
+                      ? "text-[#23B3FC] font-bold"
                       : "text-[#3D445E] hover:text-[#23B3FC]"
                   }`}
                 >

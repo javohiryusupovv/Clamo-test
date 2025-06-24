@@ -30,7 +30,7 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
             href={`/${locale}/news/${slicedNews[0].slug}`}
             key={slicedNews[0].id}
           >
-            <div className="relative group rounded-[16px] sm:rounded-[24px] overflow-hidden h-full min-h-[480px]">
+            <div className="relative group rounded-[16px] sm:rounded-[24px] overflow-hidden h-full sm:min-h-[480px] min-h-[300px]">
               <Image
                 src={slicedNews[0].image}
                 alt={getLocalizedValue(
@@ -64,6 +64,7 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
           </Link>
         )}
 
+
         {/* RIGHT column with 3 cards */}
         <div className="flex flex-col gap-4">
           {/* Top tall card (index === 1) */}
@@ -72,7 +73,7 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
               href={`/${locale}/news/${slicedNews[1].slug}`}
               key={slicedNews[1].id}
             >
-              <div className="bg-[#F6F9FC] group p-6 rounded-[16px] min-h-[240px] flex flex-col justify-between h-full">
+              <div className="bg-[#F6F9FC] group sm:p-6 p-4 rounded-[16px] sm:min-h-[240px] min-h-[140px] flex flex-col justify-between h-full">
                 <p className="text-[10px] sm:text-[12px] md:text-[14px]">
                   {slicedNews[1].created_at?.slice(0, 10)}
                 </p>
@@ -94,7 +95,7 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
           )}
 
           {/* Bottom 2 small cards side-by-side */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 min-h-[220px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:min-h-[220px] min-h-[140px]">
             {[2, 3].map(
               (i) =>
                 slicedNews[i] && (
