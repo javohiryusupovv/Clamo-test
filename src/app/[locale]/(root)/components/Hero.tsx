@@ -18,7 +18,6 @@ import Link from "next/link";
 function useCountUp(target: number, duration = 1500) {
   const [count, setCount] = useState(0);
   const raf = useRef<number | null>(null);
-  const locale = useLocale();
 
   useEffect(() => {
     let start: number | null = null;
