@@ -31,7 +31,7 @@ export default async function Main() {
       </div>
       <MainService />
       <Izohlar />
-      <NewsPage news={datas[0]} />
+      <NewsPage news={datas} />
       <div className="bg-[#f6f9fc] py-[60px]">
         <InstallPage />
         <Partnyor partners={part} />

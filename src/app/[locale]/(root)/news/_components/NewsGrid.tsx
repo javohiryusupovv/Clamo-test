@@ -5,19 +5,20 @@ import Link from "next/link";
 import { useState } from "react";
 // import { ChevronLeft, ChevronRight } from "lucide-react";
 import { NewsTypes } from "../../../../../../app.types";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 // Dummy data
 
 export default function NewsGrid({ news }: { news: NewsTypes[] }) {
   const [search, setSearch] = useState<string | undefined>();
+  const t = useTranslations("HomePage");
   const locale = useLocale();
 
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Header and Search */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
-        <h1 className="text-2xl sm:text-3xl font-bold">Yangiliklar</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold">{t("news_title")}</h1>
         <div className="w-full sm:w-1/3">
           <div className="relative">
             <input
