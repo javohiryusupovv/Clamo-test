@@ -1,23 +1,36 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { z } from "zod";
 
-const formSchema = z.object({
-  names: z
-    .string()
-    .min(3, "Ism-familiya kamida 3 ta belgidan iborat bo‘lishi kerak")
-    .refine((val) => /^[a-zA-Z\s'"`’‘-]+$/.test(val), {
-      message:
-        "Ism-familiya faqat harflar, bo‘sh joylar va ba'zi belgilar (' - ) bilan yozilishi mumkin",
-    })
-    .transform((val) => val.replace(/['"`’‘]/g, "")),
-  tashkilot: z
-    .string()
-    .min(2, "Tashkilot nomi kamida 2 ta belgidan iborat bo‘lishi kerak"),
-  phoneNumber: z
-    .string()
-    .transform((val) => val.replace(/\s/g, ""))
-    .refine((val) => /^\d{9}$/.test(val), {
-      message: "Telefon raqami aniq 9 ta raqamdan iborat bo‘lishi kerak",
-    }),
-});
+export function getFormSchema(zod: ReturnType<typeof useTranslations>) {
+  return z.object({
+    names: z
+      .string()
+      .min(
+        3,
+        zod("name_subtitle") || "Ism kamida 3 ta belgidan iborat bo‘lishi kerak"
+      )
+      .refine((val) => /^[a-zA-Z\s'"`’‘-]+$/.test(val), {
+        message: zod("name_invalid"),
+      })
+      .transform((val) => val.replace(/['"`’‘]/g, "")),
 
-export default formSchema;
+    tashkilot: z
+      .string()
+      .min(
+        2,
+        zod("organization_min") ||
+          "Tashkilot nomi kamida 2 ta belgidan iborat bo‘lishi kerak"
+      ),
+
+    phoneNumber: z
+      .string()
+      .transform((val) => val.replace(/\s/g, ""))
+      .refine((val) => /^\d{9}$/.test(val), {
+        message:
+          zod("phone_invalid") ||
+          "Telefon raqami aniq 9 ta raqamdan iborat bo‘lishi kerak",
+      }),
+  });
+}

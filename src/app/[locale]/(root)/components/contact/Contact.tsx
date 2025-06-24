@@ -13,12 +13,14 @@ import { z } from "zod";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import formSchema from "@/schemas/formSchema";
-
-type FormData = z.infer<typeof formSchema>;
+import  { getFormSchema } from "@/schemas/formSchema";
 
 export default function Contact() {
-  const t = useTranslations("ContactPage");
+  const t = useTranslations("ContactPage")
+  const zod = useTranslations("ZodForm");
+  const formSchema = getFormSchema(zod);
+
+  type FormData = z.infer<typeof formSchema>;
 
   const {
     register,

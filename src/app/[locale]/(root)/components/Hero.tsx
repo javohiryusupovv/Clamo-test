@@ -11,12 +11,14 @@ import LearnMore from "./LearnMoreButton";
 import { useEffect, useState, useRef } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import "aos/dist/aos.css";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { NumbersType } from "@/types/type";
+import Link from "next/link";
 
 function useCountUp(target: number, duration = 1500) {
   const [count, setCount] = useState(0);
   const raf = useRef<number | null>(null);
+  const locale = useLocale();
 
   useEffect(() => {
     let start: number | null = null;
@@ -44,6 +46,7 @@ function useCountUp(target: number, duration = 1500) {
 
 export default function Hero({ numbers }: { numbers: NumbersType }) {
   const t = useTranslations("HomePage");
+  const locale = useLocale();
 
   const [
     firstTitle,
@@ -63,14 +66,9 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
     }
   }, []);
 
-
-
   const animatedClinics = useCountUp(Number(numbers.clinics_number));
   const animatedConsulting = useCountUp(Number(numbers.consulting_number));
   const animatedLicenses = useCountUp(Number(numbers.licenses_number));
-
-  console.log(animatedConsulting);
-  
 
   return (
     <div className=" overflow-x-hidden">
@@ -101,10 +99,12 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
                     className="group-hover:translate-x-1 transition-all duration-200"
                   />
                 </button>
-                <button className="group hover:bg-[#23B3FC] bg-[#23B3FC33] transition-all duration-200 lg:w-[183px] h-[40px] w-full flex items-center justify-center gap-[11.5px] rounded-lg text-sm font-medium text-[#23B3FC] hover:text-white leading-[130%]">
-                  {t("applying")}{" "}
-                  <FaChevronRight className="group-hover:translate-x-1 transition-all duration-200" />
-                </button>
+                <Link href={`${locale}/contacts`}>
+                  <button className="group hover:bg-[#23B3FC] bg-[#23B3FC33] transition-all duration-200 lg:w-[183px] h-[40px] w-full flex items-center justify-center gap-[11.5px] rounded-lg text-sm font-medium text-[#23B3FC] hover:text-white leading-[130%]">
+                    {t("applying")}{" "}
+                    <FaChevronRight className="group-hover:translate-x-1 transition-all duration-200" />
+                  </button>
+                </Link>
               </article>
               <p className="font-medium text-[12px] pb-4 lg:w-[379px]">
                 {t("specialists")}
@@ -133,7 +133,9 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
               <h1 className="font-bold text-2xl sm:text-3xl lg:text-[32px] leading-tight text-white pb-7">
                 {t("international_cooperation")}
               </h1>
-              <LearnMore />
+              <Link href={`${locale}/about`}>
+                <LearnMore />
+              </Link>
               <div className=" flex justify-center">
                 <Image
                   src={Doctors}
@@ -163,7 +165,7 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
                   <Image src={True} alt="HomeIcons" width={48} height={48} />
                   <div className="pt-10">
                     <h1 className="xl:text-[48px] lg:text-[39px] text-[36px] font-bold">
-                      {animatedConsulting.toLocaleString("ru-RU")}+
+                      {animatedConsulting.toLocaleString("ru-RU") || 0}+
                     </h1>
                     <p className="text-sm font-medium">
                       {t("consulting_service")}

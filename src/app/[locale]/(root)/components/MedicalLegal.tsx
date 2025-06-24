@@ -5,11 +5,13 @@ import LearnMore from "./LearnMoreButton";
 import { useEffect } from "react";
 import Image from "next/image";
 import ClamoFlag from "../../../../assets/images/clamoFlag.png";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link";
 
 export default function MedicalLegal() {
   const t = useTranslations("HomePage");
   const medical = getMedical(t);
+  const locale = useLocale();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -38,11 +40,12 @@ export default function MedicalLegal() {
             <h1 className="font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl leading-tight text-[#3D445E] mb-4">
               {item.title}
             </h1>
-            {/* <p></p> */}
             <p className="font-medium text-base sm:text-lg lg:text-xl text-gray-700 mb-6">
               {item.description}
             </p>
-            <LearnMore />
+            <Link href={`${locale}/license`}>
+              <LearnMore />
+            </Link>
           </div>
 
           <div className="relative bottom-0 z-[60] lg:h-[500px] overflow-hidden">
@@ -59,4 +62,3 @@ export default function MedicalLegal() {
     </div>
   );
 }
-

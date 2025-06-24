@@ -9,6 +9,12 @@
     "consulting": "Konsultatsiya",
     "regulatorydocuments": "Normativ Hujjatlar"
   },
+  "ZodForm": {
+    "name_subtitle": "Ism kamida 3 ta belgidan iborat bo‘lishi kerak",
+    "name_invalid": "Ism-familiya faqat harflar va ba'zi belgilar (' - ) bilan yozilishi mumkin",
+    "organization_min": "Tashkilot nomi kamida 2 ta belgidan iborat bo‘lishi kerak",
+    "phone_invalid": "Telefon raqami aniq 9 ta raqamdan iborat bo‘lishi kerak"
+  },
   "HomePage": {
     "health_message": "Sog'liqni saqlash vazirligi qoshidagi Tibbiyot tashkilotlarini",
     "litsenziya_title": "litsenziyalash va akkreditatsiyalash markazi davlat muassasi",
@@ -38,7 +44,8 @@
     "partnyor_title": "Hamkorkarimiz",
     "partnyor_subtitle": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.",
     "question_title": "Tez-tez beriladigan savollar",
-    "all_question": "Barcha savollar","medical": {
+    "all_question": "Barcha savollar",
+    "medical": {
       "subtitle": "Sizning sog'lig'ingiz biz uchun",
       "badge": "Muhim!",
       "title": "CLAMO bilan tibbiy faoliyatingizni qonuniylashtiring!",
@@ -54,12 +61,12 @@
       "thought": "Fikr-mulohazalar",
       "your_opinion": "O‘z fikr-mulohazalaringizni platformada qoldirishingiz mumkin"
     },
-    "cardComment":{
-        "name": "Umid G'afurov",
-        "title": "Ko'rib chiqish",
-        "badge": "CLAMO",
-        "time": "15 daqiqa oldin",
-        "comment": "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi."
+    "cardComment": {
+      "name": "Umid G'afurov",
+      "title": "Ko'rib chiqish",
+      "badge": "CLAMO",
+      "time": "15 daqiqa oldin",
+      "comment": "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi."
     }
   },
   "LicensePage": {
@@ -72,15 +79,16 @@
     "get_license_button": "Litsenziya olish portaliga o'tish",
     "clinics_titile": "Klinikalar Reyesteri",
     "all_section": "Barchasi",
-    "document":{
-        "application_title": "Ariza topshirish",
-        "application_description": "Markazning rasmiy platformasi orqali litsenziya olish uchun murojaat qilish",
-        "documents_title": "Hujjatlarni tekshirish",
-        "documents_description": "Muassasning sanitariya, texnik va huquqiy talablariga muvofiqligini tekshirish",
-        "expert_title":"Ekspert baholovi",
-        "expert_description": "Mutaxassislar tomonidan tayyorgarlik darajasini baholash",
-        "license_title": "Litsenziya qarori",
-        "license_description": "Talablar bajarilganda muassasalarga rasmiy litsenziya beriladi"
+    "search_placeholder": "Kilinikalarni izlash",
+    "document": {
+      "application_title": "Ariza topshirish",
+      "application_description": "Markazning rasmiy platformasi orqali litsenziya olish uchun murojaat qilish",
+      "documents_title": "Hujjatlarni tekshirish",
+      "documents_description": "Muassasning sanitariya, texnik va huquqiy talablariga muvofiqligini tekshirish",
+      "expert_title": "Ekspert baholovi",
+      "expert_description": "Mutaxassislar tomonidan tayyorgarlik darajasini baholash",
+      "license_title": "Litsenziya qarori",
+      "license_description": "Talablar bajarilganda muassasalarga rasmiy litsenziya beriladi"
     }
   },
   "AccreditationPage": {

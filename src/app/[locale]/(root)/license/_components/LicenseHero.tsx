@@ -87,7 +87,7 @@ export default function LicenseHero() {
       {/* Steps section */}
       <div className="container mx-auto px-4 my-[30px]">
         <section className="bg-gradient-to-b from-[#39a9f2] to-[#0653C9] text-white p-6 rounded-3xl max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid lg:grid-cols-2 gap-6">
             <div className="flex flex-col gap-4">
               <h2 className="text-3xl md:text-5xl font-bold mb-4 sm:w-[80%]">
                 {t("get_license")}
