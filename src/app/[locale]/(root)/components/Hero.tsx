@@ -88,24 +88,26 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
             >
               {t("litsenziya_title")}
             </h1>
-            <div className="bg-white border border-white lg:max-w-max max-lg:w-full mb-4 sm:px-4 rounded-[17px]">
+            <div className="bg-white border border-white w-[411px] max-lg:w-full mb-4 sm:px-4 rounded-[17px]">
               <article className="flex items-center max-md:justify-between gap-3 pb-4 pt-4">
-                <button className="group lg:w-[183px] h-[40px] w-full flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[80%] bg-[#23B3FC] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">
-                  {t("service_button")}{" "}
-                  <Image
-                    src={Down}
-                    alt="down strelka"
-                    className="group-hover:translate-x-1 transition-all duration-200"
-                  />
-                </button>
-                <Link href={`${locale}/contacts`}>
-                  <button className="group hover:bg-[#23B3FC] bg-[#23B3FC33] transition-all duration-200 lg:w-[183px] h-[40px] w-full flex items-center justify-center gap-[11.5px] rounded-lg text-sm font-medium text-[#23B3FC] hover:text-white leading-[130%]">
+                <Link href={`${locale}/contacts`} className="lg:w-full w-1/2">
+                  <button className="group lg:w-[183px] w-full h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[80%] bg-[#23B3FC] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">
+                    {t("service_button")}{" "}
+                    <Image
+                      src={Down}
+                      alt="down strelka"
+                      className="group-hover:translate-x-1 transition-all duration-200"
+                    />
+                  </button>
+                </Link>
+                <Link href={`${locale}/contacts`} className="lg:w-full w-1/2">
+                  <button className="group hover:bg-[#23B3FC] bg-[#23B3FC33] transition-all duration-200 w-full lg:w-[183px] h-[40px] flex items-center justify-center gap-[11.5px] rounded-lg text-sm font-medium text-[#23B3FC] hover:text-white leading-[130%]">
                     {t("applying")}{" "}
                     <FaChevronRight className="group-hover:translate-x-1 transition-all duration-200" />
                   </button>
                 </Link>
               </article>
-              <p className="font-medium text-[12px] pb-4 lg:w-[379px]">
+              <p className="font-medium text-[12px] pb-4 lg:w-[379px]text-[#3D445E]">
                 {t("specialists")}
               </p>
             </div>

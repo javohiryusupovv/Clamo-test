@@ -13,19 +13,22 @@ import { getPartners } from "@/lib/getPartners";
 import { getFaqs } from "@/lib/getFaqs";
 import { getServicec } from "@/lib/getServicec";
 
-
 export default async function Main() {
   const data = await getData();
   const datas = await getNews();
-  const part = await getPartners()
-  const faqData = await getFaqs()
+  const part = await getPartners();
+  const faqData = await getFaqs();
   const service = await getServicec();
 
   return (
     <div className="overflow-hidden">
       <Hero numbers={data[0]} />
       <MedicalLegal />
-      <ServicesSection servicec={service} />
+      <div className="bg-[#F6F9FC]">
+        <div className="max-lg:container">
+          <ServicesSection servicec={service} />
+        </div>
+      </div>
       <MainService />
       <Izohlar />
       <NewsPage news={datas[0]} />
