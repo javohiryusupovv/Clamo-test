@@ -25,7 +25,7 @@ export default function LicenseHero() {
     <>
         {/* Hero section */}
       <div className="relative">
-        <div className="absolute -left-32 top-16 h-[60%] w-[130px] shadow-hero-left z-[-1] hidden md:block"></div>
+        <div className="absolute -left-[300px] top-28 blur-[200px] bg-[#6EB8E8] w-[580px] h-[360px] rounded-full"></div>
 
         <div className="container mx-auto px-4">
           <div className="w-full my-20 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10 pt-12 md:h-[400px] md:pt-0">
