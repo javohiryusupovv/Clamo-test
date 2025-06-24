@@ -109,7 +109,7 @@ export default function ReyesterCard({
           <p className="text-[18px] font-semibold text-[#3D445E]">{renderValue(email)}</p>
 
           <p className="font-medium text-[14px] text-[#808597] pb-[8px] mt-4">
-            Telefon raqam
+            Telefon raqamz
           </p>
           <p className="text-[18px] font-semibold text-[#3D445E]">{renderValue(phone)}</p>
         </div>

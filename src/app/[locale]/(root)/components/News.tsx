@@ -26,11 +26,18 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* LEFT big card (index === 0) */}
         {slicedNews[0] && (
-          <Link href={`/${locale}/news/${slicedNews[0].slug}`} key={slicedNews[0].id}>
+          <Link
+            href={`/${locale}/news/${slicedNews[0].slug}`}
+            key={slicedNews[0].id}
+          >
             <div className="relative group rounded-[16px] sm:rounded-[24px] overflow-hidden h-full min-h-[480px]">
               <Image
                 src={slicedNews[0].image}
-                alt={getLocalizedValue(pickStringProps(slicedNews[0]), "title", locale)}
+                alt={getLocalizedValue(
+                  pickStringProps(slicedNews[0]),
+                  "title",
+                  locale
+                )}
                 className="w-full h-full object-cover"
                 fill
               />
@@ -40,7 +47,11 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
               </p>
               <div className="absolute bottom-4 left-4 right-4 text-white z-10">
                 <h2 className="text-[14px] sm:text-[18px] md:text-[22px] xl:text-[28px] font-bold leading-[130%] pb-2">
-                  {getLocalizedValue(pickStringProps(slicedNews[0]), "description", locale)}
+                  {getLocalizedValue(
+                    pickStringProps(slicedNews[0]),
+                    "description",
+                    locale
+                  )}
                 </h2>
                 <button className="hover:underline text-white font-medium text-[12px] sm:text-[14px] flex items-center gap-4">
                   {t("detailed_button")}
@@ -57,13 +68,20 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
         <div className="flex flex-col gap-4">
           {/* Top tall card (index === 1) */}
           {slicedNews[1] && (
-            <Link href={`/${locale}/news/${slicedNews[1].slug}`} key={slicedNews[1].id}>
-              <div className="bg-[#F6F9FC] p-6 rounded-[16px] min-h-[240px] flex flex-col justify-between h-full">
+            <Link
+              href={`/${locale}/news/${slicedNews[1].slug}`}
+              key={slicedNews[1].id}
+            >
+              <div className="bg-[#F6F9FC] group p-6 rounded-[16px] min-h-[240px] flex flex-col justify-between h-full">
                 <p className="text-[10px] sm:text-[12px] md:text-[14px]">
                   {slicedNews[1].created_at?.slice(0, 10)}
                 </p>
-                <h3 className="font-bold text-[14px] md:text-[16px] lg:text-[18px] leading-[130%] pb-3">
-                  {getLocalizedValue(pickStringProps(slicedNews[1]), "title", locale)}
+                <h3 className="font-bold text-[#3D445E] text-[14px] md:text-[16px] lg:text-[24px] leading-[130%] pb-3">
+                  {getLocalizedValue(
+                    pickStringProps(slicedNews[1]),
+                    "title",
+                    locale
+                  )}
                 </h3>
                 <button className="hover:underline text-[#74807B] font-medium text-[12px] sm:text-[14px] flex items-center gap-4">
                   {t("detailed_button")}
@@ -80,13 +98,20 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
             {[2, 3].map(
               (i) =>
                 slicedNews[i] && (
-                  <Link href={`/${locale}/news/${slicedNews[i].slug}`} key={slicedNews[i].id}>
-                    <div className="bg-[#F6F9FC] p-4 rounded-[16px] h-full flex flex-col justify-between">
+                  <Link
+                    href={`/${locale}/news/${slicedNews[i].slug}`}
+                    key={slicedNews[i].id}
+                  >
+                    <div className="bg-[#F6F9FC] group p-4 rounded-[16px] h-full flex flex-col justify-between">
                       <p className="text-[10px] sm:text-[12px] md:text-[14px]">
                         {slicedNews[i].created_at?.slice(0, 10)}
                       </p>
-                      <h3 className="font-bold text-[12px] md:text-[14px] lg:text-[16px] leading-[130%] pb-3">
-                        {getLocalizedValue(pickStringProps(slicedNews[i]), "title", locale)}
+                      <h3 className="font-bold text-[#3D445E] text-[14px] md:text-[16px] lg:text-[24px] leading-[130%] pb-3">
+                        {getLocalizedValue(
+                          pickStringProps(slicedNews[i]),
+                          "title",
+                          locale
+                        )}
                       </h3>
                       <button className="hover:underline text-[#74807B] font-medium text-[12px] sm:text-[14px] flex items-center gap-4">
                         {t("detailed_button")}
