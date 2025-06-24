@@ -75,6 +75,11 @@ export default function Navbar() {
     };
   }, []);
 
+  // Helper function to determine if a link is active
+  const isActive = (href: string) => {
+    return pathname === href;
+  };
+
   return (
     <div className="m-auto">
       <div
@@ -143,7 +148,11 @@ export default function Navbar() {
                     <Link href={`/${locale}/about`}>
                       <li
                         onClick={() => setIsDropdownOpen(false)}
-                        className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100 hover:text-[#23B3FC] transition-all duration-200"
+                        className={`text-sm font-medium py-1 px-4 transition-all duration-200 ${
+                          isActive(`/${locale}/about`)
+                            ? "text-[#23B3FC]"
+                            : "text-[#3D445E] hover:bg-gray-100 hover:text-[#23B3FC]"
+                        }`}
                       >
                         {t("aboutss")}
                       </li>
@@ -151,7 +160,11 @@ export default function Navbar() {
                     <Link href={`/${locale}/regulatorydocuments`}>
                       <li
                         onClick={() => setIsDropdownOpen(false)}
-                        className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100 hover:text-[#23B3FC] transition-all duration-200"
+                        className={`text-sm font-medium py-1 px-4 transition-all duration-200 ${
+                          isActive(`/${locale}/regulatorydocuments`)
+                            ? "text-[#23B3FC]"
+                            : "text-[#3D445E] hover:bg-gray-100 hover:text-[#23B3FC]"
+                        }`}
                       >
                         {t("regulatorydocuments")}
                       </li>
@@ -159,7 +172,11 @@ export default function Navbar() {
                     <Link href={`/${locale}/international`}>
                       <li
                         onClick={() => setIsDropdownOpen(false)}
-                        className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100 hover:text-[#23B3FC] transition-all duration-200"
+                        className={`text-sm font-medium py-1 px-4 transition-all duration-200 ${
+                          isActive(`/${locale}/international`)
+                            ? "text-[#23B3FC]"
+                            : "text-[#3D445E] hover:bg-gray-100 hover:text-[#23B3FC]"
+                        }`}
                       >
                         {t("international")}
                       </li>
@@ -167,7 +184,11 @@ export default function Navbar() {
                     <Link href={`/${locale}/consulting`}>
                       <li
                         onClick={() => setIsDropdownOpen(false)}
-                        className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:bg-gray-100 hover:text-[#23B3FC] transition-all duration-200"
+                        className={`text-sm font-medium py-1 px-4 transition-all duration-200 ${
+                          isActive(`/${locale}/consulting`)
+                            ? "text-[#23B3FC]"
+                            : "text-[#3D445E] hover:bg-gray-100 hover:text-[#23B3FC]"
+                        }`}
                       >
                         {t("consulting")}
                       </li>
@@ -176,20 +197,37 @@ export default function Navbar() {
                 )}
               </article>
               <Link href={`/${locale}/license`}>
-                <li className="text-sm font-medium text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200">
+                <li
+                  className={`text-sm font-medium transition-all duration-200 ${
+                    isActive(`/${locale}/license`)
+                      ? "text-[#23B3FC]"
+                      : "text-[#3D445E] hover:text-[#23B3FC]"
+                  }`}
+                >
                   {t("licens")}
                 </li>
               </Link>
               <Link href={`/${locale}/accreditation`}>
-                <li className="text-sm font-medium text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200">
+                <li
+                  className={`text-sm font-medium transition-all duration-200 ${
+                    isActive(`/${locale}/accreditation`)
+                      ? "text-[#23B3FC]"
+                      : "text-[#3D445E] hover:text-[#23B3FC]"
+                  }`}
+                >
                   {t("accredation")}
                 </li>
               </Link>
-              <Link
-                href={`/${locale}/contacts`}
-                className="text-sm font-medium text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200"
-              >
-                {t("contacts")}
+              <Link href={`/${locale}/contacts`}>
+                <li
+                  className={`text-sm font-medium transition-all duration-200 ${
+                    isActive(`/${locale}/contacts`)
+                      ? "text-[#23B3FC]"
+                      : "text-[#3D445E] hover:text-[#23B3FC]"
+                  }`}
+                >
+                  {t("contacts")}
+                </li>
               </Link>
             </ul>
             <ul className="flex items-center gap-8">
@@ -319,7 +357,7 @@ export default function Navbar() {
           {/* Mobile Menu */}
           {isMobileMenuOpen && (
             <div
-              className="fixed inset-0 bg-black bg-opacity-50  lg:hidden"
+              className="fixed inset-0 bg-black bg-opacity-50 lg:hidden"
               onClick={toggleMobileMenu}
             >
               <div
@@ -349,7 +387,6 @@ export default function Navbar() {
                       className="relative top-0 left-0"
                       onClick={(e) => {
                         e.stopPropagation();
-                        //   DropdownOpen();
                       }}
                     >
                       <article
@@ -463,7 +500,11 @@ export default function Navbar() {
                     <Link href={`/${locale}/about`}>
                       <li
                         onClick={() => setIsDropdownOpen(false)}
-                        className="text-sm font-medium text-[#3D445E]"
+                        className={`text-sm font-medium ${
+                          isActive(`/${locale}/about`)
+                            ? "text-[#23B3FC]"
+                            : "text-[#3D445E]"
+                        }`}
                       >
                         {t("aboutss")}
                       </li>
@@ -471,7 +512,11 @@ export default function Navbar() {
                     <Link href={`/${locale}/regulatorydocuments`}>
                       <li
                         onClick={() => setIsDropdownOpen(false)}
-                        className="text-sm font-medium text-[#3D445E]"
+                        className={`text-sm font-medium ${
+                          isActive(`/${locale}/regulatorydocuments`)
+                            ? "text-[#23B3FC]"
+                            : "text-[#3D445E]"
+                        }`}
                       >
                         {t("regulatorydocuments")}
                       </li>
@@ -479,7 +524,11 @@ export default function Navbar() {
                     <Link href={`/${locale}/international`}>
                       <li
                         onClick={() => setIsDropdownOpen(false)}
-                        className="text-sm font-medium text-[#3D445E]"
+                        className={`text-sm font-medium ${
+                          isActive(`/${locale}/international`)
+                            ? "text-[#23B3FC]"
+                            : "text-[#3D445E]"
+                        }`}
                       >
                         {t("international")}
                       </li>
@@ -487,7 +536,11 @@ export default function Navbar() {
                     <Link href={`/${locale}/consulting`}>
                       <li
                         onClick={() => setIsDropdownOpen(false)}
-                        className="text-sm font-medium text-[#3D445E]"
+                        className={`text-sm font-medium ${
+                          isActive(`/${locale}/consulting`)
+                            ? "text-[#23B3FC]"
+                            : "text-[#3D445E]"
+                        }`}
                       >
                         {t("consulting")}
                       </li>
@@ -495,24 +548,40 @@ export default function Navbar() {
                   </ul>
                   <ul className="flex flex-col items-start gap-6">
                     <Link href={`/${locale}/license`}>
-                      <li className="text-sm font-medium text-[#3D445E]">
+                      <li
+                        className={`text-sm font-medium ${
+                          isActive(`/${locale}/license`)
+                            ? "text-[#23B3FC]"
+                            : "text-[#3D445E]"
+                        }`}
+                      >
                         {t("licens")}
                       </li>
                     </Link>
                     <Link href={`/${locale}/accreditation`}>
-                      <li className="text-sm font-medium text-[#3D445E]">
+                      <li
+                        className={`text-sm font-medium ${
+                          isActive(`/${locale}/accreditation`)
+                            ? "text-[#23B3FC]"
+                            : "text-[#3D445E]"
+                        }`}
+                      >
                         {t("accredation")}
                       </li>
                     </Link>
                     <Link href={`/${locale}/contacts`}>
-                      <li className="text-sm font-medium text-[#3D445E]">
+                      <li
+                        className={`text-sm font-medium ${
+                          isActive(`/${locale}/contacts`)
+                            ? "text-[#23B3FC]"
+                            : "text-[#3D445E]"
+                        }`}
+                      >
                         {t("contacts")}
                       </li>
                     </Link>
                   </ul>
                 </article>
-
-                {/* flag and phone number */}
               </div>
             </div>
           )}
