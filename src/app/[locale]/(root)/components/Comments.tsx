@@ -14,7 +14,7 @@ export default function Izohlar() {
 
   return (
     <div className="md:py-[64px] py-[30px]">
-      <div className="container">
+      <div className="container max-sm:mb-4">
         {opinion.map((item: commentOpinion, id: number) => (
           <div key={id}>
             <Image
@@ -40,7 +40,7 @@ export default function Izohlar() {
             {cardComment.map((item, id) => (
               <div
                 key={id}
-                className="lg:max-w-[343px] max-w-[300px] mx-4 border border-[#E3E8E9] rounded-[16px] sm:p-[16px] p-[8px] bg-white"
+                className="lg:max-w-[343px] max-w-[300px] mx-4 max-sm:mx-2 border border-[#E3E8E9] rounded-[16px] sm:p-[16px] p-[8px] bg-white"
               >
                 <div className="flex items-center gap-2">
                   <Image
@@ -93,7 +93,7 @@ export default function Izohlar() {
               .map((item, id) => (
                 <div
                   key={id}
-                  className="lg:max-w-[343px] max-w-[300px] mx-4 border border-[#E3E8E9] rounded-[16px] sm:p-[16px] p-[8px] bg-white"
+                  className="lg:max-w-[343px] max-w-[300px] mx-4 max-sm:mx-2 border border-[#E3E8E9] rounded-[16px] sm:p-[16px] p-[8px] bg-white"
                 >
                   <div className="flex items-center gap-2">
                     <Image

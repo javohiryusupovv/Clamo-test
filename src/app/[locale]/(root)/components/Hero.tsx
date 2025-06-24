@@ -107,7 +107,7 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
                   </button>
                 </Link>
               </article>
-              <p className="font-medium text-[12px] pb-4 lg:w-[379px]text-[#3D445E]">
+              <p className="font-medium text-[12px] pb-4 lg:w-[379px] text-[#3D445E]">
                 {t("specialists")}
               </p>
             </div>
