@@ -40,10 +40,10 @@ export default function InstallPage() {
 
         {/* Content Section */}
         <div className="w-full lg:w-1/2 z-20 mt-6 lg:mt-0 max-xl:translate-x-3 max-lg:translate-x-0">
-          <h6 className="text-[20px] sm:text-[24px] font-bold text-white mb-2">
+          <h6 className="text-[20px] sm:text-[24px] font-vk font-bold text-white mb-2">
             {t("install_app")}
           </h6>
-          <p className="text-sm text-white opacity-60 leading-relaxed mb-4">
+          <p className="text-sm text-white opacity-60 font-vk leading-relaxed mb-4">
             {t("appeal_title")}
           </p>
           <article className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
@@ -51,8 +51,8 @@ export default function InstallPage() {
             <button className="flex items-center px-4 py-2 bg-white/20 rounded-lg gap-2">
               <SiApple className="w-[30px] h-[30px] text-white" />
               <div className="text-left">
-                <p className="text-xs text-white">Download on the</p>
-                <p className="text-base text-white font-medium">App Store</p>
+                <p className="text-xs text-white font-vk">Download on the</p>
+                <p className="text-base text-white font-medium font-vk">App Store</p>
               </div>
             </button>
 
@@ -60,8 +60,8 @@ export default function InstallPage() {
             <button className="flex items-center px-4 py-2 bg-white/20 rounded-lg gap-2">
               <FaGooglePlay className="w-[30px] h-[30px] text-white" />
               <div className="text-left">
-                <p className="text-xs text-white uppercase">Get it on</p>
-                <p className="text-base text-white font-medium">Google Play</p>
+                <p className="text-xs text-white uppercase font-vk">Get it on</p>
+                <p className="text-base text-white font-medium font-vk">Google Play</p>
               </div>
             </button>
 
@@ -74,8 +74,8 @@ export default function InstallPage() {
               />
 
               <div className="text-left">
-                <p className="text-xs text-white uppercase">Explore it on</p>
-                <p className="text-base text-white font-medium">AppGallery</p>
+                <p className="text-xs text-white uppercase font-vk">Explore it on</p>
+                <p className="text-base text-white font-medium font-vk">AppGallery</p>
               </div>
             </button>
           </article>

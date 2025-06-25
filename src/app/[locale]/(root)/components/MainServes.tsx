@@ -24,7 +24,7 @@ export default function MainService() {
 
   return (
     <section className="bg-[#F6F9FC]">
-      <section className="container  sm:pb-[58px] pt-16  lg:overflow-hidden">
+      <section className="container  sm:pb-[58px] pt-16 lg:overflow-hidden">
         {platforms.map((item, id) => (
           <div
             key={id}
@@ -44,14 +44,14 @@ export default function MainService() {
             </div>
 
             <div className=" mt-6 lg:p-0 max-sm:mx-1 mx-6 my-6 px-4">
-              <h1 className="font-bold lg:text-[40px] md:text-[34px] text-[28px] leading-[110%] pb-[8px]">
+              <h1 className="font-bold font-vk lg:text-[40px] md:text-[34px] text-[28px] leading-[110%] pb-[8px]">
                 {item.title}
               </h1>
-              <p className="font-medium text-base text-white/60 md:pb-7 pb-2">
+              <p className="font-medium font-vk text-base text-white/60 md:pb-7 pb-2">
                 {item.description}
               </p>
               <div className="flex md:gap-[28px] gap-3 items-center">
-                <button className="md:w-[185px] w-[150px] h-[40px] flex items-center justify-center sm:gap-[11.5px] gap-1 bg-[#23B3FC] group hover:bg-[#23B3FC]/[80%] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] cursor-pointer">
+                <button className="md:w-[185px] w-[150px] h-[40px] font-vk flex items-center justify-center sm:gap-[11.5px] gap-1 bg-[#23B3FC] group hover:bg-[#23B3FC]/[80%] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] cursor-pointer">
                   {item.buttonText}
                   <FaChevronRight className="group-hover:translate-x-2 transition-all duration-200" />
                 </button>
@@ -60,10 +60,10 @@ export default function MainService() {
                     <FaPhoneAlt size={19.83} />
                   </div>
                   <div>
-                    <p className="md:text-sm text-xs font-normal">
+                    <p className="md:text-sm text-xs font-vk font-normal text-[#FFFFFF]">
                       {item.phoneTitle}
                     </p>
-                    <p className="text-2xl font-bold">{item.phoneNumber}</p>
+                    <p className="text-2xl font-bold font-vk">{item.phoneNumber}</p>
                   </div>
                 </div>
               </div>

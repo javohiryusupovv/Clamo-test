@@ -9,7 +9,7 @@ export default function InternationalProject() {
   return (
     <div className="w-full py-16 mb-32">
       <div className="container">
-        <h3 className="text-center font-bold text-3xl md:text-5xl text-[#3D445E] mb-[40px] md:mb-[71px]">
+        <h3 className="text-center font-bold text-3xl font-vk md:text-5xl text-[#3D445E] mb-[40px] md:mb-[71px]">
           {t("hamkorlarr")}
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 max-md:pt-8 md:gap-10">
@@ -27,10 +27,10 @@ export default function InternationalProject() {
                   alt={`Icon ${item.title}`}
                 />
               </article>
-              <h6 className="text-xl md:text-2xl font-bold text-white mb-3 md:mb-4">
+              <h6 className="text-xl md:text-2xl font-bold font-vk text-white mb-3 md:mb-4">
                 {item.title}
               </h6>
-              <p className="text-[14px] font-normal text-white text-center">
+              <p className="text-[14px] font-vk font-normal text-white text-center">
                 {item.desc}
               </p>
             </div>

@@ -8,13 +8,13 @@ module.exports = {
   ],
   theme: {
     container: {
-      padding: '10px',
+      padding: "10px",
       center: true,
       screens: {
-        sm: '640px',
-        md: '768px',
-        lg: '960px',
-        xl: '1184px',
+        sm: "640px",
+        md: "768px",
+        lg: "960px",
+        xl: "1184px",
       },
     },
     extend: {
@@ -22,12 +22,18 @@ module.exports = {
         ll: "450px",
         ms: "500px",
         xxs: "400px",
-        xxl:"480px",
-        xcc:"1184px"
+        xxl: "480px",
+        xcc: "1184px",
       },
       boxShadow: {
-        'hero-left': '84px 100px 200px 12px rgb(166,217,242)',
-        'box-shadow': '-119px 161px 240px -116px rgba(255,255,255,0.75)',
+        "hero-left": "84px 100px 200px 12px rgb(166,217,242)",
+        "box-shadow": "-119px 161px 240px -116px rgba(255,255,255,0.75)",
+      },
+      fontFamily: {
+        vela: ["Vela Sans", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+        vk: ["VK Sans Display", "sans-serif"],
       },
     },
   },

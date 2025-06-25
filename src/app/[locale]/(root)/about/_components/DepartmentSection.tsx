@@ -12,10 +12,12 @@ export default function DepartmentSection({
   const locale = useLocale();
   return (
     <section className="px-4 py-10 max-w-6xl mx-auto">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3D445E] mb-3 text-start">
+      <h2 className="text-2xl sm:text-3xl font-vk md:text-4xl lg:text-5xl font-bold text-[#3D445E] mb-1 text-start">
         {t("abouttitle3")}
       </h2>
-      <p className="text-gray-600 mb-8">{t("about_des3")}</p>
+      <p className="text-[#012548CC] mb-8 font-vk font-medium text-[20px]">
+        {t("about_des3")}
+      </p>
 
       <div className="grid md:grid-cols-2 gap-4">
         {agentsection.map((departments) => {
@@ -57,10 +59,10 @@ export default function DepartmentSection({
                 </svg>
               </div>
               <div className="transition-all duration-200 ease-in-out">
-                <h3 className="text-lg font-semibold group-hover:text-white transition-colors duration-200 ease-in-out">
+                <h3 className="font-bold text-[#3D445E] font-vk text-[20px] group-hover:text-white transition-colors duration-200 ease-in-out">
                   {titleLocale}
                 </h3>
-                <p className="text-sm mt-2 group-hover:text-white transition-colors duration-200 ease-in-out">
+                <p className="text-[16px] mt-2 font-vk group-hover:text-white transition-colors duration-200 ease-in-out">
                   {descriptionLocale}
                 </p>
               </div>

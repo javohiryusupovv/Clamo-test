@@ -27,37 +27,37 @@ export default function ContactPage() {
           key={id}
           className="md:absolute top-[55%] left-[100px] md:transform -translate-y-1/2 z-10 w-full sm:w-[310px] bg-white bg-opacity-90 rounded-xl shadow-lg p-6 space-y-4 text-gray-800"
         >
-          <h2 className="text-2xl font-semibold">{t("phone_info")}</h2>
+          <h2 className="text-2xl font-semibold font-vk">{t("phone_info")}</h2>
 
           <div className="flex items-center gap-3">
             <FaPhoneAlt className="text-blue-600" />
             <div>
-              <p className="text-sm">{t("phone_number")}</p>
-              <p className="font-medium">{item.phone}</p>
+              <p className="text-sm font-vk">{t("phone_number")}</p>
+              <p className="font-medium font-vk">{item.phone}</p>
             </div>
           </div>
 
           <div className="flex items-center gap-3">
             <FaEnvelope className="text-blue-600" />
             <div>
-              <p className="text-sm">{t("email")}</p>
-              <p className="font-medium">{item.email}</p>
+              <p className="text-sm font-vk">{t("email")}</p>
+              <p className="font-medium font-vk">{item.email}</p>
             </div>
           </div>
 
           <div className="flex items-center gap-3">
             <FaGlobe className="text-blue-600" />
             <div>
-              <p className="text-sm">{t("website")}</p>
-              <p className="font-medium">{item.website}</p>
+              <p className="text-sm font-vk">{t("website")}</p>
+              <p className="font-medium font-vk">{item.website}</p>
             </div>
           </div>
 
           <div className="flex items-center gap-3">
             <FaMapMarkerAlt className="text-blue-600" />
             <div>
-              <p className="text-sm">{t("addres")}</p>
-              <p className="font-medium">{item.address}</p>
+              <p className="text-sm font-vk">{t("addres")}</p>
+              <p className="font-medium font-vk">{item.address}</p>
             </div>
           </div>
         </div>

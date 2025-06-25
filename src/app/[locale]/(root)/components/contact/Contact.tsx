@@ -13,10 +13,10 @@ import { z } from "zod";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import  { getFormSchema } from "@/schemas/formSchema";
+import { getFormSchema } from "@/schemas/formSchema";
 
 export default function Contact() {
-  const t = useTranslations("ContactPage")
+  const t = useTranslations("ContactPage");
   const zod = useTranslations("ZodForm");
   const formSchema = getFormSchema(zod);
 
@@ -86,10 +86,10 @@ export default function Contact() {
       <div className="container relative left-0 z-[40] max-lg:p-4 flex flex-col  md:flex-row items-center justify-between w-full bg-[#0653C9] rounded-[36px]">
         {/* Contact Info */}
         <div className="w-full lg:w-[450px] pl-6 pr-6 py-10 lg:pl-14 lg:py-14">
-          <h6 className="text-[24px] sm:text-[28px] lg:text-[32px] font-semibold text-white mb-2">
+          <h6 className="text-[24px] sm:text-[28px] lg:text-[32px] font-semibold text-white mb-2 font-vk">
             {t("contactTitle")}
           </h6>
-          <p className="text-[14px] sm:text-[15px] lg:text-[16px] font-normal text-white text-opacity-[60%] mb-6 lg:mb-9">
+          <p className="text-[14px] sm:text-[15px] lg:text-[16px] font-normal text-white text-opacity-[60%] mb-6 lg:mb-9 font-vk">
             {t("contactDescription")}
           </p>
 
@@ -100,10 +100,10 @@ export default function Contact() {
                 <Image className="w-5 h-4" src={location} alt="Location" />
               </article>
               <article>
-                <span className="text-[13px] sm:text-[14px] font-normal text-opacity-[60%] text-white">
+                <span className="text-[13px] sm:text-[14px] font-normal text-opacity-[60%] text-white font-vk">
                   {t("addressLabel")}
                 </span>
-                <p className="text-[14px] sm:text-[16px] font-medium text-white line-clamp-1">
+                <p className="text-[14px] sm:text-[16px] font-medium text-white line-clamp-1 font-vk">
                   улица Мирзакалон Исмоилий, дом 2А, Ташкент
                 </p>
               </article>
@@ -115,10 +115,10 @@ export default function Contact() {
                 <Image className="w-5 h-5" src={phone} alt="Phone" />
               </article>
               <article>
-                <span className="text-[13px] sm:text-[14px] font-normal text-opacity-[60%] text-white">
+                <span className="text-[13px] sm:text-[14px] font-normal font-vk text-opacity-[60%] text-white">
                   {t("phonee")}
                 </span>
-                <p className="text-[14px] sm:text-[16px] font-medium text-white line-clamp-1">
+                <p className="text-[14px] sm:text-[16px] font-medium font-vk text-white line-clamp-1">
                   +998 (71) 200 70 07
                 </p>
               </article>
@@ -130,10 +130,10 @@ export default function Contact() {
                 <Image className="w-5 h-4" src={email} alt="Email" />
               </article>
               <article>
-                <span className="text-[13px] sm:text-[14px] font-normal text-opacity-[60%] text-white">
+                <span className="text-[13px] sm:text-[14px] font-normal font-vk text-opacity-[60%] text-white">
                   {t("emailLabel")}
                 </span>
-                <p className="text-[14px] sm:text-[16px] font-medium text-white line-clamp-1">
+                <p className="text-[14px] sm:text-[16px] font-medium font-vk text-white line-clamp-1">
                   infoclamo@gmail.com
                 </p>
               </article>
@@ -144,10 +144,10 @@ export default function Contact() {
         {/* Contact Form */}
         <div className="py-6 px-4 sm:px-8  lg:mt-0 border border-gray-200 w-full sm:w-[500px] lg:absolute lg:right-16 h-auto sm:h-[576px] bg-white rounded-[36px]">
           <article className="mb-[26px]">
-            <h5 className="text-[24px] sm:text-[28px] lg:text-[32px] font-bold leading-[120%] text-[#3D445E] mb-3">
+            <h5 className="text-[24px] sm:text-[28px] font-vk lg:text-[32px] font-bold leading-[120%] text-[#3D445E] mb-3">
               {t("formTitle")}
             </h5>
-            <p className="text-[#838CAF] text-[14px] sm:text-[15px] lg:text-[16px] font-normal leading-[130%]">
+            <p className="text-[#838CAF] text-[14px] font-vk sm:text-[15px] lg:text-[16px] font-normal leading-[130%]">
               {t("formSubtitle")}
             </p>
           </article>
@@ -157,7 +157,7 @@ export default function Contact() {
             <article className="w-full mb-6">
               <label
                 htmlFor="names"
-                className="inline-flex mb-2 text-[14px] sm:text-[16px] font-medium text-[#3D445E]"
+                className="inline-flex mb-2 font-vk text-[14px] sm:text-[16px] font-medium text-[#3D445E]"
               >
                 {t("fullName")}
               </label>
@@ -177,7 +177,7 @@ export default function Contact() {
             <article className="w-full mb-6">
               <label
                 htmlFor="tashkilot"
-                className="inline-flex mb-2 text-[14px] sm:text-[16px] font-medium text-[#3D445E]"
+                className="inline-flex mb-2 font-vk text-[14px] sm:text-[16px] font-medium text-[#3D445E]"
               >
                 {t("organization")}
               </label>
@@ -199,7 +199,7 @@ export default function Contact() {
             <article className="w-full mb-6">
               <label
                 htmlFor="phoneNumber"
-                className="inline-flex mb-2 text-[14px] sm:text-[16px] font-medium text-[#3D445E]"
+                className="inline-flex mb-2 font-vk text-[14px] sm:text-[16px] font-medium text-[#3D445E]"
               >
                 {t("phonee")}
               </label>
@@ -253,7 +253,7 @@ export default function Contact() {
             <div className="flex justify-end">
               <button
                 type="submit"
-                className="group flex items-center gap-1 text-[14px] font-medium text-white px-6 py-[10px] rounded-lg bg-[#0653C9] hover:bg-[#0761e9]"
+                className="group flex items-center gap-1 text-[14px] font-medium font-vk text-white px-6 py-[10px] rounded-lg bg-[#0653C9] hover:bg-[#0761e9]"
               >
                 {t("send")}
                 <Image

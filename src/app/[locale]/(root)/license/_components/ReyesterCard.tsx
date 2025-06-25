@@ -36,13 +36,13 @@ export default function ReyesterCard({
     <div className="bg-white rounded-2xl p-6 shadow border space-y-3 mb-[24px]">
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start flex-wrap sm:flex-nowrap gap-2">
         <div>
-          <h3 className="text-sm sm:text-[16px] md:text-[24px] font-semibold mb-1 text-gray-800 pb-2">
+          <h3 className="text-sm sm:text-[16px] md:text-[24px] font-semibold mb-1 text-[#3D445E] font-vk pb-2">
             {renderValue(title)}
           </h3>
           <div className="lg:flex gap-2 items-center text-gray-600 text-sm">
             <div className="flex items-center gap-2">
               <MapPin width={24} height={24} className="text-[#23B3FC]" />
-              <span className="text-[14px] font-normal text-[#3D445E]">
+              <span className="text-[14px] font-inter font-normal text-[#3D445E]">
                 {renderValue(location)}
               </span>
             </div>
@@ -51,7 +51,7 @@ export default function ReyesterCard({
                 return (
                   <button
                     key={idx}
-                    className="bg-[#E3E8ED] py-1 px-3 rounded-lg"
+                    className="bg-[#E3E8ED] font-inter py-1 px-3 rounded-lg"
                   >
                     {renderValue(type.name)}
                   </button>
@@ -60,7 +60,7 @@ export default function ReyesterCard({
             </div>
           </div>
         </div>
-        <button className="group flex items-center justify-center gap-1 mt-2 sm:mt-0 text-[10px] sm:text-xs md:text-sm text-[#23B3FC] font-medium bg-blue-50 px-1.5 sm:px-2 md:px-3 py-1.5 sm:py-2 rounded-md hover:bg-blue-100 transition-colors">
+        <button className="group font-inter flex items-center justify-center gap-1 mt-2 sm:mt-0 text-[10px] sm:text-xs md:text-sm text-[#23B3FC] font-medium bg-blue-50 px-1.5 sm:px-2 md:px-3 py-1.5 sm:py-2 rounded-md hover:bg-blue-100 transition-colors">
           Litsenziyani ko‘rish
           <FaArrowRightLong className="group-hover:rotate-[1deg] group-hover:scale-105 transition-all duration-100 -rotate-45" />
         </button>
@@ -68,33 +68,35 @@ export default function ReyesterCard({
 
       <div className="grid lg:grid-cols-3 ms:grid-cols-2 items-center justify-center text-sm text-gray-700 border-t pt-[20px] gap-4">
         <div>
-          <p className="font-medium text-[14px] text-[#808597] pb-[8px]">
+          <p className="font-medium font-inter text-[14px] text-[#808597] pb-[8px]">
             Akkreditatsiya raqami
           </p>
-          <p className="text-[18px] font-semibold text-[#3D445E]">
+          <p className="text-[18px] font-semibold font-inter text-[#3D445E]">
             {renderValue(accreditationNumber)}
           </p>
 
-          <p className="font-medium text-[14px] text-[#808597] pb-[8px] mt-4">
+          <p className="font-medium text-[14px] font-inter text-[#808597] pb-[8px] mt-4">
             Sharhlar
           </p>
-          <p className="text-[18px] font-semibold text-[#3D445E]">{renderValue(shares)}</p>
+          <p className="text-[18px] font-semibold font-inter text-[#3D445E]">
+            {renderValue(shares)}
+          </p>
         </div>
 
         <div className="ms:border-l ms:pl-[40px]">
-          <p className="font-medium text-[14px] text-[#808597] pb-[8px]">
+          <p className="font-medium text-[14px] font-inter text-[#808597] pb-[8px]">
             Akkreditsiya berilgan sana
           </p>
-          <p className="text-[18px] font-semibold text-[#3D445E]">
+          <p className="text-[18px] font-semibold font-inter text-[#3D445E]">
             {renderValue(registrationDate)}
           </p>
 
-          <p className="font-medium text-[14px] text-[#808597] pb-[8px] mt-4">
+          <p className="font-medium text-[14px] font-inter text-[#808597] pb-[8px] mt-4">
             Vebsayt
           </p>
           <Link
             href={website}
-            className="hover:underline text-[18px] font-semibold text-[#3D445E]"
+            className="hover:underline text-[18px] font-inter font-semibold text-[#3D445E]"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -103,15 +105,19 @@ export default function ReyesterCard({
         </div>
 
         <div className="lg:border-l lg:pl-[40px]">
-          <p className="font-medium text-[14px] text-[#808597] pb-[8px]">
+          <p className="font-medium text-[14px] font-inter text-[#808597] pb-[8px]">
             Email manzil
           </p>
-          <p className="text-[18px] font-semibold text-[#3D445E]">{renderValue(email)}</p>
+          <p className="text-[18px] font-semibold font-inter text-[#3D445E]">
+            {renderValue(email)}
+          </p>
 
-          <p className="font-medium text-[14px] text-[#808597] pb-[8px] mt-4">
+          <p className="font-medium text-[14px] font-inter text-[#808597] pb-[8px] mt-4">
             Telefon raqamz
           </p>
-          <p className="text-[18px] font-semibold text-[#3D445E]">{renderValue(phone)}</p>
+          <p className="text-[18px] font-semibold font-inter text-[#3D445E]">
+            {renderValue(phone)}
+          </p>
         </div>
       </div>
     </div>

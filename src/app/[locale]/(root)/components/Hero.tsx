@@ -76,14 +76,14 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
         <div className="absolute -top-[-230px] left-[-200px] w-4/5 h-[280px] bg-[rgb(35,179,252)] opacity-25 blur-[120px] rounded-full x`-z-[1]"></div>
         <section className="container grid lg:grid-cols-2 grid-cols-1 lg:gap-20 lg:pb-10 lg:relative">
           <div className="lg:mt-[163px] md:mt-[90px] mt-[50px]">
-            <p className="uppercase text-[#3D445E] md:text-[14px] text-[12px] font-medium lg:w-[582px] pb-[11px] max-sm:w-[250px]">
+            <p className="uppercase text-[#3D445E] font-inter md:text-[14px] text-[12px] font-medium lg:w-[582px] pb-[11px] max-sm:w-[250px]">
               {firstTitle} {secondTitle} {thirtTitle} {fourTitle} {""}
-              <span className="md:text-sm text-[10px] font-bold bg-[#23B3FC] text-white py-[3px] px-2 rounded-md">
+              <span className="md:text-sm text-[10px] font-bold font-inter bg-[#23B3FC] text-white py-[3px] px-2 rounded-md">
                 {fiveTitle} {sexTitle} {sevenTitle}
               </span>
             </p>
             <h1
-              className="lg:w-[582px] lg:text-[40px] sm:text-[32px] text-[25px] font-bold uppercase text-[#3D445E] md:pb-5 pb-3 leading-[110%]"
+              className="lg:w-[582px] lg:text-[40px] font-inter sm:text-[32px] text-[25px] font-bold  uppercase text-[#3D445E] md:pb-5 pb-3 leading-[110%]"
               data-aos="fade-up"
             >
               {t("litsenziya_title")}
@@ -91,7 +91,7 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
             <div className="bg-white border border-white w-[411px] max-lg:w-full mb-4 sm:px-4 rounded-[17px]">
               <article className="flex items-center max-md:justify-between gap-3 pb-4 pt-4">
                 <Link href={`${locale}/contacts`} className="lg:w-full w-1/2">
-                  <button className="group lg:w-[183px] w-full h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[80%] bg-[#23B3FC] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">
+                  <button className="group font-inter lg:w-[183px] w-full h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[80%] bg-[#23B3FC] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">
                     {t("service_button")}{" "}
                     <Image
                       src={Down}
@@ -101,13 +101,13 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
                   </button>
                 </Link>
                 <Link href={`${locale}/contacts`} className="lg:w-full w-1/2">
-                  <button className="group hover:bg-[#23B3FC] bg-[#23B3FC33] transition-all duration-200 w-full lg:w-[183px] h-[40px] flex items-center justify-center gap-[11.5px] rounded-lg text-sm font-medium text-[#23B3FC] hover:text-white leading-[130%]">
+                  <button className="group font-inter hover:bg-[#23B3FC] bg-[#23B3FC33] transition-all duration-200 w-full lg:w-[183px] h-[40px] flex items-center justify-center gap-[11.5px] rounded-lg text-sm font-medium text-[#23B3FC] hover:text-white leading-[130%]">
                     {t("applying")}{" "}
                     <FaChevronRight className="group-hover:translate-x-1 transition-all duration-200" />
                   </button>
                 </Link>
               </article>
-              <p className="font-medium text-[12px] pb-4 lg:w-[379px] text-[#3D445E]">
+              <p className="font-medium font-inter text-[12px] pb-4 lg:w-[379px] text-[#3D445E]">
                 {t("specialists")}
               </p>
             </div>
@@ -128,10 +128,10 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
         <div className="w-full sm:rounded-[36px] rounded-2xl bg-[#0653C9] overflow-hidden relative z-0 lg:mb-[150px] md:mb-[80px] mb-[50px]">
           <div className="lg:flex block gap-6 lg:gap-10 w-full justify-center pt-10">
             <div className="relative flex-1 mb-[30px] lg:mb-0 lg:pl-8 px-4">
-              <p className="font-medium text-sm uppercase text-white/60 pb-2">
+              <p className="font-medium font-vk text-sm uppercase text-white/60 pb-2">
                 {t("aboutUs")}
               </p>
-              <h1 className="font-bold text-2xl sm:text-3xl lg:text-[32px] leading-tight text-white pb-7">
+              <h1 className="font-bold font-vk text-2xl sm:text-3xl lg:text-[32px] leading-[100%] text-white pb-7">
                 {t("international_cooperation")}
               </h1>
               <Link href={`${locale}/about`}>
@@ -147,7 +147,7 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
                 />
               </div>
               <div className="absolute lg:-bottom-10 bottom-0 left-0 w-full h-[180px] bg-gradient-to-t from-blue-700/100 to-transparent" />
-              <p className="md:w-[96%] absolute lg:bottom-6 bottom-0 sm:left-6 sm:right-6 text-xs sm:text-sm font-medium leading-relaxed text-white">
+              <p className="md:w-[96%] font-vk absolute lg:bottom-6 bottom-0 sm:left-6 sm:right-6 text-xs sm:text-sm font-medium leading-relaxed text-white">
                 {t("world_standards")}
               </p>
             </div>
@@ -159,7 +159,9 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
                     <h1 className="xl:text-[48px] lg:text-[39px] text-[36px] font-bold">
                       {animatedClinics.toLocaleString("ru-RU")}+
                     </h1>
-                    <p className="text-sm font-medium">{t("license_number")}</p>
+                    <p className="text-sm font-medium font-vk">
+                      {t("license_number")}
+                    </p>
                   </div>
                 </div>
                 <div className="w-full bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl text-white flex flex-col p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -168,7 +170,7 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
                     <h1 className="xl:text-[48px] lg:text-[39px] text-[36px] font-bold">
                       {animatedConsulting.toLocaleString("ru-RU") || 0}+
                     </h1>
-                    <p className="text-sm font-medium">
+                    <p className="text-sm font-medium font-vk">
                       {t("consulting_service")}
                     </p>
                   </div>
@@ -179,7 +181,9 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
                     <h1 className="xl:text-[48px] lg:text-[39px] text-[36px] font-bold">
                       {animatedLicenses.toLocaleString("ru-RU")}+
                     </h1>
-                    <p className="text-sm font-medium">{t("number_license")}</p>
+                    <p className="text-sm font-medium font-vk">
+                      {t("number_license")}
+                    </p>
                   </div>
                 </div>
               </div>

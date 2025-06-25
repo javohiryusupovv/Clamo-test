@@ -5,6 +5,8 @@ import { Inter } from "next/font/google";
 import Man from "../../../../../../public/Images/man.png";
 import Woman from "../../../../../../public/Images/woman.png";
 import Image from "next/image";
+import "./style.css";
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,7 +18,7 @@ export default function firstpage() {
   const t = useTranslations("ConsultingPage");
 
   return (
-    <div className=" ">
+    <div className="">
       <div className=" bg-[#FFFFFF] relative z-10">
         <div
           className={` flex gap-[20px] container items-center text-[12px] font-inter ${inter.className} font-medium w-full h-[35px] `}
@@ -30,17 +32,17 @@ export default function firstpage() {
           <div className="max-w-[557px]  first-card h-[454px] card-1 mt-[122px] flex flex-col md:gap-[40px] ">
             <div className=" flex flex-col gap-2">
               <div className=" flex items-center font-inter font-medium text-[14px] leading-[1] gap-2 ">
-                <h1 className=" text-[#FFFFFF] info bg-[#23B3FC] border-0 rounded-[6px] py-1 px-2 leading-[100%] w-fit ">
+                <h1 className=" text-[#FFFFFF] info bg-[#23B3FC] font-inter border-0 rounded-[6px] py-1 px-2 leading-[100%] w-fit ">
                   INFO@CLAMO.UZ
                 </h1>
-                <h1 className=" text-[#3D445E] email-none">
+                <h1 className=" text-[#3D445E] email-none font-inter">
                   {t("email_letter")}
                 </h1>
-                <h1 className=" text-[#3D445E] email-flex">
+                <h1 className=" text-[#3D445E] email-flex font-inter">
                   {t("email_letter")}
                 </h1>
               </div>
-              <h1 className=" konsul text-[#3D445E] leading-[100%] max-w-[509px] text-[32px] font-inter font-bold">
+              <h1 className=" konsul text-[#3D445E] leading-[100%]  max-w-[509px] text-[32px] font-inter font-bold">
                 {t("easy_sever")}
               </h1>
             </div>
@@ -57,7 +59,7 @@ export default function firstpage() {
                 <h1 className=" ml-[24px] border borders rounded-[40px] w-[136px] text-[#FFFFFF] md:text-[#23B3FC] font-inter font-bold text-[24px] leading-[1.3] h-[47px] flex items-center justify-center border-[#FFFFFF] sm:border-[#23B3FC]">
                   {t("step_two")}
                 </h1>
-                <h1 className=" ml-[24px] whites text-[20px] text-[#FFFFFF] sm:text-[#3D445E] leading-[1.3] font-inter font-medium">
+                <h1 className=" ml-[24px]  whites text-[20px] text-[#FFFFFF] sm:text-[#3D445E] leading-[1.3] font-inter font-medium">
                   {t("active_place")}
                 </h1>
               </div>

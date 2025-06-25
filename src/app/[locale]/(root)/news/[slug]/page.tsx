@@ -37,13 +37,14 @@ export default async function NewsDetailPage({
   const data: NewsDetail = await res.json();
 
   const title = data[`title_${locale}` as keyof NewsDetail] || data.title;
-  const description = data[`description_${locale}` as keyof NewsDetail] || data.description;
+  const description =
+    data[`description_${locale}` as keyof NewsDetail] || data.description;
   const content = data[`content_${locale}` as keyof NewsDetail] || data.content;
 
   return (
     <div className="container mt-12">
-      <h1 className="text-3xl font-bold mb-4">{title}</h1>
-      <p className="text-gray-600 mb-4">{description}</p>
+      <h1 className="text-3xl font-bold mb-4 font-vk">{title}</h1>
+      <p className="text-gray-600 mb-4 font-vk">{description}</p>
       <article className="flex gap-2 mb-6">
         <Clock />
         <p className="text-gray-600">{data.created_at.slice(0, 10)}</p>
@@ -57,7 +58,7 @@ export default async function NewsDetailPage({
       />
       <div
         dangerouslySetInnerHTML={{ __html: content }}
-        className="mb-16"
+        className="mb-16 font-vk"
       />
     </div>
   );
