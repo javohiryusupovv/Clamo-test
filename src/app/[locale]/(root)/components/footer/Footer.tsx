@@ -3,7 +3,7 @@
 import Image from "next/image";
 import cirlceBG from "../../../../../assets/images/twoCircle.png";
 import TibbiyotVazirlik from "../../../../../assets/logo/TibbiyotVazirlik.png";
-import Logo from "@/assets/logo/devLogo.svg"
+import Logo from "../../../../../assets/logo/devLogo.svg"
 import "./Footer.css";
 import Link from "next/link";
 import Contact from "../contact/Contact";
