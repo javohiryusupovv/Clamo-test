@@ -46,6 +46,10 @@
     "question_title": "Tez-tez beriladigan savollar",
     "all_question": "Barcha savollar",
     "search_place": "Yangiliklarni qidirish",
+    "notDataTitle": "Yangiliklar topilmadi",
+    "loading_text": "Yuklanmoqda",
+    "more_btn": "Ko'proq",
+    
     "medical": {
       "subtitle": "Sizning sog'lig'ingiz biz uchun",
       "badge": "Muhim!",

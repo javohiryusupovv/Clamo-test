@@ -72,7 +72,7 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
               href={`/${locale}/news/${slicedNews[1].slug}`}
               key={slicedNews[1].id}
             >
-              <div className="bg-[#F6F9FC] group sm:p-6 p-4 rounded-[16px] sm:min-h-[240px] min-h-[140px] flex flex-col justify-between h-full">
+              <div className="bg-[#F6F9FC] group hover:border-[#23B3FC] border border-transparent sm:p-6 p-4 rounded-[16px] sm:min-h-[240px] min-h-[140px] flex flex-col justify-between h-full">
                 <p className="text-[10px] font-vk sm:text-[12px] md:text-[16px] text-[#74807B]">
                   {slicedNews[1].created_at?.slice(0, 10)}
                 </p>
@@ -102,7 +102,7 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
                     href={`/${locale}/news/${slicedNews[i].slug}`}
                     key={slicedNews[i].id}
                   >
-                    <div className="bg-[#F6F9FC] group p-4 rounded-[16px] h-full flex flex-col justify-between">
+                    <div className="bg-[#F6F9FC] group hover:border-[#23B3FC] border border-transparent p-4 rounded-[16px] h-full flex flex-col justify-between">
                       <p className="text-[10px] font-vk sm:text-[12px] md:text-[16px] text-[#74807B]">
                         {slicedNews[i].created_at?.slice(0, 10)}
                       </p>

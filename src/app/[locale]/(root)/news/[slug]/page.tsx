@@ -1,4 +1,4 @@
-import { Clock } from "lucide-react";
+import { Clock3 } from "lucide-react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
@@ -41,13 +41,21 @@ export default async function NewsDetailPage({
     data[`description_${locale}` as keyof NewsDetail] || data.description;
   const content = data[`content_${locale}` as keyof NewsDetail] || data.content;
 
+  const createdAt = new Date(data.created_at);
+              const date = createdAt.toLocaleDateString('en-CA'); // YYYY-MM-DD
+              const time = createdAt.toLocaleTimeString('en-GB', {
+                hour: '2-digit',
+                minute: '2-digit'
+              });
+    
+
   return (
     <div className="container mt-12">
-      <h1 className="text-3xl font-bold mb-4 font-vk">{title}</h1>
+      <h1 className="text-3xl font-black mb-4">{title}</h1>
       <p className="text-gray-600 mb-4 font-vk">{description}</p>
-      <article className="flex gap-2 mb-6">
-        <Clock />
-        <p className="text-gray-600">{data.created_at.slice(0, 10)}</p>
+      <article className="flex items-center gap-2 mb-6">
+        <Clock3 className="w-4 h-4"/>
+        <h6 className="text-[#697583]">{date}</h6><p className="w-1 h-1 bg-[#697583] rounded-full"></p> <span className="text-[#697583]">{time}</span>
       </article>
       <Image
         src={data.image}

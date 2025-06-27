@@ -46,6 +46,9 @@
     "question_title": "Frequently asked questions",
     "all_question": "All questions",
     "search_place": "Search news",
+    "notDataTitle": "No data available",
+    "loading_text": "Loading",
+    "more_btn": "More",
 
     "medical": {
       "subtitle": "Your health matters to us",

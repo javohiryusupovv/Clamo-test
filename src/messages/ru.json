@@ -46,6 +46,9 @@
     "question_title": "Часто задаваемые вопросы",
     "all_question": "Все вопросы",
     "search_place": "Поиск новости",
+    "notDataTitle": "Новости не найдены",
+    "loading_text": "Загрузка",
+    "more_btn": "Более",
 
     "medical": {
       "subtitle": "Ваше здоровье для нас важно",

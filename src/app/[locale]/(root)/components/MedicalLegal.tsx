@@ -26,14 +26,14 @@ export default function MedicalLegal() {
       {medical.map((item, id) => (
         <div
           key={id}
-          className="flex justify-between flex-col lg:flex-row items-center gap-8 md:pb-[82px] pb-10"
+          className="flex justify-between flex-col lg:flex-row items-center gap-8 pb-10"
         >
           <div className="w-full lg:w-1/2 ">
             <div className="flex items-center gap-2 mb-3">
               <p className="font-medium font-vk text-sm uppercase text-[#3D445E]">
                 {item.subtitle}
               </p>
-              <span className="bg-[#23B3FC] font-medium font-vk rounded-md px-2 py-1 text-white text-sm">
+              <span className="bg-[#23B3FC] font-medium font-vk rounded-md px-2 py-[2px] text-white text-sm">
                 {item.badge}
               </span>
             </div>
