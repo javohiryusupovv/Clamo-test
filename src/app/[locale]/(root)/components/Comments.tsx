@@ -24,10 +24,10 @@ export default function Izohlar() {
               height={32}
               className="pb-1 max-sm:w-[95px] max-sm:h-[30px]"
             />
-            <h1 className="font-bold lg:text-[48px] md:text-[44px] text-[20px] text-[#3D445E]">
+            <h1 className="font-bold font-vk lg:text-[48px] md:text-[44px] text-[20px] text-[#3D445E]">
               {item.subtitle}
             </h1>
-            <p className="font-medium sm:text-[20px] text-[14px] text-[#012548CC] pb-[32.5]">
+            <p className="font-medium font-vk sm:text-[20px] text-[14px] text-[#012548CC] pb-[32.5]">
               {item.description}
             </p>
           </div>
@@ -51,10 +51,10 @@ export default function Izohlar() {
                     className="rounded-full max-sm:w-[35px] max-sm:h-[35px] object-contain border border-[#C6CFD733]"
                   />
                   <div>
-                    <h2 className="font-semibold sm:text-[16px] text-[12px]">
+                    <h2 className="font-semibold font-roboto text-[#022F5E] sm:text-[16px] text-[12px]">
                       {item.name}
                     </h2>
-                    <p className="sm:text-[14px] text-[12px] font-normal text-[#8E9BA8]">
+                    <p className="text-[12px] font-normal text-[#8E9BA8]">
                       {item.title}{" "}
                       <span className="text-[#4489F7] font-medium">
                         {item.badge}
@@ -71,11 +71,11 @@ export default function Izohlar() {
                     height={16}
                     className="object-contain"
                   />
-                  <p className=" font-normal sm:text-[14px] text-[12px] text-[#8E9BA8]">
+                  <p className=" font-normal sm:text-[14px] font-roboto text-[12px] text-[#8E9BA8]">
                     {item.time}
                   </p>
                 </div>
-                <p className="font-normal sm:text-[14px] text-[12px]">
+                <p className="font-normal sm:text-[14px] text-[#121C25] font-roboto text-[12px]">
                   {item.comment}
                 </p>
               </div>

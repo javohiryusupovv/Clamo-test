@@ -12,8 +12,8 @@ export default function SochealMedia() {
         </div>
 
         <div className="flex flex-col -space-y-1">
-          <h2 className="text-sm">Telegram</h2>
-          <p className="font-medium">t.me/CLAMO_uz</p>
+          <h2 className="text-sm font-vk">Telegram</h2>
+          <p className="font-medium font-vk">t.me/CLAMO_uz</p>
         </div>
       </div>
       <div className="flex items-center md:justify-center md:gap-5 ml-5 gap-2 group hover:cursor-pointer">
@@ -28,8 +28,8 @@ export default function SochealMedia() {
         </div>
 
         <div className="flex flex-col -space-y-1">
-          <h2 className="text-sm">Instagram</h2>
-          <p className="font-medium">@clamo.uz</p>
+          <h2 className="text-sm font-vk">Instagram</h2>
+          <p className="font-medium font-vk">@clamo.uz</p>
         </div>
       </div>
 
@@ -60,8 +60,8 @@ export default function SochealMedia() {
         </div>
 
         <div className="flex flex-col -space-y-1">
-          <h2 className="text-sm">Linkedin</h2>
-          <p className="font-medium">@clamo.uz</p>
+          <h2 className="text-sm font-vk">Linkedin</h2>
+          <p className="font-medium font-vk">@clamo.uz</p>
         </div>
       </div>
     </div>

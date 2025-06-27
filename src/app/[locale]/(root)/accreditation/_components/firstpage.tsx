@@ -45,14 +45,14 @@ export default function AccredationHead() {
             </div>
             {/* Buttons */}
             <div className="mt-[10px] md:mt-[30px] lg:mt-[40px] flex flex-col sm:flex-row items-start sm:items-center gap-3">
-              <button className="group bg-[#23B3FC] hover:bg-[#23B3FC]/80 w-full sm:w-[200px] md:w-[240px] lg:w-[272px] py-[10px] gap-[5px] border-0 rounded-lg justify-center flex items-center text-[#FFFFFF] text-[14px] leading-[1.3] font-medium">
+              <button className="group bg-[#23B3FC] font-inter hover:bg-[#23B3FC]/80 w-full sm:w-[200px] md:w-[240px] lg:w-[272px] py-[10px] gap-[5px] border-0 rounded-lg justify-center flex items-center text-[#FFFFFF] text-[14px] leading-[1.3] font-medium">
                 {btn("service_button")}{" "}
                 <ChevronRight
                   className="group-hover:translate-x-2 transition-all duration-200"
                   size={22}
                 />
               </button>
-              <button className="group bg-[#23B3FC1F] hover:bg-[#23B3FC] hover:text-white w-full sm:w-[200px] md:w-[240px] lg:w-[272px] py-[10px] gap-[5px] border-0 rounded-lg justify-center flex items-center text-[#23B3FC] text-[14px] leading-[1.3] font-medium">
+              <button className="group bg-[#23B3FC1F] font-inter hover:bg-[#23B3FC] hover:text-white w-full sm:w-[200px] md:w-[240px] lg:w-[272px] py-[10px] gap-[5px] border-0 rounded-lg justify-center flex items-center text-[#23B3FC] text-[14px] leading-[1.3] font-medium">
                 {btn("applying")}{" "}
                 <ChevronRight
                   className="group-hover:translate-x-2 transition-all duration-200"

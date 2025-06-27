@@ -12,10 +12,10 @@ export default function Partnyor({partners}: {partners: Partner[]}) {
   return (
     <div className="md:py-16 pt-9 mb-9 bg-[#F6F9FC]">
       <article className="container text-center mb-10 px-4 sm:px-0">
-        <h3 className="text-2xl sm:text-4xl font-bold mb-2 text-[#012548]">
+        <h3 className="text-2xl sm:text-4xl lg:text-5xl font-bold font-vk mb-2 text-[#3D445E]">
           {t("hamkorlar")}
         </h3>
-        <p className="text-base sm:text-lg text-[#012548] font-medium">
+        <p className="text-base sm:text-[20px] font-vk text-[#012548CC] font-medium">
           {t("hamkorlar_des")}
         </p>
       </article>

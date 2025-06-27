@@ -27,7 +27,6 @@ export default function FooterLayout() {
       <div className="relative w-full sm:h-[500px] h-[750px] bg-[#F6F9FC] overflow-hidden">
         <div className="container relative z-[50]">
           <div className="block sm:flex gap-20 absolute top-0 left-0 py-28 sm:py-20 px-[30px] sm:px-0">
-            {/* Chap qism */}
             <div>
               <div className="w-[400px] mb-[76px] max-xxl:w-[300px]">
                 <article className="flex items-center gap-7 mb-5">
@@ -46,14 +45,14 @@ export default function FooterLayout() {
                     className="w-14"
                   />
                 </article>
-                <p className="text-[12px] sm:text-[16px] text-[#3D445E] sm:w-auto w-[350px]">
+                <p className="text-[12px] sm:text-[16px] font-vk text-[#3D445E] sm:w-auto w-[350px]">
                   {t("footer_des")}
                 </p>
               </div>
 
               {/* Ijtimoiy tarmoqlar */}
               <div>
-                <p className="text-[#3D445E] text-[14px] mb-4 uppercase">
+                <p className="text-[#3D445E] font-vk text-[14px] mb-4 uppercase">
                   {t("ijtimoiy")}
                 </p>
                 <div className="flex items-center gap-4">
@@ -114,7 +113,7 @@ export default function FooterLayout() {
 
             {/* O‘ng qism */}
             <div className="sm:pt-0 pt-[20px]">
-              <p className="text-[#3D445E] text-[18px] font-bold leading-[140%] mb-[12px]">
+              <p className="text-[#3D445E] font-vk text-[18px] font-bold leading-[140%] mb-[12px]">
                 {t("bo'limlar")}
               </p>
               <ul className="flex flex-col gap-3">
@@ -122,7 +121,7 @@ export default function FooterLayout() {
                   <Link key={idx} href={href}>
                     <li className="group flex items-center gap-1 hover:text-[#23B3FC] text-[#3D445E] text-[14px] font-medium transition-all duration-200 cursor-pointer">
                       <span className="w-[9px] h-[9px] rounded-full bg-[#23B3FC] opacity-0 group-hover:opacity-100 transition transform -translate-x-4 group-hover:translate-x-0"></span>
-                      <span className="-translate-x-3 group-hover:translate-x-1 transition-all">
+                      <span className="-translate-x-3 group-hover:translate-x-1 transition-all font-vk">
                         {t(`menu.${key}`)}
                       </span>
                     </li>
@@ -162,7 +161,7 @@ export default function FooterLayout() {
         {/* Footer bottom */}
         <div className="absolute z-[12] bottom-0 w-full py-5">
           <div className="container flex justify-between items-center">
-            <p className="text-[#3D445E]/[60%] text-[7px] sm:text-[14px]">
+            <p className="text-[#3D445E]/[60%] text-[7px] sm:text-[14px] font-vk">
               &copy; {new Date().getFullYear()} – “CLAMO” LLC
             </p>
             <div className="group flex items-center gap-2">

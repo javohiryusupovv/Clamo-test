@@ -21,7 +21,7 @@ export default function NewsGrid({ news }: { news: NewsTypes[] }) {
       <div className="container px-4 py-8">
         {/* Header and Search */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 gap-4">
-          <h1 className="text-2xl sm:text-5xl font-bold text-[#3D445E]">{t("news_title")}</h1>
+          <h1 className="text-2xl sm:text-5xl font-bold text-[#3D445E] font-vk">{t("news_title")}</h1>
           <div className="w-full sm:w-1/3">
             <div className="relative">
               <input
@@ -30,7 +30,7 @@ export default function NewsGrid({ news }: { news: NewsTypes[] }) {
                 onChange={(e) => {
                   setSearch(e.target.value);
                 }}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full font-vk px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
           </div>
@@ -77,13 +77,13 @@ export default function NewsGrid({ news }: { news: NewsTypes[] }) {
                       />
                     </div>
                     <div className="p-4 space-y-2">
-                      <p className="text-sm text-gray-500">
+                      <p className="text-sm text-gray-500 font-vk">
                         {item.created_at.slice(0, 10)}
                       </p>
-                      <h2 className="text-lg font-semibold leading-snug line-clamp-2">
+                      <h2 className="text-lg font-semibold leading-snug line-clamp-2 font-vk">
                         {localeTitle}
                       </h2>
-                      <p className="text-sm text-gray-600 line-clamp-2">
+                      <p className="text-sm text-gray-600 line-clamp-2 font-vk">
                         {localeDescription}
                       </p>
                     </div>

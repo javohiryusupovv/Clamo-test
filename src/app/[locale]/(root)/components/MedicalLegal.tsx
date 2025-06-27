@@ -26,21 +26,21 @@ export default function MedicalLegal() {
       {medical.map((item, id) => (
         <div
           key={id}
-          className="flex justify-between flex-col lg:flex-row items-center gap-8 pb-5"
+          className="flex justify-between flex-col lg:flex-row items-center gap-8 md:pb-[82px] pb-10"
         >
           <div className="w-full lg:w-1/2 ">
             <div className="flex items-center gap-2 mb-3">
-              <p className="font-medium text-sm uppercase text-gray-900">
+              <p className="font-medium font-vk text-sm uppercase text-[#3D445E]">
                 {item.subtitle}
               </p>
-              <span className="bg-[#23B3FC] rounded-md px-2 py-1 text-white text-xs">
+              <span className="bg-[#23B3FC] font-medium font-vk rounded-md px-2 py-1 text-white text-sm">
                 {item.badge}
               </span>
             </div>
-            <h1 className="font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl leading-tight text-[#3D445E] mb-4">
+            <h1 className="font-bold font-vk text-2xl sm:text-3xl lg:text-4xl xl:text-5xl leading-tight text-[#3D445E] mb-4">
               {item.title}
             </h1>
-            <p className="font-medium text-base sm:text-lg lg:text-xl text-gray-700 mb-6">
+            <p className="font-medium font-vk text-base sm:text-lg lg:text-xl text-[#012548CC] mb-7">
               {item.description}
             </p>
             <Link href={`${locale}/license`}>

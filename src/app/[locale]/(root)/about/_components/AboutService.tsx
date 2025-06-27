@@ -7,20 +7,23 @@ import { useLocale, useTranslations } from "next-intl";
 import { ServiceData } from "../../../../../../app.types";
 import { getLocalizedValue, pickStringProps } from "@/lib/getLocalization";
 
-export default function ServicesSection({ servicec }: { servicec: ServiceData[] }) {
+export default function ServicesSection({
+  servicec,
+}: {
+  servicec: ServiceData[];
+}) {
   const t = useTranslations("AboutPage");
   const locale = useLocale();
   const slugs = ["accreditation", "license", "consulting", ""];
-  
 
   return (
     <section className="py-16 bg-[#F6F9FC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3D445E] mb-3 text-start">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-vk font-bold text-[#3D445E] mb-2 text-start">
             {t("service")}
           </h2>
-          <p className="text-sm sm:text-base text-gray-600 md:max-w-full max-w-2xl text-start">
+          <p className="text-sm sm:text-base md:text-[20px] font-vk text-[#012548CC] md:max-w-full max-w-2xl text-start">
             {t("service_des")}
           </p>
         </div>
@@ -28,10 +31,18 @@ export default function ServicesSection({ servicec }: { servicec: ServiceData[] 
         {/* Service Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {servicec.map((service, index) => {
-            const serviceData = pickStringProps(service)
-            const localizedTitle = getLocalizedValue(serviceData, "title", locale);
-            const localizedDescription = getLocalizedValue(serviceData, "description", locale); 
-            const slug = slugs[index];      
+            const serviceData = pickStringProps(service);
+            const localizedTitle = getLocalizedValue(
+              serviceData,
+              "title",
+              locale
+            );
+            const localizedDescription = getLocalizedValue(
+              serviceData,
+              "description",
+              locale
+            );
+            const slug = slugs[index];
             return (
               <div
                 key={index}
@@ -44,21 +55,20 @@ export default function ServicesSection({ servicec }: { servicec: ServiceData[] 
                     alt={service.title}
                     width={48}
                     height={48}
-                    className="mb-4"
                   />
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                  <h3 className="text-[20px] font-bold font-vk text-[#3D445E] mb-3">
                     {localizedTitle}
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    { localizedDescription}
+                  <p className="text-sm text-[#3D445E] font-vk leading-relaxed">
+                    {localizedDescription}
                   </p>
                 </div>
 
                 {/* Bottom CTA */}
-                <div className="mt-6 flex justify-end items-center gap-4">
+                <div className="mt-[34px] flex justify-end items-center gap-4">
                   <Link
                     href={`/${locale}/${slug}`}
-                    className="text-sm text-[#23B3FC] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    className="text-[16px] text-[#23B3FC] font-medium font-vk opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   >
                     {t("batafsil")}
                   </Link>
@@ -67,7 +77,7 @@ export default function ServicesSection({ servicec }: { servicec: ServiceData[] 
                   </div>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </div>

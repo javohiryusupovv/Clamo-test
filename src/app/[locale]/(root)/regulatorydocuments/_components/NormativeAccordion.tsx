@@ -8,10 +8,10 @@ export default function ExamplePage() {
         <div className='bg-white z-50 w-full'>
             <div className="space-y-4 pt-[96px] pb-[96px] bg-white container">
                 <div className="mb-12">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3D445E] mb-3 text-start">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#3D445E] font-vk mb-1 text-start">
                         {t("pageTitle")}
                     </h2>
-                    <p className="text-sm sm:text-base text-gray-600 md:max-w-full max-w-2xl text-start">{t("pageDescription")}</p>
+                    <p className="text-[#012548CC] mb-8 font-vk font-medium text-[20px]">{t("pageDescription")}</p>
                 </div>
                 <AccordionItem
                     title={t("law1Title")}

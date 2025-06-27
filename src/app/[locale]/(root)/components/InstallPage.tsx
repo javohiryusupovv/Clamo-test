@@ -41,10 +41,10 @@ export default function InstallPage() {
 
         {/* Content Section */}
         <div className="w-full lg:w-1/2 z-20 mt-6 lg:mt-0 max-xl:translate-x-3 max-lg:translate-x-0">
-          <h6 className="text-[20px] sm:text-[24px] font-bold text-white mb-2">
+          <h6 className="text-[20px] sm:text-[24px] font-vk font-bold text-white mb-2">
             {t("install_app")}
           </h6>
-          <p className="text-sm text-white opacity-60 leading-relaxed mb-4">
+          <p className="text-sm text-white opacity-60 font-vk leading-relaxed mb-4">
             {t("appeal_title")}
           </p>
           <article className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
@@ -79,12 +79,11 @@ export default function InstallPage() {
                   alt="Huawei logo"
                   className="w-8 h-8 object-contain"
                 />
-
-                <div className="text-left">
-                  <p className="text-xs text-white uppercase">Explore it on</p>
-                  <p className="text-base text-white font-medium">AppGallery</p>
-                </div>
-              </button>
+              <div className="text-left">
+                <p className="text-xs text-white uppercase font-vk">Explore it on</p>
+                <p className="text-base text-white font-medium font-vk">AppGallery</p>
+              </div>
+            </button>
             </Link>
           </article>
         </div>
