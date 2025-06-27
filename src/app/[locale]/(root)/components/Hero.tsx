@@ -7,6 +7,7 @@ import Home from "@/assets/images/home.png";
 import File from "@/assets/images/file.png";
 import True from "@/assets/images/true.png";
 import ImageClamo from "@/assets/images/ImageClamo.png";
+import bgCircle from "../../../../../public/herobg.png";
 import LearnMore from "./LearnMoreButton";
 import { useEffect, useState, useRef } from "react";
 import { FaChevronRight } from "react-icons/fa";
@@ -125,7 +126,7 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
 
       {/* Shifokorlar */}
       <div className="container">
-        <div className="w-full sm:rounded-[36px] rounded-2xl bg-[#0653C9] overflow-hidden relative z-0 lg:mb-[150px] md:mb-[80px] mb-[50px]">
+        <div className="w-full sm:rounded-[36px] rounded-2xl bg-[#0653C9] overflow-hidden relative z-0 md:mb-[80px] mb-[50px]">
           <div className="lg:flex block gap-6 lg:gap-10 w-full justify-center pt-10">
             <div className="relative flex-1 mb-[30px] lg:mb-0 lg:pl-8 px-4">
               <p className="font-medium text-sm uppercase text-white/60 pb-2">
@@ -173,8 +174,9 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
                     </p>
                   </div>
                 </div>
-                <div className="bg-gradient-to-br from-blue-400 to-blue-600 p-6 rounded-2xl text-white flex flex-col md:col-span-2 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className=" relative top-0 left-0 bg-gradient-to-br overflow-hidden from-blue-400 to-blue-600 p-6 rounded-2xl text-white flex flex-col md:col-span-2 shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <Image src={File} alt="HomeIcons" width={48} height={48} />
+                  <Image src={bgCircle} className=" absolute top-0 left-36 opacity-[0.7] max-ll:top-4" alt="BgCircle" />
                   <div className="pt-10">
                     <h1 className="xl:text-[48px] lg:text-[39px] text-[36px] font-bold">
                       {animatedLicenses.toLocaleString("ru-RU")}+

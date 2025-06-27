@@ -5,6 +5,8 @@ import email from "../../../../../assets/icons/mail.png";
 import submiticons from "../../../../../assets/icons/submiticons.png";
 import uzbflag from "../../../../../../public/flag/flagicons.png";
 import { useTranslations } from "next-intl";
+import { LoaderCircle } from 'lucide-react';
+
 
 import Image from "next/image";
 import { useForm } from "react-hook-form";
@@ -13,12 +15,16 @@ import { z } from "zod";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import  { getFormSchema } from "@/schemas/formSchema";
+import { getFormSchema } from "@/schemas/formSchema";
+import { useState } from "react";
+import Link from "next/link";
 
 export default function Contact() {
   const t = useTranslations("ContactPage")
   const zod = useTranslations("ZodForm");
   const formSchema = getFormSchema(zod);
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   type FormData = z.infer<typeof formSchema>;
 
@@ -34,6 +40,8 @@ export default function Contact() {
   const API_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
   const handleSubmitted = async (data: FormData) => {
+    setIsLoading(true);
+    setErrorMessage("");
     const payload = {
       full_name: data.names,
       industry: data.tashkilot,
@@ -50,8 +58,6 @@ export default function Contact() {
       body: JSON.stringify(payload),
     }).then(async (res) => {
       const responseText = await res.text();
-      console.log("Response Status:", res.status);
-      console.log("Response Text:", responseText);
 
       if (!res.ok) {
         try {
@@ -77,12 +83,17 @@ export default function Contact() {
         reset();
       })
       .catch((error) => {
+        setErrorMessage(error.message || "Noma'lum xatolik yuz berdi");
+        setTimeout(() => setErrorMessage(""), 4000);
         console.error("Submission error:", error);
+      })
+      .finally(() => {
+        setIsLoading(false)
       });
   };
 
   return (
-    <div className="py-8">
+    <div className="pb-8">
       <div className="container relative left-0 z-[40] max-lg:p-4 flex flex-col  md:flex-row items-center justify-between w-full bg-[#0653C9] rounded-[36px]">
         {/* Contact Info */}
         <div className="w-full lg:w-[450px] pl-6 pr-6 py-10 lg:pl-14 lg:py-14">
@@ -95,22 +106,24 @@ export default function Contact() {
 
           <div className="flex flex-col gap-3">
             {/* Location */}
-            <div className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
-              <article className="bg-white p-3 inline-flex justify-center items-center rounded-lg">
-                <Image className="w-5 h-4" src={location} alt="Location" />
-              </article>
-              <article>
-                <span className="text-[13px] sm:text-[14px] font-normal text-opacity-[60%] text-white">
-                  {t("addressLabel")}
-                </span>
-                <p className="text-[14px] sm:text-[16px] font-medium text-white line-clamp-1">
-                  улица Мирзакалон Исмоилий, дом 2А, Ташкент
-                </p>
-              </article>
-            </div>
+            <Link href={"https://yandex.uz/maps/10335/tashkent/?ll=69.303946%2C41.318330&mode=whatshere&whatshere%5Bpoint%5D=69.303883%2C41.318303&whatshere%5Bzoom%5D=17&z=16"} target="_blank">
+              <div className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
+                <article className="bg-white p-3 inline-flex justify-center items-center rounded-lg">
+                  <Image className="w-5 h-4" src={location} alt="Location" />
+                </article>
+                <article>
+                  <span className="text-[13px] sm:text-[14px] font-normal text-opacity-[60%] text-white">
+                    {t("addressLabel")}
+                  </span>
+                  <p className="text-[14px] sm:text-[16px] font-medium text-white line-clamp-1">
+                    улица Мирзакалон Исмоилий, дом 2А, Ташкент
+                  </p>
+                </article>
+              </div>
+            </Link>
 
             {/* Phone */}
-            <div className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
+            <a href="tel:+998712007007" target="_blank" className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
               <article className="bg-white p-3 inline-flex items-center justify-center rounded-lg">
                 <Image className="w-5 h-5" src={phone} alt="Phone" />
               </article>
@@ -122,10 +135,9 @@ export default function Contact() {
                   +998 (71) 200 70 07
                 </p>
               </article>
-            </div>
-
+            </a>
             {/* Email */}
-            <div className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
+            <a href="mailto:clamosocial@gmail.com" target="_blank" rel="noopener noreferrer" className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
               <article className="bg-white p-3 inline-flex rounded-lg">
                 <Image className="w-5 h-4" src={email} alt="Email" />
               </article>
@@ -137,7 +149,7 @@ export default function Contact() {
                   infoclamo@gmail.com
                 </p>
               </article>
-            </div>
+            </a>
           </div>
         </div>
 
@@ -152,7 +164,7 @@ export default function Contact() {
             </p>
           </article>
 
-          <form onSubmit={handleSubmit(handleSubmitted)}>
+          <form onSubmit={handleSubmit(handleSubmitted)} noValidate>
             {/* Full Name */}
             <article className="w-full mb-6">
               <label
@@ -253,14 +265,24 @@ export default function Contact() {
             <div className="flex justify-end">
               <button
                 type="submit"
-                className="group flex items-center gap-1 text-[14px] font-medium text-white px-6 py-[10px] rounded-lg bg-[#0653C9] hover:bg-[#0761e9]"
+                className={`group flex items-center gap-1 text-[14px] font-medium text-white px-6 py-[10px] rounded-lg bg-[#0653C9] hover:bg-[#0761e9] transition-all duration-300 ${isLoading ? "opacity-60 cursor-not-allowed" : ""
+                  }`} disabled={isLoading}
               >
-                {t("send")}
-                <Image
-                  className="transition-all duration-300 group-hover:rotate-[43deg]"
-                  src={submiticons}
-                  alt="Send Icon"
-                />
+                {isLoading ? (
+                  <>
+                    <LoaderCircle className="w-4 h-4 animate-spin" />
+                    Jo'natilmoqda...
+                  </>
+                ) : (
+                  <>
+                    {t("send")}
+                    <Image
+                      className="transition-all duration-300 group-hover:rotate-[43deg]"
+                      src={submiticons}
+                      alt="Send Icon"
+                    />
+                  </>
+                )}
               </button>
             </div>
           </form>

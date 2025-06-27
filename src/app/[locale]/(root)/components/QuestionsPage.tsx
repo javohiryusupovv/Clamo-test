@@ -7,7 +7,7 @@ export default function QuestionsPage({faqData}: {faqData: FAQItem[]}) {
   const t = useTranslations("HomePage");
 
   return (
-    <div className="container md:py-16 py-8">
+    <div className="container md:py-10 py-6">
       <div className="flex items-center justify-between gap-1 md:pb-[28px] pb-[20px]">
         <h1 className="lg:text-[48px] md:text-[44px] text-[20px] font-bold text-[#3D445E]">
           {t("question_title")}
