@@ -323,10 +323,10 @@ export default function Navbar() {
                   </div>
                 )}
               </div>
-              <article className="flex items-center gap-[6px]">
+              <Link href="tel:1369" className="flex items-center gap-[6px]">
                 <Image src={Phone} alt="Phone icon" width={17} height={17} />
                 <p className="text-base font-bold text-[#3D445E]">1369</p>
-              </article>
+              </Link>
             </ul>
           </div>
 

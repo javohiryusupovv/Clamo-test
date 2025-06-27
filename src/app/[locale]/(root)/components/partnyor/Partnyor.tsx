@@ -20,42 +20,43 @@ export default function Partnyor({partners}: {partners: Partner[]}) {
         </p>
       </article>
 
-      <div className="w-full space-y-6 overflow-hidden">
-        <Marquee direction="right" speed={30} gradient pauseOnHover>
-          {partners.map((img) => (
-            <Link
-              href="#"
-              key={img.id}
-              className="mx-2 sm:mx-[18px] bg-[#eaecef] border-white border-[3px] rounded-xl flex items-center justify-center h-[80px] sm:h-[110px] w-[160px] sm:w-[220px] p-6 sm:p-8"
-            >
-              <Image
-                src={img.image}
-                alt={img.title}
-                className="object-contain h-full w-auto"
-                width={57}
-                height={57}
-              />
-            </Link>
-          ))}
-        </Marquee>
-
-        <Marquee direction="left" speed={30} gradient pauseOnHover>
-          {partners.reverse().map((img) => (
-            <Link
-              href="#"
-              key={img.id}
-              className="mx-2 sm:mx-[18px] bg-[#eaecef] border-white border-[3px] rounded-xl flex items-center justify-center h-[80px] sm:h-[110px] w-[160px] sm:w-[220px] p-6 sm:p-8"
-            >
-              <Image
-                src={img.image}
-                alt={img.title}
-                className="h-full w-full object-contain"
-                width={107}
-                height={57}
-              />
-            </Link>
-          ))}
-        </Marquee>
+      <div className="container w-full space-y-6 overflow-visible">
+        <div className="">
+          <Marquee direction="right" speed={30} gradient={false} pauseOnHover className="mb-[18px]">
+            {partners.map((img) => (
+              <Link
+                href="#"
+                key={img.id}
+                className="mx-2 sm:mx-[18px] bg-[#eaecef] border-white border-[3px] rounded-xl flex items-center justify-center h-[80px] sm:h-[110px] w-[160px] sm:w-[220px] p-6 sm:p-8"
+              >
+                <Image
+                  src={img.image}
+                  alt={img.title}
+                  className="object-contain h-full w-auto"
+                  width={57}
+                  height={57}
+                />
+              </Link>
+            ))}
+          </Marquee>
+          <Marquee direction="left" speed={30} gradient={false} pauseOnHover>
+            {partners.reverse().map((img) => (
+              <Link
+                href="#"
+                key={img.id}
+                className="mx-2 sm:mx-[18px] bg-[#eaecef] border-white border-[3px] rounded-xl flex items-center justify-center h-[80px] sm:h-[110px] w-[160px] sm:w-[220px] p-6 sm:p-8"
+              >
+                <Image
+                  src={img.image}
+                  alt={img.title}
+                  className="h-full w-full object-contain"
+                  width={107}
+                  height={57}
+                />
+              </Link>
+            ))}
+          </Marquee>
+        </div>
       </div>
     </div>
   );

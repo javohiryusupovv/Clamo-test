@@ -9,6 +9,7 @@ import Phone from "../../../../../public/Imgs/iPhone15Pro.png";
 import QR from "@/assets/icons/QR.png";
 import Huawie from "@/assets/icons/huawie.png";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 
 export default function InstallPage() {
@@ -27,13 +28,13 @@ export default function InstallPage() {
 
   return (
     <section className="w-full px-4">
-      <div className="container mx-auto bg-[#0653C9] flex flex-wrap lg:flex-nowrap justify-end items-center max-sm:items-start w-full min-h-[304px] max-sm:h-[700px] max-xxs:h-[670px] rounded-[36px] max-sm:rounded-2xl p-4 lg:p-8 relative">
+      <div className="container mx-auto bg-[#0653C9] flex flex-wrap lg:flex-nowrap justify-end items-center max-sm:items-start w-full min-h-[304px] rounded-[36px] max-sm:rounded-2xl p-4 lg:p-8 relative">
         {/* Phone Image */}
         <div className="absolute bottom-0 left-[-40px] lg:left-[-60px] z-10 max-w-full sm:max-w-[200px] lg:max-w-none overflow-hidden">
           <Image
             src={Phone}
             alt="Sharh Phone Share"
-            className="object-contain lg:block hidden max-sm:flex max-sm:object-cover"
+            className="object-contain lg:block hidden max-sm:object-cover"
             data-aos="fade-up"
           />
         </div>
@@ -48,36 +49,42 @@ export default function InstallPage() {
           </p>
           <article className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
             {/* App Store Button */}
-            <button className="flex items-center px-4 py-2 bg-white/20 rounded-lg gap-2">
-              <SiApple className="w-[30px] h-[30px] text-white" />
-              <div className="text-left">
-                <p className="text-xs text-white font-vk">Download on the</p>
-                <p className="text-base text-white font-medium font-vk">App Store</p>
-              </div>
-            </button>
+            <Link href={"https://apps.apple.com/uz/app/sharh/id6454791625"} target="_blank">
+              <button className="flex hover:bg-white/30 transition-all duration-200 items-center px-4 py-2 bg-white/20 rounded-lg gap-2">
+                <SiApple className="w-[30px] h-[30px] text-white" />
+                <div className="text-left">
+                  <p className="text-xs text-white">Download on the</p>
+                  <p className="text-base text-white font-medium">App Store</p>
+                </div>
+              </button>
+            </Link>
 
             {/* Google Play Button */}
-            <button className="flex items-center px-4 py-2 bg-white/20 rounded-lg gap-2">
-              <FaGooglePlay className="w-[30px] h-[30px] text-white" />
-              <div className="text-left">
-                <p className="text-xs text-white uppercase font-vk">Get it on</p>
-                <p className="text-base text-white font-medium font-vk">Google Play</p>
-              </div>
-            </button>
+            <Link href={"https://play.google.com/store/apps/details?id=io.commeta.sharhuz&hl=ru"} target="_blank">
+              <button className="group hover:bg-white/30 transition-all duration-200 flex items-center px-4 py-2 bg-white/20 rounded-lg gap-2">
+                <FaGooglePlay className="w-[30px] h-[30px] text-white" />
+                <div className="text-left">
+                  <p className="text-xs text-white uppercase">Get it on</p>
+                  <p className="text-base text-white font-medium">Google Play</p>
+                </div>
+              </button>
+
+            </Link>
 
             {/* Huawei AppGallery */}
-            <button className="flex items-center px-4 py-2 bg-white/20 rounded-lg gap-2">
-              <Image
-                src={Huawie}
-                alt="Huawei logo"
-                className="w-8 h-8 object-contain"
-              />
-
+            <Link href={"https://appgallery.huawei.com/app/C109615407"} target="_blank">
+              <button className="flex hover:bg-white/30 transition-all duration-200 items-center px-4 py-2 bg-white/20 rounded-lg gap-2">
+                <Image
+                  src={Huawie}
+                  alt="Huawei logo"
+                  className="w-8 h-8 object-contain"
+                />
               <div className="text-left">
                 <p className="text-xs text-white uppercase font-vk">Explore it on</p>
                 <p className="text-base text-white font-medium font-vk">AppGallery</p>
               </div>
             </button>
+            </Link>
           </article>
         </div>
 

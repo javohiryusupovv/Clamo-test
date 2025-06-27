@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import cirlceBG from "../../../../../assets/images/twoCircle.png";
-import DevLogos from "../../../../../assets/logo/uicLogo.png";
 import TibbiyotVazirlik from "../../../../../assets/logo/TibbiyotVazirlik.png";
+import Logo from "@/assets/logo/devLogo.svg"
 import "./Footer.css";
 import Link from "next/link";
 import Contact from "../contact/Contact";
@@ -127,11 +127,13 @@ export default function FooterLayout() {
                     </li>
                   </Link>
                 ))}
-                <li className="group flex items-center gap-1 hover:text-[#23B3FC] text-[#3D445E] text-[14px] font-medium transition-all duration-200 cursor-pointer">
-                  <span className="w-[9px] h-[9px] rounded-full bg-[#23B3FC] opacity-0 group-hover:opacity-100 transition transform -translate-x-4 group-hover:translate-x-0"></span>
-                  <span className="-translate-x-3 group-hover:translate-x-1 transition-all">
-                    {t("bog'lanish")}
-                  </span>
+                <li>
+                  <Link href={`/${locale}/contacts`} className="group flex items-center gap-1 hover:text-[#23B3FC] text-[#3D445E] text-[14px] font-medium transition-all duration-200 cursor-pointer">
+                    <span className="w-[9px] h-[9px] rounded-full bg-[#23B3FC] opacity-0 group-hover:opacity-100 transition transform -translate-x-4 group-hover:translate-x-0"></span>
+                    <span className="-translate-x-3 group-hover:translate-x-1 transition-all">
+                      {t("bog'lanish")}
+                    </span>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -162,17 +164,14 @@ export default function FooterLayout() {
             <p className="text-[#3D445E]/[60%] text-[7px] sm:text-[14px] font-vk">
               &copy; {new Date().getFullYear()} – “CLAMO” LLC
             </p>
-            <div className="flex items-center gap-4">
-              <span className="text-[#3D445E] text-[7px] sm:text-[14px]">
+            <div className="group flex items-center gap-2">
+              <span className="text-[#3D445E] text-[7px] sm:text-[15px]">
                 {t("developed")}
               </span>
-              <Image
-                src={DevLogos}
-                alt="Developer Logo"
-                width={100}
-                height={20}
-                // className="w-12"
-              />
+              <Link href={"https://iqtidoracademy.uz/"} target="_blank" className="group flex items-center transition-all duration-300">
+                <Image src={Logo} alt="IQ Logo" className="" width={35} height={35} />
+                <span className=" translate-x-5 opacity-0 group-hover:translate-x-0 group-hover:opacity-[1] transition-all duration-300 text-[18px] font-bold">Iqtidor</span>
+              </Link>
             </div>
           </div>
         </div>
