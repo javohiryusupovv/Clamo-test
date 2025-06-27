@@ -24,7 +24,6 @@ export default function Contact() {
   const zod = useTranslations("ZodForm");
   const formSchema = getFormSchema(zod);
   const [isLoading, setIsLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
 
   type FormData = z.infer<typeof formSchema>;
 
@@ -41,7 +40,6 @@ export default function Contact() {
 
   const handleSubmitted = async (data: FormData) => {
     setIsLoading(true);
-    setErrorMessage("");
     const payload = {
       full_name: data.names,
       industry: data.tashkilot,
@@ -83,8 +81,6 @@ export default function Contact() {
         reset();
       })
       .catch((error) => {
-        setErrorMessage(error.message || "Noma'lum xatolik yuz berdi");
-        setTimeout(() => setErrorMessage(""), 4000);
         console.error("Submission error:", error);
       })
       .finally(() => {
@@ -271,7 +267,7 @@ export default function Contact() {
                 {isLoading ? (
                   <>
                     <LoaderCircle className="w-4 h-4 animate-spin" />
-                    Jo'natilmoqda...
+                    Jo&apos;natilmoqda...
                   </>
                 ) : (
                   <>

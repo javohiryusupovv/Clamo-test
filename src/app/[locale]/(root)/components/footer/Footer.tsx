@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import cirlceBG from "../../../../../assets/images/twoCircle.png";
-import DevLogos from "../../../../../assets/logo/uicLogo.png";
 import TibbiyotVazirlik from "../../../../../assets/logo/TibbiyotVazirlik.png";
 import Logo from "@/assets/logo/devLogo.svg"
 import "./Footer.css";
