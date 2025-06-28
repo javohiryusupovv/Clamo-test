@@ -11,7 +11,7 @@ import { LoaderCircle } from 'lucide-react';
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { set, z } from "zod";
+import { z } from "zod";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
