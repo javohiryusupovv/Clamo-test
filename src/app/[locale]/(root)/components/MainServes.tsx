@@ -26,11 +26,11 @@ export default function MainService() {
 
   return (
     <section className="bg-[#F6F9FC]">
-      <section className="container  sm:pb-[58px] pt-16 lg:overflow-hidden">
+      <section className="container  sm:pb-[58px] pt-2 lg:overflow-hidden">
         {platforms.map((item, id) => (
           <div
             key={id}
-            className="grid grid-cols-1 lg:grid-cols-2  w-full bg-[#0653C9] sm:rounded-[36px] rounded-2xl text-white  mb-7"
+            className="grid grid-cols-1 lg:grid-cols-2  w-full bg-[#0653C9] lg:rounded-[36px] rounded-2xl text-white  md:mb-7"
           >
             <div className="lg:block hidden">
               <div className="flex justify-start bg-[url('/Images/bgMain.png')] bg-no-repeat bg-cover bg-center">

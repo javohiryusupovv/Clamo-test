@@ -42,6 +42,7 @@ export default function ServicesSection({
               locale
             );
             const slug = slugs[index];
+            
             return (
               <div
                 key={index}

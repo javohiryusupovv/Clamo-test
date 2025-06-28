@@ -16,12 +16,14 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
 
   return (
     <div className="container pb-10">
-      <h1 className="font-bold font-vk text-[18px] sm:text-[28px] md:text-[36px] lg:text-[44px] xl:text-[48px] text-[#3D445E] leading-[120%]">
-        {t("news_title")}
-      </h1>
-      <p className="font-medium font-vk text-[12px] sm:text-[14px] md:text-[16px] lg:text-[20px] text-[#012548CC] pb-[16px] sm:pb-[20px] md:pb-[28px] leading-[150%]">
-        {t("all_servises")}
-      </p>
+      <div className=" flex flex-col gap-[4px]">
+        <h1 className="font-bold font-vk text-3xl md:text-[36px] lg:text-[44px] xl:text-[48px] text-[#3D445E] leading-[120%]">
+          {t("news_title")}
+        </h1>
+        <p className="font-medium font-vk text-sm sm:text-base md:text-[20px] text-[#012548CC] pb-[16px] sm:pb-[20px] md:pb-[28px] leading-[150%]">
+          {t("all_servises")}
+        </p>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* LEFT big card (index === 0) */}
