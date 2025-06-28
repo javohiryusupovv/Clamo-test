@@ -108,7 +108,7 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
                       <p className="text-[10px] font-vk sm:text-[12px] md:text-[16px] text-[#74807B]">
                         {slicedNews[i].created_at?.slice(0, 10)}
                       </p>
-                      <h3 className="font-bold font-vk text-[#3D445E] text-[14px] md:text-[16px] lg:text-[24px] leading-[130%] pb-3">
+                      <h3 className="font-bold font-vk line-clamp-2 text-[#3D445E] text-[14px] md:text-[16px] lg:text-[24px] leading-[130%]">
                         {getLocalizedValue(
                           pickStringProps(slicedNews[i]),
                           "title",

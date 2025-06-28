@@ -51,14 +51,14 @@ export default function InstallPage() {
             <Link
               href={"https://apps.apple.com/uz/app/sharh/id6454791625"}
               target="_blank"
+              className="flex hover:bg-white/30 transition-all duration-200 items-center px-4 py-2 bg-white/20 rounded-lg gap-2"
             >
-              <button className="flex hover:bg-white/30 transition-all duration-200 items-center px-4 py-2 bg-white/20 rounded-lg gap-2">
                 <SiApple className="w-[30px] h-[30px] text-white" />
                 <div className="text-left">
                   <p className="text-xs text-white">Download on the</p>
                   <p className="text-base text-white font-medium">App Store</p>
                 </div>
-              </button>
+             
             </Link>
 
             {/* Google Play Button */}
@@ -67,8 +67,8 @@ export default function InstallPage() {
                 "https://play.google.com/store/apps/details?id=io.commeta.sharhuz&hl=ru"
               }
               target="_blank"
+              className="group hover:bg-white/30 transition-all duration-200 flex items-center px-4 py-2 bg-white/20 rounded-lg gap-2"
             >
-              <button className="group hover:bg-white/30 transition-all duration-200 flex items-center px-4 py-2 bg-white/20 rounded-lg gap-2">
                 <FaGooglePlay className="w-[30px] h-[30px] text-white" />
                 <div className="text-left">
                   <p className="text-xs text-white uppercase">Get it on</p>
@@ -76,15 +76,14 @@ export default function InstallPage() {
                     Google Play
                   </p>
                 </div>
-              </button>
             </Link>
 
             {/* Huawei AppGallery */}
             <Link
               href={"https://appgallery.huawei.com/app/C109615407"}
               target="_blank"
+              className="flex hover:bg-white/30 transition-all duration-200 items-center px-4 py-2 bg-white/20 rounded-lg gap-2"
             >
-              <button className="flex hover:bg-white/30 transition-all duration-200 items-center px-4 py-2 bg-white/20 rounded-lg gap-2">
                 <Image
                   src={Huawei}
                   alt="Huawei logo"
@@ -98,7 +97,6 @@ export default function InstallPage() {
                     AppGallery
                   </p>
                 </div>
-              </button>
             </Link>
           </article>
         </div>
