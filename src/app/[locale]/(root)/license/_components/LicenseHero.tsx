@@ -4,8 +4,7 @@ import Image from "next/image";
 import { getBgImg, getLicense } from "../../../../../../constants/page";
 import { useTranslations } from "next-intl";
 import { FaChevronRight } from "react-icons/fa";
-import Down from "@/assets/icons/whiteDown.png";
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight } from "lucide-react";
 
 export default function LicenseHero() {
   const t = useTranslations("LicensePage");
@@ -37,8 +36,8 @@ export default function LicenseHero() {
               <div className="space-y-5 md:w-[45%] mx-auto md:mx-0">
                 <h1 className="text-[28px] font-inter leading-[110%] sm:text-[30px] md:text-[32px] font-medium text-[#1B1B1B]">
                   <span className="text-[#23B3FC] uppercase">{firstTitle}</span>{" "}
-                  {secondTitle} {thirtTitle}{" "}
-                  {fourTitle} {fiveTitle} {sexTitle} {sevenTitle}
+                  {secondTitle} {thirtTitle} {fourTitle} {fiveTitle} {sexTitle}{" "}
+                  {sevenTitle}
                 </h1>
                 <p className="text-[#012548CC] font-vk leading-[140%] text-[18px] sm:text-[20px] font-medium">
                   {t("trusted_partner")}
@@ -50,11 +49,7 @@ export default function LicenseHero() {
                   <span className="text-[14px] font-inter font-medium">
                     {btn("service_button")}
                   </span>
-                  <Image
-                    src={Down}
-                    alt="down strelka"
-                    className="group-hover:translate-x-1 transition-all duration-200"
-                  />
+                  <FaChevronRight className="group-hover:translate-x-1 transition-all duration-200" />
                 </button>
 
                 <button className="group flex items-center justify-center gap-[4px] w-full sm:w-[273px] px-[24px] py-[10px] bg-[#23B3FC1F] text-[#23B3FC] rounded-lg hover:bg-[#23B3FC] hover:text-white transition">
@@ -114,7 +109,12 @@ export default function LicenseHero() {
                   className="bg-white bg-opacity-10 rounded-[32px] p-4 flex flex-col items-start"
                 >
                   <div className="flex items-center justify-center bg-white bg-opacity-15 p-[16px] rounded-[18px] mb-3">
-                    <Image src={step.icon} alt={step.title} width={33} height={33} />
+                    <Image
+                      src={step.icon}
+                      alt={step.title}
+                      width={33}
+                      height={33}
+                    />
                   </div>
                   <h3 className="font-bold leading-[130%] text-[20px] mb-2 font-vk">
                     {step.title}
@@ -126,7 +126,6 @@ export default function LicenseHero() {
               ))}
             </div>
           </div>
-
         </section>
       </div>
     </>
