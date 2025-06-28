@@ -7,12 +7,14 @@ export default function Contacts() {
 
   return (
     <div className="container">
-      <h1 className="font-bold font-vk lg:text-[48px] md:text-[44px] mt-3 text-[20px] text-[#3D445E]">
-        {t("contact_title")}
-      </h1>
-      <p className="font-medium font-vk sm:text-[20px] text-[14px] text-[#012548CC] md:mb-[40px] mb-[20px]">
-        {t("contact_subtitle")}
-      </p>
+      <div className="flex flex-col gap-[4px] md:mb-[40px] mb-[20px]">
+        <h1 className="font-bold font-vk lg:text-5xl md:text-4xl text-3xl mt-3 text-[20px] text-[#3D445E] leading-[100%] ">
+          {t("contact_title")}
+        </h1>
+        <p className="font-medium font-vk sm:text-base text-sm md:text-[20px] text-[#012548CC] leading-[140%]">
+          {t("contact_subtitle")}
+        </p>
+      </div>
       <Map />
       <SochealMedia />
     </div>

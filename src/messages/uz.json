@@ -12,7 +12,7 @@
   "ReyesterCard": {
     "view_license": "View License",
     "accreditation_number": "Accreditation Number",
-    "shares": "Reviews",
+    "shares": "Sharhlar",
     "registration_date": "Accreditation Date",
     "website": "Website",
     "email": "Email Address",
@@ -283,5 +283,11 @@
     "normativeSectionDesc": "Tashkilotingiz uchun zarur litsenziyani tez va ishonchli tarzda oling. Clamo sizning qonuniylikdagi ishonchli hamkoringiz.",
     "servicesBtn": "Xizmatlarimiz",
     "contactBtn": "Murojat qilish"
+  },
+  "Soceal-Media": {
+    "telegram_alo": "Telegram",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "linkiden_ai": "LinkedIn"
   }
 }

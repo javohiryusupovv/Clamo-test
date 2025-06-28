@@ -58,7 +58,7 @@ export default function FooterLayout() {
                   {/* 4 ta ijtimoiy ikonka */}
 
                   <Link
-                    href={"https://www.instagram.com/clamo.uz/"}
+                    href={"https://instagram.com/clamo.uz"}
                     target="_blank"
                     className="group hover:bg-[#0650C3] transition-all duration-200 p-[10px] cursor-pointer bg-[#0650C3]/[18%] rounded-lg"
                   >
@@ -71,7 +71,7 @@ export default function FooterLayout() {
                     </svg>{" "}
                   </Link>
                   <Link
-                    href={"https://www.instagram.com/clamo.uz/"}
+                    href={"https://t.me/CLAMO_uz"}
                     target="_blank"
                     className="group hover:bg-[#0650C3] transition-all duration-200 p-[10px] cursor-pointer bg-[#0650C3]/[18%] rounded-lg"
                   >
@@ -83,7 +83,9 @@ export default function FooterLayout() {
                     </svg>
                   </Link>
                   <Link
-                    href={"https://www.linkedin.com/in/clamo-social-3a1454364/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"}
+                    href={
+                      "https://www.linkedin.com/in/clamo-social-3a1454364/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                    }
                     target="_blank"
                     className="group hover:bg-[#0650C3] transition-all duration-200 p-[10px] cursor-pointer bg-[#0650C3]/[18%] rounded-lg"
                   >
@@ -95,7 +97,9 @@ export default function FooterLayout() {
                     </svg>{" "}
                   </Link>
                   <Link
-                    href={"https://www.facebook.com/CLAMORasmiy"}
+                    href={
+                      "https://www.facebook.com/people/CLAMO-Rasmiy/61574003283120/?mibextid=wwXIfr&rdid=jD2A4C8aUmaFwdKS&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15rQ6GTeNE%2F%3Fmibextid%3DwwXIfr"
+                    }
                     target="_blank"
                     className="group hover:bg-[#0650C3] transition-all duration-200 p-[10px] cursor-pointer bg-[#0650C3]/[18%] rounded-lg"
                   >
@@ -127,7 +131,10 @@ export default function FooterLayout() {
                   </Link>
                 ))}
                 <li>
-                  <Link href={`/${locale}/contacts`} className="group flex items-center gap-1 hover:text-[#23B3FC] text-[#3D445E] text-[14px] font-medium transition-all duration-200 cursor-pointer">
+                  <Link
+                    href={`/${locale}/contacts`}
+                    className="group flex items-center gap-1 hover:text-[#23B3FC] text-[#3D445E] text-[14px] font-medium transition-all duration-200 cursor-pointer"
+                  >
                     <span className="w-[9px] h-[9px] rounded-full bg-[#23B3FC] opacity-0 group-hover:opacity-100 transition transform -translate-x-4 group-hover:translate-x-0"></span>
                     <span className="-translate-x-3 group-hover:translate-x-1 transition-all">
                       {t("bog'lanish")}
@@ -167,9 +174,21 @@ export default function FooterLayout() {
               <span className="text-[#3D445E] text-[7px] sm:text-[15px]">
                 {t("developed")}
               </span>
-              <Link href={"https://iqtidoracademy.uz/"} target="_blank" className="group flex items-center transition-all duration-300">
-                <Image src="/logo/devLogo.svg" alt="IQ Logo" className="" width={35} height={35} />
-                <span className=" translate-x-5 opacity-0 group-hover:translate-x-0 group-hover:opacity-[1] transition-all duration-300 text-[18px] font-bold">Iqtidor</span>
+              <Link
+                href={"https://iqtidoracademy.uz/"}
+                target="_blank"
+                className="group flex items-center transition-all duration-300"
+              >
+                <Image
+                  src="/logo/devLogo.svg"
+                  alt="IQ Logo"
+                  className=""
+                  width={35}
+                  height={35}
+                />
+                <span className=" translate-x-5 opacity-0 group-hover:translate-x-0 group-hover:opacity-[1] transition-all duration-300 text-[18px] font-bold">
+                  Iqtidor
+                </span>
               </Link>
             </div>
           </div>

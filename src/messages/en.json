@@ -12,7 +12,7 @@
   "ReyesterCard": {
     "view_license": "Litsenziyani ko‘rish",
     "accreditation_number": "Akkreditatsiya raqami",
-    "shares": "Sharhlar",
+    "shares": "Reviews",
     "registration_date": "Akkreditatsiya berilgan sana",
     "website": "Vebsayt",
     "email": "Email manzil",
@@ -279,5 +279,11 @@
     "normativeSectionDesc": "Quickly and reliably obtain the necessary license for your organization. Clamo is your trusted partner in legal compliance.",
     "servicesBtn": "Our Services",
     "contactBtn": "Contact Us"
+  },
+  "Soceal-Media": {
+    "telegram_alo": "Telegram",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "linkiden_ai": "LinkedIn"
   }
 }
