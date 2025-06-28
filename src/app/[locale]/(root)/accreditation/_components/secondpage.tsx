@@ -25,7 +25,7 @@ export default function AccredationMain() {
       </h1>
 
       <div className="grid grid-cols-1 max-w-[500px] sm:max-w-full mx-auto sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-        {getSteps.map((step, index) => (
+        {Steps.map((step, index) => (
           <div
             key={index}
             className="bg-white rounded-[28px] md:p-6 p-4 lg:p-8 border border-gray-400/25 flex flex-col items-start sm:text-left"
