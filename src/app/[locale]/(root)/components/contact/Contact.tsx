@@ -11,7 +11,7 @@ import { LoaderCircle } from 'lucide-react';
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
+import { set, z } from "zod";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -74,18 +74,16 @@ export default function Contact() {
 
     toast
       .promise(submitPromise, {
-        pending: "Jo'natilmoqda ...",
-        success: "Ma'lumotlar muvaffaqiyatli jo'natildi",
+        pending: zod("notifsending"),
+        success: zod("succesNotif"),
       })
       .then(() => {
         reset();
+        setIsLoading(false);
       })
       .catch((error) => {
         console.error("Submission error:", error);
       })
-      .finally(() => {
-        setIsLoading(false)
-      });
   };
 
   return (
@@ -218,7 +216,7 @@ export default function Contact() {
                     className="w-6 sm:w-9"
                     alt="Flag Icons"
                   />
-                  <span className="text-[#3D445E] text-[14px]">+998</span>
+                  <span className="text-[16px]">+998</span>
                 </article>
                 <input
                   id="phoneNumber"
@@ -246,7 +244,7 @@ export default function Contact() {
                       e.currentTarget.setCustomValidity("");
                     }
                   }}
-                  className="w-full outline-none bg-[#F7F7F8]"
+                  className="w-full outline-none bg-[#F7F7F8] text-[16px]"
                   placeholder="99 123 45 67"
                 />
               </div>

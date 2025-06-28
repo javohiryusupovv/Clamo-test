@@ -10,6 +10,8 @@ import QR from "@/assets/icons/QR.png";
 import Huawie from "@/assets/icons/huawie.png";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import bgCircle from "../../../../../public/herobg.png";
+
 
 
 export default function InstallPage() {
@@ -28,7 +30,9 @@ export default function InstallPage() {
 
   return (
     <section className="w-full px-4">
-      <div className="container mx-auto bg-[#0653C9] flex flex-wrap lg:flex-nowrap justify-end items-center max-sm:items-start w-full min-h-[304px] rounded-[36px] max-sm:rounded-2xl p-4 lg:p-8 relative">
+
+      <div className="container mx-auto relative top-0 left-0 overflow-hidden bg-[#0653C9] flex flex-wrap lg:flex-nowrap justify-end items-center max-sm:items-start w-full min-h-[304px] rounded-[36px] max-sm:rounded-2xl p-4 lg:p-8">
+        <Image className=" absolute left-0 opacity-[0.8]" width={800} src={bgCircle} alt="Background circle" />
         {/* Phone Image */}
         <div className="absolute bottom-0 left-[-40px] lg:left-[-60px] z-10 max-w-full sm:max-w-[200px] lg:max-w-none overflow-hidden">
           <Image
