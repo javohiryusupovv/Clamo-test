@@ -7,10 +7,9 @@ import { useEffect } from "react";
 import Image from "next/image";
 import Phone from "../../../../../public/Imgs/iPhone15Pro.png";
 import QR from "@/assets/icons/QR.png";
-import Huawie from "@/assets/icons/huawie.png";
+import Huawei from "@/assets/icons/huawei-icon.svg";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-
 
 export default function InstallPage() {
   const t = useTranslations("HomePage");
@@ -49,7 +48,10 @@ export default function InstallPage() {
           </p>
           <article className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
             {/* App Store Button */}
-            <Link href={"https://apps.apple.com/uz/app/sharh/id6454791625"} target="_blank">
+            <Link
+              href={"https://apps.apple.com/uz/app/sharh/id6454791625"}
+              target="_blank"
+            >
               <button className="flex hover:bg-white/30 transition-all duration-200 items-center px-4 py-2 bg-white/20 rounded-lg gap-2">
                 <SiApple className="w-[30px] h-[30px] text-white" />
                 <div className="text-left">
@@ -60,30 +62,43 @@ export default function InstallPage() {
             </Link>
 
             {/* Google Play Button */}
-            <Link href={"https://play.google.com/store/apps/details?id=io.commeta.sharhuz&hl=ru"} target="_blank">
+            <Link
+              href={
+                "https://play.google.com/store/apps/details?id=io.commeta.sharhuz&hl=ru"
+              }
+              target="_blank"
+            >
               <button className="group hover:bg-white/30 transition-all duration-200 flex items-center px-4 py-2 bg-white/20 rounded-lg gap-2">
                 <FaGooglePlay className="w-[30px] h-[30px] text-white" />
                 <div className="text-left">
                   <p className="text-xs text-white uppercase">Get it on</p>
-                  <p className="text-base text-white font-medium">Google Play</p>
+                  <p className="text-base text-white font-medium">
+                    Google Play
+                  </p>
                 </div>
               </button>
-
             </Link>
 
             {/* Huawei AppGallery */}
-            <Link href={"https://appgallery.huawei.com/app/C109615407"} target="_blank">
+            <Link
+              href={"https://appgallery.huawei.com/app/C109615407"}
+              target="_blank"
+            >
               <button className="flex hover:bg-white/30 transition-all duration-200 items-center px-4 py-2 bg-white/20 rounded-lg gap-2">
                 <Image
-                  src={Huawie}
+                  src={Huawei}
                   alt="Huawei logo"
                   className="w-8 h-8 object-contain"
                 />
-              <div className="text-left">
-                <p className="text-xs text-white uppercase font-vk">Explore it on</p>
-                <p className="text-base text-white font-medium font-vk">AppGallery</p>
-              </div>
-            </button>
+                <div className="text-left">
+                  <p className="text-xs text-white uppercase font-vk">
+                    Explore it on
+                  </p>
+                  <p className="text-base text-white font-medium font-vk">
+                    AppGallery
+                  </p>
+                </div>
+              </button>
             </Link>
           </article>
         </div>
