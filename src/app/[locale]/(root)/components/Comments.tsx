@@ -16,18 +16,18 @@ export default function Izohlar() {
     <div className="md:py-[64px] py-[30px]">
       <div className="container max-sm:mb-4">
         {opinion.map((item: commentOpinion, id: number) => (
-          <div key={id}>
+          <div key={id} className="flex flex-col gap-[4px]">
             <Image
               src={item.icons}
               alt="Sharh Icons"
               width={124}
               height={32}
-              className="pb-1 max-sm:w-[95px] max-sm:h-[30px]"
+              className="max-sm:w-[95px] max-sm:h-[30px]"
             />
-            <h1 className="font-bold font-vk lg:text-[48px] md:text-[44px] text-[20px] text-[#3D445E]">
+            <h1 className="font-bold font-vk lg:text-5xl md:text-4xl text-3xl text-[#3D445E]">
               {item.subtitle}
             </h1>
-            <p className="font-medium font-vk sm:text-[20px] text-[14px] text-[#012548CC] pb-[32.5]">
+            <p className="font-medium font-vk sm:text-[20px] text-[14px] text-[#012548CC] md:pb-[32.5]">
               {item.description}
             </p>
           </div>

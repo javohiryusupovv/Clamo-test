@@ -10,14 +10,14 @@ export default function AboutMain() {
     <div className="container">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Matn bo‘limi */}
-        <div className="flex flex-col justify-center gap-4">
-          <p className="rounded-md font-inter bg-[#23B3FC] text-white text-sm sm:text-base px-4 py-1 w-fit">
+        <div className="flex flex-col justify-center">
+          <p className="rounded-md font-inter font-medium bg-[#23B3FC] leading-[100%] text-white text-sm sm:text-base px-4 py-1 w-fit mb-[16px]">
             {t("plan")}
           </p>
-          <h2 className="text-[20px] sm:text-[28px] font-inter lg:text-[32px] text-[#1B1B1B] font-semibold leading-snug">
+          <h2 className="text-[20px] sm:text-[28px] font-inter lg:text-[32px] leading-[110%] text-[#1B1B1B] font-semibold pb-2">
             {t("abouttitle")}
           </h2>
-          <p className="text-[14px] sm:text-[16px] md:text-[20px] font-vk text-[#012548CC] leading-relaxed">
+          <p className="text-[14px] sm:text-[16px] md:text-[20px] font-vk text-[#012548CC] leading-[140%]">
             {t("about_des1")}
           </p>
         </div>

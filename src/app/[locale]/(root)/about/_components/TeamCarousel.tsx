@@ -25,13 +25,15 @@ export default function TeamCarousel({ members }: { members: TeamMembers[] }) {
 
   return (
     <div className="bg-[#F8FAFC]">
-      <div className="w-full py-12 container mx-auto">
-        <h2 className="text-2xl sm:text-3xl font-vk md:text-4xl lg:text-5xl font-bold text-[#3D445E] mb-1 text-start">
-          {t("team_title")}
-        </h2>
-        <p className="text-[#012548CC] mb-8 font-vk font-medium text-[20px]">
-          {t("team_subtitle")}
-        </p>
+      <div className="w-full md:py-12 pt-5 container mx-auto">
+        <article className="flex flex-col gap-[4px]">
+          <h2 className="text-3xl font-vk md:text-4xl lg:text-5xl font-bold text-[#3D445E] leading-[100%] text-start">
+            {t("team_title")}
+          </h2>
+          <p className="text-[#012548CC] md:mb-8 mb-5 font-vk font-medium md:text-[20px] sm:text-base text-sm leading-[140%]">
+            {t("team_subtitle")}
+          </p>
+        </article>
         {members.length > 0 && swiperReady ? (
           <Swiper
             modules={[Navigation]}
@@ -51,7 +53,7 @@ export default function TeamCarousel({ members }: { members: TeamMembers[] }) {
             spaceBetween={24}
             slidesPerView={4}
             centeredSlides={true}
-            className="!pb-8"
+            className="md:!pb-8"
             breakpoints={{
               320: { slidesPerView: 1, centeredSlides: true },
               640: { slidesPerView: 2, centeredSlides: false },
@@ -108,10 +110,10 @@ function TeamMemberCard({ member }: { member: TeamMembers }) {
       <div className="absolute bottom-0 left-0 right-0 top-[220px] bg-gradient-to-t from-[#051425]/65 via-[#051425]/60 to-[#051425]/0"></div>
 
       <div className="absolute bottom-0 left-0 right-0 p-4 z-10 text-white transform transition-transform duration-700 group-hover:-translate-y-[92px]">
-        <p className="font-bold text-[17px] font-vk">{descriptionLocale}</p>
+        <p className="font-bold text-[17px] font-vk text-[#FFFFFFF] leading-[140%] ">{descriptionLocale}</p>
       </div>
       <div className="absolute bottom-0 left-0 right-0 h-[250px] bg-gradient-to-t from-[#002b66] to-transparent px-4 text-white flex items-end opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-        <div className="text-sm mb-[30px] font-vk">{localFullname}</div>
+        <div className="text-sm mb-[30px] font-vk leading-[140%] font-normal">{localFullname}</div>
       </div>
     </div>
   );

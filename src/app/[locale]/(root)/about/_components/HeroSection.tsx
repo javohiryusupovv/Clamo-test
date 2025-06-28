@@ -13,7 +13,7 @@ export default function Hero() {
   const t = useTranslations("AboutPage");
 
   return (
-    <div className="bg-[#F6F9FC] h-[480px] pt-[50px] lg:mb-0 max-sm:mb-16 max-xxs:mb-28">
+    <div className="bg-[#F6F9FC] h-[480px] md:pt-[50px] pt-[30px] lg:mb-0 max-sm:mb-1 max-xxs:mb-28">
       <div className="container w-full h-[310px] relative">
         {/* Shifokorlar */}
         <div className="flex justify-between items-center w-full md:h-[310px] h-[450px] rounded-[36px] bg-[#0653C9] overflow-hidden circleCover">
@@ -36,13 +36,13 @@ export default function Hero() {
               className=" absolute right-0 top-0 z-[22]"
             />
             <article className="relative top-0 left-0 z-[22]">
-              <h3 className=" text-[24px] sm:text-[30px] md:text-[40px] font-bold font-vk text-white leading-[50px] md:mr-0 mr-[70px] md:mt-0 mt-[90px] sm:mt-[160px]">
+              <h3 className=" text-[24px] sm:text-[30px] md:text-[40px] font-bold font-vk text-[#FFFFFF] leading-[50px] md:mr-0 mr-[70px] md:mt-0 mt-[90px] sm:mt-[160px]">
                 {t("hero_title")}
               </h3>
-              <p className="text-[16px] font-vk opacity-60 text-white mb-7">
+              <p className="text-[16px] font-vk opacity-60 text-white mb-7 font-medium leading-[100%]">
                 {t("hero_des")}
               </p>
-              <button className="px-10 py-2 font-vk cursor-pointer rounded-md flex items-center gap-1 text-white bg-[#23B3FC] hover:bg-[#30B9FF]">
+              <button className="md:px-10 px-4 py-2 font-vk cursor-pointer rounded-md flex items-center gap-1 text-white bg-[#23B3FC] hover:bg-[#30B9FF]">
                 {t("hero_btn")}
                 <ChevronRight className="stroke-white" />
               </button>
@@ -50,7 +50,9 @@ export default function Hero() {
           </div>
         </div>
         <div className="hidden xl:flex absolute top-[270px] w-[1008px] h-[130px] mb-[40px] items-center justify-center z-[20] bg-white rounded-lg left-1/2 transform -translate-x-1/2">
-          <p className="w-[950px] font-vk text-[#3D445E] text-[20px] font-normal">{t("hero_clamo")}</p>
+          <p className="w-[950px] font-vk text-[#3D445E] text-[20px] font-normal">
+            {t("hero_clamo")}
+          </p>
         </div>
       </div>
     </div>

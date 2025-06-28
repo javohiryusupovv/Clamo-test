@@ -10,11 +10,11 @@ const CenterRegulations: React.FC = () => {
   return (
     <div className="container md:mt-[100px] mt-8 md:mb-16 mb-8">
       {/* Header Section */}
-      <div className="mb-8 text-start">
-        <h1 className="text-[48px] max-md:text-[26px] font-vk font-bold text-[#3D445E] mb-1">
+      <div className="md:mb-9 mb-5 text-start flex flex-col gap-[4px]">
+        <h1 className="lg:text-5xl md:text-4xl text-3xl font-vk font-bold text-[#3D445E] leading-[100%]">
           {t("centerRegulationsTitle")}
         </h1>
-        <p className="text-[#012548CC] font-vk text-lg md:text-xl leading-relaxed">
+        <p className="text-[#012548CC] font-vk md:text-[20px] sm:text-base text-sm leading-[140%]">
           {t("centerRegulationsDescription")}
         </p>
       </div>

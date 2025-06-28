@@ -12,12 +12,14 @@ export default function DepartmentSection({
   const locale = useLocale();
   return (
     <section className="px-4 py-10 max-w-6xl mx-auto">
-      <h2 className="text-2xl sm:text-3xl font-vk md:text-4xl lg:text-5xl font-bold text-[#3D445E] mb-1 text-start">
-        {t("abouttitle3")}
-      </h2>
-      <p className="text-[#012548CC] mb-8 font-vk font-medium text-[20px]">
-        {t("about_des3")}
-      </p>
+      <div className="flex flex-col gap-[4px]">
+        <h2 className="text-3xl font-vk md:text-4xl lg:text-5xl font-bold text-[#3D445E] text-start">
+          {t("abouttitle3")}
+        </h2>
+        <p className="text-[#012548CC] md:pb-[44px] pb-5 font-vk font-medium md:text-[20px] sm:text-base text-sm">
+          {t("about_des3")}
+        </p>
+      </div>
 
       <div className="grid md:grid-cols-2 gap-4">
         {agentsection.map((departments) => {
@@ -35,16 +37,16 @@ export default function DepartmentSection({
           return (
             <div
               key={departments.id}
-              className="group rounded-2xl p-6 pt-10 pb-10 flex items-start gap-4 bg-[#F6F9FC] hover:bg-gradient-to-r from-blue-500 to-blue-700 hover:text-white hover:cursor-pointer mb-4 transition-all duration-200 ease-in-out"
+              className="group rounded-2xl md:p-6 p-4 md:py-10 flex items-start gap-4 bg-[#F6F9FC] hover:bg-gradient-to-r from-blue-500 to-blue-700 hover:text-white hover:cursor-pointer mb-4 transition-all duration-200 ease-in-out"
             >
-              <div className="rounded-full p-2 bg-[#0653C9] text-white group-hover:bg-white group-hover:text-blue-700 transition-all duration-200 ease-in-out">
+              <div className="rounded-full md:p-2 p-1 bg-[#0653C9] py-3 text-white group-hover:bg-white group-hover:text-blue-700 transition-all duration-200 ease-in-out">
                 <svg
                   width="48"
                   height="48"
                   viewBox="0 0 48 48"
                   fill="white"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="group-hover:fill-[#0A56CB]"
+                  className="group-hover:fill-[#0A56CB] max-md:w-[32xp] max-md:h-[32px]"
                 >
                   <path
                     fillRule="evenodd"
@@ -59,10 +61,10 @@ export default function DepartmentSection({
                 </svg>
               </div>
               <div className="transition-all duration-200 ease-in-out">
-                <h3 className="font-bold text-[#3D445E] font-vk text-[20px] group-hover:text-white transition-colors duration-200 ease-in-out">
+                <h3 className="font-bold text-[#3D445E] font-vk text-[20px] leading-[140%] group-hover:text-white transition-colors duration-200 ease-in-out">
                   {titleLocale}
                 </h3>
-                <p className="text-[16px] mt-2 font-vk group-hover:text-white transition-colors duration-200 ease-in-out">
+                <p className="md:text-[16px] text-[14px] mt-2 font-vk group-hover:text-white leading-[140%] transition-colors duration-200 ease-in-out">
                   {descriptionLocale}
                 </p>
               </div>
