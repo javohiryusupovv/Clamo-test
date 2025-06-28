@@ -2,8 +2,7 @@
 
 import React from "react";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
-import WhiteDown from "@/assets/icons/whiteDown.png";
+import { FaAngleRight } from "react-icons/fa6";
 
 const CenterRegulations: React.FC = () => {
   const t = useTranslations("RegulatorydocumentsPage");
@@ -51,11 +50,7 @@ const CenterRegulations: React.FC = () => {
           </p>
           <button className="group font-vk hover:bg-[#23B3FC]/[80%] w-[272px] h-[40px] flex items-center justify-center gap-[11.5px] bg-[#23B3FC] rounded-lg text-sm font-medium  leading-[130%] mt-[50px] text-[white]">
             {t("downloadButton")}{" "}
-            <Image
-              src={WhiteDown}
-              alt="down strelka"
-              className="md:group-hover:translate-x-2 transition-all duration-200"
-            />
+            <FaAngleRight className="md:group-hover:translate-x-2 transition-all duration-200" />
           </button>
         </div>
       </div>

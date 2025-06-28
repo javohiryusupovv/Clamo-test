@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
-import WhiteDown from "@/assets/icons/whiteDown.png";
+import { FaAngleRight } from "react-icons/fa6";
+import Link from "next/link";
 
 const GovernmentDecisions: React.FC = () => {
   const t = useTranslations("RegulatorydocumentsPage");
@@ -23,14 +23,17 @@ const GovernmentDecisions: React.FC = () => {
                 {t("govDecision1Title")}
               </h2>
             </div>
-            <button className="group font-vk hover:bg-[#23B3FC]/[80%] w-full sm:w-[272px] h-10 flex items-center justify-center gap-2 bg-[#23B3FC] rounded-lg text-sm font-medium leading-tight mt-6 sm:mt-8 lg:mt-12 text-white mx-auto lg:mx-0">
-              {t("downloadBtn")}{" "}
-              <Image
-                src={WhiteDown}
-                alt="down strelka"
-                className="md:group-hover:translate-x-2 transition-all duration-200"
-              />
-            </button>
+            <Link
+              href={
+                "https://drive.google.com/file/d/1e5sC3gxg08Ix63cFm94ngFSMGv3IgEkm/view"
+              }
+              target="_blank"
+            >
+              <button className="group font-vk hover:bg-[#23B3FC]/[80%] w-full sm:w-[272px] h-10 flex items-center justify-center gap-2 bg-[#23B3FC] rounded-lg text-sm font-medium leading-tight mt-6 sm:mt-8 lg:mt-12 text-white mx-auto lg:mx-0">
+                {t("downloadBtn")}{" "}
+                <FaAngleRight className="md:group-hover:translate-x-2 transition-all duration-200" />
+              </button>
+            </Link>
           </div>
           <div className="group w-full lg:w-1/2 xl:w-[684px] hover:bg-[#4382E3] bg-[#F6F9FC] p-6 rounded-xl hover:cursor-pointer duration-300 transition-transform flex items-center">
             <p className="group-hover:text-white font-vk group-hover:cursor-pointer text-base sm:text-lg md:text-xl lg:text-[22px] font-medium leading-relaxed w-full">
@@ -52,14 +55,17 @@ const GovernmentDecisions: React.FC = () => {
                 {t("govDecision2Title")}
               </h2>
             </div>
-            <button className="group font-vk hover:bg-[#23B3FC]/[80%] w-full sm:w-[272px] h-10 flex items-center justify-center gap-2 bg-[#23B3FC] rounded-lg text-sm font-medium text-white leading-tight mt-6 sm:mt-8 lg:mt-12 mx-auto lg:mx-0">
-              {t("downloadBtn")}{" "}
-              <Image
-                src={WhiteDown}
-                alt="down strelka"
-                className="md:group-hover:translate-x-2 transition-all duration-200"
-              />
-            </button>
+            <Link
+              href={
+                "https://drive.google.com/file/d/1Wooo7lz4YjjMgTowweq8_QvvXxhd2oUR/view"
+              }
+              target="_blank"
+            >
+              <button className="group font-vk hover:bg-[#23B3FC]/[80%] w-full sm:w-[272px] h-10 flex items-center justify-center gap-2 bg-[#23B3FC] rounded-lg text-sm font-medium text-white leading-tight mt-6 sm:mt-8 lg:mt-12 mx-auto lg:mx-0">
+                {t("downloadBtn")}{" "}
+                <FaAngleRight className="md:group-hover:translate-x-2 transition-all duration-200" />
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -70,15 +76,17 @@ const GovernmentDecisions: React.FC = () => {
                 {t("govDecision3Title")}
               </h2>
             </div>
-
-            <button className="group font-vk hover:bg-[#23B3FC]/[80%] w-full sm:w-[272px] h-10 flex items-center justify-center gap-2 bg-[#23B3FC] rounded-lg text-sm font-medium text-white leading-tight mt-6 sm:mt-8 lg:mt-12 mx-auto lg:mx-0">
-              {t("downloadBtn")}
-              <Image
-                src={WhiteDown}
-                alt="down strelka"
-                className="md:group-hover:translate-x-2 transition-all duration-200"
-              />
-            </button>
+            <Link
+              href={
+                "https://drive.google.com/file/d/1PxNyLM_huofYpB_9y6NeiZyZb-IOE3ZR/view"
+              }
+              target="_blank"
+            >
+              <button className="group font-vk hover:bg-[#23B3FC]/[80%] w-full sm:w-[272px] h-10 flex items-center justify-center gap-2 bg-[#23B3FC] rounded-lg text-sm font-medium text-white leading-tight mt-6 sm:mt-8 lg:mt-12 mx-auto lg:mx-0">
+                {t("downloadBtn")}
+                <FaAngleRight className="md:group-hover:translate-x-2 transition-all duration-200" />
+              </button>
+            </Link>
           </div>
           <div className="group w-full lg:w-1/2 xl:w-[684px] hover:bg-[#4382E3] bg-[#F6F9FC] p-6 rounded-xl hover:cursor-pointer flex items-center">
             <p className="group-hover:text-white font-vk group-hover:cursor-pointer text-base sm:text-lg md:text-xl lg:text-[22px] font-medium leading-relaxed w-full">

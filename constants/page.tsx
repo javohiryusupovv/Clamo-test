@@ -2,7 +2,6 @@ import {
   ServiceCardProps,
   TeamMember,
   MedicalLegalProps,
-  Partner,
   FAQItem,
   DoctorImg,
   enterThePortal,
@@ -197,62 +196,9 @@ export const getCardComment = (t:TFunction): CardComment[] => [
 export const getOpinion = (t:TFunction): OpinionCard[] => [
   {
     id: 1,
-    icons: "/Imgs/sharh-logo.png",
+    icons: "/Imgs/sharh-logo.svg",
     subtitle: t("comments.thought"),
     description: t("comments.your_opinion"),
-  },
-];
-
-export const getPartners: Partner[] = [
-  {
-    id: 1,
-    image: "/logo/mytaxi.svg",
-    title: "MyTaxi",
-  },
-  {
-    id: 2,
-    image: "/logo/sharhlogo.png",
-    title: "Sharh.uz",
-  },
-  {
-    id: 3,
-    image: "/logo/uzsuvozi.svg",
-    title: "Suv Ta'minoti",
-  },
-  {
-    id: 4,
-    image: "/logo/yoshlar.svg",
-    title: "Yoshlar Ishlar Agentligi",
-  },
-  {
-    id: 5,
-    image: "/logo/yuridik.png",
-    title: "Yuridik",
-  },
-  {
-    id: 6,
-    image: "/logo/mytaxi.svg",
-    title: "MyTaxi",
-  },
-  {
-    id: 7,
-    image: "/logo/sharhlogo.png",
-    title: "Sharh.uz",
-  },
-  {
-    id: 8,
-    image: "/logo/uzsuvozi.svg",
-    title: "Suv Ta'minoti",
-  },
-  {
-    id: 9,
-    image: "/logo/yoshlar.svg",
-    title: "Yoshlar Ishlar Agentligi",
-  },
-  {
-    id: 10,
-    image: "/logo/yuridik.png",
-    title: "Yuridik",
   },
 ];
 
@@ -300,12 +246,12 @@ export const getfaqData: FAQItem[] = [
 
 export const getHamkorlar=(t: TFunction) => [
   {
-    icon: "/icons/1inter.png",
+    icon: "/icons/1inter.svg",
     title: t("Hamkorlar.akredatsiyalash.title"),
     desc: t("Hamkorlar.akredatsiyalash.description"),
   },
   {
-    icon: "/icons/litsenziyaicons.png",
+    icon: "/icons/litsenziyaicons.svg",
     title:t("Hamkorlar.litsensiyalash.title"),
     desc:t("Hamkorlar.litsensiyalash.description"),
   },

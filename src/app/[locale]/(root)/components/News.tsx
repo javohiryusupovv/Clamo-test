@@ -4,9 +4,9 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
-import Down from "@/assets/icons/whiteDown.png";
 import { NewsTypes } from "../../../../../app.types";
 import { getLocalizedValue, pickStringProps } from "@/lib/getLocalization";
+import { FaAngleRight } from "react-icons/fa6";
 
 export default function NewsPage({ news }: { news: NewsTypes[] }) {
   const t = useTranslations("HomePage");
@@ -134,11 +134,7 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
         <Link href={`/${locale}/news`}>
           <button className="group font-vk w-48 h-[35px] sm:w-[250px] sm:h-[40px] flex items-center justify-center gap-3 bg-[#23B3FC] hover:bg-[#23B3FC]/[80%] rounded-lg text-xs sm:text-sm md:text-base font-medium text-white">
             {t("learn_more_button")}
-            <Image
-              src={Down}
-              alt="down strelka"
-              className="sm:group-hover:translate-x-2 transition-all duration-200"
-            />
+            <FaAngleRight className="sm:group-hover:translate-x-2 transition-all duration-200" />
           </button>
         </Link>
       </div>
