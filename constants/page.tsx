@@ -12,6 +12,7 @@ import {
   PlatformsServiceProps,
   OpinionCard,
   CardComment,
+  StepType,
 } from "../app.types";
 
 type TFunction = (key: string) => string;
@@ -315,29 +316,56 @@ export const getHamkorlar=(t: TFunction) => [
   },
 ];
 
-export const getSteps = [
+export const getSteps: StepType[] = [
   {
-    icon: "/Images/img1.png",
+    icon: "/Images/arizaicon.svg",
     title: "Ariza topshirish",
+    title_uz: "Ariza topshirish",
+    title_en: "Submit application",
+    title_ru: "Подача заявления",
     description:
       "Markazning rasmiy platformasi orqali litsenziya olish uchun murojaat qilish",
+    description_uz: "Markazning rasmiy platformasi orqali litsenziya olish uchun murojaat qilish",
+    description_en: "Apply for a license through the official platform of the center",
+    description_ru: "Подать заявление на получение лицензии через официальную платформу центра",
   },
   {
-    icon: "/Images/img2.png",
+    icon: "/Images/checkicons.svg",
     title: "Hujjatlarni tekshirish",
+    title_uz: "Hujjatlarni tekshirish",
+    title_en: "Document verification",
+    title_ru: "Проверка документов",
     description:
       "Muassasaning sanitariya, texnik va huquqiy talablariga muvofiqligini tekshirish",
+    description_uz: "Muassasaning sanitariya, texnik va huquqiy talablariga muvofiqligini tekshirish",
+    description_en: "Check compliance with the sanitary, technical and legal requirements of the institution",
+    description_ru: "Проверка соответствия санитарным, техническим и правовым требованиям учреждения",
+
   },
   {
-    icon: "/Images/img3.png",
+    icon: "/Images/expert.svg",
     title: "Ekspert baholovi",
+    title_uz: "Ekspert baholovi",
+    title_en: "Expert evaluation",
+    title_ru: "Экспертная оценка",
     description: "Mutaxassislar tomonidan tayyorgarlik darajasini baholash",
+    description_uz: "Mutaxassislar tomonidan tayyorgarlik darajasini baholash",
+    description_en: "Assessment of the level of preparation by specialists",
+    description_ru: "Оценка уровня подготовки специалистами",
+
   },
   {
-    icon: "/Images/img4.png",
+    icon: "/Images/flagicons.svg",
     title: "Litsenziya qarori",
+    title_uz: "Litsenziya qarori",
+    title_en: "License decision",
+    title_ru: "Решение о лицензии",
     description:
       "Talablar bajarilganda muassasalarga rasmiy litsenziya beriladi",
+    description_uz: "Talablar bajarilganda muassasalarga rasmiy litsenziya beriladi",
+    description_en: "Official licenses are issued to institutions when requirements are met",
+    description_ru: "Официальные лицензии выдаются учреждениям при выполнении требований",
+
   },
 ];
 

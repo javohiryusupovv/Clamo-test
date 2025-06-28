@@ -66,14 +66,15 @@ export default function AccredationHead() {
         </div>
 
         {/* Right Image — faqat lg (≥1024px) da ko‘rinadi */}
-        <div className="hidden xl:flex w-full justify-end">
+        <div className="hidden relative top-0 left-0 xl:flex w-full justify-end">
           <Image
-            src="/Images/Flag.png"
+            src="/Images/allflags.svg"
             alt="bayroq"
-            width={480}
-            height={800}
-            className="object-contain w-full max-w-[580px]"
+            width={980}
+            height={950}
+            className="object-cover w-full max-w-[1080px]"
           />
+          <div className="absolute bottom-5 w-full h-[200px] bg-gradient-to-t from-white via-white/80 to-transparent"></div>
         </div>
 
         <div className="hidden lg:flex lg:pt-20 xl:hidden w-full justify-end">

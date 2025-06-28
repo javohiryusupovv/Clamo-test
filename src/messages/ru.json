@@ -9,6 +9,15 @@
     "consulting": "Консалтинг",
     "regulatorydocuments": "Нормативные документы"
   },
+  "ReyesterCard": {
+    "view_license": "Посмотреть лицензию",
+    "accreditation_number": "Номер аккредитации",
+    "shares": "Отзывы",
+    "registration_date": "Дата аккредитации",
+    "website": "Веб-сайт",
+    "email": "Электронная почта",
+    "phone": "Номер телефона"
+  },
   "ZodForm": {
     "name_subtitle": "Имя должно содержать не менее 3 символов",
     "name_invalid": "Имя и фамилия могут содержать только буквы и некоторые символы (' - )",
@@ -86,6 +95,7 @@
     "clinics_titile": "Реестр клиник",
     "all_section": "Все",
     "search_placeholder": "Поиск клиник",
+    "not_found": "Данные не найдены",
     "document": {
       "application_title": "Подача заявки",
       "application_description": "Подайте заявку на получение лицензии через официальную платформу Центра",

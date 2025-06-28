@@ -5,6 +5,7 @@ import { getBgImg, getLicense } from "../../../../../../constants/page";
 import { useTranslations } from "next-intl";
 import { FaChevronRight } from "react-icons/fa";
 import Down from "@/assets/icons/whiteDown.png";
+import { ChevronRight } from 'lucide-react';
 
 export default function LicenseHero() {
   const t = useTranslations("LicensePage");
@@ -28,15 +29,15 @@ export default function LicenseHero() {
 
         <div className="container mx-auto px-4">
           <div className="w-full my-20 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10 pt-12 md:h-[400px] md:pt-0">
-            <div className="flex-1 space-y-6 text-center md:text-left">
-              <h1 className="rounded-md font-inter bg-[#23B3FC] text-white px-3 py-2 text-sm font-medium w-max mx-auto md:mx-0">
+            <div className="flex-1 space-y-5 text-center md:text-left">
+              <h1 className="rounded-md font-inter font-medium leading-[100%] uppercase bg-[#23B3FC] text-white px-3 py-2 text-sm  w-max mx-auto md:mx-0">
                 {t("license_title")}
               </h1>
 
-              <div className="space-y-6 md:w-[45%] mx-auto md:mx-0">
-                <h1 className="text-[28px] font-inter sm:text-[30px] md:text-[32px] font-semibold text-[#1B1B1B]">
-                  <span className="text-[#23B3FC]">{firstTitle}</span>{" "}
-                  {secondTitle} {thirtTitle}
+              <div className="space-y-5 md:w-[45%] mx-auto md:mx-0">
+                <h1 className="text-[28px] font-inter leading-[110%] sm:text-[30px] md:text-[32px] font-medium text-[#1B1B1B]">
+                  <span className="text-[#23B3FC] uppercase">{firstTitle}</span>{" "}
+                  {secondTitle} {thirtTitle}{" "}
                   {fourTitle} {fiveTitle} {sexTitle} {sevenTitle}
                 </h1>
                 <p className="text-[#012548CC] font-vk leading-[140%] text-[18px] sm:text-[20px] font-medium">
@@ -86,46 +87,46 @@ export default function LicenseHero() {
       {/* Steps section */}
       <div className="container mx-auto px-4 my-[30px]">
         <section className="bg-gradient-to-b py-[48px] from-[#39a9f2] to-[#0653C9] text-white p-6 rounded-3xl max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 items-center gap-6">
+          <div className="grid lg:grid-cols-[45%_55%] items-start gap-5 pl-5 pr-10">
+            {/* Chap blok */}
             <div className="flex flex-col gap-4">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4 sm:w-[80%] font-vk">
+              <h2 className="text-3xl md:text-5xl leading-[100%] font-bold mb-4 sm:w-[80%] font-vk">
                 {t("get_license")}
               </h2>
 
-              <p className="text-base md:text-[20px] leading-[150%] mb-6 sm:w-[72%] font-vk">
+              <p className="text-base md:text-[20px] leading-[150%] mb-6 sm:w-[72%] font-vk text-[#FFFFFF] opacity-60">
                 {t("online_start")}
               </p>
 
-              <button className="group flex font-inter justify-center items-center gap-[4px] border-2 w-full sm:w-[273px] px-[24px] py-[10px] bg-[#23B3FC1F] text-[#FFFFFFFF] rounded-lg hover:bg-[#FFFFFFFF] hover:text-[#23B3FC] transition">
-                <span className="text-[14px] font-medium">
+              <button className="group flex font-inter justify-center items-center gap-[4px] w-full sm:w-[273px] px-[24px] py-[10px] bg-[#23B3FC] text-[#FFFFFFFF] rounded-lg hover:bg-[#46c1ff] transition">
+                <span className="group flex items-center gap-1 text-[14px] font-medium leading-[130%]">
                   {t("get_license_button")}
+                  <ChevronRight className=" transition-all duration-100 group-hover:translate-x-1" />
                 </span>
               </button>
             </div>
 
-            {/* Ariza topshirirsh */}
+            {/* O‘ng blok - bosqichlar */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {steps(t).map((step) => (
                 <div
                   key={step.id}
-                  className="bg-white bg-opacity-10 rounded-2xl p-4 flex flex-col items-start"
+                  className="bg-white bg-opacity-10 rounded-[32px] p-4 flex flex-col items-start"
                 >
-                  <div className="bg-white bg-opacity-20 p-[16px] rounded-[18px] mb-3">
-                    <Image
-                      src={step.icon}
-                      alt="step.title"
-                      width={33}
-                      height={33}
-                    />
+                  <div className="flex items-center justify-center bg-white bg-opacity-15 p-[16px] rounded-[18px] mb-3">
+                    <Image src={step.icon} alt={step.title} width={33} height={33} />
                   </div>
-                  <h3 className="font-bold text-[20px] mb-2 font-vk">
+                  <h3 className="font-bold leading-[130%] text-[20px] mb-2 font-vk">
                     {step.title}
                   </h3>
-                  <p className="text-sm font-vk">{step.description}</p>
+                  <p className="text-sm font-normal leading-[130%] font-vk">
+                    {step.description}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
+
         </section>
       </div>
     </>
