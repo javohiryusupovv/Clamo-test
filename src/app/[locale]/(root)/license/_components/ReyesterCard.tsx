@@ -14,9 +14,9 @@ interface ReyesterCardProps {
   registrationDate: string;
   reyesterType?: ReyesterType[];
   website: string;
-  shares: number;
   email: string;
   phone: string;
+  reviews: string
 }
 
 export default function ReyesterCard({
@@ -26,13 +26,15 @@ export default function ReyesterCard({
   registrationDate,
   reyesterType,
   website,
-  shares,
   email,
   phone,
+  reviews
 }: ReyesterCardProps) {
   const locale = useLocale();
   const t = useTranslations("ReyesterCard");
 
+  console.log(reviews);
+  
 
   const renderValue = (value: string | number | undefined) => {
     if (value === undefined || value === null || value === "" || value === 0) {
@@ -100,7 +102,7 @@ export default function ReyesterCard({
             {t("shares")}
           </p>
           <p className="text-[18px] font-semibold font-inter leading-[130%] text-[#3D445E]">
-            {renderValue(shares)}
+            {renderValue(reviews)}
           </p>
         </div>
 

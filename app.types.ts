@@ -252,10 +252,10 @@ export interface ReyesterItem {
   registration_date: string;
   reyester_type?: ReyesterType[]; // Reyester turi, optional
   website: string;
-  shares: number;
   email: string;
   phone: string;
   type: string; // Reyester turi
+  reviews: string
 }
 
 export interface StepType {

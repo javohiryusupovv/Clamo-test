@@ -37,18 +37,29 @@ export default function ReyesterClient({
   const locale = useLocale()
 
   const filtered = reyesters
-    .filter((r) =>
-      selectedType
-        ? r.reyester_type?.some((type) => type.slug === selectedType)
-        : true
-    )
-    .filter((r) =>
-      searchQuery
-        ? r.reyester_type?.some((type) =>
-          type.slug.toLowerCase().includes(searchQuery.toLowerCase())
-        )
-        : true
+  .filter((r) =>
+    selectedType
+      ? r.reyester_type?.some((type) => type.slug === selectedType)
+      : true
+  )
+  .filter((r) => {
+    if (!searchQuery) return true;
+
+    const localizedTitle = getLocalizedValue(
+      {
+        title: r.title || "",
+        title_uz: r.title_uz || "",
+        title_en: r.title_en || "",
+        title_ru: r.title_ru || "",
+      },
+      "title",
+      locale
     );
+
+    return localizedTitle.toLowerCase().includes(searchQuery.toLowerCase());
+  });
+    console.log(filtered);
+    
 
     
 
@@ -98,7 +109,7 @@ export default function ReyesterClient({
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={t("search_placeholder")}
-              className="w-full font-inter outline-none bg-transparent pl-10 pr-4 py-2 text-sm text-[#97A0A9]"
+              className="w-full font-inter outline-none bg-transparent pl-10 pr-4 py-2 text-sm text-[#5d6268]"
             />
           </div>
 
@@ -135,9 +146,9 @@ export default function ReyesterClient({
               registrationDate={item.registration_date}
               reyesterType={item.reyester_type}
               website={item.website}
-              shares={item.shares}
               email={item.email}
               phone={item.phone}
+              reviews={item.reviews}
             />
           )})
         ) : (
