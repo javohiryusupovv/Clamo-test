@@ -3,9 +3,9 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Flag from "../../../../assets/icons/uzbekistan-flag.svg";
-import rusFlag from "../../../../assets/icons/russia-flag.svg";
-import engFlag from "../../../../assets/icons/united-kingdom-flag.svg";
+import Flag from "../../../../../public/icons/flags/uzbekistan-flag.svg";
+import rusFlag from "../../../../../public/icons/flags/russia-flag.svg";
+import engFlag from "../../../../../public/icons/flags/united-kingdom-flag.svg";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { Language } from "@/types/type";

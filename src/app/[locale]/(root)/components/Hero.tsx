@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import Doctors from "@/assets/images/doctors.png";
-import Home from "@/assets/images/home.png";
-import File from "@/assets/images/file.png";
-import True from "@/assets/images/true.png";
+import Home from "../../../../../public/icons/statistic/bino.svg";
+import File from "../../../../../public/icons/statistic/document.svg";
+import True from "../../../../../public/icons/statistic/zur.svg";
 import ImageClamo from "@/assets/images/ImageClamo.png";
 import bgCircle from "../../../../../public/herobg.png";
 import LearnMore from "./LearnMoreButton";

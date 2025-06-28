@@ -82,14 +82,14 @@ export default function LicenseHero() {
       {/* Steps section */}
       <div className="container mx-auto px-4 my-[30px]">
         <section className="bg-gradient-to-b py-[48px] from-[#39a9f2] to-[#0653C9] text-white p-6 rounded-3xl max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-[45%_55%] items-start gap-5 pl-5 pr-10">
+          <div className="grid lg:grid-cols-[45%_55%] items-start gap-5 md:pl-5 md:pr-10">
             {/* Chap blok */}
             <div className="flex flex-col gap-4">
-              <h2 className="text-3xl md:text-5xl leading-[100%] font-bold mb-4 sm:w-[80%] font-vk">
+              <h2 className="text-3xl md:text-5xl leading-[100%] font-bold lg:mb-4 sm:w-[80%] font-vk">
                 {t("get_license")}
               </h2>
 
-              <p className="text-base md:text-[20px] leading-[150%] mb-6 sm:w-[72%] font-vk text-[#FFFFFF] opacity-60">
+              <p className="text-base md:text-[20px] leading-[150%] lg:mb-6 sm:w-[72%] font-vk text-[#FFFFFF] opacity-60">
                 {t("online_start")}
               </p>
 
