@@ -1,5 +1,4 @@
 "use client";
-
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -17,13 +16,13 @@ export default function ServicesSection({
   const slugs = ["accreditation", "license", "consulting", ""];
 
   return (
-    <section className="py-16 bg-[#F6F9FC]">
+    <section className="md:py-16 py-8 bg-[#F6F9FC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-vk font-bold text-[#3D445E] mb-2 text-start">
+        <div className="md:mb-12 mb-6 flex flex-col gap-[4px]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl leading-[100%] font-vk font-bold text-[#3D445E] text-start">
             {t("service")}
           </h2>
-          <p className="text-sm sm:text-base md:text-[20px] font-vk text-[#012548CC] md:max-w-full max-w-2xl text-start">
+          <p className="text-sm sm:text-base md:text-[20px] font-vk text-[#012548CC] leading-[140%] md:max-w-full max-w-2xl text-start">
             {t("service_des")}
           </p>
         </div>
@@ -43,6 +42,7 @@ export default function ServicesSection({
               locale
             );
             const slug = slugs[index];
+            
             return (
               <div
                 key={index}
@@ -55,11 +55,12 @@ export default function ServicesSection({
                     alt={service.title}
                     width={48}
                     height={48}
+                    className="mb-3"
                   />
-                  <h3 className="text-[20px] font-bold font-vk text-[#3D445E] mb-3">
+                  <h3 className="md:text-[20px] text-base leading-[140%] font-bold font-vk text-[#3D445E] mb-3">
                     {localizedTitle}
                   </h3>
-                  <p className="text-sm text-[#3D445E] font-vk leading-relaxed">
+                  <p className="text-sm text-[#3D445E] font-normal font-vk leading-[140%]">
                     {localizedDescription}
                   </p>
                 </div>
