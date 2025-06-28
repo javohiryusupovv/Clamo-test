@@ -49,7 +49,7 @@
     "notDataTitle": "Yangiliklar topilmadi",
     "loading_text": "Yuklanmoqda",
     "more_btn": "Ko'proq",
-    
+
     "medical": {
       "subtitle": "Sizning sog'lig'ingiz biz uchun",
       "badge": "Muhim!",
@@ -130,7 +130,7 @@
     "service": "Markaz ko'rsatadigan xizmatlar",
     "service_des": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.",
     "team_title": "Markaz jamoasi",
-    "team_subtitle": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda...",
+    "team_subtitle": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.",
     "services": {
       "license": {
         "icon": "/Imgs/License.svg",

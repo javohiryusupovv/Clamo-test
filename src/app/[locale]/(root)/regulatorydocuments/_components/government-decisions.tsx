@@ -7,15 +7,15 @@ const GovernmentDecisions: React.FC = () => {
   const t = useTranslations("RegulatorydocumentsPage");
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 font-sans bg-[white]">
-      <div className="mb-8 mt-12 lg:mt-20">
-        <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-[#3D445E] font-vk mb-1 text-center sm:text-start">
+      <div className="md:mb-8 mb-4 mt-12 lg:mt-20 flex flex-col gap-[4px]">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#3D445E] leading-[100%] font-vk text-center sm:text-start">
           {t("govDecisionsTitle")}
         </h1>
-        <p className="text-base font-vk sm:text-lg lg:text-[20px] font-medium text-[#012548CC] max-w-full md:max-w-3xl lg:max-w-4xl text-center sm:text-start mx-auto sm:mx-0">
+        <p className="text-sm sm:text-base font-vk md:text-[20px] font-medium text-[#012548CC] max-w-full text-center sm:text-start sm:mx-0">
           {t("govDecisionsDesc")}
         </p>
       </div>
-      <div className="text-[#3D445E] pb-8">
+      <div className="text-[#3D445E] md:pb-8">
         <div className="flex flex-col lg:flex-row gap-6 mb-6">
           <div className="w-full lg:w-1/2 xl:w-[480px] bg-[#F6F9FC] p-6 rounded-xl flex flex-col justify-between">
             <div>

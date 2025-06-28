@@ -14,14 +14,14 @@ export default function NormativeDocuments() {
       <div className="min-h-[40vh] lg:min-h-[70vh] md:min-h-[70vh] container">
         <section className="internationalparent flex items-center justify-between relative max-h-[50vh] lg:max-h-[50vh]">
           {/* Text qismi */}
-          <div className="z-9999999 max-w-full md:max-w-xl space-y-4 mt-10 md:mt-[150px] px-4 md:px-0">
-            <span className="text-sm font-medium bg-[#23B3FC] text-white py-1 px-3 rounded-[6px] font-inter">
+          <div className="z-9999999 max-w-full md:max-w-xl space-y-4 mt-10 md:mt-[150px]">
+            <span className="text-sm font-medium bg-[#23B3FC] text-white py-1 px-3 rounded-[6px] leading-[100%] font-inter mb-[16px]">
               {t("normativeSectionTag")}
             </span>
             <h2 className="w-full md:w-[500px] font-inter h-auto md:h-[78px] font-[600] text-[24px] md:text-[32px] leading-[120%] md:leading-[100%] text-[#1B1B1B]">
               {t("normativeSectionTitle")}
             </h2>
-            <p className="text-[#012548CC] font-vk text-[16px] md:text-[20px] leading-[140%]">
+            <p className="text-[#012548CC] font-vk text-[16px] md:text-[20px] leading-[100%]">
               {t("normativeSectionDesc")}
             </p>
             <div className="flex flex-col md:flex-row gap-4 md:gap-6">
@@ -47,7 +47,7 @@ export default function NormativeDocuments() {
           <div className="absolute right-0 -top-24 -z-10 hidden xl:block">
             <div className="relative">
               <Image
-                src={Folder} 
+                src={Folder}
                 alt="Normativ hujjatlar"
                 width={2000}
                 height={1381}

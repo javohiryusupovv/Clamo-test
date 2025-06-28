@@ -32,7 +32,7 @@ export default async function Main() {
       <MainService />
       <Izohlar />
       <NewsPage news={datas} />
-      <div className="bg-[#f6f9fc] py-[60px]">
+      <div className="bg-[#f6f9fc] md:py-[60px] py-[25px]">
         <InstallPage />
         <Partnyor partners={part} />
       </div>

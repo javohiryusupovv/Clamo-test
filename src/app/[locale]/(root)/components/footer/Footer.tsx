@@ -20,7 +20,7 @@ export default function FooterLayout() {
   ];
 
   return (
-    <div className="pt-20 bg-[#F6F9FC] p-4">
+    <div className="md:pt-20 pt-6 bg-[#F6F9FC] p-4">
       <Contact />
 
       <div className="relative w-full sm:h-[500px] h-[750px] bg-[#F6F9FC] overflow-hidden">

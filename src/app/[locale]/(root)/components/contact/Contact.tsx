@@ -89,10 +89,10 @@ export default function Contact() {
   };
 
   return (
-    <div className="pb-8">
-      <div className="container relative left-0 z-[40] max-lg:p-4 flex flex-col  md:flex-row items-center justify-between w-full bg-[#0653C9] rounded-[36px]">
+    <div className="md:pb-8">
+      <div className="container relative left-0 z-[40] max-lg:p-4 flex flex-col  md:flex-row items-center justify-between w-full bg-[#0653C9] lg:rounded-[36px] rounded-2xl">
         {/* Contact Info */}
-        <div className="w-full lg:w-[450px] pl-6 pr-6 py-10 lg:pl-14 lg:py-14">
+        <div className="w-full lg:w-[450px] md:pl-6 md:pr-6 py-10 lg:pl-14 lg:py-14">
           <h6 className="text-[24px] sm:text-[28px] lg:text-[32px] font-semibold text-white mb-2 font-vk">
             {t("contactTitle")}
           </h6>
@@ -150,7 +150,7 @@ export default function Contact() {
         </div>
 
         {/* Contact Form */}
-        <div className="py-6 px-4 sm:px-8  lg:mt-0 border border-gray-200 w-full sm:w-[500px] lg:absolute lg:right-16 h-auto sm:h-[576px] bg-white rounded-[36px]">
+        <div className="py-6 px-4 sm:px-8  lg:mt-0 border border-gray-200 w-full sm:w-[500px] lg:absolute lg:right-16 h-auto sm:h-[576px] bg-white lg:rounded-[36px] rounded-2xl">
           <article className="mb-[26px]">
             <h5 className="text-[24px] sm:text-[28px] font-vk lg:text-[32px] font-bold leading-[120%] text-[#3D445E] mb-3">
               {t("formTitle")}

@@ -102,7 +102,7 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
                   </button>
                 </Link>
                 <Link href={`${locale}/contacts`} className="lg:w-full w-1/2">
-                  <button className="group font-inter hover:bg-[#23B3FC] bg-[#23B3FC33] transition-all duration-200 w-full lg:w-[183px] h-[40px] flex items-center justify-center gap-[11.5px] rounded-lg text-sm font-medium text-[#23B3FC] hover:text-white leading-[130%]">
+                  <button className="group font-inter hover:bg-[#23B3FC]/[30%] bg-[#23B3FC]/[12%] transition-all duration-200 w-full lg:w-[183px] h-[40px] flex items-center justify-center gap-[11.5px] rounded-lg text-sm font-medium text-[#23B3FC] leading-[130%]">
                     {t("applying")}{" "}
                     <FaChevronRight className="group-hover:translate-x-1 transition-all duration-200" />
                   </button>
@@ -178,7 +178,11 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
                 </div>
                 <div className=" relative top-0 left-0 bg-gradient-to-br overflow-hidden from-blue-400 to-blue-600 p-6 rounded-2xl text-white flex flex-col md:col-span-2 shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <Image src={File} alt="HomeIcons" width={48} height={48} />
-                  <Image src={bgCircle} className=" absolute top-0 left-36 opacity-[0.7] max-ll:top-4" alt="BgCircle" />
+                  <Image
+                    src={bgCircle}
+                    className=" absolute top-0 left-36 opacity-[0.7] max-ll:top-4"
+                    alt="BgCircle"
+                  />
                   <div className="pt-10">
                     <h1 className="xl:text-[48px] lg:text-[39px] text-[36px] font-bold">
                       {animatedLicenses.toLocaleString("ru-RU")}+

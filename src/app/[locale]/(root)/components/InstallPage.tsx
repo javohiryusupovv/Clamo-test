@@ -27,7 +27,7 @@ export default function InstallPage() {
 
   return (
     <section className="w-full px-4">
-      <div className="container mx-auto bg-[#0653C9] flex flex-wrap lg:flex-nowrap justify-end items-center max-sm:items-start w-full min-h-[304px] rounded-[36px] max-sm:rounded-2xl p-4 lg:p-8 relative">
+      <div className="container mx-auto bg-[#0653C9] flex flex-wrap lg:flex-nowrap justify-end items-center max-sm:items-start w-full min-h-[304px] rounded-[36px] max-lg:rounded-2xl p-4 lg:p-8 relative">
         {/* Phone Image */}
         <div className="absolute bottom-0 left-[-40px] lg:left-[-60px] z-10 max-w-full sm:max-w-[200px] lg:max-w-none overflow-hidden">
           <Image
@@ -58,7 +58,7 @@ export default function InstallPage() {
                   <p className="text-xs text-white">Download on the</p>
                   <p className="text-base text-white font-medium">App Store</p>
                 </div>
-             
+
             </Link>
 
             {/* Google Play Button */}
