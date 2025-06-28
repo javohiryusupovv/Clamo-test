@@ -270,7 +270,7 @@ export default function Contact() {
                       className="transition-all duration-300 group-hover:rotate-[43deg]"
                       src="/icons/submiticons.svg"
                       alt="Send Icon"
-                      width={50} height={50}
+                      width={20} height={20}
                     />
                   </>
                 )}
