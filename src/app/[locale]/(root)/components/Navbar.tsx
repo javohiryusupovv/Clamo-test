@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Flag from "../../../../assets/icons/uzbekistan-flag.svg";
-import Phone from "../../../../assets/icons/phone.svg";
 import rusFlag from "../../../../assets/icons/russia-flag.svg";
 import engFlag from "../../../../assets/icons/united-kingdom-flag.svg";
 import { useLocale, useTranslations } from "next-intl";
@@ -311,7 +310,7 @@ export default function Navbar() {
                 )}
               </div>
               <Link href="tel:1369" className="flex items-center gap-[6px]">
-                <Image src={Phone} alt="Phone icon" width={17} height={17} />
+                <Image src="/icons/phone.svg" alt="Phone icon" width={17} height={17} />
                 <p className="text-base font-bold text-[#3D445E]">1369</p>
               </Link>
             </ul>
@@ -462,7 +461,7 @@ export default function Navbar() {
                     </div>
                     <article className="flex items-center gap-[4px] translate-x-2">
                       <Image
-                        src={Phone}
+                        src="/icons/phone.svg"
                         alt="Phone icon"
                         width={14}
                         height={14}

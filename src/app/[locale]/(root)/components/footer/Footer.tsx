@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import cirlceBG from "../../../../../assets/images/twoCircle.png";
-import TibbiyotVazirlik from "../../../../../assets/logo/TibbiyotVazirlik.svg";
 import "./Footer.css";
 import Link from "next/link";
 import Contact from "../contact/Contact";
@@ -37,7 +36,7 @@ export default function FooterLayout() {
                     className="w-44"
                   />
                   <Image
-                    src={TibbiyotVazirlik}
+                    src="/logo/TibbiyotVazirlik.svg"
                     alt="Tibbiyot Vazirligi logo"
                     width={100}
                     height={50}
@@ -167,11 +166,11 @@ export default function FooterLayout() {
         {/* Footer bottom */}
         <div className="absolute z-[12] bottom-0 w-full py-5">
           <div className="container flex justify-between items-center">
-            <p className="text-[#3D445E]/[60%] text-[7px] sm:text-[14px] font-vk">
+            <p className="text-[#3D445E]/[60%] text-[11px] sm:text-[14px] font-vk">
               &copy; {new Date().getFullYear()} – “CLAMO” LLC
             </p>
             <div className="group flex items-center gap-2">
-              <span className="text-[#3D445E] text-[7px] sm:text-[15px]">
+              <span className="text-[#3D445E] text-[12px] font-semibold sm:text-[15px]">
                 {t("developed")}
               </span>
               <Link
@@ -182,11 +181,11 @@ export default function FooterLayout() {
                 <Image
                   src="/logo/devLogo.svg"
                   alt="IQ Logo"
-                  className=""
+                  className="max-ms:w-[30px]"
                   width={35}
                   height={35}
                 />
-                <span className=" translate-x-5 opacity-0 group-hover:translate-x-0 group-hover:opacity-[1] transition-all duration-300 text-[18px] font-bold">
+                <span className="ms:translate-x-5 max-ms:text-[16px] ms:opacity-0 ms:group-hover:translate-x-0 ms:group-hover:opacity-[1] transition-all duration-300 text-[18px] font-bold">
                   Iqtidor
                 </span>
               </Link>

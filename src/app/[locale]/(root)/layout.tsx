@@ -1,7 +1,7 @@
 import { Suspense } from "react"
 import Navbar from "./components/Navbar"
-import FooterLayout from "./components/footer/Footer"
 import Loading from "@/component/Loading"
+import FooterLayout from "./components/footer/Footer"
 
 
 

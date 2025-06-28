@@ -27,14 +27,14 @@ export default function Partnyor({partners}: {partners: Partner[]}) {
               <Link
                 href="#"
                 key={img.id}
-                className="mx-2 sm:mx-[18px] bg-[#eaecef] border-white border-[3px] rounded-xl flex items-center justify-center h-[80px] sm:h-[110px] w-[160px] sm:w-[220px] p-6 sm:p-8"
+                className="mx-2 sm:mx-[18px] bg-white border-[#eaecef]/40 border-[3px] rounded-xl flex items-center justify-center h-[180px] sm:h-[110px] w-[160px] max-sm:h-[90px] sm:w-[220px] p-4"
               >
                 <Image
                   src={img.image}
                   alt={img.title}
-                  className="object-contain h-full w-auto"
-                  width={57}
-                  height={57}
+                  className="object-contain h-full w-full"
+                  width={77}
+                  height={77}
                 />
               </Link>
             ))}
@@ -44,14 +44,14 @@ export default function Partnyor({partners}: {partners: Partner[]}) {
               <Link
                 href="#"
                 key={img.id}
-                className="mx-2 sm:mx-[18px] bg-[#eaecef] border-white border-[3px] rounded-xl flex items-center justify-center h-[80px] sm:h-[110px] w-[160px] sm:w-[220px] p-6 sm:p-8"
+                className="mx-2 sm:mx-[18px] bg-white border-[#eaecef]/40 border-[3px] rounded-xl flex items-center justify-center h-[180px] sm:h-[110px] w-[160px] max-sm:h-[90px] sm:w-[220px] p-4"
               >
                 <Image
                   src={img.image}
                   alt={img.title}
-                  className="h-full w-full object-contain"
-                  width={107}
-                  height={57}
+                  className="object-contain h-full w-full"
+                  width={77}
+                  height={77}
                 />
               </Link>
             ))}

@@ -1,9 +1,4 @@
 "use client";
-import location from "../../../../../assets/icons/location.svg";
-import phone from "../../../../../assets/icons/phone.svg";
-import email from "../../../../../assets/icons/email.svg";
-import submiticons from "../../../../../assets/icons/submiticons.svg";
-import uzbflag from "../../../../../assets/icons/Flags.svg";
 import { useTranslations } from "next-intl";
 import { LoaderCircle } from 'lucide-react';
 
@@ -103,7 +98,7 @@ export default function Contact() {
             <Link href={"https://yandex.uz/maps/10335/tashkent/?ll=69.303946%2C41.318330&mode=whatshere&whatshere%5Bpoint%5D=69.303883%2C41.318303&whatshere%5Bzoom%5D=17&z=16"} target="_blank">
               <div className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
                 <article className="bg-white p-3 inline-flex justify-center items-center rounded-lg">
-                  <Image className="w-5 h-4" src={location} alt="Location" />
+                  <Image className="w-5 h-4" src="/icons/location.svg" alt="Location" width={50} height={50} />
                 </article>
                 <article>
                   <span className="text-[13px] sm:text-[14px] font-normal text-opacity-[60%] text-white">
@@ -119,7 +114,7 @@ export default function Contact() {
             {/* Phone */}
             <a href="tel:+998712007007" target="_blank" className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
               <article className="bg-white p-3 inline-flex items-center justify-center rounded-lg">
-                <Image className="w-5 h-5" src={phone} alt="Phone" />
+                <Image className="w-5 h-5" src="/icons/phone.svg" alt="Phone" width={50} height={50} />
               </article>
               <article>
                 <span className="text-[13px] sm:text-[14px] font-normal font-vk text-opacity-[60%] text-white">
@@ -133,7 +128,7 @@ export default function Contact() {
             {/* Email */}
             <a href="mailto:clamosocial@gmail.com" target="_blank" rel="noopener noreferrer" className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
               <article className="bg-white p-3 inline-flex rounded-lg">
-                <Image className="w-5 h-4" src={email} alt="Email" />
+                <Image className="w-5 h-4" src="/icons/email.svg" alt="Email" width={50} height={50} />
               </article>
               <article>
                 <span className="text-[13px] sm:text-[14px] font-normal font-vk text-opacity-[60%] text-white">
@@ -212,9 +207,10 @@ export default function Contact() {
               <div className="w-full bg-[#F7F7F8] flex gap-2 px-3 h-10 rounded-lg border border-transparent focus-within:border-[#1a60cd]">
                 <article className="flex items-center gap-1">
                   <Image
-                    src={uzbflag}
+                    src="/icons/Flags.svg"
                     className="w-6 sm:w-9"
                     alt="Flag Icons"
+                    width={50} height={50}
                   />
                   <span className="text-[16px]">+998</span>
                 </article>
@@ -272,8 +268,9 @@ export default function Contact() {
                     {t("send")}
                     <Image
                       className="transition-all duration-300 group-hover:rotate-[43deg]"
-                      src={submiticons}
+                      src="/icons/submiticons.svg"
                       alt="Send Icon"
+                      width={50} height={50}
                     />
                   </>
                 )}

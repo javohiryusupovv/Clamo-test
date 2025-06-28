@@ -7,7 +7,6 @@ import { useEffect } from "react";
 import Image from "next/image";
 import Phone from "../../../../../public/Imgs/iPhone15Pro.png";
 import QR from "@/assets/icons/QR.png";
-import Huawie from "../../../../assets/icons/huawei-icon.svg";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import bgCircle from "../../../../../public/herobg.png";
@@ -86,7 +85,7 @@ export default function InstallPage() {
               className="flex hover:bg-white/30 transition-all duration-200 items-center px-4 py-2 bg-white/20 rounded-lg gap-2"
             >
               <Image
-                src={Huawie}
+                src="/logo/huawei-icon.svg"
                 alt="Huawei logo"
                 className="w-8 h-8 object-contain"
                 width={32}
