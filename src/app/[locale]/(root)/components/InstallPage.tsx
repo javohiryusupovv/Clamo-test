@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import Phone from "../../../../../public/Imgs/iPhone15Pro.png";
 import QR from "@/assets/icons/QR.png";
-import Huawie from "@/assets/icons/huawie.png";
+import Huawie from "../../../../assets/icons/huawei-icon.svg";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import bgCircle from "../../../../../public/herobg.png";
