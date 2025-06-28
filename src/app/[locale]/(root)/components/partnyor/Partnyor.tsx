@@ -20,7 +20,7 @@ export default function Partnyor({partners}: {partners: Partner[]}) {
         </p>
       </article>
 
-      <div className="container w-full space-y-6 overflow-visible">
+      <div className=" max-w-[1600px] m-auto w-full space-y-6 overflow-visible">
         <div className="">
           <Marquee direction="right" speed={30} gradient={false} pauseOnHover className="mb-[18px]">
             {partners.map((img) => (
