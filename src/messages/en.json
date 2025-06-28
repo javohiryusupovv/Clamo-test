@@ -9,11 +9,22 @@
     "consulting": "Consulting",
     "regulatorydocuments": "Regulatory Documents"
   },
+  "ReyesterCard": {
+    "view_license": "Litsenziyani ko‘rish",
+    "accreditation_number": "Akkreditatsiya raqami",
+    "shares": "Sharhlar",
+    "registration_date": "Akkreditatsiya berilgan sana",
+    "website": "Vebsayt",
+    "email": "Email manzil",
+    "phone": "Telefon raqam"
+  },
   "ZodForm": {
     "name_subtitle": "The name must be at least 3 characters long",
     "name_invalid": "The name can only contain letters and certain characters (' - )",
     "organization_min": "The organization name must be at least 2 characters long",
-    "phone_invalid": "The phone number must contain exactly 9 digits"
+    "phone_invalid": "The phone number must contain exactly 9 digits",
+    "notifsending": "Sending",
+    "succesNotif": "Data sent successfully"
   },
   "HomePage": {
     "health_message": "Medical organizations under the Ministry of Health",
@@ -49,7 +60,6 @@
     "notDataTitle": "No data available",
     "loading_text": "Loading",
     "more_btn": "More",
-
     "medical": {
       "subtitle": "Your health matters to us",
       "badge": "Important!",
@@ -84,6 +94,7 @@
     "clinics_titile": "Clinics Registry",
     "all_section": "All",
     "search_placeholder": "Search clinics",
+    "not_found": "No data found",
     "document": {
       "application_title": "Application Submission",
       "application_description": "Apply for a license through the official platform of the Center",
@@ -146,7 +157,6 @@
       "malaka": {
         "icon": "/Imgs/Malaka.svg",
         "title": "Professional Development",
-
         "description": "We organize professional development courses for doctors, medical staff, and others",
         "link": "#"
       },
@@ -216,7 +226,6 @@
   },
   "ContactPage": {
     "contactTitle": "Contact Us",
-
     "contactDescription": "Get in touch with us through one of the methods below",
     "addressLabel": "Visit our office",
     "phoneLabel": "Phone number",
@@ -267,7 +276,6 @@
     "downloadBtn": "Download Information",
     "normativeSectionTag": "NORMATIVE DOCUMENTS",
     "normativeSectionTitle": "Key regulatory documents in healthcare",
-
     "normativeSectionDesc": "Quickly and reliably obtain the necessary license for your organization. Clamo is your trusted partner in legal compliance.",
     "servicesBtn": "Our Services",
     "contactBtn": "Contact Us"

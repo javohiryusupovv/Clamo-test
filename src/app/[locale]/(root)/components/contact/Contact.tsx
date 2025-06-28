@@ -1,8 +1,8 @@
 "use client";
-import location from "../../../../../assets/icons/location.png";
-import phone from "../../../../../assets/icons/phone.png";
-import email from "../../../../../assets/icons/mail.png";
-import submiticons from "../../../../../assets/icons/submiticons.png";
+import location from "../../../../../assets/icons/location.svg";
+import phone from "../../../../../assets/icons/phone.svg";
+import email from "../../../../../assets/icons/email.svg";
+import submiticons from "../../../../../assets/icons/submiticons.svg";
 import uzbflag from "../../../../../../public/flag/flagicons.png";
 import { useTranslations } from "next-intl";
 import { LoaderCircle } from 'lucide-react';
@@ -74,18 +74,16 @@ export default function Contact() {
 
     toast
       .promise(submitPromise, {
-        pending: "Jo'natilmoqda ...",
-        success: "Ma'lumotlar muvaffaqiyatli jo'natildi",
+        pending: zod("notifsending"),
+        success: zod("succesNotif"),
       })
       .then(() => {
         reset();
+        setIsLoading(false);
       })
       .catch((error) => {
         console.error("Submission error:", error);
       })
-      .finally(() => {
-        setIsLoading(false)
-      });
   };
 
   return (
@@ -218,7 +216,7 @@ export default function Contact() {
                     className="w-6 sm:w-9"
                     alt="Flag Icons"
                   />
-                  <span className="text-[#3D445E] text-[14px]">+998</span>
+                  <span className="text-[16px]">+998</span>
                 </article>
                 <input
                   id="phoneNumber"
@@ -246,7 +244,7 @@ export default function Contact() {
                       e.currentTarget.setCustomValidity("");
                     }
                   }}
-                  className="w-full outline-none bg-[#F7F7F8]"
+                  className="w-full outline-none bg-[#F7F7F8] text-[16px]"
                   placeholder="99 123 45 67"
                 />
               </div>

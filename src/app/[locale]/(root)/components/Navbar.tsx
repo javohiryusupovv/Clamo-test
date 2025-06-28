@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Down from "../../../../assets/icons/down.png";
 import Flag from "../../../../assets/icons/uzbekistan.png";
-import Phone from "../../../../assets/icons/phone.png";
+import Phone from "../../../../assets/icons/phone.svg";
 import rusFlag from "../../../../../public/icons/russia.png";
 import engFlag from "../../../../../public/icons/united-kingdom.png";
 import { useLocale, useTranslations } from "next-intl";

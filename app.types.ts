@@ -241,7 +241,13 @@ export interface Department {
 export interface ReyesterItem {
   id: number;
   title_uz: string;
+  title: string;
+  title_en: string;
+  title_ru: string;
   location_uz: string;
+  location: string;
+  location_en: string;
+  location_ru: string;
   accreditation_number: string;
   registration_date: string;
   reyester_type?: ReyesterType[]; // Reyester turi, optional
@@ -250,4 +256,16 @@ export interface ReyesterItem {
   email: string;
   phone: string;
   type: string; // Reyester turi
+}
+
+export interface StepType {
+  icon: string;
+  title: string;
+  title_uz: string;
+  title_en: string;
+  title_ru: string;
+  description: string;
+  description_uz: string;
+  description_en: string;
+  description_ru: string;
 }

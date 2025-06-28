@@ -6,13 +6,13 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Partner } from "../../../../../../app.types";
 
-export default function Partnyor({ partners }: { partners: Partner[] }) {
+export default function Partnyor({partners}: {partners: Partner[]}) {
   const t = useTranslations("InternationalPage");
 
   return (
     <div className="md:py-16 pt-9 mb-9 bg-[#F6F9FC]">
-      <article className="container text-center md:mb-10 mb-4 px-4 sm:px-0 flex flex-col gap-[4px]">
-        <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold font-vk leading-[100%] text-[#3D445E]">
+      <article className="container text-center mb-10 px-4 sm:px-0">
+        <h3 className="text-2xl sm:text-4xl lg:text-5xl font-bold font-vk mb-2 text-[#3D445E]">
           {t("hamkorlar")}
         </h3>
         <p className="text-base sm:text-[20px] font-vk text-[#012548CC] font-medium">
@@ -20,15 +20,9 @@ export default function Partnyor({ partners }: { partners: Partner[] }) {
         </p>
       </article>
 
-      <div className="container w-full space-y-6 overflow-visible">
-        <div>
-          <Marquee
-            direction="right"
-            speed={30}
-            gradient={false}
-            pauseOnHover
-            className="mb-[18px]"
-          >
+      <div className=" max-w-[1600px] m-auto w-full space-y-6 overflow-visible">
+        <div className="">
+          <Marquee direction="right" speed={30} gradient={false} pauseOnHover className="mb-[18px]">
             {partners.map((img) => (
               <Link
                 href="#"

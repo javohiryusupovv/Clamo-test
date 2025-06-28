@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import cirlceBG from "../../../../../assets/images/twoCircle.png";
-import TibbiyotVazirlik from "../../../../../assets/logo/TibbiyotVazirlik.png";
+import TibbiyotVazirlik from "../../../../../assets/logo/TibbiyotVazirlik.svg";
 import "./Footer.css";
 import Link from "next/link";
 import Contact from "../contact/Contact";
@@ -58,7 +58,7 @@ export default function FooterLayout() {
                   {/* 4 ta ijtimoiy ikonka */}
 
                   <Link
-                    href={"/"}
+                    href={"https://www.instagram.com/clamo.uz/"}
                     target="_blank"
                     className="group hover:bg-[#0650C3] transition-all duration-200 p-[10px] cursor-pointer bg-[#0650C3]/[18%] rounded-lg"
                   >
@@ -71,7 +71,7 @@ export default function FooterLayout() {
                     </svg>{" "}
                   </Link>
                   <Link
-                    href={"/"}
+                    href={"https://www.instagram.com/clamo.uz/"}
                     target="_blank"
                     className="group hover:bg-[#0650C3] transition-all duration-200 p-[10px] cursor-pointer bg-[#0650C3]/[18%] rounded-lg"
                   >
@@ -83,7 +83,7 @@ export default function FooterLayout() {
                     </svg>
                   </Link>
                   <Link
-                    href={"/"}
+                    href={"https://www.linkedin.com/in/clamo-social-3a1454364/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"}
                     target="_blank"
                     className="group hover:bg-[#0650C3] transition-all duration-200 p-[10px] cursor-pointer bg-[#0650C3]/[18%] rounded-lg"
                   >
@@ -95,7 +95,7 @@ export default function FooterLayout() {
                     </svg>{" "}
                   </Link>
                   <Link
-                    href={"/"}
+                    href={"https://www.facebook.com/CLAMORasmiy"}
                     target="_blank"
                     className="group hover:bg-[#0650C3] transition-all duration-200 p-[10px] cursor-pointer bg-[#0650C3]/[18%] rounded-lg"
                   >

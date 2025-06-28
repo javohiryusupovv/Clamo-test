@@ -7,12 +7,12 @@ export default async function Page() {
   const types = await getReyesterTypes();
 
   return (
-    <>
+    <div>
       <LicenseHero />
       
       <section className="container mx-auto px-4 py-[80px]">
         <ReyesterClient reyesters={reyesters} types={types} />
       </section>
-    </>
+    </div>
   );
 }
