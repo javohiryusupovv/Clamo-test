@@ -3,7 +3,7 @@ import location from "../../../../../assets/icons/location.svg";
 import phone from "../../../../../assets/icons/phone.svg";
 import email from "../../../../../assets/icons/email.svg";
 import submiticons from "../../../../../assets/icons/submiticons.svg";
-import uzbflag from "../../../../../../public/flag/flagicons.png";
+import uzbflag from "../../../../../assets/icons/Flags.svg";
 import { useTranslations } from "next-intl";
 import { LoaderCircle } from 'lucide-react';
 

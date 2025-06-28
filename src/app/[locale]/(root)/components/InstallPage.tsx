@@ -12,8 +12,6 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import bgCircle from "../../../../../public/herobg.png";
 
-
-
 export default function InstallPage() {
   const t = useTranslations("HomePage");
 
@@ -32,7 +30,7 @@ export default function InstallPage() {
     <section className="w-full px-4">
       <div className="container mx-auto relative top-0 left-0 bg-[#0653C9] flex flex-wrap lg:flex-nowrap justify-end items-center max-sm:items-start w-full min-h-[304px] rounded-[36px] max-sm:rounded-2xl p-4 lg:p-8">
         <div className="absolute -left-10 z-[2] opacity-[0.8] h-[320px] rounded-[36px] overflow-hidden">
-          <Image  width={800} src={bgCircle} alt="Background circle" />
+          <Image width={800} height={100} src={bgCircle} className="h-full" alt="Background circle" />
         </div>
         {/* Phone Image */}
         <div className="absolute bottom-0 left-[-40px] lg:left-[-60px] z-10 max-w-full sm:max-w-[200px] lg:max-w-none overflow-visible">
@@ -54,36 +52,53 @@ export default function InstallPage() {
           </p>
           <article className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
             {/* App Store Button */}
-            <Link href={"https://apps.apple.com/uz/app/sharh/id6454791625"} target="_blank" className="flex hover:bg-white/30 transition-all duration-200 items-center px-4 py-2 bg-white/20 rounded-lg gap-2">
-             
-                <SiApple className="w-[30px] h-[30px] text-white" />
-                <div className="text-left">
-                  <p className="text-xs text-white">Download on the</p>
-                  <p className="text-base text-white font-medium">App Store</p>
-                </div>
-             
+            <Link
+              href={"https://apps.apple.com/uz/app/sharh/id6454791625"}
+              target="_blank"
+              className="flex hover:bg-white/30 transition-all duration-200 items-center px-4 py-2 bg-white/20 rounded-lg gap-2"
+            >
+              <SiApple className="w-[30px] h-[30px] text-white" />
+              <div className="text-left">
+                <p className="text-xs text-white">Download on the</p>
+                <p className="text-base text-white font-medium">App Store</p>
+              </div>
             </Link>
 
             {/* Google Play Button */}
-            <Link href={"https://play.google.com/store/apps/details?id=io.commeta.sharhuz&hl=ru"} target="_blank" className="group hover:bg-white/30 transition-all duration-200 flex items-center px-4 py-2 bg-white/20 rounded-lg gap-2">
-
-                <FaGooglePlay className="w-[30px] h-[30px] text-white" />
-                <div className="text-left">
-                  <p className="text-xs text-white uppercase">Get it on</p>
-                  <p className="text-base text-white font-medium">Google Play</p>
-                </div>
+            <Link
+              href={
+                "https://play.google.com/store/apps/details?id=io.commeta.sharhuz&hl=ru"
+              }
+              target="_blank"
+              className="group hover:bg-white/30 transition-all duration-200 flex items-center px-4 py-2 bg-white/20 rounded-lg gap-2"
+            >
+              <FaGooglePlay className="w-[30px] h-[30px] text-white" />
+              <div className="text-left">
+                <p className="text-xs text-white uppercase">Get it on</p>
+                <p className="text-base text-white font-medium">Google Play</p>
+              </div>
             </Link>
 
             {/* Huawei AppGallery */}
-            <Link href={"https://appgallery.huawei.com/app/C109615407"} target="_blank" className="flex hover:bg-white/30 transition-all duration-200 items-center px-4 py-2 bg-white/20 rounded-lg gap-2">
-                <Image
-                  src={Huawie}
-                  alt="Huawei logo"
-                  className="w-8 h-8 object-contain"
-                />
+            <Link
+              href={"https://appgallery.huawei.com/app/C109615407"}
+              target="_blank"
+              className="flex hover:bg-white/30 transition-all duration-200 items-center px-4 py-2 bg-white/20 rounded-lg gap-2"
+            >
+              <Image
+                src={Huawie}
+                alt="Huawei logo"
+                className="w-8 h-8 object-contain"
+                width={32}
+                height={32}
+              />
               <div className="text-left">
-                <p className="text-xs text-white uppercase font-vk">Explore it on</p>
-                <p className="text-base text-white font-medium font-vk">AppGallery</p>
+                <p className="text-xs text-white uppercase font-vk">
+                  Explore it on
+                </p>
+                <p className="text-base text-white font-medium font-vk">
+                  AppGallery
+                </p>
               </div>
             </Link>
           </article>

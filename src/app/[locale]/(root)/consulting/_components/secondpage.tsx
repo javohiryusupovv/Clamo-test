@@ -13,11 +13,11 @@ export default function secondpage({ carousel }: { carousel: CarouselData[] }) {
 
   return (
     <div className=" h-[518px] second-div w-full bg-[#ffffff]">
-      <div className=" flex flex-col font-vksans lg:mb-[44px] md:mb-[37px] mb-[25px] lg:gap-1 sm:pt-[40px] md:pt-[50px] lg:pt-[64px] container">
-        <h1 className=" font-bold font-vk text-[#3D445E] md:text-[40px] sm:text-[35px] text-[32px] lg:text-[48px] leading-[100% ]">
+      <div className="flex flex-col gap-[4px] font-vksans lg:mb-[44px] md:mb-[37px] mb-[25px] sm:pt-[40px] md:pt-[50px] lg:pt-[64px] container">
+        <h1 className="font-bold font-vk text-[#3D445E] md:text-4xl text-3xl lg:text-5xl leading-[100% ]">
           {t("work_direction")}
         </h1>
-        <p className=" text-[#012548CC] font-vk leading-[140%] font-medium md:text-lg lg:text-[20px]">
+        <p className="text-[#012548CC] font-vk leading-[140%] font-medium lg:text-[20px] sm:text-base text-sm">
           {t("work_direction_subtitle")}
         </p>
       </div>
@@ -58,7 +58,7 @@ export default function secondpage({ carousel }: { carousel: CarouselData[] }) {
         {carousel.map((ssss: CarouselData, index: number) => (
           <SwiperSlide key={index}>
             <div className="hover:bg-[#0653C9] text-[#3D445E] hover:text-[#FFFFFF] border duration-300 p-4 sm:p-6 !border-[#E3E8E9] rounded-[28px] h-full flex flex-col cursor-pointer">
-              <h3 className="sm:mb-2 font-bold md:text-[28px] sm:text-[25px] font-vksans leading-[150%]">
+              <h3 className="sm:mb-2 mb-1 font-bold md:text-[28px] text-[20px] font-vksans leading-[150%]">
                 {ssss.title}
               </h3>
               <p className="font-normal  font-vksans text-[14px] sm:text-[15px] md:text-[16px] leading-[150%]">

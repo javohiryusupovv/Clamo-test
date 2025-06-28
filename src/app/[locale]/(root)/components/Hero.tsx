@@ -15,6 +15,7 @@ import "aos/dist/aos.css";
 import { useLocale, useTranslations } from "next-intl";
 import { NumbersType } from "@/types/type";
 import Link from "next/link";
+import { FaAngleRight } from "react-icons/fa6";
 
 function useCountUp(target: number, duration = 1500) {
   const [count, setCount] = useState(0);
@@ -94,11 +95,7 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
                 <Link href={`${locale}/contacts`} className="lg:w-full w-1/2">
                   <button className="group font-inter lg:w-[183px] w-full h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[80%] bg-[#23B3FC] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">
                     {t("service_button")}{" "}
-                    <Image
-                      src={Down}
-                      alt="down strelka"
-                      className="group-hover:translate-x-1 transition-all duration-200"
-                    />
+                    <FaAngleRight className="group-hover:translate-x-1 transition-all duration-200" />
                   </button>
                 </Link>
                 <Link href={`${locale}/contacts`} className="lg:w-full w-1/2">
