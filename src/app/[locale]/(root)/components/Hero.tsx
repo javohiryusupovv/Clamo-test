@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Down from "@/assets/icons/whiteDown.png";
 import Doctors from "@/assets/images/doctors.png";
 import Home from "@/assets/images/home.png";
 import File from "@/assets/images/file.png";
