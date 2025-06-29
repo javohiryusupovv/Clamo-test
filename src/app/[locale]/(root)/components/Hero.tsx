@@ -2,9 +2,6 @@
 
 import Image from "next/image";
 import Doctors from "@/assets/images/doctors.png";
-import Home from "../../../../../public/icons/statistic/bino.svg";
-import File from "../../../../../public/icons/statistic/document.svg";
-import True from "../../../../../public/icons/statistic/zur.svg";
 import ImageClamo from "@/assets/images/ImageClamo.png";
 import bgCircle from "../../../../../public/herobg.png";
 import LearnMore from "./LearnMoreButton";
@@ -151,7 +148,7 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
             <div className="flex-1 lg:pr-8 px-4 max-xl:pb-10">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="w-full bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl text-white flex flex-col p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <Image src={Home} alt="HomeIcons" width={48} height={48} />
+                  <Image src="/icons/statistic/bino.svg" alt="HomeIcons" width={48} height={48} />
                   <div className="pt-10">
                     <h1 className="xl:text-[48px] lg:text-[39px] text-[36px] font-bold">
                       {animatedClinics.toLocaleString("ru-RU")}+
@@ -162,7 +159,7 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
                   </div>
                 </div>
                 <div className="w-full bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl text-white flex flex-col p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <Image src={True} alt="HomeIcons" width={48} height={48} />
+                  <Image src="/icons/statistic/zur.svg" alt="HomeIcons" width={48} height={48} />
                   <div className="pt-10">
                     <h1 className="xl:text-[48px] lg:text-[39px] text-[36px] font-bold">
                       {animatedConsulting.toLocaleString("ru-RU") || 0}+
@@ -173,7 +170,7 @@ export default function Hero({ numbers }: { numbers: NumbersType }) {
                   </div>
                 </div>
                 <div className=" relative top-0 left-0 bg-gradient-to-br overflow-hidden from-blue-400 to-blue-600 p-6 rounded-2xl text-white flex flex-col md:col-span-2 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <Image src={File} alt="HomeIcons" width={48} height={48} />
+                  <Image src="/icons/statistic/document.svg" alt="HomeIcons" width={48} height={48} />
                   <Image
                     src={bgCircle}
                     className=" absolute top-0 left-36 opacity-[0.7] max-ll:top-4"

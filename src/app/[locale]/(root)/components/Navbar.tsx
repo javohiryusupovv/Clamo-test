@@ -3,9 +3,9 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Flag from "../../../../../public/icons/flags/uzbekistan-flag.svg";
-import rusFlag from "../../../../../public/icons/flags/russia-flag.svg";
-import engFlag from "../../../../../public/icons/flags/united-kingdom-flag.svg";
+import Flag from "@/assets/icons/uzbekistan-flag.svg";
+import RusFlag from "@/assets/icons/russia-flag.svg";
+import EngFlag from "@/assets/icons/united-kingdom-flag.svg";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { Language } from "@/types/type";
@@ -24,9 +24,9 @@ export default function Navbar() {
   const [selectedLang, setSelectedLang] = useState<Language>(() => {
     switch (locale) {
       case "ru":
-        return { code: "ru", label: "Rus", flag: rusFlag };
+        return { code: "ru", label: "Rus", flag: RusFlag };
       case "en":
-        return { code: "en", label: "Eng", flag: engFlag };
+        return { code: "en", label: "Eng", flag: EngFlag };
       default:
         return { code: "uz", label: "Uzb", flag: Flag };
     }
@@ -270,7 +270,7 @@ export default function Navbar() {
                           handleLangChange({
                             code: "ru",
                             label: "Rus",
-                            flag: rusFlag,
+                            flag: RusFlag,
                           })
                         }
                         className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
@@ -290,7 +290,7 @@ export default function Navbar() {
                           handleLangChange({
                             code: "en",
                             label: "Eng",
-                            flag: engFlag,
+                            flag: EngFlag,
                           })
                         }
                         className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
@@ -420,7 +420,7 @@ export default function Navbar() {
                                 handleLangChange({
                                   code: "ru",
                                   label: "Rus",
-                                  flag: rusFlag,
+                                  flag: RusFlag,
                                 })
                               }
                               className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
@@ -440,7 +440,7 @@ export default function Navbar() {
                                 handleLangChange({
                                   code: "en",
                                   label: "Eng",
-                                  flag: engFlag,
+                                  flag: EngFlag,
                                 })
                               }
                               className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
