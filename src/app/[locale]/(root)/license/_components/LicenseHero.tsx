@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { getBgImg, getLicense } from "../../../../../../constants/page";
+import { getLicense } from "../../../../../../constants/page";
 import { useTranslations } from "next-intl";
 import { FaChevronRight } from "react-icons/fa";
 import { ChevronRight } from "lucide-react";
@@ -19,14 +19,13 @@ export default function LicenseHero() {
     sevenTitle,
   ] = t("get_permit").split(" ");
   const steps = getLicense;
-  const imageBg = getBgImg;
   return (
     <>
       {/* Hero section */}
-      <div className="relative">
+      <div className="relative h-screen overflow-visible flex items-center">
         <div className="absolute -left-[300px] top-28 blur-[200px] bg-[#6EB8E8] w-[580px] h-[360px] rounded-full"></div>
 
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 ">
           <div className="w-full my-20 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10 pt-12 md:h-[400px] md:pt-0">
             <div className="flex-1 space-y-5 text-center md:text-left">
               <h1 className="rounded-md font-inter font-medium leading-[100%] uppercase bg-[#23B3FC] text-white px-3 py-2 text-sm  w-max mx-auto md:mx-0">
@@ -62,18 +61,10 @@ export default function LicenseHero() {
             </div>
 
             <div className="hidden md:flex md:flex-1 justify-center items-center w-full md:w-[55%] h-auto mt-8 md:mt-0 md:absolute z-[-10] md:right-[-50px]">
-              {imageBg.map((item) => (
-                <div key={item.id}>
-                  <Image
-                    src={item.bgImg}
-                    alt="Illyustratsiya"
-                    width={694}
-                    height={684}
-                    priority
-                    className="w-full h-[684px] object-contain"
-                  />
-                </div>
-              ))}
+              <div className="relative top-0 left-0 w-full h-[500px]">
+                <Image src="/Images/stamp.svg" alt="Pechat Clamo" width={482} height={416} className=" absolute -top-10 -left-10 z-[2] logoAnim" />
+                <Image src="/Images/Holder.svg" alt="Pechat Clamo " width={248} height={199} className="absolute bottom-0 -right-10 opacity-[0.6] z-[1]" />
+              </div>
             </div>
           </div>
         </div>

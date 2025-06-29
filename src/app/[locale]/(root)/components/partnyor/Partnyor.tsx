@@ -10,7 +10,7 @@ export default function Partnyor({partners}: {partners: Partner[]}) {
   const t = useTranslations("InternationalPage");
 
   return (
-    <div className="md:py-16 pt-9 mb-9 bg-[#F6F9FC]">
+    <div className="md:py-16 pt-9 mb-9 bg-[#F6F9FC] overflow-visible">
       <article className="container text-center mb-10 px-4 sm:px-0">
         <h3 className="text-2xl sm:text-4xl lg:text-5xl font-bold font-vk mb-2 text-[#3D445E]">
           {t("hamkorlar")}
@@ -20,9 +20,9 @@ export default function Partnyor({partners}: {partners: Partner[]}) {
         </p>
       </article>
 
-      <div className=" max-w-[1600px] m-auto w-full space-y-6 overflow-visible">
+      <div className=" max-w-[1600px] m-auto w-full space-y-6">
         <div className="">
-          <Marquee direction="right" speed={30} gradient={false} pauseOnHover className="mb-[18px]">
+          <Marquee direction="right" speed={30} gradient={true} gradientColor="#F6F9FC" pauseOnHover className="mb-[18px]">
             {partners.map((img) => (
               <Link
                 href="#"
@@ -39,7 +39,7 @@ export default function Partnyor({partners}: {partners: Partner[]}) {
               </Link>
             ))}
           </Marquee>
-          <Marquee direction="left" speed={30} gradient={false} pauseOnHover>
+          <Marquee direction="left" speed={30} gradient={true} gradientColor="#F6F9FC" pauseOnHover>
             {partners.reverse().map((img) => (
               <Link
                 href="#"

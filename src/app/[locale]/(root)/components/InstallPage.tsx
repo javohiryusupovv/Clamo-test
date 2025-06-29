@@ -5,7 +5,6 @@ import { SiApple } from "react-icons/si";
 import "../../../../styles/InstalPage.css";
 import { useEffect } from "react";
 import Image from "next/image";
-import Phone from "../../../../../public/Imgs/iPhone15Pro.png";
 import QR from "@/assets/icons/QR.png";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -32,12 +31,14 @@ export default function InstallPage() {
           <Image width={800} height={100} src={bgCircle} className="h-full" alt="Background circle" />
         </div>
         {/* Phone Image */}
-        <div className="absolute bottom-0 left-[-40px] lg:left-[-60px] z-10 max-w-full sm:max-w-[200px] lg:max-w-none overflow-visible">
+        <div className="absolute bottom-0 left-[-40px] lg:left-[-20px] z-10 max-w-full sm:max-w-[200px] lg:max-w-none overflow-visible">
           <Image
-            src={Phone}
+            src="/Imgs/iphone.svg"
             alt="Sharh Phone Share"
             className="object-contain lg:block hidden max-sm:object-cover"
             data-aos="fade-up"
+            width={355}
+            height={359}
           />
         </div>
 
