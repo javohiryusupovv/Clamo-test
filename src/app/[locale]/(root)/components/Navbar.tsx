@@ -3,9 +3,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Flag from "@/assets/icons/uzbekistan-flag.svg";
-import RusFlag from "@/assets/icons/russia-flag.svg";
-import EngFlag from "@/assets/icons/united-kingdom-flag.svg";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { Language } from "@/types/type";
@@ -24,11 +21,11 @@ export default function Navbar() {
   const [selectedLang, setSelectedLang] = useState<Language>(() => {
     switch (locale) {
       case "ru":
-        return { code: "ru", label: "Rus", flag: RusFlag };
+        return { code: "ru", label: "Rus", flag: "/icons/flags/russia-flag.svg" };
       case "en":
-        return { code: "en", label: "Eng", flag: EngFlag };
+        return { code: "en", label: "Eng", flag: "/icons/flags/united-kingdom-flag.svg" };
       default:
-        return { code: "uz", label: "Uzb", flag: Flag };
+        return { code: "uz", label: "Uzb", flag: "/icons/flags/uzbekistan-flag.svg" };
     }
   });
 
@@ -250,7 +247,7 @@ export default function Navbar() {
                           handleLangChange({
                             code: "uz",
                             label: "Uzb",
-                            flag: Flag,
+                            flag: "/icons/flags/uzbekistan-flag.svg",
                           })
                         }
                         className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
@@ -270,7 +267,7 @@ export default function Navbar() {
                           handleLangChange({
                             code: "ru",
                             label: "Rus",
-                            flag: RusFlag,
+                            flag: "/icons/flags/russia-flag.svg",
                           })
                         }
                         className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
@@ -290,7 +287,7 @@ export default function Navbar() {
                           handleLangChange({
                             code: "en",
                             label: "Eng",
-                            flag: EngFlag,
+                            flag: "/icons/flags/united-kingdom-flag.svg",
                           })
                         }
                         className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
@@ -400,7 +397,7 @@ export default function Navbar() {
                                 handleLangChange({
                                   code: "uz",
                                   label: "Uzb",
-                                  flag: Flag,
+                                  flag: "/icons/flags/uzbekistan-flag.svg",
                                 })
                               }
                               className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
@@ -420,7 +417,7 @@ export default function Navbar() {
                                 handleLangChange({
                                   code: "ru",
                                   label: "Rus",
-                                  flag: RusFlag,
+                                  flag: "/icons/flags/russia-flag.svg",
                                 })
                               }
                               className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
@@ -440,7 +437,7 @@ export default function Navbar() {
                                 handleLangChange({
                                   code: "en",
                                   label: "Eng",
-                                  flag: EngFlag,
+                                  flag: "/icons/flags/united-kingdom-flag.svg",
                                 })
                               }
                               className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
