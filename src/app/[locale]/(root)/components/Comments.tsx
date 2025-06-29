@@ -14,7 +14,7 @@ export default function Izohlar() {
 
   return (
     <div className="md:py-[64px] py-[30px]">
-      <div className="container max-sm:mb-4">
+      <div className="container mb-4">
         {opinion.map((item: commentOpinion, id: number) => (
           <div key={id} className="flex flex-col gap-[4px]">
             <Image

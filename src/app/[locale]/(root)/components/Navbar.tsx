@@ -256,7 +256,7 @@ export default function Navbar() {
                         className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
                       >
                         <Image
-                          src={Flag}
+                          src="/icons/flags/uzbekistan-flag.svg"
                           alt="uzbek flag"
                           width={24}
                           height={24}
@@ -276,7 +276,7 @@ export default function Navbar() {
                         className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
                       >
                         <Image
-                          src={rusFlag}
+                          src="/icons/flags/russia-flag.svg"
                           alt="Rus flag"
                           width={24}
                           height={24}
@@ -296,7 +296,7 @@ export default function Navbar() {
                         className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
                       >
                         <Image
-                          src={engFlag}
+                          src="/icons/flags/united-kingdom-flag.svg"
                           alt="Eng flag"
                           width={24}
                           height={24}
@@ -406,7 +406,7 @@ export default function Navbar() {
                               className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
                             >
                               <Image
-                                src={Flag}
+                                src="/icons/flags/uzbekistan-flag.svg"
                                 alt="uzbek flag"
                                 width={20}
                                 height={20}
@@ -426,7 +426,7 @@ export default function Navbar() {
                               className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
                             >
                               <Image
-                                src={rusFlag}
+                                src="/icons/flags/russia-flag.svg"
                                 alt="Rus flag"
                                 width={20}
                                 height={20}
@@ -446,7 +446,7 @@ export default function Navbar() {
                               className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
                             >
                               <Image
-                                src={engFlag}
+                                src="/icons/flags/united-kingdom-flag.svg"
                                 alt="Eng flag"
                                 width={20}
                                 height={20}
