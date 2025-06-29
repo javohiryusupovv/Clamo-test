@@ -33,6 +33,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Clamo" }],
   creator: "Clamo",
+  icons: {icon: "/HeadLogo.svg"},
   openGraph: {
     title: "Clamo – Litsenziyalash va Akkreditatsiyalash Markazi",
     description:
