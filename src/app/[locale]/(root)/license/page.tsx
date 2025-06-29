@@ -9,7 +9,7 @@ export default async function Page() {
   return (
     <div>
       <LicenseHero />
-      
+
       <section className="container mx-auto px-4 py-[80px]">
         <ReyesterClient reyesters={reyesters} types={types} />
       </section>
