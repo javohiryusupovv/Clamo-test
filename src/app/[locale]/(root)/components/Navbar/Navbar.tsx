@@ -79,7 +79,7 @@ export default function Navbar() {
       <div
         className={`fixed top-0 z-[999] w-full backdrop-blur-3xl`}>
         <nav
-          className={`flex items-center justify-between py-3 z-[999] container transition-transform duration-500 ease-in-out ${isScrolled ? "translate-y-0" : "translate-y-4"}`}
+          className={`flex items-center justify-between py-3 z-[999] container transition-transform duration-300 ease-in-out ${isScrolled ? "translate-y-0" : "translate-y-4"}`}
         >
           <ul>
 
