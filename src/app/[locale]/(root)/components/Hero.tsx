@@ -65,6 +65,7 @@ export default function Hero() {
                   <FaChevronRight className="group-hover:translate-x-1 transition-all duration-200" />
                 </button>
               </Link>
+              </article>
           </div>
         </div>
         <div className="flex flex-col justify-end items-center w-auto relative -bottom-28 max-ms:-bottom-20 max-lg:bottom-[20px] right-0">
