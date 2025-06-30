@@ -36,7 +36,7 @@ export default function InstallPage() {
             src="/Imgs/iphone.svg"
             alt="Sharh Phone Share"
             className="object-contain lg:block hidden max-sm:object-cover"
-            data-aos="fade-up"
+            data-aos="zoom-in-up"
             width={355}
             height={359}
           />
