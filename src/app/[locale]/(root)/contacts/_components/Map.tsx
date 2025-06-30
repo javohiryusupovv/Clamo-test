@@ -11,6 +11,7 @@ import Link from "next/link";
 
 export default function ContactPage() {
   const t = useTranslations("ContactPageLayout");
+  const adres = useTranslations("ContactPage");
   const contact = getContactInfo;
   return (
     <div className="relative w-full md:h-[550px] h-[450px] mb-20">
@@ -60,7 +61,7 @@ export default function ContactPage() {
             <FaMapMarkerAlt className="text-blue-600" />
             <div>
               <p className="text-sm font-vk">{t("addres")}</p>
-              <p className="font-medium font-vk">{item.address}</p>
+              <p className="font-medium font-vk">{adres("address")}</p>
             </div>
           </div>
         </div>

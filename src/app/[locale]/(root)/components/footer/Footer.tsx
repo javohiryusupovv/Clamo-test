@@ -19,14 +19,14 @@ export default function FooterLayout() {
   ];
 
   return (
-    <div className="md:pt-20 pt-6 bg-[#F6F9FC] p-4">
+    <div className="md:pt-20  bg-[#F6F9FC] p-4">
       <Contact />
 
       <div className="relative w-full sm:h-[500px] h-[750px] bg-[#F6F9FC] overflow-hidden">
         <div className="container relative z-[50]">
           <div className="block sm:flex gap-20 absolute top-0 left-0 py-28 sm:py-20 px-[10px] sm:px-0">
             <div>
-              <div className="w-[400px] mb-[76px] max-xxl:w-[300px]">
+              <div className="sm:w-[400px] mb-[76px]">
                 <article className="flex items-center gap-7 mb-5">
                   <Image
                     src="/LogoClamo.svg"
@@ -43,7 +43,7 @@ export default function FooterLayout() {
                     className="w-14"
                   />
                 </article>
-                <p className="text-[12px] sm:text-[16px] font-vk text-[#3D445E] sm:w-auto w-[350px]">
+                <p className="text-[12px] sm:text-[16px] font-vk text-[#3D445E] sm:w-auto w-full">
                   {t("footer_des")}
                 </p>
               </div>

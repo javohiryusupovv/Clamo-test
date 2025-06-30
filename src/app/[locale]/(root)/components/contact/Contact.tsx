@@ -95,20 +95,20 @@ export default function Contact() {
 
           <div className="flex flex-col gap-3">
             {/* Location */}
-            <Link href={"https://yandex.uz/maps/10335/tashkent/?ll=69.303946%2C41.318330&mode=whatshere&whatshere%5Bpoint%5D=69.303883%2C41.318303&whatshere%5Bzoom%5D=17&z=16"} target="_blank">
-              <div className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
-                <article className="bg-white p-3 inline-flex justify-center items-center rounded-lg">
-                  <Image className="w-5 h-4" src="/icons/location.svg" alt="Location" width={50} height={50} />
-                </article>
-                <article>
-                  <span className="text-[13px] sm:text-[14px] font-normal text-opacity-[60%] text-white">
-                    {t("addressLabel")}
-                  </span>
-                  <p className="text-[14px] sm:text-[16px] font-medium text-white line-clamp-1">
-                    улица Мирзакалон Исмоилий, дом 2А, Ташкент
-                  </p>
-                </article>
-              </div>
+            <Link href={"https://yandex.uz/maps/10335/tashkent/?ll=69.303946%2C41.318330&mode=whatshere&whatshere%5Bpoint%5D=69.303883%2C41.318303&whatshere%5Bzoom%5D=17&z=16"} target="_blank" className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
+
+              <article className="bg-white p-3 inline-flex justify-center items-center rounded-lg">
+                <Image className="w-5 h-4" src="/icons/location.svg" alt="Location" width={50} height={50} />
+              </article>
+              <article>
+                <span className="text-[13px] sm:text-[14px] font-normal text-opacity-[60%] text-white">
+                  {t("addressLabel")}
+                </span>
+                <p className="text-[14px] sm:text-[16px] font-medium text-white line-clamp-1">
+                  {t("address")}
+                </p>
+              </article>
+
             </Link>
 
             {/* Phone */}

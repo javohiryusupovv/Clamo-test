@@ -43,9 +43,11 @@ export default function MedicalLegal() {
             <p className="font-medium font-vk md:text-base text-[13px] leading-[140%] sm:text-lg lg:text-xl text-[#012548CC] md:mb-7  mb-3">
               {item.description}
             </p>
-            <Link href={`${locale}/license`}>
-              <LearnMore />
-            </Link>
+            <div className="w-full max-lg:flex max-lg:justify-center">
+              <Link href={`${locale}/license`}>
+                <LearnMore />
+              </Link>
+            </div>
           </div>
 
           <div className="relative bottom-0 z-[60] lg:h-[500px] overflow-hidden">
