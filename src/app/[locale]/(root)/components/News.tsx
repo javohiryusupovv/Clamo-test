@@ -12,7 +12,13 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
   const t = useTranslations("HomePage");
   const locale = useLocale();
 
-  const slicedNews = news.slice(0, 4); // faqat 4 ta elementni olamiz
+  const slicedNews = news.slice(0, 4); // faqat 4 ta elementni olamiz;
+
+  const formatDate = (dateString: string | undefined) => {
+    if (!dateString) return "";
+    const [year, month, day] = dateString.slice(0, 10).split("-");
+    return `${day}-${month}-${year}`;
+  };
 
   return (
     <div className="container pb-10">
@@ -45,7 +51,7 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#051425]/85 via-[#051425]/60 to-[#051425]/40"></div>
               <p className="absolute text-[#EDF0EF] top-4 left-4 font-vk text-[10px] sm:text-[16px] z-10">
-                {slicedNews[0].created_at?.slice(0, 10)}
+                {formatDate(slicedNews[0].created_at)}
               </p>
               <div className="absolute bottom-4 left-4 right-4 text-white z-10">
                 <h2 className="text-[14px] font-vk sm:text-[18px] md:text-[22px] xl:text-[28px] font-bold leading-[130%] pb-2">
@@ -76,7 +82,7 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
             >
               <div className="bg-[#F6F9FC] group hover:border-[#23B3FC] border border-transparent sm:p-6 p-4 rounded-[16px] sm:min-h-[240px] min-h-[140px] flex flex-col justify-between h-full">
                 <p className="text-[10px] font-vk sm:text-[12px] md:text-[16px] text-[#74807B]">
-                  {slicedNews[1].created_at?.slice(0, 10)}
+                  {formatDate(slicedNews[0].created_at)}
                 </p>
                 <h3 className="font-bold font-vk text-[#3D445E] text-[14px] md:text-[16px] lg:text-[24px] leading-[130%] pb-3">
                   {getLocalizedValue(
@@ -106,7 +112,7 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
                   >
                     <div className="bg-[#F6F9FC] group hover:border-[#23B3FC] border border-transparent p-4 rounded-[16px] h-full flex flex-col justify-between">
                       <p className="text-[10px] font-vk sm:text-[12px] md:text-[16px] text-[#74807B]">
-                        {slicedNews[i].created_at?.slice(0, 10)}
+                        {formatDate(slicedNews[0].created_at)}
                       </p>
                       <h3 className="font-bold font-vk line-clamp-2 text-[#3D445E] text-[14px] md:text-[16px] lg:text-[24px] leading-[130%]">
                         {getLocalizedValue(
