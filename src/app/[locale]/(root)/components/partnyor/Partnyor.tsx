@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 import { Partner } from "../../../../../../app.types";
 import { useEffect, useState } from "react";
 
-export default function Partnyor({partners}: {partners: Partner[]}) {
+export default function Partnyor({ partners }: { partners: Partner[] }) {
   const t = useTranslations("InternationalPage");
   const [isGradient, setIsGradient] = useState(true);
 
@@ -23,6 +23,11 @@ export default function Partnyor({partners}: {partners: Partner[]}) {
     return () => window.removeEventListener("resize", checkScreen);
   }, []);
 
+  // 👉 Marquee to‘lishi uchun partnerlar sonini ko‘paytirish
+  const minCount = 10; // minimal ko‘rsatiladigan elementlar soni
+  const repeatCount = Math.ceil(minCount / partners.length);
+  const extendedPartners = Array(repeatCount).fill(partners).flat();
+
   return (
     <div className="md:py-16 pt-9 mb-9 bg-[#F6F9FC] overflow-visible">
       <article className="container text-center mb-10 px-4 sm:px-0">
@@ -34,13 +39,20 @@ export default function Partnyor({partners}: {partners: Partner[]}) {
         </p>
       </article>
 
-      <div className=" max-w-[1600px] m-auto w-full space-y-6 overflow-visible max-md:pb-10">
-        <div className="">
-          <Marquee direction="right" speed={30} gradient={isGradient} gradientColor="#F6F9FC" pauseOnHover className="mb-[18px]">
-            {partners.map((img) => (
+      <div className="max-w-[1600px] m-auto w-full space-y-6 overflow-visible max-md:pb-10">
+        <div>
+          <Marquee
+            direction="right"
+            speed={30}
+            gradient={isGradient}
+            gradientColor="#F6F9FC"
+            pauseOnHover
+            className="mb-[18px]"
+          >
+            {extendedPartners.map((img, index) => (
               <Link
                 href="#"
-                key={img.id}
+                key={`right-${img.id}-${index}`}
                 className="mx-2 sm:mx-[18px] bg-white border-[#eaecef]/40 border-[3px] rounded-xl flex items-center justify-center h-[180px] sm:h-[110px] w-[160px] max-sm:h-[90px] sm:w-[220px] p-4"
               >
                 <Image
@@ -53,22 +65,32 @@ export default function Partnyor({partners}: {partners: Partner[]}) {
               </Link>
             ))}
           </Marquee>
-          <Marquee direction="left" speed={30} gradient={isGradient} gradientColor="#F6F9FC" pauseOnHover>
-            {partners.reverse().map((img) => (
-              <Link
-                href="#"
-                key={img.id}
-                className="mx-2 sm:mx-[18px] bg-white border-[#eaecef]/40 border-[3px] rounded-xl flex items-center justify-center h-[180px] sm:h-[110px] w-[160px] max-sm:h-[90px] sm:w-[220px] p-4"
-              >
-                <Image
-                  src={img.image}
-                  alt={img.title}
-                  className="object-contain h-full w-full"
-                  width={77}
-                  height={77}
-                />
-              </Link>
-            ))}
+
+          <Marquee
+            direction="left"
+            speed={30}
+            gradient={isGradient}
+            gradientColor="#F6F9FC"
+            pauseOnHover
+          >
+            {extendedPartners
+              .slice()
+              .reverse()
+              .map((img, index) => (
+                <Link
+                  href="#"
+                  key={`left-${img.id}-${index}`}
+                  className="mx-2 sm:mx-[18px] bg-white border-[#eaecef]/40 border-[3px] rounded-xl flex items-center justify-center h-[180px] sm:h-[110px] w-[160px] max-sm:h-[90px] sm:w-[220px] p-4"
+                >
+                  <Image
+                    src={img.image}
+                    alt={img.title}
+                    className="object-contain h-full w-full"
+                    width={77}
+                    height={77}
+                  />
+                </Link>
+              ))}
           </Marquee>
         </div>
       </div>
