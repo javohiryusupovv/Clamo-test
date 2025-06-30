@@ -5,9 +5,23 @@ import Marquee from "react-fast-marquee";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Partner } from "../../../../../../app.types";
+import { useEffect, useState } from "react";
 
 export default function Partnyor({partners}: {partners: Partner[]}) {
   const t = useTranslations("InternationalPage");
+  const [isGradient, setIsGradient] = useState(true);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      if (typeof window !== "undefined") {
+        setIsGradient(window.innerWidth > 550); // sm breakpoint (640px)
+      }
+    };
+
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
 
   return (
     <div className="md:py-16 pt-9 mb-9 bg-[#F6F9FC] overflow-visible">
@@ -22,7 +36,7 @@ export default function Partnyor({partners}: {partners: Partner[]}) {
 
       <div className=" max-w-[1600px] m-auto w-full space-y-6 overflow-visible max-md:pb-10">
         <div className="">
-          <Marquee direction="right" speed={30} gradient={true} gradientColor="#F6F9FC" pauseOnHover className="mb-[18px]">
+          <Marquee direction="right" speed={30} gradient={isGradient} gradientColor="#F6F9FC" pauseOnHover className="mb-[18px]">
             {partners.map((img) => (
               <Link
                 href="#"
@@ -39,7 +53,7 @@ export default function Partnyor({partners}: {partners: Partner[]}) {
               </Link>
             ))}
           </Marquee>
-          <Marquee direction="left" speed={30} gradient={true} gradientColor="#F6F9FC" pauseOnHover>
+          <Marquee direction="left" speed={30} gradient={isGradient} gradientColor="#F6F9FC" pauseOnHover>
             {partners.reverse().map((img) => (
               <Link
                 href="#"

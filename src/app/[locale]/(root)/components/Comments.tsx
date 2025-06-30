@@ -6,11 +6,25 @@ import Marquee from "react-fast-marquee";
 import { getCardComment, getOpinion } from "../../../../../constants/page";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
 
 export default function Izohlar() {
   const t = useTranslations("HomePage");
   const cardComment = getCardComment(t);
   const opinion = getOpinion(t);
+  const [isGradient, setIsGradient] = useState(true);
+  
+    useEffect(() => {
+      const checkScreen = () => {
+        if (typeof window !== "undefined") {
+          setIsGradient(window.innerWidth > 550); // sm breakpoint (640px)
+        }
+      };
+  
+      checkScreen();
+      window.addEventListener("resize", checkScreen);
+      return () => window.removeEventListener("resize", checkScreen);
+    }, []);
 
   return (
     <div className="md:py-[64px] py-[30px]">
@@ -36,7 +50,7 @@ export default function Izohlar() {
 
       <div className="overflow-visible  max-w-[1600px] m-auto w-full mb-[24px]">
         <div className="flex gap-4">
-          <Marquee direction="right" speed={30} gradient={true} pauseOnHover>
+          <Marquee direction="right" speed={30} gradient={isGradient} pauseOnHover>
             {cardComment.map((item, id) => (
               <div
                 key={id}
@@ -86,7 +100,7 @@ export default function Izohlar() {
 
       <div className="overflow-visible max-w-[1600px] m-auto w-full mb-[24px]">
         <div className="flex gap-4">
-          <Marquee direction="left" speed={30} gradient={true} pauseOnHover>
+          <Marquee direction="left" speed={30} gradient={isGradient} pauseOnHover>
             {cardComment
               .slice()
               .reverse()
