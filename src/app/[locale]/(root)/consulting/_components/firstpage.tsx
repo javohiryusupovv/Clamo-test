@@ -6,13 +6,6 @@ import Man from "../../../../../../public/Images/man.png";
 import Woman from "../../../../../../public/Images/woman.png";
 import Image from "next/image";
 import "./style.css";
-
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-});
-
 export default function firstpage() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const t = useTranslations("ConsultingPage");
