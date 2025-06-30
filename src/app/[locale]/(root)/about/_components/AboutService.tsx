@@ -16,7 +16,7 @@ export default function ServicesSection({
   const slugs = ["accreditation", "license", "consulting", ""];
 
   return (
-    <section className="md:py-16 py-8 bg-[#F6F9FC]">
+    <section className="md:py-16 py-8 bg-[#F6F9FC]" id="contact-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="md:mb-12 mb-6 flex flex-col gap-[4px]">
           <h2 className="text-3xl md:text-4xl lg:text-5xl leading-[100%] font-vk font-bold text-[#3D445E] text-start">
@@ -42,7 +42,7 @@ export default function ServicesSection({
               locale
             );
             const slug = slugs[index];
-            
+
             return (
               <div
                 key={index}
