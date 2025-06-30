@@ -11,7 +11,7 @@ import DropMenyu from "./_components/DropMenyu";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [header, setHeader] = useState(false);
+  const [isScrolled, setScrolled] = useState(false);
 
   const t = useTranslations("NavbarPage");
   const locale = useLocale();
@@ -63,65 +63,56 @@ export default function Navbar() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const scrollHeader = () => {
-    if (window.scrollY >= 20) {
-      setHeader(true);
-    } else {
-      setHeader(false);
-    }
+ useEffect(() => {
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    setScrolled(scrollTop > 50);
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", scrollHeader);
-    return () => {
-      window.removeEventListener("scroll", scrollHeader);
-    };
-  }, []);
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
 
   return (
     <div className="m-auto">
       <div
-        className={
-          header
-            ? "backdrop-blur-3xl fixed top-0 z-[999] w-full transition-transform duration-500 ease-in-out"
-            : "bg-transparent relative z-[999]"
-        }
-      >
+        className={`fixed top-0 z-[999] w-full backdrop-blur-3xl`}>
         <nav
-          className={`flex items-center justify-between py-3 z-[999] container`}
+          className={`flex items-center justify-between py-3 z-[999] container transition-transform duration-500 ease-in-out ${isScrolled ? "translate-y-0" : "translate-y-4"}`}
         >
           <ul>
-           
-              <Link href="/">
-                <Image
-                  src="/LogoClamo.svg"
-                  alt="Logo"
-                  width={155.71}
-                  height={40}
-                  className="w-[105px] h-[40px] lg:hidden"
-                />
-              </Link>
-          
+
+            <Link href="/">
+              <Image
+                src="/LogoClamo.svg"
+                alt="Logo"
+                width={155.71}
+                height={40}
+                className="w-[105px] h-[40px] lg:hidden"
+              />
+            </Link>
+
           </ul>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center justify-between w-full gap-10">
             <ul>
-            
-                <Link href={`/${locale}`}>
-                  <Image
-                    src="/LogoClamo.svg"
-                    alt="Logo"
-                    width={155.71}
-                    height={40}
-                    className="w-[155.71px] h-[40px]"
-                  />
-                </Link>
-    
+
+              <Link href={`/${locale}`}>
+                <Image
+                  src="/LogoClamo.svg"
+                  alt="Logo"
+                  width={155.71}
+                  height={40}
+                  className="w-[155.71px] h-[40px]"
+                />
+              </Link>
+
             </ul>
             <ul className="flex items-center gap-10">
               <article className="relative">
-                <DropMenyu/>
+                <DropMenyu />
               </article>
               <Link href={`/${locale}/license`}>
                 <li className="text-sm font-medium text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200">
@@ -277,17 +268,17 @@ export default function Navbar() {
               >
                 {/* Header with Logo and Close Icon */}
                 <div className="w-full flex sm:max-w-[60%] max-w-[90%] justify-between items-center -translate-y-3 -translate-x-2 pb-2">
-                 
-                    <Link href="/">
-                      <Image
-                        src="/LogoClamo.svg"
-                        alt="Logo"
-                        width={105}
-                        height={40}
-                        className="w-[90px] h-[40px]"
-                      />
-                    </Link>
-                 
+
+                  <Link href="/">
+                    <Image
+                      src="/LogoClamo.svg"
+                      alt="Logo"
+                      width={105}
+                      height={40}
+                      className="w-[90px] h-[40px]"
+                    />
+                  </Link>
+
 
                   <ul className="flex items-center">
                     <div
