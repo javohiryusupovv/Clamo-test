@@ -41,12 +41,16 @@ export default async function NewsDetailPage({
     data[`description_${locale}` as keyof NewsDetail] || data.description;
   const content = data[`content_${locale}` as keyof NewsDetail] || data.content;
 
-  const createdAt = new Date(data.created_at);
-              const date = createdAt.toLocaleDateString('en-CA'); // YYYY-MM-DD
-              const time = createdAt.toLocaleTimeString('en-GB', {
-                hour: '2-digit',
-                minute: '2-digit'
-              });
+ const createdAt = new Date(data.created_at);
+                const day = String(createdAt.getDate()).padStart(2, '0');
+                const month = String(createdAt.getMonth() + 1).padStart(2, '0');
+                const year = createdAt.getFullYear();
+                const date = `${day}-${month}-${year}`;
+
+                const time = createdAt.toLocaleTimeString('en-GB', {
+                  hour: '2-digit',
+                  minute: '2-digit'
+                });
     
 
   return (

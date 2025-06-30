@@ -66,7 +66,11 @@ export default function NewsGrid({ news }: { news: NewsTypes[] }) {
                 const localeTitle = getLocalizedValue(stringItem, "title", locale);
                 const localeDescription = getLocalizedValue(stringItem, "description", locale);
                 const createdAt = new Date(item.created_at);
-                const date = createdAt.toLocaleDateString('en-CA'); // YYYY-MM-DD
+                const day = String(createdAt.getDate()).padStart(2, '0');
+                const month = String(createdAt.getMonth() + 1).padStart(2, '0');
+                const year = createdAt.getFullYear();
+                const date = `${day}-${month}-${year}`;
+
                 const time = createdAt.toLocaleTimeString('en-GB', {
                   hour: '2-digit',
                   minute: '2-digit'
