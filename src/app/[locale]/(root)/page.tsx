@@ -12,6 +12,7 @@ import { getNews } from "@/lib/getNews";
 import { getPartners } from "@/lib/getPartners";
 import { getFaqs } from "@/lib/getFaqs";
 import { getServicec } from "@/lib/getServicec";
+import ClamoStatistic from "./components/ClamoStatistic";
 
 export default async function Main() {
   const data = await getData();
@@ -22,7 +23,8 @@ export default async function Main() {
 
   return (
     <div className="overflow-hidden">
-      <Hero numbers={data[0]} />
+      <Hero />
+      <ClamoStatistic numbers={data[0]}/>
       <MedicalLegal />
       <div className="bg-[#F6F9FC]">
         <div className="max-lg:container">

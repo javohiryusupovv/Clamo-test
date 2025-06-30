@@ -36,7 +36,7 @@ export default function Izohlar() {
 
       <div className="overflow-visible  max-w-[1600px] m-auto w-full mb-[24px]">
         <div className="flex gap-4">
-          <Marquee direction="right" speed={30} gradient={false} pauseOnHover>
+          <Marquee direction="right" speed={30} gradient={true} pauseOnHover>
             {cardComment.map((item, id) => (
               <div
                 key={id}
@@ -86,7 +86,7 @@ export default function Izohlar() {
 
       <div className="overflow-visible max-w-[1600px] m-auto w-full mb-[24px]">
         <div className="flex gap-4">
-          <Marquee direction="left" speed={30} gradient={false} pauseOnHover>
+          <Marquee direction="left" speed={30} gradient={true} pauseOnHover>
             {cardComment
               .slice()
               .reverse()
