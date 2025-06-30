@@ -35,7 +35,7 @@ export default function Hero() {
     <>
       {/* Ko'k soya */}
       <div className="absolute bottom-2 -left-64 w-[481px] h-[481px] rounded-full bg-[#6eb8e8] blur-[220.64999389648438px] z-[11]"></div>
-      <section className="container grid lg:grid-cols-2 grid-cols-1 lg:gap-20 lg:pb-10 relative left-0 h-[80vh] overflow-visible">
+      <section className="container grid lg:grid-cols-2 grid-cols-1 lg:gap-20 lg:pb-10 relative left-0 h-[70vh] overflow-visible">
         <div className="relative z-[12] flex flex-col justify-center">
           <p className="uppercase text-[#3D445E] font-inter md:text-[14px] text-[12px] font-medium lg:w-[582px] pb-[11px] max-sm:w-[250px]">
             {firstTitle} {secondTitle} {thirtTitle} {fourTitle}{" "}
@@ -51,13 +51,13 @@ export default function Hero() {
           </h1>
           <div className="backdrop-blur-[10px] bg-[#ffffffa4] border border-white w-[411px] px-4 max-lg:w-full mb-4 sm:px-4 rounded-[17px]">
             <article className="flex items-center max-md:justify-between gap-3 pb-4 pt-4">
-              <Link href={`${locale}/contacts`} className="lg:w-full w-1/2">
+              <Link href={`${locale}/contacts`} aria-label="Contact" className="lg:w-full w-1/2">
                 <button className="group font-inter lg:w-[183px] w-full h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[80%] bg-[#23B3FC] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">
                   {t("service_button")}{" "}
                   <FaAngleRight className="group-hover:translate-x-1 transition-all duration-200" />
                 </button>
               </Link>
-              <Link href={`${locale}/contacts`} className="lg:w-full w-1/2">
+              <Link href={`${locale}/contacts`} aria-label="Contact user" className="lg:w-full w-1/2">
                 <button className="group font-inter lg:w-[183px] w-full h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[30%] bg-[#23B3FC]/[12%] transition-all duration-200 rounded-lg text-sm font-medium text-[#23B3FC]  leading-[130%] ">
                   {t("applying")}{" "}
                   <FaChevronRight className="group-hover:translate-x-1 transition-all duration-200" />

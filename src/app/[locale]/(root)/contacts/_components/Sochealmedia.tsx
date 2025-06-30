@@ -7,7 +7,7 @@ export default function SochealMedia() {
 
   return (
     <div className="grid lg:grid-cols-4 gap-6 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-3 items-center justify-center bg-[#F6F9FC] md:mb-10 mb-7 py-6 max-md:mt-[405px] max-sm:mt-[395px] rounded-2xl">
-      <Link href={"https://t.me/CLAMO_uz"} target="_blank">
+      <Link href={"https://t.me/CLAMO_uz"} aria-label="website" target="_blank">
         <div className="flex items-center md:justify-center md:gap-5 ml-5 gap-2 group hover:cursor-pointer">
           <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#DFE9F7] transition duration-200 group-hover:bg-blue-700 cursor-pointer">
             <svg
@@ -25,7 +25,7 @@ export default function SochealMedia() {
         </div>
       </Link>
 
-      <Link href={"https://instagram.com/clamo.uz"} target="_blank">
+      <Link href={"https://instagram.com/clamo.uz"} aria-label="Clamo Instagram" target="_blank">
         <div className="flex items-center md:justify-center md:gap-5 ml-5 gap-2 group hover:cursor-pointer">
           <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#DFE9F7] transition duration-200 group-hover:bg-blue-700 cursor-pointer">
             <svg
@@ -48,6 +48,7 @@ export default function SochealMedia() {
         href={
           "https://www.facebook.com/people/CLAMO-Rasmiy/61574003283120/?mibextid=wwXIfr&rdid=jD2A4C8aUmaFwdKS&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15rQ6GTeNE%2F%3Fmibextid%3DwwXIfr"
         }
+        aria-label="Clamo Facebook"
         target="_blank"
       >
         <div className="flex items-center md:justify-center md:gap-5 ml-5 gap-2 group hover:cursor-pointer">
@@ -70,6 +71,7 @@ export default function SochealMedia() {
         href={
           "https://www.linkedin.com/in/clamo-social-3a1454364/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
         }
+        aria-label="Clamo LinkedIn"
         target="_blank"
       >
         <div className="flex items-center md:justify-center md:gap-5 ml-5 gap-2 group hover:cursor-pointer">

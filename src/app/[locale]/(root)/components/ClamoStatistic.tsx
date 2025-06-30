@@ -59,7 +59,7 @@ export default function ClamoStatistic({ numbers }: { numbers: NumbersType }) {
                             <h1 className="font-bold font-vk text-2xl sm:text-3xl lg:text-[32px] leading-[100%] text-white pb-7">
                                 {t("international_cooperation")}
                             </h1>
-                            <Link href={`${locale}/about`}>
+                            <Link href={`${locale}/about`} aria-label="Learn more about us">
                                 <LearnMore />
                             </Link>
                             <div className=" flex justify-center">

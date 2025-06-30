@@ -54,13 +54,13 @@ export default function MainService() {
                 {item.description}
               </p>
               <div className="flex md:gap-[28px] gap-3 items-center">
-                <Link href={`${locale}/license`} >
+                <Link href={`${locale}/license`} aria-label="Litsensiya">
                   <button className="group font-inter lg:px-6 px-5 w-full h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[hsl(200,97%,65%)] bg-[#23b3fc] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">                    
                     {item.buttonText}
                     <FaAngleRight className="group-hover:translate-x-2 transition-all duration-200" />
                   </button>
                 </Link>
-                <Link href="tel:1369" className="flex items-center gap-[10px]">
+                <Link href="tel:1369" aria-label="Phone" className="flex items-center gap-[10px]">
                   <div className="w-[40px] h-[40px] flex items-center justify-center bg-[#23B3FC] group hover:bg-[#23B3FC]/[80%] transition-all duration-200 rounded-lg cursor-pointer">
                     <FaPhoneAlt size={19.83} />
                   </div>

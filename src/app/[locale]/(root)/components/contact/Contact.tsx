@@ -95,7 +95,7 @@ export default function Contact() {
 
           <div className="flex flex-col gap-3">
             {/* Location */}
-            <Link href={"https://yandex.uz/maps/10335/tashkent/?ll=69.303946%2C41.318330&mode=whatshere&whatshere%5Bpoint%5D=69.303883%2C41.318303&whatshere%5Bzoom%5D=17&z=16"} target="_blank" className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
+            <Link href={"https://yandex.uz/maps/10335/tashkent/?ll=69.303946%2C41.318330&mode=whatshere&whatshere%5Bpoint%5D=69.303883%2C41.318303&whatshere%5Bzoom%5D=17&z=16"} target="_blank" aria-label=" Location" className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
 
               <article className="bg-white p-3 inline-flex justify-center items-center rounded-lg">
                 <Image className="w-5 h-4" src="/icons/location.svg" alt="Location" width={50} height={50} />
@@ -112,7 +112,7 @@ export default function Contact() {
             </Link>
 
             {/* Phone */}
-            <a href="tel:+998712007007" target="_blank" className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
+            <a href="tel:+998712007007" aria-label="Phone number" target="_blank" className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
               <article className="bg-white p-3 inline-flex items-center justify-center rounded-lg">
                 <Image className="w-5 h-5" src="/icons/phone.svg" alt="Phone" width={50} height={50} />
               </article>
@@ -126,7 +126,7 @@ export default function Contact() {
               </article>
             </a>
             {/* Email */}
-            <a href="mailto:clamosocial@gmail.com" target="_blank" rel="noopener noreferrer" className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
+            <a href="mailto:clamosocial@gmail.com" aria-label="Email" target="_blank" rel="noopener noreferrer" className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
               <article className="bg-white p-3 inline-flex rounded-lg">
                 <Image className="w-5 h-4" src="/icons/email.svg" alt="Email" width={50} height={50} />
               </article>

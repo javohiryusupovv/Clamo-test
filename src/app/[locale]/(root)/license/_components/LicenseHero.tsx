@@ -96,7 +96,7 @@ export default function LicenseHero() {
                 {t("online_start")}
               </p>
 
-              <Link href={"https://license.gov.uz/"} target="_blank">
+              <Link href={"https://license.gov.uz/"} aria-label="Litsenziya" target="_blank">
                 <button className="group flex font-inter justify-center items-center gap-[4px] w-full sm:w-[273px] px-[24px] py-[10px] bg-[#23B3FC] text-[#FFFFFFFF] rounded-lg hover:bg-[#46c1ff] transition">
                   <span className="group flex items-center gap-1 text-[14px] font-medium leading-[130%]">
                     {t("get_license_button")}

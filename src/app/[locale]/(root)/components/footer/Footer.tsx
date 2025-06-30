@@ -120,14 +120,14 @@ export default function FooterLayout() {
               </p>
               <ul className="flex flex-col gap-3">
                 {menuItems.map(({ key, href }, idx) => (
-                  <Link key={idx} href={href}>
-                    <li className="group flex items-center gap-1 hover:text-[#23B3FC] text-[#3D445E] text-[14px] font-medium transition-all duration-200 cursor-pointer">
+                  <li key={idx}>
+                    <Link href={href} className="group flex items-center gap-1 hover:text-[#23B3FC] text-[#3D445E] text-[14px] font-medium transition-all duration-200 cursor-pointer">
                       <span className="w-[9px] h-[9px] rounded-full bg-[#23B3FC] opacity-0 group-hover:opacity-100 transition transform -translate-x-4 group-hover:translate-x-0"></span>
                       <span className="-translate-x-3 group-hover:translate-x-1 transition-all font-vk">
                         {t(`menu.${key}`)}
                       </span>
-                    </li>
-                  </Link>
+                    </Link>
+                  </li>
                 ))}
                 <li>
                   <Link

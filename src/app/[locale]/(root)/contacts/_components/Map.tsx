@@ -51,7 +51,7 @@ export default function ContactPage() {
             <FaGlobe className="text-blue-600" />
             <div className="group">
               <p className="text-sm font-vk">{t("website")}</p>
-              <Link href={"https://clamotest.vercel.app/"}>
+              <Link href={"https://clamotest.vercel.app/"} target="_blank" aria-label="website url" rel="noopener noreferrer">
                 <p className="font-medium font-vk group-hover:underline">{item.website}</p>
               </Link>
             </div>
