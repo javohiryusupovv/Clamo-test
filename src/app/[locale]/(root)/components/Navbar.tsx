@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
@@ -10,9 +10,10 @@ import { FaAngleDown } from "react-icons/fa6";
 
 export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLLIElement>(null);
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [header, setHeader] = useState(false);
-
   const t = useTranslations("NavbarPage");
   const locale = useLocale();
   const router = useRouter();
@@ -21,11 +22,23 @@ export default function Navbar() {
   const [selectedLang, setSelectedLang] = useState<Language>(() => {
     switch (locale) {
       case "ru":
-        return { code: "ru", label: "Rus", flag: "/icons/flags/russia-flag.svg" };
+        return {
+          code: "ru",
+          label: "Rus",
+          flag: "/icons/flags/russia-flag.svg",
+        };
       case "en":
-        return { code: "en", label: "Eng", flag: "/icons/flags/united-kingdom-flag.svg" };
+        return {
+          code: "en",
+          label: "Eng",
+          flag: "/icons/flags/united-kingdom-flag.svg",
+        };
       default:
-        return { code: "uz", label: "Uzb", flag: "/icons/flags/uzbekistan-flag.svg" };
+        return {
+          code: "uz",
+          label: "Uzb",
+          flag: "/icons/flags/uzbekistan-flag.svg",
+        };
     }
   });
 
@@ -74,6 +87,27 @@ export default function Navbar() {
     return pathname === href;
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    if (isDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isDropdownOpen]);
+
   return (
     <div className="m-auto">
       <div
@@ -114,6 +148,7 @@ export default function Navbar() {
             <ul className="flex items-center gap-10">
               <article className="relative">
                 <li
+                  ref={dropdownRef}
                   className="text-sm font-medium text-[#3D445E] cursor-pointer flex items-center gap-[9px]"
                   onClick={(e) => {
                     e.stopPropagation();
@@ -123,7 +158,7 @@ export default function Navbar() {
                   {t("abouts")}
                   <div className="w-5 h-5 flex items-center">
                     <FaAngleDown
-                      className={`mt-[6px] transition-transform text-[#3D445E] ${
+                      className={` transition-transform text-[#3D445E] ${
                         isDropdownOpen ? "rotate-180" : ""
                       }`}
                     />
@@ -307,7 +342,12 @@ export default function Navbar() {
                 )}
               </div>
               <Link href="tel:1369" className="flex items-center gap-[6px]">
-                <Image src="/icons/phone.svg" alt="Phone icon" width={17} height={17} />
+                <Image
+                  src="/icons/phone.svg"
+                  alt="Phone icon"
+                  width={17}
+                  height={17}
+                />
                 <p className="text-base font-bold text-[#3D445E]">1369</p>
               </Link>
             </ul>

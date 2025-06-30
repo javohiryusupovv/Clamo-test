@@ -5,6 +5,7 @@ import { getLicense } from "../../../../../../constants/page";
 import { useTranslations } from "next-intl";
 import { FaChevronRight } from "react-icons/fa";
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 export default function LicenseHero() {
   const t = useTranslations("LicensePage");
@@ -62,8 +63,20 @@ export default function LicenseHero() {
 
             <div className="hidden md:flex md:flex-1 justify-center items-center w-full md:w-[55%] h-auto mt-8 md:mt-0 md:absolute z-[-10] md:right-[-50px]">
               <div className="relative top-0 left-0 w-full h-[500px]">
-                <Image src="/Images/stamp.svg" alt="Pechat Clamo" width={482} height={416} className=" absolute -top-10 -left-10 z-[2] logoAnim" />
-                <Image src="/Images/Holder.svg" alt="Pechat Clamo " width={248} height={199} className="absolute bottom-0 -right-10 opacity-[0.6] z-[1]" />
+                <Image
+                  src="/Images/stamp.svg"
+                  alt="Pechat Clamo"
+                  width={482}
+                  height={416}
+                  className=" absolute -top-10 -left-10 z-[2] logoAnim"
+                />
+                <Image
+                  src="/Images/Holder.svg"
+                  alt="Pechat Clamo "
+                  width={248}
+                  height={199}
+                  className="absolute bottom-0 -right-10 opacity-[0.6] z-[1]"
+                />
               </div>
             </div>
           </div>
@@ -83,12 +96,14 @@ export default function LicenseHero() {
                 {t("online_start")}
               </p>
 
-              <button className="group flex font-inter justify-center items-center gap-[4px] w-full sm:w-[273px] px-[24px] py-[10px] bg-[#23B3FC] text-[#FFFFFFFF] rounded-lg hover:bg-[#46c1ff] transition">
-                <span className="group flex items-center gap-1 text-[14px] font-medium leading-[130%]">
-                  {t("get_license_button")}
-                  <ChevronRight className=" transition-all duration-100 group-hover:translate-x-1" />
-                </span>
-              </button>
+              <Link href={"https://license.gov.uz/"} target="_blank">
+                <button className="group flex font-inter justify-center items-center gap-[4px] w-full sm:w-[273px] px-[24px] py-[10px] bg-[#23B3FC] text-[#FFFFFFFF] rounded-lg hover:bg-[#46c1ff] transition">
+                  <span className="group flex items-center gap-1 text-[14px] font-medium leading-[130%]">
+                    {t("get_license_button")}
+                    <ChevronRight className=" transition-all duration-100 group-hover:translate-x-1" />
+                  </span>
+                </button>
+              </Link>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
