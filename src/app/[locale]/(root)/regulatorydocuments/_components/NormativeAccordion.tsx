@@ -75,8 +75,6 @@ export default function ExamplePage() {
             </AccordionItem>
           ))}
         </Accordion>
-
-
       </div>
     </div>
   );

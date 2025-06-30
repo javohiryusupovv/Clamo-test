@@ -6,7 +6,7 @@ import Link from "next/link";
 const GovernmentDecisions: React.FC = () => {
   const t = useTranslations("RegulatorydocumentsPage");
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 font-sans bg-[white]">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 font-sans bg-white">
       <div className="md:mb-8 mb-4 mt-12 lg:mt-20 flex flex-col gap-[4px]">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#3D445E] leading-[100%] font-vk text-center sm:text-start">
           {t("govDecisionsTitle")}
@@ -17,9 +17,9 @@ const GovernmentDecisions: React.FC = () => {
       </div>
       <div className="text-[#3D445E] md:pb-8">
         <div className="flex flex-col lg:flex-row gap-6 mb-6">
-          <div className="w-full lg:w-1/2 xl:w-[480px] bg-[#F6F9FC] p-6 rounded-xl flex flex-col justify-between">
+          <div className="group w-full lg:w-1/2 xl:w-[480px] bg-[#F6F9FC] hover:bg-[#4382E3] p-6 rounded-xl flex flex-col justify-between">
             <div>
-              <h2 className="text-xl font-vk md:text-2xl font-semibold text-[#3D445E] mb-3">
+              <h2 className=" group-hover:text-white text-xl font-vk md:text-2xl font-semibold text-[#3D445E] mb-3">
                 {t("govDecision1Title")}
               </h2>
             </div>
@@ -29,9 +29,9 @@ const GovernmentDecisions: React.FC = () => {
               }
               target="_blank"
             >
-              <button className="group font-vk hover:bg-[#23B3FC]/[80%] w-full sm:w-[272px] h-10 flex items-center justify-center gap-2 bg-[#23B3FC] rounded-lg text-sm font-medium leading-tight mt-6 sm:mt-8 lg:mt-12 text-white mx-auto lg:mx-0">
+                 <button className="group font-inter w-full sm:w-[272px] h-[40px] flex items-center justify-center gap-[11.5px] bg-[#23b3fc] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">                    
                 {t("downloadBtn")}{" "}
-                <FaAngleRight className="md:group-hover:translate-x-2 transition-all duration-200" />
+                <FaAngleRight />
               </button>
             </Link>
           </div>
@@ -49,9 +49,9 @@ const GovernmentDecisions: React.FC = () => {
             </p>
           </div>
 
-          <div className="w-full lg:w-1/2 xl:w-[480px] bg-[#F6F9FC] p-6 rounded-xl flex flex-col justify-between">
+          <div className=" group w-full lg:w-1/2 xl:w-[480px] bg-[#F6F9FC] hover:bg-[#4382E3] cursor-pointer p-6 rounded-xl flex flex-col justify-between">
             <div>
-              <h2 className="text-xl font-vk md:text-2xl font-semibold text-[#3D445E] mb-3">
+              <h2 className="text-xl font-vk md:text-2xl font-semibold text-[#3D445E] group-hover:text-white mb-3">
                 {t("govDecision2Title")}
               </h2>
             </div>
@@ -61,18 +61,18 @@ const GovernmentDecisions: React.FC = () => {
               }
               target="_blank"
             >
-              <button className="group font-vk hover:bg-[#23B3FC]/[80%] w-full sm:w-[272px] h-10 flex items-center justify-center gap-2 bg-[#23B3FC] rounded-lg text-sm font-medium text-white leading-tight mt-6 sm:mt-8 lg:mt-12 mx-auto lg:mx-0">
+                 <button className="group font-inter w-full sm:w-[272px] h-[40px] flex items-center justify-center gap-[11.5px] bg-[#23b3fc] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">                    
                 {t("downloadBtn")}{" "}
-                <FaAngleRight className="md:group-hover:translate-x-2 transition-all duration-200" />
+                <FaAngleRight/>
               </button>
             </Link>
           </div>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-6 mt-6">
-          <div className="w-full lg:w-1/2 xl:w-[480px] bg-[#F6F9FC] rounded-xl p-6 flex flex-col justify-between">
+          <div className="group w-full lg:w-1/2 xl:w-[480px] bg-[#F6F9FC] hover:bg-[#4382E3] cursor-pointer rounded-xl p-6 flex flex-col justify-between">
             <div>
-              <h2 className="text-xl font-vk md:text-2xl font-semibold text-[#3D445E] mb-3">
+              <h2 className="text-xl font-vk md:text-2xl font-semibold text-[#3D445E] group-hover:text-white mb-3">
                 {t("govDecision3Title")}
               </h2>
             </div>
@@ -82,9 +82,9 @@ const GovernmentDecisions: React.FC = () => {
               }
               target="_blank"
             >
-              <button className="group font-vk hover:bg-[#23B3FC]/[80%] w-full sm:w-[272px] h-10 flex items-center justify-center gap-2 bg-[#23B3FC] rounded-lg text-sm font-medium text-white leading-tight mt-6 sm:mt-8 lg:mt-12 mx-auto lg:mx-0">
+              <button className="group font-inter w-full sm:w-[272px] h-[40px] flex items-center justify-center gap-[11.5px] bg-[#23b3fc] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">                    
                 {t("downloadBtn")}
-                <FaAngleRight className="md:group-hover:translate-x-2 transition-all duration-200" />
+                <FaAngleRight />
               </button>
             </Link>
           </div>

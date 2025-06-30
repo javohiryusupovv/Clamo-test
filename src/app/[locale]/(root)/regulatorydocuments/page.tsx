@@ -25,11 +25,11 @@ export default function NormativeDocuments() {
               {t("normativeSectionDesc")}
             </p>
             <div className="flex flex-col md:flex-row gap-4 md:gap-6">
-              <button className="group hover:bg-[#23B3FC]/[80%] font-inter transition-all duration-200 w-full md:w-[272px] h-[40px] flex items-center justify-center gap-[11.5px] bg-[#23B3FC] rounded-lg text-sm font-medium text-white leading-[130%]">
+              <button className="group font-inter lg:px-20 px-5 h-[37px] flex items-center justify-center gap-[11.5px] hover:bg-[hsl(200,97%,65%)] bg-[#23b3fc] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">
                 {t("servicesBtn")}{" "}
                 <FaAngleRight className="md:group-hover:translate-x-2 transition-all duration-200" />
               </button>
-              <button className="group hover:bg-[#23B3FC]/[30%] text-[#23B3FC] bg-[#23B3FC]/[12%] font-inter transition-all duration-200 w-full md:w-[272px] h-[40px] flex items-center justify-center gap-[11.5px] rounded-lg text-sm font-medium leading-[130%]">
+              <button className="group hover:bg-[#23B3FC]/[30%] text-[#23B3FC] bg-[#23B3FC]/[12%] font-inter transition-all duration-200 lg:px-20 px-5 h-[37px] h-[37px] flex items-center justify-center gap-[11.5px] rounded-lg text-sm font-medium leading-[130%]">
                 {t("contactBtn")}{" "}
                 <FaAngleRight className="md:group-hover:translate-x-2 transition-all duration-200" />
               </button>

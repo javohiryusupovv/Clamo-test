@@ -132,7 +132,7 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
       {/* Button */}
       <div className="flex md:justify-end justify-center pt-6">
         <Link href={`/${locale}/news`}>
-          <button className="group font-vk w-48 h-[35px] sm:w-[250px] sm:h-[40px] flex items-center justify-center gap-3 bg-[#23B3FC] hover:bg-[#23B3FC]/[80%] rounded-lg text-xs sm:text-sm md:text-base font-medium text-white">
+          <button className="group font-inter lg:w-[183px] w-full h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[80%] bg-[#23B3FC] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] "> 
             {t("learn_more_button")}
             <FaAngleRight className="sm:group-hover:translate-x-2 transition-all duration-200" />
           </button>

@@ -58,7 +58,7 @@ export default function Hero() {
                 </button>
               </Link>
               <Link href={`${locale}/contacts`} className="lg:w-full w-1/2">
-                <button className="group font-inter hover:bg-[#23B3FC]/[30%] bg-[#23B3FC]/[12%] transition-all duration-200 w-full lg:w-[183px] h-[40px] flex items-center justify-center gap-[11.5px] rounded-lg text-sm font-medium text-[#23B3FC] leading-[130%]">
+                <button className="group font-inter lg:w-[183px] w-full h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[30%] bg-[#23B3FC]/[12%] transition-all duration-200 rounded-lg text-sm font-medium text-[#23B3FC]  leading-[130%] ">
                   {t("applying")}{" "}
                   <FaChevronRight className="group-hover:translate-x-1 transition-all duration-200" />
                 </button>
