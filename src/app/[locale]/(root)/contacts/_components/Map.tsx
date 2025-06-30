@@ -48,10 +48,10 @@ export default function ContactPage() {
 
           <div className="flex items-center gap-3">
             <FaGlobe className="text-blue-600" />
-            <div>
+            <div className="group">
               <p className="text-sm font-vk">{t("website")}</p>
               <Link href={"https://clamotest.vercel.app/"}>
-                <p className="font-medium font-vk">{item.website}</p>
+                <p className="font-medium font-vk group-hover:underline">{item.website}</p>
               </Link>
             </div>
           </div>

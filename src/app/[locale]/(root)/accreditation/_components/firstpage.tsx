@@ -52,8 +52,7 @@ export default function AccredationHead() {
                   size={22}
                 />
               </button>
-              <button className="group bg-[#23B3FC1F] font-inter hover:bg-[#23B3FC] hover:text-white w-full sm:w-[200px] md:w-[240px] lg:w-[272px] py-[10px] gap-[5px] border-0 rounded-lg justify-center flex items-center text-[#23B3FC] text-[14px] leading-[1.3] font-medium">
-                {btn("applying")}{" "}
+              <button className="group font-inter lg:px-20 px-16 h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[30%] bg-[#23B3FC]/[12%] transition-all duration-200 rounded-lg text-sm font-medium text-[#23B3FC]  leading-[130%] ">                {btn("applying")}{" "}
                 <ChevronRight
                   className="group-hover:translate-x-2 transition-all duration-200"
                   size={22}

@@ -44,14 +44,14 @@ export default function LicenseHero() {
               </div>
 
               <div className="flex flex-col sm:flex-row items-center gap-3 pt-8 justify-center md:justify-start">
-                <button className="group flex items-center justify-center gap-[4px] w-full sm:w-[273px] px-[24px] py-[10px] text-white rounded-lg bg-[#23B3FC] hover:bg-[#23B3FC]/80 hover:text-white transition">
+                <button className="group flex items-center justify-center gap-[4px] lg:px-20 px-16  py-[10px] text-white rounded-lg bg-[#23B3FC] hover:bg-[#23B3FC]/80 hover:text-white transition">
                   <span className="text-[14px] font-inter font-medium">
                     {btn("service_button")}
                   </span>
                   <FaChevronRight className="group-hover:translate-x-1 transition-all duration-200" />
                 </button>
 
-                <button className="group flex items-center justify-center gap-[4px] w-full sm:w-[273px] px-[24px] py-[10px] bg-[#23B3FC1F] text-[#23B3FC] rounded-lg hover:bg-[#23B3FC] hover:text-white transition">
+                <button className="group font-inter lg:px-20 px-16 h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[30%] bg-[#23B3FC]/[12%] transition-all duration-200 rounded-lg text-sm font-medium text-[#23B3FC]  leading-[130%] ">
                   <span className="text-[14px] font-inter font-medium">
                     {btn("applying")}
                   </span>
