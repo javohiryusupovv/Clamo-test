@@ -360,25 +360,25 @@ export const getLicense = (t:TFunction): enterThePortal[] => [
     title: t("document.application_title"),
     description:
       t("document.application_description"),
-    icon: "/Vector2.png",
+    icon: "/license/ariza.svg",
   },
   {
     id: 2,
     title: t("document.documents_title"),
     description:t("document.documents_description"),
-    icon: "/Vector.png",
+    icon: "/license/hujjat.svg",
   },
   {
     id: 3,
     title: t("document.expert_title"),
     description: t("document.expert_description"),
-    icon: "/Vector3.png",
+    icon: "/license/expert.svg",
   },
   {
     id: 4,
     title: t("document.license_title"),
     description: t("document.license_description"),
-    icon: "/Vector4.png",
+    icon: "/license/litsenziya.svg",
   },
 ];
 
