@@ -1,6 +1,7 @@
 import { Clock3 } from "lucide-react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import Backbtn from "../_components/Backbtn";
 
 interface NewsDetail {
   id: number;
@@ -55,6 +56,7 @@ export default async function NewsDetailPage({
 
   return (
     <div className="container mt-12">
+      <Backbtn/>
       <h1 className="text-3xl font-black mb-4">{title}</h1>
       <p className="text-gray-600 mb-4 font-vk">{description}</p>
       <article className="flex items-center gap-2 mb-6">

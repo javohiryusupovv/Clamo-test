@@ -179,6 +179,9 @@
     "hero_clamo": "CLAMO cooperates with leading international medical institutions and organizations to provide medical services that meet world standards. We rely on the latest innovations, advanced technologies, and exchange of experience.",
     "hero_btn": "Learn More"
   },
+  "BackButton": {
+    "label": "Back"
+  },
   "FooterPage": {
     "footer_des": "Simplifying licensing and accreditation processes through the introduction of digital technologies, fully integrating international standards",
     "ijtimoiy": "Social Networks",

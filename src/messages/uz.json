@@ -60,7 +60,6 @@
     "notDataTitle": "Yangiliklar topilmadi",
     "loading_text": "Yuklanmoqda",
     "more_btn": "Ko'proq",
-
     "medical": {
       "subtitle": "Sizning sog'lig'ingiz biz uchun",
       "badge": "Muhim!",
@@ -90,7 +89,6 @@
     "get_permit": "CLAMO ruxsatnoma Olishning Yangi Standarti",
     "trusted_partner": "Tashkilotingiz uchun zarur litsenziyani tez va ishonchli tarzda oling. Clamo sizning qonuniylikdagi ishonchli hamkoringiz.",
     "get_license": "Litsenziya olish bosqichlari",
-
     "online_start": "Faoliyatingizni qonuniylashtirishni rejalashtiryapsizmi? Endi bu jarayonni onlayn va oson boshlang! Ruxsatnoma olish uchun ariza topshiring, hujjatlaringizni yuklang va litsenziyani qisqa muddatda qo'lga kiriting!",
     "get_license_button": "Litsenziya olish portaliga o'tish",
     "clinics_titile": "Klinikalar reyesteri",
@@ -178,9 +176,11 @@
     "about_des4": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda...",
     "hero_title": "Tibbiyot Sohasidagi Xalqaro Hamkorlik va Tajriba Almashinuvi",
     "hero_des": "Soha bo'yicha har qanday savolingizga javob beramiz",
-
     "hero_clamo": "CLAMO jahon standartlariga mos tibbiy xizmat ko'rsatish maqsadida yetakchi xalqaro tibbiyot muassasalari va tashkilotlari bilan hamkorlik qiladi. Biz eng so'nggi innovatsiyalar, ilg'or texnologiyalar va tajriba almashinuviga tayanamiz.",
     "hero_btn": "Batafsil tanishish"
+  },
+  "BackButton": {
+    "label": "Orqaga"
   },
   "FooterPage": {
     "footer_des": "Raqamli texnologiyalarni joriy etish orqali litsenziyalash va akkreditatsiya jarayonlarini soddalashtirish, Xalqaro standartlarni to‘liq integratsiya qilish",
@@ -249,7 +249,6 @@
     "exampleTitle": "Savol 1",
     "exampleContent": "Bu savolga javob shu yerda joylashgan.",
     "pageTitle": "Normativ hujjatlar",
-
     "pageDescription": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.",
     "law1Title": "Litsensiyalash bo‘yicha qonun",
     "law1Content": "\"Litsensiyalash, ruxsat berish va xabardor qilish tartib-taomillari to‘g‘risidagi\"dagi",
