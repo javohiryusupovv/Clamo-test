@@ -74,7 +74,6 @@ export default function LicenseHero() {
       <div className="container mx-auto px-4 my-[30px]">
         <section className="bg-gradient-to-b py-[48px] from-[#39a9f2] to-[#0653C9] text-white p-6 rounded-3xl max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-[45%_55%] items-start gap-5 md:pl-5 md:pr-10">
-            {/* Chap blok */}
             <div className="flex flex-col gap-4">
               <h2 className="text-3xl md:text-5xl leading-[100%] font-bold lg:mb-4 sm:w-[80%] font-vk">
                 {t("get_license")}
@@ -92,7 +91,6 @@ export default function LicenseHero() {
               </button>
             </div>
 
-            {/* O‘ng blok - bosqichlar */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {steps(t).map((step) => (
                 <div

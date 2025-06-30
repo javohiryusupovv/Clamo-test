@@ -12,7 +12,7 @@ export default async function page() {
     <div>
       <Firstpage />
       <Secondpage />
-      <section className="container mx-auto px-4 py-[80px]">
+      <section className="container mx-auto px-4 lg:py-[80px]">
         <ReyesterClient reyesters={reyesters} types={types} />
       </section>
       <QuestionsPage faqData={faqData} />

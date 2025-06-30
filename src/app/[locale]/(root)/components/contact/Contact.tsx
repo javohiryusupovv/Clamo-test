@@ -212,7 +212,7 @@ export default function Contact() {
                     alt="Flag Icons"
                     width={50} height={50}
                   />
-                  <span className="text-[16px]">+998</span>
+                  <span className="text-[16px] max-md:mr-1 max-lg:mr-4 max-sm:mr-2 max-ms:mr-4">+998</span>
                 </article>
                 <input
                   id="phoneNumber"

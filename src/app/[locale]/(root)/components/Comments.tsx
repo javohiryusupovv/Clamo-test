@@ -16,7 +16,7 @@ export default function Izohlar() {
     <div className="md:py-[64px] py-[30px]">
       <div className="container mb-4">
         {opinion.map((item: commentOpinion, id: number) => (
-          <div key={id} className="flex flex-col gap-[4px]">
+          <div key={id} className="flex flex-col gap-[4px] md:mb-[32px]">
             <Image
               src={item.icons}
               alt="Sharh Icons"
@@ -27,7 +27,7 @@ export default function Izohlar() {
             <h1 className="font-bold font-vk lg:text-5xl md:text-4xl text-3xl text-[#3D445E]">
               {item.subtitle}
             </h1>
-            <p className="font-medium font-vk sm:text-[20px] text-[14px] text-[#012548CC] md:pb-[32.5]">
+            <p className="font-medium font-vk sm:text-[20px] text-[14px] text-[#012548CC]">
               {item.description}
             </p>
           </div>

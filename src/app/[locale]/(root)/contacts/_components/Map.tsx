@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import { getContactInfo } from "../../../../../../constants/page";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export default function ContactPage() {
   const t = useTranslations("ContactPageLayout");
@@ -49,7 +50,9 @@ export default function ContactPage() {
             <FaGlobe className="text-blue-600" />
             <div>
               <p className="text-sm font-vk">{t("website")}</p>
-              <p className="font-medium font-vk">{item.website}</p>
+              <Link href={"https://clamotest.vercel.app/"}>
+                <p className="font-medium font-vk">{item.website}</p>
+              </Link>
             </div>
           </div>
 

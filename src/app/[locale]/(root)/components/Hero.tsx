@@ -33,9 +33,6 @@ export default function Hero() {
       });
     }
   }, []);
-
-
-
   return (
     <>
       {/* Ko'k soya */}
@@ -68,10 +65,6 @@ export default function Hero() {
                   <FaChevronRight className="group-hover:translate-x-1 transition-all duration-200" />
                 </button>
               </Link>
-            </article>
-            <p className="font-medium font-inter text-[12px] pb-4 lg:w-[379px] text-[#3D445E]">
-              {t("specialists")}
-            </p>
           </div>
         </div>
         <div className="flex flex-col justify-end items-center w-auto relative -bottom-28 max-ms:-bottom-20 max-lg:bottom-[20px] right-0">

@@ -59,15 +59,15 @@ export default function ReyesterClient({
     return localizedTitle.toLowerCase().includes(searchQuery.toLowerCase());
   });
     console.log(filtered);
-    
 
-    
+
+
 
   return (
     <div>
-      <div className="max-lg:flex-col flex  justify-between gap-2 sm:gap-4 mb-11">
-        <h3 className="text-5xl mb-3 xl:mb-0 font-bold font-vk leading-[100%] text-[#3D445E]">{t("clinics_titile")}</h3>
-        <div className="flex items-center gap-6 max-sm:flex-col max-sm:items-start">
+      <div className="max-lg:flex-col flex  justify-between gap-2 sm:gap-4 lg:mb-11 md:mb-6 mb-4">
+        <h3 className="lg:text-5xl md:text-4xl text-3xl md:mb-3 xl:mb-0 font-bold font-vk leading-[100%] text-[#3D445E]">{t("clinics_titile")}</h3>
+        <div className="flex items-center lg:gap-6 gap-3 max-sm:flex-col max-sm:items-start">
           <Select
             value={selectedType || "all"}
             onValueChange={(value) => {
@@ -94,7 +94,7 @@ export default function ReyesterClient({
                   "name",
                   locale
                 );
-              
+
               return(
                 <SelectItem key={item.id} value={item.slug}>
                   {localizedTitle}
@@ -109,7 +109,7 @@ export default function ReyesterClient({
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={t("search_placeholder")}
-              className="w-full font-inter outline-none bg-transparent pl-10 pr-4 py-2 text-sm text-[#5d6268]"
+              className="w-full font-inter outline-none bg-transparent pl-10 pr-4 lg:py-2 py-1 text-sm text-[#5d6268]"
             />
           </div>
 
@@ -136,7 +136,7 @@ export default function ReyesterClient({
             location_en: item.location_en || "",
             location_ru: item.location_ru || "",
           }, "location", locale)
-          
+
           return(
             <ReyesterCard
               key={item.id}

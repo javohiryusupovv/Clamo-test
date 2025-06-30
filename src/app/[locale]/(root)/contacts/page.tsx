@@ -15,6 +15,7 @@ export default function Contacts() {
           {t("contact_subtitle")}
         </p>
       </div>
+      {/* <span></span> */}
       <Map />
       <SochealMedia />
     </div>

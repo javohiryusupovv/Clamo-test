@@ -256,7 +256,7 @@ export const getHamkorlar=(t: TFunction) => [
     desc:t("Hamkorlar.litsensiyalash.description"),
   },
   {
-    icon: "/icons/memorandum.png",
+    icon: "/icons/memorandum.svg",
     title:t("Hamkorlar.memorandum.title"),
     desc: t("Hamkorlar.memorandum.description"),
   },

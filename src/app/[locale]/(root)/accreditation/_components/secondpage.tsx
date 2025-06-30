@@ -19,8 +19,8 @@ export default function AccredationMain() {
   };
 
   return (
-    <div className="container mx-auto pb-16 lg:pt-6 sm:pt-9 pt-8 md:pt-12 xl:pt-0">
-      <h1 className="font-vksans font-bold sm:text-center akkreditsiya sm:ml-0 ml-1 text-[#3D445E] font-vksans text-[30px] sm:w-full sm:text-[35px] md:text-[40px] leading-tight md:mb-10 sm:mb-8 mb-5 lg:mb-12">
+    <div className="container mx-auto lg:pb-16 pb-8 lg:pt-6 sm:pt-9 pt-8 md:pt-12 xl:pt-0">
+      <h1 className="font-vksans font-bold sm:text-center akkreditsiya sm:ml-0 ml-1 text-[#3D445E] font-vksans text-[30px] sm:w-full text-3xl md:text-4xl lg:text-5xl leading-tight md:mb-10 sm:mb-8 mb-5 lg:mb-12">
         {t("get_accerditation")}
       </h1>
 
@@ -30,13 +30,13 @@ export default function AccredationMain() {
             key={index}
             className="bg-white rounded-[28px] md:p-6 p-4 lg:p-8 border border-gray-400/25 flex flex-col items-start sm:text-left"
           >
-            <div className="flex items-center justify-center w-[70px] h-[70px] rounded-full mb-4 bg-[#049AE7]">
+            <div className="flex items-center justify-center md:w-[70px] w-[50px] h-[50px] md:h-[70px] rounded-full mb-4 bg-[#049AE7]">
               <Image
                 src={step.icon}
                 alt={getLocalized(step, "title")}
                 width={30}
                 height={30}
-                className="object-contain"
+                className="object-contain max-md:w-[25px] max-md:h-[25px]"
               />
             </div>
             <h3 className="text-[20px] font-bold font-vk text-[#3D445E] leading-[130%] mb-2">
@@ -48,7 +48,7 @@ export default function AccredationMain() {
           </div>
         ))}
       </div>
-      
+
     </div>
   );
 }
