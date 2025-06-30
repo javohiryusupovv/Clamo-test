@@ -29,7 +29,7 @@ export default function NormativeDocuments() {
                 {t("servicesBtn")}{" "}
                 <FaAngleRight className="md:group-hover:translate-x-2 transition-all duration-200" />
               </button>
-              <button className="group hover:bg-[#23B3FC]/[30%] text-[#23B3FC] bg-[#23B3FC]/[12%] font-inter transition-all duration-200 lg:px-20 px-5 h-[37px] h-[37px] flex items-center justify-center gap-[11.5px] rounded-lg text-sm font-medium leading-[130%]">
+              <button className="group hover:bg-[#23B3FC]/[30%] text-[#23B3FC] bg-[#23B3FC]/[12%] font-inter transition-all duration-200 lg:px-20 px-5 h-[37px] flex items-center justify-center gap-[11.5px] rounded-lg text-sm font-medium leading-[130%]">
                 {t("contactBtn")}{" "}
                 <FaAngleRight className="md:group-hover:translate-x-2 transition-all duration-200" />
               </button>
