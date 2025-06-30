@@ -4,57 +4,65 @@ import Image from "next/image";
 import Doctors from "@/assets/Doctors.png";
 import gbCircle from "../../../../../../public/herobg.png";
 import shape from "../../../../../../public/shape.png";
-import "../../../../../styles/hero.css";
-import { useTranslations } from "next-intl";
-
+import { useLocale, useTranslations } from "next-intl";
 import { ChevronRight } from "lucide-react";
+import { useEffect } from "react";
+import Link from "next/link";
 
 export default function Hero() {
   const t = useTranslations("AboutPage");
+  const locale = useLocale()
+
+  useEffect(() => {
+    import("aos").then((AOS) => AOS.init({ duration: 1000 }));
+  }, []);
 
   return (
-    <div className="bg-[#F6F9FC] h-[480px] md:pt-[50px] pt-[30px] lg:mb-0 max-sm:mb-1 max-xxs:mb-28">
-      <div className="container w-full h-[310px] relative">
-        {/* Shifokorlar */}
-        <div className="flex justify-between items-center w-full md:h-[310px] h-[450px] rounded-[36px] bg-[#0653C9] overflow-hidden circleCover">
-          <div className="h-1/4">
+    <div className="md:pt-[50px] pt-[30px] max-md:my-14 lg:pb-[150px]">
+      <div className="container relative h-auto">
+        <div className="relative rounded-[36px] bg-[#0653C9] overflow-hidden h-[500px] max-ll:h-[550px] md:h-[300px] flex max-xl:gap-7 flex-col-reverse md:flex-row items-center">
+          {/* Chap rasm */}
+          <div className="relative md:w-[30%] w-full h-[310px] md:h-full">
             <Image
               src={Doctors}
               alt="Doctors"
-              className=" absolute bottom-0 left-32 md:left-14 w-[290px] z-10"
+              className="absolute bottom-0 left-10 w-[260px] md:w-[290px] z-[10] circleCover max-md:order-2 max-ll:right-1"
+              data-aos="fade-up"
             />
             <Image
               src={shape}
               alt="shape"
-              className="absolute bottom-0 left-0"
+              className="absolute bottom-0 left-0 z-[5]"
             />
           </div>
-          <div className="w-11/12 md:w-7/12">
+
             <Image
               src={gbCircle}
-              alt="bg Cirlce"
-              className=" absolute right-0 top-0 z-[22]"
+              alt="bg Circle"
+              className="absolute right-0 top-0 scale-[1.4] opacity-[0.7] z-[8] max-md:hidden"
             />
-            <article className="relative top-0 left-0 z-[22]">
-              <h3 className=" text-[24px] sm:text-[30px] md:text-[40px] font-bold font-vk text-[#FFFFFF] leading-[50px] md:mr-0 mr-[70px] md:mt-0 mt-[90px] sm:mt-[160px]">
-                {t("hero_title")}
-              </h3>
-              <p className="text-[16px] font-vk opacity-60 text-white mb-7 font-medium leading-[100%]">
-                {t("hero_des")}
-              </p>
-              <button className="md:px-10 px-4 py-2 font-vk cursor-pointer rounded-md flex items-center gap-1 text-white bg-[#23B3FC] hover:bg-[#30B9FF]">
-                {t("hero_btn")}
-                <ChevronRight className="stroke-white" />
-              </button>
-            </article>
+          {/* Matn qismi */}
+          <div className="relative z-[15] md:w-[70%] w-full px-4 py-6 md:py-0 md:pl-10 max-md:order-1">
+            <h3 className="text-white font-bold font-vk leading-[44px] text-[25px] md:leading-[35px] md:text-[27px] lg:text-[35px] xl:text-[40px] mb-3">
+              {t("hero_title")}
+            </h3>
+            <p className="text-white opacity-60 text-[16px] font-vk font-medium mb-5">
+              {t("hero_des")}
+            </p>
+            <Link href={`/${locale}/international`} className="group font-inter cursor-pointer lg:px-20 px-10 h-[40px] inline-flex items-center justify-center gap-[11.5px] hover:bg-[#48bdf7] bg-[#23B3FC] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">               {t("hero_btn")}
+              <ChevronRight className="stroke-white sm:group-hover:translate-x-2 transition-all duration-200" />
+            </Link>
           </div>
         </div>
-        <div className="hidden xl:flex absolute top-[270px] w-[1008px] h-[130px] mb-[40px] items-center justify-center z-[20] bg-white rounded-lg left-1/2 transform -translate-x-1/2">
-          <p className="w-[950px] font-vk text-[#3D445E] text-[20px] font-normal">
+
+        {/* Pastdagi kartochka */}
+        <div className="hidden lg:flex absolute top-[270px] left-1/2 transform -translate-x-1/2 w-[800px] xl:w-[1008px] h-[130px] items-center justify-center z-[20] bg-white border border-gray-100 rounded-lg px-2">
+          <p className="w-[90%] text-[#3D445E] text-[20px] font-vk font-normal">
             {t("hero_clamo")}
           </p>
         </div>
+
       </div>
     </div>
-  );
+  )
 }

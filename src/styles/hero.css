@@ -12,7 +12,7 @@
         border-radius: 50%;
         filter: blur(150px);
         background-color: #6EB8E8;
-        z-index: 2;
+        z-index: 5;
     }
     &::after{
         content: "";
@@ -25,6 +25,6 @@
         filter: blur(30px);
         background: #0653C9;
         background: linear-gradient(1deg, rgba(6, 83, 201, 1) 0%, rgba(6, 83, 201, 0.63) 100%);
-        z-index: 10;
+        z-index: 19;
     }
 }
