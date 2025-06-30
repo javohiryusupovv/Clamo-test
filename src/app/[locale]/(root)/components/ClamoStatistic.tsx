@@ -15,37 +15,48 @@ function useCountUp(target: number, duration = 1500) {
     const raf = useRef<number | null>(null);
 
     useEffect(() => {
-      let start: number | null = null;
-      const animate = (timestamp: number) => {
-        if (!start) start = timestamp;
-        const progress = Math.min((timestamp - start) / duration, 1);
-        setCount(Math.floor(progress * target));
-        if (progress < 1) {
-          raf.current = requestAnimationFrame(animate);
+        let start: number | null = null;
+        const animate = (timestamp: number) => {
+            if (!start) start = timestamp;
+            const progress = Math.min((timestamp - start) / duration, 1);
+            setCount(Math.floor(progress * target));
+            if (progress < 1) {
+                raf.current = requestAnimationFrame(animate);
+            } else {
+                setCount(target);
+            }
+        };
+        if (target > 0) {
+            raf.current = requestAnimationFrame(animate);
         } else {
-          setCount(target);
+            setCount(0);
         }
-      };
-      if (target > 0) {
-        raf.current = requestAnimationFrame(animate);
-      } else {
-        setCount(0);
-      }
-      return () => {
-        if (raf.current) cancelAnimationFrame(raf.current);
-      };
+        return () => {
+            if (raf.current) cancelAnimationFrame(raf.current);
+        };
     }, [target, duration]);
     return count;
-  }
+}
 
 
 export default function ClamoStatistic({ numbers }: { numbers: NumbersType }) {
     const t = useTranslations("HomePage");
-  const locale = useLocale();
+    const locale = useLocale();
 
-  const animatedClinics = useCountUp(Number(numbers.clinics_number));
-  const animatedConsulting = useCountUp(Number(numbers.consulting_number));
-  const animatedLicenses = useCountUp(Number(numbers.licenses_number));
+    const animatedClinics = useCountUp(Number(numbers.clinics_number));
+    const animatedConsulting = useCountUp(Number(numbers.consulting_number));
+    const animatedLicenses = useCountUp(Number(numbers.licenses_number));
+
+    useEffect(() => {
+        const loadAOS = async () => {
+            const AOS = await import("aos");
+            AOS.init({ duration: 1000 });
+        };
+
+        if (typeof window !== "undefined") {
+            loadAOS();
+        }
+    }, []);
     return (
         <>
             {/* Shifokorlar */}
@@ -69,6 +80,7 @@ export default function ClamoStatistic({ numbers }: { numbers: NumbersType }) {
                                     width={359}
                                     height={370}
                                     className="object-contain pt-4 pl-4 sm:pl-[58px] lg:w-[75%] sm:w-[60%] w-[75%]"
+                                    data-aos="fade-up"
                                 />
                             </div>
                             <div className="absolute lg:-bottom-10 bottom-0 left-0 w-full h-[180px] bg-gradient-to-t from-blue-700/100 to-transparent" />
@@ -106,6 +118,7 @@ export default function ClamoStatistic({ numbers }: { numbers: NumbersType }) {
                                         src={bgCircle}
                                         className=" absolute top-0 left-36 opacity-[0.7] max-ll:top-4"
                                         alt="BgCircle"
+                                        data-aos="flip-left"
                                     />
                                     <div className="pt-10">
                                         <h1 className="xl:text-[48px] lg:text-[39px] text-[36px] font-bold">

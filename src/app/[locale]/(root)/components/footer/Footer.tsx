@@ -6,6 +6,7 @@ import "./Footer.css";
 import Link from "next/link";
 import Contact from "../contact/Contact";
 import { useTranslations, useLocale } from "next-intl";
+import { useEffect } from "react";
 
 export default function FooterLayout() {
   const t = useTranslations("FooterPage");
@@ -17,6 +18,17 @@ export default function FooterLayout() {
     { key: "license", href: `/${locale}/license` },
     { key: "accreditation", href: `/${locale}/accreditation` },
   ];
+
+  useEffect(() => {
+      const loadAOS = async () => {
+        const AOS = await import("aos");
+        AOS.init({ duration: 1000 });
+      };
+  
+      if (typeof window !== "undefined") {
+        loadAOS();
+      }
+    }, []);
 
   return (
     <div className="md:pt-20  bg-[#F6F9FC] p-4">
@@ -159,6 +171,7 @@ export default function FooterLayout() {
               alt="Flag Clamo"
               width={400}
               height={300}
+              data-aos="fade-up"
             />
           </div>
         </div>
