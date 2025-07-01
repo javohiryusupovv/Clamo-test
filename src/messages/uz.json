@@ -2,7 +2,7 @@
   "NavbarPage": {
     "abouts": "Biz haqimizda",
     "licens": "Litsenziyalash",
-    "accredation": "Akkreditsiyalash",
+    "accredation": "Akreditatsiyalash",
     "contacts": "Bog'lanish",
     "aboutss": "Markaz haqida",
     "international": "Xalqaro hamkorlik",
@@ -10,13 +10,13 @@
     "regulatorydocuments": "Normativ Hujjatlar"
   },
   "ReyesterCard": {
-    "view_license": "View License",
-    "accreditation_number": "Accreditation Number",
-    "shares": "Sharhlar",
-    "registration_date": "Accreditation Date",
-    "website": "Website",
-    "email": "Email Address",
-    "phone": "Phone Number"
+    "view_license": "Litsenziyani ko‘rish",
+    "accreditation_number": "Akkreditatsiya raqami",
+    "shares": "Reviews",
+    "registration_date": "Akkreditatsiya berilgan sana",
+    "website": "Vebsayt",
+    "email": "Email manzil",
+    "phone": "Telefon raqam"
   },
   "ZodForm": {
     "name_subtitle": "Ism kamida 3 ta belgidan iborat bo‘lishi kerak",
@@ -107,8 +107,8 @@
     }
   },
   "AccreditationPage": {
-    "accerditation_title": "AKKREDITSIYALASH",
-    "modern_accerditation": "CLAMO bilan akkreditsiyalash — zamonaviy yondashuv",
+    "accerditation_title": "AKREDITATSIYALASH",
+    "modern_accerditation": "CLAMO bilan akreditatsiyalash — zamonaviy yondashuv",
     "necessary_license": " Tashkilotingiz uchun zarur litsenziyani tez va ishonchli tarzda oling. Clamo sizning qonuniylikdagi ishonchli hamkoringiz.",
     "get_accerditation": "Akkreditsiya olish bosqichlari"
   },
@@ -192,7 +192,7 @@
       "regulatorydocuments": "Normativ hujjatlar",
       "center": "Markaz haqida",
       "license": "Litsenziyalash",
-      "accreditation": "Akkreditsiyalash"
+      "accreditation": "Akreditatsiyalash"
     },
     "developed": "Ishlab chiquvchi:"
   },

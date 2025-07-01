@@ -95,7 +95,7 @@ export default function NewsGrid({ news }: { news: NewsTypes[] }) {
                           <span>{time}</span>
                         </h6>
                         <h2 className="text-lg font-semibold leading-snug line-clamp-2 font-vk">{localeTitle}</h2>
-                        <p className="text-sm text-gray-600 line-clamp-2 font-vk">{localeDescription}</p>
+                        <p className="text-sm text-gray-600 line-clamp-3 font-vk">{localeDescription}</p>
                       </div>
                     </div>
                   </Link>

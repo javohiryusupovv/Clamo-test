@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{locale: st
     ],
     authors: [{ name: "Clamo" }],
     creator: "Clamo",
-    icons: { icon: "/LogoClamo.svg" },
+    icons: { icon: "/HeadLogo.svg" },
     openGraph: {
       title: t.title,
       description: t.ogDescription,

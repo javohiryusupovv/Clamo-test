@@ -10,13 +10,14 @@
     "regulatorydocuments": "Regulatory Documents"
   },
   "ReyesterCard": {
-    "view_license": "Litsenziyani ko‘rish",
-    "accreditation_number": "Akkreditatsiya raqami",
-    "shares": "Reviews",
-    "registration_date": "Akkreditatsiya berilgan sana",
-    "website": "Vebsayt",
-    "email": "Email manzil",
-    "phone": "Telefon raqam"
+    
+    "view_license": "View License",
+    "accreditation_number": "Accreditation Number",
+    "shares": "Sharhlar",
+    "registration_date": "Accreditation Date",
+    "website": "Website",
+    "email": "Email Address",
+    "phone": "Phone Number"
   },
   "ZodForm": {
     "name_subtitle": "The name must be at least 3 characters long",
