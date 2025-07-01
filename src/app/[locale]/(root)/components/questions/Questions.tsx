@@ -17,8 +17,6 @@ interface Props {
 
 export default function FaqAccordion({ faqData }: Props) {
   const locale = useLocale();
-  const t = useTranslations("HomePage");
-
 
 
   return (
