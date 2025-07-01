@@ -1,6 +1,6 @@
 "use client";
 import { FAQItem } from "../../../../../../app.types";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import { getLocalizedValue, pickStringProps } from "@/lib/getLocalization";
 
 
