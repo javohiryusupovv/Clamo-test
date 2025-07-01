@@ -4,11 +4,13 @@ import "../../../../styles/documents.css";
 import NormativeAccordion from "./_components/NormativeAccordion";
 import GovernmentDecisionsPage from "./_components/government-decisions";
 import CenterRegulations from "./_components/CenterRegulations";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { FaAngleRight } from "react-icons/fa6";
+import Link from "next/link";
 
 export default function NormativeDocuments() {
   const t = useTranslations("RegulatorydocumentsPage");
+  const locale = useLocale();
   return (
     <div className="bg-white w-full">
       <div className="min-h-[40vh] lg:min-h-[70vh] md:min-h-[70vh] container">
@@ -25,10 +27,12 @@ export default function NormativeDocuments() {
               {t("normativeSectionDesc")}
             </p>
             <div className="flex flex-col md:flex-row gap-4 md:gap-6">
-              <button className="group font-inter lg:px-20 px-5 h-[37px] flex items-center justify-center gap-[11.5px] hover:bg-[hsl(200,97%,65%)] bg-[#23b3fc] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">
-                {t("servicesBtn")}{" "}
-                <FaAngleRight className="md:group-hover:translate-x-2 transition-all duration-200" />
-              </button>
+              <Link href={`/${locale}/about#services-center`}>
+                <button className="group font-inter lg:px-20 px-5 h-[37px] flex items-center justify-center gap-[11.5px] hover:bg-[hsl(200,97%,65%)] bg-[#23b3fc] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">
+                  {t("servicesBtn")}{" "}
+                  <FaAngleRight className="md:group-hover:translate-x-2 transition-all duration-200" />
+                </button>
+              </Link>
               <button className="group hover:bg-[#23B3FC]/[30%] text-[#23B3FC] bg-[#23B3FC]/[12%] font-inter transition-all duration-200 lg:px-20 px-5 h-[37px] flex items-center justify-center gap-[11.5px] rounded-lg text-sm font-medium leading-[130%]">
                 {t("contactBtn")}{" "}
                 <FaAngleRight className="md:group-hover:translate-x-2 transition-all duration-200" />

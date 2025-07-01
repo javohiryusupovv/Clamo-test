@@ -25,7 +25,7 @@ export default function TeamCarousel({ members }: { members: TeamMembers[] }) {
 
   return (
     <div className="bg-[#F8FAFC]">
-      <div className="w-full md:py-12 pt-5 container mx-auto">
+      <div className="w-full md:py-12 pt-5 pb-5 container">
         <article className="flex flex-col gap-[4px]">
           <h2 className="text-3xl font-vk md:text-4xl lg:text-5xl font-bold text-[#3D445E] leading-[100%] text-start">
             {t("team_title")}
@@ -70,7 +70,7 @@ export default function TeamCarousel({ members }: { members: TeamMembers[] }) {
         ) : (
           <p>Loading...</p>
         )}
-        <div className="flex justify-center items-center gap-4 mt-6">
+        <div className="flex justify-center items-center gap-4 mt-5">
           <button
             ref={prevRef}
             className="group p-2 bg-white border rounded-full hover:border-transparent hover:bg-[#23B3FC] transition-all duration-200 disabled:opacity-50"

@@ -26,7 +26,7 @@ export default async function Main() {
       <Hero />
       <ClamoStatistic numbers={data[0]}/>
       <MedicalLegal />
-      <div className="bg-[#F6F9FC]">
+      <div className="bg-[#F6F9FC] scroll-mt-3" id="contact-section">
         <div className="max-lg:container">
           <ServicesSection servicec={service} />
         </div>

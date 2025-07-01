@@ -16,10 +16,13 @@ export default function ServicesSection({
   const slugs = ["accreditation", "license", "consulting", ""];
 
   return (
-    <section className="md:py-16 py-8 bg-[#F6F9FC]" id="contact-section">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      className="md:py-16 py-8 bg-[#F6F9FC] max-md:scroll-mt-14 scroll-mt-4"
+      id="services-center"
+    >
+      <div className=" container">
         <div className="md:mb-12 mb-6 flex flex-col gap-[4px]">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl leading-[100%] font-vk font-bold text-[#3D445E] text-start">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-[100%] font-vk font-bold text-[#3D445E] text-start">
             {t("service")}
           </h2>
           <p className="text-sm sm:text-base md:text-[20px] font-vk text-[#012548CC] leading-[140%] md:max-w-full max-w-2xl text-start">

@@ -59,7 +59,7 @@ export default function Hero() {
             <article className="flex items-center max-md:justify-between gap-3 pb-4 pt-4">
               <button
                 onClick={scrollToContactSection}
-                className="group font-inter  w-full h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[80%] bg-[#23B3FC] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] "
+                className="group font-inter w-full h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[80%] bg-[#23B3FC] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] "
               >
                 {t("service_button")}{" "}
                 <FaAngleRight className="group-hover:translate-x-1 transition-all duration-200" />
@@ -68,7 +68,7 @@ export default function Hero() {
               <Link
                 href={`${locale}/contacts`}
                 aria-label="Contact user"
-                className="lg:w-full w-1/2"
+                className="w-full"
               >
                 <button className="group font-inter lg:w-[183px] w-full h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[30%] bg-[#23B3FC]/[12%] transition-all duration-200 rounded-lg text-sm font-medium text-[#23B3FC]  leading-[130%] ">
                   {t("applying")}{" "}

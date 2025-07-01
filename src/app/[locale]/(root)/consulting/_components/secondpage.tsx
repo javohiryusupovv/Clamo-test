@@ -12,8 +12,8 @@ export default function secondpage({ carousel }: { carousel: CarouselData[] }) {
   const t = useTranslations("ConsultingPage");
 
   return (
-    <div className=" h-[518px] second-div w-full bg-[#ffffff]">
-      <div className="flex flex-col gap-[4px] font-vksans lg:mb-[44px] md:mb-[37px] mb-[25px] sm:pt-[40px] md:pt-[50px] lg:pt-[64px] container">
+    <div className="second-div w-full bg-[#ffffff] lg:mb-12 mb-6">
+      <div className="flex flex-col gap-[4px] font-vksans lg:mb-[25px] mb-[15px] max-lg:mt-[30px] container">
         <h1 className="font-bold font-vk text-[#3D445E] md:text-4xl text-3xl lg:text-5xl leading-[100% ]">
           {t("work_direction")}
         </h1>

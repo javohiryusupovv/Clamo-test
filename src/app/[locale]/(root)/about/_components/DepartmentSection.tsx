@@ -11,9 +11,9 @@ export default function DepartmentSection({
   const t = useTranslations("AboutPage");
   const locale = useLocale();
   return (
-    <section className="px-4 py-10 max-w-6xl mx-auto">
+    <section className=" container md:py-12 py-5">
       <div className="flex flex-col gap-[4px]">
-        <h2 className="text-3xl font-vk md:text-4xl lg:text-5xl font-bold text-[#3D445E] text-start">
+        <h2 className="text-2xl sm:text-3xl font-vk md:text-4xl lg:text-5xl font-bold text-[#3D445E] text-start">
           {t("abouttitle3")}
         </h2>
         <p className="text-[#012548CC] md:pb-[44px] pb-5 font-vk font-medium md:text-[20px] sm:text-base text-sm">
@@ -21,7 +21,7 @@ export default function DepartmentSection({
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="grid md:grid-cols-2 md:gap-4">
         {agentsection.map((departments) => {
           const stringDepartments = pickStringProps(departments);
           const titleLocale = getLocalizedValue(
