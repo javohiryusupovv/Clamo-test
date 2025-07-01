@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{locale: st
     title: t.title,
     description: t.description,
     keywords: [
-      "Clamo",
+      "CLAMO",
       "litsenziya",
       "akkreditatsiya",
       "davlat muassasasi",
@@ -34,20 +34,20 @@ export async function generateMetadata({ params }: { params: Promise<{locale: st
       "litsenziyalash markazi",
       "akkreditatsiya qilish",
     ],
-    authors: [{ name: "Clamo" }],
-    creator: "Clamo",
+    authors: [{ name: "CLAMO" }],
+    creator: "CLAMO",
     icons: { icon: "/HeadLogo.svg" },
     openGraph: {
       title: t.title,
       description: t.ogDescription,
       url: "https://clamotest.vercel.app",
-      siteName: "Clamo",
+      siteName: "CLAMO",
       images: [
         {
           url: "/og-image.png",
           width: 1200,
           height: 630,
-          alt: "Clamo – Litsenziya va Akkreditatsiya platformasi",
+          alt: "CLAMO – Litsenziya va Akkreditatsiya platformasi",
         },
       ],
       type: "website",

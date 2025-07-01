@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{locale: st
     title_uz: "Clamo — bilan xalqaro hamkorliklar",
     description_uz: "CLAMO xalqaro darajada o'z o'rniga ega bo'lgan tashkilotlar bilan hamkorlik qilish orqali, sifat va natijani taqdim qiladi.",
 
-    title_ru: "Clamo — международное сотрудничество",
+    title_ru: "CLAMO — международное сотрудничество",
     description_ru: "CLAMO обеспечивает качество и результативность за счёт сотрудничества с организациями, занимающими прочное положение на международной арене.",
 
     title_en: "Clamo — International Partnerships",

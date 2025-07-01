@@ -432,30 +432,30 @@ export const getSochealMedia: SochealMedia[] = [
 
 export const metadataContent = {
   uz: {
-    title: "Clamo – Litsenziyalash va Akkreditatsiyalash Markazi",
+    title: "CLAMO – Litsenziyalash va Akkreditatsiyalash Markazi",
     description:
-      "Clamo — litsenziyalash va akkreditatsiyalash bo‘yicha xizmatlar ko‘rsatadigan davlat muassasasi. Ta'lim, sog‘liqni saqlash va boshqa sohalarda yuridik shaxslarni rasmiy ro‘yxatdan o‘tkazish va sifatini baholashga doir barcha jarayonlarni yengil va shaffof tarzda amalga oshiring.",
+      "CLAMO — litsenziyalash va akkreditatsiyalash bo‘yicha xizmatlar ko‘rsatadigan davlat muassasasi. Ta'lim, sog‘liqni saqlash va boshqa sohalarda yuridik shaxslarni rasmiy ro‘yxatdan o‘tkazish va sifatini baholashga doir barcha jarayonlarni yengil va shaffof tarzda amalga oshiring.",
     ogDescription:
-      "Davlat litsenziya va akkreditatsiya jarayonlarini raqamlashtirish va soddalashtirishga yo‘naltirilgan platforma. Clamo orqali muassasangizni tez, qulay va shaffof tarzda ro‘yxatdan o‘tkazing.",
+      "Davlat litsenziya va akkreditatsiya jarayonlarini raqamlashtirish va soddalashtirishga yo‘naltirilgan platforma. CLAMO orqali muassasangizni tez, qulay va shaffof tarzda ro‘yxatdan o‘tkazing.",
     twitterDescription:
-      "Litsenziya va akkreditatsiyani Clamo orqali tez, oson va ishonchli tarzda oling.",
+      "Litsenziya va akkreditatsiyani CLAMO orqali tez, oson va ishonchli tarzda oling.",
   },
   ru: {
-    title: "Clamo – Центр лицензирования и аккредитации",
+    title: "CLAMO – Центр лицензирования и аккредитации",
     description:
-      "Clamo — государственное учреждение, предоставляющее услуги по лицензированию и аккредитации. Упростите и сделайте прозрачными процессы регистрации и оценки качества юридических лиц в сферах образования, здравоохранения и других.",
+      "CLAMO — государственное учреждение, предоставляющее услуги по лицензированию и аккредитации. Упростите и сделайте прозрачными процессы регистрации и оценки качества юридических лиц в сферах образования, здравоохранения и других.",
     ogDescription:
       "Платформа для цифровизации и упрощения государственных процессов лицензирования и аккредитации. Зарегистрируйте вашу организацию быстро и удобно с Clamo.",
     twitterDescription:
-      "Получите лицензию и аккредитацию быстро, легко и надёжно с Clamo.",
+      "Получите лицензию и аккредитацию быстро, легко и надёжно с CLAMO.",
   },
   en: {
-    title: "Clamo – Licensing and Accreditation Center",
+    title: "CLAMO – Licensing and Accreditation Center",
     description:
-      "Clamo is a government institution providing licensing and accreditation services. Streamline and simplify the registration and quality assessment processes for legal entities in education, healthcare, and other sectors.",
+      "CLAMO is a government institution providing licensing and accreditation services. Streamline and simplify the registration and quality assessment processes for legal entities in education, healthcare, and other sectors.",
     ogDescription:
       "A platform designed to digitize and simplify state licensing and accreditation procedures. Register your organization quickly and transparently with Clamo.",
     twitterDescription:
-      "Get licensed and accredited quickly, easily, and reliably with Clamo.",
+      "Get licensed and accredited quickly, easily, and reliably with CLAMO.",
   },
 };

@@ -33,7 +33,7 @@ export async function generateMetadata({
     { cache: "no-store" }
   );
 
-  if (!res.ok) return { title: "Clamo News", description: "News not found." };
+  if (!res.ok) return { title: "CLAMO News", description: "News not found." };
 
   const data: NewsDetail = await res.json();
 
