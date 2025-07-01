@@ -2,12 +2,10 @@ import { Suspense } from "react"
 import Navbar from "./components/Navbar/Navbar"
 import Loading from "@/component/Loading"
 import FooterLayout from "./components/footer/Footer"
-import { useLocale } from "next-intl"
 
 
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-    const locale = useLocale()
 
     return (
         <>
