@@ -77,11 +77,41 @@
       "your_opinion": "You can leave your feedback on the platform"
     },
     "cardComment": {
-      "name": "Umid G'afurov",
-      "title": "Review",
-      "badge": "CLAMO",
-      "time": "15 minutes ago",
-      "comment": "The process of obtaining a license was even faster and more transparent than expected. The digitization of all stages made our work much easier."
+      "name_one": "Dilorom Abdullaeva",
+      "time_one": "10 minutes ago",
+      "comment_one": "Getting a license through the online system was very easy and convenient. No paperwork, everything is clear and automated. I'm very grateful!",
+
+      "name_two": "Jasur Ikromov",
+      "time_two": "1 hour ago",
+      "comment_two": "Submitting the application and documents electronically was much faster than expected. All steps were automated, which made the process easier.",
+
+      "name_three": "Shaxnoza Saidova",
+      "time_three": "25 minutes ago",
+      "comment_three": "At first, I was skeptical, but the platform is really well made. I sent my documents and received a response without waiting.",
+
+      "name_four": "Murod Rahimov",
+      "time_four": "40 minutes ago",
+      "comment_four": "I was tired of the bureaucracy in the licensing process. This online service made things much easier. Thank you all!",
+
+      "name_five": "Nargiza Xolmuhamedova",
+      "time_five": "5 minutes ago",
+      "comment_five": "The unified electronic system made the licensing steps very convenient. The website interface is clear and modern.",
+
+      "name_six": "Shakhnaz Kamolova",
+      "time_six": "3 minutes ago",
+      "comment_six": "The process is greatly simplified. As a user, I understood everything easily and had no issues.",
+
+      "name_seven": "Aziz Bakhriddinov",
+      "time_seven": "1 minute ago",
+      "comment_seven": "The app interface is very user-friendly. I had no difficulties uploading my documents.",
+
+      "name_eight": "Oybek Rahimov",
+      "time_eight": "1 hour ago",
+      "comment_eight": "The new system really works efficiently. All steps are clearly explained, no more waiting in line.",
+
+      "name_nine": "Gulchehra Yusupova",
+      "time_nine": "2 hours ago",
+      "comment_nine": "The digital system saved me a lot of time. No more standing in lines like before — everything is handled online."
     }
   },
   "LicensePage": {

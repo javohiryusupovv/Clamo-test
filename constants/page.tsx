@@ -109,91 +109,83 @@ export const getPlatforms = (t: TFunction): PlatformsServiceProps[] => [
   },
 ];
 
-
-export const getCardComment = (t:TFunction): CardComment[] => [
+export const getCardComment = (t: TFunction): CardComment[] => [
   {
     id: 1,
     img: "/Imgs/Umid.png",
-    name: t("cardComment.name"),
-    title: t("cardComment.title"),
-    badge: t("cardComment.badge"),
+    name: t("cardComment.name_one"),
     staricon: "/Imgs/Stars.png",
-    time: t("cardComment.time"),
-    comment: t("cardComment.comment"),
+    time: t("cardComment.time_one"),
+    comment: t("cardComment.comment_one"),
   },
-    {
-        id: 2,
-        img: "/Imgs/Umid.png",
-        name: t("cardComment.name"),
-        title: t("cardComment.title"),
-        badge: t("cardComment.badge"),
-        staricon: "/Imgs/Stars.png",
-        time: t("cardComment.time"),
-        comment: t("cardComment.comment"),
-    },
-    {
-        id: 3,
-        img: "/Imgs/Umid.png",
-        name: t("cardComment.name"),
-        title: t("cardComment.title"),
-        badge: t("cardComment.badge"),
-        staricon: "/Imgs/Stars.png",
-        time: t("cardComment.time"),
-        comment: t("cardComment.comment"),
-    },
-    {
-        id: 4,
-        img: "/Imgs/Umid.png",
-        name: t("cardComment.name"),
-        title: t("cardComment.title"),
-        badge: t("cardComment.badge"),
-        staricon: "/Imgs/Stars.png",
-        time: t("cardComment.time"),
-        comment: t("cardComment.comment"),
-    },
-    {
-        id: 5,
-        img: "/Imgs/Umid.png",
-        name: t("cardComment.name"),
-        title: t("cardComment.title"),
-        badge: t("cardComment.badge"),
-        staricon: "/Imgs/Stars.png",
-        time: t("cardComment.time"),
-        comment: t("cardComment.comment"),
-    },
-    {
-        id: 6,
-        img: "/Imgs/Umid.png",
-        name: t("cardComment.name"),
-        title: t("cardComment.title"),
-        badge: t("cardComment.badge"),
-        staricon: "/Imgs/Stars.png",
-        time: t("cardComment.time"),
-        comment: t("cardComment.comment"),
-    },
-    {
-        id: 7,
-        img: "/Imgs/Umid.png",
-        name: t("cardComment.name"),
-        title: t("cardComment.title"),
-        badge: t("cardComment.badge"),
-        staricon: "/Imgs/Stars.png",
-        time: t("cardComment.time"),
-        comment: t("cardComment.comment"),
-    },
-    {
-        id: 8,
-        img: "/Imgs/Umid.png",
-        name: t("cardComment.name"),
-        title: t("cardComment.title"),
-        badge: t("cardComment.badge"),
-        staricon: "/Imgs/Stars.png",
-        time: t("cardComment.time"),
-        comment: t("cardComment.comment"),
-    },
+  {
+    id: 2,
+    img: "/Imgs/murod.png",
+    name: t("cardComment.name_two"),
+    staricon: "/Imgs/Stars.png",
+    time: t("cardComment.time_two"),
+    comment: t("cardComment.comment_two"),
+  },
+  {
+    id: 3,
+    img: "/Imgs/Umid.png",
+    name: t("cardComment.name_three"),
+    staricon: "/Imgs/Stars.png",
+    time: t("cardComment.time_three"),
+    comment: t("cardComment.comment_three"),
+  },
+  {
+    id: 4,
+    img: "/Imgs/Umid.png",
+    name: t("cardComment.name_four"),
+    staricon: "/Imgs/Stars.png",
+    time: t("cardComment.time_four"),
+    comment: t("cardComment.comment_four"),
+  },
+  {
+    id: 5,
+    img: "/Imgs/Umid.png",
+    name: t("cardComment.name_five"),
+    staricon: "/Imgs/Stars.png",
+    time: t("cardComment.time_five"),
+    comment: t("cardComment.comment_five"),
+  },
+  {
+    id: 6,
+    img: "/Imgs/Umid.png",
+    name: t("cardComment.name_six"),
+    staricon: "/Imgs/Stars.png",
+    time: t("cardComment.time_six"),
+    comment: t("cardComment.comment_six"),
+  },
+  {
+    id: 7,
+    img: "/Imgs/Umid.png",
+    name: t("cardComment.name_seven"),
+    staricon: "/Imgs/Stars.png",
+    time: t("cardComment.time_seven"),
+    comment: t("cardComment.comment_seven"),
+  },
+  {
+    id: 8,
+    img: "/Imgs/Umid.png",
+    name: t("cardComment.name_eight"),
+    staricon: "/Imgs/Stars.png",
+    time: t("cardComment.time_eight"),
+    comment: t("cardComment.comment_eight"),
+  },
+  {
+    id: 9,
+    img: "/Imgs/Umid.png",
+    name: t("cardComment.name_nine"),
+    staricon: "/Imgs/Stars.png",
+    time: t("cardComment.time_nine"),
+    comment: t("cardComment.comment_nine"),
+  },
 ];
 
-export const getOpinion = (t:TFunction): OpinionCard[] => [
+
+export const getOpinion = (t: TFunction): OpinionCard[] => [
   {
     id: 1,
     icons: "/Imgs/sharh-logo.svg",
@@ -244,7 +236,7 @@ export const getfaqData: FAQItem[] = [
   },
 ];
 
-export const getHamkorlar=(t: TFunction) => [
+export const getHamkorlar = (t: TFunction) => [
   {
     icon: "/icons/1inter.svg",
     title: t("Hamkorlar.akredatsiyalash.title"),
@@ -252,12 +244,12 @@ export const getHamkorlar=(t: TFunction) => [
   },
   {
     icon: "/icons/litsenziyaicons.svg",
-    title:t("Hamkorlar.litsensiyalash.title"),
-    desc:t("Hamkorlar.litsensiyalash.description"),
+    title: t("Hamkorlar.litsensiyalash.title"),
+    desc: t("Hamkorlar.litsensiyalash.description"),
   },
   {
     icon: "/icons/memorandum.svg",
-    title:t("Hamkorlar.memorandum.title"),
+    title: t("Hamkorlar.memorandum.title"),
     desc: t("Hamkorlar.memorandum.description"),
   },
 ];
@@ -271,9 +263,12 @@ export const getSteps: StepType[] = [
     title_ru: "Подача заявления",
     description:
       "Markazning rasmiy platformasi orqali litsenziya olish uchun murojaat qilish",
-    description_uz: "Markazning rasmiy platformasi orqali litsenziya olish uchun murojaat qilish",
-    description_en: "Apply for a license through the official platform of the center",
-    description_ru: "Подать заявление на получение лицензии через официальную платформу центра",
+    description_uz:
+      "Markazning rasmiy platformasi orqali litsenziya olish uchun murojaat qilish",
+    description_en:
+      "Apply for a license through the official platform of the center",
+    description_ru:
+      "Подать заявление на получение лицензии через официальную платформу центра",
   },
   {
     icon: "/Images/checkicons.svg",
@@ -283,10 +278,12 @@ export const getSteps: StepType[] = [
     title_ru: "Проверка документов",
     description:
       "Muassasaning sanitariya, texnik va huquqiy talablariga muvofiqligini tekshirish",
-    description_uz: "Muassasaning sanitariya, texnik va huquqiy talablariga muvofiqligini tekshirish",
-    description_en: "Check compliance with the sanitary, technical and legal requirements of the institution",
-    description_ru: "Проверка соответствия санитарным, техническим и правовым требованиям учреждения",
-
+    description_uz:
+      "Muassasaning sanitariya, texnik va huquqiy talablariga muvofiqligini tekshirish",
+    description_en:
+      "Check compliance with the sanitary, technical and legal requirements of the institution",
+    description_ru:
+      "Проверка соответствия санитарным, техническим и правовым требованиям учреждения",
   },
   {
     icon: "/Images/expert.svg",
@@ -298,7 +295,6 @@ export const getSteps: StepType[] = [
     description_uz: "Mutaxassislar tomonidan tayyorgarlik darajasini baholash",
     description_en: "Assessment of the level of preparation by specialists",
     description_ru: "Оценка уровня подготовки специалистами",
-
   },
   {
     icon: "/Images/flagicons.svg",
@@ -308,13 +304,14 @@ export const getSteps: StepType[] = [
     title_ru: "Решение о лицензии",
     description:
       "Talablar bajarilganda muassasalarga rasmiy litsenziya beriladi",
-    description_uz: "Talablar bajarilganda muassasalarga rasmiy litsenziya beriladi",
-    description_en: "Official licenses are issued to institutions when requirements are met",
-    description_ru: "Официальные лицензии выдаются учреждениям при выполнении требований",
-
+    description_uz:
+      "Talablar bajarilganda muassasalarga rasmiy litsenziya beriladi",
+    description_en:
+      "Official licenses are issued to institutions when requirements are met",
+    description_ru:
+      "Официальные лицензии выдаются учреждениям при выполнении требований",
   },
 ];
-
 
 export const getcardData = [
   {
@@ -354,18 +351,17 @@ export const getDoctorImg: DoctorImg = {
   woman: "/Images/woman.png",
 };
 // arizatopshirish
-export const getLicense = (t:TFunction): enterThePortal[] => [
+export const getLicense = (t: TFunction): enterThePortal[] => [
   {
     id: 1,
     title: t("document.application_title"),
-    description:
-      t("document.application_description"),
+    description: t("document.application_description"),
     icon: "/license/ariza.svg",
   },
   {
     id: 2,
     title: t("document.documents_title"),
-    description:t("document.documents_description"),
+    description: t("document.documents_description"),
     icon: "/license/hujjat.svg",
   },
   {
@@ -392,7 +388,6 @@ export const getBgImg: backgroundImage[] = [
 // export const getFilter: FilterItem[] = [
 //   ... (removed, use getFilterFromAPI instead)
 // ];
-
 
 export const getContactInfo: ContactData[] = [
   {

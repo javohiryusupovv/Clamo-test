@@ -13,18 +13,18 @@ export default function Izohlar() {
   const cardComment = getCardComment(t);
   const opinion = getOpinion(t);
   const [isGradient, setIsGradient] = useState(true);
-  
-    useEffect(() => {
-      const checkScreen = () => {
-        if (typeof window !== "undefined") {
-          setIsGradient(window.innerWidth > 550); // sm breakpoint (640px)
-        }
-      };
-  
-      checkScreen();
-      window.addEventListener("resize", checkScreen);
-      return () => window.removeEventListener("resize", checkScreen);
-    }, []);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      if (typeof window !== "undefined") {
+        setIsGradient(window.innerWidth > 550); // sm breakpoint (640px)
+      }
+    };
+
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
 
   return (
     <div className="md:py-[64px] py-[30px]">
@@ -50,7 +50,12 @@ export default function Izohlar() {
 
       <div className="overflow-visible  max-w-[1600px] m-auto w-full mb-[24px]">
         <div className="flex gap-4">
-          <Marquee direction="right" speed={30} gradient={isGradient} pauseOnHover>
+          <Marquee
+            direction="right"
+            speed={30}
+            gradient={isGradient}
+            pauseOnHover
+          >
             {cardComment.map((item, id) => (
               <div
                 key={id}
@@ -65,15 +70,9 @@ export default function Izohlar() {
                     className="rounded-full max-sm:w-[35px] max-sm:h-[35px] object-contain border border-[#C6CFD733]"
                   />
                   <div>
-                    <h2 className="font-semibold font-roboto text-[#022F5E] sm:text-[16px] text-[12px]">
+                    <h2 className="font-semibold font-roboto text-[#022F5E] leading-[130%] sm:text-[16px] text-[12px]">
                       {item.name}
                     </h2>
-                    <p className="text-[12px] font-normal text-[#8E9BA8]">
-                      {item.title}{" "}
-                      <span className="text-[#4489F7] font-medium">
-                        {item.badge}
-                      </span>
-                    </p>
                   </div>
                 </div>
                 <hr className="my-[10px] text-[#F5F6F7]" />
@@ -85,11 +84,11 @@ export default function Izohlar() {
                     height={16}
                     className="object-contain"
                   />
-                  <p className=" font-normal sm:text-[14px] font-roboto text-[12px] text-[#8E9BA8]">
+                  <p className="font-normal sm:text-[14px] font-roboto text-[12px] text-[#8E9BA8]">
                     {item.time}
                   </p>
                 </div>
-                <p className="font-normal sm:text-[14px] text-[#121C25] font-roboto text-[12px]">
+                <p className="font-normal sm:text-[14px] leading-[130%] text-[#121C25] font-roboto text-[12px]">
                   {item.comment}
                 </p>
               </div>
@@ -100,7 +99,12 @@ export default function Izohlar() {
 
       <div className="overflow-visible max-w-[1600px] m-auto w-full mb-[24px]">
         <div className="flex gap-4">
-          <Marquee direction="left" speed={30} gradient={isGradient} pauseOnHover>
+          <Marquee
+            direction="left"
+            speed={30}
+            gradient={isGradient}
+            pauseOnHover
+          >
             {cardComment
               .slice()
               .reverse()
@@ -118,15 +122,15 @@ export default function Izohlar() {
                       className="rounded-full max-sm:w-[35px] max-sm:h-[35px] object-contain border border-[#C6CFD733]"
                     />
                     <div>
-                      <h2 className="font-semibold sm:text-[16px] text-[12px]">
+                      <h2 className="font-semibold font-roboto text-[#022F5E] leading-[130%] sm:text-[16px] text-[12px]">
                         {item.name}
                       </h2>
-                      <p className="sm:text-[14px] text-[12px] font-normal text-[#8E9BA8]">
+                      {/* <p className="sm:text-[14px] text-[12px] font-normal text-[#8E9BA8]">
                         {item.title}{" "}
                         <span className="text-[#4489F7] font-medium">
                           {item.badge}
                         </span>
-                      </p>
+                      </p> */}
                     </div>
                   </div>
                   <hr className="my-[10px] text-[#F5F6F7]" />
@@ -138,11 +142,11 @@ export default function Izohlar() {
                       height={16}
                       className="object-contain"
                     />
-                    <p className=" font-normal sm:text-[14px] text-[12px] text-[#8E9BA8]">
+                    <p className="font-normal sm:text-[14px] font-roboto text-[12px] text-[#8E9BA8]">
                       {item.time}
                     </p>
                   </div>
-                  <p className="font-normal sm:text-[14px] text-[12px]">
+                  <p className="font-normal sm:text-[14px] leading-[130%] text-[#121C25] font-roboto text-[12px]">
                     {item.comment}
                   </p>
                 </div>
