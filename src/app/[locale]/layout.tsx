@@ -38,11 +38,11 @@ export const metadata: Metadata = {
     title: "Clamo – Litsenziyalash va Akkreditatsiyalash Markazi",
     description:
       "Davlat litsenziya va akkreditatsiya jarayonlarini raqamlashtirish va soddalashtirishga yo‘naltirilgan platforma. Clamo orqali muassasangizni tez, qulay va shaffof tarzda ro‘yxatdan o‘tkazing.",
-    url: "https://clamodone.vercel.app",
+    url: "https://clamotest.vercel.app",
     siteName: "Clamo",
     images: [
       {
-        url: "/og-image.png", // yoki to‘liq URL: https://yourdomain.com/og-image.png
+        url: "https://clamotest.vercel.app/og-image.png", // yoki to‘liq URL: https://yourdomain.com/og-image.png
         width: 1200,
         height: 630,
         alt: "Clamo – Litsenziya va Akkreditatsiya platformasi",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "Clamo – Litsenziyalash va Akkreditatsiyalash Markazi",
     description:
       "Litsenziya va akkreditatsiyani Clamo orqali tez, oson va ishonchli tarzda oling.",
-    images: ["/og-image.png"],
+    images: ["https://clamotest.vercel.app/og-image.png"],
   },
 };
 

@@ -21,6 +21,44 @@ interface NewsDetail {
   created_at: string;
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string; locale: string }>;
+}) {
+  const { slug, locale } = await params;
+
+  const res = await fetch(
+    `https://clamo-production.up.railway.app/api/news/news/${slug}`,
+    { cache: "no-store" }
+  );
+
+  if (!res.ok) return { title: "Clamo News", description: "News not found." };
+
+  const data: NewsDetail = await res.json();
+
+  const title = data[`title_${locale}` as keyof NewsDetail] || data.title;
+  const description =
+    data[`description_${locale}` as keyof NewsDetail] || data.description;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: [data.image],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [data.image],
+    },
+  };
+}
+
+
 export default async function NewsDetailPage({
   params,
 }: {

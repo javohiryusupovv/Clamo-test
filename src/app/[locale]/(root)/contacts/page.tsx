@@ -2,6 +2,32 @@ import { useTranslations } from "next-intl";
 import Map from "./_components/Map";
 import SochealMedia from "./_components/Sochealmedia";
 
+import { getLocalizedValue } from "@/lib/utils";
+
+interface Params {
+  locale: string;
+}
+
+export async function generateMetadata({ params }: { params: Params }) {
+  const content = {
+    title_uz: "Biz bilan bog‘laning — CLAMO",
+    description_uz: "Savollaringiz bormi? CLAMO jamoasi bilan tez va oson bog‘laning. Sizga yordam berishga tayyormiz!",
+
+    title_ru: "Свяжитесь с нами — CLAMO",
+    description_ru: "Есть вопросы? Свяжитесь с командой CLAMO быстро и удобно. Мы всегда готовы помочь!",
+
+    title_en: "Contact Us — CLAMO",
+    description_en: "Have questions? Reach out to the CLAMO team quickly and easily. We’re here to help!",
+  };
+
+  return {
+    title: getLocalizedValue(params.locale, content, "title"),
+    description: getLocalizedValue(params.locale, content, "description"),
+  };
+}
+
+
+
 export default function Contacts() {
   const t = useTranslations("ContactPageLayout");
 

@@ -91,7 +91,7 @@ export default function Navbar() {
   return (
     <div className="m-auto">
       <div
-        className={`fixed top-0 z-[999] w-full backdrop-blur-3xl ${isScrolled ? "bg-white" : ""}`}>
+        className={`fixed top-0 z-[600] w-full backdrop-blur-3xl ${isScrolled ? "bg-white" : ""}`}>
         <nav className="flex items-center justify-between py-4 container">
           <div className={`container relative z-20 transition-transform duration-500 ease-in-out ${isScrolled ? "translate-y-0" : " translate-y-3"}`}>
             {/* Desktop Menu */}

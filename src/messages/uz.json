@@ -194,13 +194,13 @@
       "license": "Litsenziyalash",
       "accreditation": "Akkreditsiyalash"
     },
-    "developed": "Developed by"
+    "developed": "Ishlab chiquvchi:"
   },
   "InternationalPage": {
     "firstletter": "Xalqaro hamkorlik",
-    "international22": "bilan akkreditsiyalash — zamonaviy yondashuv",
+    "international22": "bilan xalqaro hamkorliklar",
     "international_title": "Clamo —",
-    "international_des": "Tashkilotingiz uchun zarur litsenziyani tez va ishonchli tarzda oling. Clamo sizning qonuniylikdagi ishonchli hamkoringiz",
+    "international_des": "CLAMO xalqaro darajada o'z o'rniga ega bo'lgan tashkilotlar bilan hamkorlik qilish orqali, sifat va natijani taqdim qiladi.",
     "hamkorlar": "Hamkorlarimiz",
     "hamkorlar_des": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.",
     "hamkorlarr": "Hamkorlik loyihalari",
