@@ -49,7 +49,11 @@ export default function LicenseHero() {
 
               <div className="space-y-5 md:w-[45%] mx-auto md:mx-0">
                 <h1 className="text-[28px] font-inter font-semibold leading-[110%] sm:text-[30px] md:text-[32px] text-[#1B1B1B]">
-                  <span className="text-[#23B3FC] uppercase">{firstTitle}</span>{" "}
+                  {locale === "en" ? (
+                    <span className="text-[#23B3FC]">A New Standard</span>
+                  ) : (
+                    <span className="text-[#23B3FC] uppercase">{firstTitle}</span>
+                  )} {" "}
                   {secondTitle} {thirtTitle} {fourTitle} {fiveTitle} {sexTitle}{" "}
                   {sevenTitle}
                 </h1>
@@ -69,7 +73,7 @@ export default function LicenseHero() {
                   </button>
                 </Link>
                 <Link href={`/${locale}/contacts`} className="w-full">
-                  <button className="group hover:bg-[#23B3FC]/[30%] w-full text-[#23B3FC] bg-[#23B3FC]/[12%] font-inter transition-all duration-200 lg:px-20 px-5 h-[37px] flex items-center justify-center gap-[11.5px] rounded-lg text-sm font-medium leading-[130%]">
+                  <button className="group hover:bg-[#23B3FC]/[30%] text-[#23B3FC] bg-[#23B3FC]/[12%] font-inter transition-all duration-200 w-[290px] max-md:w-full h-[37px] flex items-center justify-center gap-[11.5px] rounded-lg text-sm font-medium leading-[130%]">
                     {btn("applying")}
                     <FaChevronRight className="md:group-hover:translate-x-2 transition-all duration-200" />
                   </button>
@@ -121,7 +125,7 @@ export default function LicenseHero() {
                 aria-label="Litsenziya"
                 target="_blank"
               >
-                <button className="group flex font-inter justify-center items-center gap-[4px] w-full sm:w-[273px] px-[24px] py-[10px] bg-[#23B3FC] text-[#FFFFFFFF] rounded-lg hover:bg-[#46c1ff] transition">
+                <button className="group flex font-inter justify-center items-center gap-[4px] w-full sm:w-[373px] px-[24px] py-[10px] bg-[#23B3FC] text-[#FFFFFFFF] rounded-lg hover:bg-[#46c1ff] transition">
                   <span className="group flex items-center gap-1 text-[14px] font-medium leading-[130%]">
                     {t("get_license_button")}
                     <ChevronRight className=" transition-all duration-100 group-hover:translate-x-1" />

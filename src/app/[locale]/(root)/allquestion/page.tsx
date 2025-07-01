@@ -1,5 +1,6 @@
 import { getFaqs } from "@/lib/getFaqs";
 import Questionsss from "../components/questions/Questions";
+import InfoTitle from "./_components/info";
 
 export default async function QuestionsPageWrapper() {
   const faqData = await getFaqs();
@@ -8,9 +9,7 @@ export default async function QuestionsPageWrapper() {
   return (
     <div className="md:mb-16 mb-6 lg:mt-10 ">
       <div className="container">
-        <h1 className="lg:text-5xl md:text-4xl text-2xl font-vk leading-[100%] lg:pb-8 md:pb-5 pb-3 max-sm:text-center font-bold text-[#3D445E]">
-          Tez-tez beriladigan savollar
-        </h1>
+        <InfoTitle/>
       </div>
       <Questionsss faqData={faqData} />
     </div>

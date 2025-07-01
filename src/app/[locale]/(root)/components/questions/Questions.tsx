@@ -1,6 +1,6 @@
 "use client";
 import { FAQItem } from "../../../../../../app.types";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { getLocalizedValue, pickStringProps } from "@/lib/getLocalization";
 
 
@@ -17,13 +17,13 @@ interface Props {
 
 export default function FaqAccordion({ faqData }: Props) {
   const locale = useLocale();
+  const t = useTranslations("HomePage");
 
 
 
   return (
     <div className="container">
       <div className="flex flex-col gap-4">
-
         <Accordion
           type="single"
           collapsible

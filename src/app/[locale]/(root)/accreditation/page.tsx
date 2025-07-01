@@ -31,7 +31,7 @@ export default async function page() {
   const reyesters = await getReyestersFromAPI();
   const types = await getReyesterTypes();
   return (
-    <div>
+    <div className=" overflow-hidden">
       <Firstpage />
       <Secondpage />
       <section className="container mx-auto px-4 lg:py-[80px]">
