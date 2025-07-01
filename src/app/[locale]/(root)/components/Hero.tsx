@@ -31,6 +31,12 @@ export default function Hero() {
       });
     }
   }, []);
+
+  const scrollToContactSection = () => {
+    const section = document.getElementById("contact-section");
+    section?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       {/* Ko'k soya */}
@@ -51,13 +57,19 @@ export default function Hero() {
           </h1>
           <div className="backdrop-blur-[10px] bg-[#ffffffa4] border border-white w-[411px] px-4 max-lg:w-full mb-4 sm:px-4 rounded-[17px]">
             <article className="flex items-center max-md:justify-between gap-3 pb-4 pt-4">
-              <Link href={`${locale}/contacts`} aria-label="Contact" className="lg:w-full w-1/2">
-                <button className="group font-inter lg:w-[183px] w-full h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[80%] bg-[#23B3FC] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">
-                  {t("service_button")}{" "}
-                  <FaAngleRight className="group-hover:translate-x-1 transition-all duration-200" />
-                </button>
-              </Link>
-              <Link href={`${locale}/contacts`} aria-label="Contact user" className="lg:w-full w-1/2">
+              <button
+                onClick={scrollToContactSection}
+                className="group font-inter w-full h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[80%] bg-[#23B3FC] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] "
+              >
+                {t("service_button")}{" "}
+                <FaAngleRight className="group-hover:translate-x-1 transition-all duration-200" />
+              </button>
+
+              <Link
+                href={`${locale}/contacts`}
+                aria-label="Contact user"
+                className="w-full"
+              >
                 <button className="group font-inter lg:w-[183px] w-full h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[30%] bg-[#23B3FC]/[12%] transition-all duration-200 rounded-lg text-sm font-medium text-[#23B3FC]  leading-[130%] ">
                   {t("applying")}{" "}
                   <FaChevronRight className="group-hover:translate-x-1 transition-all duration-200" />
@@ -89,7 +101,7 @@ export default function Hero() {
         {/* oq soya */}
         <div className="absolute bottom-[-258px] left-[20%] w-[361px] h-[361px] blur-[220.64999389648438px] rounded-full bg-[#6eb8e8] "></div>
       </section>
-      <div className="absolute bottom-[-200px] right-0 w-full h-[748px] shadow-hero" />
+      <div className="absolute bottom-[-200px] right-0 w-full lg:h-[348px] h-[220px] shadow-hero" />
     </>
   );
 }

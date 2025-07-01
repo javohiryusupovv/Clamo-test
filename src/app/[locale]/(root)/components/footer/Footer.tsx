@@ -24,14 +24,14 @@ export default function FooterLayout() {
         const AOS = await import("aos");
         AOS.init({ duration: 1000 });
       };
-  
+
       if (typeof window !== "undefined") {
         loadAOS();
       }
     }, []);
 
   return (
-    <div className="md:pt-20  bg-[#F6F9FC] p-4">
+    <div className="md:pt-20 pt-8  bg-[#F6F9FC] p-4">
       <Contact />
 
       <div className="relative w-full sm:h-[500px] h-[750px] bg-[#F6F9FC] overflow-hidden">

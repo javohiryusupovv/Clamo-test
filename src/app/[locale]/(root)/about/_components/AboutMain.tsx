@@ -11,14 +11,14 @@ export default function AboutMain() {
   }, []);
 
   return (
-    <div className="relative w-full overflow-visible h-screen pt-10 lg:pt-20 pb-10 lg:pb-32">
-      <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center">
+    <div className="relative w-full overflow-visible lg:h-screen pb-8 lg:pb-32">
+      <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center lg:pt-32">
         {/* Matn bo‘limi */}
         <div className="flex flex-col justify-center">
-          <p className="rounded-md font-inter font-medium bg-[#23B3FC] leading-[100%] text-white text-sm sm:text-base px-4 py-1 w-fit mb-4">
+          <p className="rounded-md font-inter font-medium bg-[#23B3FC] leading-[100%] text-white text-sm sm:text-base px-4 py-1 w-fit mb-2 md:mb-4">
             {t("plan")}
           </p>
-          <h2 className="text-[20px] sm:text-[28px] lg:text-[32px] font-semibold text-[#1B1B1B] pb-2">
+          <h2 className="text-[20px] sm:text-[28px] lg:text-[32px] leading-[100%] font-semibold text-[#1B1B1B] md:pb-2 pb-3">
             {t("abouttitle")}
           </h2>
           <p className="text-[14px] sm:text-[16px] md:text-[20px] text-[#012548CC] leading-[140%]">
@@ -35,7 +35,7 @@ export default function AboutMain() {
         bottom-0 max-sm:right-[-120px]
         lg:top-0 lg:right-0 lg:w-[55%] lg:h-full
         md:bottom-[150px] md:right-[-30px] max-sm:scale-90
-        sm:bottom-[-66px] sm:top-auto sm:w-[729px] sm:h-[486px] max-sm:w-[350px] max-sm:h-[370px]
+        sm:bottom-[-66px] sm:top-auto sm:w-[729px] sm:h-[486px] max-sm:w-[350px] max-sm:h-[370px] max-lg:hidden
       "
       >
         <div className="absolute top-0 left-0 w-full h-[120px] bg-gradient-to-b from-white to-transparent sm:hidden z-10" />

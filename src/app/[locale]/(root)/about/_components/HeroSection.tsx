@@ -18,7 +18,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="md:pt-[50px] pt-[30px] max-md:my-14 lg:pb-[150px]">
+    <div className="md:pt-[50px] max-md:my-8 lg:pb-[150px]">
       <div className="container relative h-auto">
         <div className="relative rounded-[36px] bg-[#0653C9] overflow-hidden h-[500px] max-ll:h-[550px] md:h-[300px] flex max-xl:gap-7 flex-col-reverse md:flex-row items-center">
           {/* Chap rasm */}
@@ -43,7 +43,7 @@ export default function Hero() {
             />
           {/* Matn qismi */}
           <div className="relative z-[15] md:w-[70%] w-full px-4 py-6 md:py-0 md:pl-10 max-md:order-1">
-            <h3 className="text-white font-bold font-vk leading-[44px] text-[25px] md:leading-[35px] md:text-[27px] lg:text-[35px] xl:text-[40px] mb-3">
+            <h3 className="text-white font-bold font-vk leading-[44px] text-[25px] md:leading-[40px] md:text-[27px] lg:text-[35px] xl:text-[40px] mb-3">
               {t("hero_title")}
             </h3>
             <p className="text-white opacity-60 text-[16px] font-vk font-medium mb-5">
