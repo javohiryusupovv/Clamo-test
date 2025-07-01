@@ -31,20 +31,20 @@ export default function ContactPage() {
         >
           <h2 className="text-2xl font-semibold font-vk">{t("phone_info")}</h2>
 
-          <div className="flex items-center gap-3">
+          <div className=" group flex items-center gap-3">
             <FaPhoneAlt className="text-blue-600" />
-            <div>
+            <Link href="tel:+998555143003" target="_blank">
               <p className="text-sm font-vk">{t("phone_number")}</p>
-              <p className="font-medium font-vk">{item.phone}</p>
-            </div>
+              <p className="font-medium font-vk group-hover:underline">{item.phone}</p>
+            </Link>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="group flex items-center gap-3">
             <FaEnvelope className="text-blue-600" />
-            <div>
+            <Link href="mailto:info@clamo.uz" target="_blank">
               <p className="text-sm font-vk">{t("email")}</p>
-              <p className="font-medium font-vk">{item.email}</p>
-            </div>
+              <p className="font-medium font-vk group-hover:underline">{item.email}</p>
+            </Link>
           </div>
 
           <div className="flex items-center gap-3">
@@ -57,12 +57,12 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="group flex items-center gap-3">
             <FaMapMarkerAlt className="text-blue-600" />
-            <div>
+            <Link href={"https://yandex.uz/maps/-/CHgpuL00"} target="_blank" rel="noopener noreferrer">
               <p className="text-sm font-vk">{t("addres")}</p>
-              <p className="font-medium font-vk">{adres("address")}</p>
-            </div>
+              <p className="font-medium font-vk group-hover:underline">{adres("address")}</p>
+            </Link>
           </div>
         </div>
       ))}

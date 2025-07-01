@@ -5,14 +5,14 @@ import { getLocalizedValue } from "@/lib/getLocalization";
 export async function generateMetadata({ params }: { params: Promise<{locale: string }>}) {
   const {locale} = await params
     const content = {
-    title_uz: "Clamo yangiliklari",
-    description_uz: "Clamo bilan bog‘liq so‘nggi yangiliklar, e’lonlar va tarmoqdagi o‘zgarishlardan xabardor bo‘ling.",
+    title_uz: "CLAMO yangiliklari",
+    description_uz: "CLAMO bilan bog‘liq so‘nggi yangiliklar, e’lonlar va tarmoqdagi o‘zgarishlardan xabardor bo‘ling.",
 
-    title_ru: "Новости Clamo",
-    description_ru: "Следите за последними новостями, объявлениями и обновлениями, связанными с Clamo.",
+    title_ru: "Новости CLAMO",
+    description_ru: "Следите за последними новостями, объявлениями и обновлениями, связанными с CLAMO.",
 
-    title_en: "Clamo news",
-    description_en: "Stay updated with the latest news, announcements, and developments related to Clamo.",
+    title_en: "CLAMO news",
+    description_en: "Stay updated with the latest news, announcements, and developments related to CLAMO.",
   };
 
   return {

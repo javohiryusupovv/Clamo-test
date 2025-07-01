@@ -158,13 +158,7 @@ export default function Contact() {
               </article>
             </a>
             {/* Email */}
-            <a
-              href="mailto:clamosocial@gmail.com"
-              aria-label="Email"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer"
-            >
+            <a href="mailto:info@clamo.uz" aria-label="Email" target="_blank" rel="noopener noreferrer" className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
               <article className="bg-white p-3 inline-flex rounded-lg">
                 <Image
                   className="w-5 h-4"
