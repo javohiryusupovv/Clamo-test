@@ -29,7 +29,7 @@ export default function Partnyor({ partners }: { partners: Partner[] }) {
   const extendedPartners = Array(repeatCount).fill(partners).flat();
 
   return (
-    <div className="md:py-16 pt-9 mb-9 bg-[#F6F9FC] overflow-visible">
+    <div className="md:py-16 pt-6 mb-6 bg-[#F6F9FC] overflow-visible">
       <article className="container text-center mb-10 px-4 sm:px-0">
         <h3 className="text-2xl sm:text-4xl lg:text-5xl font-bold font-vk mb-2 text-[#3D445E]">
           {t("hamkorlar")}

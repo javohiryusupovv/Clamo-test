@@ -11,7 +11,7 @@ export default function AboutMain() {
   }, []);
 
   return (
-    <div className="relative w-full overflow-visible lg:h-screen pb-8  lg:pb-32">
+    <div className="relative w-full overflow-visible lg:h-screen pb-8 lg:pb-32">
       <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center lg:pt-32">
         {/* Matn bo‘limi */}
         <div className="flex flex-col justify-center">

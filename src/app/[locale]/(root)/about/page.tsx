@@ -16,7 +16,7 @@ export default async function About() {
   const carouselData = await getCarousel();
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <AboutMain />
       <Servicec servicec={service} />
       <DepartmentSection agentsection={department} />
