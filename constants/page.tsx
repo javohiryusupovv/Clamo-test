@@ -128,7 +128,7 @@ export const getCardComment = (t: TFunction): CardComment[] => [
   },
   {
     id: 3,
-    img: "/Imgs/Umid.png",
+    img: "/Imgs/maftuna.jpg",
     name: t("cardComment.name_three"),
     staricon: "/Imgs/Stars.png",
     time: t("cardComment.time_three"),
@@ -136,7 +136,7 @@ export const getCardComment = (t: TFunction): CardComment[] => [
   },
   {
     id: 4,
-    img: "/Imgs/Umid.png",
+    img: "/Imgs/jasur.jpg",
     name: t("cardComment.name_four"),
     staricon: "/Imgs/Stars.png",
     time: t("cardComment.time_four"),
@@ -168,7 +168,7 @@ export const getCardComment = (t: TFunction): CardComment[] => [
   },
   {
     id: 8,
-    img: "/Imgs/Umid.png",
+    img: "/Imgs/jas.webp",
     name: t("cardComment.name_eight"),
     staricon: "/Imgs/Stars.png",
     time: t("cardComment.time_eight"),
@@ -176,7 +176,7 @@ export const getCardComment = (t: TFunction): CardComment[] => [
   },
   {
     id: 9,
-    img: "/Imgs/Umid.png",
+    img: "/Imgs/nargiza.jpg",
     name: t("cardComment.name_nine"),
     staricon: "/Imgs/Stars.png",
     time: t("cardComment.time_nine"),
