@@ -1,7 +1,6 @@
 "use client";
 import { useTranslations } from "next-intl";
-import { LoaderCircle } from 'lucide-react';
-
+import { LoaderCircle } from "lucide-react";
 
 import Image from "next/image";
 import { useForm } from "react-hook-form";
@@ -11,7 +10,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { getFormSchema } from "@/schemas/formSchema";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function Contact() {
@@ -26,6 +25,7 @@ export default function Contact() {
     register,
     handleSubmit,
     reset,
+    clearErrors,
     formState: { errors },
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -78,8 +78,18 @@ export default function Contact() {
       })
       .catch((error) => {
         console.error("Submission error:", error);
-      })
+      });
   };
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (Object.keys(errors).length > 0) {
+        clearErrors();
+      }
+    }, 2000); // 2 soniya
+
+    return () => clearTimeout(timeout);
+  }, [errors, clearErrors]);
 
   return (
     <div className="md:pb-8">
@@ -95,10 +105,22 @@ export default function Contact() {
 
           <div className="flex flex-col gap-3">
             {/* Location */}
-            <Link href={"https://yandex.uz/maps/10335/tashkent/?ll=69.303946%2C41.318330&mode=whatshere&whatshere%5Bpoint%5D=69.303883%2C41.318303&whatshere%5Bzoom%5D=17&z=16"} target="_blank" aria-label=" Location" className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
-
+            <Link
+              href={
+                "https://yandex.uz/maps/10335/tashkent/?ll=69.303946%2C41.318330&mode=whatshere&whatshere%5Bpoint%5D=69.303883%2C41.318303&whatshere%5Bzoom%5D=17&z=16"
+              }
+              target="_blank"
+              aria-label=" Location"
+              className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer"
+            >
               <article className="bg-white p-3 inline-flex justify-center items-center rounded-lg">
-                <Image className="w-5 h-4" src="/icons/location.svg" alt="Location" width={50} height={50} />
+                <Image
+                  className="w-5 h-4"
+                  src="/icons/location.svg"
+                  alt="Location"
+                  width={50}
+                  height={50}
+                />
               </article>
               <article>
                 <span className="text-[13px] sm:text-[14px] font-normal text-opacity-[60%] text-white">
@@ -108,13 +130,23 @@ export default function Contact() {
                   {t("address")}
                 </p>
               </article>
-
             </Link>
 
             {/* Phone */}
-            <a href="tel:+998712007007" aria-label="Phone number" target="_blank" className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
+            <a
+              href="tel:+998712007007"
+              aria-label="Phone number"
+              target="_blank"
+              className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer"
+            >
               <article className="bg-white p-3 inline-flex items-center justify-center rounded-lg">
-                <Image className="w-5 h-5" src="/icons/phone.svg" alt="Phone" width={50} height={50} />
+                <Image
+                  className="w-5 h-5"
+                  src="/icons/phone.svg"
+                  alt="Phone"
+                  width={50}
+                  height={50}
+                />
               </article>
               <article>
                 <span className="text-[13px] sm:text-[14px] font-normal font-vk text-opacity-[60%] text-white">
@@ -128,7 +160,13 @@ export default function Contact() {
             {/* Email */}
             <a href="mailto:info@clamo.uz" aria-label="Email" target="_blank" rel="noopener noreferrer" className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer">
               <article className="bg-white p-3 inline-flex rounded-lg">
-                <Image className="w-5 h-4" src="/icons/email.svg" alt="Email" width={50} height={50} />
+                <Image
+                  className="w-5 h-4"
+                  src="/icons/email.svg"
+                  alt="Email"
+                  width={50}
+                  height={50}
+                />
               </article>
               <article>
                 <span className="text-[13px] sm:text-[14px] font-normal font-vk text-opacity-[60%] text-white">
@@ -210,9 +248,12 @@ export default function Contact() {
                     src="/icons/Flags.svg"
                     className="w-6 sm:w-9"
                     alt="Flag Icons"
-                    width={50} height={50}
+                    width={50}
+                    height={50}
                   />
-                  <span className="text-[16px] max-md:mr-1 max-lg:mr-4 max-sm:mr-2 max-ms:mr-4">+998</span>
+                  <span className="text-[16px] max-md:mr-1 max-lg:mr-4 max-sm:mr-2 max-ms:mr-4">
+                    +998
+                  </span>
                 </article>
                 <input
                   id="phoneNumber"
@@ -255,8 +296,10 @@ export default function Contact() {
             <div className="flex justify-end">
               <button
                 type="submit"
-                className={`group flex items-center gap-1 text-[14px] font-medium text-white px-6 py-[10px] rounded-lg bg-[#0653C9] hover:bg-[#0761e9] transition-all duration-300 ${isLoading ? "opacity-60 cursor-not-allowed" : ""
-                  }`} disabled={isLoading}
+                className={`group flex items-center gap-1 text-[14px] font-medium text-white px-6 py-[10px] rounded-lg bg-[#0653C9] hover:bg-[#0761e9] transition-all duration-300 ${
+                  isLoading ? "opacity-60 cursor-not-allowed" : ""
+                }`}
+                disabled={isLoading}
               >
                 {isLoading ? (
                   <>
@@ -270,7 +313,8 @@ export default function Contact() {
                       className="transition-all duration-300 group-hover:rotate-[43deg]"
                       src="/icons/submiticons.svg"
                       alt="Send Icon"
-                      width={20} height={20}
+                      width={20}
+                      height={20}
                     />
                   </>
                 )}

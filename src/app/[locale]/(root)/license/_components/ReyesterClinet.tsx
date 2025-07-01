@@ -58,7 +58,7 @@ export default function ReyesterClient({
 
     return localizedTitle.toLowerCase().includes(searchQuery.toLowerCase());
   });
-    console.log(filtered);
+    // console.log(filtered);
 
 
 

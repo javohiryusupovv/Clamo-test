@@ -17,13 +17,13 @@ interface Props {
 
 export default function FaqAccordion({ faqData }: Props) {
   const locale = useLocale();
-  
+
 
 
   return (
     <div className="container">
       <div className="flex flex-col gap-4">
-        
+
         <Accordion
           type="single"
           collapsible

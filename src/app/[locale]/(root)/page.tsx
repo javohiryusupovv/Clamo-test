@@ -38,7 +38,7 @@ export default async function Main() {
         <InstallPage />
         <Partnyor partners={part} />
       </div>
-      <QuestionsPage faqData={faqData} />
+      <QuestionsPage faqData={faqData.slice(0, 3)} />
     </div>
   );
 }
