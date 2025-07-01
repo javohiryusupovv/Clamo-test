@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { FaChevronRight } from "react-icons/fa";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function LicenseHero() {
   const t = useTranslations("LicensePage");
@@ -20,6 +21,18 @@ export default function LicenseHero() {
     sevenTitle,
   ] = t("get_permit").split(" ");
   const steps = getLicense;
+
+  useEffect(() => {
+      const loadAOS = async () => {
+        const AOS = await import("aos");
+        AOS.init({ duration: 1000 });
+      };
+
+      if (typeof window !== "undefined") {
+        loadAOS();
+      }
+    }, []);
+  
   return (
     <>
       {/* Hero section */}
@@ -69,6 +82,8 @@ export default function LicenseHero() {
                   width={482}
                   height={416}
                   className=" absolute -top-10 -left-10 z-[2] logoAnim"
+                  data-aos="fade-up-left"
+                  data-aos-duration="3000"
                 />
                 <Image
                   src="/Images/Holder.svg"
@@ -76,6 +91,8 @@ export default function LicenseHero() {
                   width={248}
                   height={199}
                   className="absolute bottom-0 -right-10 opacity-[0.6] z-[1]"
+                  data-aos="zoom-in-left"
+                  data-aos-duration="2000"
                 />
               </div>
             </div>

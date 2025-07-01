@@ -4,13 +4,25 @@ import { ChevronRight } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function International() {
   const t = useTranslations("InternationalPage");
   const locale = useLocale();
 
+  useEffect(() => {
+      const loadAOS = async () => {
+        const AOS = await import("aos");
+        AOS.init({ duration: 1000 });
+      };
+
+      if (typeof window !== "undefined") {
+        loadAOS();
+      }
+    }, []);
+
   return (
-    <div className="internationalparent h-screen overflow-hidden lg:pb-16 pb-8">
+    <div className="internationalparent flex  h-screen overflow-hidden lg:pb-16 pb-8">
       <div className="container relative top-0 left-0 flex flex-col md:flex-row gap-6 md:gap-[65px] justify-between items-center w-full md:mb-12">
         <article className="w-full md:w-[45%] relative z-[10]">
           <p className="inline-flex px-2 py-1 font-inter bg-[#23B3FC] text-white rounded-md text-[14px] leading-[100%] font-medium uppercase mb-4">
@@ -52,6 +64,8 @@ export default function International() {
             height={200}
             src={"/flag/flag1.png"}
             alt="Flag Logo"
+            data-aos="fade-up"
+            data-aos-duration="2000"
           />
           <Image
             className="absolute top-10 right-0 z-[2] hidden md:block"
@@ -59,6 +73,8 @@ export default function International() {
             height={200}
             src={"/flag/flag2.png"}
             alt="Flag blur Logo"
+            data-aos="fade-up"
+            data-aos-duration="2000"
           />
         </div>
       </div>
