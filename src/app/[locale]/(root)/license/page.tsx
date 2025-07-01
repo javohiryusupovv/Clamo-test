@@ -4,9 +4,7 @@ import ReyesterClient from "./_components/ReyesterClinet";
 import { getLocalizedValue } from "@/lib/getLocalization";
 
 
-interface Params {
-  locale: string;
-}
+
 
 
 export async function generateMetadata({ params }: { params: Promise<{locale: string }>}) {

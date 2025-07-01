@@ -6,9 +6,6 @@ import ReyesterClient from "../license/_components/ReyesterClinet";
 import { getReyesterTypes, getReyestersFromAPI } from "@/lib/getLicense";
 import { getLocalizedValue } from "@/lib/getLocalization";
 
-interface Params {
-  locale: string;
-}
 export async function generateMetadata({ params }: { params: Promise<{locale: string }>}) {
   const {locale} = await params
   const content = {

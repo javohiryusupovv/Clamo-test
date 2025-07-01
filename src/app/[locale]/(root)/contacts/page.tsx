@@ -3,9 +3,7 @@ import Map from "./_components/Map";
 import SochealMedia from "./_components/Sochealmedia";
 import { getLocalizedValue } from "@/lib/getLocalization";
 
-interface Params {
-  locale: string;
-}
+
 
 export async function generateMetadata({ params }: { params: Promise<{locale: string }>}) {
   const {locale} = await params

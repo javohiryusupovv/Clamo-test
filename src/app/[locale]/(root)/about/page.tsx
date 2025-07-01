@@ -10,9 +10,6 @@
   import Secondpage from "@/app/[locale]/(root)/consulting/_components/secondpage"
 import { getLocalizedValue } from "@/lib/getLocalization";
 
-  interface Params {
-    locale: string;
-  }
 
 
   export async function generateMetadata({ params }: { params: Promise<{locale: string }>}) {

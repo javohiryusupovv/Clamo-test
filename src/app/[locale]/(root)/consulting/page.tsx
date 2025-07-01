@@ -3,9 +3,6 @@ import Firstpage from "./_components/firstpage";
 import Secondpage from "./_components/secondpage";
 import { getCarousel } from "@/lib/getCarousel"; // yoki sizga mos yo'l
 
-interface Params {
-  locale: string;
-}
 
 export async function generateMetadata({ params }: { params: Promise<{locale: string }>}) {
   const {locale} = await params

@@ -1,9 +1,6 @@
 import { getNews } from "@/lib/getNews";
 import NewsGrid from "./_components/NewsGrid";
 import { getLocalizedValue } from "@/lib/getLocalization";
-interface Params {
-  locale: string;
-}
 
 export async function generateMetadata({ params }: { params: Promise<{locale: string }>}) {
   const {locale} = await params

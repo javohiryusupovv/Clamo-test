@@ -4,9 +4,7 @@ import International from "./_components/International";
 import InternationalProject from "./_components/InternationalProject";
 import { getLocalizedValue } from "@/lib/getLocalization";
 
-interface Params {
-  locale: string;
-}
+
 
 export async function generateMetadata({ params }: { params: Promise<{locale: string }>}) {
   const {locale} = await params
