@@ -46,7 +46,7 @@ export default function International() {
             </Link>
 
             <Link
-              href={`${locale}/contacts`}
+              href={`/${locale}/contacts`}
               aria-label="Contact user"
               className="w-full"
             >
@@ -65,7 +65,7 @@ export default function International() {
             src={"/flag/flag1.png"}
             alt="Flag Logo"
             data-aos="fade-up"
-            data-aos-duration="2000"
+            data-aos-duration="1300"
           />
           <Image
             className="absolute top-10 right-0 z-[2] hidden md:block"
