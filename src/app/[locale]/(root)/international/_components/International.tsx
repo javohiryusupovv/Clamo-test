@@ -4,11 +4,20 @@ import { ChevronRight } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function International() {
   const t = useTranslations("InternationalPage");
   const locale = useLocale();
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      import("aos").then((AOS) => {
+        AOS.init({ duration: 1000 });
+      });
+    }
+  }, []);
   return (
     <div className="internationalparent overflow-hidden lg:pb-16 pb-8">
       <div className="container relative top-0 left-0 flex flex-col md:flex-row gap-6 md:gap-[65px] justify-between items-center w-full md:mb-12">
@@ -34,7 +43,7 @@ export default function International() {
             </Link>
 
             <Link
-              href={`${locale}/contacts`}
+              href={`/${locale}/contacts`}
               aria-label="Contact user"
               className="w-full"
             >
@@ -52,6 +61,8 @@ export default function International() {
             height={200}
             src={"/flag/flag1.png"}
             alt="Flag Logo"
+            data-aos="fade-up"
+            data-aos-duration="1300"
           />
           <Image
             className="absolute top-10 right-0 z-[2] hidden md:block"
@@ -59,6 +70,8 @@ export default function International() {
             height={200}
             src={"/flag/flag2.png"}
             alt="Flag blur Logo"
+            data-aos="fade-up"
+            data-aos-duration="2000"
           />
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { getLicense } from "../../../../../../constants/page";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { FaChevronRight } from "react-icons/fa";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
@@ -10,6 +10,7 @@ import Link from "next/link";
 export default function LicenseHero() {
   const t = useTranslations("LicensePage");
   const btn = useTranslations("HomePage");
+  const locale = useLocale();
   const [
     firstTitle,
     secondTitle,
@@ -27,7 +28,7 @@ export default function LicenseHero() {
         <div className="absolute -left-[300px] top-28 blur-[200px] bg-[#6EB8E8] w-[580px] h-[360px] rounded-full"></div>
 
         <div className="container mx-auto px-4 ">
-          <div className="w-full my-20 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10 pt-12 md:h-[400px] md:pt-0">
+          <div className="w-full lg:my-20 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10 lg:pt-12 md:h-[400px] md:pt-0">
             <div className="flex-1 space-y-5 text-center md:text-left">
               <h1 className="rounded-md font-inter font-medium leading-[100%] uppercase bg-[#23B3FC] text-white px-3 py-2 text-sm  w-max mx-auto md:mx-0">
                 {t("license_title")}
@@ -44,20 +45,22 @@ export default function LicenseHero() {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row items-center gap-3 pt-8 justify-center md:justify-start">
-                <button className="group flex items-center justify-center gap-[4px] lg:px-20 px-16  py-[10px] text-white rounded-lg bg-[#23B3FC] hover:bg-[#23B3FC]/80 hover:text-white transition">
-                  <span className="text-[14px] font-inter font-medium">
+              <div className="flex flex-col md:flex-row gap-2 md:gap-6 md:w-[580px]">
+                <Link
+                  href={`/${locale}/about#services-center`}
+                  className="w-full"
+                >
+                  <button className="group font-inter w-full lg:px-20 px-5 h-[37px] flex items-center justify-center gap-[11.5px] hover:bg-[hsl(200,97%,65%)] bg-[#23b3fc] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">
                     {btn("service_button")}
-                  </span>
-                  <FaChevronRight className="group-hover:translate-x-1 transition-all duration-200" />
-                </button>
-
-                <button className="group font-inter lg:px-20 px-16 h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[30%] bg-[#23B3FC]/[12%] transition-all duration-200 rounded-lg text-sm font-medium text-[#23B3FC]  leading-[130%] ">
-                  <span className="text-[14px] font-inter font-medium">
+                    <FaChevronRight className="md:group-hover:translate-x-2 transition-all duration-200" />
+                  </button>
+                </Link>
+                <Link href={`/${locale}/contacts`} className="w-full">
+                  <button className="group hover:bg-[#23B3FC]/[30%] w-full text-[#23B3FC] bg-[#23B3FC]/[12%] font-inter transition-all duration-200 lg:px-20 px-5 h-[37px] flex items-center justify-center gap-[11.5px] rounded-lg text-sm font-medium leading-[130%]">
                     {btn("applying")}
-                  </span>
-                  <FaChevronRight className="group-hover:translate-x-1 transition-all duration-200" />
-                </button>
+                    <FaChevronRight className="md:group-hover:translate-x-2 transition-all duration-200" />
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -96,7 +99,11 @@ export default function LicenseHero() {
                 {t("online_start")}
               </p>
 
-              <Link href={"https://license.gov.uz/"} aria-label="Litsenziya" target="_blank">
+              <Link
+                href={"https://license.gov.uz/"}
+                aria-label="Litsenziya"
+                target="_blank"
+              >
                 <button className="group flex font-inter justify-center items-center gap-[4px] w-full sm:w-[273px] px-[24px] py-[10px] bg-[#23B3FC] text-[#FFFFFFFF] rounded-lg hover:bg-[#46c1ff] transition">
                   <span className="group flex items-center gap-1 text-[14px] font-medium leading-[130%]">
                     {t("get_license_button")}

@@ -37,7 +37,7 @@ export default function ExamplePage() {
 
   return (
     <div className="bg-white z-50 w-full">
-      <div className="space-y-4 md:py-[96px] pt-[70px] bg-white container">
+      <div className="space-y-4 md:py-[96px] pt-[40px] bg-white container">
         <div className="lg:mb-11 sm:mb-4 flex flex-col gap-[4px]">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-[100%] text-[#3D445E] font-vk text-start">
             {t("pageTitle")}

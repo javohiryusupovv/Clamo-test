@@ -34,7 +34,7 @@ export default function ReyesterCard({
   const t = useTranslations("ReyesterCard");
 
   console.log(reviews);
-  
+
 
   const renderValue = (value: string | number | undefined) => {
     if (value === undefined || value === null || value === "" || value === 0) {

@@ -1,13 +1,14 @@
 "use client";
 
-import { ChevronRight } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Inter } from "next/font/google";
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
 });
 import Image from "next/image";
+import Link from "next/link";
+import { FaChevronRight } from "react-icons/fa";
 
 export default function AccredationHead() {
   const t = useTranslations("AccreditationPage");
@@ -21,6 +22,7 @@ export default function AccredationHead() {
     sevenTitle,
   ] = t("modern_accerditation").split(" ");
   const btn = useTranslations("HomePage");
+  const locale =  useLocale();
 
   return (
     <div className=" relative bg-[#F6F9FC] h-auto">
@@ -43,21 +45,23 @@ export default function AccredationHead() {
                 {t("necessary_license")}
               </p>
             </div>
-            {/* Buttons */}
-            <div className="mt-[10px] md:mt-[30px] lg:mt-[40px] flex flex-col sm:flex-row items-start sm:items-center gap-3">
-              <button className="group bg-[#23B3FC] font-inter hover:bg-[#23B3FC]/80 w-full sm:w-[200px] md:w-[240px] lg:w-[272px] py-[10px] gap-[5px] border-0 rounded-lg justify-center flex items-center text-[#FFFFFF] text-[14px] leading-[1.3] font-medium">
-                {btn("service_button")}{" "}
-                <ChevronRight
-                  className="group-hover:translate-x-2 transition-all duration-200"
-                  size={22}
-                />
-              </button>
-              <button className="group font-inter lg:px-20 px-16 h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[30%] bg-[#23B3FC]/[12%] transition-all duration-200 rounded-lg text-sm font-medium text-[#23B3FC]  leading-[130%] ">                {btn("applying")}{" "}
-                <ChevronRight
-                  className="group-hover:translate-x-2 transition-all duration-200"
-                  size={22}
-                />
-              </button>
+
+            <div className="flex flex-col md:flex-row gap-2 md:gap-6 lg:w-[590px]">
+              <Link
+                href={`/${locale}/about#services-center`}
+                className="w-full"
+              >
+                <button className="group font-inter w-full lg:px-20 px-5 h-[37px] flex items-center justify-center gap-[11.5px] hover:bg-[hsl(200,97%,65%)] bg-[#23b3fc] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">
+                  {btn("service_button")}
+                  <FaChevronRight className="md:group-hover:translate-x-2 transition-all duration-200" />
+                </button>
+              </Link>
+              <Link href={`/${locale}/contacts`} className="w-full">
+                <button className="group hover:bg-[#23B3FC]/[30%] w-full text-[#23B3FC] bg-[#23B3FC]/[12%] font-inter transition-all duration-200 lg:px-20 px-5 h-[37px] flex items-center justify-center gap-[11.5px] rounded-lg text-sm font-medium leading-[130%]">
+                  {btn("applying")}
+                  <FaChevronRight className="md:group-hover:translate-x-2 transition-all duration-200" />
+                </button>
+              </Link>
             </div>
           </div>
           {/* Blur Background Circle */}

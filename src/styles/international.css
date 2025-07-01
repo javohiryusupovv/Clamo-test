@@ -12,7 +12,7 @@
         height: 460px;
         background-color: #6EB8E8;
         border-radius: 50%;
-        filter: blur(200px);
+        filter: blur(400px);
         z-index:-2;
     }
 
@@ -25,7 +25,7 @@
         height: 460px;
         background-color: #6EB8E8;
         border-radius: 50%;
-        filter: blur(200px);
+        filter: blur(250px);
         z-index: -2;
     }
 }

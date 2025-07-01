@@ -1,17 +1,30 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { Inter } from "next/font/google";
 import Man from "../../../../../../public/Images/man.png";
 import Woman from "../../../../../../public/Images/woman.png";
 import Image from "next/image";
-import "./style.css";
+// import "./style.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+});
+
 export default function firstpage() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const t = useTranslations("ConsultingPage");
 
   return (
     <div className="">
-      <div className=" bg-[#FFFFFF] relative z-10">
+      <div className="bg-[#FFFFFF] relative z-10 -top-3">
+        <div
+          className={` flex gap-[20px] container items-center text-[12px] font-inter ${inter.className} font-medium w-full`}
+        >
+          <h1 className=" text-[#3D445E]">{t("about_we")}</h1>
+          <h1 className=" text-[#838CAF]">{t("consalting")}</h1>
+        </div>
       </div>
       <div className=" bg-[#F6F9FC] car">
         <div className=" h-[721px] card1  overflov container flex w-full justify-between">
@@ -32,7 +45,7 @@ export default function firstpage() {
                 {t("easy_sever")}
               </h1>
             </div>
-            <div className=" w-full h-[320px] flex flex-col gap-[20px]">
+            <div className=" w-full h-[320px] flex flex-col md:gap-[20px] gap-1 -translate-y-2.5">
               <div className=" w-full card11 little-card1 h-[137px] div bg-[#FFFFFF] rounded-3xl flex flex-col justify-center gap-[16px]">
                 <h1 className=" ml-[24px] borders rounded-[40px] border w-[136px] text-[#23B3FC] font-inter font-bold text-[24px] leading-[1.3] h-[47px] flex items-center justify-center border-[#23B3FC]">
                   {t("step_one")}
@@ -62,7 +75,7 @@ export default function firstpage() {
               alt="bayroq"
               className="object-contain absolute z-10 ml-36 mt-8 max-w-[494px] h-[704px] img2"
             />
-            <div className="absolute bottom-0 left-0 w-full h-[120px] md:h-[180px] lg:h-[430px] bg-gradient-to-t z-20 from-[#F6F9FC]/100 opacity- to-transparent"></div>
+            {/* <div className="absolute bottom-0 left-0 w-full h-[120px] md:h-[180px] lg:h-[430px] bg-gradient-to-t z-20 from-[#F6F9FC]/100 opacity- to-transparent"></div> */}
           </div>
           <div className=" bg-[#F6F9FC] img-flex w-[559px] flex">
             <Image
@@ -75,7 +88,7 @@ export default function firstpage() {
               alt="bayroq"
               className="object-contain woman absolute z-10 ml-36 mt-8 max-w-[494px] h-[704px]"
             />
-            <div className="absolute bottom-0 left-0 w-full h-[120px] md:h-[180px] lg:h-[430px] bg-gradient-to-t z-20 from-[#F6F9FC]/100 opacity- to-transparent"></div>
+            {/* <div className="absolute bottom-0 left-0 w-full h-[120px] md:h-[180px] lg:h-[430px] bg-gradient-to-t z-20 from-[#F6F9FC]/100 opacity- to-transparent"></div> */}
           </div>
         </div>
       </div>
