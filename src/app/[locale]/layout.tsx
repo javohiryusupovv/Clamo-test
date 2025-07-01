@@ -4,6 +4,7 @@ import "../globals.css";
 import { ToastContainer } from "react-toastify";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import { metadataContent } from "constants/page";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,49 +16,52 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Clamo – Litsenziyalash va Akkreditatsiyalash Markazi",
-  description:
-    "Clamo — litsenziyalash va akkreditatsiyalash bo‘yicha xizmatlar ko‘rsatadigan davlat muassasasi. Ta'lim, sog‘liqni saqlash va boshqa sohalarda yuridik shaxslarni rasmiy ro‘yxatdan o‘tkazish va sifatini baholashga doir barcha jarayonlarni yengil va shaffof tarzda amalga oshiring.",
-  keywords: [
-    "Clamo",
-    "litsenziya",
-    "akkreditatsiya",
-    "davlat muassasasi",
-    "ruxsatnoma",
-    "ta'lim litsenziyasi",
-    "sog‘liqni saqlash akkreditatsiyasi",
-    "Uzbekistan",
-    "litsenziyalash markazi",
-    "akkreditatsiya qilish",
-  ],
-  authors: [{ name: "Clamo" }],
-  creator: "Clamo",
-  icons: {icon: "/HeadLogo.svg"},
-  openGraph: {
-    title: "Clamo – Litsenziyalash va Akkreditatsiyalash Markazi",
-    description:
-      "Davlat litsenziya va akkreditatsiya jarayonlarini raqamlashtirish va soddalashtirishga yo‘naltirilgan platforma. Clamo orqali muassasangizni tez, qulay va shaffof tarzda ro‘yxatdan o‘tkazing.",
-    url: "https://clamotest.vercel.app",
-    siteName: "Clamo",
-    images: [
-      {
-        url: "https://clamotest.vercel.app/og-image.png", // yoki to‘liq URL: https://yourdomain.com/og-image.png
-        width: 1200,
-        height: 630,
-        alt: "Clamo – Litsenziya va Akkreditatsiya platformasi",
-      },
+export async function generateMetadata({ params }: { params: Promise<{locale: string }>}) {
+  const {locale} = await params
+  const t = metadataContent[locale as "uz" | "ru" | "en"] ?? metadataContent.uz;
+
+  return {
+    title: t.title,
+    description: t.description,
+    keywords: [
+      "Clamo",
+      "litsenziya",
+      "akkreditatsiya",
+      "davlat muassasasi",
+      "ruxsatnoma",
+      "ta'lim litsenziyasi",
+      "sog‘liqni saqlash akkreditatsiyasi",
+      "Uzbekistan",
+      "litsenziyalash markazi",
+      "akkreditatsiya qilish",
     ],
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Clamo – Litsenziyalash va Akkreditatsiyalash Markazi",
-    description:
-      "Litsenziya va akkreditatsiyani Clamo orqali tez, oson va ishonchli tarzda oling.",
-    images: ["https://clamotest.vercel.app/og-image.png"],
-  },
-};
+    authors: [{ name: "Clamo" }],
+    creator: "Clamo",
+    icons: { icon: "/HeadLogo.svg" },
+    openGraph: {
+      title: t.title,
+      description: t.ogDescription,
+      url: "https://clamotest.vercel.app",
+      siteName: "Clamo",
+      images: [
+        {
+          url: "https://clamotest.vercel.app/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: "Clamo – Litsenziya va Akkreditatsiya platformasi",
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t.title,
+      description: t.twitterDescription,
+      images: ["https://clamotest.vercel.app/og-image.png"],
+    },
+  };
+}
+
 
 
 
