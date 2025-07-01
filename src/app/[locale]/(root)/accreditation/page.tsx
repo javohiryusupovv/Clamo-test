@@ -11,7 +11,6 @@ interface Params {
 }
 
 export async function generateMetadata({ params }: { params: Params }) {
-  const locale = params.locale
   const content = {
     title_uz: "CLAMO bilan akkreditsiyalash — zamonaviy yondashuv",
     description_uz: "Tashkilotingiz uchun zarur litsenziyani tez va ishonchli tarzda oling. Clamo sizning qonuniylikdagi ishonchli hamkoringiz.",
