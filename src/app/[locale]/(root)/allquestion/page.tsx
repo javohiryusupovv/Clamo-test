@@ -3,6 +3,7 @@ import Questionsss from "../components/questions/Questions";
 
 export default async function QuestionsPageWrapper() {
   const faqData = await getFaqs();
+  
 
   return (
     <div className="md:mb-16 mb-6 lg:mt-10 ">

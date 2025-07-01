@@ -4,7 +4,6 @@ import { ChevronRight } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 export default function International() {
@@ -12,14 +11,18 @@ export default function International() {
   const locale = useLocale();
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      import("aos").then((AOS) => {
+      const loadAOS = async () => {
+        const AOS = await import("aos");
         AOS.init({ duration: 1000 });
-      });
-    }
-  }, []);
+      };
+
+      if (typeof window !== "undefined") {
+        loadAOS();
+      }
+    }, []);
+
   return (
-    <div className="internationalparent overflow-hidden lg:pb-16 pb-8">
+    <div className="internationalparent flex  h-screen overflow-hidden lg:pb-16 pb-8">
       <div className="container relative top-0 left-0 flex flex-col md:flex-row gap-6 md:gap-[65px] justify-between items-center w-full md:mb-12">
         <article className="w-full md:w-[45%] relative z-[10]">
           <p className="inline-flex px-2 py-1 font-inter bg-[#23B3FC] text-white rounded-md text-[14px] leading-[100%] font-medium uppercase mb-4">

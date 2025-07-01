@@ -11,7 +11,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <>
             <Navbar/>
             <Suspense fallback={<Loading/>}>
-                <main className=" pt-[100px]">{children}</main>
+                <main className="pt-[100px]">{children}</main>
                 <FooterLayout />
             </Suspense>
 

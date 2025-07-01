@@ -10,13 +10,14 @@
     "regulatorydocuments": "Regulatory Documents"
   },
   "ReyesterCard": {
-    "view_license": "Litsenziyani ko‘rish",
-    "accreditation_number": "Akkreditatsiya raqami",
-    "shares": "Reviews",
-    "registration_date": "Akkreditatsiya berilgan sana",
-    "website": "Vebsayt",
-    "email": "Email manzil",
-    "phone": "Telefon raqam"
+    
+    "view_license": "View License",
+    "accreditation_number": "Accreditation Number",
+    "shares": "Sharhlar",
+    "registration_date": "Accreditation Date",
+    "website": "Website",
+    "email": "Email Address",
+    "phone": "Phone Number"
   },
   "ZodForm": {
     "name_subtitle": "The name must be at least 3 characters long",
@@ -198,9 +199,9 @@
   },
   "InternationalPage": {
     "firstletter": "International Cooperation",
-    "international22": "Accreditation with — a modern approach",
+    "international22": "International cooperation with",
     "international_title": "Clamo — ",
-    "international_des": "Get the necessary license for your organization quickly and reliably. Clamo is your reliable partner in legality",
+    "international_des": "CLAMO provides quality and results through collaboration with organizations that have a strong international standing.",
     "hamkorlar": "Our Partners",
     "hamkorlarr": "Collaboration projects",
     "hamkorlar_des": "All the necessary services to improve the quality and processes of medicine in one place, with convenient and effective solutions.",

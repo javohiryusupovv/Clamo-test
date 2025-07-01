@@ -9,7 +9,29 @@ import { useLocale, useTranslations } from "next-intl";
 import { FaAngleRight } from "react-icons/fa6";
 import Link from "next/link";
 import { useEffect } from "react";
-import "aos/dist/aos.css";
+import { getLocalizedValue } from "@/lib/getLocalization";
+
+
+
+
+export async function generateMetadata({ params }: { params: Promise<{locale: string }>}) {
+  const {locale} = await params
+    const content = {
+    title_uz: "Tibbiyotdagi asosiy meʼyoriy hujjatlar",
+    description_uz: "Tashkilotingiz uchun zarur litsenziyani tez va ishonchli tarzda oling. Clamo sizning qonuniylikdagi ishonchli hamkoringiz.",
+
+    title_ru: "Основные нормативные документы в медицине",
+    description_ru: "Получите необходимую лицензию для вашей организации быстро и надежно. Clamo — ваш надежный партнер в вопросах легализации.",
+
+    title_en: "Key Regulatory Documents in Medicine",
+    description_en: "Obtain the required license for your organization quickly and reliably. Clamo is your trusted partner in legal compliance.",
+  };
+
+  return {
+    title: getLocalizedValue(content, "title", locale),
+    description: getLocalizedValue(content, "description", locale),
+  };
+}
 
 export default function NormativeDocuments() {
   const t = useTranslations("RegulatorydocumentsPage");

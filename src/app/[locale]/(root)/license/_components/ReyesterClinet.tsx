@@ -81,7 +81,7 @@ export default function ReyesterClient({
             <SelectTrigger className="w-[250px] max-sm:w-full rounded-lg border border-gray-200 bg-gray-50 text-sm text-gray-700 font-inter focus:ring-1 focus:ring-blue-500">
               <SelectValue placeholder={t("all_section")} />
             </SelectTrigger>
-            <SelectContent className="font-inter">
+            <SelectContent className="font-inter" position="popper" side="bottom" avoidCollisions={false}>
               <SelectItem value="all">{t("all_section")}</SelectItem>
               {types.map((item) => {
                 const localizedTitle = getLocalizedValue(

@@ -4,6 +4,9 @@ import NavBuilding from "@/assets/NavBuilding.png";
 import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 
+
+
+
 export default function AboutMain() {
   const t = useTranslations("AboutPage");
   useEffect(() => {
