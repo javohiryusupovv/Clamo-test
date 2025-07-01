@@ -8,8 +8,9 @@ interface Params {
   locale: string;
 }
 
-export async function generateMetadata({ params }: { params: Params }) {
-  const content = {
+export async function generateMetadata({ params }: { params: Promise<{locale: string }>}) {
+  const {locale} = await params
+    const content = {
     title_uz: "Clamo — bilan xalqaro hamkorliklar",
     description_uz: "CLAMO xalqaro darajada o'z o'rniga ega bo'lgan tashkilotlar bilan hamkorlik qilish orqali, sifat va natijani taqdim qiladi.",
 
@@ -21,8 +22,8 @@ export async function generateMetadata({ params }: { params: Params }) {
   };
 
   return {
-    title: getLocalizedValue(content, "title", params.locale),
-    description: getLocalizedValue(content, "description", params.locale),
+    title: getLocalizedValue(content, "title", locale),
+    description: getLocalizedValue(content, "description", locale),
   };
 }
 

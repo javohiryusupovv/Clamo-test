@@ -15,14 +15,15 @@ import { getLocalizedValue } from "@/lib/getLocalization";
   }
 
 
-  export async function generateMetadata({ params }: { params: Params }) {
+  export async function generateMetadata({ params }: { params: Promise<{locale: string }>}) {
+    const {locale} = await params
     const sectionData = await getServicec();
   console.log(sectionData[0]);
   const content = sectionData[0];
   
   return {
-    title: getLocalizedValue(content, "description", params.locale) || "About Us - Default Title",
-    description: getLocalizedValue(content, "description", params.locale) || "Learn more about our mission, team, and services.",
+    title: getLocalizedValue(content, "description", locale) || "About Us - Default Title",
+    description: getLocalizedValue(content, "description", locale) || "Learn more about our mission, team, and services.",
   };
   }
 

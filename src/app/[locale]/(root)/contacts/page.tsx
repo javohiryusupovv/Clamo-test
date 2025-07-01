@@ -7,8 +7,9 @@ interface Params {
   locale: string;
 }
 
-export async function generateMetadata({ params }: { params: Params }) {
-  const content = {
+export async function generateMetadata({ params }: { params: Promise<{locale: string }>}) {
+  const {locale} = await params
+    const content = {
     title_uz: "Biz bilan bog‘laning — CLAMO",
     description_uz: "Savollaringiz bormi? CLAMO jamoasi bilan tez va oson bog‘laning. Sizga yordam berishga tayyormiz!",
 
@@ -20,8 +21,8 @@ export async function generateMetadata({ params }: { params: Params }) {
   };
 
   return {
-    title: getLocalizedValue(content, "title", params.locale),
-    description: getLocalizedValue(content, "description", params.locale),
+    title: getLocalizedValue(content, "title", locale),
+    description: getLocalizedValue(content, "description", locale),
   };
 }
 
