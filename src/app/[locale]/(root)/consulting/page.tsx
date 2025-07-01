@@ -1,8 +1,7 @@
+import { getLocalizedValue } from "@/lib/getLocalization";
 import Firstpage from "./_components/firstpage";
 import Secondpage from "./_components/secondpage";
 import { getCarousel } from "@/lib/getCarousel"; // yoki sizga mos yo'l
-
-import { getLocalizedValue } from "@/lib/utils";
 
 interface Params {
   locale: string;
@@ -21,8 +20,8 @@ export async function generateMetadata({ params }: { params: Params }) {
   };
 
   return {
-    title: getLocalizedValue(params.locale, content, "title"),
-    description: getLocalizedValue(params.locale, content, "description"),
+    title: getLocalizedValue(content, "title", params.locale),
+    description: getLocalizedValue(content, "description", params.locale),
   };
 }
 

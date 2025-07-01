@@ -8,7 +8,7 @@
   import { getSection } from "@/lib/getSection";
   import { getCarousel } from "@/lib/getCarousel"; // yoki sizga mos yo'l
   import Secondpage from "@/app/[locale]/(root)/consulting/_components/secondpage"
-import { getLocalizedValue } from "@/lib/utils";
+import { getLocalizedValue } from "@/lib/getLocalization";
 
   interface Params {
     locale: string;
@@ -21,8 +21,8 @@ import { getLocalizedValue } from "@/lib/utils";
   const content = sectionData[0];
   
   return {
-    title: getLocalizedValue(params.locale, content, "description") || "About Us - Default Title",
-    description: getLocalizedValue(params.locale, content, "description") || "Learn more about our mission, team, and services.",
+    title: getLocalizedValue(content, "description", params.locale) || "About Us - Default Title",
+    description: getLocalizedValue(content, "description", params.locale) || "Learn more about our mission, team, and services.",
   };
   }
 

@@ -2,9 +2,7 @@ import { getPartners } from "@/lib/getPartners";
 import Partnyor from "../components/partnyor/Partnyor";
 import International from "./_components/International";
 import InternationalProject from "./_components/InternationalProject";
-
-
-import { getLocalizedValue } from "@/lib/utils";
+import { getLocalizedValue } from "@/lib/getLocalization";
 
 interface Params {
   locale: string;
@@ -23,8 +21,8 @@ export async function generateMetadata({ params }: { params: Params }) {
   };
 
   return {
-    title: getLocalizedValue(params.locale, content, "title"),
-    description: getLocalizedValue(params.locale, content, "description"),
+    title: getLocalizedValue(content, "title", params.locale),
+    description: getLocalizedValue(content, "description", params.locale),
   };
 }
 

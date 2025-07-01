@@ -7,9 +7,9 @@ import CenterRegulations from "./_components/CenterRegulations";
 import { useLocale, useTranslations } from "next-intl";
 import { FaAngleRight } from "react-icons/fa6";
 import Link from "next/link";
+import { getLocalizedValue } from "@/lib/getLocalization";
 
 
-import { getLocalizedValue } from "@/lib/utils";
 
 interface Params {
   locale: string;
@@ -28,8 +28,8 @@ export async function generateMetadata({ params }: { params: Params }) {
   };
 
   return {
-    title: getLocalizedValue(params.locale, content, "title"),
-    description: getLocalizedValue(params.locale, content, "description"),
+    title: getLocalizedValue(content, "title", params.locale),
+    description: getLocalizedValue(content, "description", params.locale),
   };
 }
 

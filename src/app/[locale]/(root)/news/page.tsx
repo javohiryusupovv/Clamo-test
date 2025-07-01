@@ -1,8 +1,6 @@
 import { getNews } from "@/lib/getNews";
 import NewsGrid from "./_components/NewsGrid";
-
-import { getLocalizedValue } from "@/lib/utils";
-
+import { getLocalizedValue } from "@/lib/getLocalization";
 interface Params {
   locale: string;
 }
@@ -20,8 +18,8 @@ export async function generateMetadata({ params }: { params: Params }) {
   };
 
   return {
-    title: getLocalizedValue(params.locale, content, "title"),
-    description: getLocalizedValue(params.locale, content, "description"),
+    title: getLocalizedValue(content, "title", params.locale),
+    description: getLocalizedValue(content, "description", params.locale),
   };
 }
 

@@ -1,8 +1,7 @@
 import { useTranslations } from "next-intl";
 import Map from "./_components/Map";
 import SochealMedia from "./_components/Sochealmedia";
-
-import { getLocalizedValue } from "@/lib/utils";
+import { getLocalizedValue } from "@/lib/getLocalization";
 
 interface Params {
   locale: string;
@@ -21,8 +20,8 @@ export async function generateMetadata({ params }: { params: Params }) {
   };
 
   return {
-    title: getLocalizedValue(params.locale, content, "title"),
-    description: getLocalizedValue(params.locale, content, "description"),
+    title: getLocalizedValue(content, "title", params.locale),
+    description: getLocalizedValue(content, "description", params.locale),
   };
 }
 

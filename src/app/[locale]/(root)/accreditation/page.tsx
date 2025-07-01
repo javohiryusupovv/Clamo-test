@@ -4,13 +4,14 @@ import Secondpage from "./_components/secondpage"
 import QuestionsPage from "@/app/[locale]/(root)/components/QuestionsPage";
 import ReyesterClient from "../license/_components/ReyesterClinet";
 import { getReyesterTypes, getReyestersFromAPI } from "@/lib/getLicense";
-import { getLocalizedValue } from "@/lib/utils";
+import { getLocalizedValue } from "@/lib/getLocalization";
 
 interface Params {
   locale: string;
 }
 
 export async function generateMetadata({ params }: { params: Params }) {
+  const locale = params.locale
   const content = {
     title_uz: "CLAMO bilan akkreditsiyalash — zamonaviy yondashuv",
     description_uz: "Tashkilotingiz uchun zarur litsenziyani tez va ishonchli tarzda oling. Clamo sizning qonuniylikdagi ishonchli hamkoringiz.",
@@ -23,8 +24,8 @@ export async function generateMetadata({ params }: { params: Params }) {
   };
 
   return {
-    title: getLocalizedValue(params.locale, content, "title"),
-    description: getLocalizedValue(params.locale, content, "description"),
+    title: getLocalizedValue(content, "title", params.locale),
+    description: getLocalizedValue(content, "description", params.locale),
   };
 }
 

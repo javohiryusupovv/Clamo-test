@@ -1,7 +1,7 @@
 import { getReyestersFromAPI, getReyesterTypes } from "@/lib/getLicense";
 import LicenseHero from "./_components/LicenseHero";
 import ReyesterClient from "./_components/ReyesterClinet";
-import { getLocalizedValue } from "@/lib/utils";
+import { getLocalizedValue } from "@/lib/getLocalization";
 
 
 interface Params {
@@ -22,8 +22,8 @@ export async function generateMetadata({ params }: { params: Params }) {
   };
 
   return {
-    title: getLocalizedValue(params.locale, content, "title"),
-    description: getLocalizedValue(params.locale, content, "description"),
+    title: getLocalizedValue(content, "title", params.locale),
+    description: getLocalizedValue(content, "description", params.locale),
   };
 }
 

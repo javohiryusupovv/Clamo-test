@@ -6,6 +6,3 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 
-export function getLocalizedValue(locale: string, obj: any, keyBase: string) {
-  return obj?.[`${keyBase}_${locale}`] || obj?.[`${keyBase}_en`] || "";
-}
