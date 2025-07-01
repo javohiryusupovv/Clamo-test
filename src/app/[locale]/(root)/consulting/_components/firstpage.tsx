@@ -28,7 +28,7 @@ export default function firstpage() {
       </div>
       <div className=" bg-[#F6F9FC] car">
         <div className=" h-[721px] card1  overflov container flex w-full justify-between">
-          <div className="max-w-[557px]  first-card h-[454px] card-1 mt-[122px] flex flex-col md:gap-[40px] ">
+          <div className="max-w-[597px]  first-card h-[454px] card-1 mt-[122px] flex flex-col md:gap-[40px] ">
             <div className=" flex flex-col gap-2">
               <div className=" flex items-center font-inter font-medium text-[14px] leading-[1] gap-2 ">
                 <h1 className=" text-[#FFFFFF] info bg-[#23B3FC] font-inter border-0 rounded-[6px] py-1 px-2 leading-[100%] w-fit ">
@@ -64,7 +64,7 @@ export default function firstpage() {
               </div>
             </div>
           </div>
-          <div className=" bg-[#F6F9FC] bloc w-[559px] overflow-hidden relative  flex h-auto mt-9">
+          <div className=" bg-[#F6F9FC] bloc w-[559px] overflow-hidden relative  flex h-auto mt-9 ">
             <Image
               src={Man}
               alt="bayroq"
@@ -77,7 +77,7 @@ export default function firstpage() {
             />
             {/* <div className="absolute bottom-0 left-0 w-full h-[120px] md:h-[180px] lg:h-[430px] bg-gradient-to-t z-20 from-[#F6F9FC]/100 opacity- to-transparent"></div> */}
           </div>
-          <div className=" bg-[#F6F9FC] img-flex w-[559px] flex">
+          <div className=" bg-[#F6F9FC] img-flex w-[559px] flex image33">
             <Image
               src={Man}
               alt="bayroq"

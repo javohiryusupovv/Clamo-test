@@ -28,19 +28,19 @@ export default function LicenseHero() {
         <div className="absolute -left-[300px] top-28 blur-[200px] bg-[#6EB8E8] w-[580px] h-[360px] rounded-full"></div>
 
         <div className="container mx-auto px-4 ">
-          <div className="w-full lg:my-20 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10 lg:pt-12 md:h-[400px] md:pt-0">
+          <div className="w-full lg:mb-20 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10 md:h-[400px] md:pt-0">
             <div className="flex-1 space-y-5 text-center md:text-left">
-              <h1 className="rounded-md font-inter font-medium leading-[100%] uppercase bg-[#23B3FC] text-white px-3 py-2 text-sm  w-max mx-auto md:mx-0">
+              <p className="rounded-md font-inter font-medium leading-[100%] uppercase bg-[#23B3FC] text-white px-3 py-2 text-sm  w-max mx-auto md:mx-0">
                 {t("license_title")}
-              </h1>
+              </p>
 
               <div className="space-y-5 md:w-[45%] mx-auto md:mx-0">
-                <h1 className="text-[28px] font-inter leading-[110%] sm:text-[30px] md:text-[32px] font-medium text-[#1B1B1B]">
+                <h1 className="text-[28px] font-inter font-semibold leading-[110%] sm:text-[30px] md:text-[32px] text-[#1B1B1B]">
                   <span className="text-[#23B3FC] uppercase">{firstTitle}</span>{" "}
                   {secondTitle} {thirtTitle} {fourTitle} {fiveTitle} {sexTitle}{" "}
                   {sevenTitle}
                 </h1>
-                <p className="text-[#012548CC] font-vk leading-[140%] text-[18px] sm:text-[20px] font-medium">
+                <p className="text-[#012548CC] font-vk leading-[140%] text-[18px] md:text-[20px] font-medium">
                   {t("trusted_partner")}
                 </p>
               </div>
@@ -127,10 +127,10 @@ export default function LicenseHero() {
                       height={33}
                     />
                   </div>
-                  <h3 className="font-bold leading-[130%] text-[20px] mb-2 font-vk">
+                  <h3 className="font-bold leading-[130%] text-[20px] text-[#FFFFFF] mb-2 font-vk">
                     {step.title}
                   </h3>
-                  <p className="text-sm font-normal leading-[130%] font-vk">
+                  <p className="text-sm font-normal leading-[130%] text-[#FFFFFF] font-vk">
                     {step.description}
                   </p>
                 </div>
