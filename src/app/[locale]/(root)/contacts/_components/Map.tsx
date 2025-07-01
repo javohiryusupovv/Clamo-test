@@ -6,17 +6,22 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 import { getContactInfo } from "../../../../../../constants/page";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 
 export default function ContactPage() {
   const t = useTranslations("ContactPageLayout");
   const adres = useTranslations("ContactPage");
   const contact = getContactInfo;
+  const locale = useLocale();
+  const lang = locale.split("-")[0];
+
+  const mapUrl = `https://www.google.com/maps?&q=Parkent+Street+51,+Tashkent&hl=${lang}&output=embed`;
+
   return (
     <div className="relative w-full md:h-[550px] h-[450px] mb-20">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47951.73847904946!2d69.24007384112964!3d41.2918162894356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8ae4cb57ed3d%3A0x89e50d44b93dc3a!2sParkent%20Street%2051%2C%20Tashkent!5e0!3m2!1sen!2s!4v1718070862677!5m2!1sen!2s"
+        src={mapUrl}
         width="100%"
         height="100%"
         className="md:absolute inset-0 z-0 rounded-2xl max-md:mb-[190px]"
@@ -35,7 +40,9 @@ export default function ContactPage() {
             <FaPhoneAlt className="text-blue-600" />
             <Link href="tel:+998555143003" target="_blank">
               <p className="text-sm font-vk">{t("phone_number")}</p>
-              <p className="font-medium font-vk group-hover:underline">{item.phone}</p>
+              <p className="font-medium font-vk group-hover:underline">
+                {item.phone}
+              </p>
             </Link>
           </div>
 
@@ -43,7 +50,9 @@ export default function ContactPage() {
             <FaEnvelope className="text-blue-600" />
             <Link href="mailto:info@clamo.uz" target="_blank">
               <p className="text-sm font-vk">{t("email")}</p>
-              <p className="font-medium font-vk group-hover:underline">{item.email}</p>
+              <p className="font-medium font-vk group-hover:underline">
+                {item.email}
+              </p>
             </Link>
           </div>
 
@@ -51,17 +60,30 @@ export default function ContactPage() {
             <FaGlobe className="text-blue-600" />
             <div className="group">
               <p className="text-sm font-vk">{t("website")}</p>
-              <Link href={"https://clamotest.vercel.app/"} target="_blank" aria-label="website url" rel="noopener noreferrer">
-                <p className="font-medium font-vk group-hover:underline">{item.website}</p>
+              <Link
+                href={"https://clamotest.vercel.app/"}
+                target="_blank"
+                aria-label="website url"
+                rel="noopener noreferrer"
+              >
+                <p className="font-medium font-vk group-hover:underline">
+                  {item.website}
+                </p>
               </Link>
             </div>
           </div>
 
           <div className="group flex items-center gap-3">
             <FaMapMarkerAlt className="text-blue-600" />
-            <Link href={"https://yandex.uz/maps/-/CHgpuL00"} target="_blank" rel="noopener noreferrer">
+            <Link
+              href={"https://yandex.uz/maps/-/CHgpuL00"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <p className="text-sm font-vk">{t("addres")}</p>
-              <p className="font-medium font-vk group-hover:underline">{adres("address")}</p>
+              <p className="font-medium font-vk group-hover:underline">
+                {adres("address")}
+              </p>
             </Link>
           </div>
         </div>

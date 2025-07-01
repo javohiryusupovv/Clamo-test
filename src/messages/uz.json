@@ -77,11 +77,41 @@
       "your_opinion": "O‘z fikr-mulohazalaringizni platformada qoldirishingiz mumkin"
     },
     "cardComment": {
-      "name": "Umid G'afurov",
-      "title": "Ko'rib chiqish",
-      "badge": "CLAMO",
-      "time": "15 daqiqa oldin",
-      "comment": "Litsenziya olish jarayoni kutilganidan ham tez va shaffof bo‘ldi. Hamma bosqichlar raqamlashtirilgani ishimizni ancha yengillashtirdi."
+      "name_one": "Dilorom Abdullaeva",
+      "time_one": "10 daqiqa oldin",
+      "comment_one": "Onlayn tizim orqali litsenziya olish juda oson va qulay bo‘ldi. Qog‘ozbozlik yo‘q, hamma narsa aniq va avtomatlashtirilgan. Juda minnatdorman!",
+
+      "name_two": "Jasur Ikromov",
+      "time_two": "1 soat oldin",
+      "comment_two": "Elektron ariza topshirish va hujjat yuborish jarayoni kutilgandan ancha tez bo‘ldi. Barcha bosqichlar avtomatlashtirilgan ishlarni yengillashtirdi.",
+
+      "name_three": "Shaxnoza Saidova",
+      "time_three": "25 daqiqa oldin",
+      "comment_three": "Boshida biroz ishonmagan edim, lekin platforma haqiqatdan ham yaxshi ishlangan. Hujjatlarimni yubordim va kutib turmasdan javob oldim.",
+
+      "name_four": "Murod Rahimov",
+      "time_four": "40 daqiqa oldin",
+      "comment_four": "Litsenziyalash jarayonida byurokratiyadan bezib qolgan edim. Bu onlayn servis ishlarimni ancha osonlashtirdi. Sizlarga rahmat!",
+
+      "name_five": "Nargiza Xolmuhamedova",
+      "time_five": "5 daqiqa oldin",
+      "comment_five": "Yagona elektron tizim orqali litsenziya olish bosqichlari juda kulay. Interfeys veb-sayti tushunarli va zamonaviy.",
+
+      "name_six": "Shaxnoza kamolova",
+      "time_six": "3 daqiqa oldin",
+      "comment_six": "Jarayon ancha soddalashtirilgan. Foydalanuvchi sifatida oson tushundim va muammosiz foydalandim.",
+
+      "name_seven": "Aziz Bahriddinov",
+      "time_seven": "1 daqiqa oldin",
+      "comment_seven": "Ilova interfeysi juda qulay. Hujjatlarimni yuklashda hech qanday qiyinchilik bo‘lmadi.",
+
+      "name_eight": "Oybek Rahimov",
+      "time_eight": "1 soat oldin",
+      "comment_eight": "Yangi tizim haqiqatan ham samarali ishlayapti. Barcha bosqichlar aniq ko‘rsatilgan, navbat kutishlar yo‘q.",
+
+      "name_nine": "Gulchehra Yusupova",
+      "time_nine": "2 soat oldin",
+      "comment_nine": "Raqamli tizim yordamida ko‘plab vaqtimni tejadim. Avvalgi kabi navbatlarda turishga hojat yo‘q — barchasi onlayn amalga oshadi."
     }
   },
   "LicensePage": {

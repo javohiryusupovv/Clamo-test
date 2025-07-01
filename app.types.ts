@@ -94,8 +94,8 @@ export interface ReyesterType {
   slug: string;
   name_uz: string;
   name_en: string;
-  name_ru: string; 
-  
+  name_ru: string;
+
 }
 export interface PaginatedDataItem {
   id: number;
@@ -161,8 +161,6 @@ export interface CardComment {
   id: number;
   img: string;
   name: string;
-  title: string;
-  badge: string;
   staricon: string;
   time: string;
   comment: string;
@@ -227,9 +225,9 @@ export interface TeamMembers {
 
 export interface Department {
   id: number;
-  created_at: string; 
+  created_at: string;
   updated_at: string;
-  icon: string; 
+  icon: string;
   title: string;
   title_uz: string;
   title_en: string;
