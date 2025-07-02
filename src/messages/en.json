@@ -9,6 +9,10 @@
     "consulting": "Consulting",
     "regulatorydocuments": "Regulatory Documents"
   },
+  "ComingSoon": {
+    "message": "This feature will be available soon.",
+    "button": "Login"
+  },
   "ReyesterCard": {
     "view_license": "View License",
     "accreditation_number": "Accreditation Number",

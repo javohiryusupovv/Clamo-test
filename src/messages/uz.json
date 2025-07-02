@@ -9,6 +9,10 @@
     "consulting": "Konsultatsiya",
     "regulatorydocuments": "Normativ Hujjatlar"
   },
+  "ComingSoon": {
+    "message": "Bu funksionallik tez orada ishga tushiriladi.",
+    "button": "Kirish"
+  },
   "ReyesterCard": {
     "view_license": "Litsenziyani ko‘rish",
     "accreditation_number": "Akkreditatsiya raqami",

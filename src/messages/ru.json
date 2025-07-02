@@ -9,6 +9,10 @@
     "consulting": "Консалтинг",
     "regulatorydocuments": "Нормативные документы"
   },
+  "ComingSoon": {
+    "message": "Эта функция скоро будет доступна.",
+    "button": "Войти"
+  },
   "ReyesterCard": {
     "view_license": "Посмотреть лицензию",
     "accreditation_number": "Номер аккредитации",
