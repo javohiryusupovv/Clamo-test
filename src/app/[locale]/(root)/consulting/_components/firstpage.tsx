@@ -18,14 +18,6 @@ export default function firstpage() {
 
   return (
     <div className="">
-      <div className="bg-[#FFFFFF] relative z-10 -top-3">
-        <div
-          className={` flex gap-[20px] container items-center text-[12px] font-inter ${inter.className} font-medium w-full`}
-        >
-          <h1 className=" text-[#3D445E]">{t("about_we")}</h1>
-          <h1 className=" text-[#838CAF]">{t("consalting")}</h1>
-        </div>
-      </div>
       <div className=" bg-[#F6F9FC] car">
         <div className=" h-[721px] card1  overflov container flex w-full justify-between">
           <div className="max-w-[597px]  first-card h-[454px] card-1 mt-[122px] flex flex-col md:gap-[40px] ">

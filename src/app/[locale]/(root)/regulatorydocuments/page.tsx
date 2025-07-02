@@ -41,7 +41,7 @@ export default function NormativeDocuments() {
   return (
     <div className="bg-white w-full">
       <div className="min-h-[40vh] lg:min-h-[70vh] md:min-h-[70vh] h-screen container">
-        <section className="internationalparent flex items-center justify-between relative max-h-[50vh] lg:max-h-[50vh]">
+        <section className="internationalparent block xl:flex items-center justify-between relative max-h-[50vh] lg:max-h-[50vh]">
           {/* Text qismi */}
           <div className="z-50 max-w-full md:max-w-xl space-y-4 mt-10 md:mt-[150px]">
             <span className="text-sm font-medium bg-[#23B3FC] text-white py-1 px-3 rounded-[6px] leading-[100%] font-inter mb-[16px]">
@@ -73,7 +73,7 @@ export default function NormativeDocuments() {
             </div>
           </div>
           {/* Rasm qismi */}
-          <div className="absolute right-0 -top-24 -z-10 hidden xl:block">
+          <div className="absolute right-0 xl:-top-24 -z-10">
             <div className="relative">
               <Image
                 src={Folder}
