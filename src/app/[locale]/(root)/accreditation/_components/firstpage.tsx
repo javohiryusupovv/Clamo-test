@@ -25,7 +25,7 @@ export default function AccredationHead() {
   const locale =  useLocale();
 
   return (
-    <div className=" relative bg-[#F6F9FC] h-auto">
+    <div className=" relative bg-[#F6F9FC] h-screen max-md:pt-10">
       <div
         className={`container relative bg-transparent h-auto xl:h-[720px] lg:h-[650px] flex flex-col lg:flex-row lg:gap-24 px-4 md:px-10 ${inter.className} font-inter`}
       >

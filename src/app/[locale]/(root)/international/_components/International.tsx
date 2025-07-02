@@ -22,7 +22,7 @@ export default function International() {
     }, []);
 
   return (
-    <div className="internationalparent flex  h-screen overflow-hidden lg:pb-16 pb-8">
+    <div className="internationalparent flex max-sm:pt-[40px] h-screen overflow-hidden max-md:pt-[70px] lg:pb-16 pb-8">
       <div className="container relative top-0 left-0 flex flex-col md:flex-row gap-6 md:gap-[65px] justify-between items-center w-full md:mb-12">
         <article className="w-full md:w-[45%] relative z-[10]">
           <p className="inline-flex px-2 py-1 font-inter bg-[#23B3FC] text-white rounded-md text-[14px] leading-[100%] font-medium uppercase mb-4">

@@ -40,7 +40,7 @@ export default function NormativeDocuments() {
   const locale = useLocale();
   return (
     <div className="bg-white w-full">
-      <div className="min-h-[40vh] lg:min-h-[70vh] md:min-h-[70vh] container">
+      <div className="min-h-[40vh] lg:min-h-[70vh] md:min-h-[70vh] h-screen container">
         <section className="internationalparent flex items-center justify-between relative max-h-[50vh] lg:max-h-[50vh]">
           {/* Text qismi */}
           <div className="z-50 max-w-full md:max-w-xl space-y-4 mt-10 md:mt-[150px]">

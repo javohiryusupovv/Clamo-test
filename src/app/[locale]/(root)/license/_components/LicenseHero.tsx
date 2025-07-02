@@ -37,12 +37,12 @@ export default function LicenseHero() {
   return (
     <>
       {/* Hero section */}
-      <div className="relative h-screen overflow-visible flex items-center">
+      <div className="relative h-screen overflow-visible flex">
         <div className="absolute -left-[300px] top-28 blur-[200px] bg-[#6EB8E8] w-[580px] h-[360px] rounded-full"></div>
 
         <div className="container mx-auto px-4 ">
-          <div className="w-full lg:mb-20 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10 md:h-[400px] md:pt-0">
-            <div className="flex-1 space-y-5 text-center md:text-left">
+          <div className="w-full my-20 max-sm:my-8 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10 md:h-[400px] md:pt-0">
+            <div className="flex-1 space-y-5 md:text-left">
               <p className="rounded-md font-inter font-medium leading-[100%] uppercase bg-[#23B3FC] text-white px-3 py-2 text-sm  w-max mx-auto md:mx-0">
                 {t("license_title")}
               </p>
