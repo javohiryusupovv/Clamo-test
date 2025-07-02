@@ -44,6 +44,23 @@ export default function Navbar() {
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      const body = document.body;
+      if (body.hasAttribute("data-scroll-locked")) {
+        body.removeAttribute("data-scroll-locked");
+        body.style.overflow = "";
+      }
+    });
+  
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["data-scroll-locked"],
+    });
+  
+    return () => observer.disconnect();
+  }, []);
+
   const handleLangChange = (lang: Language) => {
     setSelectedLang(lang);
     setDropdownOpen(false);
