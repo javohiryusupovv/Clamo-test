@@ -6,6 +6,7 @@ import FooterLayout from "./components/footer/Footer"
 
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+// console.log("test");
 
     return (
         <>
