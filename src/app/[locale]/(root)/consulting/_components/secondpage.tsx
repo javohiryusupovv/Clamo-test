@@ -16,7 +16,7 @@ export default function secondpage({ carousel }: { carousel: CarouselData[] }) {
   const locale = useLocale();
 
   return (
-    <div className=" h-[518px] second-div w-full bg-[#ffffff]">
+    <div className=" h-[518px] max-ms:mt-10 second-div w-full bg-[#ffffff]">
       <div className="flex flex-col gap-[4px] font-vksans lg:mb-[44px] md:mb-[37px] mb-[25px] sm:pt-[40px] md:pt-[50px] lg:pt-[64px] container">
         <h1 className="font-bold font-vk text-[#3D445E] md:text-4xl text-3xl lg:text-5xl leading-[100% ]">
           {t("work_direction")}

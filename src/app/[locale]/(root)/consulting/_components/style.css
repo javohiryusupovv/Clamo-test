@@ -230,7 +230,7 @@
   }
 
   .second-div {
-    margin-top: -55px;
+    margin-top:10px;
     padding-top: 30px;
   }
 
@@ -281,11 +281,7 @@
   .man {
     margin-top: -50px !important;
   }
-  .second-div {
-    margin-top: -100px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
+
   .konsul {
     font-size: 22px !important;
     line-height: 27px;
