@@ -112,7 +112,7 @@ export const getPlatforms = (t: TFunction): PlatformsServiceProps[] => [
 export const getCardComment = (t: TFunction): CardComment[] => [
   {
     id: 1,
-    img: "/Imgs/Umid.png",
+    img: "/Imgs/dilorom.png",
     name: t("cardComment.name_one"),
     staricon: "/Imgs/Stars.png",
     time: t("cardComment.time_one"),
@@ -144,7 +144,7 @@ export const getCardComment = (t: TFunction): CardComment[] => [
   },
   {
     id: 5,
-    img: "/Imgs/Umid.png",
+    img: "/Imgs/nargiza2.jpg",
     name: t("cardComment.name_five"),
     staricon: "/Imgs/Stars.png",
     time: t("cardComment.time_five"),
@@ -152,7 +152,7 @@ export const getCardComment = (t: TFunction): CardComment[] => [
   },
   {
     id: 6,
-    img: "/Imgs/Umid.png",
+    img: "/Imgs/shaxnoza.jpg",
     name: t("cardComment.name_six"),
     staricon: "/Imgs/Stars.png",
     time: t("cardComment.time_six"),
