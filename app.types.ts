@@ -44,6 +44,7 @@ export type Partner = {
   id: number;
   image: string;
   title: string;
+  link: string;
 };
 
 export type AccordionItemProps = {

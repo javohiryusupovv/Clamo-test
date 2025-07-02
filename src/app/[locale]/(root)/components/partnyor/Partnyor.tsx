@@ -28,6 +28,9 @@ export default function Partnyor({ partners }: { partners: Partner[] }) {
   const repeatCount = Math.ceil(minCount / partners.length);
   const extendedPartners = Array(repeatCount).fill(partners).flat();
 
+  console.log(extendedPartners);
+  
+
   return (
     <div className="md:py-16 pt-6 mb-6 bg-[#F6F9FC] overflow-visible">
       <article className="container text-center mb-10 px-4 sm:px-0">
@@ -51,7 +54,7 @@ export default function Partnyor({ partners }: { partners: Partner[] }) {
           >
             {extendedPartners.map((img, index) => (
               <Link
-                href="#"
+                href={img.link}
                 key={`right-${img.id}-${index}`}
                 className="mx-2 sm:mx-[18px] bg-white border-[#eaecef]/40 border-[3px] rounded-xl flex items-center justify-center h-[180px] sm:h-[110px] w-[160px] max-sm:h-[90px] sm:w-[220px] p-4"
               >
@@ -78,7 +81,7 @@ export default function Partnyor({ partners }: { partners: Partner[] }) {
               .reverse()
               .map((img, index) => (
                 <Link
-                  href="#"
+                  href={img.link}
                   key={`left-${img.id}-${index}`}
                   className="mx-2 sm:mx-[18px] bg-white border-[#eaecef]/40 border-[3px] rounded-xl flex items-center justify-center h-[180px] sm:h-[110px] w-[160px] max-sm:h-[90px] sm:w-[220px] p-4"
                 >

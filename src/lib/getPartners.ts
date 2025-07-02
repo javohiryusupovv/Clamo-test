@@ -4,7 +4,7 @@ export async function getPartners() {
       cache: "no-store",
     });
 
-    if (!res.ok) throw new Error("Yangiliklarni olishda xatolik");
+    if (!res.ok) throw new Error("Partnyorlar olishda xatolik");
 
     return res.json();
   }
