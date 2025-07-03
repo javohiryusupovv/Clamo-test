@@ -117,6 +117,7 @@ export const getCardComment = (t: TFunction): CardComment[] => [
     staricon: "/Imgs/Stars.png",
     time: t("cardComment.time_one"),
     comment: t("cardComment.comment_one"),
+    fikr: t("cardComment.fikr"),
   },
   {
     id: 2,
@@ -125,6 +126,8 @@ export const getCardComment = (t: TFunction): CardComment[] => [
     staricon: "/Imgs/Stars.png",
     time: t("cardComment.time_two"),
     comment: t("cardComment.comment_two"),
+    fikr: t("cardComment.fikr"),
+
   },
   {
     id: 3,
@@ -133,6 +136,7 @@ export const getCardComment = (t: TFunction): CardComment[] => [
     staricon: "/Imgs/Stars.png",
     time: t("cardComment.time_three"),
     comment: t("cardComment.comment_three"),
+    fikr: t("cardComment.fikr"),
   },
   {
     id: 4,
@@ -141,6 +145,7 @@ export const getCardComment = (t: TFunction): CardComment[] => [
     staricon: "/Imgs/Stars.png",
     time: t("cardComment.time_four"),
     comment: t("cardComment.comment_four"),
+    fikr: t("cardComment.fikr"),
   },
   {
     id: 5,
@@ -149,6 +154,7 @@ export const getCardComment = (t: TFunction): CardComment[] => [
     staricon: "/Imgs/Stars.png",
     time: t("cardComment.time_five"),
     comment: t("cardComment.comment_five"),
+    fikr: t("cardComment.fikr"),
   },
   {
     id: 6,
@@ -157,6 +163,7 @@ export const getCardComment = (t: TFunction): CardComment[] => [
     staricon: "/Imgs/Stars.png",
     time: t("cardComment.time_six"),
     comment: t("cardComment.comment_six"),
+    fikr: t("cardComment.fikr"),
   },
   {
     id: 7,
@@ -165,6 +172,7 @@ export const getCardComment = (t: TFunction): CardComment[] => [
     staricon: "/Imgs/Stars.png",
     time: t("cardComment.time_seven"),
     comment: t("cardComment.comment_seven"),
+    fikr: t("cardComment.fikr"),
   },
   {
     id: 8,
@@ -173,6 +181,7 @@ export const getCardComment = (t: TFunction): CardComment[] => [
     staricon: "/Imgs/Stars.png",
     time: t("cardComment.time_eight"),
     comment: t("cardComment.comment_eight"),
+    fikr: t("cardComment.fikr"),
   },
   {
     id: 9,
@@ -181,6 +190,7 @@ export const getCardComment = (t: TFunction): CardComment[] => [
     staricon: "/Imgs/Stars.png",
     time: t("cardComment.time_nine"),
     comment: t("cardComment.comment_nine"),
+    fikr: t("cardComment.fikr"),
   },
 ];
 

@@ -72,9 +72,12 @@ export default function Izohlar() {
                     />
                   </div>
                   <div>
-                    <h2 className="font-semibold font-roboto text-[#022F5E] leading-[130%] sm:text-[16px] text-[12px]">
+                    <h2 className="font-semibold font-roboto text-[#022F5E] leading-[130%] sm:text-[16px] text-[12px] pb-[3px]">
                       {item.name}
                     </h2>
+                    <p className="text-[12px] leading-[100%] font-normal font-roboto text-[#8E9BA8]">
+                      {item.fikr}
+                    </p>
                   </div>
                 </div>
                 <hr className="my-[10px] text-[#F5F6F7]" />
@@ -112,42 +115,45 @@ export default function Izohlar() {
               .reverse()
               .map((item, id) => (
                 <div
-                key={id}
-                className="lg:max-w-[343px] max-w-[300px] mx-4 max-sm:mx-2 border border-[#E3E8E9] rounded-[16px] sm:p-[16px] p-[8px] bg-white"
-              >
-                <div className="flex items-center gap-2">
-                  <div className="flex items-center w-[45px] h-[45px] max-sm:w-[35px] max-sm:h-[35px]">
+                  key={id}
+                  className="lg:max-w-[343px] max-w-[300px] mx-4 max-sm:mx-2 border border-[#E3E8E9] rounded-[16px] sm:p-[16px] p-[8px] bg-white"
+                >
+                  <div className="flex items-center gap-2">
+                    <div className="flex items-center w-[45px] h-[45px] max-sm:w-[35px] max-sm:h-[35px]">
+                      <Image
+                        src={item.img}
+                        alt="Person people"
+                        width={44}
+                        height={44}
+                        className="rounded-full w-full h-full object-cover border border-[#C6CFD733]"
+                      />
+                    </div>
+                    <div>
+                      <h2 className="font-semibold font-roboto text-[#022F5E] leading-[130%] sm:text-[16px] text-[12px] pb-[3px]">
+                        {item.name}
+                      </h2>
+                      <p className="text-[12px] leading-[100%] font-normal font-roboto text-[#8E9BA8]">
+                        {item.fikr}
+                      </p>
+                    </div>
+                  </div>
+                  <hr className="my-[10px] text-[#F5F6F7]" />
+                  <div className="flex items-center gap-1 sm:pb-[8px] pb-1">
                     <Image
-                      src={item.img}
-                      alt="Person people"
-                      width={44}
-                      height={44}
-                      className="rounded-full w-full h-full object-cover border border-[#C6CFD733]"
+                      src={item.staricon}
+                      alt="staricons"
+                      width={88}
+                      height={16}
+                      className="object-contain"
                     />
+                    <p className="font-normal sm:text-[14px] font-roboto text-[12px] text-[#8E9BA8]">
+                      {item.time}
+                    </p>
                   </div>
-                  <div>
-                    <h2 className="font-semibold font-roboto text-[#022F5E] leading-[130%] sm:text-[16px] text-[12px]">
-                      {item.name}
-                    </h2>
-                  </div>
-                </div>
-                <hr className="my-[10px] text-[#F5F6F7]" />
-                <div className="flex items-center gap-1 sm:pb-[8px] pb-1">
-                  <Image
-                    src={item.staricon}
-                    alt="staricons"
-                    width={88}
-                    height={16}
-                    className="object-contain"
-                  />
-                  <p className="font-normal sm:text-[14px] font-roboto text-[12px] text-[#8E9BA8]">
-                    {item.time}
+                  <p className="font-normal sm:text-[14px] leading-[130%] text-[#121C25] font-roboto text-[12px] line-clamp-2">
+                    {item.comment}
                   </p>
                 </div>
-                <p className="font-normal sm:text-[14px] leading-[130%] text-[#121C25] font-roboto text-[12px] line-clamp-2">
-                  {item.comment}
-                </p>
-              </div>
               ))}
           </Marquee>
         </div>

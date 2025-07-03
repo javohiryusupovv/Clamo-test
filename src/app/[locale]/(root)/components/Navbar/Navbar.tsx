@@ -52,12 +52,12 @@ export default function Navbar() {
         body.style.overflow = "";
       }
     });
-  
+
     observer.observe(document.body, {
       attributes: true,
       attributeFilter: ["data-scroll-locked"],
     });
-  
+
     return () => observer.disconnect();
   }, []);
 
@@ -109,7 +109,7 @@ export default function Navbar() {
     <div className="m-auto">
       <div
         className={`fixed top-0 z-[600] w-full backdrop-blur-3xl ${isScrolled ? "bg-white" : ""}`}>
-        <nav className="flex items-center justify-between py-4 container">
+        <nav className="flex items-center justify-between py-4 container md:pt-[35px]">
           <div className={`container relative z-20 transition-transform duration-500 ease-in-out ${isScrolled ? "translate-y-0" : " translate-y-3"}`}>
             {/* Desktop Menu */}
             <div className="flex items-center justify-between w-full gap-10">
