@@ -165,6 +165,7 @@ export interface CardComment {
   staricon: string;
   time: string;
   comment: string;
+  fikr: string;
 }
 
 export interface NewsTypes {
