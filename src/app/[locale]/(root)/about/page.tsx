@@ -9,6 +9,7 @@
   import { getCarousel } from "@/lib/getCarousel"; // yoki sizga mos yo'l
   import Secondpage from "@/app/[locale]/(root)/consulting/_components/secondpage"
 import { getLocalizedValue } from "@/lib/getLocalization";
+import CenterStructure from "./_components/CenterStructure";
 
 
 
@@ -17,7 +18,7 @@ import { getLocalizedValue } from "@/lib/getLocalization";
     const sectionData = await getServicec();
   console.log(sectionData[0]);
   const content = sectionData[0];
-  
+
   return {
     title: getLocalizedValue(content, "description", locale) || "About Us - Default Title",
     description: getLocalizedValue(content, "description", locale) || "Learn more about our mission, team, and services.",
@@ -32,11 +33,12 @@ import { getLocalizedValue } from "@/lib/getLocalization";
     const service = await getServicec();
     const members = await getTeamCarousel();
     const carouselData = await getCarousel();
-    
+
     return (
       <div className="overflow-hidden">
         <AboutMain />
         <Servicec servicec={service} />
+        <CenterStructure />
         <DepartmentSection agentsection={department} />
         <TeamCarousel members={members} />
         <HeroSection />
