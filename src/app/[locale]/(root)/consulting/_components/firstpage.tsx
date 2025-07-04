@@ -9,16 +9,17 @@ import { useEffect } from "react";
 export default function firstpage() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const t = useTranslations("ConsultingPage");
- useEffect(() => {
-      const loadAOS = async () => {
-        const AOS = await import("aos");
-        AOS.init({ duration: 1000 });
-      };
 
-      if (typeof window !== "undefined") {
-        loadAOS();
-      }
-    }, []);
+  useEffect(() => {
+    const loadAOS = async () => {
+      const AOS = await import("aos");
+      AOS.init({ duration: 1000 });
+    };
+
+    if (typeof window !== "undefined") {
+      loadAOS();
+    }
+  }, []);
 
   return (
     <div className="">
@@ -34,16 +35,16 @@ export default function firstpage() {
                   {t("email_letter")}
                 </h1>
                 <h1 className=" text-[#3D445E] email-flex font-inter" data-aos="fade"
-  data-aos-offset="50"
-  data-aos-duration="700"
-  data-aos-anchor-placement="top-bottom">
+                  data-aos-offset="50"
+                  data-aos-duration="700"
+                  data-aos-anchor-placement="top-bottom">
                   {t("email_letter")}
                 </h1>
               </div>
               <h1 className=" konsul text-[#3D445E] leading-[100%]  max-w-[509px] text-[32px] font-inter font-bold" data-aos="fade" data-aos-delay="200"
-  data-aos-offset="50"
-  data-aos-duration="700"
-  data-aos-anchor-placement="top-bottom">
+                data-aos-offset="50"
+                data-aos-duration="700"
+                data-aos-anchor-placement="top-bottom">
                 {t("easy_sever")}
               </h1>
             </div>
