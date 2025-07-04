@@ -6,8 +6,7 @@ import Woman from "../../../../../../public/Images/woman.png";
 import Image from "next/image";
 import { useEffect } from "react";
 
-export default function firstpage() {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+export default function ConsultingPages() {
   const t = useTranslations("ConsultingPage");
 
   useEffect(() => {
