@@ -8,6 +8,7 @@ const inter = Inter({
 });
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 import { FaChevronRight } from "react-icons/fa";
 
 export default function AccredationHead() {
@@ -24,6 +25,17 @@ export default function AccredationHead() {
   const btn = useTranslations("HomePage");
   const locale =  useLocale();
 
+  useEffect(() => {
+        const loadAOS = async () => {
+          const AOS = await import("aos");
+          AOS.init({ duration: 1000 });
+        };
+  
+        if (typeof window !== "undefined") {
+          loadAOS();
+        }
+      }, []);
+
   return (
     <div className=" relative bg-[#F6F9FC] h-screen max-md:pt-10">
       <div
@@ -36,12 +48,18 @@ export default function AccredationHead() {
               {t("accerditation_title")}
             </h2>
             <div className="flex flex-col gap-[8px]">
-              <h1 className="text-[24px] md:text-[28px] lg:text-[32px] font-semibold text-[#1B1B1B] leading-[120%]">
+              <h1 className="text-[24px] md:text-[28px] lg:text-[32px] font-semibold text-[#1B1B1B] leading-[120%]" data-aos="fade"
+  data-aos-offset="50"
+  data-aos-duration="700"
+  data-aos-anchor-placement="top-bottom">
                 <strong className="text-[#23B3FC]">{firstTitle}</strong>{" "}
                 {secondTitle} {thirtTitle} {fourTitle} {fiveTitle} {sexTitle}{" "}
                 {sevenTitle}
               </h1>
-              <p className="font-vksans font-medium text-[#012548CC] text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] tracking-wide">
+              <p className="font-vksans font-medium text-[#012548CC] text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] tracking-wide" data-aos="fade" data-aos-delay="200"
+  data-aos-offset="50"
+  data-aos-duration="700"
+  data-aos-anchor-placement="top-bottom">
                 {t("necessary_license")}
               </p>
             </div>

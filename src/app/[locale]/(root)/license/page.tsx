@@ -31,6 +31,8 @@ export default async function Page() {
   const reyesters = await getReyestersFromAPI();
   const types = await getReyesterTypes();
 
+  
+
   return (
     <div>
       <LicenseHero />

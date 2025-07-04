@@ -9,7 +9,7 @@ export default function SochealMedia() {
     <div className="grid lg:grid-cols-4 gap-6 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-3 items-center justify-center bg-[#F6F9FC] md:mb-10 mb-7 py-6 max-md:mt-[405px] max-sm:mt-[395px] rounded-2xl">
       <Link href={"https://t.me/CLAMO_uz"} aria-label="website" target="_blank">
         <div className="flex items-center md:justify-center md:gap-5 ml-5 gap-2 group hover:cursor-pointer">
-          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#DFE9F7] transition duration-200 group-hover:bg-blue-700 cursor-pointer">
+          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0650C3]/[18%] transition duration-200 group-hover:bg-[#0650C3] cursor-pointer">
             <svg
               className="w-6 h-6 stroke-2 fill-[#0650C3] group-hover:fill-white transition-all duration-200"
               viewBox="0 0 496 512"
@@ -27,7 +27,7 @@ export default function SochealMedia() {
 
       <Link href={"https://instagram.com/clamo.uz"} aria-label="Clamo Instagram" target="_blank">
         <div className="flex items-center md:justify-center md:gap-5 ml-5 gap-2 group hover:cursor-pointer">
-          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#DFE9F7] transition duration-200 group-hover:bg-blue-700 cursor-pointer">
+          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0650C3]/[18%] transition duration-200 group-hover:bg-[#0650C3] cursor-pointer">
             <svg
               className="w-6 h-6 stroke-2 fill-[#0650C3] group-hover:fill-white transition-all duration-200"
               xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,7 @@ export default function SochealMedia() {
         target="_blank"
       >
         <div className="flex items-center md:justify-center md:gap-5 ml-5 gap-2 group hover:cursor-pointer">
-          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#DFE9F7] transition duration-200 group-hover:bg-blue-700 cursor-pointer">
+          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0650C3]/[18%] transition duration-200 group-hover:bg-[#0650C3] cursor-pointer">
             <svg
               className="w-6 h-6 stroke-2 fill-[#0650C3] group-hover:fill-white transition-all duration-200"
               viewBox="0 0 320 512"
@@ -75,7 +75,7 @@ export default function SochealMedia() {
         target="_blank"
       >
         <div className="flex items-center md:justify-center md:gap-5 ml-5 gap-2 group hover:cursor-pointer">
-          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#DFE9F7] transition duration-200 group-hover:bg-blue-700 cursor-pointer">
+          <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0650C3]/[18%] transition duration-200 group-hover:bg-[#0650C3] cursor-pointer">
             <svg
               className="w-6 h-6 stroke-2 fill-[#0650C3] group-hover:fill-white transition-all duration-200"
               viewBox="0 0 448 512"

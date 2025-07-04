@@ -46,7 +46,7 @@ export default function Partnyor({ partners }: { partners: Partner[] }) {
         <div>
           <Marquee
             direction="right"
-            speed={30}
+            speed={20}
             gradient={isGradient}
             gradientColor="#F6F9FC"
             pauseOnHover
@@ -71,7 +71,7 @@ export default function Partnyor({ partners }: { partners: Partner[] }) {
 
           <Marquee
             direction="left"
-            speed={30}
+            speed={20}
             gradient={isGradient}
             gradientColor="#F6F9FC"
             pauseOnHover

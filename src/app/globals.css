@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Customizing AOS fade to only move by 10px */
+[data-aos="fade"] {
+  opacity: 0;
+  transform: translateY(20px); /* faqat 10px pastdan chiqadi */
+  transition-property: opacity, transform;
+  filter: blur(4px);
+}
+
+[data-aos="fade"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+
+
 .teamcarousel {
   fill: radial-gradient(
     270.21% 86.02% at 50% 6.8%,

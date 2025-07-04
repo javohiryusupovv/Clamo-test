@@ -3,28 +3,40 @@ import Image from "next/image";
 import NavBuilding from "@/assets/NavBuilding.png";
 import { useTranslations } from "next-intl";
 import { useEffect } from "react";
-
+import AOS from 'aos';
 
 
 
 export default function AboutMain() {
   const t = useTranslations("AboutPage");
+
+
   useEffect(() => {
-    import("aos").then((AOS) => AOS.init({ duration: 1000 }));
+    AOS.init({
+      duration: 1000,
+    });
   }, []);
+
+
 
   return (
     <div className="relative w-full overflow-visible max-sm:flex max-sm:items-start max-sm:pt-10 max-sm:h-[80vh] h-screen pb-8 lg:pb-32">
       <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center lg:pt-32">
         {/* Matn bo‘limi */}
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center" data-aos="fade-up">
           <p className="rounded-md font-inter font-medium bg-[#23B3FC] leading-[100%] text-white text-sm sm:text-base px-4 py-1 w-fit mb-2 md:mb-4">
             {t("plan")}
           </p>
-          <h2 className="text-[20px] sm:text-[28px] lg:text-[32px] leading-[100%] font-semibold text-[#1B1B1B] md:pb-2 pb-3">
+          <h2 className="text-[20px] sm:text-[28px] lg:text-[32px] leading-[100%] font-semibold text-[#1B1B1B] md:pb-2 pb-3" data-aos="fade" data-aos-delay="100"
+  data-aos-offset="50"
+  data-aos-duration="700"
+  data-aos-anchor-placement="top-bottom">
             {t("abouttitle")}
           </h2>
-          <p className="text-[14px] sm:text-[16px] md:text-[20px] text-[#012548CC] leading-[140%]">
+          <p className="text-[14px] sm:text-[16px] md:text-[20px] text-[#012548CC] leading-[140%]" data-aos="fade" data-aos-delay="200"
+  data-aos-offset="50"
+  data-aos-duration="700"
+  data-aos-anchor-placement="top-bottom">
             {t("about_des1")}
           </p>
         </div>

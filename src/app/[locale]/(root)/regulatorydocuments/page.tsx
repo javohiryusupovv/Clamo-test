@@ -38,6 +38,7 @@ export async function generateMetadata({
 export default function NormativeDocuments() {
   const t = useTranslations("RegulatorydocumentsPage");
   const locale = useLocale();
+
   return (
     <div className="bg-white w-full">
       <div className="min-h-[40vh] lg:min-h-[70vh] md:min-h-[70vh] h-screen container">

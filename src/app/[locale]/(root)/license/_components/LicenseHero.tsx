@@ -40,15 +40,22 @@ export default function LicenseHero() {
       <div className="relative h-screen overflow-visible flex max-sm:pt-[50px]">
         <div className="absolute -left-[300px] top-28 blur-[200px] bg-[#6EB8E8] w-[580px] h-[360px] rounded-full"></div>
 
-        <div className="container mx-auto px-4 ">
+        <div className="container mx-auto px-4">
           <div className="w-full my-20 max-sm:my-8 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10 md:h-[400px] md:pt-0">
             <div className="flex-1 space-y-5 md:text-left">
-              <p className="rounded-md font-inter font-medium leading-[100%] uppercase bg-[#23B3FC] text-white px-3 py-2 text-sm  w-max md:mx-0">
+              <p className="rounded-md font-inter font-medium leading-[100%] uppercase bg-[#23B3FC] text-white px-3 py-2 text-sm  w-max md:mx-0" data-aos="fade"
+  data-aos-offset="50"
+  data-aos-duration="700"
+  data-aos-anchor-placement="top-bottom">
                 {t("license_title")}
               </p>
 
               <div className="space-y-5 md:w-[45%] mx-auto md:mx-0">
-                <h1 className="text-[28px] font-inter font-semibold leading-[110%] sm:text-[30px] md:text-[32px] text-[#1B1B1B]">
+                <h1 className="text-[28px] font-inter font-semibold leading-[110%] sm:text-[30px] md:text-[32px] text-[#1B1B1B]" data-aos="fade"
+  data-aos-delay="200"
+  data-aos-offset="50"
+  data-aos-duration="700"
+  data-aos-anchor-placement="top-bottom">
                   {locale === "en" ? (
                     <span className="text-[#23B3FC]">A New Standard</span>
                   ) : (
@@ -57,7 +64,10 @@ export default function LicenseHero() {
                   {secondTitle} {thirtTitle} {fourTitle} {fiveTitle} {sexTitle}{" "}
                   {sevenTitle}
                 </h1>
-                <p className="text-[#012548CC] font-vk leading-[140%] text-[18px] md:text-[20px] font-medium">
+                <p className="text-[#012548CC] font-vk leading-[140%] text-[18px] md:text-[20px] font-medium" data-aos="fade" data-aos-delay="100"
+  data-aos-offset="50"
+  data-aos-duration="700"
+  data-aos-anchor-placement="top-bottom">
                   {t("trusted_partner")}
                 </p>
               </div>
@@ -81,8 +91,8 @@ export default function LicenseHero() {
               </div>
             </div>
 
-            <div className="hidden md:flex md:flex-1 justify-center items-center w-full md:w-[55%] h-auto mt-8 md:mt-0 md:absolute z-[-10] md:right-[-50px]">
-              <div className="relative top-0 left-0 w-full h-[500px]">
+            <div className="hidden md:flex md:flex-1 justify-center items-center w-full md:w-[55%] h-auto md:mt-0 md:absolute z-[-10] md:right-[-50px]">
+              <div className="relative top-0 left-0 w-full h-[320px]">
                 <Image
                   src="/Images/stamp.svg"
                   alt="Pechat Clamo"
@@ -97,7 +107,7 @@ export default function LicenseHero() {
                   alt="Pechat Clamo "
                   width={248}
                   height={199}
-                  className="absolute bottom-0 -right-10 opacity-[0.6] z-[1]"
+                  className="absolute -bottom-36 -right-14 opacity-[0.6] z-[1]"
                   data-aos="zoom-in-left"
                   data-aos-duration="2000"
                 />

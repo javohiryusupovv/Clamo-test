@@ -205,26 +205,6 @@ export default function Navbar() {
                         <li
                           onClick={() =>
                             handleLangChange({
-                              code: "ru",
-                              label: "Rus",
-                              flag: "/icons/flags/russia-flag.svg",
-                            })
-                          }
-                          className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
-                        >
-                          <Image
-                            src="/icons/flags/russia-flag.svg"
-                            alt="Rus flag"
-                            width={24}
-                            height={24}
-                          />
-                          <p className="text-sm uppercase text-[#3D445E] font-medium">
-                            Rus
-                          </p>
-                        </li>
-                        <li
-                          onClick={() =>
-                            handleLangChange({
                               code: "en",
                               label: "Eng",
                               flag: "/icons/flags/united-kingdom-flag.svg",
@@ -242,6 +222,27 @@ export default function Navbar() {
                             Eng
                           </p>
                         </li>
+                        <li
+                          onClick={() =>
+                            handleLangChange({
+                              code: "ru",
+                              label: "Rus",
+                              flag: "/icons/flags/russia-flag.svg",
+                            })
+                          }
+                          className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
+                        >
+                          <Image
+                            src="/icons/flags/russia-flag.svg"
+                            alt="Rus flag"
+                            width={24}
+                            height={24}
+                          />
+                          <p className="text-sm uppercase text-[#3D445E] font-medium">
+                            Rus
+                          </p>
+                        </li>
+                        
                       </ul>
                     </div>
                   )}
@@ -377,26 +378,6 @@ export default function Navbar() {
                         <li
                           onClick={() =>
                             handleLangChange({
-                              code: "ru",
-                              label: "Rus",
-                              flag: "/icons/flags/russia-flag.svg",
-                            })
-                          }
-                          className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
-                        >
-                          <Image
-                            src="/icons/flags/russia-flag.svg"
-                            alt="Rus flag"
-                            width={24}
-                            height={24}
-                          />
-                          <p className="text-sm uppercase text-[#3D445E] font-medium">
-                            Rus
-                          </p>
-                        </li>
-                        <li
-                          onClick={() =>
-                            handleLangChange({
                               code: "en",
                               label: "Eng",
                               flag: "/icons/flags/united-kingdom-flag.svg",
@@ -414,6 +395,27 @@ export default function Navbar() {
                             Eng
                           </p>
                         </li>
+                        <li
+                          onClick={() =>
+                            handleLangChange({
+                              code: "ru",
+                              label: "Rus",
+                              flag: "/icons/flags/russia-flag.svg",
+                            })
+                          }
+                          className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
+                        >
+                          <Image
+                            src="/icons/flags/russia-flag.svg"
+                            alt="Rus flag"
+                            width={24}
+                            height={24}
+                          />
+                          <p className="text-sm uppercase text-[#3D445E] font-medium">
+                            Rus
+                          </p>
+                        </li>
+                        
                       </ul>
                     </div>
                   )}

@@ -47,12 +47,12 @@ export default function ServicesSection({
             const slug = slugs[index];
 
             return (
-              <div
+              <Link href={`/${locale}/${slug}`}
                 key={index}
                 className="group bg-white rounded-2xl shadow-sm hover:shadow-md p-6 flex flex-col justify-between transition duration-300 hover:-translate-y-1"
                 data-aos="zoom-out"
               >
-                <div>
+                <>
                   <Image
                     src={service.icon}
                     alt={service.title}
@@ -66,21 +66,18 @@ export default function ServicesSection({
                   <p className="text-sm text-[#3D445E] font-normal font-vk leading-[140%]">
                     {localizedDescription}
                   </p>
-                </div>
+                </>
 
                 {/* Bottom CTA */}
                 <div className="mt-[34px] flex justify-end items-center gap-4">
-                  <Link
-                    href={`/${locale}/${slug}`}
-                    className="text-[16px] text-[#23B3FC] font-medium font-vk opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  >
+                  <span className="text-[16px] text-[#23B3FC] font-medium font-vk opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     {t("batafsil")}
-                  </Link>
+                  </span>
                   <div className="bg-blue-100 p-3 rounded-full group-hover:bg-[#23B3FC] transition-all duration-300">
                     <ArrowRight className="w-5 h-5 text-[#23B3FC] group-hover:text-white group-hover:-rotate-45 transition-transform duration-300" />
                   </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>

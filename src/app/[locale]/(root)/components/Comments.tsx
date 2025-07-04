@@ -52,7 +52,7 @@ export default function Izohlar() {
         <div className="flex gap-4">
           <Marquee
             direction="right"
-            speed={30}
+            speed={20}
             gradient={isGradient}
             pauseOnHover
           >
@@ -106,7 +106,7 @@ export default function Izohlar() {
         <div className="flex gap-4">
           <Marquee
             direction="left"
-            speed={30}
+            speed={20}
             gradient={isGradient}
             pauseOnHover
           >

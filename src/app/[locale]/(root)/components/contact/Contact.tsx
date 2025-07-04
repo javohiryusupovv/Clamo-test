@@ -251,7 +251,7 @@ export default function Contact() {
                     width={50}
                     height={50}
                   />
-                  <span className="text-[16px] max-md:mr-1 max-lg:mr-4 max-sm:mr-2 max-ms:mr-4">
+                  <span className="text-[16px] max-md:mr-1 max-lg:mr-4 max-sm:mr-3 max-ms:mr-5">
                     +998
                   </span>
                 </article>
