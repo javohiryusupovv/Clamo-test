@@ -3,14 +3,19 @@
 import "../../../../styles/linerMainserver.css";
 import { commentOpinion } from "@/types/type";
 import Marquee from "react-fast-marquee";
-import { getCardComment, getOpinion } from "../../../../../constants/page";
+import { getOpinion } from "../../../../../constants/page";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
+import { CommentSharh } from "app.types";
+import dayjs from "../../../../lib/day-setup"
+interface CommentProps {
+  comments: CommentSharh[]
+}
 
-export default function Izohlar() {
+
+export default function Izohlar({ comments }: CommentProps) {
   const t = useTranslations("HomePage");
-  const cardComment = getCardComment(t);
   const opinion = getOpinion(t);
   const [isGradient, setIsGradient] = useState(true);
 
@@ -25,6 +30,7 @@ export default function Izohlar() {
     window.addEventListener("resize", checkScreen);
     return () => window.removeEventListener("resize", checkScreen);
   }, []);
+
 
   return (
     <div className="md:py-[64px] py-[30px]">
@@ -56,41 +62,51 @@ export default function Izohlar() {
             gradient={isGradient}
             pauseOnHover
           >
-            {cardComment.map((item, id) => (
+            {comments.map((item, id) => (
               <div
                 key={id}
                 className="lg:max-w-[343px] max-w-[300px] mx-4 max-sm:mx-2 border border-[#E3E8E9] rounded-[16px] sm:p-[16px] p-[8px] bg-white"
               >
                 <div className="flex items-center gap-2">
-                  <div className="flex items-center w-[45px] h-[45px] max-sm:w-[35px] max-sm:h-[35px]">
+                  {/* <div className="flex items-center w-[45px] h-[45px] max-sm:w-[35px] max-sm:h-[35px]">
                     <Image
-                      src={item.img}
+                      src={item.user_image || ""}
                       alt="Person people"
                       width={44}
                       height={44}
                       className="rounded-full w-full h-full object-cover border border-[#C6CFD733]"
                     />
-                  </div>
+                  </div> */}
                   <div>
                     <h2 className="font-semibold font-roboto text-[#022F5E] leading-[130%] sm:text-[16px] text-[12px] pb-[3px]">
-                      {item.name}
+                      {item.author_name}
                     </h2>
-                    <p className="text-[12px] leading-[100%] font-normal font-roboto text-[#8E9BA8]">
-                      {item.fikr}
-                    </p>
+                    {/* <p className="text-[12px] leading-[100%] font-normal font-roboto text-[#8E9BA8]">
+                      {item.comment}
+                    </p> */}
                   </div>
                 </div>
                 <hr className="my-[10px] text-[#F5F6F7]" />
                 <div className="flex items-center gap-1 sm:pb-[8px] pb-1">
-                  <Image
-                    src={item.staricon}
-                    alt="staricons"
-                    width={88}
-                    height={16}
-                    className="object-contain"
-                  />
+                  <div className="flex gap-[2px]">
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <Image
+                        key={index}
+                        src={
+                          index < item.rating
+                            ? "/icons/stars.svg"
+                            : "/icons/starsgray.svg"
+                        }
+                        alt="star"
+                        width={16}
+                        height={16}
+                        className="object-contain"
+                      />
+                    ))}
+                  </div>
+
                   <p className="font-normal sm:text-[14px] font-roboto text-[12px] text-[#8E9BA8]">
-                    {item.time}
+                    {dayjs(item.created_at).fromNow()}
                   </p>
                 </div>
                 <p className="font-normal sm:text-[14px] leading-[130%] text-[#121C25] font-roboto text-[12px] line-clamp-2">
@@ -110,50 +126,60 @@ export default function Izohlar() {
             gradient={isGradient}
             pauseOnHover
           >
-            {cardComment
+            {comments
               .slice()
               .reverse()
               .map((item, id) => (
                 <div
-                  key={id}
-                  className="lg:max-w-[343px] max-w-[300px] mx-4 max-sm:mx-2 border border-[#E3E8E9] rounded-[16px] sm:p-[16px] p-[8px] bg-white"
-                >
-                  <div className="flex items-center gap-2">
-                    <div className="flex items-center w-[45px] h-[45px] max-sm:w-[35px] max-sm:h-[35px]">
-                      <Image
-                        src={item.img}
-                        alt="Person people"
-                        width={44}
-                        height={44}
-                        className="rounded-full w-full h-full object-cover border border-[#C6CFD733]"
-                      />
-                    </div>
-                    <div>
-                      <h2 className="font-semibold font-roboto text-[#022F5E] leading-[130%] sm:text-[16px] text-[12px] pb-[3px]">
-                        {item.name}
-                      </h2>
-                      <p className="text-[12px] leading-[100%] font-normal font-roboto text-[#8E9BA8]">
-                        {item.fikr}
-                      </p>
-                    </div>
-                  </div>
-                  <hr className="my-[10px] text-[#F5F6F7]" />
-                  <div className="flex items-center gap-1 sm:pb-[8px] pb-1">
+                key={id}
+                className="lg:max-w-[343px] max-w-[300px] mx-4 max-sm:mx-2 border border-[#E3E8E9] rounded-[16px] sm:p-[16px] p-[8px] bg-white"
+              >
+                <div className="flex items-center gap-2">
+                  {/* <div className="flex items-center w-[45px] h-[45px] max-sm:w-[35px] max-sm:h-[35px]">
                     <Image
-                      src={item.staricon}
-                      alt="staricons"
-                      width={88}
-                      height={16}
-                      className="object-contain"
+                      src={item.user_image || ""}
+                      alt="Person people"
+                      width={44}
+                      height={44}
+                      className="rounded-full w-full h-full object-cover border border-[#C6CFD733]"
                     />
-                    <p className="font-normal sm:text-[14px] font-roboto text-[12px] text-[#8E9BA8]">
-                      {item.time}
-                    </p>
+                  </div> */}
+                  <div>
+                    <h2 className="font-semibold font-roboto text-[#022F5E] leading-[130%] sm:text-[16px] text-[12px] pb-[3px]">
+                      {item.author_name}
+                    </h2>
+                    {/* <p className="text-[12px] leading-[100%] font-normal font-roboto text-[#8E9BA8]">
+                      {item.comment}
+                    </p> */}
                   </div>
-                  <p className="font-normal sm:text-[14px] leading-[130%] text-[#121C25] font-roboto text-[12px] line-clamp-2">
-                    {item.comment}
+                </div>
+                <hr className="my-[10px] text-[#F5F6F7]" />
+                <div className="flex items-center gap-1 sm:pb-[8px] pb-1">
+                  <div className="flex gap-[2px]">
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <Image
+                        key={index}
+                        src={
+                          index < item.rating
+                            ? "/icons/stars.svg"
+                            : "/icons/starsgray.svg"
+                        }
+                        alt="star"
+                        width={16}
+                        height={16}
+                        className="object-contain"
+                      />
+                    ))}
+                  </div>
+
+                  <p className="font-normal sm:text-[14px] font-roboto text-[12px] text-[#8E9BA8]">
+                    {dayjs(item.created_at).fromNow()}
                   </p>
                 </div>
+                <p className="font-normal sm:text-[14px] leading-[130%] text-[#121C25] font-roboto text-[12px] line-clamp-2">
+                  {item.comment}
+                </p>
+              </div>
               ))}
           </Marquee>
         </div>

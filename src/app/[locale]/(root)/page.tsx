@@ -13,6 +13,7 @@ import { getPartners } from "@/lib/getPartners";
 import { getFaqs } from "@/lib/getFaqs";
 import { getServicec } from "@/lib/getServicec";
 import ClamoStatistic from "./components/ClamoStatistic";
+import { getReviews } from "@/lib/getSharh";
 
 export default async function Main() {
   const data = await getData();
@@ -20,6 +21,8 @@ export default async function Main() {
   const part = await getPartners();
   const faqData = await getFaqs();
   const service = await getServicec();
+  const comments = await getReviews()
+  
 
   return (
     <div className="overflow-hidden">
@@ -32,7 +35,7 @@ export default async function Main() {
         </div>
       </div>
       <MainService />
-      <Izohlar />
+      <Izohlar comments={comments}/>
       <NewsPage news={datas} />
       <div className="bg-[#f6f9fc] md:py-[60px] py-[25px]">
         <InstallPage />

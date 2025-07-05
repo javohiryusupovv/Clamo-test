@@ -168,6 +168,15 @@ export interface CardComment {
   fikr: string;
 }
 
+export interface CommentSharh{
+  id: number;
+  author_name: string;
+  comment: string;
+  created_at: string;
+  rating: number;
+  user_image: string | null;
+}
+
 export interface NewsTypes {
   id: number;
   slug: string;
