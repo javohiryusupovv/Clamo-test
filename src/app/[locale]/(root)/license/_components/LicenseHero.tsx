@@ -24,16 +24,16 @@ export default function LicenseHero() {
   const steps = getLicense;
 
   useEffect(() => {
-      const loadAOS = async () => {
-        const AOS = await import("aos");
-        AOS.init({ duration: 1000 });
-      };
+    const loadAOS = async () => {
+      const AOS = await import("aos");
+      AOS.init({ duration: 1000 });
+    };
 
-      if (typeof window !== "undefined") {
-        loadAOS();
-      }
-    }, []);
-  
+    if (typeof window !== "undefined") {
+      loadAOS();
+    }
+  }, []);
+
   return (
     <>
       {/* Hero section */}
@@ -43,19 +43,21 @@ export default function LicenseHero() {
         <div className="container mx-auto px-4">
           <div className="w-full my-20 max-sm:my-8 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10 md:h-[400px] md:pt-0">
             <div className="flex-1 space-y-5 md:text-left">
-              <p className="rounded-md font-inter font-medium leading-[100%] uppercase bg-[#23B3FC] text-white px-3 py-2 text-sm  w-max md:mx-0" data-aos="fade"
-  data-aos-offset="50"
-  data-aos-duration="700"
-  data-aos-anchor-placement="top-bottom">
+              <p className="rounded-md font-inter font-medium leading-[100%] uppercase bg-[#23B3FC] text-white px-3 py-2 text-sm  w-max md:mx-0" 
+                data-aos="fade-up"
+                data-aos-offset="50"
+                data-aos-duration="700"
+                data-aos-anchor-placement="top-bottom">
                 {t("license_title")}
               </p>
 
               <div className="space-y-5 md:w-[45%] mx-auto md:mx-0">
-                <h1 className="text-[28px] font-inter font-semibold leading-[110%] sm:text-[30px] md:text-[32px] text-[#1B1B1B]" data-aos="fade"
-  data-aos-delay="200"
-  data-aos-offset="50"
-  data-aos-duration="700"
-  data-aos-anchor-placement="top-bottom">
+                <h1 className="text-[28px] font-inter font-semibold leading-[110%] sm:text-[30px] md:text-[32px] text-[#1B1B1B]" 
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                  data-aos-offset="50"
+                  data-aos-duration="700"
+                  data-aos-anchor-placement="top-bottom">
                   {locale === "en" ? (
                     <span className="text-[#23B3FC]">A New Standard</span>
                   ) : (
@@ -64,15 +66,22 @@ export default function LicenseHero() {
                   {secondTitle} {thirtTitle} {fourTitle} {fiveTitle} {sexTitle}{" "}
                   {sevenTitle}
                 </h1>
-                <p className="text-[#012548CC] font-vk leading-[140%] text-[18px] md:text-[20px] font-medium" data-aos="fade" data-aos-delay="100"
-  data-aos-offset="50"
-  data-aos-duration="700"
-  data-aos-anchor-placement="top-bottom">
+                <p className="text-[#012548CC] font-vk leading-[140%] text-[18px] md:text-[20px] font-medium" 
+                  data-aos="fade" 
+                  data-aos-delay="550"
+                  data-aos-offset="50"
+                  data-aos-duration="700"
+                  data-aos-anchor-placement="top-bottom">
                   {t("trusted_partner")}
                 </p>
               </div>
 
-              <div className="flex flex-col md:flex-row gap-2 md:gap-6 md:w-[580px]">
+              <div className="flex flex-col md:flex-row gap-2 md:gap-6 md:w-[580px]" 
+                  data-aos="zoom-in" 
+                  data-aos-delay="600"
+                  data-aos-offset="50"
+                  data-aos-duration="700"
+                  >
                 <Link
                   href={`/${locale}/about#services-center`}
                   className="w-full"
@@ -91,7 +100,7 @@ export default function LicenseHero() {
               </div>
             </div>
 
-            <div className="hidden md:flex md:flex-1 justify-center items-center w-full md:w-[55%] h-auto md:mt-0 md:absolute z-[-10] md:right-[-50px]">
+            <div className="hidden md:flex md:flex-1 justify-center items-center w-full md:w-[55%] h-auto md:mt-0 md:absolute z-[-10] md:right-[-10px]">
               <div className="relative top-0 left-0 w-full h-[320px]">
                 <Image
                   src="/Images/stamp.svg"

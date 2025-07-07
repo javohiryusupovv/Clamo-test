@@ -4,8 +4,9 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import { FaAngleRight } from "react-icons/fa6";
 
-const CenterRegulations: React.FC = () => {
+const CenterRegulations = () => {
   const t = useTranslations("RegulatorydocumentsPage");
+  
   return (
     <div className="container md:mt-[100px] mt-8 md:mb-16 mb-8">
       {/* Header Section */}

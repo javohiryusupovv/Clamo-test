@@ -11,42 +11,49 @@ export default function International() {
   const locale = useLocale();
 
   useEffect(() => {
-      const loadAOS = async () => {
-        const AOS = await import("aos");
-        AOS.init({ duration: 1000 });
-      };
+    const loadAOS = async () => {
+      const AOS = await import("aos");
+      AOS.init({ duration: 1000 });
+    };
 
-      if (typeof window !== "undefined") {
-        loadAOS();
-      }
-    }, []);
+    if (typeof window !== "undefined") {
+      loadAOS();
+    }
+  }, []);
 
   return (
     <div className="internationalparent flex max-sm:pt-[40px] h-screen overflow-hidden max-md:pt-[70px] lg:pb-16 pb-8">
       <div className="container relative top-0 left-0 flex flex-col md:flex-row gap-6 md:gap-[65px] justify-between items-center w-full md:mb-12">
         <article className="w-full md:w-[45%] relative z-[10]">
-          <p className="inline-flex px-2 py-1 font-inter bg-[#23B3FC] text-white rounded-md text-[14px] leading-[100%] font-medium uppercase mb-4" data-aos="fade"
-  data-aos-offset="50"
-  data-aos-duration="700"
-  data-aos-anchor-placement="top-bottom">
+          <p className="inline-flex px-2 py-1 font-inter bg-[#23B3FC] text-white rounded-md text-[14px] leading-[100%] font-medium uppercase mb-4" 
+            data-aos="fade-right"
+            data-aos-offset="50"
+            data-aos-duration="700"
+            data-aos-anchor-placement="top-bottom">
             {t("firstletter")}
           </p>
-          <h3 className="font-semibold font-inter text-[24px] md:text-[32px] leading-9 md:leading-10 mb-2" data-aos="fade"
-  data-aos-offset="50"
-  data-aos-duration="700"
-  data-aos-anchor-placement="top-bottom">
+          <h3 className="font-semibold font-inter text-[24px] md:text-[32px] leading-9 md:leading-10 mb-2" 
+            data-aos="fade"
+            data-aos-delay="200"
+            data-aos-offset="50"
+            data-aos-duration="700"
+            data-aos-anchor-placement="top-bottom">
             <span className="uppercase text-[#23B3FC] font-semibold">
               {t("international_title")}
             </span>{" "}
             {t("international22")}
           </h3>
-          <p className="text-[#012548CC] leading-[140%] font-vk text-base md:text-xl font-medium mb-6 md:mb-10" data-aos="fade" data-aos-delay="100"
-  data-aos-offset="50"
-  data-aos-duration="700"
-  data-aos-anchor-placement="top-bottom">
+          <p className="text-[#012548CC] leading-[140%] font-vk text-base md:text-xl font-medium mb-6 md:mb-10" 
+            data-aos="fade"
+            data-aos-delay="500"
+            data-aos-offset="50"
+            data-aos-duration="700"
+            data-aos-anchor-placement="top-bottom">
             {t("international_des")}
           </p>
-          <article className="flex max-sm:flex-col items-center max-md:justify-between gap-3 pb-4 pt-4">
+          <article className="flex max-sm:flex-col items-center max-md:justify-between gap-3 pb-4 pt-4" 
+            data-aos="zoom-in"
+            data-aos-delay="500">
             <Link href={`/${locale}/about#services-center`} className="w-full">
               <button className="group font-inter w-full h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[80%] bg-[#23B3FC] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">
                 {t("hamkorlar_btn")}{" "}

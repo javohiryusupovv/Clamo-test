@@ -26,14 +26,16 @@ export default function ConsultingPages() {
         <div className=" h-[721px] card1  overflov container flex w-full justify-between">
           <div className="max-w-[597px]  first-card h-[454px] card-1 mt-[122px] flex flex-col md:gap-[40px] ">
             <div className=" flex flex-col gap-2">
-              <div className=" flex items-center font-inter font-medium text-[14px] leading-[1] gap-2 ">
+              <div className=" flex items-center font-inter font-medium text-[14px] leading-[1] gap-2" data-aos="fade-left" data-aos-delay="200">
                 <h1 className=" text-[#FFFFFF] info bg-[#23B3FC] font-inter border-0 rounded-[6px] py-1 px-2 leading-[100%] w-fit ">
                   INFO@CLAMO.UZ
                 </h1>
-                <h1 className=" text-[#3D445E] email-none font-inter" data-aos="fade-left">
+                <h1 className=" text-[#3D445E] email-none font-inter" >
                   {t("email_letter")}
                 </h1>
-                <h1 className=" text-[#3D445E] email-flex font-inter" data-aos="fade"
+                <h1 className=" text-[#3D445E] email-flex font-inter" 
+                  data-aos="fade"
+                  data-aos-delay="600"
                   data-aos-offset="50"
                   data-aos-duration="700"
                   data-aos-anchor-placement="top-bottom">
