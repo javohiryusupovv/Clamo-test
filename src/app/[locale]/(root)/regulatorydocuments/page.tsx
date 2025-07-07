@@ -3,7 +3,6 @@ import "../../../../styles/documents.css";
 import NormativeAccordion from "./_components/NormativeAccordion";
 import GovernmentDecisionsPage from "./_components/government-decisions";
 import CenterRegulations from "./_components/CenterRegulations";
-import { useLocale, useTranslations } from "next-intl";
 import { getLocalizedValue } from "@/lib/getLocalization";
 import DocumentsHero from "./_components/DocumentsHero";
 
