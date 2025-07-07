@@ -104,6 +104,11 @@ export default function AccredationHead() {
             width={980}
             height={950}
             className="object-cover w-full max-w-[1080px]"
+            data-aos="fade"
+            data-aos-delay="200"
+            data-aos-offset="50"
+            data-aos-duration="700"
+            data-aos-anchor-placement="top-bottom"
           />
           <div className="absolute bottom-5 w-full h-[200px] bg-gradient-to-t from-white via-white/80 to-transparent"></div>
         </div>
