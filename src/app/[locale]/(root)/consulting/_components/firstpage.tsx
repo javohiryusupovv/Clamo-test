@@ -42,7 +42,9 @@ export default function ConsultingPages() {
                   {t("email_letter")}
                 </h1>
               </div>
-              <h1 className=" konsul text-[#3D445E] leading-[100%]  max-w-[509px] text-[32px] font-inter font-bold" data-aos="fade" data-aos-delay="200"
+              <h1 className=" konsul text-[#3D445E] leading-[100%]  max-w-[509px] text-[32px] font-inter font-bold" 
+                data-aos="fade" 
+                data-aos-delay="200"
                 data-aos-offset="50"
                 data-aos-duration="700"
                 data-aos-anchor-placement="top-bottom">
@@ -50,7 +52,13 @@ export default function ConsultingPages() {
               </h1>
             </div>
             <div className=" w-full h-[320px] flex flex-col md:gap-[20px] gap-1 -translate-y-2.5">
-              <div className=" w-full card11 little-card1 h-[137px] div bg-[#FFFFFF] rounded-3xl flex flex-col justify-center gap-[16px]">
+              <div className=" w-full card11 little-card1 h-[137px] div bg-[#FFFFFF] rounded-3xl flex flex-col justify-center gap-[16px]"
+                data-aos="fade" 
+                data-aos-delay="400"
+                data-aos-offset="50"
+                data-aos-duration="700"
+                data-aos-anchor-placement="top-bottom"
+              >
                 <h1 className=" ml-[24px] borders rounded-[40px] border w-[136px] text-[#23B3FC] font-inter font-bold text-[24px] leading-[1.3] h-[47px] flex items-center justify-center border-[#23B3FC]">
                   {t("step_one")}
                 </h1>
@@ -58,7 +66,13 @@ export default function ConsultingPages() {
                   {t("info_person")}
                 </h1>
               </div>
-              <div className=" bg-[#FFFFFF] div card12 little-card2 rounded-3xl w-full h-[163px] flex flex-col justify-center gap-[16px]">
+              <div className=" bg-[#FFFFFF] div card12 little-card2 rounded-3xl w-full h-[163px] flex flex-col justify-center gap-[16px]"
+                data-aos="fade" 
+                data-aos-delay="500"
+                data-aos-offset="50"
+                data-aos-duration="700"
+                data-aos-anchor-placement="top-bottom"
+              >
                 <h1 className=" ml-[24px] border borders rounded-[40px] w-[136px] text-[#FFFFFF] md:text-[#23B3FC] font-inter font-bold text-[24px] leading-[1.3] h-[47px] flex items-center justify-center border-[#FFFFFF] sm:border-[#23B3FC]">
                   {t("step_two")}
                 </h1>
