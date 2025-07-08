@@ -8,6 +8,7 @@ import "aos/dist/aos.css";
 
 export default function AboutMain() {
   const t = useTranslations("AboutPage");
+// console.log);
 
 
 
