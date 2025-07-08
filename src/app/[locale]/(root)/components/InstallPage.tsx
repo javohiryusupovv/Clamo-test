@@ -9,20 +9,22 @@ import QR from "@/assets/icons/QR.png";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import bgCircle from "../../../../../public/herobg.png";
+import { usePathname } from "next/navigation";
 
 export default function InstallPage() {
   const t = useTranslations("HomePage");
 
   useEffect(() => {
-    const loadAOS = async () => {
-      const AOS = await import("aos");
-      AOS.init({ duration: 1000 });
-    };
-
-    if (typeof window !== "undefined") {
-      loadAOS();
-    }
-  }, []);
+      const loadAOS = async () => {
+        const AOS = await import("aos");
+        AOS.init({ duration: 1000 });
+        AOS.refresh();
+      };
+  
+      if (typeof window !== "undefined") {
+        loadAOS();
+      }
+    }, [usePathname()]);
 
   return (
     <section className="w-full px-4">

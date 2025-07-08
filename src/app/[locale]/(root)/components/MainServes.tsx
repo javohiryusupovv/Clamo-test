@@ -8,22 +8,24 @@ import { getPlatforms } from "../../../../../constants/page";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa6";
+import { usePathname } from "next/navigation";
 
 export default function MainService() {
   const t = useTranslations("HomePage");
   const platforms = getPlatforms(t);
   const locale = useLocale()
 
-  useEffect(() => {
-    const loadAOS = async () => {
-      const AOS = await import("aos");
-      AOS.init({ duration: 1000 });
-    };
-
-    if (typeof window !== "undefined") {
-      loadAOS();
-    }
-  }, []);
+ useEffect(() => {
+     const loadAOS = async () => {
+       const AOS = await import("aos");
+       AOS.init({ duration: 1000 });
+       AOS.refresh();
+     };
+ 
+     if (typeof window !== "undefined") {
+       loadAOS();
+     }
+   }, [usePathname()]);
 
   return (
     <section className="bg-[#F6F9FC]">

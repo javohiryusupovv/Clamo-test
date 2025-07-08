@@ -8,6 +8,7 @@ import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { NumbersType } from "@/types/type";
+import { usePathname } from "next/navigation";
 
 
 function useCountUp(target: number, duration = 1500) {
@@ -49,14 +50,15 @@ export default function ClamoStatistic({ numbers }: { numbers: NumbersType }) {
 
     useEffect(() => {
         const loadAOS = async () => {
-            const AOS = await import("aos");
-            AOS.init({ duration: 1000 });
+          const AOS = await import("aos");
+          AOS.init({ duration: 1000 });
+          AOS.refresh();
         };
-
+    
         if (typeof window !== "undefined") {
-            loadAOS();
+          loadAOS();
         }
-    }, []);
+      }, [usePathname()]);
     return (
         <>
             {/* Shifokorlar */}

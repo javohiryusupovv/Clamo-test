@@ -7,6 +7,7 @@ import Image from "next/image";
 import ClamoFlag from "../../../../assets/images/clamoFlag.png";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function MedicalLegal() {
   const t = useTranslations("HomePage");
@@ -14,12 +15,16 @@ export default function MedicalLegal() {
   const locale = useLocale();
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      import("aos").then((AOS) => {
+      const loadAOS = async () => {
+        const AOS = await import("aos");
         AOS.init({ duration: 1000 });
-      });
-    }
-  }, []);
+        AOS.refresh();
+      };
+  
+      if (typeof window !== "undefined") {
+        loadAOS();
+      }
+    }, [usePathname()]);
 
   return (
     <div className="container">

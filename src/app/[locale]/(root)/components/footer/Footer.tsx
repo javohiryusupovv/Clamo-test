@@ -7,6 +7,7 @@ import Link from "next/link";
 import Contact from "../contact/Contact";
 import { useTranslations, useLocale } from "next-intl";
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function FooterLayout() {
   const t = useTranslations("FooterPage");
@@ -23,12 +24,13 @@ export default function FooterLayout() {
       const loadAOS = async () => {
         const AOS = await import("aos");
         AOS.init({ duration: 1000 });
+        AOS.refresh();
       };
-
+  
       if (typeof window !== "undefined") {
         loadAOS();
       }
-    }, []);
+    }, [usePathname()]);
 
   return (
     <div className="md:pt-20 pt-8  bg-[#F6F9FC] p-4">

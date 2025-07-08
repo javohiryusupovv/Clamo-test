@@ -9,6 +9,7 @@ import "aos/dist/aos.css";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa6";
+import { usePathname } from "next/navigation";
 
 export default function Hero() {
   const t = useTranslations("HomePage");
@@ -25,12 +26,16 @@ export default function Hero() {
   ] = t("health_message").split(" ");
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      import("aos").then((AOS) => {
+      const loadAOS = async () => {
+        const AOS = await import("aos");
         AOS.init({ duration: 1000 });
-      });
-    }
-  }, []);
+        AOS.refresh();
+      };
+  
+      if (typeof window !== "undefined") {
+        loadAOS();
+      }
+    }, [usePathname()]);
 
   const scrollToContactSection = () => {
     const section = document.getElementById("contact-section");

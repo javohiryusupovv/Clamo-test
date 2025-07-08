@@ -8,14 +8,23 @@ import { useLocale, useTranslations } from "next-intl";
 import { ChevronRight } from "lucide-react";
 import { useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Hero() {
   const t = useTranslations("AboutPage");
   const locale = useLocale()
 
   useEffect(() => {
-    import("aos").then((AOS) => AOS.init({ duration: 1000 }));
-  }, []);
+      const loadAOS = async () => {
+        const AOS = await import("aos");
+        AOS.init({ duration: 1000 });
+        AOS.refresh();
+      };
+  
+      if (typeof window !== "undefined") {
+        loadAOS();
+      }
+    }, [usePathname()]);
 
   return (
     <div className="md:pt-[50px] max-md:my-8 lg:pb-[150px]">

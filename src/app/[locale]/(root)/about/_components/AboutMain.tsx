@@ -4,6 +4,7 @@ import NavBuilding from "@/assets/NavBuilding.png";
 import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 import AOS from 'aos';
+import { usePathname } from "next/navigation";
 
 
 
@@ -12,10 +13,16 @@ export default function AboutMain() {
 
 
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-    });
-  }, []);
+      const loadAOS = async () => {
+        const AOS = await import("aos");
+        AOS.init({ duration: 1000 });
+        AOS.refresh();
+      };
+  
+      if (typeof window !== "undefined") {
+        loadAOS();
+      }
+    }, [usePathname()]);
 
 
 

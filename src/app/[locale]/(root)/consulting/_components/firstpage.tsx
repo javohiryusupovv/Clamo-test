@@ -5,20 +5,22 @@ import Man from "../../../../../../public/Images/man.png";
 import Woman from "../../../../../../public/Images/woman.png";
 import Image from "next/image";
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function ConsultingPages() {
   const t = useTranslations("ConsultingPage");
 
   useEffect(() => {
-    const loadAOS = async () => {
-      const AOS = await import("aos");
-      AOS.init({ duration: 1000 });
-    };
-
-    if (typeof window !== "undefined") {
-      loadAOS();
-    }
-  }, []);
+      const loadAOS = async () => {
+        const AOS = await import("aos");
+        AOS.init({ duration: 1000 });
+        AOS.refresh();
+      };
+  
+      if (typeof window !== "undefined") {
+        loadAOS();
+      }
+    }, [usePathname()]);
 
   return (
     <div className="">

@@ -4,6 +4,7 @@ import { ChevronRight } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 export default function International() {
@@ -11,15 +12,16 @@ export default function International() {
   const locale = useLocale();
 
   useEffect(() => {
-    const loadAOS = async () => {
-      const AOS = await import("aos");
-      AOS.init({ duration: 1000 });
-    };
-
-    if (typeof window !== "undefined") {
-      loadAOS();
-    }
-  }, []);
+      const loadAOS = async () => {
+        const AOS = await import("aos");
+        AOS.init({ duration: 1000 });
+        AOS.refresh();
+      };
+  
+      if (typeof window !== "undefined") {
+        loadAOS();
+      }
+    }, [usePathname()]);
 
   return (
     <div className="internationalparent flex max-sm:pt-[40px] h-screen overflow-hidden max-md:pt-[70px] lg:pb-16 pb-8">

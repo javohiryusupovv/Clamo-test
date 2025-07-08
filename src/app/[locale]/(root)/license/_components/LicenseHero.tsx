@@ -7,6 +7,7 @@ import { FaChevronRight } from "react-icons/fa";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function LicenseHero() {
   const t = useTranslations("LicensePage");
@@ -24,15 +25,16 @@ export default function LicenseHero() {
   const steps = getLicense;
 
   useEffect(() => {
-    const loadAOS = async () => {
-      const AOS = await import("aos");
-      AOS.init({ duration: 1000 });
-    };
-
-    if (typeof window !== "undefined") {
-      loadAOS();
-    }
-  }, []);
+      const loadAOS = async () => {
+        const AOS = await import("aos");
+        AOS.init({ duration: 1000 });
+        AOS.refresh();
+      };
+  
+      if (typeof window !== "undefined") {
+        loadAOS();
+      }
+    }, [usePathname()]);
 
   return (
     <>

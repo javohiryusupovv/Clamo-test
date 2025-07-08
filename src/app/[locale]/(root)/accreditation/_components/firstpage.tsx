@@ -1,6 +1,7 @@
 "use client";
 
 import { useLocale, useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 import { Inter } from "next/font/google";
 const inter = Inter({
   subsets: ["latin"],
@@ -29,12 +30,13 @@ export default function AccredationHead() {
     const loadAOS = async () => {
       const AOS = await import("aos");
       AOS.init({ duration: 1000 });
+      AOS.refresh();
     };
 
     if (typeof window !== "undefined") {
       loadAOS();
     }
-  }, []);
+  }, [usePathname()]);
 
   return (
     <div className="relative bg-[#F6F9FC] h-screen max-ms:h-[70vh] max-md:pt-10">
