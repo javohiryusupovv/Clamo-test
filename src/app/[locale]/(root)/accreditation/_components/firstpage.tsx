@@ -1,8 +1,9 @@
 "use client";
 
 import { useLocale, useTranslations } from "next-intl";
-import { usePathname } from "next/navigation";
 import { Inter } from "next/font/google";
+import "aos/dist/aos.css";
+
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
@@ -30,53 +31,61 @@ export default function AccredationHead() {
     const loadAOS = async () => {
       const AOS = await import("aos");
       AOS.init({ duration: 1000 });
-      AOS.refresh();
     };
 
     if (typeof window !== "undefined") {
       loadAOS();
     }
-  }, [usePathname()]);
+  }, []);
 
   return (
-    <div className="relative bg-[#F6F9FC] h-screen max-ms:h-[70vh] max-md:pt-10">
+    <div className="relative bg-[#F6F9FC] lg:h-screen h-[70vh] max-md:pt-14">
       <div
         className={`container relatived max-md:pt-[40px] bg-transparent h-auto xl:h-[720px] lg:h-[650px] flex flex-col lg:flex-row lg:gap-24 px-4 md:px-10 ${inter.className} font-inter`}
       >
         {/* Left Content */}
         <div className="z-10 flex-1">
           <div className="max-w-full lg:max-w-[557px] relative z-10 flex flex-col gap-[16px] pt-[25px] sm:pt-[35px] lg:pt-[176px] px-1">
-            <h2 className="bg-[#23B3FC] border-0 rounded-[6px] py-1 px-2 leading-[100%] w-fit text-[#FFFFFF] text-[14px]"
-                data-aos="fade-right"
-                data-aos-offset="50"
-                data-aos-duration="700"
+            <h2
+              className="bg-[#23B3FC] border-0 rounded-[6px] py-1 px-2 leading-[100%] w-fit text-[#FFFFFF] text-[14px]"
+              data-aos="fade-right"
+              data-aos-offset="50"
+              data-aos-duration="700"
             >
               {t("accerditation_title")}
             </h2>
-            <div className="flex flex-col gap-[8px]">
-              <h1 className="text-[24px] md:text-[28px] lg:text-[32px] font-semibold text-[#1B1B1B] leading-[120%]" 
-                data-aos="fade"
+            <div className="flex flex-col gap-[8px] lg:mb-0 mb-5">
+              <h1
+                className="text-[24px] md:text-[28px] lg:text-[32px] font-semibold text-[#1B1B1B] leading-[120%]"
+                data-aos="fade-up"
                 data-aos-delay="200"
                 data-aos-offset="50"
                 data-aos-duration="700"
-                data-aos-anchor-placement="top-bottom">
+                data-aos-anchor-placement="top-bottom"
+              >
                 <strong className="text-[#23B3FC]">{firstTitle}</strong>{" "}
                 {secondTitle} {thirtTitle} {fourTitle} {fiveTitle} {sexTitle}{" "}
                 {sevenTitle}
               </h1>
-              <p className="font-vksans font-medium text-[#012548CC] text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] tracking-wide"
+              <p
+                className="font-vksans font-medium text-[#012548CC] text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] tracking-wide"
                 data-aos="fade"
-                data-aos-delay="400"
+                data-aos-delay="550"
                 data-aos-offset="50"
                 data-aos-duration="700"
+                data-aos-anchor-placement="top-bottom"
               >
                 {t("necessary_license")}
               </p>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-2 md:gap-6 lg:w-[590px]" 
-                data-aos="zoom-in"
-                data-aos-delay="500">
+            <div
+              className="flex flex-col md:flex-row gap-2 md:gap-6 lg:w-[590px]"
+              data-aos="zoom-in"
+              data-aos-delay="600"
+              data-aos-offset="50"
+              data-aos-duration="700"
+            >
               <Link
                 href={`/${locale}/about#services-center`}
                 className="w-full"

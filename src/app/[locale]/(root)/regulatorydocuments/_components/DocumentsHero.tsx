@@ -6,7 +6,7 @@ import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa6";
 import Folder from "@/assets/images/Folder.png";
 import { useEffect } from "react";
-import { usePathname } from "next/navigation";
+import "aos/dist/aos.css";
 
 export default function DocumentsHero() {
     const t = useTranslations("RegulatorydocumentsPage");
@@ -17,13 +17,12 @@ export default function DocumentsHero() {
         const loadAOS = async () => {
           const AOS = await import("aos");
           AOS.init({ duration: 1000 });
-          AOS.refresh();
         };
     
         if (typeof window !== "undefined") {
           loadAOS();
         }
-      }, [usePathname()]);
+      }, []);
 
     return (
         <>
