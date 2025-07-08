@@ -2,27 +2,12 @@
 import Image from "next/image";
 import NavBuilding from "@/assets/NavBuilding.png";
 import { useTranslations } from "next-intl";
-import { useEffect } from "react";
-import AOS from 'aos';
-import { usePathname } from "next/navigation";
+import "aos/dist/aos.css";
 
 
 
 export default function AboutMain() {
   const t = useTranslations("AboutPage");
-
-
-  useEffect(() => {
-      const loadAOS = async () => {
-        const AOS = await import("aos");
-        AOS.init({ duration: 1000 });
-        AOS.refresh();
-      };
-  
-      if (typeof window !== "undefined") {
-        loadAOS();
-      }
-    }, [usePathname()]);
 
 
 
