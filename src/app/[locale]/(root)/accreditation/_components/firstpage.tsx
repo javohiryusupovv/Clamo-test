@@ -37,7 +37,7 @@ export default function AccredationHead() {
   }, []);
 
   return (
-    <div className=" relative bg-[#F6F9FC] h-screen max-md:pt-10">
+    <div className="relative bg-[#F6F9FC] h-screen max-ms:h-[70vh] max-md:pt-10">
       <div
         className={`container relatived max-md:pt-[40px] bg-transparent h-auto xl:h-[720px] lg:h-[650px] flex flex-col lg:flex-row lg:gap-24 px-4 md:px-10 ${inter.className} font-inter`}
       >
