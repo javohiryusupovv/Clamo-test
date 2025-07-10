@@ -204,7 +204,7 @@ export default function Contact() {
                 id="names"
                 {...register("names")}
                 type="text"
-                className="w-full bg-[#F7F7F8] px-3 h-10 rounded-lg text-[14px] outline-none border border-transparent focus:border-[#1a60cd]"
+                className="w-full bg-[#F7F7F8] px-3 h-10 rounded-lg text-[16px] outline-none border border-transparent focus:border-[#1a60cd]"
                 placeholder={t("enterFullName")}
               />
               {errors.names && (
@@ -224,7 +224,7 @@ export default function Contact() {
                 id="tashkilot"
                 {...register("tashkilot")}
                 type="text"
-                className="w-full bg-[#F7F7F8] px-3 h-10 rounded-lg text-[14px] outline-none border border-transparent focus:border-[#1a60cd]"
+                className="w-full bg-[#F7F7F8] px-3 h-10 rounded-lg text-[16px] outline-none border border-transparent focus:border-[#1a60cd]"
                 placeholder={t("enterOrganization")}
               />
               {errors.tashkilot && (
