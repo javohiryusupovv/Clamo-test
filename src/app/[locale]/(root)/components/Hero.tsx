@@ -45,7 +45,7 @@ export default function Hero() {
   return (
     <>
       {/* Ko'k soya */}
-      <div className="absolute bottom-2 -left-64 w-[481px] h-[481px] rounded-full bg-[#6eb8e8] blur-[220.64999389648438px] z-[11]"></div>
+      <div className="absolute bottom-2 -left-64 w-[481px] h-[481px] rounded-full bg-[#6eb8e8] blur-[220px] firefox-blur z-[11]"></div>
       <section className="container grid lg:grid-cols-2 grid-cols-1 lg:gap-20 lg:pb-10 relative sm:top-0 md:top-10 lg:top-0 left-0 h-[70vh] overflow-visible">
         <div className="relative z-[12] flex flex-col justify-center">
           <p className="uppercase text-[#3D445E] font-inter md:text-[14px] text-[12px] font-medium lg:w-[582px] pb-[11px] max-sm:w-[250px]" data-aos="fade-right">
@@ -104,7 +104,7 @@ export default function Hero() {
           />
         </div>
         {/* oq soya */}
-        <div className="absolute bottom-[-258px] left-[20%] w-[361px] h-[361px] blur-[220.64999389648438px] rounded-full bg-[#6eb8e8] "></div>
+        <div className="absolute bottom-[-258px] left-[20%] w-[361px] h-[361px] blur-[220.64999389648438px] rounded-full bg-[#6eb8e8] firefox-bg"></div>
       </section>
       <div className="absolute bottom-[-200px] right-0 w-full lg:h-[348px] h-[220px] shadow-hero" />
     </>

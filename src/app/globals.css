@@ -17,6 +17,18 @@
   filter: blur(0px);
 }
 
+@-moz-document url-prefix() {
+  .firefox-blur {
+    filter: blur(900px); /* yoki kerakli qiymat */
+    left: -400px;
+  }
+  .firefox-bg{
+    position: absolute;
+    filter: blur(900px);
+    left: 30%;
+  }
+}
+
 
 .teamcarousel {
   fill: radial-gradient(
