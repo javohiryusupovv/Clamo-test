@@ -176,6 +176,17 @@ export interface CommentSharh{
     short_url: string;
 }
 
+export interface APISharhItem {
+  user: {
+    first_name: string;
+    last_name: string;
+  } | null;
+  comment: string;
+  created_at: string;
+  rating: number;
+  short_url: string;
+}
+
 export interface NewsTypes {
   id: number;
   slug: string;

@@ -1,4 +1,4 @@
-import { CommentSharh } from "app.types";
+import { APISharhItem, CommentSharh } from "app.types";
 
 export async function getReviews(): Promise<CommentSharh[]> {
   const res = await fetch(
@@ -16,7 +16,7 @@ export async function getReviews(): Promise<CommentSharh[]> {
 
   const data = await res.json();
 
-  const parsedComments: CommentSharh[] = data.results.map((item: any) => ({
+  const parsedComments: CommentSharh[] = data.results.map((item: APISharhItem) => ({
     author_name: item.user
       ? `${item.user.first_name} ${item.user.last_name}`
       : "Foydalanuvchi",
