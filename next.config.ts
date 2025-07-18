@@ -5,7 +5,7 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts")
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['clamo-production.up.railway.app'],
+    domains: ['admin.clamo.uz'],
   },
   webpack(config) {
     config.module.rules.push({

@@ -17,7 +17,7 @@ export async function getReyestersFromAPI(): Promise<ReyesterItem[]> {
 }
 
 export async function getReyesterTypes() {
-  const res = await fetch("https://clamo-production.up.railway.app/api/reyester/types/", {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/reyester/types/`, {
     cache: "no-store", // yoki ISR qilsangiz: next: { revalidate: 60 }
   });
   if (!res.ok) throw new Error("Turlarni olishda xatolik");
