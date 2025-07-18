@@ -64,7 +64,7 @@ export default function Izohlar({ comments }: CommentProps) {
             pauseOnHover
           >
             {comments.map((item, id) => (
-              <Link key={id} href={`${item.short_url}`}>
+              <Link key={id} href={`${item.short_url}`} target="_blank">
                 <div
                   className="lg:max-w-[343px] max-w-[300px] mx-4 max-sm:mx-2 border border-[#E3E8E9] rounded-[16px] sm:p-[16px] p-[8px] bg-white"
                 >
@@ -132,7 +132,7 @@ export default function Izohlar({ comments }: CommentProps) {
               .slice()
               .reverse()
               .map((item, id) => (
-                <Link key={id} href={`${item.short_url}`}>
+                <Link key={id} href={`${item.short_url}`} target="_blank">
                 <div
                   className="lg:max-w-[343px] max-w-[300px] mx-4 max-sm:mx-2 border border-[#E3E8E9] rounded-[16px] sm:p-[16px] p-[8px] bg-white"
                 >
