@@ -29,7 +29,7 @@ export async function generateMetadata({
   const { slug, locale } = await params;
 
   const res = await fetch(
-    `https://clamo-production.up.railway.app/api/news/news/${slug}`,
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/news/news/${slug}`,
     { cache: "no-store" }
   );
 
@@ -67,9 +67,10 @@ export default async function NewsDetailPage({
   const { slug, locale } = await params;
 
   const res = await fetch(
-    `https://clamo-production.up.railway.app/api/news/news/${slug}`,
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/news/news/${slug}`,
     { cache: "no-store" }
   );
+  
 
   if (!res.ok) return notFound();
 

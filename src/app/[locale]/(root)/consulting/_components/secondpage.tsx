@@ -71,7 +71,7 @@ export default function secondpage({ carousel }: { carousel: CarouselData[] }) {
 
             return (
               <SwiperSlide key={index}>
-                <div className="hover:bg-[#0653C9] text-[#3D445E] hover:text-[#FFFFFF] border duration-300 p-4 sm:p-6 !border-[#E3E8E9] rounded-[28px] h-full flex flex-col cursor-pointer">
+                <div className="hover:bg-[#0653C9] text-[#3D445E] hover:text-[#FFFFFF] border duration-300 p-4 sm:p-6 !border-[#E3E8E9] rounded-[28px] h-full flex flex-col">
                   <h3 className="sm:mb-2 mb-1 font-bold md:text-[28px] text-[20px] font-vksans leading-[150%]">
                     {localTitle}
                   </h3>
