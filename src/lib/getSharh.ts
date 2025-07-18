@@ -1,16 +1,30 @@
-export async function getReviews() {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/reviews/reviews/`,
-      {
-        next: { revalidate: 60 },
-        cache: "no-store",
-      }
-    );
-  
-    if (!res.ok) {
-      throw new Error("Sharhlarni olishda xatolik yuz berdi");
+import { CommentSharh } from "app.types";
+
+export async function getReviews(): Promise<CommentSharh[]> {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_SHARH_URL}`,
+    {
+      next: { revalidate: 60 },
+      cache: "no-store",
     }
-  
-    return res.json();
+  );
+
+  if (!res.ok) {
+    throw new Error("Sharhlarni olishda xatolik yuz berdi");
   }
-  
+
+
+  const data = await res.json();
+
+  const parsedComments: CommentSharh[] = data.results.map((item: any) => ({
+    author_name: item.user
+      ? `${item.user.first_name} ${item.user.last_name}`
+      : "Foydalanuvchi",
+    comment: item.comment,
+    created_at: item.created_at,
+    rating: item.rating,
+    short_url: item.short_url,
+  }));
+
+  return parsedComments;
+}

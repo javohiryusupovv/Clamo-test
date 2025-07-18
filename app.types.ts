@@ -169,12 +169,11 @@ export interface CardComment {
 }
 
 export interface CommentSharh{
-  id: number;
-  author_name: string;
-  comment: string;
-  created_at: string;
-  rating: number;
-  user_image: string | null;
+    author_name: string;
+    comment: string;
+    created_at: string;
+    rating: number;
+    short_url: string;
 }
 
 export interface NewsTypes {
