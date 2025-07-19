@@ -19,7 +19,7 @@ export default function AccredationMain() {
   };
 
   return (
-    <div className="container mx-auto lg:pb-16 pb-8 lg:pt-6 sm:pt-9 pt-8 md:pt-12 xl:pt-0">
+    <div className="container mx-auto lg:pb-16 pb-8 lg:pt-6 sm:pt-9 pt-8 md:pt-12 xl:pt-0 relative z-[99]">
       <h1 className="font-vksans font-bold sm:text-center akkreditsiya sm:ml-0 ml-1 text-[#3D445E] font-vksans text-[30px] sm:w-full text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight md:mb-10 sm:mb-8 mb-2 lg:mb-12">
         {t("get_accerditation")}
       </h1>

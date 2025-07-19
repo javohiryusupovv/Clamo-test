@@ -31,9 +31,7 @@ export default function ReyesterCard({
   reviews
 }: ReyesterCardProps) {
   const locale = useLocale();
-  const t = useTranslations("ReyesterCard");
-
-  console.log(reviews);
+  const t = useTranslations("ReyesterCard")
 
 
   const renderValue = (value: string | number | undefined) => {

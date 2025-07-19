@@ -21,7 +21,7 @@ interface ReyesterType {
   name_uz?: string;
   name_ru?: string;
   name_en?: string;
-  slug: string;
+  slug?: string;
 }
 
 export default function ReyesterClient({
@@ -37,31 +37,36 @@ export default function ReyesterClient({
   const locale = useLocale()
 
   const filtered = reyesters
-  .filter((r) =>
-    selectedType
-      ? r.reyester_type?.some((type) => type.slug === selectedType)
-      : true
-  )
-  .filter((r) => {
-    if (!searchQuery) return true;
+    .filter((r) =>
+      selectedType
+        ? r.reyester_type?.some((type) => {
+          const typeValue = type.slug && type.slug.trim() !== "" ? type.slug : String(type.id);
+          return typeValue === selectedType;
+        })
+        : true
+    )
+    .filter((r) => {
+      if (!searchQuery) return true;
 
-    const localizedTitle = getLocalizedValue(
-      {
-        title: r.title || "",
-        title_uz: r.title_uz || "",
-        title_en: r.title_en || "",
-        title_ru: r.title_ru || "",
-      },
-      "title",
-      locale
-    );
+      const localizedTitle = getLocalizedValue(
+        {
+          title: r.title || "",
+          title_uz: r.title_uz || "",
+          title_en: r.title_en || "",
+          title_ru: r.title_ru || "",
+        },
+        "title",
+        locale
+      );
 
-    return localizedTitle.toLowerCase().includes(searchQuery.toLowerCase());
-  });
-    // console.log(filtered);
+      return localizedTitle.toLowerCase().includes(searchQuery.toLowerCase());
+    });
+
+  // console.log(filtered);
 
 
 
+  console.log(types);
 
   return (
     <div>
@@ -95,12 +100,16 @@ export default function ReyesterClient({
                   locale
                 );
 
-              return(
-                <SelectItem key={item.id} value={item.slug}>
-                  {localizedTitle}
-                </SelectItem>
-              )})}
+                const itemValue = item.slug && item.slug.trim() !== "" ? item.slug : String(item.id);
+
+                return (
+                  <SelectItem key={item.id} value={itemValue}>
+                    {localizedTitle}
+                  </SelectItem>
+                );
+              })}
             </SelectContent>
+
           </Select>
           <div className="max-ms:order-1 relative w-[350px] max-sm:w-full py-2 border rounded-xl bg-gray-50 focus-within:border-[#4489F7] focus-within:border-[1px] transition-all duration-200">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -119,42 +128,42 @@ export default function ReyesterClient({
       <div className="space-y-6">
         {filtered.length > 0 ? (
           filtered.map((item) => {
-          console.log(item);
-          const localizedTitle = getLocalizedValue(
-            {
-              title: item.title || "",
-              title_uz: item.title_uz || "",
-              title_en: item.title_en || "",
-              title_ru: item.title_ru || "",
-            },
-            "title",
-            locale
-          )
-          const localizedLocation = getLocalizedValue({
-            location: item.location || "",
-            location_uz: item.location_uz || "",
-            location_en: item.location_en || "",
-            location_ru: item.location_ru || "",
-          }, "location", locale)
+            const localizedTitle = getLocalizedValue(
+              {
+                title: item.title || "",
+                title_uz: item.title_uz || "",
+                title_en: item.title_en || "",
+                title_ru: item.title_ru || "",
+              },
+              "title",
+              locale
+            )
+            const localizedLocation = getLocalizedValue({
+              location: item.location || "",
+              location_uz: item.location_uz || "",
+              location_en: item.location_en || "",
+              location_ru: item.location_ru || "",
+            }, "location", locale)
 
-          return(
-            <ReyesterCard
-              key={item.id}
-              title={localizedTitle}
-              location={localizedLocation}
-              accreditationNumber={item.accreditation_number}
-              registrationDate={item.registration_date}
-              reyesterType={item.reyester_type}
-              website={item.website}
-              email={item.email}
-              phone={item.phone}
-              reviews={item.reviews}
-            />
-          )})
+            return (
+              <ReyesterCard
+                key={item.id}
+                title={localizedTitle}
+                location={localizedLocation}
+                accreditationNumber={item.accreditation_number}
+                registrationDate={item.registration_date}
+                reyesterType={item.reyester_type}
+                website={item.website}
+                email={item.email}
+                phone={item.phone}
+                reviews={item.reviews}
+              />
+            )
+          })
         ) : (
           <p className="text-center text-gray-500 italic flex items-center justify-center gap-2">
             <Search className="w-4 h-4" />
-              {t("not_found")}
+            {t("not_found")}
           </p>
         )}
       </div>
