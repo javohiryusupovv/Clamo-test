@@ -28,14 +28,14 @@ export async function generateMetadata({ params }: { params: Promise<{locale: st
 
 export default async function page() {
   const faqData = await getFaqs()
-  const reyesters = await getReyestersFromAPI();
+  const { results: firstPageData, count } = await getReyestersFromAPI(1);
   const types = await getReyesterTypes();
   return (
     <div className="overflow-hidden">
       <Firstpage />
       <Secondpage />
       <section className="container mx-auto px-4 lg:py-[80px]">
-        <ReyesterClient reyesters={reyesters} types={types} />
+        <ReyesterClient initialData={firstPageData} initialCount={count} types={types} />
       </section>
       <QuestionsPage faqData={faqData} />
     </div>
