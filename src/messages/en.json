@@ -20,7 +20,8 @@
     "registration_date": "Accreditation Date",
     "website": "Website",
     "email": "Email Address",
-    "phone": "Phone Number"
+    "phone": "Phone Number",
+    "not_available": "Not available"
   },
   "ZodForm": {
     "name_subtitle": "The name must be at least 3 characters long",

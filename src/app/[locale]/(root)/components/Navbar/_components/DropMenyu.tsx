@@ -28,24 +28,24 @@ export default function DropMenyu() {
         </li>
       </PopoverTrigger>
       <PopoverContent className="p-0">
-        <ul className="bg-white shadow-md rounded py-2">
+        <ul className="bg-[#E8F4FC] shadow-md rounded py-2">
           <Link href={`/${locale}/about`} onClick={handleClose} aria-label="About">
-            <li className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:text-[#23B3FC] transition-all duration-200">
+            <li className="text-sm font-medium text-[#3D445E] py-[6px] px-4 hover:text-[#23B3FC] hover:bg-[#D2EDFD] transition-all duration-200">
               {t("aboutss")}
             </li>
           </Link>
           <Link href={`/${locale}/regulatorydocuments`} onClick={handleClose} aria-label="Regulatory Documents">
-            <li className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:text-[#23B3FC] transition-all duration-200">
+            <li className="text-sm font-medium text-[#3D445E] py-[6px] px-4 hover:text-[#23B3FC] hover:bg-[#D2EDFD] transition-all duration-200">
               {t("regulatorydocuments")}
             </li>
           </Link>
           <Link href={`/${locale}/international`} onClick={handleClose} aria-label="International">
-            <li className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:text-[#23B3FC] transition-all duration-200">
+            <li className="text-sm font-medium text-[#3D445E] py-[6px] px-4 hover:text-[#23B3FC] hover:bg-[#D2EDFD] transition-all duration-200">
               {t("international")}
             </li>
           </Link>
           <Link href={`/${locale}/consulting`} onClick={handleClose} aria-label="Consulting">
-            <li className="text-sm font-medium text-[#3D445E] py-1 px-4 hover:text-[#23B3FC] transition-all duration-200">
+            <li className="text-sm font-medium text-[#3D445E] py-[6px] px-4 hover:text-[#23B3FC] hover:bg-[#D2EDFD] transition-all duration-200">
               {t("consulting")}
             </li>
           </Link>

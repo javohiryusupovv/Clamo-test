@@ -7,8 +7,8 @@ import { getLocalizedValue } from "@/lib/getLocalization";
 
 
 
-export async function generateMetadata({ params }: { params: Promise<{locale: string }>}) {
-  const {locale} = await params
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
   const content = {
     title_uz: "CLAMO ruxsatnoma olishning yangi standarti",
     description_uz: "Tashkilotingiz uchun zarur litsenziyani tez va ishonchli tarzda oling. Clamo sizning qonuniylikdagi ishonchli hamkoringiz.",
@@ -28,17 +28,17 @@ export async function generateMetadata({ params }: { params: Promise<{locale: st
 
 
 export default async function Page() {
-  const reyesters = await getReyestersFromAPI();
+  const { results: firstPageData, count } = await getReyestersFromAPI(1);
   const types = await getReyesterTypes();
 
-  
+
 
   return (
     <div>
       <LicenseHero />
 
       <section className="container mx-auto px-4 py-[80px]">
-        <ReyesterClient reyesters={reyesters} types={types} />
+        <ReyesterClient initialData={firstPageData} initialCount={count} types={types} />
       </section>
     </div>
   );

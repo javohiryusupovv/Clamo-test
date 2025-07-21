@@ -20,7 +20,8 @@
     "registration_date": "Akkreditatsiya berilgan sana",
     "website": "Vebsayt",
     "email": "Email manzil",
-    "phone": "Telefon raqam"
+    "phone": "Telefon raqam",
+    "not_available": "Mavjud emas"
   },
   "ZodForm": {
     "name_subtitle": "Ism kamida 3 ta belgidan iborat bo‘lishi kerak",
