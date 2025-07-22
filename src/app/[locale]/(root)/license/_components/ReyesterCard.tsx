@@ -96,7 +96,7 @@ export default function ReyesterCard({
             {t("shares")}
           </p>
           <p className="text-[18px] font-semibold font-inter leading-[130%] text-[#3D445E]">
-            {reviews && parseInt(reviews) > 0 ? reviews : <p className="text-[15px]">{t("not_available")}</p>}
+            {reviews && parseInt(reviews) > 0 ? reviews : t("not_available")}
           </p>
         </div>
 

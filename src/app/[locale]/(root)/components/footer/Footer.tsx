@@ -43,18 +43,18 @@ export default function FooterLayout() {
               <div className="sm:w-[400px] mb-[76px]">
                 <article className="flex items-center gap-7 mb-5">
                   <Image
-                    src="/LogoClamo.svg"
-                    alt="Clamo Logo"
-                    width={100}
-                    height={50}
-                    className="w-44"
-                  />
-                  <Image
                     src="/logo/TibbiyotVazirlik.svg"
                     alt="Tibbiyot Vazirligi logo"
                     width={100}
                     height={50}
                     className="w-14"
+                  />
+                  <Image
+                    src="/LogoClamo.svg"
+                    alt="Clamo Logo"
+                    width={100}
+                    height={50}
+                    className="w-44"
                   />
                 </article>
                 <p className="text-[12px] sm:text-[16px] font-vk text-[#3D445E] sm:w-auto w-full">
