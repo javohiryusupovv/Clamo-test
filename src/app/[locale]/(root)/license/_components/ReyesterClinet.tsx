@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ReyesterCard from "./ReyesterCard";
 import { ReyesterItem } from "../../../../../../app.types";
 import { useLocale, useTranslations } from "next-intl";
@@ -25,6 +25,7 @@ import {
 } from "@/components/ui/pagination";
 import { getPaginationPages } from "@/lib/getPagination";
 import { FaSpinner } from "react-icons/fa";
+import { useDebounce } from "@/lib/useDebounce";
 
 
 interface ReyesterType {
@@ -56,19 +57,30 @@ export default function ReyesterClient({
   const [searchQuery, setSearchQuery] = useState("");
   const t = useTranslations("LicensePage");
   const locale = useLocale();
-  const fetchPage = async (newPage: number) => {
+  const debouncedSearch = useDebounce(searchQuery, 500);
+
+  const fetchPage = async (newPage: number, search = "", type = "") => {
     setLoading(true);
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/reyester/?page=${newPage}`);
+      const params = new URLSearchParams({
+        page: String(newPage),
+      });
+
+      if (search.trim()) params.append("search", search);
+      if (type) params.append("type", type);
+
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/reyester/?${params.toString()}`
+      );
       const json = await res.json();
 
       const items: ReyesterItem[] = json.results || [];
-      const total = json.count; // <-- agar count kelayotgan bo‘lsa
+      const total = json.count;
 
       setData(items);
       setPage(newPage);
-      if (total && json.results.length > 0) {
-        const pageSize = json.results.length;
+      if (total && items.length > 0) {
+        const pageSize = items.length;
         setTotalPages(Math.ceil(total / pageSize));
       }
     } catch (err) {
@@ -78,60 +90,13 @@ export default function ReyesterClient({
     }
   };
 
-  const filtered = data
-    .filter((r) =>
-      selectedType
-        ? r.reyester_type?.some((type) => {
-          const typeValue = type.slug?.trim() || String(type.id);
-          return typeValue === selectedType;
-        })
-        : true
-    )
-    .filter((r) => {
-  if (!searchQuery) return true;
 
-  const query = searchQuery.toLowerCase();
 
-  const title = getLocalizedValue({
-    title: r.title || "",
-    title_uz: r.title_uz || "",
-    title_en: r.title_en || "",
-    title_ru: r.title_ru || "",
-  }, "title", locale).toLowerCase();
 
-  const location = getLocalizedValue({
-    location: r.location || "",
-    location_uz: r.location_uz || "",
-    location_en: r.location_en || "",
-    location_ru: r.location_ru || "",
-  }, "location", locale).toLowerCase();
+  useEffect(() => {
+    fetchPage(1, debouncedSearch, selectedType);
+  }, [debouncedSearch, selectedType]);
 
-  const accreditation = String(r.accreditation_number || "").toLowerCase();
-  const email = (r.email || "").toLowerCase();
-  const website = (r.website || "").toLowerCase();
-  const phone = (r.phone || "").toLowerCase();
-  const reviews = String(r.reviews || "").toLowerCase();
-
-  const types = r.reyester_type?.map((type) =>
-    getLocalizedValue({
-      name: type.name,
-      name_uz: type.name_uz || "",
-      name_en: type.name_en || "",
-      name_ru: type.name_ru || "",
-    }, "name", locale).toLowerCase()
-  ) || [];
-
-  return (
-    title.includes(query) ||
-    location.includes(query) ||
-    accreditation.includes(query) ||
-    email.includes(query) ||
-    website.includes(query) ||
-    phone.includes(query) ||
-    reviews.includes(query) ||
-    types.some((type) => type.includes(query))
-  );
-})
 
 
 
@@ -176,6 +141,7 @@ export default function ReyesterClient({
             <input
               type="search"
               value={searchQuery}
+              autoComplete="off"
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={t("search_placeholder")}
               className="w-full font-inter bg-transparent pl-10 pr-4 text-sm text-[#5d6268] outline-none"
@@ -191,8 +157,8 @@ export default function ReyesterClient({
         <>
           {/* Results */}
           <div className="space-y-6">
-            {filtered.length > 0 ? (
-              filtered.map((item) => {
+            {data.length > 0 ? (
+              data.map((item) => {
                 const localizedTitle = getLocalizedValue(
                   {
                     title: item.title || "",
@@ -246,7 +212,7 @@ export default function ReyesterClient({
                     href="#"
                     onClick={(e) => {
                       e.preventDefault();
-                      if (page > 1) fetchPage(page - 1);
+                      if (page > 1) fetchPage(page - 1, searchQuery, selectedType);
                     }}
                     className={page === 1 ? "pointer-events-none opacity-50" : ""}
                   />
@@ -260,7 +226,7 @@ export default function ReyesterClient({
                       isActive={p === page}
                       onClick={(e) => {
                         e.preventDefault();
-                        if (p !== page) fetchPage(p);
+                        if (p !== page) fetchPage(p, searchQuery, selectedType);
                       }}
                       className={p === page ? "bg-blue-500 text-white hover:bg-blue-600" : ""}
                     >
@@ -275,7 +241,7 @@ export default function ReyesterClient({
                     href="#"
                     onClick={(e) => {
                       e.preventDefault();
-                      if (page < totalPages) fetchPage(page + 1);
+                      if (page < totalPages) fetchPage(page + 1, searchQuery, selectedType);
                     }}
                     className={page === totalPages ? "pointer-events-none opacity-50" : ""}
                   />

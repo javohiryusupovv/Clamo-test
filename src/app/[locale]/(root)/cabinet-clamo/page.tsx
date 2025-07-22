@@ -11,13 +11,6 @@ export default function Page() {
       <h4 className="text-[25px] font-semibold leading-[130%]">
         ⏳ {t("message")}
       </h4>
-      <Link
-        href="https://cabinet.clamo.uz/"
-        target="_blank"
-        className="px-14 py-2 rounded-md cursor-pointer text-white bg-[#45b2fc] transition-all duration-200 hover:bg-[#70c6ff]"
-      >
-        {t("button")}
-      </Link>
     </div>
   );
 }
