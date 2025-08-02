@@ -13,7 +13,7 @@ export default function ServicesSection({
 }) {
   const t = useTranslations("AboutPage");
   const locale = useLocale();
-  const slugs = ["consulting", "licensing", "", "accreditation",];
+  const slugs = ["consulting", "licensing", "consulting", "accreditation",];
   return (
     <section
       className="md:py-16 py-8 bg-[#F6F9FC] max-md:scroll-mt-14 scroll-mt-4"
