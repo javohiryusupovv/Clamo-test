@@ -13,8 +13,7 @@ export default function ServicesSection({
 }) {
   const t = useTranslations("AboutPage");
   const locale = useLocale();
-  const slugs = ["accreditation", "license", "license", "consulting"];
-
+  const slugs = ["consulting", "licensing", "", "accreditation",];
   return (
     <section
       className="md:py-16 py-8 bg-[#F6F9FC] max-md:scroll-mt-14 scroll-mt-4"
@@ -63,7 +62,7 @@ export default function ServicesSection({
                   <h3 className="md:text-[20px] text-base leading-[140%] font-bold font-vk text-[#3D445E] mb-3">
                     {localizedTitle}
                   </h3>
-                  <p className="text-sm text-[#3D445E] font-normal font-vk leading-[140%]">
+                  <p className="text-sm text-[#3D445E] font-normal font-vk leading-[140%] line-clamp-3">
                     {localizedDescription}
                   </p>
                 </>

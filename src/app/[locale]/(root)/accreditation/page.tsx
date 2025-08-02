@@ -2,7 +2,7 @@ import { getFaqs } from "@/lib/getFaqs";
 import Firstpage from "./_components/firstpage"
 import Secondpage from "./_components/secondpage"
 import QuestionsPage from "@/app/[locale]/(root)/components/QuestionsPage";
-import ReyesterClient from "../license/_components/ReyesterClinet";
+import ReyesterClient from "../licensing/_components/ReyesterClinet";
 import { getReyesterTypes, getReyestersFromAPI } from "@/lib/getLicense";
 import { getLocalizedValue } from "@/lib/getLocalization";
 
