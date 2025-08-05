@@ -29,7 +29,8 @@
     "organization_min": "The organization name must be at least 2 characters long",
     "phone_invalid": "The phone number must contain exactly 9 digits",
     "notifsending": "Sending",
-    "succesNotif": "Data sent successfully"
+    "succesNotif": "Data sent successfully",
+    "errorNotif": "An error occurred, please try again"
   },
   "HomePage": {
     "health_message": "Medical organizations under the Ministry of Health",
