@@ -48,7 +48,7 @@ export default function Contact() {
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         templateParams,
-        { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY! }
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       )
       .then(
         (result) => {
@@ -133,7 +133,6 @@ export default function Contact() {
             <a
               href="tel:+998712007007"
               aria-label="Phone number"
-              target="_blank"
               className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer"
             >
               <article className="bg-white p-3 inline-flex items-center justify-center rounded-lg">
