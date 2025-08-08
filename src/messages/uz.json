@@ -2,7 +2,7 @@
   "NavbarPage": {
     "abouts": "Biz haqimizda",
     "licens": "Litsenziyalash",
-    "accredation": "Akreditatsiyalash",
+    "accredation": "Akkreditatsiyalash",
     "contacts": "Bog'lanish",
     "aboutss": "Markaz haqida",
     "international": "Xalqaro hamkorlik",
@@ -39,14 +39,14 @@
     "applying": "Murojaat qilish",
     "specialists": "Biz bilan tibbiy xizmat endi yanada yaqin! CLAMO orqali eng yaxshi mutaxassislar bilan bog'laning va sog'lig'ingizni nazorat qiling",
     "aboutUs": "biz haqimizda",
-    "international_cooperation": "Tibbiyot sohasidagi xalqaro hamkorlik va tajriba almashinuvi",
+    "international_cooperation": "Markaz faoliyati va tibbiyot sohasidagi xalqaro hamkorlik hamda tajriba almashinuvi ",
     "world_standards": "CLAMO jahon standartlariga mos tibbiy xizmat ko'rsatish maqsadida yetakchi xalqaro tibbiyot muassasalari va tashkilotlari bilan hamkorlik qiladi. Biz eng so'nggi innovatsiyalar, ilg'or texnologiyalar va tajriba almashinuviga tayanamiz.",
     "detailed_button": "Batafsil",
     "license_number": "Litsenziya soni",
     "consulting_service": "Ko'rsatilgan konsalting xizmati",
     "number_license": "Tashkilot tomonidan berilgan litsenziyalar soni",
     "news_title": "Yangiliklar",
-    "all_servises": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.",
+    "all_servises": "Sifatli tibbiyot sari — dolzarb yangiliklar va foydali xizmatlar.",
     "img_title": "O‘zbekistonda yangi zamonaviy tibbiy markazlar tashkil etildi — CLAMO bilan ruxsatnoma va litsenziyalarni tez va oson oling!",
     "new_chance": "CLAMO bilan yangi imkoniyatlarni kashf eting!",
     "learn_more_button": "Barchasiga o'tish",
@@ -59,7 +59,7 @@
     "huawie_title": "Uni o'rganing",
     "install_huawie": "AppGallery",
     "partnyor_title": "Hamkorkarimiz",
-    "partnyor_subtitle": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.",
+    "partnyor_subtitle": "Hamkorlarimiz — tibbiyot sifatini oshirish va jarayonlarni takomillashtirish yo‘lida birgalikdagi ishonchli hamkorlarimiz.",
     "question_title": "Tez-tez beriladigan savollar",
     "all_question": "Barcha savollar",
     "search_place": "Yangiliklarni qidirish",
@@ -123,7 +123,7 @@
   },
   "LicensePage": {
     "license_title": "Litsenziyalash",
-    "get_permit": "CLAMO ruxsatnoma Olishning Yangi Standarti",
+    "get_permit": "CLAMO ruxsatnoma olishning yangi standarti",
     "trusted_partner": "Tashkilotingiz uchun zarur litsenziyani tez va ishonchli tarzda oling. CLAMO sizning qonuniylikdagi ishonchli hamkoringiz.",
     "get_license": "Litsenziya olish bosqichlari",
     "online_start": "Faoliyatingizni qonuniylashtirishni rejalashtiryapsizmi? Endi bu jarayonni onlayn va oson boshlang! Ruxsatnoma olish uchun ariza topshiring, hujjatlaringizni yuklang va litsenziyani qisqa muddatda qo'lga kiriting!",
@@ -144,14 +144,14 @@
     }
   },
   "AccreditationPage": {
-    "accerditation_title": "AKREDITATSIYALASH",
-    "modern_accerditation": "CLAMO bilan akreditatsiyalash — zamonaviy yondashuv",
+    "accerditation_title": "AKKREDITATSIYALASH",
+    "modern_accerditation": "CLAMO bilan akkreditatsiya — zamonaviy yondashuv",
     "necessary_license": " Tashkilotingiz uchun zarur litsenziyani tez va ishonchli tarzda oling. Clamo sizning qonuniylikdagi ishonchli hamkoringiz.",
-    "get_accerditation": "Akreditatsiyalash bosqichlari"
+    "get_accerditation": "Akkreditatsiya bosqichlari"
   },
   "ContactPageLayout": {
     "contact_title": "Bog'lanish",
-    "contact_subtitle": "Bizning ofis manzilimizdagi aloqa ma'lumotlarimiz",
+    "contact_subtitle": "Savollar, takliflar va hamkorlik uchun bog‘lanish ma’lumotlari.",
     "phone_info": "Aloqa ma'lumotlari",
     "phone_number": "Telefon raqami",
     "email": "Elektron pochta",
@@ -173,11 +173,11 @@
   "AboutPage": {
     "plan": "Bizning rejalar:",
     "abouttitle": "Tibbiyot muassasalarining sifati va xavfsizligini yanada oshirish.",
-    "about_des1": "Raqamli texnologiyalarni joriy etish orqali litsenziyalash va akkreditatsiya jarayonlarini soddalashtirish, Xalqaro standartlarni to‘liq integratsiya qilish, Shifokor va tibbiyot muassasalari uchun malaka oshirish tizimini kengaytirish va boshqalar.",
+    "about_des1": "Tibbiyot tashkilotlarini litsenziyalash va akkreditatsiyalashni ta'minlash Litsenziyalarning tibbiy xizmatlar sifati, litsenziya talab va shartlari nazoratini amalga oshirish, ilg'or xalqaro tajribaga asoslangan talablarni ishlab chiqish. Xalqaro tan olingan akkreditatsiya tashkilotlarini jalb qilish orqali mahalliy tibbiy xizmatlar sifatini oshirish va \"xavfsiz tibbiyot\" standartlarini joriy qilish. Tibbiyotning nodavlat sektorini davlat tomonidan qo'llab-quvvatlashning zamonaviy mexanizmlarini hamda barqaror rivojlantirish strategiyasini ishlab chiqish.Nodavlat tibbiyot tashkilotlarini xalqaro tan olingan akkreditatsiyadan o'tkazishda qatnashish va ularni qo'llab-quvvatlash.",
     "service": "Markaz ko'rsatadigan xizmatlar",
-    "service_des": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.",
+    "service_des": "Jarayonlarni yengilashtiruvchi va sifatni kafolatlovchi xizmatlar majmuasi.",
     "team_title": "Markaz jamoasi",
-    "team_subtitle": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.",
+    "team_subtitle": "Bizning kuchimiz — bir maqsad yo‘lida birlashgan jamoamizda.",
     "services": {
       "license": {
         "icon": "/Imgs/License.svg",
