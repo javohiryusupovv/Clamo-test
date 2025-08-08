@@ -9,9 +9,8 @@ const CenterRegulations = () => {
   
   return (
     <div className="container md:mt-[100px] mt-8 md:mb-16 mb-8">
-      {/* Header Section */}
       <div className="md:mb-9 mb-5 text-start flex flex-col gap-[4px]">
-        <h1 className="lg:text-5xl md:text-4xl text-3xl font-vk font-bold text-[#3D445E] leading-[100%]">
+        <h1 className="lg:text-4xl md:text-4xl text-3xl font-vk font-bold text-[#3D445E] leading-[100%]">
           {t("centerRegulationsTitle")}
         </h1>
         <p className="text-[#012548CC] font-vk md:text-[20px] sm:text-base text-sm leading-[140%]">
