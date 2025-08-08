@@ -9,7 +9,7 @@ import { getLocalizedValue } from "@/lib/getLocalization";
 export async function generateMetadata({ params }: { params: Promise<{locale: string }>}) {
   const {locale} = await params
   const content = {
-    title_uz: "CLAMO bilan akreditatsiyalash — zamonaviy yondashuv",
+    title_uz: "CLAMO bilan akkreditatsiya — zamonaviy yondashuv",
     description_uz: "Tashkilotingiz uchun zarur litsenziyani tez va ishonchli tarzda oling. Clamo sizning qonuniylikdagi ishonchli hamkoringiz.",
 
     title_ru: "Аккредитация с CLAMO — современный подход",
