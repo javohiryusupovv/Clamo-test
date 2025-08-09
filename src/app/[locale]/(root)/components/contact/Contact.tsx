@@ -176,7 +176,7 @@ export default function Contact() {
                   {t('emailLabel')}
                 </span>
                 <p className="text-[14px] sm:text-[16px] font-medium font-vk text-white line-clamp-1">
-                  infoclamo@gmail.com
+                  info@clamo.uz
                 </p>
               </article>
             </a>
