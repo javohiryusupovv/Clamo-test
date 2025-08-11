@@ -1,6 +1,6 @@
 
 import "../../../../styles/documents.css";
-import NormativeAccordion from "./_components/NormativeAccordion";
+// import NormativeAccordion from "./_components/NormativeAccordion";
 import GovernmentDecisionsPage from "./_components/government-decisions";
 import CenterRegulations from "./_components/CenterRegulations";
 import { getLocalizedValue } from "@/lib/getLocalization";
@@ -36,7 +36,7 @@ export default function NormativeDocuments() {
   return (
     <div className="bg-white w-full">
       <DocumentsHero/>
-      <NormativeAccordion />
+      {/* <NormativeAccordion /> */}
       <GovernmentDecisionsPage />
       <CenterRegulations />
     </div>
