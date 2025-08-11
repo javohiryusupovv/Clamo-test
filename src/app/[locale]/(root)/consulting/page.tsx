@@ -1,7 +1,7 @@
 import { getLocalizedValue } from "@/lib/getLocalization";
 import Firstpage from "./_components/firstpage";
-import Secondpage from "./_components/secondpage";
-import { getCarousel } from "@/lib/getCarousel"; // yoki sizga mos yo'l
+// import Secondpage from "./_components/secondpage";
+// import { getCarousel } from "@/lib/getCarousel"; // yoki sizga mos yo'l
 
 
 export async function generateMetadata({ params }: { params: Promise<{locale: string }>}) {
@@ -25,12 +25,12 @@ export async function generateMetadata({ params }: { params: Promise<{locale: st
 
 
 export default async function Page() {
-  const carouselData = await getCarousel();
+  // const carouselData = await getCarousel();
 
   return (
     <div>
       <Firstpage />
-      <Secondpage carousel={carouselData} />
+      {/* <Secondpage carousel={carouselData} /> */}
     </div>
   );
 }

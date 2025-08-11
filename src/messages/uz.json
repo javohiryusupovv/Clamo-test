@@ -17,7 +17,7 @@
     "view_license": "Litsenziyani ko‘rish",
     "accreditation_number": "Akkreditatsiya raqami",
     "shares": "Reviews",
-    "registration_date": "Akkreditatsiya berilgan sana",
+    "registration_date": "Litsenziya berilgan sana",
     "website": "Vebsayt",
     "email": "Email manzil",
     "phone": "Telefon raqam",
@@ -229,7 +229,7 @@
       "regulatorydocuments": "Normativ hujjatlar",
       "center": "Markaz haqida",
       "license": "Litsenziyalash",
-      "accreditation": "Akreditatsiyalash"
+      "accreditation": "Akkreditatsiyalash"
     },
     "developed": "Ishlab chiquvchi:"
   },
