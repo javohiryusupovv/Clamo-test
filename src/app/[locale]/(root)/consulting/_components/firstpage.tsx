@@ -24,8 +24,8 @@ export default function ConsultingPages() {
 
   return (
     <div className="">
-      <div className=" bg-[#F6F9FC] car">
-        <div className=" h-[721px] card1  overflov container flex w-full justify-between">
+      <div className=" bg-[#F6F9FC]">
+        <div className=" h-[721px] container flex w-full justify-between">
           <div className="max-w-[597px]  first-card h-[454px] card-1 mt-[122px] flex flex-col md:gap-[40px] ">
             <div className=" flex flex-col gap-2">
               <div className=" flex items-center font-inter font-medium text-[14px] leading-[1] gap-2" data-aos="fade-left" data-aos-delay="200">
@@ -34,9 +34,6 @@ export default function ConsultingPages() {
                     INFO@CLAMO.UZ
                   </h1>
                 </Link>
-                <h1 className=" text-[#3D445E] email-none font-inter" >
-                  {t("email_letter")}
-                </h1>
                 <h1 className=" text-[#3D445E] email-flex font-inter" 
                   data-aos="fade"
                   data-aos-delay="600"
@@ -97,20 +94,7 @@ export default function ConsultingPages() {
               alt="bayroq"
               className="object-contain absolute z-10 ml-36 mt-8 max-w-[494px] h-[704px] img2"
             />
-            {/* <div className="absolute bottom-0 left-0 w-full h-[120px] md:h-[180px] lg:h-[430px] bg-gradient-to-t z-20 from-[#F6F9FC]/100 opacity- to-transparent"></div> */}
-          </div>
-          <div className=" bg-[#F6F9FC] img-flex w-[559px] flex image33">
-            <Image
-              src={Man}
-              alt="bayroq"
-              className="object-contain man ml-[-35px] z-0 absolute max-w-[494px] h-[704px]"
-            />
-            <Image
-              src={Woman}
-              alt="bayroq"
-              className="object-contain woman absolute z-10 ml-36 mt-8 max-w-[494px] h-[704px]"
-            />
-            {/* <div className="absolute bottom-0 left-0 w-full h-[120px] md:h-[180px] lg:h-[430px] bg-gradient-to-t z-20 from-[#F6F9FC]/100 opacity- to-transparent"></div> */}
+            <div className="absolute bottom-0 left-0 w-full h-[120px] md:h-[180px] lg:h-[430px] bg-gradient-to-t z-20 from-[#F6F9FC]/100 opacity- to-transparent"></div>
           </div>
         </div>
       </div>
