@@ -214,7 +214,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/license`} aria-label="License Page" onClick={() => setIsMobileMenuOpen(false)} className="text-[15px] font-medium sm:text-[17px] sm:font-semibold text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200">
+                <Link href={`/${locale}/licensing`} aria-label="License Page" onClick={() => setIsMobileMenuOpen(false)} className="text-[15px] font-medium sm:text-[17px] sm:font-semibold text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200">
                   {t("licens")}
                 </Link>
               </li>
