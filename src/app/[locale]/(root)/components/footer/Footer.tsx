@@ -180,9 +180,9 @@ export default function FooterLayout() {
 
         {/* Footer bottom */}
         <div className="absolute z-[12] bottom-0 w-full py-5">
-          <div className="container flex justify-between items-center">
-            <p className="text-[#3D445E]/[60%] text-[11px] sm:text-[14px] font-vk">
-              &copy; {new Date().getFullYear()} – “CLAMO” LLC
+          <div className="container flex justify-between items-center max-sm:block max-sm:mt-4">
+            <p className="text-[#3D445E]/[60%] lg:w-[full] sm:w-[250px] text-[11px] sm:text-[14px] font-vk">
+              &copy; {new Date().getFullYear()} – “Tibbiyot tashkilotlarini litsenziyalash va akkreditatsiyalash markazi” DM
             </p>
             <div className="group flex items-center gap-2">
               <span className="text-[#3D445E] text-[12px] font-semibold sm:text-[15px]">

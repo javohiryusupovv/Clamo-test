@@ -24,7 +24,7 @@ export default function Navbar() {
       case "ru":
         return {
           code: "ru",
-          label: "Rus",
+          label: "Ru",
           flag: "/icons/flags/russia-flag.svg",
         };
 
@@ -37,7 +37,7 @@ export default function Navbar() {
       default:
         return {
           code: "uz",
-          label: "Uzb",
+          label: "Uz",
           flag: "/icons/flags/uzbekistan-flag.svg",
         };
     }
@@ -268,7 +268,7 @@ export default function Navbar() {
                           onClick={() =>
                             handleLangChange({
                               code: "uz",
-                              label: "Uzb",
+                              label: "Uz",
                               flag: "/icons/flags/uzbekistan-flag.svg",
                             })
                           }
@@ -281,7 +281,7 @@ export default function Navbar() {
                             height={24}
                           />
                           <p className="text-sm uppercase text-[#3D445E] font-medium">
-                            Uzb
+                            uz
                           </p>
                         </li>
                         <li
@@ -301,14 +301,14 @@ export default function Navbar() {
                             height={24}
                           />
                           <p className="text-sm uppercase text-[#3D445E] font-medium">
-                            Eng
+                            eng
                           </p>
                         </li>
                         <li
                           onClick={() =>
                             handleLangChange({
                               code: "ru",
-                              label: "Rus",
+                              label: "Ru",
                               flag: "/icons/flags/russia-flag.svg",
                             })
                           }
@@ -321,7 +321,7 @@ export default function Navbar() {
                             height={24}
                           />
                           <p className="text-sm uppercase text-[#3D445E] font-medium">
-                            Rus
+                            ru
                           </p>
                         </li>
                         

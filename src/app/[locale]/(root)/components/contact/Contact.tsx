@@ -37,35 +37,44 @@ export default function Contact() {
     const templateParams = {
       full_name: data.names,
       industry: data.tashkilot,
-      phone_number: `+998${data.phoneNumber.replace(/\s/g, '')}`, // Remove spaces for clean phone number
-      to_email: 'yusupovjavoxir11@gmail.com', // Optional, if template doesn't set recipient
+      phone_number: `+998${data.phoneNumber.replace(/\s/g, '')}`,
+      to_email: 'yusupovjavoxir11@gmail.com',
     };
 
-    console.log('Sending email with params:', templateParams);
+    // Telegram uchun matn
+    const telegramMessage = `
+📝 Yangi forma yuborildi!
+👤 Ism: ${data.names}
+🏢 Tashkilot: ${data.tashkilot}
+📞 Telefon: +998${data.phoneNumber.replace(/\s/g, '')}
+`;
 
-    const submitPromise = emailjs
-      .send(
+    // EmailJS va Telegram parallel yuboriladi
+    const submitPromise = Promise.all([
+      emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         templateParams,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-      )
-      .then(
-        (result) => {
-          console.log('EmailJS Success:', result.text);
-          return result;
-        },
-        (error) => {
-          console.error('EmailJS Error:', error.text);
-          throw new Error(zod('errorNotif') || 'Failed to send email');
-        }
-      );
+      ),
+      fetch(`https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID,
+          text: telegramMessage,
+          parse_mode: 'HTML',
+        }),
+      }),
+    ]);
 
     toast
       .promise(submitPromise, {
-        pending: zod('notifsending') || 'Jo\'natilmoqda...',
-        success: zod('succesNotif') || 'Muvaffaqiyatli jo\'natildi!',
-        error: zod('errorNotif') || 'Xatolik yuz berdi, iltimos qayta urinib ko\'ring',
+        pending: zod('notifsending') || "Jo'natilmoqda...",
+        success: zod('succesNotif') || "Muvaffaqiyatli jo'natildi!",
+        error:
+          zod('errorNotif') ||
+          "Xatolik yuz berdi, iltimos qayta urinib ko'ring",
       })
       .then(() => {
         reset();
@@ -78,7 +87,6 @@ export default function Contact() {
   };
 
   useEffect(() => {
-    // Initialize EmailJS with public key
     emailjs.init({ publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY! });
 
     const timeout = setTimeout(() => {
@@ -107,7 +115,7 @@ export default function Contact() {
             <Link
               href="https://yandex.uz/maps/10335/tashkent/?ll=69.303946%2C41.318330&mode=whatshere&whatshere%5Bpoint%5D=69.303883%2C41.318303&whatshere%5Bzoom%5D=17&z=16"
               aria-label="Location"
-              target='_blank'
+              target="_blank"
               className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer"
             >
               <article className="bg-white p-3 inline-flex justify-center items-center rounded-lg">
@@ -252,9 +260,7 @@ export default function Contact() {
                     width={50}
                     height={50}
                   />
-                  <span className="text-[16px] max-md:mr-1 max-lg:mr-4 max-sm:mr-3 max-ms:mr-5">
-                    +998
-                  </span>
+                  <span className="text-[16px]">+998</span>
                 </article>
                 <input
                   id="phoneNumber"
@@ -272,16 +278,6 @@ export default function Contact() {
                     if (value.length > 7) formatted += ' ' + value.slice(7, 9);
                     e.currentTarget.value = formatted;
                   }}
-                  onBlur={(e) => {
-                    const value = e.currentTarget.value.replace(/\D/g, '');
-                    if (value.length !== 9) {
-                      e.currentTarget.setCustomValidity(
-                        'Telefon raqami aniq 9 ta raqam bo‘lishi kerak'
-                      );
-                    } else {
-                      e.currentTarget.setCustomValidity('');
-                    }
-                  }}
                   className="w-full outline-none bg-[#F7F7F8] text-[16px]"
                   placeholder="99 123 45 67"
                 />
@@ -295,8 +291,9 @@ export default function Contact() {
             <div className="flex justify-end">
               <button
                 type="submit"
-                className={`group flex items-center gap-1 text-[14px] font-medium text-white px-6 py-[10px] rounded-lg bg-[#0653C9] hover:bg-[#0761e9] transition-all duration-300 ${isLoading ? 'opacity-60 cursor-not-allowed' : ''
-                  }`}
+                className={`group flex items-center gap-1 text-[14px] font-medium text-white px-6 py-[10px] rounded-lg bg-[#0653C9] hover:bg-[#0761e9] transition-all duration-300 ${
+                  isLoading ? 'opacity-60 cursor-not-allowed' : ''
+                }`}
                 disabled={isLoading}
               >
                 {isLoading ? (
