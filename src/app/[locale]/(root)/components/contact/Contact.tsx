@@ -43,10 +43,11 @@ export default function Contact() {
 
     // Telegram uchun matn
     const telegramMessage = `
-📝 Yangi forma yuborildi!
-👤 Ism: ${data.names}
+📩 Yangi xabar
+
+👤 Full Name: ${data.names}
 🏢 Tashkilot: ${data.tashkilot}
-📞 Telefon: +998${data.phoneNumber.replace(/\s/g, '')}
+📞 Phone: +998${data.phoneNumber.replace(/\s/g, '')}
 `;
 
     // EmailJS va Telegram parallel yuboriladi
