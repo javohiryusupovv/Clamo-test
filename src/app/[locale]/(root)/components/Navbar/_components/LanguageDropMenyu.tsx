@@ -14,17 +14,17 @@ import { useState } from "react";
 const LANGUAGES = [
   {
     code: "uz",
-    label: "Uzb",
+    label: "uz",
     flag: "/icons/flags/uzbekistan-flag.svg",
   },
   {
     code: "en",
-    label: "Eng",
+    label: "eng",
     flag: "/icons/flags/united-kingdom-flag.svg",
   },
   {
     code: "ru",
-    label: "Rus",
+    label: "ru",
     flag: "/icons/flags/russia-flag.svg",
   },
 ];

@@ -56,7 +56,7 @@ export default function MainService() {
                 {item.description}
               </p>
               <div className="flex md:gap-[28px] gap-3 items-center">
-                <Link href={`${locale}/license`} aria-label="Litsensiya">
+                <Link href="https://office.clamo.uz" aria-label="Litsensiya">
                   <button className="group font-inter lg:px-6 px-5 w-full h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[hsl(200,97%,65%)] bg-[#23b3fc] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">                    
                     {item.buttonText}
                     <FaAngleRight className="group-hover:translate-x-2 transition-all duration-200" />

@@ -15,9 +15,9 @@
   },
   "ReyesterCard": {
     "view_license": "Посмотреть лицензию",
-    "accreditation_number": "Номер аккредитации",
+    "accreditation_number": "Номер лицензию",
     "shares": "Отзывы",
-    "registration_date": "Дата аккредитации",
+    "registration_date": "Дата лицензию",
     "website": "Веб-сайт",
     "email": "Электронная почта",
     "phone": "Номер телефона",

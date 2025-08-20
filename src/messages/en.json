@@ -15,9 +15,9 @@
   },
   "ReyesterCard": {
     "view_license": "View License",
-    "accreditation_number": "Accreditation Number",
-    "shares": "Sharhlar",
-    "registration_date": "Accreditation Date",
+    "accreditation_number": "License Number",
+    "shares": "Reviews",
+    "registration_date": "License Date",
     "website": "Website",
     "email": "Email Address",
     "phone": "Phone Number",
