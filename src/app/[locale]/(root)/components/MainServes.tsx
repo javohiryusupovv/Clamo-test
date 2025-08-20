@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { getPlatforms } from "../../../../../constants/page";
-import { useLocale, useTranslations } from "next-intl";
+import {  useTranslations } from "next-intl";
 import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
@@ -13,7 +13,6 @@ import { usePathname } from "next/navigation";
 export default function MainService() {
   const t = useTranslations("HomePage");
   const platforms = getPlatforms(t);
-  const locale = useLocale()
 
  useEffect(() => {
      const loadAOS = async () => {
