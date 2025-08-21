@@ -105,7 +105,7 @@ export default async function NewsDetailPage({
         <p className="w-1 h-1 bg-[#697583] rounded-full"></p>{" "}
         <span className="text-[#697583]">{time}</span>
       </article>
-      <Image
+      <img
         src={data.image}
         alt={data.title}
         width={300}
