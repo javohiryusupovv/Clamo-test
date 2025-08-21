@@ -268,7 +268,7 @@ export default function Navbar() {
                           onClick={() =>
                             handleLangChange({
                               code: "uz",
-                              label: "Uz",
+                              label: "UZ",
                               flag: "/icons/flags/uzbekistan-flag.svg",
                             })
                           }
@@ -281,14 +281,14 @@ export default function Navbar() {
                             height={24}
                           />
                           <p className="text-sm uppercase text-[#3D445E] font-medium">
-                            uz
+                            UZ
                           </p>
                         </li>
                         <li
                           onClick={() =>
                             handleLangChange({
                               code: "en",
-                              label: "Eng",
+                              label: "ENG",
                               flag: "/icons/flags/united-kingdom-flag.svg",
                             })
                           }
@@ -301,14 +301,14 @@ export default function Navbar() {
                             height={24}
                           />
                           <p className="text-sm uppercase text-[#3D445E] font-medium">
-                            eng
+                            ENG
                           </p>
                         </li>
                         <li
                           onClick={() =>
                             handleLangChange({
                               code: "ru",
-                              label: "Ru",
+                              label: "RU",
                               flag: "/icons/flags/russia-flag.svg",
                             })
                           }
@@ -321,7 +321,7 @@ export default function Navbar() {
                             height={24}
                           />
                           <p className="text-sm uppercase text-[#3D445E] font-medium">
-                            ru
+                            RU
                           </p>
                         </li>
                         

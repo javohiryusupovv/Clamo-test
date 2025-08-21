@@ -6,6 +6,12 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts")
 const nextConfig: NextConfig = {
   images: {
     domains: ['admin.clamo.uz'],
+        remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.commeta.uz",
+      },
+    ],
   },
   webpack(config) {
     config.module.rules.push({
