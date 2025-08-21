@@ -41,7 +41,6 @@ export default function Contact() {
       to_email: 'yusupovjavoxir11@gmail.com',
     };
 
-    // Telegram uchun matn
     const telegramMessage = `
 📩 Yangi xabar
 
@@ -50,7 +49,6 @@ export default function Contact() {
 📞 Phone: +998${data.phoneNumber.replace(/\s/g, '')}
 `;
 
-    // EmailJS va Telegram parallel yuboriladi
     const submitPromise = Promise.all([
       emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,

@@ -174,6 +174,7 @@ export interface CommentSharh{
     created_at: string;
     rating: number;
     short_url: string;
+    og_image_url:string;
 }
 
 export interface APISharhItem {
@@ -185,6 +186,7 @@ export interface APISharhItem {
   created_at: string;
   rating: number;
   short_url: string;
+  og_image_url:string;
 }
 
 export interface NewsTypes {

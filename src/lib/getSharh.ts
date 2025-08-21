@@ -24,6 +24,7 @@ export async function getReviews(): Promise<CommentSharh[]> {
     created_at: item.created_at,
     rating: item.rating,
     short_url: item.short_url,
+    og_image_url:item.og_image_url
   }));
 
   return parsedComments;
