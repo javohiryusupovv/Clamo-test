@@ -1,0 +1,46 @@
+before_script:  
+  - docker login $CI_HARBOR_REGISTRY --username $CI_HARBOR_USER --password $CI_HARBOR_PASSWORD
+
+workflow:
+  rules:
+    - if: '$CI_COMMIT_REF_NAME == "main"'
+      variables:
+        RUNNER_TAG: "clamo-prod"
+        IMAGE_TAG: $CI_PIPELINE_IID
+        ENV_TAG: "latest"
+    - if: '$CI_COMMIT_REF_NAME == "dev"'
+      variables:
+        RUNNER_TAG: "clamo-dev"
+        IMAGE_TAG: "$CI_PIPELINE_IID"
+        ENV_TAG: "dev"
+    - when: always     
+
+
+stages:
+  - build_staging
+  - deploy_staging
+
+build_image_to_harbor:
+  stage: build_staging
+  image: harbor.uicgroup.tech/devops/docker:dind
+  before_script:  
+  - docker login $CI_HARBOR_REGISTRY --username $CI_HARBOR_USER --password $CI_HARBOR_PASSWORD
+  script:
+    - make vars-input
+    - make build-image TAG=$CI_PIPELINE_IID SERVICE_NAME=$CI_PROJECT_NAME PROJECT_NAME=$CI_PROJECT_NAMESPACE REGISTRY=$CI_HARBOR_REGISTRY ENV_TAG=$ENV_TAG
+    - make push-image TAG=$CI_PIPELINE_IID SERVICE_NAME=$CI_PROJECT_NAME PROJECT_NAME=$CI_PROJECT_NAMESPACE REGISTRY=$CI_HARBOR_REGISTRY ENV_TAG=$ENV_TAG
+
+
+# deploy_image_swarm:
+#   stage: deploy_staging
+#   image: harbor.uicgroup.tech/devops/docker:dind
+#   variables:
+#     GIT_STRATEGY: none
+#     GIT_SUBMODULE_STRATEGY: none
+#   script:
+#     - docker service update --with-registry-auth --image $CI_HARBOR_REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:$ENV_TAG 'clamo_web_front'
+#   only:
+#     - dev
+#     - main
+#   tags: 
+#     - $RUNNER_TAG
