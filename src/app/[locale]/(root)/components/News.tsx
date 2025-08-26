@@ -2,7 +2,6 @@
 
 import { FaArrowRightLong } from "react-icons/fa6";
 import Link from "next/link";
-import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { NewsTypes } from "../../../../../app.types";
 import { getLocalizedValue, pickStringProps } from "@/lib/getLocalization";
