@@ -8,7 +8,6 @@ import {
 import { ChevronRight } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
-import Image from "next/image";
 import { useState } from "react";
 
 const LANGUAGES = [
@@ -49,7 +48,7 @@ export default function DropLanguage() {
         <li className="text-sm font-medium text-[#3D445E] cursor-pointer flex items-center gap-[6px]">
           {current ? (
             <>
-              <Image src={current.flag} alt={current.label} width={20} height={20} />
+              <img src={current.flag} alt={current.label} width={20} height={20} />
               {current.label}
             </>
           ) : (
@@ -70,7 +69,7 @@ export default function DropLanguage() {
               onClick={() => handleLangChange(lang.code)}
               className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-4 py-2"
             >
-              <Image src={lang.flag} alt={lang.label} width={20} height={20} />
+              <img src={lang.flag} alt={lang.label} width={20} height={20} />
               <span className="text-sm font-medium text-[#3D445E]">{lang.label}</span>
             </li>
           ))}

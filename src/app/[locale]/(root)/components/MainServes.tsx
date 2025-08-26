@@ -36,7 +36,7 @@ export default function MainService() {
           >
             <div className="lg:block hidden">
               <div className="flex justify-start bg-[url('/Images/bgMain.png')] bg-no-repeat bg-cover bg-center">
-                <Image
+                <img
                   src={item.image}
                   alt="Clamo Logo on Laptop"
                   width={500}

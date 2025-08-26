@@ -1,5 +1,4 @@
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import { getHamkorlar } from "../../../../../../constants/page";
 
 export default function InternationalProject() {
@@ -19,7 +18,7 @@ export default function InternationalProject() {
               className="relative z-[5] flex flex-col items-center bg-[#0653C9] px-6 pb-6 pt-16 rounded-[24px] md:rounded-[36px] cardhamkorlar"
             >
               <article className="absolute top-6 z-[5] inline-flex p-5 rounded-full bg-white -translate-y-16">
-                <Image
+                <img
                   className="w-10 h-10 max-md:w-8 max-md:h-8"
                   width={200}
                   height={100}

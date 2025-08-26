@@ -2,7 +2,6 @@
 
 import { useTranslations } from 'next-intl';
 import { LoaderCircle } from 'lucide-react';
-import Image from 'next/image';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -118,7 +117,7 @@ export default function Contact() {
               className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer"
             >
               <article className="bg-white p-3 inline-flex justify-center items-center rounded-lg">
-                <Image
+                <img
                   className="w-5 h-4"
                   src="/icons/location.svg"
                   alt="Location"
@@ -143,7 +142,7 @@ export default function Contact() {
               className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer"
             >
               <article className="bg-white p-3 inline-flex items-center justify-center rounded-lg">
-                <Image
+                <img
                   className="w-5 h-5"
                   src="/icons/phone.svg"
                   alt="Phone"
@@ -170,7 +169,7 @@ export default function Contact() {
               className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer"
             >
               <article className="bg-white p-3 inline-flex rounded-lg">
-                <Image
+                <img
                   className="w-5 h-4"
                   src="/icons/email.svg"
                   alt="Email"
@@ -252,7 +251,7 @@ export default function Contact() {
               </label>
               <div className="w-full bg-[#F7F7F8] flex gap-2 px-3 h-10 rounded-lg border border-transparent focus-within:border-[#1a60cd]">
                 <article className="flex items-center gap-1">
-                  <Image
+                  <img
                     src="/icons/Flags.svg"
                     className="w-6 sm:w-9"
                     alt="Flag Icons"
@@ -303,7 +302,7 @@ export default function Contact() {
                 ) : (
                   <>
                     {t('send')}
-                    <Image
+                    <img
                       className="transition-all duration-300 group-hover:rotate-[43deg]"
                       src="/icons/submiticons.svg"
                       alt="Send Icon"

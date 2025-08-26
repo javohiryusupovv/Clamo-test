@@ -3,7 +3,6 @@
 import Doctors from "@/assets/images/doctors.png";
 import bgCircle from "../../../../../public/herobg.png";
 import LearnMore from "./LearnMoreButton";
-import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -76,7 +75,7 @@ export default function ClamoStatistic({ numbers }: { numbers: NumbersType }) {
                                 <LearnMore />
                             </Link>
                             <div className=" flex justify-center">
-                                <Image
+                                <img
                                     src={Doctors}
                                     alt="Doctors"
                                     width={359}
@@ -93,7 +92,7 @@ export default function ClamoStatistic({ numbers }: { numbers: NumbersType }) {
                         <div className="flex-1 lg:pr-8 px-4 max-xl:pb-10">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div className="w-full bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl text-white flex flex-col p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                    <Image src="/icons/statistic/bino.svg" alt="HomeIcons" width={48} height={48} />
+                                    <img src="/icons/statistic/bino.svg" alt="HomeIcons" width={48} height={48} />
                                     <div className="pt-10">
                                         <h1 className="xl:text-[48px] lg:text-[39px] text-[36px] font-bold">
                                             {animatedClinics.toLocaleString("ru-RU")}+
@@ -104,7 +103,7 @@ export default function ClamoStatistic({ numbers }: { numbers: NumbersType }) {
                                     </div>
                                 </div>
                                 <div className="w-full bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl text-white flex flex-col p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                    <Image src="/icons/statistic/zur.svg" alt="HomeIcons" width={48} height={48} />
+                                    <img src="/icons/statistic/zur.svg" alt="HomeIcons" width={48} height={48} />
                                     <div className="pt-10">
                                         <h1 className="xl:text-[48px] lg:text-[39px] text-[36px] font-bold">
                                             {animatedConsulting.toLocaleString("ru-RU") || 0}+
@@ -115,8 +114,8 @@ export default function ClamoStatistic({ numbers }: { numbers: NumbersType }) {
                                     </div>
                                 </div>
                                 <div className=" relative top-0 left-0 bg-gradient-to-br overflow-hidden from-blue-400 to-blue-600 p-6 rounded-2xl text-white flex flex-col md:col-span-2 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                    <Image src="/icons/statistic/document.svg" alt="HomeIcons" width={48} height={48} />
-                                    <Image
+                                    <img src="/icons/statistic/document.svg" alt="HomeIcons" width={48} height={48} />
+                                    <img
                                         src={bgCircle}
                                         className=" absolute top-0 left-36 opacity-[0.7] max-ll:top-4"
                                         alt="BgCircle"

@@ -1,7 +1,6 @@
 "use client"
 
 import { useLocale, useTranslations } from "next-intl";
-import Image from "next/image";
 import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa6";
 import Folder from "@/assets/images/Folder.png";
@@ -77,7 +76,7 @@ export default function DocumentsHero() {
                     {/* Rasm qismi */}
                     <div className="absolute right-0 xl:-top-24 -z-10">
                         <div className="relative">
-                            <Image
+                            <img
                                 src={Folder}
                                 alt="Normativ hujjatlar"
                                 width={2000}

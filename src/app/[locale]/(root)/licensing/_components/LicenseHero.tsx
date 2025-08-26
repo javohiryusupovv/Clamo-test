@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { getLicense } from "../../../../../../constants/page";
 import { useLocale, useTranslations } from "next-intl";
 import { FaChevronRight } from "react-icons/fa";
@@ -93,7 +92,7 @@ export default function LicenseHero() {
 
             <div className="hidden md:flex md:flex-1 justify-center items-center w-full md:w-[55%] h-auto md:mt-0 md:absolute z-[-10] md:right-[-10px]">
               <div className="relative top-0 left-0 w-full h-[320px]">
-                <Image
+                <img
                   src="/Images/stamp.svg"
                   alt="Pechat Clamo"
                   width={482}
@@ -102,7 +101,7 @@ export default function LicenseHero() {
                   data-aos="fade-up-left"
                   data-aos-duration="3000"
                 />
-                <Image
+                <img
                   src="/Images/Holder.svg"
                   alt="Pechat Clamo "
                   width={248}
@@ -151,7 +150,7 @@ export default function LicenseHero() {
                   className="bg-white bg-opacity-10 rounded-[32px] p-4 flex flex-col items-start"
                 >
                   <div className="flex items-center justify-center bg-white bg-opacity-15 p-[16px] rounded-[18px] mb-3">
-                    <Image
+                    <img
                       src={step.icon}
                       alt={step.title}
                       width={33}

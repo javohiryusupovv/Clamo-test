@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import cirlceBG from "../../../../../assets/images/twoCircle.png";
 import "./Footer.css";
 import Link from "next/link";
@@ -42,14 +41,14 @@ export default function FooterLayout() {
             <div>
               <div className="sm:w-[400px] mb-[76px]">
                 <article className="flex items-center gap-7 mb-5">
-                  <Image
+                  <img
                     src="/logo/TibbiyotVazirlik.svg"
                     alt="Tibbiyot Vazirligi logo"
                     width={100}
                     height={50}
                     className="w-14"
                   />
-                  <Image
+                  <img
                     src="/LogoClamo.svg"
                     alt="Clamo Logo"
                     width={100}
@@ -161,13 +160,13 @@ export default function FooterLayout() {
 
         {/* Footer background */}
         <div className="footer-shadow hidden lg:block">
-          <Image
+          <img
             className="absolute bottom-2 w-[700px] right-0"
             src={cirlceBG}
             alt="bg-Circle"
           />
           <div className="container relative">
-            <Image
+            <img
               className="absolute top-8 right-6 w-[400px]"
               src="/flag/groupFlag.png"
               alt="Flag Clamo"
@@ -193,7 +192,7 @@ export default function FooterLayout() {
                 target="_blank"
                 className="group flex items-center transition-all duration-300"
               >
-                <Image
+                <img
                   src="/logo/devLogo.svg"
                   alt="IQ Logo"
                   className="max-ms:w-[30px]"

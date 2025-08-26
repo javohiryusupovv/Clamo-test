@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import Down from "../../../../../assets/icons/down.png";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
@@ -117,7 +116,7 @@ export default function Navbar() {
               <ul>
                 <li>
                   <Link href={`/${locale}`} aria-label="Home">
-                    <Image
+                    <img
                       src="/LogoClamo.svg"
                       alt="Logo"
                       width={155.71}
@@ -157,7 +156,7 @@ export default function Navbar() {
                   <DropLanguage />
                 </div>
                 <Link href="tel:1369" aria-label="Phone" className="flex items-center gap-[6px]">
-                  <Image src="/icons/phone.svg" alt="Phone icon" width={17} height={17} />
+                  <img src="/icons/phone.svg" alt="Phone icon" width={17} height={17} />
                   <p className="text-base font-bold text-[#3D445E]">1369</p>
                 </Link>
               </ul>
@@ -239,7 +238,7 @@ export default function Navbar() {
                     onClick={() => setDropdownOpen(!dropdownOpen)}
                     className="group flex items-center gap-3 cursor-pointer py-1 rounded"
                   >
-                    <Image
+                    <img
                       src={selectedLang.flag}
                       alt={`${selectedLang.label} flag`}
                       width={24}
@@ -251,7 +250,7 @@ export default function Navbar() {
                         {selectedLang.code}
                       </p>
                       <div className="w-5 h-5 flex items-center">
-                        <Image
+                        <img
                           src={Down}
                           alt="Down arrow"
                           width={11}
@@ -274,7 +273,7 @@ export default function Navbar() {
                           }
                           className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
                         >
-                          <Image
+                          <img
                             src="/icons/flags/uzbekistan-flag.svg"
                             alt="uzbek flag"
                             width={24}
@@ -294,7 +293,7 @@ export default function Navbar() {
                           }
                           className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
                         >
-                          <Image
+                          <img
                             src="/icons/flags/united-kingdom-flag.svg"
                             alt="Eng flag"
                             width={24}
@@ -314,7 +313,7 @@ export default function Navbar() {
                           }
                           className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-2 py-1"
                         >
-                          <Image
+                          <img
                             src="/icons/flags/russia-flag.svg"
                             alt="Rus flag"
                             width={24}
@@ -330,7 +329,7 @@ export default function Navbar() {
                   )}
                 </section>
                 <Link href="tel:1369" aria-label="Phone" className="flex items-center gap-[6px]">
-                  <Image src="/icons/phone.svg" alt="Phone icon" width={17} height={17} />
+                  <img src="/icons/phone.svg" alt="Phone icon" width={17} height={17} />
                   <p className="text-base font-bold text-[#3D445E]">1369</p>
                 </Link>
               </div>

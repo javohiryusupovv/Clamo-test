@@ -4,7 +4,6 @@ import "../../../../styles/linerMainserver.css";
 import { commentOpinion } from "@/types/type";
 import Marquee from "react-fast-marquee";
 import { getOpinion } from "../../../../../constants/page";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { CommentSharh } from "app.types";
@@ -43,7 +42,7 @@ export default function Izohlar({ comments }: CommentProps) {
         {opinion.map((item: commentOpinion, id: number) => (
           <div key={id} className="flex flex-col gap-[4px] md:mb-[32px]">
             {item.icons && (
-              <Image
+              <img
                 src={item.icons}
                 alt="Sharh Icons"
                 width={124}
@@ -71,7 +70,7 @@ export default function Izohlar({ comments }: CommentProps) {
                   <div className="flex items-center gap-2">
                     {/* Avatar */}
                     <div className="flex items-center w-[45px] h-[45px] max-sm:w-[35px] max-sm:h-[35px]">
-                      <Image
+                      <img
                         src={Avatar} 
                         alt={Avatar}
                         width={44}
@@ -92,7 +91,7 @@ export default function Izohlar({ comments }: CommentProps) {
                   <div className="flex items-center gap-1 sm:pb-[8px] pb-1">
                     <div className="flex gap-[2px]">
                       {Array.from({ length: 5 }).map((_, index) => (
-                        <Image
+                        <img
                           key={index}
                           src={index < item.rating ? "/icons/stars.svg" : "/icons/starsgray.svg"}
                           alt="star"
@@ -131,7 +130,7 @@ export default function Izohlar({ comments }: CommentProps) {
                     <div className="flex items-center gap-2">
                       {/* Avatar */}
                       <div className="flex items-center w-[45px] h-[45px] max-sm:w-[35px] max-sm:h-[35px]">
-                        <Image
+                        <img
                           src={Avatar}
                           alt={Avatar}
                           width={44}
@@ -152,7 +151,7 @@ export default function Izohlar({ comments }: CommentProps) {
                     <div className="flex items-center gap-1 sm:pb-[8px] pb-1">
                       <div className="flex gap-[2px]">
                         {Array.from({ length: 5 }).map((_, index) => (
-                          <Image
+                          <img
                             key={index}
                             src={index < item.rating ? "/icons/stars.svg" : "/icons/starsgray.svg"}
                             alt="star"

@@ -2,7 +2,6 @@
 import "../../../../../styles/international.css";
 import { ChevronRight } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
@@ -75,7 +74,7 @@ export default function International() {
           </article>
         </article>
         <div className="w-full md:w-[55%] flex justify-center items-center relative">
-          <Image
+          <img
             className="w-full max-w-[694px] z-[3]"
             width={400}
             height={200}
@@ -84,7 +83,7 @@ export default function International() {
             data-aos="fade-up"
             data-aos-duration="1300"
           />
-          <Image
+          <img
             className="absolute top-10 right-0 z-[2] hidden md:block"
             width={400}
             height={200}

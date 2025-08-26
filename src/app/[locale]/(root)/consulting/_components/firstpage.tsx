@@ -3,7 +3,6 @@
 import { useTranslations } from "next-intl";
 import Man from "../../../../../../public/Images/man.png";
 import Woman from "../../../../../../public/Images/woman.png";
-import Image from "next/image";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
 import Link from "next/link";
@@ -27,12 +26,12 @@ export default function ConsultingPages() {
       <div className="container flex flex-col-reverse lg:flex-row items-center justify-between min-h-[500px] lg:h-[721px] gap-10 lg:gap-0">
         <div className="max-lg:!mt-[200px] lg:mt-[0px] min-h-[50vh] flex flex-col justify-center items-center">
           <div className="absolute mt-[50px] top-20 left-1/2 -translate-x-1/2 lg:hidden w-full max-w-[500px] flex justify-center">
-            <Image
+            <img
               src={Man}
               alt="man"
               className="object-contain max-w-[250px] sm:max-w-[350px] h-auto"
             />
-            <Image
+            <img
               src={Woman}
               alt="woman"
               className="pb-[10px] object-contain max-w-[250px] sm:max-w-[350px] h-auto absolute right-0 top-0"
@@ -106,12 +105,12 @@ export default function ConsultingPages() {
         </div>
         {/* RIGHT SIDE for large screens */}
         <div className="relative hidden lg:flex w-full max-w-[500px] lg:max-w-[559px] justify-center">
-          <Image
+          <img
             src={Man}
             alt="man"
             className="object-contain max-w-[250px] sm:max-w-[350px] lg:max-w-[494px] h-auto"
           />
-          <Image
+          <img
             src={Woman}
             alt="woman"
             className="pb-[10px] object-contain max-w-[250px] sm:max-w-[350px] lg:max-w-[494px] h-auto absolute right-0 lg:right-[-30px] lg:top-[28px]"

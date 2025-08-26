@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Partner } from "../../../../../../app.types";
 import { useEffect, useState } from "react";
@@ -58,7 +57,7 @@ export default function Partnyor({ partners }: { partners: Partner[] }) {
                 key={`right-${img.id}-${index}`}
                 className="mx-2 sm:mx-[18px] bg-white border-[#eaecef]/40 border-[3px] rounded-xl flex items-center justify-center h-[180px] sm:h-[110px] w-[160px] max-sm:h-[90px] sm:w-[220px] p-4"
               >
-                <Image
+                <img
                   src={img.image}
                   alt={img.title}
                   className="object-contain h-full w-full"
@@ -85,7 +84,7 @@ export default function Partnyor({ partners }: { partners: Partner[] }) {
                   key={`left-${img.id}-${index}`}
                   className="mx-2 sm:mx-[18px] bg-white border-[#eaecef]/40 border-[3px] rounded-xl flex items-center justify-center h-[180px] sm:h-[110px] w-[160px] max-sm:h-[90px] sm:w-[220px] p-4"
                 >
-                  <Image
+                  <img
                     src={img.image}
                     alt={img.title}
                     className="object-contain h-full w-full"

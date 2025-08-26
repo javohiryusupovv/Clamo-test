@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { NewsTypes } from "../../../../../../app.types";
@@ -80,7 +79,7 @@ export default function NewsGrid({ news }: { news: NewsTypes[] }) {
                   <Link key={item.id} href={`/${locale}/news/${item.slug}`}>
                     <div className="bg-white rounded-2xl border border-white hover:border-blue-400 hover:shadow-md transition duration-300 cursor-pointer h-[378px]">
                       <div className="m-3">
-                        <Image
+                        <img
                           src={item.image}
                           alt={localeTitle}
                           className="w-full h-40 object-cover rounded-2xl"

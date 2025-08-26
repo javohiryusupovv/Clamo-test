@@ -4,7 +4,6 @@ import { FaGooglePlay } from "react-icons/fa";
 import { SiApple } from "react-icons/si";
 import "../../../../styles/InstalPage.css";
 import { useEffect } from "react";
-import Image from "next/image";
 import QR from "@/assets/icons/QR.png";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -30,11 +29,11 @@ export default function InstallPage() {
     <section className="w-full px-4">
       <div className="container mx-auto relative top-0 left-0 bg-[#0653C9] flex flex-wrap lg:flex-nowrap justify-end items-center max-sm:items-start w-full min-h-[304px] rounded-[36px] max-sm:rounded-2xl p-4 lg:p-8">
         <div className="absolute -left-10 z-[2] opacity-[0.8] h-[320px] rounded-[36px] overflow-hidden">
-          <Image width={800} height={100} src={bgCircle} className="h-full" alt="Background circle" />
+          <img width={800} height={100} src={bgCircle} className="h-full" alt="Background circle" />
         </div>
-        {/* Phone Image */}
+        {/* Phone img */}
         <div className="absolute bottom-0 left-[-40px] lg:left-[-20px] z-10 max-w-full sm:max-w-[200px] lg:max-w-none overflow-visible">
-          <Image
+          <img
             src="/Imgs/iphone.svg"
             alt="Sharh Phone Share"
             className="object-contain lg:block hidden max-sm:object-cover"
@@ -87,7 +86,7 @@ export default function InstallPage() {
               target="_blank"
               className="flex hover:bg-white/30 transition-all duration-200 items-center px-4 py-2 bg-white/20 rounded-lg gap-2"
             >
-              <Image
+              <img
                 src="/logo/huawei-icon.svg"
                 alt="Huawei logo"
                 className="w-8 h-8 object-contain"
@@ -108,7 +107,7 @@ export default function InstallPage() {
 
         {/* QR Code */}
         <div className="w-full lg:w-auto mt-6 lg:mt-0 z-20 flex justify-center lg:justify-end">
-          <Image
+          <img
             src={QR}
             alt="QR code"
             width={180}
