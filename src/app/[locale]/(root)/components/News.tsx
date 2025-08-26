@@ -39,7 +39,7 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
             key={slicedNews[0].id}
           >
             <div className="relative group rounded-[16px] sm:rounded-[24px] overflow-hidden h-full sm:min-h-[480px] min-h-[300px]">
-              <Image
+              <img
                 src={slicedNews[0].image}
                 alt={getLocalizedValue(
                   pickStringProps(slicedNews[0]),
@@ -47,7 +47,6 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
                   locale
                 )}
                 className="w-full h-full object-cover"
-                fill
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#051425]/85 via-[#051425]/60 to-[#051425]/40"></div>
               <p className="absolute text-[#EDF0EF] top-4 left-4 font-vk text-[10px] sm:text-[16px] z-10">
