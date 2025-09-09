@@ -238,7 +238,7 @@ export default function Navbar() {
                     className="group flex items-center gap-3 cursor-pointer py-1 rounded"
                   >
                     <img
-                      src={selectedLang.flag as any}
+                      src={selectedLang.flag as string}
                       alt={`${selectedLang.label} flag`}
                       width={24}
                       height={24}
