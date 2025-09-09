@@ -104,12 +104,12 @@ export default function ConsultingPages() {
         {/* RIGHT SIDE for large screens */}
         <div className="relative hidden lg:flex w-full max-w-[500px] lg:max-w-[559px] justify-center">
           <img
-            src={Man}
+              src="/Images/man.png"
             alt="man"
             className="object-contain max-w-[250px] sm:max-w-[350px] lg:max-w-[494px] h-auto"
           />
           <img
-            src={Woman}
+              src="/Images/woman.png"
             alt="woman"
             className="pb-[10px] object-contain max-w-[250px] sm:max-w-[350px] lg:max-w-[494px] h-auto absolute right-0 lg:right-[-30px] lg:top-[28px]"
           />
