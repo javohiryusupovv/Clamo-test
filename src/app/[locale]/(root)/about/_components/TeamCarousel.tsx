@@ -6,7 +6,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import { TeamMembers } from "../../../../../../app.types";
 import { useLocale, useTranslations } from "next-intl";
 import { getLocalizedValue, pickStringProps } from "@/lib/getLocalization";
@@ -100,7 +99,7 @@ function TeamMemberCard({ member }: { member: TeamMembers }) {
   const localFullname = getLocalizedValue(stringLocale, "description", locale);
   return (
     <div className="relative rounded-2xl overflow-hidden w-64 h-96 shadow-md bg-black cursor-pointer teamcarousel group mx-auto">
-      <Image
+      <img
         src={member.image}
         alt={member.full_name}
         width={256}

@@ -1,6 +1,4 @@
 "use client";
-import ClamoLogo from "../../../../../public/logo/clamoLogo.png";
-import DisplayClamo from "../../../../../public/logo/LogoDisplay.png";
 import { useEffect } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import "aos/dist/aos.css";
@@ -87,14 +85,14 @@ export default function Hero() {
 
         <div className="flex flex-col justify-end items-center w-auto relative -bottom-28 max-ms:-bottom-20 max-lg:bottom-[20px] right-0 ms:translate-y-[80px]">
           <img
-            src={ClamoLogo}
+            src="/logo/clamoLogo.png"
             alt="LogoClamo"
             width={200}
             height={200}
             className=" max-lg:w-[180px] max-ms:w-[160px] max-ms:h-[160px] max-lg:h-[180px] absolute max-ms:-z-[1] md:left-[38%] z-[1] logoAnim md:bottom-[280px] max-sm:bottom-[260px] max-ms:bottom-[250px] max-ll:bottom-[230px] max-xxs:bottom-[190px] max-lg:bottom-[280px] lg:bottom-[230px] lg:left-[55%] xl:bottom-[280px]"
           />
           <img
-            src={DisplayClamo}
+            src="/logo/LogoDisplay.png"
             alt="Display Clamo"
             width={520}
             height={494}

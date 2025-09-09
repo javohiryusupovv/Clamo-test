@@ -3,7 +3,6 @@
 import { getMedical } from "../../../../../constants/page";
 import LearnMore from "./LearnMoreButton";
 import { useEffect } from "react";
-import ClamoFlag from "../../../../assets/images/clamoFlag.png";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -57,7 +56,7 @@ export default function MedicalLegal() {
           <div className="relative bottom-0 z-[60] lg:h-[500px] overflow-hidden">
             <div className="bg-[url('../assets/images/twoCircle.png')] bg-no-repeat bg-center bg-contain w-full h-[950px] absolute -top-[480px] hidden lg:block -z-[1]"></div>
             <img
-              src={ClamoFlag}
+              src="/assets/images/clamoFlag.png"
               alt="Clamo Flag"
               className="object-fill object-center overflow-hidden"
               data-aos="fade-up"

@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Down from "../../../../../assets/icons/down.png";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { Language } from "@/types/type";
@@ -239,7 +238,7 @@ export default function Navbar() {
                     className="group flex items-center gap-3 cursor-pointer py-1 rounded"
                   >
                     <img
-                      src={selectedLang.flag}
+                      src={selectedLang.flag as any}
                       alt={`${selectedLang.label} flag`}
                       width={24}
                       height={24}
@@ -251,7 +250,7 @@ export default function Navbar() {
                       </p>
                       <div className="w-5 h-5 flex items-center">
                         <img
-                          src={Down}
+                          src="/assets/icons/down.png"
                           alt="Down arrow"
                           width={11}
                           height={11}

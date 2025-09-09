@@ -1,7 +1,6 @@
 "use client";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { ServiceData } from "../../../../../../app.types";
 import { getLocalizedValue, pickStringProps } from "@/lib/getLocalization";
@@ -52,7 +51,7 @@ export default function ServicesSection({
                 data-aos="zoom-out"
               >
                 <>
-                  <Image
+                  <img
                     src={service.icon}
                     alt={service.title}
                     width={48}

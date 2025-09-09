@@ -1,6 +1,5 @@
 "use client";
 
-import cirlceBG from "../../../../../assets/images/twoCircle.png";
 import "./Footer.css";
 import Link from "next/link";
 import Contact from "../contact/Contact";
@@ -162,7 +161,7 @@ export default function FooterLayout() {
         <div className="footer-shadow hidden lg:block">
           <img
             className="absolute bottom-2 w-[700px] right-0"
-            src={cirlceBG}
+            src="/assets/images/twoCircle.png"
             alt="bg-Circle"
           />
           <div className="container relative">

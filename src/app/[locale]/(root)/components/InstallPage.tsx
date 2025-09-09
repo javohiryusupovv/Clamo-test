@@ -4,10 +4,8 @@ import { FaGooglePlay } from "react-icons/fa";
 import { SiApple } from "react-icons/si";
 import "../../../../styles/InstalPage.css";
 import { useEffect } from "react";
-import QR from "@/assets/icons/QR.png";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import bgCircle from "../../../../../public/herobg.png";
 import { usePathname } from "next/navigation";
 
 export default function InstallPage() {
@@ -29,7 +27,7 @@ export default function InstallPage() {
     <section className="w-full px-4">
       <div className="container mx-auto relative top-0 left-0 bg-[#0653C9] flex flex-wrap lg:flex-nowrap justify-end items-center max-sm:items-start w-full min-h-[304px] rounded-[36px] max-sm:rounded-2xl p-4 lg:p-8">
         <div className="absolute -left-10 z-[2] opacity-[0.8] h-[320px] rounded-[36px] overflow-hidden">
-          <img width={800} height={100} src={bgCircle} className="h-full" alt="Background circle" />
+          <img width={800} height={100} src="/herobg.png" className="h-full" alt="Background circle" />
         </div>
         {/* Phone img */}
         <div className="absolute bottom-0 left-[-40px] lg:left-[-20px] z-10 max-w-full sm:max-w-[200px] lg:max-w-none overflow-visible">
@@ -108,7 +106,7 @@ export default function InstallPage() {
         {/* QR Code */}
         <div className="w-full lg:w-auto mt-6 lg:mt-0 z-20 flex justify-center lg:justify-end">
           <img
-            src={QR}
+            src="/assets/icons/QR.png"
             alt="QR code"
             width={180}
             height={180}

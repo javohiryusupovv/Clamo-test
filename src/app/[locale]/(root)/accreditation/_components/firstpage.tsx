@@ -8,7 +8,6 @@ const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
 });
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 import { FaChevronRight } from "react-icons/fa";
@@ -109,7 +108,7 @@ export default function AccredationHead() {
 
         {/* Right Image — faqat lg (≥1024px) da ko‘rinadi */}
         <div className="hidden relative top-0 left-0 xl:flex w-full justify-end">
-          <Image
+          <img
             src="/Images/allflags.svg"
             alt="bayroq"
             width={980}
@@ -125,7 +124,7 @@ export default function AccredationHead() {
         </div>
 
         <div className="hidden lg:flex lg:pt-20 xl:hidden w-full justify-end">
-          <Image
+          <img
             src="/Images/Flag2.png"
             alt="bayroq"
             width={480}

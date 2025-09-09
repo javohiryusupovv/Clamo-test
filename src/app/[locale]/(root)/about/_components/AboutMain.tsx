@@ -1,6 +1,4 @@
 "use client";
-import Image from "next/image";
-import NavBuilding from "@/assets/NavBuilding.png";
 import { useTranslations } from "next-intl";
 import "aos/dist/aos.css";
 
@@ -48,12 +46,10 @@ export default function AboutMain() {
       >
         <div className="absolute top-0 left-0 w-full h-[120px] bg-gradient-to-b from-white to-transparent sm:hidden z-10" />
 
-        <Image
-          src={NavBuilding}
+        <img
+          src="/assets/NavBuilding.png"
           alt="Building"
-          fill
           className="object-cover"
-          priority
           data-aos="fade-left"
         />
         <div className="absolute bottom-0 left-0 w-full h-[250px] bg-gradient-to-t from-white to-transparent" />

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { getSteps } from "../../../../../../constants/page";
 import { useLocale, useTranslations } from "next-intl";
 import { StepType } from "../../../../../../app.types";
@@ -31,7 +30,7 @@ export default function AccredationMain() {
             className="bg-white rounded-[28px] md:p-6 p-4 lg:p-8 border border-gray-400/25 flex flex-col items-start sm:text-left"
           >
             <div className="flex items-center justify-center md:w-[70px] w-[50px] h-[50px] md:h-[70px] rounded-full mb-4 bg-[#049AE7]">
-              <Image
+              <img
                 src={step.icon}
                 alt={getLocalized(step, "title")}
                 width={30}
