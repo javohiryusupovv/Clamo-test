@@ -250,7 +250,7 @@ export default function Navbar() {
                       </p>
                       <div className="w-5 h-5 flex items-center">
                         <img
-                          src="/assets/icons/down.png"
+                          src="/src/assets/icons/down.png"
                           alt="Down arrow"
                           width={11}
                           height={11}

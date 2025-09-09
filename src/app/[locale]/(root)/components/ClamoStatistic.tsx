@@ -74,7 +74,7 @@ export default function ClamoStatistic({ numbers }: { numbers: NumbersType }) {
                             </Link>
                             <div className=" flex justify-center">
                                 <img
-                                    src="/assets/images/doctors.png"
+                                    src="/src/assets/Doctors.png"
                                     alt="Doctors"
                                     width={359}
                                     height={370}

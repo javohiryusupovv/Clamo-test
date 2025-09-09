@@ -9,7 +9,6 @@ import { useEffect, useState } from "react";
 import { CommentSharh } from "app.types";
 import dayjs from "../../../../lib/day-setup";
 import Link from "next/link";
-import Avatar from "../../.././../../public/icons/Avatar.svg"
 
 interface CommentProps {
   comments: CommentSharh[];
@@ -71,8 +70,8 @@ export default function Izohlar({ comments }: CommentProps) {
                     {/* Avatar */}
                     <div className="flex items-center w-[45px] h-[45px] max-sm:w-[35px] max-sm:h-[35px]">
                       <img
-                        src={Avatar} 
-                        alt={Avatar}
+                        src="/icons/Avatar.svg"
+                        alt="avatar"
                         width={44}
                         height={44}
                         className="rounded-full w-full h-full object-cover border border-[#C6CFD733]"
@@ -131,8 +130,8 @@ export default function Izohlar({ comments }: CommentProps) {
                       {/* Avatar */}
                       <div className="flex items-center w-[45px] h-[45px] max-sm:w-[35px] max-sm:h-[35px]">
                         <img
-                          src={Avatar}
-                          alt={Avatar}
+                          src="/icons/Avatar.svg"
+                          alt={"Avatar"}
                           width={44}
                           height={44}
                           className="rounded-full w-full h-full object-cover border border-[#C6CFD733]"

@@ -29,7 +29,7 @@ export default function Hero() {
             {/* Chap rasm */}
             <div className="relative md:w-[30%] w-full h-[310px] md:h-full">
               <img
-                  src="/assets/Doctors.png"
+                  src="/src/assets/Doctors.png"
                   alt="Doctors"
                   className="absolute bottom-0 left-10 w-[260px] md:w-[290px] z-[10] circleCover max-md:order-2 max-ll:right-1"
                   data-aos="fade-up"

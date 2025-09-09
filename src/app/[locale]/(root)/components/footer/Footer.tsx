@@ -161,7 +161,7 @@ export default function FooterLayout() {
         <div className="footer-shadow hidden lg:block">
           <img
             className="absolute bottom-2 w-[700px] right-0"
-            src="/assets/images/twoCircle.png"
+            src="/src/assets/images/twoCircle.png"
             alt="bg-Circle"
           />
           <div className="container relative">
