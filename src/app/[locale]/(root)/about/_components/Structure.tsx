@@ -1,5 +1,4 @@
 "use client";
-import College from "../../../../../public/Images/Screenpagee.png";
 import { useTranslations } from "next-intl";
 
 export default function Structure() {
@@ -14,7 +13,7 @@ export default function Structure() {
         {t("about_des2")}
       </p>
       <div className="flex justify-center">
-        <img src={College} alt="Strukture college" />
+        <img src="/Images/Screenpagee.png" alt="Strukture college" />
       </div>
     </div>
   );
