@@ -1,7 +1,7 @@
 "use client";
 
 import "../../../../styles/linerMainserver.css";
-#import Image from "next/image";
+//import Image from "next/image";
 import { useEffect } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { getPlatforms } from "../../../../../constants/page";
