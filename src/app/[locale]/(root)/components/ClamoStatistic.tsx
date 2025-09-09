@@ -1,7 +1,5 @@
 "use client"
 
-import Doctors from "@/assets/images/doctors.png";
-import bgCircle from "../../../../../public/herobg.png";
 import LearnMore from "./LearnMoreButton";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
@@ -76,7 +74,7 @@ export default function ClamoStatistic({ numbers }: { numbers: NumbersType }) {
                             </Link>
                             <div className=" flex justify-center">
                                 <img
-                                    src={Doctors}
+                                    src="/assets/images/doctors.png"
                                     alt="Doctors"
                                     width={359}
                                     height={370}
@@ -116,7 +114,7 @@ export default function ClamoStatistic({ numbers }: { numbers: NumbersType }) {
                                 <div className=" relative top-0 left-0 bg-gradient-to-br overflow-hidden from-blue-400 to-blue-600 p-6 rounded-2xl text-white flex flex-col md:col-span-2 shadow-lg hover:shadow-xl transition-shadow duration-300">
                                     <img src="/icons/statistic/document.svg" alt="HomeIcons" width={48} height={48} />
                                     <img
-                                        src={bgCircle}
+                                        src="/herobg.png"
                                         className=" absolute top-0 left-36 opacity-[0.7] max-ll:top-4"
                                         alt="BgCircle"
                                         data-aos="flip-left"
