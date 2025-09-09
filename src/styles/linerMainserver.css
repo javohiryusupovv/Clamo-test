@@ -8,7 +8,7 @@
 } */
 
 .backgroundLiner {
-    background-image: url("../assets/images/lianer.png");
+    background-image: url("../../public/assets/images/lianer.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

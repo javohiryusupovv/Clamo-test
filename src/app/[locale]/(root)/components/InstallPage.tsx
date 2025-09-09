@@ -106,7 +106,7 @@ export default function InstallPage() {
         {/* QR Code */}
         <div className="w-full lg:w-auto mt-6 lg:mt-0 z-20 flex justify-center lg:justify-end">
           <img
-            src="/src/assets/icons/QR.png"
+            src="/assets/icons/QR.png"
             alt="QR code"
             width={180}
             height={180}

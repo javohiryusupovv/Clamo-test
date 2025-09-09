@@ -47,7 +47,7 @@ export default function AboutMain() {
         <div className="absolute top-0 left-0 w-full h-[120px] bg-gradient-to-b from-white to-transparent sm:hidden z-10" />
 
         <img
-          src="/src/assets/NavBuilding.png"
+          src="/assets/NavBuilding.png"
           alt="Building"
           className="object-cover"
           data-aos="fade-left"

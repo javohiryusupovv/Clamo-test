@@ -76,7 +76,7 @@ export default function DocumentsHero() {
                     <div className="absolute right-0 xl:-top-24 -z-10">
                         <div className="relative">
                             <img
-                                src="/src/assets/images/Folder.png"
+                                src="/assets/images/Folder.png"
                                 alt="Normativ hujjatlar"
                                 width={2000}
                                 height={1381}

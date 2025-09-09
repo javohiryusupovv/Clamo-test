@@ -54,9 +54,9 @@ export default function MedicalLegal() {
           </div>
 
           <div className="relative bottom-0 z-[60] lg:h-[500px] overflow-hidden">
-            <div className="bg-[url('../assets/images/twoCircle.png')] bg-no-repeat bg-center bg-contain w-full h-[950px] absolute -top-[480px] hidden lg:block -z-[1]"></div>
+            <div className=" bg-no-repeat bg-center bg-contain w-full h-[950px] absolute -top-[480px] hidden lg:block -z-[1]"></div>
             <img
-              src="/src/assets/images/clamoFlag.png"
+              src="/assets/images/clamoFlag.png"
               alt="Clamo Flag"
               className="object-fill object-center overflow-hidden"
               data-aos="fade-up"
