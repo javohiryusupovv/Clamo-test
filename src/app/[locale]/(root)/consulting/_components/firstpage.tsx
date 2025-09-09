@@ -1,8 +1,6 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import Man from "../../../../../../public/Images/man.png";
-import Woman from "../../../../../../public/Images/woman.png";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
 import Link from "next/link";
@@ -27,12 +25,12 @@ export default function ConsultingPages() {
         <div className="max-lg:!mt-[200px] lg:mt-[0px] min-h-[50vh] flex flex-col justify-center items-center">
           <div className="absolute mt-[50px] top-20 left-1/2 -translate-x-1/2 lg:hidden w-full max-w-[500px] flex justify-center">
             <img
-              src={Man}
+              src="/Images/man.png"
               alt="man"
               className="object-contain max-w-[250px] sm:max-w-[350px] h-auto"
             />
             <img
-              src={Woman}
+              src="/Images/woman.png"
               alt="woman"
               className="pb-[10px] object-contain max-w-[250px] sm:max-w-[350px] h-auto absolute right-0 top-0"
             />
