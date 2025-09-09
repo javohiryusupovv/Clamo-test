@@ -3,7 +3,6 @@
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa6";
-import Folder from "@/assets/images/Folder.png";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
 
@@ -77,7 +76,7 @@ export default function DocumentsHero() {
                     <div className="absolute right-0 xl:-top-24 -z-10">
                         <div className="relative">
                             <img
-                                src={Folder}
+                                src="/assets/images/Folder.png"
                                 alt="Normativ hujjatlar"
                                 width={2000}
                                 height={1381}
