@@ -187,7 +187,7 @@ export default function FooterLayout() {
                 {t("developed")}
               </span>
               <Link
-                href={"https://iqtidoracademy.uz/"}
+                href={"https://iq-tech.uz/"}
                 target="_blank"
                 className="group flex items-center transition-all duration-300"
               >
@@ -199,7 +199,7 @@ export default function FooterLayout() {
                   height={35}
                 />
                 <span className="ms:translate-x-5 max-ms:text-[16px] ms:opacity-0 ms:group-hover:translate-x-0 ms:group-hover:opacity-[1] transition-all duration-300 text-[18px] font-bold">
-                  Iqtidor
+                  IQ Tech
                 </span>
               </Link>
             </div>
