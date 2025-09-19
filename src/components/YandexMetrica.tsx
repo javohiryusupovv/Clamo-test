@@ -9,7 +9,7 @@ interface YandexMetricaProps {
 
 declare global {
   interface Window {
-    ym: (id: number, action: string, params?: any) => void;
+    ym: (id: number, action: string, params?: Record<string, unknown>) => void;
   }
 }
 
