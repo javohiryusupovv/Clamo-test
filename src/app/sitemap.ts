@@ -41,33 +41,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   // Dynamic news pages
-  const newsEntries: MetadataRoute.Sitemap = []
-  try {
-    const newsData = await getNews(1, 100) // Get up to 100 news items
-    const news = newsData.results || []
-    
-    for (const article of news) {
-      if (article.slug) {
-        for (const locale of locales) {
-          newsEntries.push({
-            url: `${baseUrl}/${locale}/news/${article.slug}`,
-            lastModified: new Date(article.created_at || new Date()),
-            changeFrequency: 'monthly',
-            priority: 0.6,
-            alternates: {
-              languages: {
-                uz: `${baseUrl}/uz/news/${article.slug}`,
-                ru: `${baseUrl}/ru/news/${article.slug}`,
-                en: `${baseUrl}/en/news/${article.slug}`,
-              }
-            }
-          })
-        }
-      }
-    }
-  } catch (error) {
-    console.error('Error fetching news for sitemap:', error)
-  }
+    const newsEntries: MetadataRoute.Sitemap = []
+    try {
+        const newsData = await getNews(1, 100) // Get up to 100 news items
+        const news = Array.isArray(newsData?.results) ? newsData.results : []
 
-  return [...staticEntries, ...newsEntries]
-}
+        for (const article of news) {
+            if (article?.slug) {
+                for (const locale of locales) {
+                    newsEntries.push({
+                        url: `${baseUrl}/${locale}/news/${article.slug}`,
+                        lastModified: article.created_at ? new Date(article.created_at) : new Date(),
+                        changeFrequency: 'monthly',
+                        priority: 0.6,
+                        alternates: {
+                            languages: {
+                                uz: `${baseUrl}/uz/news/${article.slug}`,
+                                ru: `${baseUrl}/ru/news/${article.slug}`,
+                                en: `${baseUrl}/en/news/${article.slug}`,
+                            }
+                        }
+                    })
+                }
+            }
+        }
+    } catch (error) {
+        console.error('Error fetching news for sitemap:', error)
+    }
+
