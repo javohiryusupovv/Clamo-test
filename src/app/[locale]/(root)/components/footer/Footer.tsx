@@ -14,7 +14,7 @@ export default function FooterLayout() {
     { key: "about", href: `/${locale}/about` },
     { key: "regulatorydocuments", href: `/${locale}/regulatorydocuments` },
     { key: "center", href: `/${locale}/about` },
-    { key: "license", href: `/${locale}/license` },
+    { key: "license", href: `/${locale}/licensing` },
     { key: "accreditation", href: `/${locale}/accreditation` },
   ];
 

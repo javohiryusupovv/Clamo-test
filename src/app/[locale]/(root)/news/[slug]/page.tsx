@@ -1,6 +1,7 @@
 import { Clock3 } from "lucide-react";
 import { notFound } from "next/navigation";
 import Backbtn from "../_components/Backbtn";
+import StructuredData from "@/components/StructuredData";
 
 interface NewsDetail {
   id: number;
@@ -40,13 +41,40 @@ export async function generateMetadata({
   const description =
     data[`description_${locale}` as keyof NewsDetail] || data.description;
 
+  const baseUrl = "https://clamo.uz";
+  const currentUrl = `${baseUrl}/${locale}/news/${slug}`;
+
   return {
     title,
     description,
+    keywords: [
+      "CLAMO",
+      "yangiliklar",
+      "news",
+      "новости",
+      "litsenziya",
+      "akkreditatsiya",
+      "лицензия",
+      "аккредитация",
+      "licensing",
+      "accreditation"
+    ],
+    alternates: {
+      canonical: currentUrl,
+      languages: {
+        'uz': `${baseUrl}/uz/news/${slug}`,
+        'ru': `${baseUrl}/ru/news/${slug}`,
+        'en': `${baseUrl}/en/news/${slug}`,
+      },
+    },
     openGraph: {
       title,
       description,
+      url: currentUrl,
+      type: "article",
+      publishedTime: data.created_at,
       images: [data.image],
+      siteName: "CLAMO",
     },
     twitter: {
       card: "summary_large_image",
@@ -91,8 +119,29 @@ export default async function NewsDetailPage({
     minute: "2-digit",
   });
 
+  const breadcrumbItems = [
+    { name: "Bosh sahifa", url: `https://clamo.uz/${locale}` },
+    { name: "Yangiliklar", url: `https://clamo.uz/${locale}/news` },
+    { name: title, url: `https://clamo.uz/${locale}/news/${slug}` }
+  ];
+
   return (
     <div className="container lg:mt-12">
+      <StructuredData 
+        type="BreadcrumbList" 
+        data={{ items: breadcrumbItems }} 
+      />
+      <StructuredData 
+        type="Article" 
+        data={{
+          title: title,
+          description: description,
+          image: data.image,
+          publishedAt: data.created_at,
+          modifiedAt: data.created_at
+        }} 
+      />
+      
       <Backbtn />
       <h1 className="lg:text-3xl md:text-2xl text-base text-[#3D445E] leading-[120%] font-black mb-4">
         {title}

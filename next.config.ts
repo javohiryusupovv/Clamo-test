@@ -17,6 +17,11 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ['@radix-ui/react-icons'],
   },
+  // SEO and Performance optimizations
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
+  trailingSlash: false,
   async headers() {
     return [
       {
@@ -24,7 +29,27 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://mc.yandex.ru https://www.google.com https://www.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:; frame-src 'self' https://www.google.com;",
+            value: "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://mc.yandex.ru https://www.google.com https://www.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:; frame-src 'self' https://www.google.com https://mc.yandex.ru;",
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
           },
         ],
       },

@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://clamo.uz/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /cabinet-clamo/
+
+# Allow important pages
+Allow: /uz/
+Allow: /ru/
+Allow: /en/
+Allow: /uz/about
+Allow: /uz/licensing
+Allow: /uz/accreditation
+Allow: /uz/consulting
+Allow: /uz/contacts
+Allow: /uz/news
+Allow: /uz/regulatorydocuments
+Allow: /uz/international
+Allow: /uz/allquestion
+
+# Crawl delay
+Crawl-delay: 1

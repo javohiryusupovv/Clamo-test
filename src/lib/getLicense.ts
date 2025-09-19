@@ -21,7 +21,6 @@ export async function getReyestersFromAPI(page = 1): Promise<PaginatedReyesterRe
   const data = await res.json();
 
   if (typeof window !== "undefined") {
-    console.log(`API /reyester/?page=${page} response:`, data);
   }
 
   return {

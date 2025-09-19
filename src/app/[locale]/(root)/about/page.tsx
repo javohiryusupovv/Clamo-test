@@ -16,7 +16,6 @@ import { getLocalizedValue } from "@/lib/getLocalization";
   export async function generateMetadata({ params }: { params: Promise<{locale: string }>}) {
     const {locale} = await params
     const sectionData = await getServicec();
-  console.log(sectionData[0]);
   const content = sectionData[0];
 
   return {
