@@ -1,29 +1,34 @@
-# 1) Install dependencies
+# Dockerfile для Next.js (Node 20, yarn, prod-сборка)
+
+# 1) Установка зависимостей
 FROM node:20-alpine AS deps
 WORKDIR /app
+ENV NEXT_TELEMETRY_DISABLED=1
 RUN corepack enable
 COPY package.json yarn.lock ./
-RUN yarn install --immutable   # modern Yarn flag
+RUN yarn install --frozen-lockfile
 
-# 2) Build app
+# 2) Билд
 FROM node:20-alpine AS builder
 WORKDIR /app
+ENV NEXT_TELEMETRY_DISABLED=1
 RUN corepack enable
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 RUN yarn build
 
-# 3) Run app
+# 3) Прод-рантайм
 FROM node:20-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production \
     NEXT_TELEMETRY_DISABLED=1 \
     PORT=3000
 RUN corepack enable
-# Copy only what’s needed to run
+# Копируем только то, что нужно для запуска
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/package.json ./package.json
+COPY --from=deps    /app/node_modules ./node_modules
 
 EXPOSE 3000
 CMD ["yarn", "start"]
