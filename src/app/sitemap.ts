@@ -40,7 +40,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     const newsEntries: MetadataRoute.Sitemap = []
     try {
-        const newsData = await getNews(1, 100)
+        const newsData = await getNews()
         const news = Array.isArray(newsData?.results) ? newsData.results : []
 
         for (const article of news) {
