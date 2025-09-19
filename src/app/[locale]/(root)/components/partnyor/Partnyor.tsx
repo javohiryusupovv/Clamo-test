@@ -27,6 +27,7 @@ export default function Partnyor({ partners }: { partners: Partner[] }) {
   const repeatCount = Math.ceil(minCount / partners.length);
   const extendedPartners = Array(repeatCount).fill(partners).flat();
 
+  console.log(extendedPartners);
   
 
   return (

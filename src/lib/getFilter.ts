@@ -13,6 +13,7 @@ export async function getFilterFromAPI(): Promise<FilterItem[]> {
 
   const data = await res.json();
   if (typeof window !== "undefined") {
+    console.log("API /api/reyester/types/ response:", data);
   }
   return data.results;
 }
