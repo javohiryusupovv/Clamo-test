@@ -55,12 +55,12 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
         return {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
-          "itemListElement": data.items?.map((item: Record<string, unknown>, index: number) => ({
+          "itemListElement": Array.isArray(data.items) ? data.items.map((item: Record<string, unknown>, index: number) => ({
             "@type": "ListItem",
             "position": index + 1,
             "name": item.name,
             "item": item.url
-          })) || []
+          })) : []
         }
 
       case 'Article':
