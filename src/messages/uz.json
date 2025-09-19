@@ -24,10 +24,11 @@
     "not_available": "Mavjud emas"
   },
   "ZodForm": {
-    "name_subtitle": "Ism kamida 3 ta belgidan iborat bo‘lishi kerak",
+    "name_subtitle": "Ism kamida 3 ta belgidan iborat bo'lishi kerak",
     "name_invalid": "Ism-familiya faqat harflar va ba'zi belgilar (' - ) bilan yozilishi mumkin",
-    "organization_min": "Tashkilot nomi kamida 2 ta belgidan iborat bo‘lishi kerak",
-    "phone_invalid": "Telefon raqami aniq 9 ta raqamdan iborat bo‘lishi kerak",
+    "organization_min": "Tashkilot nomi kamida 2 ta belgidan iborat bo'lishi kerak",
+    "phone_invalid": "Telefon raqami aniq 9 ta raqamdan iborat bo'lishi kerak",
+    "recaptcha_required": "reCAPTCHA tekshiruvini bajaring",
     "notifsending": "Jo'natilmoqda",
     "succesNotif": "Ma'lumotlar muvaffaqiyatli jo'natildi",
     "errorNotif": "Xatolik yuz berdi, iltimos qayta urinib ko'ring"

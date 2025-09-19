@@ -9,19 +9,19 @@ export function getFormSchema(zod: ReturnType<typeof useTranslations>) {
       .string()
       .min(
         3,
-        zod("name_subtitle") || "Ism kamida 3 ta belgidan iborat bo‘lishi kerak"
+        zod("name_subtitle") || "Ism kamida 3 ta belgidan iborat bo'lishi kerak"
       )
-      .refine((val) => /^[a-zA-Z\s'"`’‘-]+$/.test(val), {
+      .refine((val) => /^[a-zA-Z\s'"`''-]+$/.test(val), {
         message: zod("name_invalid"),
       })
-      .transform((val) => val.replace(/['"`’‘]/g, "")),
+      .transform((val) => val.replace(/['"`'']/g, "")),
 
     tashkilot: z
       .string()
       .min(
         2,
         zod("organization_min") ||
-          "Tashkilot nomi kamida 2 ta belgidan iborat bo‘lishi kerak"
+          "Tashkilot nomi kamida 2 ta belgidan iborat bo'lishi kerak"
       ),
 
     phoneNumber: z
@@ -30,7 +30,11 @@ export function getFormSchema(zod: ReturnType<typeof useTranslations>) {
       .refine((val) => /^\d{9}$/.test(val), {
         message:
           zod("phone_invalid") ||
-          "Telefon raqami aniq 9 ta raqamdan iborat bo‘lishi kerak",
+          "Telefon raqami aniq 9 ta raqamdan iborat bo'lishi kerak",
       }),
+
+    recaptcha: z
+      .string()
+      .min(1, zod("recaptcha_required") || "reCAPTCHA tekshiruvini bajaring"),
   });
 }
