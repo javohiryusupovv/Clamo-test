@@ -20,7 +20,7 @@ export default function NotFound() {
             Sahifa topilmadi
           </h2>
           <p className="text-gray-600 mb-8">
-            Kechirasiz, siz qidirgan sahifa mavjud emas yoki o'chirilgan bo'lishi mumkin.
+            Kechirasiz, siz qidirgan sahifa mavjud emas yoki o&apos;chirilgan bo&apos;lishi mumkin.
           </p>
         </div>
         

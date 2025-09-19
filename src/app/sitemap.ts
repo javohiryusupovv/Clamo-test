@@ -41,7 +41,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   // Dynamic news pages
-  let newsEntries: MetadataRoute.Sitemap = []
+  const newsEntries: MetadataRoute.Sitemap = []
   try {
     const newsData = await getNews(1, 100) // Get up to 100 news items
     const news = newsData.results || []
