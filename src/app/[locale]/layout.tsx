@@ -4,6 +4,7 @@ import { ToastContainer } from "react-toastify";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { metadataContent } from "constants/page";
+import YandexMetrica from "@/components/YandexMetrica";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -77,6 +78,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
+          <YandexMetrica ymId={process.env.NEXT_PUBLIC_YANDEX_METRICA_ID || "104200055"} />
           <NextIntlClientProvider locale={locale} messages={messages}>
             <ToastContainer />
             {children}

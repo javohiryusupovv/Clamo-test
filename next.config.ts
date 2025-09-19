@@ -13,6 +13,23 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Allow Yandex Metrica scripts
+  experimental: {
+    optimizePackageImports: ['@radix-ui/react-icons'],
+  },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://mc.yandex.ru; img-src 'self' data: https:; connect-src 'self' https:;",
+          },
+        ],
+      },
+    ];
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
