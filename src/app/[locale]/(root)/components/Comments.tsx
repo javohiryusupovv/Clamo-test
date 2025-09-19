@@ -15,8 +15,6 @@ interface CommentProps {
 }
 
 export default function Izohlar({ comments }: CommentProps) {
-  console.log("All comments:", comments);
-
   const t = useTranslations("HomePage");
   const opinion = getOpinion(t);
   const [isGradient, setIsGradient] = useState(true);

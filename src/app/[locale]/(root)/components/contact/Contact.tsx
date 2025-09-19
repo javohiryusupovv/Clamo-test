@@ -11,6 +11,7 @@ import { getFormSchema } from '@/schemas/formSchema';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import emailjs from '@emailjs/browser';
+import ReCaptchaComponent from '@/components/ReCaptcha';
 
 export default function Contact() {
   const t = useTranslations('ContactPage');
@@ -25,6 +26,7 @@ export default function Contact() {
     handleSubmit,
     reset,
     clearErrors,
+    setValue,
     formState: { errors },
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -33,14 +35,41 @@ export default function Contact() {
   const handleSubmitted = async (data: FormData) => {
     setIsLoading(true);
 
-    const templateParams = {
-      full_name: data.names,
-      industry: data.tashkilot,
-      phone_number: `+998${data.phoneNumber.replace(/\s/g, '')}`,
-      to_email: 'yusupovjavoxir11@gmail.com',
-    };
+    try {
+      // Skip reCAPTCHA verification in development for localhost
+      const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      
+      if (!isLocalhost) {
+        // First verify reCAPTCHA
+        const recaptchaResponse = await fetch('/api/verify-recaptcha', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            recaptchaToken: data.recaptcha,
+          }),
+        });
 
-    const telegramMessage = `
+        const recaptchaResult = await recaptchaResponse.json();
+
+        if (!recaptchaResult.success) {
+          toast.error(recaptchaResult.error || 'reCAPTCHA verification failed');
+          setIsLoading(false);
+          return;
+        }
+      } else {
+        // Skipping reCAPTCHA verification for localhost development
+      }
+
+      const templateParams = {
+        full_name: data.names,
+        industry: data.tashkilot,
+        phone_number: `+998${data.phoneNumber.replace(/\s/g, '')}`,
+        to_email: 'yusupovjavoxir11@gmail.com',
+      };
+
+      const telegramMessage = `
 📩 Yangi xabar
 
 👤 Full Name: ${data.names}
@@ -48,40 +77,45 @@ export default function Contact() {
 📞 Phone: +998${data.phoneNumber.replace(/\s/g, '')}
 `;
 
-    const submitPromise = Promise.all([
-      emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-      ),
-      fetch(`https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN}/sendMessage`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          chat_id: process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID,
-          text: telegramMessage,
-          parse_mode: 'HTML',
+      const submitPromise = Promise.all([
+        emailjs.send(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+          templateParams,
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+        ),
+        fetch(`https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN}/sendMessage`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            chat_id: process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID,
+            text: telegramMessage,
+            parse_mode: 'HTML',
+          }),
         }),
-      }),
-    ]);
+      ]);
 
-    toast
-      .promise(submitPromise, {
-        pending: zod('notifsending') || "Jo'natilmoqda...",
-        success: zod('succesNotif') || "Muvaffaqiyatli jo'natildi!",
-        error:
-          zod('errorNotif') ||
-          "Xatolik yuz berdi, iltimos qayta urinib ko'ring",
-      })
-      .then(() => {
-        reset();
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        console.error('Submission error:', error);
-        setIsLoading(false);
-      });
+      toast
+        .promise(submitPromise, {
+          pending: zod('notifsending') || "Jo'natilmoqda...",
+          success: zod('succesNotif') || "Muvaffaqiyatli jo'natildi!",
+          error:
+            zod('errorNotif') ||
+            "Xatolik yuz berdi, iltimos qayta urinib ko'ring",
+        })
+        .then(() => {
+          reset();
+          setIsLoading(false);
+        })
+        .catch((error) => {
+          console.error('Submission error:', error);
+          setIsLoading(false);
+        });
+    } catch (error) {
+      console.error('reCAPTCHA verification error:', error);
+      toast.error(zod('errorNotif') || "Xatolik yuz berdi, iltimos qayta urinib ko'ring");
+      setIsLoading(false);
+    }
   };
 
   useEffect(() => {
@@ -283,6 +317,14 @@ export default function Contact() {
               {errors.phoneNumber && (
                 <p className="text-red-500 text-sm">{errors.phoneNumber.message}</p>
               )}
+            </article>
+
+            {/* reCAPTCHA */}
+            <article className="w-full mb-6">
+              <ReCaptchaComponent
+                onChange={(token) => setValue('recaptcha', token || '')}
+                error={errors.recaptcha?.message}
+              />
             </article>
 
             {/* Submit */}
