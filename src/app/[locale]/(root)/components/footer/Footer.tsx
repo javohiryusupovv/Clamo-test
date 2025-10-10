@@ -16,6 +16,7 @@ export default function FooterLayout() {
     { key: "center", href: `/${locale}/about` },
     { key: "license", href: `/${locale}/licensing` },
     { key: "accreditation", href: `/${locale}/accreditation` },
+    { key: "fight_against_corruption", href: `/${locale}/fight-against-corruption` },
   ];
 
   useEffect(() => {

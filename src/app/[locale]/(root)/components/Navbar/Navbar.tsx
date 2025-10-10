@@ -140,15 +140,6 @@ export default function Navbar() {
                     {t("accredation")}
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    href={`/${locale}/contacts`}
-                    aria-label="Contacts"
-                    className="text-sm font-medium text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200"
-                  >
-                    {t("contacts")}
-                  </Link>
-                </li>
                   <li>
                       <Link
                           href={`/${locale}/fight-against-corruption`}
@@ -158,6 +149,16 @@ export default function Navbar() {
                           {t("fight_against_corruption")}
                       </Link>
                   </li>
+                <li>
+                  <Link
+                    href={`/${locale}/contacts`}
+                    aria-label="Contacts"
+                    className="text-sm font-medium text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200"
+                  >
+                    {t("contacts")}
+                  </Link>
+                </li>
+
               </ul>
               <ul className="hidden items-center lg:gap-10 gap-5 lg:mr-0 mr-10 sm:flex">
                 <div className="relative top-0 left-0">
@@ -230,16 +231,17 @@ export default function Navbar() {
                   {t("accredation")}
                 </Link>
               </li>
-              <li>
-                <Link href={`/${locale}/contacts`} aria-label="Contacts Page" onClick={() => setIsMobileMenuOpen(false)} className="text-[15px] font-medium sm:text-[17px] sm:font-semibold text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200">
-                  {t("contacts")}
-                </Link>
-              </li>
                 <li>
                     <Link href={`/${locale}/fight-against-corruption`} aria-label="Fight Against Corruption Page" onClick={() => setIsMobileMenuOpen(false)} className="text-[15px] font-medium sm:text-[17px] sm:font-semibold text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200">
                         {t("fight_against_corruption")}
                     </Link>
                 </li>
+              <li>
+                <Link href={`/${locale}/contacts`} aria-label="Contacts Page" onClick={() => setIsMobileMenuOpen(false)} className="text-[15px] font-medium sm:text-[17px] sm:font-semibold text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200">
+                  {t("contacts")}
+                </Link>
+              </li>
+
             </ul>
           </div>
           <div className="absolute bottom-6 left-0 w-full px-10 sm:hidden flex">
