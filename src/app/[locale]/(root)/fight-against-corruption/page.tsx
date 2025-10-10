@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import Backbtn from "../news/_components/Backbtn";
 import StructuredData from "@/components/StructuredData";
-import { StaticPageData } from "@/types/type";
 
 export async function generateMetadata({
   params,
@@ -12,12 +11,17 @@ export async function generateMetadata({
 
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/home/static-pages/1/`,
-    { cache: "no-store" }
+    { 
+      cache: "no-store",
+      headers: {
+        'Accept-Language': locale
+      }
+    }
   );
 
   if (!res.ok) return { title: "CLAMO - Fight Against Corruption", description: "Fight Against Corruption page not found." };
 
-  const data: StaticPageData = await res.json();
+  const data = await res.json();
 
   const baseUrl = "https://clamo.uz";
   const currentUrl = `${baseUrl}/${locale}/fight-against-corruption`;
@@ -71,12 +75,17 @@ export default async function FightAgainstCorruptionPage({
 
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/home/static-pages/1/`,
-    { cache: "no-store" }
+    { 
+      cache: "no-store",
+      headers: {
+        'Accept-Language': locale
+      }
+    }
   );
 
   if (!res.ok) return notFound();
 
-  const data: StaticPageData = await res.json();
+  const data = await res.json();
 
   const breadcrumbItems = [
     { name: "Bosh sahifa", url: `https://clamo.uz/${locale}` },
