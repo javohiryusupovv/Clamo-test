@@ -66,7 +66,7 @@ export default function ReyesterCard({
                 return (
                   <button
                     key={idx}
-                    className="bg-[#E3E8ED] text-[14px] max-sm:text-[12px] leading-[130%] font-inter py-1 px-3 rounded-lg"
+                    className="bg-[#E3E8ED] text-[14px] max-sm:text-[12px] leading-[130%] font-inter py-1 px-3 rounded-lg cursor-auto"
                   >
                     {localizedName}
                   </button>
