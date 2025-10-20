@@ -69,7 +69,7 @@ export default function Izohlar({ comments }: CommentProps) {
                     {/* Avatar */}
                     <div className="flex items-center w-[45px] h-[45px] max-sm:w-[35px] max-sm:h-[35px]">
                       <img
-                        src="/icons/Avatar.svg"
+                          src={item?.company?.brand_logo?.original ?? '/icons/Avatar.svg'}
                         alt="avatar"
                         width={44}
                         height={44}
@@ -128,13 +128,14 @@ export default function Izohlar({ comments }: CommentProps) {
                     <div className="flex items-center gap-2">
                       {/* Avatar */}
                       <div className="flex items-center w-[45px] h-[45px] max-sm:w-[35px] max-sm:h-[35px]">
-                        <img
-                          src="/icons/Avatar.svg"
-                          alt={"Avatar"}
-                          width={44}
-                          height={44}
-                          className="rounded-full w-full h-full object-cover border border-[#C6CFD733]"
-                        />
+                          <img
+                              src={item?.company?.brand_logo?.original ?? '/icons/Avatar.svg'}
+                              alt="Avatar"
+                              width={44}
+                              height={44}
+                              className="rounded-full w-full h-full object-cover border border-[#C6CFD733]"
+                          />
+
                       </div>
                       <div>
                         <h2 className="font-semibold font-roboto text-[#022F5E] leading-[130%] sm:text-[16px] text-[12px] pb-[3px]">

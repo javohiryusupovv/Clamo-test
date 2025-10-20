@@ -169,6 +169,7 @@ export interface CardComment {
 }
 
 export interface CommentSharh{
+    company: any;
     author_name: string;
     comment: string;
     created_at: string;
