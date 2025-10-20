@@ -19,6 +19,7 @@ export default function Contact() {
   const formSchema = getFormSchema(zod);
   const [isLoading, setIsLoading] = useState(false);
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const [recaptchaKey, setRecaptchaKey] = useState(0);
 
   type FormData = z.infer<typeof formSchema>;
 
@@ -90,6 +91,8 @@ export default function Contact() {
       .then(() => {
         reset();
         setRecaptchaToken(null);
+        setValue('recaptcha', '');
+        setRecaptchaKey((k) => k + 1); // force re-mount to visually reset widget
         setIsLoading(false);
       })
       .catch((error) => {
@@ -302,6 +305,7 @@ export default function Contact() {
             {/* reCAPTCHA */}
             <article className="w-full mb-6">
               <ReCaptchaComponent
+                key={recaptchaKey}
                 onChange={handleRecaptchaChange}
                 error={errors.recaptcha?.message}
               />

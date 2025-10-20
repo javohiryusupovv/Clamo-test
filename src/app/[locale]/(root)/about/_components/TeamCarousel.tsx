@@ -98,7 +98,7 @@ function TeamMemberCard({ member }: { member: TeamMembers }) {
   );
   const localFullname = getLocalizedValue(stringLocale, "description", locale);
   return (
-    <div className="relative rounded-2xl overflow-hidden w-64 h-96 shadow-md bg-black cursor-pointer teamcarousel group mx-auto">
+    <div className="relative rounded-2xl overflow-hidden w-64 h-96 shadow-md bg-black teamcarousel group mx-auto">
       <img
         src={member.image}
         alt={member.full_name}
@@ -108,7 +108,7 @@ function TeamMemberCard({ member }: { member: TeamMembers }) {
       />
       <div className="absolute bottom-0 left-0 right-0 top-[220px] bg-gradient-to-t from-[#051425]/65 via-[#051425]/60 to-[#051425]/0"></div>
 
-      <div className="absolute bottom-0 left-0 right-0 p-4 z-10 text-white transform transition-transform duration-700 group-hover:-translate-y-[92px]">
+      <div className="absolute bottom-0 left-0 right-0 p-4 z-10 text-white transform transition-transform duration-700 group-hover:-translate-y-[120px]">
         <p className="font-bold text-[17px] font-vk text-[#FFFFFFF] leading-[140%] ">{descriptionLocale}</p>
       </div>
       <div className="absolute bottom-0 left-0 right-0 h-[250px] bg-gradient-to-t from-[#002b66] to-transparent px-4 text-white flex items-end opacity-0 transition-opacity duration-300 group-hover:opacity-100">

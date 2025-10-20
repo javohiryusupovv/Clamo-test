@@ -130,7 +130,7 @@ export default function LicenseHero() {
               </p>
 
               <Link
-                href={"https://license.gov.uz/"}
+                href={"https://office.clamo.uz/"}
                 aria-label="Litsenziya"
                 target="_blank"
               >
