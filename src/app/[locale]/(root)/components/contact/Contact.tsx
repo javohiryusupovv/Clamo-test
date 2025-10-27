@@ -182,7 +182,7 @@ export default function Contact() {
             </a>
               {/* Phone */}
               <div
-                  className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-start py-3 px-4 rounded-2xl"
+                  className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] items-center border-white gap-2 inline-flex items-start py-3 px-4 rounded-2xl"
               >
                   <article className="bg-white p-3 inline-flex items-center justify-center rounded-lg">
                       <img
@@ -207,11 +207,6 @@ export default function Contact() {
                          aria-label="Phone number"
                          className="text-[14px] sm:text-[16px] font-medium font-vk text-white line-clamp-1 cursor-pointer hover:text-white/80 transition-colors">
                           +998 (55) 516 30 03
-                      </a>
-                      <a href="tel:1369"
-                         aria-label="Phone number"
-                         className="text-[14px] sm:text-[16px] font-medium font-vk text-white line-clamp-1 cursor-pointer hover:text-white/80 transition-colors">
-                          1369
                       </a>
 
 
