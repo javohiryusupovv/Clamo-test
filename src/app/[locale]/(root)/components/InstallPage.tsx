@@ -110,7 +110,7 @@ export default function InstallPage() {
             alt="QR code"
             width={180}
             height={180}
-            className="object-contain hidden md:block"
+            className="object-contain hidden md:block p-[25px]"
           />
         </div>
       </div>
