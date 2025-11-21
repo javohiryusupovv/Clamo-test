@@ -276,7 +276,7 @@ export default function Navbar() {
                   </article>
 
                   {dropdownOpen && (
-                    <div className="absolute top-10 bg-[#E8F4FC] w-[100px] border rounded-md shadow">
+                    <div className="absolute bottom-10 bg-[#E8F4FC] w-[100px] border rounded-md shadow">
                       <ul className="py-1 flex flex-col gap-2">
                         <li
                           onClick={() =>
