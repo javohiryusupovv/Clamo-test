@@ -195,7 +195,7 @@ export default function Navbar() {
         )}
         <div
           onClick={(e) => e.stopPropagation()}
-          className={`absolute w-full h-[440px] transition-all duration-300 z-[3] ease-in-out bg-white shadow-md ${isMobileMenuOpen ? "top-0 opacity-[1]" : "-top-[380px] opacity-0"
+          className={`absolute w-full h-screen transition-all duration-300 z-[3] ease-in-out bg-white shadow-md ${isMobileMenuOpen ? "top-0 opacity-[1]" : "-top-full opacity-0"
             }`}
         >
           <div className="container grid px-10 pt-[100px]">
