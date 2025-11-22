@@ -108,8 +108,8 @@ export default function Navbar() {
     <div className="m-auto">
       <div
         className={`fixed top-0 z-[600] w-full backdrop-blur-3xl ${isScrolled ? "bg-white shadow-lg shadow-[#f6f9fc]" : ""}`}>
-        <nav className="flex items-center justify-between py-4 container">
-          <div className={`container relative z-20 transition-transform duration-500 ease-in-out ${isScrolled ? "translate-y-0" : " translate-y-3"}`}>
+        <nav className={`flex items-center justify-between py-4 container relative ${isMobileMenuOpen ? "z-[602]" : "z-auto"}`}>
+          <div className={`container relative ${isMobileMenuOpen ? "z-[603]" : "z-20"} transition-transform duration-500 ease-in-out ${isScrolled ? "translate-y-0" : " translate-y-3"}`}>
             {/* Desktop Menu */}
             <div className="flex items-center justify-between w-full gap-10">
               <ul>
@@ -173,7 +173,7 @@ export default function Navbar() {
           </div>
           {/* Burger Button */}
           <button
-            className={`lg:hidden flex flex-col gap-[6px] z-20 transition-transform duration-500 ease-in-out ${isScrolled ? "translate-y-0" : " translate-y-3"}`}
+            className={`lg:hidden flex flex-col gap-[6px] ${isMobileMenuOpen ? "z-[603]" : "z-20"} transition-transform duration-500 ease-in-out ${isScrolled ? "translate-y-0" : " translate-y-3"}`}
             onClick={toggleMobileMenu}
           >
             <span
@@ -191,11 +191,11 @@ export default function Navbar() {
           </button>
         </nav>
         {isMobileMenuOpen && (
-          <div onClick={() => setIsMobileMenuOpen(false)} className="fixed inset-0 z-[2] bg-white/50 backdrop-blur-md h-screen w-full"></div>
+          <div onClick={() => setIsMobileMenuOpen(false)} className="fixed inset-0 z-[599] bg-white/50 backdrop-blur-md h-screen w-full"></div>
         )}
         <div
           onClick={(e) => e.stopPropagation()}
-          className={`absolute w-full h-screen transition-all duration-300 z-[3] ease-in-out bg-white shadow-md ${isMobileMenuOpen ? "top-0 opacity-[1]" : "-top-full opacity-0"
+          className={`fixed w-full h-screen transition-all duration-300 z-[601] ease-in-out bg-white shadow-md ${isMobileMenuOpen ? "top-0 opacity-[1]" : "-top-full opacity-0 pointer-events-none"
             }`}
         >
           <div className="container grid px-10 pt-[100px]">
