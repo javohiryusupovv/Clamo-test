@@ -16,7 +16,7 @@ export default function ContactPage() {
   const locale = useLocale();
   const lang = locale.split("-")[0];
 
-  const mapUrl = `https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d529.9422833379709!2d69.31472228591157!3d41.31801344575129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1s${lang}!2s${lang}!4v1766414103070&hl=${lang}`;
+  const mapUrl = `https://www.google.com/maps?q=41.31801344575129,69.31472228591157&z=18&hl=${lang}&output=embed`;
 
 
   return (
