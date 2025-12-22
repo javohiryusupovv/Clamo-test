@@ -404,7 +404,7 @@ export const getContactInfo: ContactData[] = [
     phone: "+998 (55) 514 30 03",
     email: "clamosocial@gmail.com",
     website: "Clamo.uz",
-    address: "2-й Паркентский проезд, Мирзо-Улугбекский район, Ташкент",
+    address: "г. Ташкент, ул. Паркент, дом 51",
   },
 ];
 
