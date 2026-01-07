@@ -106,7 +106,7 @@ export default async function NewsDetailPage({
   const title = data[`title_${locale}` as keyof NewsDetail] || data.title;
   const description =
     data[`description_${locale}` as keyof NewsDetail] || data.description;
-  const content = data[`content_${locale}` as keyof NewsDetail] || data.content;
+  const content = String(data[`content_${locale}` as keyof NewsDetail] || data.content);
 
   const createdAt = new Date(data.created_at);
   const day = String(createdAt.getDate()).padStart(2, "0");
