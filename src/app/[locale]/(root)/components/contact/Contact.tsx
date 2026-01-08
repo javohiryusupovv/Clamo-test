@@ -128,7 +128,7 @@ export default function Contact() {
           <div className="flex flex-col gap-3">
             {/* Location */}
             <Link
-              href="https://yandex.uz/maps/10335/tashkent/?ll=69.303946%2C41.318330&mode=whatshere&whatshere%5Bpoint%5D=69.303883%2C41.318303&whatshere%5Bzoom%5D=17&z=16"
+              href="https://yandex.uz/maps/10335/tashkent/?ll=69.315847%2C41.318031&mode=whatshere&whatshere%5Bpoint%5D=69.314934%2C41.318061&whatshere%5Bzoom%5D=17&z=18"
               aria-label="Location"
               target="_blank"
               className="group hover:bg-[white]/[8%] transition-all duration-200 border border-opacity-[16%] border-white gap-2 inline-flex items-center py-3 px-4 rounded-2xl cursor-pointer"
