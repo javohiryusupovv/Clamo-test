@@ -302,7 +302,7 @@ export default function Contact() {
                     if (value.length > 7) formatted += ' ' + value.slice(7, 9);
                     e.currentTarget.value = formatted;
                   }}
-                  className="w-full outline-none bg-[#F7F7F8] text-[16px]"
+                  className="w-full outline-none bg-[#F7F7F8] text-[16px] max-sm:ml-[12px]"
                   placeholder="99 123 45 67"
                 />
               </div>
