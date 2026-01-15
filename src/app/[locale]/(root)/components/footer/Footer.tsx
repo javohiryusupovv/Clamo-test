@@ -178,7 +178,7 @@ export default function FooterLayout() {
         </div>
 
         {/* Footer bottom */}
-        <div className="absolute z-[12] bottom-0 w-full py-5">
+        <div className="absolute z-[12] bottom-0 w-full pt-5">
           <div className="container flex justify-between items-center max-sm:block max-sm:mt-4">
             <p className="text-[#3D445E]/[60%] lg:w-[full] sm:w-[250px] text-[11px] sm:text-[14px] font-vk">
               &copy; {new Date().getFullYear()} – “Tibbiyot tashkilotlarini litsenziyalash va akkreditatsiyalash markazi” DM
@@ -195,7 +195,7 @@ export default function FooterLayout() {
                 <img
                   src="/logo/devLogo.svg"
                   alt="IQ Logo"
-                  className="max-ms:w-[30px]"
+                  className="max-ms:w-[16px] w-[18px] h-[26px]"
                   width={35}
                   height={35}
                 />
