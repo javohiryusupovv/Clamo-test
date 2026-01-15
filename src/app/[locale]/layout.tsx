@@ -60,11 +60,14 @@ export async function generateMetadata({ params }: { params: Promise<{locale: st
         'max-snippet': -1,
       },
     },
-    icons: { 
-      icon: "/HeadLogo.svg",
-      shortcut: "/HeadLogo.svg",
-      apple: "/HeadLogo.svg"
+    icons: {
+      icon: [
+        { url: "/favicon.ico", type: "image/x-icon" },
+      ],
+      shortcut: "/favicon.ico",
+      apple: "/apple-touch-icon.png"
     },
+
     manifest: "/manifest.json",
     alternates: {
       canonical: currentUrl,
