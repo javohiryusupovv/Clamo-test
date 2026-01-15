@@ -199,7 +199,7 @@ export default function FooterLayout() {
                   width={35}
                   height={35}
                 />
-                <span className="ms:translate-x-5 max-ms:text-[16px] ms:opacity-0 ms:group-hover:translate-x-0 ms:group-hover:opacity-[1] transition-all duration-300 text-[18px] font-bold">
+                <span className="ms:translate-x-[20px] max-ms:text-[16px] ms:opacity-0 ms:group-hover:translate-x-[8px] ms:group-hover:opacity-[1] transition-all duration-300 text-[18px] font-bold">
                   IQ Tech
                 </span>
               </Link>
