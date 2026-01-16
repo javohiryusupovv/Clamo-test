@@ -244,7 +244,7 @@ export default function Navbar() {
 
             </ul>
           </div>
-          <div className="absolute bottom-6 left-0 w-full px-10 sm:hidden flex">
+          <div className="absolute bottom-12 left-0 w-full px-10 sm:hidden flex">
             <div className="flex items-center justify-between">
               {/* Language */}
               <div className="flex items-center gap-5">
