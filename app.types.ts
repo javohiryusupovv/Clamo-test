@@ -198,6 +198,12 @@ export interface NewsTypes {
   created_at: string;
   image: string;
   description: string;
+  images?: NewsAllImg[];
+}
+
+export interface NewsAllImg{
+  id: number;
+  image: string;
 }
 
 export interface CarouselData {

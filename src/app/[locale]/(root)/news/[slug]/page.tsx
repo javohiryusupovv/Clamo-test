@@ -2,6 +2,8 @@ import { Clock3 } from "lucide-react";
 import { notFound } from "next/navigation";
 import Backbtn from "../_components/Backbtn";
 import StructuredData from "@/components/StructuredData";
+import NewsImageSwiper from "../_components/NewsImageSwiper";
+import { NewsAllImg } from "app.types";
 
 interface NewsDetail {
   id: number;
@@ -19,6 +21,7 @@ interface NewsDetail {
   content_uz: string;
   image: string;
   created_at: string;
+  images?: NewsAllImg[];
 }
 
 export async function generateMetadata({
@@ -57,14 +60,14 @@ export async function generateMetadata({
       "лицензия",
       "аккредитация",
       "licensing",
-      "accreditation"
+      "accreditation",
     ],
     alternates: {
       canonical: currentUrl,
       languages: {
-        'uz': `${baseUrl}/uz/news/${slug}`,
-        'ru': `${baseUrl}/ru/news/${slug}`,
-        'en': `${baseUrl}/en/news/${slug}`,
+        uz: `${baseUrl}/uz/news/${slug}`,
+        ru: `${baseUrl}/ru/news/${slug}`,
+        en: `${baseUrl}/en/news/${slug}`,
       },
     },
     openGraph: {
@@ -85,7 +88,6 @@ export async function generateMetadata({
   };
 }
 
-
 export default async function NewsDetailPage({
   params,
 }: {
@@ -97,16 +99,22 @@ export default async function NewsDetailPage({
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/news/news/${slug}`,
     { cache: "no-store" }
   );
-  
 
   if (!res.ok) return notFound();
 
   const data: NewsDetail = await res.json();
 
-  const title = data[`title_${locale}` as keyof NewsDetail] || data.title;
-  const description =
-    data[`description_${locale}` as keyof NewsDetail] || data.description;
-  const content = String(data[`content_${locale}` as keyof NewsDetail] || data.content);
+  const title =
+  (data[`title_${locale}` as keyof NewsDetail] as string) || data.title;
+
+const description =
+  (data[`description_${locale}` as keyof NewsDetail] as string) ||
+  data.description;
+
+const content =
+  (data[`content_${locale}` as keyof NewsDetail] as string) ||
+  data.content;
+
 
   const createdAt = new Date(data.created_at);
   const day = String(createdAt.getDate()).padStart(2, "0");
@@ -122,26 +130,23 @@ export default async function NewsDetailPage({
   const breadcrumbItems = [
     { name: "Bosh sahifa", url: `https://clamo.uz/${locale}` },
     { name: "Yangiliklar", url: `https://clamo.uz/${locale}/news` },
-    { name: title, url: `https://clamo.uz/${locale}/news/${slug}` }
+    { name: title, url: `https://clamo.uz/${locale}/news/${slug}` },
   ];
 
   return (
     <div className="container lg:mt-12">
-      <StructuredData 
-        type="BreadcrumbList" 
-        data={{ items: breadcrumbItems }} 
-      />
-      <StructuredData 
-        type="Article" 
+      <StructuredData type="BreadcrumbList" data={{ items: breadcrumbItems }} />
+      <StructuredData
+        type="Article"
         data={{
           title: title,
           description: description,
           image: data.image,
           publishedAt: data.created_at,
-          modifiedAt: data.created_at
-        }} 
+          modifiedAt: data.created_at,
+        }}
       />
-      
+
       <Backbtn />
       <h1 className="lg:text-3xl md:text-2xl text-base text-[#3D445E] leading-[120%] font-black mb-4">
         {title}
@@ -153,13 +158,15 @@ export default async function NewsDetailPage({
         <p className="w-1 h-1 bg-[#697583] rounded-full"></p>{" "}
         <span className="text-[#697583]">{time}</span>
       </article>
-      <img
+      {data.images?.length ? <NewsImageSwiper newsImg={data.images} /> : null}
+
+      {/* <img
         src={data.image}
         alt={data.title}
         width={300}
         height={100}
         className="object-cover object-center w-full lg:h-[500px] sm:h-[350px] rounded-[20px] mb-10"
-      />
+      /> */}
       <div
         dangerouslySetInnerHTML={{ __html: content }}
         className="mb-16 font-vk text-base leading-[150%] text-gray-600"

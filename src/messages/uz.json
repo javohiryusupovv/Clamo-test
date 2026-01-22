@@ -35,7 +35,7 @@
     "errorNotif": "Xatolik yuz berdi, iltimos qayta urinib ko'ring"
   },
   "HomePage": {
-    "health_message": "Sog'liqni saqlash vazirligi qoshidagi Tibbiyot tashkilotlarini",
+    "health_message": "Sog'liqni saqlash vazirligi huzuridagi Tibbiyot tashkilotlarini",
     "litsenziya_title": "litsenziyalash va akkreditatsiyalash markazi davlat muassasasi",
     "service_button": "Xizmatlarimiz",
     "applying": "Murojaat qilish",
@@ -309,7 +309,7 @@
     "centerRegulationsList4": "Mutaxassislarning uzluksiz rivojlanishini qo'llab-quvvatlash.",
     "centerRegulationsParagraph3": "Markazning barcha faoliyati belgilangan ustuvor yo'nalishlar va yillik ish rejasiga muvofiq amalga oshiriladi.",
     "downloadButton": "Ma'lumotni yuklab olish",
-    "govDecisionsTitle": "Markaz faoliyatiga oid normativ-huquqiy hujjatlari.",
+    "govDecisionsTitle": "Markaz faoliyatiga oid normativ-huquqiy hujjatlar",
     "govDecisionsDesc": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.",
     "govDecision1Title": "O'zbekiston Respublikasi Prezidentining qarori",
     "govDecision1Text": "O'zbekiston Respublikasi Prezidentining 2023-yil 20-iyundagi PQ-197 sonli qarorining 7-bo‘lim \"b\" bandiga ko‘ra sog‘liqni saqlash tizimida litsenziyalash va akkreditatsiyalash davlat muassasasi tashkil etildi.",

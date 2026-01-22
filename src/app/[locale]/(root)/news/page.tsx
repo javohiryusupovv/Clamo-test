@@ -23,7 +23,9 @@ export async function generateMetadata({ params }: { params: Promise<{locale: st
 
 
 export default async function page() {
-    const newsorg = await getNews();    
+    const newsorg = await getNews();   
+    console.log(newsorg);
+     
   return (
     <NewsGrid news={newsorg} />
   );
