@@ -4,11 +4,18 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
-import { Language } from "@/types/type";
+import { AccreditationType, Language } from "@/types/type";
 import DropMenyu from "./_components/DropMenyu";
 import DropLanguage from "./_components/LanguageDropMenyu";
+import AccredationMenyu from "./_components/AccredationMenyu";
+import AccreditationAccordion from "./_components/MobileAccordation";
 
-export default function Navbar() {
+interface NavbarProps {
+  accreditationPages: AccreditationType[];
+}
+
+
+export default function NavbarClient({ accreditationPages }: NavbarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setScrolled] = useState(false);
 
@@ -135,11 +142,9 @@ export default function Navbar() {
                     {t("licens")}
                   </Link>
                 </li>
-                <li className="text-sm font-medium text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200">
-                  <Link href={`/${locale}/accreditation`} aria-label="Accreditation">
-                    {t("accredation")}
-                  </Link>
-                </li>
+                <article>
+                  <AccredationMenyu pages={accreditationPages} />
+                </article>
                   <li>
                       <Link
                           href={`/${locale}/fight-against-corruption`}
@@ -227,9 +232,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/accreditation`} aria-label="Accreditation Page" onClick={() => setIsMobileMenuOpen(false)} className="text-[15px] font-medium sm:text-[17px] sm:font-semibold text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200">
-                  {t("accredation")}
-                </Link>
+                <AccreditationAccordion pages={accreditationPages} />
               </li>
                 <li>
                     <Link href={`/${locale}/fight-against-corruption`} aria-label="Fight Against Corruption Page" onClick={() => setIsMobileMenuOpen(false)} className="text-[15px] font-medium sm:text-[17px] sm:font-semibold text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200">

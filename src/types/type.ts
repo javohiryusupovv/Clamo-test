@@ -57,3 +57,18 @@ export type StatsType = {
   created_at: string;
   updated_at: string;
 };
+
+export type AccreditationType = {
+  id: number;
+  page_name: string;
+  page_name_en?: string;
+  page_name_ru?: string;
+  page_name_uz?: string;
+  page_link: string;
+  page_link_en?: string;
+  page_link_ru?: string;
+  page_link_uz?: string;
+  content: string;
+  created_at?: string;
+  updated_at?: string;
+};
