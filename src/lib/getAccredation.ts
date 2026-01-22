@@ -10,8 +10,14 @@ export async function getAccreditation() {
   
     return res.json();
   }
+
+  interface AccreditationResponse {
+    id: number;
+    page_name: string;
+    page_link: string;
+  }
   
   export async function getAccreditationBySlug(slug: string) {
     const data = await getAccreditation();
-    return data.find((item: any) => item.page_link === slug);
+    return data.find((item: AccreditationResponse) => item.page_link === slug);
   }
