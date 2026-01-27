@@ -82,8 +82,8 @@ export default function Contact() {
 
     toast
       .promise(submitPromise, {
-        pending: zod('notifsending') || "Jo'natilmoqda...",
-        success: zod('succesNotif') || "Muvaffaqiyatli jo'natildi!",
+        pending: zod('notifsending'),
+        success: zod('succesNotif'),
         error:
           zod('errorNotif') ||
           "Xatolik yuz berdi, iltimos qayta urinib ko'ring",
@@ -332,7 +332,7 @@ export default function Contact() {
                 {isLoading ? (
                   <>
                     <LoaderCircle className="w-4 h-4 animate-spin" />
-                    Jo&apos;natilmoqda...
+                    {zod("notifsending")}
                   </>
                 ) : (
                   <>

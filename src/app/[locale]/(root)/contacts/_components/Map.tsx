@@ -68,7 +68,7 @@ export default function ContactPage() {
                 rel="noopener noreferrer"
               >
                 <p className="font-medium font-vk group-hover:underline">
-                  {item.website}
+                  {item.website.toLowerCase()}
                 </p>
               </Link>
             </div>
