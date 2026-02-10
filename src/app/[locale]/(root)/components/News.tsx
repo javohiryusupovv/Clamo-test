@@ -37,7 +37,7 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
             href={`/${locale}/news/${slicedNews[0].slug}`}
             key={slicedNews[0].id}
           >
-            <div className="relative group rounded-[16px] sm:rounded-[24px] overflow-hidden h-full sm:min-h-[480px] min-h-[300px]">
+            <div className="relative group rounded-[16px] sm:rounded-[24px] overflow-hidden h-[480px]">
               <img
                 src={slicedNews[0].image}
                 alt={getLocalizedValue(
