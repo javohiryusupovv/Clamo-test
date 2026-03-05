@@ -87,7 +87,7 @@ export async function generateMetadata({ params }: { params: Promise<{locale: st
       type: "website",
       images: [
         {
-          url: `${currentUrl}/og-image.png`,
+          url: `${baseUrl}/og-image.png`,
           width: 1200,
           height: 630,
           alt: "CLAMO – Litsenziya va Akkreditatsiya platformasi",
@@ -98,7 +98,7 @@ export async function generateMetadata({ params }: { params: Promise<{locale: st
       card: "summary_large_image",
       title: t.title,
       description: t.twitterDescription,
-      images: [`${currentUrl}/og-image.png`],
+      images: [`${baseUrl}/og-image.png`],
       creator: "@CLAMO_uz",
     },
     verification: {
