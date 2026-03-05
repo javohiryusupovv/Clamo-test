@@ -17,7 +17,7 @@ export default function AboutMain() {
           <p className="rounded-md font-inter font-medium bg-[#23B3FC] leading-[100%] text-white text-sm sm:text-base px-4 py-1 w-fit mb-2 md:mb-4" data-aos="fade-right">
             {t("plan")}
           </p>
-          <h2 className="text-[20px] sm:text-[28px] lg:text-[32px] leading-[100%] font-semibold text-[#1B1B1B] md:pb-2 pb-3" data-aos="fade" data-aos-delay="200"
+          <h2 className="text-[20px] sm:text-[28px] lg:text-[32px] leading-[100%] font-semibold text-[#1B1B1B] md:pb-2 pb-3 mb-3" data-aos="fade" data-aos-delay="200"
             data-aos-offset="50"
             data-aos-duration="700"
             data-aos-anchor-placement="top-bottom">
