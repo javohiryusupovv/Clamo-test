@@ -90,7 +90,7 @@ export async function generateMetadata({ params }: { params: Promise<{locale: st
           url: `${baseUrl}/og-image.png`,
           width: 1200,
           height: 630,
-          alt: "CLAMO – Litsenziya va Akkreditatsiya platformasi",
+          alt: "Litsenziya va Akkreditatsiya platformasi",
         },
       ],
     },

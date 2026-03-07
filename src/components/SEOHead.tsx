@@ -20,7 +20,7 @@ export default function SEOHead({
   noindex = false
 }: SEOHeadProps) {
   const baseUrl = 'https://clamo.uz'
-  const fullTitle = title ? `${title} | CLAMO` : 'CLAMO - Litsenziyalash va Akkreditatsiyalash Markazi'
+  const fullTitle = title ? `${title} | CLAMO` : 'Litsenziyalash va Akkreditatsiyalash Markazi'
   const fullDescription = description || 'CLAMO — litsenziyalash va akkreditatsiyalash bo\'yicha xizmatlar ko\'rsatadigan davlat muassasasi.'
   const fullCanonical = canonical || baseUrl
   const fullOgImage = ogImage || `${baseUrl}/og-image.png`
