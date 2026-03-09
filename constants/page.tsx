@@ -127,7 +127,6 @@ export const getCardComment = (t: TFunction): CardComment[] => [
     time: t("cardComment.time_two"),
     comment: t("cardComment.comment_two"),
     fikr: t("cardComment.fikr"),
-
   },
   {
     id: 3,
@@ -193,7 +192,6 @@ export const getCardComment = (t: TFunction): CardComment[] => [
     fikr: t("cardComment.fikr"),
   },
 ];
-
 
 export const getOpinion = (t: TFunction): OpinionCard[] => [
   {
@@ -437,30 +435,32 @@ export const getSochealMedia: SochealMedia[] = [
 
 export const metadataContent = {
   uz: {
-    title: "Tibbiyot tashkilotlarini litsenziyalash va akkreditatsiyalash jarayonlarini tashkil etuvchi markaz",
+    title: "Litsenziyalash va Akkreditatsiyalash Markazi",
     description:
       "CLAMO — litsenziyalash va akkreditatsiyalash bo‘yicha xizmatlar ko‘rsatadigan davlat muassasasi. Ta'lim, sog‘liqni saqlash va boshqa sohalarda yuridik shaxslarni rasmiy ro‘yxatdan o‘tkazish va sifatini baholashga doir barcha jarayonlarni yengil va shaffof tarzda amalga oshiring.",
     ogDescription:
-      "Davlat litsenziya va akkreditatsiya jarayonlarini raqamlashtirish va soddalashtirishga yo‘naltirilgan platforma. CLAMO orqali muassasangizni tez, qulay va shaffof tarzda ro‘yxatdan o‘tkazing.",
+      "Tibbiyot tashkilotlarini litsenziyalash va akkreditatsiyalash jarayonlarini tashkil etuvchi markaz",
     twitterDescription:
-      "Litsenziya va akkreditatsiyani CLAMO orqali tez, oson va ishonchli tarzda oling.",
+      "Tibbiyot tashkilotlarini litsenziyalash va akkreditatsiyalash jarayonlarini tashkil etuvchi markaz",
   },
+  
   ru: {
-    title: "Центр организации процессов лицензирования и аккредитации медицинских организаций",
+    title: "Центр лицензирования и аккредитации",
     description:
       "CLAMO — государственное учреждение, предоставляющее услуги по лицензированию и аккредитации. Упростите и сделайте прозрачными процессы регистрации и оценки качества юридических лиц в сферах образования, здравоохранения и других.",
     ogDescription:
-      "Платформа для цифровизации и упрощения государственных процессов лицензирования и аккредитации. Зарегистрируйте вашу организацию быстро и удобно с Clamo.",
+      "Центр, организующий процессы лицензирования и аккредитации медицинских организаций",
     twitterDescription:
-      "Получите лицензию и аккредитацию быстро, легко и надёжно с CLAMO.",
+      "Центр, организующий процессы лицензирования и аккредитации медицинских организаций",
   },
+  
   en: {
-    title: "Center for Organizing Licensing and Accreditation Processes of Medical Organizations",
+    title: "Licensing and Accreditation Center",
     description:
-      "CLAMO is a government institution providing licensing and accreditation services. Streamline and simplify the registration and quality assessment processes for legal entities in education, healthcare, and other sectors.",
+      "CLAMO is a government institution providing licensing and accreditation services. Simplify and streamline the registration and quality assessment processes for legal entities in education, healthcare, and other sectors.",
     ogDescription:
-      "A platform designed to digitize and simplify state licensing and accreditation procedures. Register your organization quickly and transparently with Clamo.",
+      "A center that organizes licensing and accreditation processes for medical organizations",
     twitterDescription:
-      "Get licensed and accredited quickly, easily, and reliably with CLAMO.",
+      "A center that organizes licensing and accreditation processes for medical organizations",
   },
 };
