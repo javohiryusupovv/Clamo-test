@@ -437,7 +437,7 @@ export const getSochealMedia: SochealMedia[] = [
 
 export const metadataContent = {
   uz: {
-    title: "Litsenziyalash va Akkreditatsiyalash Markazi",
+    title: "Tibbiyot tashkilotlarini litsenziyalash va akkreditatsiyalash jarayonlarini tashkil etuvchi markaz",
     description:
       "CLAMO — litsenziyalash va akkreditatsiyalash bo‘yicha xizmatlar ko‘rsatadigan davlat muassasasi. Ta'lim, sog‘liqni saqlash va boshqa sohalarda yuridik shaxslarni rasmiy ro‘yxatdan o‘tkazish va sifatini baholashga doir barcha jarayonlarni yengil va shaffof tarzda amalga oshiring.",
     ogDescription:
@@ -446,7 +446,7 @@ export const metadataContent = {
       "Litsenziya va akkreditatsiyani CLAMO orqali tez, oson va ishonchli tarzda oling.",
   },
   ru: {
-    title: "Центр лицензирования и аккредитации",
+    title: "Центр организации процессов лицензирования и аккредитации медицинских организаций",
     description:
       "CLAMO — государственное учреждение, предоставляющее услуги по лицензированию и аккредитации. Упростите и сделайте прозрачными процессы регистрации и оценки качества юридических лиц в сферах образования, здравоохранения и других.",
     ogDescription:
@@ -455,7 +455,7 @@ export const metadataContent = {
       "Получите лицензию и аккредитацию быстро, легко и надёжно с CLAMO.",
   },
   en: {
-    title: "Licensing and Accreditation Center",
+    title: "Center for Organizing Licensing and Accreditation Processes of Medical Organizations",
     description:
       "CLAMO is a government institution providing licensing and accreditation services. Streamline and simplify the registration and quality assessment processes for legal entities in education, healthcare, and other sectors.",
     ogDescription:
