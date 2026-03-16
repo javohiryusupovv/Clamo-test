@@ -90,6 +90,8 @@ export default function ReyesterClient({
     }
   };
 
+  console.log(data);
+  
 
 
 

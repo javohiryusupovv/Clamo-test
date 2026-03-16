@@ -176,6 +176,18 @@ export interface CommentSharh{
     rating: number;
     short_url: string;
     og_image_url:string;
+    user?: {
+      avatar?: {
+          original?: string;
+          s100x100?: string;
+          s500x500?: string;
+          s1000x1000?: string;
+          thumbnail?: string | null;
+      };
+      first_name?: string;
+      last_name?: string;
+      username?: string;
+  };
 }
 
 export interface APISharhItem {

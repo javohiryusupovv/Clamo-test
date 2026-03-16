@@ -33,6 +33,7 @@ export default function Izohlar({ comments }: CommentProps) {
     return () => window.removeEventListener("resize", checkScreen);
   }, []);
 
+
   return (
     <div className="md:py-[64px] py-[30px]">
       {/* Section Title */}
@@ -69,7 +70,7 @@ export default function Izohlar({ comments }: CommentProps) {
                     {/* Avatar */}
                     <div className="flex items-center w-[45px] h-[45px] max-sm:w-[35px] max-sm:h-[35px]">
                       <img
-                          src={item?.company?.brand_logo?.original ?? '/icons/Avatar.svg'}
+                          src={item?.user?.avatar?.s100x100 ?? item?.user?.avatar?.original ?? '/icons/Avatar.svg'}
                         alt="avatar"
                         width={44}
                         height={44}
@@ -129,7 +130,7 @@ export default function Izohlar({ comments }: CommentProps) {
                       {/* Avatar */}
                       <div className="flex items-center w-[45px] h-[45px] max-sm:w-[35px] max-sm:h-[35px]">
                           <img
-                              src={item?.company?.brand_logo?.original ?? '/icons/Avatar.svg'}
+                              src={item?.user?.avatar?.s100x100 ?? item?.user?.avatar?.original ?? '/icons/Avatar.svg'}
                               alt="Avatar"
                               width={44}
                               height={44}

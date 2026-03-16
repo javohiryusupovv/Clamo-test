@@ -23,6 +23,7 @@ export default async function Main() {
   const service = await getServicec();
   const comments = await getReviews()
   
+  
 
   return (
     <div className="overflow-hidden">
