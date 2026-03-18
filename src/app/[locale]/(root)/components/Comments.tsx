@@ -33,6 +33,8 @@ export default function Izohlar({ comments }: CommentProps) {
     return () => window.removeEventListener("resize", checkScreen);
   }, []);
 
+  console.log(comments);
+  
 
   return (
     <div className="md:py-[64px] py-[30px]">
@@ -81,6 +83,10 @@ export default function Izohlar({ comments }: CommentProps) {
                       <h2 className="font-semibold font-roboto text-[#022F5E] leading-[130%] sm:text-[16px] text-[12px] pb-[3px]">
                         {item.author_name}
                       </h2>
+                      <article className="flex items-end gap-1">
+                        <p className="max-w-[60%] line-clamp-1 font-medium text-[12px] text-[#4489f7]">{item.company.name}</p> 
+                        <span className="text-[10px] text-gray-400">{t("companycomments")}</span>
+                      </article>
                     </div>
                   </div>
 
@@ -142,6 +148,10 @@ export default function Izohlar({ comments }: CommentProps) {
                         <h2 className="font-semibold font-roboto text-[#022F5E] leading-[130%] sm:text-[16px] text-[12px] pb-[3px]">
                           {item.author_name}
                         </h2>
+                        <article className="flex items-end gap-1">
+                        <p className="max-w-[60%] line-clamp-1 font-medium text-[12px] text-[#4489f7]">{item.company.name}</p> 
+                        <span className="text-[10px] text-gray-400">{t("companycomments")}</span>
+                      </article>
                       </div>
                     </div>
 
