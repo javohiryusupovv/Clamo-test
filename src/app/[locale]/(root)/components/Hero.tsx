@@ -83,20 +83,20 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative top-0 left-0 flex flex-col justify-center items-center w-auto max-ms:-bottom-20 max-lg:bottom-[20px] -right-10">
+        <div className="relative top-0 left-0 flex flex-col justify-center items-center w-auto -right-10">
           <img
             src="/logo/clamoLogo.png"
             alt="LogoClamo"
-            width={180}
-            height={180}
-            className=" max-lg:w-[150px] max-ms:w-[160px] max-ms:h-[160px] max-lg:h-[180px] absolute -z-[1] md:left-[43%] z-[1] logoAnim lg:left-[38%]"
+            width={200}
+            height={200}
+            className="max-md:w-[170px] max-smm:w-[110px] absolute bottom-[47%] xl:bottom-[50%] max-lg:bottom-[48%] max-sm:bottom-[40%] md:left-[38%] z-[1] logoAnim lg:left-[33%]"
           />
           <img
             src="/logo/LogoDisplay.png"
             alt="Display Clamo"
-            width={550}
-            height={500}
-            className="lg:w-[700px] translate-y-[120px]"
+            width={750}
+            height={650}
+            className="w-[900px] max-xl:translate-y-[80px] xl:translate-y-[40px]"
           />
           <div className="test-clamoLogo"></div>
         </div>
