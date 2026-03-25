@@ -83,20 +83,20 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-end items-center w-auto relative max-ms:-bottom-20 max-lg:bottom-[20px] right-5 max-lg:translate-y-[60px] lg:translate-y-[70px] xl:translate-y-20">
+        <div className="relative top-0 left-0 flex flex-col justify-center items-center w-auto max-ms:-bottom-20 max-lg:bottom-[20px] -right-10">
           <img
             src="/logo/clamoLogo.png"
             alt="LogoClamo"
-            width={200}
-            height={200}
-            className=" max-lg:w-[150px] max-ms:w-[160px] max-ms:h-[160px] max-lg:h-[180px] absolute max-ms:-z-[1] md:left-[43%] z-[1] logoAnim md:bottom-[280px] max-sm:bottom-[260px] max-ms:bottom-[250px] max-ll:bottom-[230px] max-xxs:bottom-[190px] max-lg:bottom-[280px] lg:bottom-[230px] lg:left-[60%] xl:bottom-[280px]"
+            width={180}
+            height={180}
+            className=" max-lg:w-[150px] max-ms:w-[160px] max-ms:h-[160px] max-lg:h-[180px] absolute -z-[1] md:left-[43%] z-[1] logoAnim lg:left-[38%]"
           />
           <img
             src="/logo/LogoDisplay.png"
             alt="Display Clamo"
             width={550}
             height={500}
-            className="lg:absolute bottom-0 right-0 max-sm:left-[3%] sm:left-[25%] max-md:left-[30%] max-ms:-z-[2] lg:w-[700px]"
+            className="lg:w-[700px] translate-y-[120px]"
           />
           <div className="test-clamoLogo"></div>
         </div>
