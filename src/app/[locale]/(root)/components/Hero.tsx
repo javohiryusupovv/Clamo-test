@@ -101,7 +101,7 @@ export default function Hero() {
           <div className="test-clamoLogo"></div>
         </div>
         {/* oq soya */}
-        <div className="absolute bottom-[-258px] left-[20%] w-[361px] h-[361px] blur-[220.64999389648438px] rounded-full bg-[#6eb8e8] firefox-bg"></div>
+        <div className="absolute bottom-[-258px] left-[20%] w-[361px] h-[361px] blur-[220.64999389648438px] rounded-full bg-[#6eb8e8] firefox-bg max-md:hidden"></div>
       </section>
       <div className="absolute bottom-[-200px] right-0 w-full lg:h-[348px] h-[220px] shadow-hero" />
     </>
