@@ -17,6 +17,18 @@
   filter: blur(0px);
 }
 
+
+.test-clamoLogo::before{
+  position: absolute;
+  content: "";
+  left: 90px;
+  bottom: -50;
+  width: 140%;
+  height: 150px;
+  background-color: white;
+  filter: blur(45px);
+}
+
 @-moz-document url-prefix() {
   .firefox-blur {
     filter: blur(900px); /* yoki kerakli qiymat */
@@ -148,4 +160,17 @@ body {
 
 html {
     scroll-behavior: smooth;
+  }
+
+
+  @media (max-width: 1026px){
+    .test-clamoLogo::before{
+      bottom: -120px;
+    }
+  }
+
+  @media (max-width: 860px){
+    .test-clamoLogo::before{
+      display: none;
+    }
   }

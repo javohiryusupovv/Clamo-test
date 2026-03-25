@@ -51,7 +51,7 @@ export default function Hero() {
             </span>
           </p>
           <h1
-            className="lg:w-[582px] lg:text-[40px] font-inter sm:text-[32px] text-[25px] font-bold uppercase text-[#3D445E] md:pb-5 pb-3 leading-[110%]"
+            className="lg:w-[750px] lg:text-[40px] font-inter sm:text-[32px] text-[25px] font-bold uppercase text-[#3D445E] md:pb-5 pb-3 leading-[110%]"
             data-aos="fade-up" data-aos-delay="300"
           >
             {t("litsenziya_title")}
@@ -83,21 +83,22 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-end items-center w-auto relative -bottom-28 max-ms:-bottom-20 max-lg:bottom-[20px] right-0 ms:translate-y-[80px]">
+        <div className="flex flex-col justify-end items-center w-auto relative max-ms:-bottom-20 max-lg:bottom-[20px] right-0 ms:translate-y-[20px]">
           <img
             src="/logo/clamoLogo.png"
             alt="LogoClamo"
             width={200}
             height={200}
-            className=" max-lg:w-[180px] max-ms:w-[160px] max-ms:h-[160px] max-lg:h-[180px] absolute max-ms:-z-[1] md:left-[38%] z-[1] logoAnim md:bottom-[280px] max-sm:bottom-[260px] max-ms:bottom-[250px] max-ll:bottom-[230px] max-xxs:bottom-[190px] max-lg:bottom-[280px] lg:bottom-[230px] lg:left-[55%] xl:bottom-[280px]"
+            className=" max-lg:w-[150px] max-ms:w-[160px] max-ms:h-[160px] max-lg:h-[180px] absolute max-ms:-z-[1] md:left-[43%] z-[1] logoAnim md:bottom-[280px] max-sm:bottom-[260px] max-ms:bottom-[250px] max-ll:bottom-[230px] max-xxs:bottom-[190px] max-lg:bottom-[280px] lg:bottom-[230px] lg:left-[60%] xl:bottom-[280px]"
           />
           <img
             src="/logo/LogoDisplay.png"
             alt="Display Clamo"
-            width={520}
-            height={494}
-            className="lg:absolute bottom-0 right-0 max-sm:left-[3%] sm:left-[25%] max-md:left-[30%] max-ms:-z-[2]"
+            width={550}
+            height={500}
+            className="lg:absolute bottom-0 right-0 max-sm:left-[3%] sm:left-[25%] max-md:left-[30%] max-ms:-z-[2] lg:w-[700px]"
           />
+          <div className="test-clamoLogo"></div>
         </div>
         {/* oq soya */}
         <div className="absolute bottom-[-258px] left-[20%] w-[361px] h-[361px] blur-[220.64999389648438px] rounded-full bg-[#6eb8e8] firefox-bg"></div>
