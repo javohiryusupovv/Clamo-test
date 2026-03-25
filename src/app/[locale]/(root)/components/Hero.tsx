@@ -83,7 +83,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-end items-center w-auto relative max-ms:-bottom-20 max-lg:bottom-[20px] right-0 ms:translate-y-[50px]">
+        <div className="flex flex-col justify-end items-center w-auto relative max-ms:-bottom-20 max-lg:bottom-[20px] right-0 ms:translate-y-[70px]">
           <img
             src="/logo/clamoLogo.png"
             alt="LogoClamo"
