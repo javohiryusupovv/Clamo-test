@@ -17,6 +17,7 @@ module.exports = {
         md: "768px",
         lg: "960px",
         xl: "1184px",
+        maxxl: "1280px"
       },
     },
     extend: {
@@ -26,6 +27,7 @@ module.exports = {
         xxl: "480px",
         ms: "500px",
         xcc: "1184px",
+        maxxl: "1280px"
       },
       boxShadow: {
         "hero-left": "84px 100px 200px 12px rgb(166,217,242)",
