@@ -9,6 +9,7 @@ import DropMenyu from "./_components/DropMenyu";
 import DropLanguage from "./_components/LanguageDropMenyu";
 import AccredationMenyu from "./_components/AccredationMenyu";
 import AccreditationAccordion from "./_components/MobileAccordation";
+import OurServiceMenyu from "./_components/OurServiceMenyu";
 
 interface NavbarProps {
   accreditationPages: AccreditationType[];
@@ -137,13 +138,9 @@ export default function NavbarClient({ accreditationPages }: NavbarProps) {
                 <article className="relative">
                   <DropMenyu />
                 </article>
-                <li className="text-sm font-medium text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200">
-                  <Link href={`/${locale}/licensing`} aria-label="License">
-                    {t("licens")}
-                  </Link>
-                </li>
+                  
                 <article>
-                  <AccredationMenyu pages={accreditationPages} />
+                  <OurServiceMenyu/>
                 </article>
                   <li>
                       <Link
@@ -230,9 +227,6 @@ export default function NavbarClient({ accreditationPages }: NavbarProps) {
                 <Link href={`/${locale}/licensing`} aria-label="License Page" onClick={() => setIsMobileMenuOpen(false)} className="text-[15px] font-medium sm:text-[17px] sm:font-semibold text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200">
                   {t("licens")}
                 </Link>
-              </li>
-              <li>
-                <AccreditationAccordion pages={accreditationPages} />
               </li>
                 <li>
                     <Link href={`/${locale}/fight-against-corruption`} aria-label="Fight Against Corruption Page" onClick={() => setIsMobileMenuOpen(false)} className="text-[15px] font-medium sm:text-[17px] sm:font-semibold text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200">

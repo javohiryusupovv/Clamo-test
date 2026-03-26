@@ -3,6 +3,7 @@
     "abouts": "About Us",
     "licens": "Licensing",
     "accredation": "Accreditation",
+    "our-service": "Our Services",
     "contacts": "Contact",
     "aboutss": "About the Center",
     "international": "International Cooperation",
@@ -37,7 +38,7 @@
   "HomePage": {
     "health_message": "Medical organizations under the Ministry of Health",
     "litsenziya_title": "Licensing and Accreditation Center state institution",
-    "service_button": "Our services",
+    "service_button": "Use of the service",
     "applying": "Applying",
     "specialists": "With us, medical care is now even closer! Connect with the best specialists through CLAMO and take control of your health.",
     "aboutUs": "about Us",

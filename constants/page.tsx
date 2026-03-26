@@ -16,6 +16,13 @@ import {
 
 type TFunction = (key: string) => string;
 
+type Locale = "uz" | "ru" | "en";
+
+type Service = {
+  slug: string;
+  label: Record<Locale, string>;
+};
+
 export const getTeamCarousel: TeamMember[] = [
   {
     id: 1,
@@ -464,3 +471,31 @@ export const metadataContent = {
       "A center that organizes licensing and accreditation processes for medical organizations",
   },
 };
+
+
+export const services: Service[] = [
+  {
+    slug: "licensing",
+    label: {
+      uz: "Litsenziya",
+      ru: "Лицензирование",
+      en: "Licensing"
+    }
+  },
+  {
+    slug: "accreditation",
+    label: {
+      uz: "Akkreditatsiya",
+      ru: "Аккредитация",
+      en: "Accreditation"
+    }
+  },
+  {
+    slug: "consulting",
+    label: {
+      uz: "Konsalting",
+      ru: "Консалтинг",
+      en: "Consulting"
+    }
+  }
+];

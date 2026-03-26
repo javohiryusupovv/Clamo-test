@@ -3,6 +3,7 @@
     "abouts": "Biz haqimizda",
     "licens": "Litsenziyalash",
     "accredation": "Akkreditatsiyalash",
+    "our-service": "Xizmatlarimiz",
     "contacts": "Bog'lanish",
     "aboutss": "Markaz haqida",
     "international": "Xalqaro hamkorlik",
@@ -37,7 +38,7 @@
   "HomePage": {
     "health_message": "Sog'liqni saqlash vazirligi huzuridagi Tibbiyot tashkilotlarini",
     "litsenziya_title": "litsenziyalash va akkreditatsiyalash markazi davlat muassasasi",
-    "service_button": "Xizmatlarimiz",
+    "service_button": "Xizmatdan foydalanish",
     "applying": "Murojaat qilish",
     "specialists": "Biz bilan tibbiy xizmat endi yanada yaqin! CLAMO orqali malakali mutaxassislar bilan bog'laning va faoliyatingizni qonuniylashtiring.",
     "aboutUs": "biz haqimizda",

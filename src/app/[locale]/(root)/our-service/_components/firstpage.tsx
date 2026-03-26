@@ -86,11 +86,10 @@ export default function AccredationHead() {
               data-aos-duration="700"
             >
               <Link
-                href={`https://my.gov.uz/uz`}
-                target="_blank"
+                href={`/${locale}/about#services-center`}
                 className="w-full"
               >
-                <button className="group font-inter w-full px-5 h-[37px] flex items-center justify-center gap-[11.5px] hover:bg-[hsl(200,97%,65%)] bg-[#23b3fc] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">
+                <button className="group font-inter w-full lg:px-20 px-5 h-[37px] flex items-center justify-center gap-[11.5px] hover:bg-[hsl(200,97%,65%)] bg-[#23b3fc] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">
                   {btn("service_button")}
                   <FaChevronRight className="md:group-hover:translate-x-2 transition-all duration-200" />
                 </button>
