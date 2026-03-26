@@ -6,7 +6,6 @@
   import { useTranslations, useLocale } from "next-intl";
   import { useEffect } from "react";
   import { usePathname } from "next/navigation";
-  import SharhLogo from "../../../../../../public/icons/sharhlogo.svg";
 
   export default function FooterLayout() {
     const t = useTranslations("FooterPage");
