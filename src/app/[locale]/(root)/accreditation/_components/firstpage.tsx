@@ -86,7 +86,7 @@ export default function AccredationHead() {
               data-aos-duration="700"
             >
               <Link
-                href={`https://my.gov.uz/uz`}
+                href={`https://my.gov.uz/uz/service/519`}
                 target="_blank"
                 className="w-full"
               >

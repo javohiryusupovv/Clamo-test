@@ -7,6 +7,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { AccreditationType, Language } from "@/types/type";
 import DropMenyu from "./_components/DropMenyu";
 import DropLanguage from "./_components/LanguageDropMenyu";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import AccredationMenyu from "./_components/AccredationMenyu";
 import AccreditationAccordion from "./_components/MobileAccordation";
 import OurServiceMenyu from "./_components/OurServiceMenyu";
@@ -138,7 +139,7 @@ export default function NavbarClient({ accreditationPages }: NavbarProps) {
                 <article className="relative">
                   <DropMenyu />
                 </article>
-                  
+
                 <article>
                   <OurServiceMenyu/>
                 </article>
