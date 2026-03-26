@@ -160,7 +160,7 @@
                     </Link>
                   </li>
                 </ul>
-                <div className="mt-6 flex flex-col items-center bg-white border border-gray-200 rounded-[24px] px-5 py-4 shadow-sm w-fit max-smm:mx-auto">
+                <div className="mt-6 flex flex-col items-center bg-white border border-gray-200 rounded-[24px] px-5 py-4 shadow-sm w-fit">
                   <div className="flex items-center gap-3 mb-2">
                     <svg
                       width="125"
