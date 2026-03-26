@@ -73,7 +73,8 @@ export default function LicenseHero() {
                   data-aos-duration="700"
                   >
                 <Link
-                  href={`/${locale}/about#services-center`}
+                  href={`https://my.gov.uz/uz/service/519`}
+                  target="_blank"
                   className="w-full"
                 >
                   <button className="group font-inter w-[290px] max-md:w-full h-[37px] flex items-center justify-center gap-[11.5px] hover:bg-[hsl(200,97%,65%)] bg-[#23b3fc] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">
