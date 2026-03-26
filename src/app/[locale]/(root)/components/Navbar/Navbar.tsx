@@ -4,20 +4,14 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
-import { AccreditationType, Language } from "@/types/type";
+import { Language } from "@/types/type";
 import DropMenyu from "./_components/DropMenyu";
 import DropLanguage from "./_components/LanguageDropMenyu";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import AccredationMenyu from "./_components/AccredationMenyu";
-import AccreditationAccordion from "./_components/MobileAccordation";
 import OurServiceMenyu from "./_components/OurServiceMenyu";
 
-interface NavbarProps {
-  accreditationPages: AccreditationType[];
-}
 
 
-export default function NavbarClient({ accreditationPages }: NavbarProps) {
+export default function NavbarClient() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setScrolled] = useState(false);
 
