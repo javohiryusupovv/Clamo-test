@@ -73,7 +73,7 @@ export default function LicenseHero() {
                   data-aos-duration="700"
                   >
                 <Link
-                  href={`https://my.gov.uz/uz/service/519`}
+                  href={`https://license.gov.uz/`}
                   target="_blank"
                   className="w-full"
                 >

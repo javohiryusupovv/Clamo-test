@@ -52,11 +52,11 @@
                       className="w-44"
                     />
                     <img
-                      src="/logo/TibbiyotVazirlik.svg"
+                      src="/logo/Vazirlik.svg"
                       alt="Tibbiyot Vazirligi logo"
-                      width={100}
+                      width={150}
                       height={50}
-                      className="w-14"
+                      className="w-44"
                     />
                   </article>
                   <p className="text-[12px] sm:text-[16px] font-vk text-[#3D445E] sm:w-auto w-full">
