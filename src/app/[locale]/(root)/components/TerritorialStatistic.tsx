@@ -121,7 +121,7 @@ export default function TerritorialStatistic() {
     : [];
 
   return (
-    <section className="relative z-50 w-full  bg-[#f6f9fc]">
+    <section className="relative z-50 w-full bg-[#f6f9fc]">
       <div className="container mx-auto px-4 py-10">
         <div className="mb-8">
           <h2 className="text-[25px] sm:text-[35px] md:text-[48px] leading-[100%] font-bold text-[#3D445E]">
