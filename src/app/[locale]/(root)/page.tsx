@@ -14,6 +14,7 @@ import { getFaqs } from "@/lib/getFaqs";
 import { getServicec } from "@/lib/getServicec";
 import ClamoStatistic from "./components/ClamoStatistic";
 import { getReviews } from "@/lib/getSharh";
+import TerritorialStatistic from "./components/TerritorialStatistic";
 
 export default async function Main() {
   const data = await getData();
@@ -28,6 +29,7 @@ export default async function Main() {
   return (
     <div className="overflow-hidden">
       <Hero />
+      <TerritorialStatistic/>
       <ClamoStatistic numbers={data[0]}/>
       <MedicalLegal />
       <div className="bg-[#F6F9FC] scroll-mt-3" id="contact-section">

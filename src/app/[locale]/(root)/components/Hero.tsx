@@ -6,10 +6,22 @@ import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
+import KlinikBino from "../../../../../public/icons/whiteTooltip1.svg"
+import TibbiyotXodim from "../../../../../public/icons/whiteTootlip2.svg"
+import ActiveClinics from "../../../../../public/icons/whiteTootlip3.svg"
+import Licenses from "../../../../../public/icons/whiteTooltip4.svg"
 
 export default function Hero() {
   const t = useTranslations("HomePage");
   const locale = useLocale();
+
+  const statsData = [
+    { id: 1, icon: KlinikBino, number: "12 500+", label: t("kliniknomi") },
+    { id: 2, icon: TibbiyotXodim, number: "45 000+", label: t("health_num") },
+    { id: 3, icon: ActiveClinics, number: "3 200+", label: t("activelitsenz") },
+    { id: 4, icon: Licenses, number: "10 000+", label: t("accredationshare") },
+  ];
 
   const [
     firstTitle,
@@ -22,16 +34,16 @@ export default function Hero() {
   ] = t("health_message").split(" ");
 
   useEffect(() => {
-      const loadAOS = async () => {
-        const AOS = await import("aos");
-        AOS.init({ duration: 1000 });
-        AOS.refresh();
-      };
-  
-      if (typeof window !== "undefined") {
-        loadAOS();
-      }
-    }, [usePathname()]);
+    const loadAOS = async () => {
+      const AOS = await import("aos");
+      AOS.init({ duration: 1000 });
+      AOS.refresh();
+    };
+
+    if (typeof window !== "undefined") {
+      loadAOS();
+    }
+  }, [usePathname()]);
 
   const scrollToContactSection = () => {
     const section = document.getElementById("contact-section");
@@ -42,7 +54,7 @@ export default function Hero() {
     <>
       {/* Ko'k soya */}
       <div className="absolute bottom-2 -left-64 w-[481px] h-[481px] rounded-full bg-[#6eb8e8] blur-[220px] firefox-blur z-[11]"></div>
-      <section className="container grid lg:grid-cols-2 grid-cols-1 lg:gap-20 lg:pb-10 relative sm:top-0 md:top-10 lg:top-0 left-0 h-[70vh] overflow-visible">
+      <section className="container grid lg:grid-cols-2 grid-cols-1 lg:gap-20 lg:pb-10 relative sm:top-0 md:top-10 lg:top-0 left-0 h-[85vh] sm:h-[90vh] overflow-visible">
         <div className="relative z-[12] flex flex-col justify-center">
           <p className="uppercase text-[#3D445E] font-inter md:text-[14px] text-[12px] font-medium lg:w-[582px] pb-[11px] max-sm:w-[250px]" data-aos="fade-right">
             {firstTitle} {secondTitle} {thirtTitle} {fourTitle}{" "}
@@ -60,7 +72,7 @@ export default function Hero() {
             <article className="flex items-center max-md:justify-between gap-3 pb-4 pt-4">
               <button
                 onClick={scrollToContactSection}
-                className="group font-inter w-full h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[80%] bg-[#23B3FC] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] "
+                className="group font-inter w-full h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[80%] bg-[#23B3FC] transition-all duration-200 rounded-lg text-sm max-sm:text-[12px] font-medium text-white leading-[130%] "
               >
                 {t("service_button")}{" "}
                 <FaAngleRight className="group-hover:translate-x-1 transition-all duration-200" />
@@ -71,7 +83,7 @@ export default function Hero() {
                 aria-label="Contact user"
                 className="w-full"
               >
-                <button className="group font-inter lg:w-[183px] w-full h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[30%] bg-[#23B3FC]/[12%] transition-all duration-200 rounded-lg text-sm font-medium text-[#23B3FC]  leading-[130%] ">
+                <button className="group font-inter lg:w-[183px] w-full h-[40px] flex items-center justify-center gap-[11.5px] hover:bg-[#23B3FC]/[30%] bg-[#23B3FC]/[12%] transition-all duration-200 rounded-lg text-sm max-sm:text-[12px] font-medium text-[#23B3FC]  leading-[130%] ">
                   {t("applying")}{" "}
                   <FaChevronRight className="group-hover:translate-x-1 transition-all duration-200" />
                 </button>
@@ -102,8 +114,27 @@ export default function Hero() {
         </div>
         {/* oq soya */}
         <div className="absolute bottom-[-258px] left-[20%] w-[361px] h-[361px] blur-[220.64999389648438px] rounded-full bg-[#6eb8e8] firefox-bg max-md:hidden"></div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full mt-10 col-span-full">
+          {statsData.map((item) => (
+            <div
+              key={item.id}
+              className="relative overflow-hidden w-full h-[180px] bg-[#0653C9] rounded-2xl p-6 flex flex-col justify-between text-white group"
+            >
+              {/* Tepadan keluvchi yaltiroq effekt (Rasmda bor narsa) */}
+              <div className="absolute -top-5 left-0 w-full h-20 bg-[#6EB8E8] blur-[50px] opacity-65 rounded-full"></div>
+
+              <div className="relative z-10">
+                <Image src={item.icon} width={42} height={47} alt={item.label} className="mb-4" />
+              </div>
+
+              <div className="relative z-10">
+                <h6 className="text-[48px] font-bold leading-none">{item.number}</h6>
+                <p className="text-sm font-light mt-2 opacity-90">{item.label}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
-      <div className="absolute bottom-[-200px] right-0 w-full lg:h-[348px] h-[220px] shadow-hero" />
     </>
   );
 }

@@ -36,6 +36,12 @@
     "errorNotif": "An error occurred, please try again"
   },
   "HomePage": {
+    "regional_statistics": "Regional statistics",
+    "regional_description": "Key statistical indicators that clearly show the state of the system in each region",
+    "kliniknum": "Number of clinics",
+    "health_num": "Number of medical workers",
+    "activelitsenz": "Active licenses",
+    "accredationshare": "Accreditation certificates issued",
     "health_message": "Medical organizations under the Ministry of Health",
     "litsenziya_title": "Licensing and Accreditation Center state institution",
     "service_button": "Use of the service",
