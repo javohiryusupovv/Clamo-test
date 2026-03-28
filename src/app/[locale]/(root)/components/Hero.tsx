@@ -54,7 +54,7 @@ export default function Hero() {
     <>
       {/* Ko'k soya */}
       <div className="absolute bottom-2 -left-64 w-[481px] h-[481px] rounded-full bg-[#6eb8e8] blur-[220px] firefox-blur"></div>
-      <section className="container grid lg:grid-cols-2 grid-cols-1 lg:gap-20 relative sm:top-0 md:top-10 lg:top-0 left-0 sm:h-full h-auto overflow-visible sm:pb-10 pb-0">
+      <section className="container grid lg:grid-cols-2 grid-cols-1 lg:gap-20 relative sm:top-0 md:top-10 lg:top-0 left-0 sm:h-[75vh] h-[100vh] overflow-visible sm:pb-10 pb-0">
         <div className="relative z-[12] flex flex-col justify-center">
           <p className="uppercase text-[#3D445E] font-inter md:text-[14px] text-[12px] font-medium lg:w-[582px] pb-[11px] max-sm:w-[250px]" data-aos="fade-right">
             {firstTitle} {secondTitle} {thirtTitle} {fourTitle}{" "}
@@ -114,13 +114,16 @@ export default function Hero() {
         </div>
         {/* oq soya */}
         <div className="absolute bottom-[-258px] left-[20%] w-[361px] h-[361px] blur-[220.64999389648438px] rounded-full bg-[#6eb8e8] firefox-bg max-md:hidden"></div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full mt-10 col-span-full xl:pb-0 pb-10">
-          {statsData.map((item) => (
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full mt-10 col-span-full xl:pb-0 pb-10">
+          {statsData.map((item, index) => (
             <div
               key={item.id}
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom"
+              data-aos-delay={index * 100}
               className="relative overflow-hidden w-full h-[180px] py-4 bg-[#0653C9] rounded-2xl px-6 text-white group"
             >
-              {/* Tepadan keluvchi yaltiroq effekt (Rasmda bor narsa) */}
+              
               <div className="absolute -top-5 left-0 w-full h-20 bg-[#6EB8E8] blur-[50px] opacity-65 rounded-full"></div>
 
               <div className="relative z-10">
@@ -133,7 +136,7 @@ export default function Hero() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </section>
     </>
   );

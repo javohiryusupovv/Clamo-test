@@ -124,10 +124,10 @@ export default function TerritorialStatistic() {
     <section className="relative z-50 w-full bg-[#f6f9fc] overflow-visible">
       <div className="container mx-auto px-4 py-10">
         <div className="mb-8">
-          <h2 className="text-[25px] sm:text-[35px] md:text-[48px] leading-[100%] font-bold text-[#3D445E]">
+          <h2 className="text-[25px] sm:text-[35px] md:text-[48px] leading-[100%] font-bold text-[#3D445E]" data-aos="fade-up" data-aos-delay="100">
             {t("regional_statistics")}
           </h2>
-          <p className="text-[#012548CC]/80 font-medium text-[15px] sm:text-[20px] leading-[140%] mt-2">
+          <p className="text-[#012548CC]/80 font-medium text-[15px] sm:text-[20px] leading-[140%] mt-2" data-aos="fade-up" data-aos-delay="200">
             {t("regional_description")}
           </p>
         </div>
@@ -172,11 +172,11 @@ export default function TerritorialStatistic() {
               }}
             >
               <div
-                className="bg-white/95 backdrop-blur-md rounded-2xl px-[18px] py-[14px] border border-blue-100 animate-[fadeIn_0.15s_ease]"
+                className="bg-white/95 backdrop-blur-md rounded-2xl px-[14px] sm:px-[18px] sm:py-[14px] py-[10px] border border-blue-100 animate-[fadeIn_0.15s_ease]"
                 style={{ boxShadow: "0 8px 32px rgba(6,83,201,0.18), 0 2px 8px rgba(0,0,0,0.08)" }}
               >
                 <div className="flex items-center gap-2 mb-2.5 pb-2 border-b border-[#e8f0fe]">
-                  <p className="font-bold text-[23px] text-[#3d455d] m-0">{data.name}</p>
+                  <p className="font-bold text-[15px] sm:text-[23px] text-[#3d455d] m-0">{data.name}</p>
                 </div>
                 <div className="flex flex-col gap-[7px]">
                   {statsItems.map((item, idx) => (
@@ -185,8 +185,8 @@ export default function TerritorialStatistic() {
                         {item.icon}
                       </span>
                       <div>
-                        <p className="m-0 text-[12px] text-[#012548]/80 leading-tight">{item.label}</p>
-                        <p className="m-0 text-[20px] font-bold text-[#3D445E]">{item.value}</p>
+                        <p className="m-0 text-[10px] sm:text-[12px] text-[#012548]/80 leading-tight">{item.label}</p>
+                        <p className="m-0 text-[17px] sm:text-[20px] font-bold text-[#3D445E]">{item.value}</p>
                       </div>
                     </div>
                   ))}
