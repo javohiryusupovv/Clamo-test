@@ -6,22 +6,22 @@ import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
-import KlinikBino from "../../../../../public/icons/whiteTooltip1.svg"
-import TibbiyotXodim from "../../../../../public/icons/whiteTootlip2.svg"
-import ActiveClinics from "../../../../../public/icons/whiteTootlip3.svg"
-import Licenses from "../../../../../public/icons/whiteTooltip4.svg"
+// import Image from "next/image";
+// import KlinikBino from "../../../../../public/icons/whiteTooltip1.svg"
+// import TibbiyotXodim from "../../../../../public/icons/whiteTootlip2.svg"
+// import ActiveClinics from "../../../../../public/icons/whiteTootlip3.svg"
+// import Licenses from "../../../../../public/icons/whiteTooltip4.svg"
 
 export default function Hero() {
   const t = useTranslations("HomePage");
   const locale = useLocale();
 
-  const statsData = [
-    { id: 1, icon: KlinikBino, number: "12 500+", label: t("kliniknomi") },
-    { id: 2, icon: TibbiyotXodim, number: "45 000+", label: t("health_num") },
-    { id: 3, icon: ActiveClinics, number: "3 200+", label: t("activelitsenz") },
-    { id: 4, icon: Licenses, number: "10 000+", label: t("accredationshare") },
-  ];
+  // const statsData = [
+  //   { id: 1, icon: KlinikBino, number: "12 500+", label: t("kliniknomi") },
+  //   { id: 2, icon: TibbiyotXodim, number: "45 000+", label: t("health_num") },
+  //   { id: 3, icon: ActiveClinics, number: "3 200+", label: t("activelitsenz") },
+  //   { id: 4, icon: Licenses, number: "10 000+", label: t("accredationshare") },
+  // ];
 
   const [
     firstTitle,
