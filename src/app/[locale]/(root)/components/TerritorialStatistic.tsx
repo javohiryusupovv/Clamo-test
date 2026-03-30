@@ -1,51 +1,8 @@
-
-"use client"
+"use client";
 
 import { useState, useRef } from "react";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
-
-interface RegionData {
-  name: string;
-  clinics: number;
-  staff: number;
-  licenses: number;
-  accreditations: number;
-}
-
-const regionData: Record<string, RegionData> = {
-  region1: { name: "Toshkent shahri", clinics: 2845, staff: 18500, licenses: 920, accreditations: 145 },
-  region2: { name: "Toshkent viloyati", clinics: 1650, staff: 9800, licenses: 680, accreditations: 98 },
-  region3: { name: "Andijon viloyati", clinics: 1120, staff: 7200, licenses: 450, accreditations: 72 },
-  region4: { name: "Farg'ona viloyati", clinics: 1380, staff: 8900, licenses: 520, accreditations: 85 },
-  region5: { name: "Namangan viloyati", clinics: 1050, staff: 6800, licenses: 410, accreditations: 65 },
-  region6: { name: "Sirdaryo viloyati", clinics: 420, staff: 2800, licenses: 180, accreditations: 28 },
-  region7: { name: "Jizzax viloyati", clinics: 480, staff: 3100, licenses: 195, accreditations: 31 },
-  region8: { name: "Samarqand viloyati", clinics: 1290, staff: 8200, licenses: 495, accreditations: 78 },
-  region9: { name: "Qashqadaryo viloyati", clinics: 980, staff: 6100, licenses: 380, accreditations: 58 },
-  region10: { name: "Surxondaryo viloyati", clinics: 760, staff: 4800, licenses: 295, accreditations: 45 },
-  region11: { name: "Buxoro viloyati", clinics: 870, staff: 5500, licenses: 340, accreditations: 52 },
-  region12: { name: "Navoiy viloyati", clinics: 610, staff: 3900, licenses: 245, accreditations: 38 },
-  region13: { name: "Xorazm viloyati", clinics: 720, staff: 4500, licenses: 280, accreditations: 42 },
-  region14: { name: "Qoraqalpog'iston", clinics: 890, staff: 5600, licenses: 355, accreditations: 55 },
-};
-
-const regionPaths = [
-  { id: "region1", label: "Toshkent shahri" },
-  { id: "region2", label: "Toshkent viloyati" },
-  { id: "region3", label: "Andijon viloyati" },
-  { id: "region4", label: "Farg'ona viloyati" },
-  { id: "region5", label: "Namangan viloyati" },
-  { id: "region6", label: "Sirdaryo viloyati" },
-  { id: "region7", label: "Jizzax viloyati" },
-  { id: "region8", label: "Samarqand viloyati" },
-  { id: "region9", label: "Qashqadaryo viloyati" },
-  { id: "region10", label: "Surxondaryo viloyati" },
-  { id: "region11", label: "Buxoro viloyati" },
-  { id: "region12", label: "Navoiy viloyati" },
-  { id: "region13", label: "Xorazm viloyati" },
-  { id: "region14", label: "Qoraqalpog'iston" },
-];
+import Image from "next/image";
 
 
 // SVG path data (from mapSVG.svg - each path's d attribute)
@@ -66,68 +23,204 @@ const pathData = [
   "M408.833 197.294L415.973 209.588L419.416 212.63L437.648 217.7L438.668 218.333V219.221L438.286 220.361L419.926 254.963L402.586 288.044L398.888 296.79L397.358 315.548V316.689L397.486 317.576L405.263 331.772L406.538 334.56L406.283 335.067L405.518 335.955L390.983 344.066L389.453 345.334L389.581 346.474L390.091 347.742L419.033 387.414L438.286 414.031V415.298L423.113 422.523L419.543 423.663L418.523 423.41L417.503 422.903L417.248 422.523L409.216 409.721L397.613 397.046L393.661 394.005L390.601 392.23L387.413 390.836L374.408 387.667H370.838L369.436 387.921L368.161 388.554L367.141 389.442L366.121 390.709L363.443 395.906L362.296 396.793L360.511 396.92L358.853 396.286L358.471 396.032L357.451 395.526L356.686 392.864L355.793 391.596L352.223 387.667L350.948 386.907L346.996 386.146L345.466 385.513L343.426 383.611L341.003 380.95L340.238 380.443L339.346 380.062L337.561 379.682L321.623 365.233L319.456 362.825L317.671 359.656L316.523 356.107L315.758 354.713L314.738 354.079L311.423 353.953L310.021 353.572L308.873 352.812L307.853 351.671L306.068 348.249L305.303 345.967L303.391 343.179L302.881 341.658V337.602L302.753 335.701L301.733 334.94L298.418 334.56L294.976 333.8L294.338 333.42L292.808 332.279L291.788 332.406L291.406 332.659L290.003 333.8L286.561 336.208L285.158 336.842H283.373L282.353 337.095L281.843 337.475L281.716 337.856V338.236L281.843 338.616L282.736 340.264L282.863 341.151L281.971 343.179L281.333 343.94L281.206 344.066L280.696 343.306L279.676 341.785L277.636 340.01L273.811 338.616L270.751 337.475L270.623 337.349H269.348L267.053 337.475L266.161 337.095L265.396 335.828L265.523 334.56L266.288 333.673L267.436 333.293L271.516 331.772L271.261 328.223L269.986 323.787L270.241 321.505L270.623 319.604L271.643 318.717L273.046 318.21L274.193 317.323L274.448 315.802L273.556 314.661L272.536 314.027L272.026 313.774L271.388 313.52L270.878 313.267L268.966 312.633L266.671 310.478L264.758 307.563L264.631 307.436L264.503 307.183L262.591 305.155L259.531 304.775L256.598 305.155L250.733 304.648L241.298 306.169L240.151 306.296H239.896L239.131 306.422H239.003L236.453 306.803H232.883L231.226 306.169L228.548 303.254L226.891 302.62L223.448 302.24L221.536 301.226L220.643 299.578L219.878 292.607L219.241 290.959L218.221 289.438L214.013 284.876H213.886L212.356 283.862L210.571 284.115L208.658 285.002L208.403 285.129L206.746 285.509L204.706 285.636L201.646 285.129L196.928 282.974L192.466 278.792L178.568 262.441L177.931 261.681L176.273 260.794L174.998 262.822L174.106 270.553L172.831 272.961L172.576 273.215L169.771 274.102L166.328 273.849L162.886 273.088L156.893 270.68L155.618 270.173L153.961 270.046L152.686 270.426L149.116 272.708L146.566 273.722L145.291 274.736L144.653 276.003L145.036 277.778L146.311 278.918L154.853 282.848L157.148 284.749L159.316 287.917L161.101 292.227L166.073 300.339L168.878 303.507L169.643 304.268L169.898 305.028L169.643 305.789L168.878 306.296H168.496L164.416 306.93L163.396 306.676L163.268 306.422L162.631 305.409V304.014L163.013 302.493L163.141 300.846L162.886 299.325L162.376 297.423L160.718 295.269L158.423 293.621L151.793 290.452L151.666 290.326L150.263 290.199H149.626L148.988 290.326L146.566 291.34L145.546 291.466L144.398 290.833L142.868 288.551L141.848 287.664L140.573 287.157H139.043L137.641 287.41L136.366 287.917L135.601 288.805V288.931L135.346 289.438L135.091 289.945L133.306 291.847L132.413 292.354L131.521 292.734L130.373 293.748L130.628 295.269L130.756 296.156L132.158 299.198L132.286 300.592L131.648 302.747L128.971 309.084L127.951 310.098L127.058 310.352L126.038 310.732L125.401 310.985L124.763 312.126L125.273 313.52L126.166 314.534L126.421 315.422L124.891 316.436L123.616 316.816H123.488L120.046 316.562H119.026L117.623 316.816L113.926 318.717L112.268 318.97L111.631 319.224L110.738 319.351L101.176 317.703L94.8005 317.956L88.4255 320.998L82.943 326.322L79.2455 333.293L76.6955 337.095L73.8905 339.123L72.488 339.884L70.3205 340.898L67.388 342.165L65.4755 344.827V348.376L66.7505 354.333L67.0055 355.474V356.107L66.878 358.769L66.368 361.684L66.2405 364.599L67.388 367.768L68.918 370.176L69.683 372.584L69.938 375.119V378.288L70.193 380.823L71.0855 383.358L71.3405 383.738L72.488 385.513L73.8905 387.16L74.9105 387.921L75.9305 388.428L77.2055 388.681L79.2455 389.188L79.628 389.442L79.7555 389.568L79.628 390.202L78.863 391.089L77.4605 392.103L74.273 393.751L72.998 395.272L70.958 399.074L70.193 399.455L69.5555 399.835L63.4355 398.567L61.268 398.06L54.893 396.793L39.848 395.906L37.4255 395.779L23.4005 395.018L10.778 394.385L3.51052 394.005L1.34302 393.878V393.498V185.633V110.472V54.7034L48.263 39.7473L67.388 33.5367L103.726 21.876L109.718 20.1015L118.133 17.4399L126.548 14.9049L135.091 12.37L138.916 11.1025L142.868 9.9618L146.693 8.82108L150.646 7.68035L154.726 6.53964L158.806 5.27217L162.886 4.13145L166.966 2.99072L172.448 1.34302L173.978 1.59651L175.891 2.35699L176.273 2.61049L175.763 3.37097L175.253 4.0047L175.126 4.76518L174.998 6.28614L174.616 8.0606L174.233 8.94782L173.978 9.83505L173.851 10.4688V11.863L173.596 13.5107V14.2712V14.3979V15.9189L173.468 16.2991L172.448 17.0596L171.938 17.5666L170.281 19.9748L169.643 20.355L169.388 20.6085L168.241 21.4958L167.348 23.397L164.671 27.0726L164.416 27.7063L164.288 28.4668L164.033 30.7483L164.161 32.396L163.778 33.5367L162.631 35.4379L162.121 38.0996L161.611 42.2822L160.591 44.9439L158.551 47.4788L157.531 48.8731V49.1266L157.148 50.0138L156.766 52.0417V53.3092L155.873 55.8441L155.491 58.2523L154.216 59.9L152.431 63.4489V64.0827L151.921 65.3501L151.538 67.1246L151.411 69.2793L151.921 74.0957L152.558 77.0108L153.833 80.3063L155.491 84.2354L157.913 89.8123L158.168 92.3472L157.658 95.3891L157.021 96.4031L156.001 96.1496L155.108 96.0229L154.216 96.6566L153.068 98.4311L152.558 99.6985L152.303 101.473L152.431 105.782L153.068 107.557L154.088 108.571L155.236 108.951L157.021 109.205H159.826H161.101L164.671 107.303L169.133 101.6L171.938 95.5159L173.341 87.1506L175.636 77.8981L174.488 76.3771H176.656L177.803 74.7294L178.696 72.0677L178.568 68.5188L177.676 66.4909L175.636 64.5897L174.871 62.8152L174.998 61.421L176.273 59.5198L176.528 57.2383L176.273 55.7174L174.998 54.3232L173.468 54.0697L179.971 47.8591L181.756 44.9439L182.648 42.409V40.6345L181.373 35.3112L179.843 31.6355L179.078 29.6076V25.9319L179.588 20.9888L181.246 12.877L181.883 10.849L184.561 8.31409L186.728 9.70831L193.358 14.1444L201.901 19.9748L207.766 23.9039L212.228 26.8191L223.831 34.6774L236.453 43.0427L243.211 47.6056L320.858 104.642L337.306 116.809L338.836 117.823L345.338 122.64L345.593 124.668L346.231 126.822L350.183 133.286L357.961 141.652L361.658 145.581L365.356 149.637L370.073 154.96L374.026 159.523L377.851 163.959L381.803 168.395L385.628 172.831L389.453 177.268L393.278 181.577L396.976 186.013L400.801 190.322L405.901 196.153L407.303 196.66L408.578 197.294H408.833Z"
 ];
 
+// ✅ Duplicate olib tashlandi
+interface APIRegion {
+  region_id: number;
+  region: string;
+  clinics_count: number;
+  employees_count: number;
+  licenses_count: number;
+  accreditations_count: number;
+}
 
-export default function TerritorialStatistic() {
+interface StatisticsData {
+  clinics_count: number;
+  employees_count: number;
+  licenses_count: number;
+  accreditations_count: number;
+}
+
+interface RegionData {
+  name: string;
+  clinics: number;
+  staff: number;
+  licenses: number;
+  accreditations: number;
+}
+
+interface Props {
+  regionsData: APIRegion[];
+  statistics: StatisticsData;
+}
+
+// ✅ region_id → SVG regionKey mapping
+const REGION_ID_MAP: Record<number, string> = {
+  12: "region1",  // Tashkent city
+  13: "region2",  // Tashkent region
+  7: "region3",  // Andijan
+  6: "region4",  // Fergana
+  8: "region5",  // Namangan
+  5: "region6",  // Syrdarya
+  4: "region7",  // Jizzakh
+  14: "region8",  // Samarkand
+  9: "region9",  // Kashkadarya
+  10: "region10", // Surkhandarya
+  1: "region11", // Bukhara
+  11: "region12", // Navoi
+  3: "region13", // Khorezm
+  2: "region14", // Karakalpakstan
+};
+
+// ✅ label olib tashlandi — ishlatilmagan
+const regionPaths = [
+  { id: "region1" },
+  { id: "region2" },
+  { id: "region3" },
+  { id: "region4" },
+  { id: "region5" },
+  { id: "region6" },
+  { id: "region7" },
+  { id: "region8" },
+  { id: "region9" },
+  { id: "region10" },
+  { id: "region11" },
+  { id: "region12" },
+  { id: "region13" },
+  { id: "region14" },
+];
+
+export default function TerritorialStatistic({ regionsData, statistics }: Props) {
   const [hoveredRegion, setHoveredRegion] = useState<string | null>(null);
   const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
   const svgRef = useRef<SVGSVGElement>(null);
-  const t = useTranslations("HomePage")
+  const t = useTranslations("HomePage");
+
+  // ✅ API → regionData konvertatsiya
+  const regionData: Record<string, RegionData> = {};
+  regionsData.forEach((item) => {
+    const key = REGION_ID_MAP[item.region_id];
+    if (key) {
+      regionData[key] = {
+        name: item.region,
+        clinics: item.clinics_count,
+        staff: item.employees_count,
+        licenses: item.licenses_count,
+        accreditations: item.accreditations_count,
+      };
+    }
+  });
 
   const handleMouseMove = (e: React.MouseEvent<SVGPathElement>, id: string) => {
-    const svgEl = svgRef.current;
-    if (!svgEl) return;
-    const rect = svgEl.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
     setHoveredRegion(id);
-    setTooltipPos({ x, y });
+    setTooltipPos({
+      x: e.clientX, // ✅ rect.left olib tashlandi
+      y: e.clientY, // ✅ rect.top olib tashlandi
+    });
   };
 
-  const getFill = (id: string) => {
-    if (hoveredRegion === id) return "#3b82f6";
-    return "#CBD5E1";
-  };
-
-  const getFillOpacity = (id: string) => {
-    if (hoveredRegion === id) return "0.9";
-    return "0.4";
-  };
+  const getFill = (id: string) => hoveredRegion === id ? "#3b82f6" : "#CBD5E1";
+  const getFillOpacity = (id: string) => hoveredRegion === id ? "0.9" : "0.4";
 
   const data = hoveredRegion ? regionData[hoveredRegion] : null;
 
-  const statsItems = data
-    ? [
-      {
-        icon: <Image src="/icons/buildingTooltip.svg" width={22} height={22} alt="klinika" />,
-        label: t("kliniknomi"),
-        value: data.clinics.toLocaleString("ru-RU"),
-      },
-      {
-        icon: <Image src="/icons/doctorTooltip.svg" width={22} height={22} alt="xodim" />,
-        label: t("health_num"),
-        value: data.staff.toLocaleString("ru-RU"),
-      },
-      {
-        icon: <Image src="/icons/litsenziyaicons.svg" width={22} height={22} alt="litsenziya" />,
-        label: t("activelitsenz"),
-        value: data.licenses.toLocaleString("ru-RU"),
-      },
-      {
-        icon: <Image src="/icons/CertificateTooltip.svg" width={22} height={22} alt="akreditatsiya" />,
-        label: t("accredationshare"),
-        value: data.accreditations.toLocaleString("ru-RU"),
-      },
-    ]
-    : [];
+  const statsItems = data ? [
+    {
+      icon: <Image src="/icons/buildingTooltip.svg" width={22} height={22} alt="" aria-hidden="true" />,
+      label: t("kliniknomi"),
+      value: data.clinics.toLocaleString("ru-RU"),
+    },
+    {
+      icon: <Image src="/icons/doctorTooltip.svg" width={22} height={22} alt="" aria-hidden="true" />,
+      label: t("health_num"),
+      value: data.staff.toLocaleString("ru-RU"),
+    },
+    {
+      icon: <Image src="/icons/litsenziyaicons.svg" width={22} height={22} alt="" aria-hidden="true" />,
+      label: t("activelitsenz"),
+      value: data.licenses.toLocaleString("ru-RU"),
+    },
+    {
+      icon: <Image src="/icons/CertificateTooltip.svg" width={22} height={22} alt="" aria-hidden="true" />,
+      label: t("accredationshare"),
+      value: data.accreditations.toLocaleString("ru-RU"),
+    },
+  ] : [];
+
+
+  const statsData = [
+    {
+      id: 1,
+      icon: "/icons/whiteTooltip1.svg",
+      number: statistics?.clinics_count?.toLocaleString("ru-RU"),
+      label: t("kliniknomi"),
+    },
+    {
+      id: 2,
+      icon: "/icons/whiteTootlip2.svg",
+      number: statistics?.employees_count?.toLocaleString("ru-RU"),
+      label: t("health_num"),
+    },
+    {
+      id: 3,
+      icon: "/icons/whiteTootlip3.svg",
+      number: statistics.licenses_count.toLocaleString("ru-RU"),
+      label: t("activelitsenz"),
+    },
+    {
+      id: 4,
+      icon: "/icons/whiteTooltip4.svg",
+      number: statistics?.accreditations_count?.toLocaleString("ru-RU") + "+",
+      label: t("accredationshare"),
+    },
+  ];
 
   return (
     <section className="relative z-50 w-full bg-[#f6f9fc] overflow-visible">
       <div className="container mx-auto px-4 py-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full mb-10">
+          {statsData?.map((item, index) => (
+            <div
+              key={item.id}
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom"
+              data-aos-delay={index * 100}
+              className="relative overflow-hidden w-full h-[180px] py-4 bg-[#0653C9] rounded-2xl px-6 text-white"
+            >
+              <div className="absolute -top-5 left-0 w-full h-20 bg-[#6EB8E8] blur-[50px] opacity-65 rounded-full" />
+              <div className="relative z-10">
+                <Image
+                  src={item.icon}
+                  width={42}
+                  height={47}
+                  alt=""
+                  aria-hidden="true"
+                  className="mb-4"
+                />
+              </div>
+              <div className="relative z-10">
+                <p className="text-[28px] md:text-[33px] lg:text-[35px] xl:text-[40px] font-bold leading-none">
+                  {item.number}
+                </p>
+                <p className="text-[13px] md:text-[13px] font-light mt-2 opacity-90">
+                  {item.label}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
         <div className="mb-8">
-          <h2 className="text-[25px] sm:text-[35px] md:text-[48px] leading-[100%] font-bold text-[#3D445E]" data-aos="fade-up" data-aos-delay="100">
+          <h2
+            className="text-[25px] sm:text-[35px] md:text-[48px] leading-[100%] font-bold text-[#3D445E]"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             {t("regional_statistics")}
           </h2>
-          <p className="text-[#012548CC]/80 font-medium text-[15px] sm:text-[20px] leading-[140%] mt-2" data-aos="fade-up" data-aos-delay="200">
+          <p
+            className="text-[#012548CC]/80 font-medium text-[15px] sm:text-[20px] leading-[140%] mt-2"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             {t("regional_description")}
           </p>
         </div>
@@ -141,6 +234,7 @@ export default function TerritorialStatistic() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             style={{ width: "100%", height: "auto", cursor: "pointer", display: "block" }}
+            aria-label="O'zbekiston viloyatlari xaritasi"
           >
             {pathData.map((d, i) => {
               const id = regionPaths[i]?.id || `region${i + 1}`;
@@ -163,12 +257,13 @@ export default function TerritorialStatistic() {
             })}
           </svg>
 
+          {/* ✅ fixed — sahifa layoutiga ta'sir qilmaydi */}
           {hoveredRegion && data && (
             <div
-              className="absolute pointer-events-none z-[999] min-w-[220px]"
+              className="fixed pointer-events-none z-[9999] min-w-[220px]"
               style={{
-                top: Math.min(tooltipPos.y + 16, 600),
-                left: Math.min(tooltipPos.x + 16, 720),
+                top: tooltipPos.y + 16,
+                left: Math.min(tooltipPos.x + 16, window.innerWidth - 260), // ✅ ekrandan chiqib ketmasin
               }}
             >
               <div
@@ -176,7 +271,9 @@ export default function TerritorialStatistic() {
                 style={{ boxShadow: "0 8px 32px rgba(6,83,201,0.18), 0 2px 8px rgba(0,0,0,0.08)" }}
               >
                 <div className="flex items-center gap-2 mb-2.5 pb-2 border-b border-[#e8f0fe]">
-                  <p className="font-bold text-[15px] sm:text-[23px] text-[#3d455d] m-0">{data.name}</p>
+                  <p className="font-bold text-[15px] sm:text-[23px] text-[#3d455d] m-0">
+                    {data.name}
+                  </p>
                 </div>
                 <div className="flex flex-col gap-[7px]">
                   {statsItems.map((item, idx) => (
@@ -185,7 +282,7 @@ export default function TerritorialStatistic() {
                         {item.icon}
                       </span>
                       <div>
-                        <p className="m-0 text-[12px] sm:text-[12px] text-[#012548]/80 leading-tight">{item.label}</p>
+                        <p className="m-0 text-[12px] text-[#012548]/80 leading-tight">{item.label}</p>
                         <p className="m-0 text-[17px] sm:text-[20px] font-bold text-[#3D445E]">{item.value}</p>
                       </div>
                     </div>
@@ -206,3 +303,4 @@ export default function TerritorialStatistic() {
     </section>
   );
 }
+

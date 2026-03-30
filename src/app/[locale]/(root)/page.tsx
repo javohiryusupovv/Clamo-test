@@ -14,7 +14,8 @@ import { getFaqs } from "@/lib/getFaqs";
 import ClamoStatistic from "./components/ClamoStatistic";
 import { getReviews } from "@/lib/getSharh";
 import { getServices } from "@/lib/getServicec";
-// import TerritorialStatistic from "./components/TerritorialStatistic";
+import TerritorialStatistic from "./components/TerritorialStatistic";
+import { getStatistics, getStatisticsByRegion } from "@/lib/getStatistiks";
 
 export default async function Main() {
   const data = await getData();
@@ -22,14 +23,17 @@ export default async function Main() {
   const part = await getPartners();
   const faqData = await getFaqs();
   const service = await getServices();
-  const comments = await getReviews()
-  
+  const comments = await getReviews();
+  const [statistics, statistickbyRegion] = await Promise.all([
+    getStatistics(),         // → { clinics_count, employees_count, licenses_count, accreditations_count }
+    getStatisticsByRegion(), // → [{ region_id, region, clinics_count, ... }]
+  ]);
   
 
   return (
     <div className="overflow-hidden">
-      <Hero />
-      {/* <TerritorialStatistic/> */}
+      <Hero/>
+      <TerritorialStatistic regionsData={statistickbyRegion} statistics={statistics}/>
       <ClamoStatistic numbers={data[0]}/>
       <MedicalLegal />
       <div className="bg-[#F6F9FC] scroll-mt-3" id="contact-section">
