@@ -4,17 +4,14 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts")
 
 const nextConfig: NextConfig = {
-  images: {
+ images: {
     remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "admin.clamo.uz",
-      },
-      {
-        protocol: "https",
-        hostname: "cdn.commeta.uz",
-      },
+      { protocol: "https", hostname: "admin.clamo.uz" },
+      { protocol: "https", hostname: "cdn.commeta.uz" },
+      { protocol: "https", hostname: "cdn.clamo.uz" }, // ✅ qo'shildi
     ],
+    formats: ['image/avif', 'image/webp'], // ✅ WebP/AVIF avtomatik
+    minimumCacheTTL: 31536000,             // ✅ next/image cache 1 yil
   },
   experimental: {
     optimizePackageImports: [
@@ -23,7 +20,6 @@ const nextConfig: NextConfig = {
       'lucide-react',          // ✅ qo'shing
       'date-fns',              // ✅ agar ishlatsangiz
     ],
-    optimizeCss: true,
   },
   compress: true,
   poweredByHeader: false,
