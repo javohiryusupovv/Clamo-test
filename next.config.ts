@@ -17,7 +17,12 @@ const nextConfig: NextConfig = {
     ],
   },
   experimental: {
-    optimizePackageImports: ['@radix-ui/react-icons'],
+    optimizePackageImports: [
+      '@radix-ui/react-icons',
+      'react-icons',           // ✅ qo'shing
+      'lucide-react',          // ✅ qo'shing
+      'date-fns',              // ✅ agar ishlatsangiz
+    ],
     optimizeCss: true,
   },
   compress: true,

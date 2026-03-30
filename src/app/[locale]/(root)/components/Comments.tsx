@@ -2,7 +2,6 @@
 
 import "../../../../styles/linerMainserver.css";
 import { commentOpinion } from "@/types/type";
-import Marquee from "react-fast-marquee";
 import { getOpinion } from "../../../../../constants/page";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
@@ -10,6 +9,14 @@ import { CommentSharh } from "app.types";
 import dayjs from "../../../../lib/day-setup";
 import Link from "next/link";
 import Image from "next/image"; // ✅
+import dynamic from "next/dynamic";
+
+// ✅ Marquee lazy load — TBT kamayadi
+const Marquee = dynamic(() => import("react-fast-marquee"), {
+  ssr: false,
+  loading: () => <div className="h-[200px]" />,
+});
+
 
 interface CommentProps {
   comments: CommentSharh[];

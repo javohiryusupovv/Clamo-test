@@ -3,7 +3,9 @@ import { FAQItem } from "../../app.types";
 
 export async function getFaqs(): Promise<FAQItem[]> {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/home/faqs/`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/home/faqs/`, {
+      next: { revalidate: 3600 } // ✅ qo'shildi
+    });
     if (!res.ok) throw new Error("Failed to fetch FAQs");
     return res.json();
   } catch (error) {

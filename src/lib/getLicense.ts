@@ -10,17 +10,13 @@ interface PaginatedReyesterResponse {
 export async function getReyestersFromAPI(page = 1): Promise<PaginatedReyesterResponse> {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/reyester/?page=${page}`,
-    {
-      next: { revalidate: 3600 }
-    }
+    { next: { revalidate: 3600 } }
   );
 
   if (!res.ok) throw new Error("Failed to fetch reyesters");
 
   const data = await res.json();
-
-  if (typeof window !== "undefined") {
-  }
+  // ✅ bo'sh if olib tashlandi
 
   return {
     results: data.results || [],
@@ -29,6 +25,9 @@ export async function getReyestersFromAPI(page = 1): Promise<PaginatedReyesterRe
     previous: data.previous || null,
   };
 }
+
+// ✅ Takror fetch — getFilterFromAPI dan foydalaning, bu funksiyani o'chiring
+// export async function getReyesterTypes() { ... } // ❌ o'chiring
 
 
 export async function getReyesterTypes() {

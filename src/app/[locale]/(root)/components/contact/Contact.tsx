@@ -218,9 +218,9 @@ export default function Contact() {
         {/* Contact Form */}
         <div className="py-6 px-4 sm:px-8 lg:mt-0 border border-gray-200 w-full sm:w-[500px] lg:absolute lg:right-16 h-auto bg-white lg:rounded-[36px] rounded-2xl">
           <article className="mb-[26px]">
-            <h5 className="text-[24px] sm:text-[28px] font-vk lg:text-[32px] font-bold leading-[120%] text-[#3D445E] mb-3">
+            <h2 className="text-[24px] sm:text-[28px] font-vk lg:text-[32px] font-bold leading-[120%] text-[#3D445E] mb-3">
               {t('formTitle')}
-            </h5>
+            </h2>
             <p className="text-[#4B5563] text-[14px] font-vk sm:text-[15px] lg:text-[16px] font-normal leading-[130%]">
               {t('formSubtitle')}
             </p>

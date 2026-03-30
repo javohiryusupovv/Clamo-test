@@ -11,9 +11,9 @@ import { getData } from "@/lib/getData";
 import { getNews } from "@/lib/getNews";
 import { getPartners } from "@/lib/getPartners";
 import { getFaqs } from "@/lib/getFaqs";
-import { getServicec } from "@/lib/getServicec";
 import ClamoStatistic from "./components/ClamoStatistic";
 import { getReviews } from "@/lib/getSharh";
+import { getServices } from "@/lib/getServicec";
 // import TerritorialStatistic from "./components/TerritorialStatistic";
 
 export default async function Main() {
@@ -21,7 +21,7 @@ export default async function Main() {
   const datas = await getNews();
   const part = await getPartners();
   const faqData = await getFaqs();
-  const service = await getServicec();
+  const service = await getServices();
   const comments = await getReviews()
   
   

@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import Marquee from "react-fast-marquee";
 import { useTranslations } from "next-intl";
 import { Partner } from "../../../../../../app.types";
 import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 
 export default function Partnyor({ partners }: { partners: Partner[] }) {
   const t = useTranslations("InternationalPage");
@@ -21,6 +21,12 @@ export default function Partnyor({ partners }: { partners: Partner[] }) {
     window.addEventListener("resize", checkScreen);
     return () => window.removeEventListener("resize", checkScreen);
   }, []);
+
+  // ✅ Marquee lazy load — TBT kamayadi
+  const Marquee = dynamic(() => import("react-fast-marquee"), {
+    ssr: false,
+    loading: () => <div className="h-[200px]" />,
+  });
 
   // 👉 Marquee to‘lishi uchun partnerlar sonini ko‘paytirish
   const minCount = 10; // minimal ko‘rsatiladigan elementlar soni
