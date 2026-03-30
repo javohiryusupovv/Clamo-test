@@ -25,24 +25,22 @@ export default async function Main() {
   const service = await getServices();
   const comments = await getReviews();
   const [statistics, statistickbyRegion] = await Promise.all([
-    getStatistics(),   
+    getStatistics(),
     getStatisticsByRegion()
   ]);
 
-  if (!statistics || !statistickbyRegion) {
-    console.error("Statistikalar yuklanmadi");
-    return (
-      <div className="text-center py-20">
-        <p>Statistikalar yuklanmadi. Iltimos, keyinroq qayta urinib ko&apos;ring.</p>
-      </div>
-    );  
-  }
-  
+  const safeStatistics = statistics ?? {
+    clinics_count: 0,
+    employees_count: 0,
+    licenses_count: 0,
+    accreditations_count: 0,
+  };
+  const safeRegionsData = statistickbyRegion ?? [];
 
   return (
     <div className="overflow-hidden">
       <Hero/>
-      <TerritorialStatistic regionsData={statistickbyRegion} statistics={statistics}/>
+      <TerritorialStatistic regionsData={safeRegionsData} statistics={safeStatistics}/>
       <ClamoStatistic numbers={data[0]}/>
       <MedicalLegal />
       <div className="bg-[#F6F9FC] scroll-mt-3" id="contact-section">

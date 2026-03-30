@@ -1,4 +1,3 @@
-// ✅ getStatistics va getStatisticsByRegion ga try/catch qo'shing
 export async function getStatistics() {
   try {
     const res = await fetch(
@@ -6,16 +5,11 @@ export async function getStatistics() {
       { next: { revalidate: 3600 } }
     );
     if (!res.ok) throw new Error(`Status: ${res.status}`);
-    return res.json();
+    const data = await res.json();
+    return data;
   } catch (error) {
     console.error("getStatistics xatosi:", error);
-    // ✅ Xato bo'lsa default qiymat qaytaradi — crash bo'lmaydi
-    return {
-      clinics_count: 0,
-      employees_count: 0,
-      licenses_count: 0,
-      accreditations_count: 0,
-    };
+    return null;
   }
 }
 
@@ -26,9 +20,10 @@ export async function getStatisticsByRegion() {
       { next: { revalidate: 3600 } }
     );
     if (!res.ok) throw new Error(`Status: ${res.status}`);
-    return res.json();
+    const data = await res.json();
+    return data;
   } catch (error) {
     console.error("getStatisticsByRegion xatosi:", error);
-    return []; // ✅ bo'sh array
+    return null;
   }
 }
