@@ -31,7 +31,6 @@ export default async function Main() {
 
   if (!statistics || !statistickbyRegion) {
     console.error("Statistikalar yuklanmadi");
-    // ✅ Xato bo'lsa default qiymat qaytaradi — crash bo'lmaydi  
     return (
       <div className="text-center py-20">
         <p>Statistikalar yuklanmadi. Iltimos, keyinroq qayta urinib ko'ring.</p>
