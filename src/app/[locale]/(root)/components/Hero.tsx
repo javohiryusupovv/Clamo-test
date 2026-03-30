@@ -4,7 +4,6 @@ import { FaChevronRight } from "react-icons/fa";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa6";
-import { usePathname } from "next/navigation";
 import Image from "next/image";
 // import Image from "next/image";
 // import KlinikBino from "../../../../../public/icons/whiteTooltip1.svg"
