@@ -3,19 +3,19 @@
   // import DepartmentSection from "./_components/DepartmentSection";
   import TeamCarousel from "./_components/TeamCarousel";
   import AboutMain from "./_components/AboutMain";
-  import { getServicec } from "@/lib/getServicec";
   import { getTeamCarousel } from "@/lib/getTeamCarousel";
   // import { getSection } from "@/lib/getSection";
   // import { getCarousel } from "@/lib/getCarousel"; // yoki sizga mos yo'l
   // import Secondpage from "@/app/[locale]/(root)/consulting/_components/secondpage"
 import { getLocalizedValue } from "@/lib/getLocalization";
+import { getServices } from "@/lib/getServicec";
 // import CenterStructure from "./_components/CenterStructure";
 
 
 
   export async function generateMetadata({ params }: { params: Promise<{locale: string }>}) {
     const {locale} = await params
-    const sectionData = await getServicec();
+    const sectionData = await getServices();
   const content = sectionData[0];
 
   return {
@@ -29,7 +29,7 @@ import { getLocalizedValue } from "@/lib/getLocalization";
 
   export default async function About() {
     // const department = await getSection();
-    const service = await getServicec();
+    const service = await getServices();
     const members = await getTeamCarousel();
     // const carouselData = await getCarousel();
 
