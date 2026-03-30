@@ -33,7 +33,7 @@ export default async function Main() {
     console.error("Statistikalar yuklanmadi");
     return (
       <div className="text-center py-20">
-        <p>Statistikalar yuklanmadi. Iltimos, keyinroq qayta urinib ko'ring.</p>
+        <p>Statistikalar yuklanmadi. Iltimos, keyinroq qayta urinib ko&apos;ring.</p>
       </div>
     );  
   }
