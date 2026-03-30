@@ -25,9 +25,19 @@ export default async function Main() {
   const service = await getServices();
   const comments = await getReviews();
   const [statistics, statistickbyRegion] = await Promise.all([
-    getStatistics(),         // → { clinics_count, employees_count, licenses_count, accreditations_count }
-    getStatisticsByRegion(), // → [{ region_id, region, clinics_count, ... }]
+    getStatistics(),   
+    getStatisticsByRegion()
   ]);
+
+  if (!statistics || !statistickbyRegion) {
+    console.error("Statistikalar yuklanmadi");
+    // ✅ Xato bo'lsa default qiymat qaytaradi — crash bo'lmaydi  
+    return (
+      <div className="text-center py-20">
+        <p>Statistikalar yuklanmadi. Iltimos, keyinroq qayta urinib ko'ring.</p>
+      </div>
+    );  
+  }
   
 
   return (
