@@ -2,11 +2,12 @@
 
 import { useLocale, useTranslations } from "next-intl";
 import { Inter } from "next/font/google";
-import "aos/dist/aos.css";
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
+  display: "swap",
+  preload: true
 });
 import Link from "next/link";
 import { useEffect } from "react";

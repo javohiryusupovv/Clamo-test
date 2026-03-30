@@ -75,6 +75,8 @@
                     <Link
                       href={"https://instagram.com/clamo.uz"}
                       target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Clamo Instagram sahifasi"
                       className="group hover:bg-[#0650C3] transition-all duration-200 p-[10px] cursor-pointer bg-[#0650C3]/[18%] rounded-lg"
                     >
                       <svg
@@ -88,6 +90,8 @@
                     <Link
                       href={"https://t.me/CLAMO_uz"}
                       target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Clamo Telegram kanali"
                       className="group hover:bg-[#0650C3] transition-all duration-200 p-[10px] cursor-pointer bg-[#0650C3]/[18%] rounded-lg"
                     >
                       <svg
@@ -102,6 +106,8 @@
                         "https://www.linkedin.com/in/clamo-social-3a1454364/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                       }
                       target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Clamo LinkedIn sahifasi"
                       className="group hover:bg-[#0650C3] transition-all duration-200 p-[10px] cursor-pointer bg-[#0650C3]/[18%] rounded-lg"
                     >
                       <svg
@@ -116,6 +122,8 @@
                         "https://www.facebook.com/people/CLAMO-Rasmiy/61574003283120/?mibextid=wwXIfr&rdid=jD2A4C8aUmaFwdKS&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15rQ6GTeNE%2F%3Fmibextid%3DwwXIfr"
                       }
                       target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Clamo Facebook sahifasi"
                       className="group hover:bg-[#0650C3] transition-all duration-200 p-[10px] cursor-pointer bg-[#0650C3]/[18%] rounded-lg"
                     >
                       <svg
@@ -171,7 +179,7 @@
                     >
                       <path
                         d="M0.000244141 7.99999C0.000244141 3.58172 3.58197 0 8.00024 0H24.0002C28.4185 0 32.0002 3.58172 32.0002 8V24C32.0002 28.4183 28.4185 32 24.0002 32H8.00024C3.58197 32 0.000244141 28.4183 0.000244141 24V7.99999Z"
-                        fill="#4489F7"
+                        fill="#1D4ED8"
                       />
                       <path
                         d="M12.0204 13.4864C11.9254 13.5511 11.8328 13.6181 11.7427 13.6873C11.6745 13.7233 11.6084 13.7649 11.5446 13.8123C10.2197 14.7969 9.08269 16.0443 8.18215 17.2368L6.84884 15.8925C5.389 14.4206 5.85895 12.9285 7.89872 12.5858L11.0884 12.0514C11.6183 11.9607 12.2582 11.4869 12.4982 10.9929L14.258 7.44418C15.2179 5.51861 16.7777 5.51861 17.7276 7.44418L19.4874 10.9929C19.7274 11.4869 20.3673 11.9607 20.9073 12.0514L24.0969 12.5858C26.1367 12.9285 26.6166 14.4206 25.1468 15.8925L22.6671 18.3927C22.2471 18.8161 22.0172 19.6327 22.1471 20.2175L22.8571 23.3125C23.417 25.7623 22.1271 26.71 19.9774 25.4296L17.3762 23.8771C17.561 23.7648 17.7156 23.6603 17.8401 23.5667C18.0697 23.4503 18.2945 23.3177 18.5133 23.1686C21.2166 21.3257 21.9546 17.6642 20.1616 14.9906C18.3686 12.3169 14.7237 11.6434 12.0204 13.4864Z"
@@ -272,6 +280,7 @@
                 <Link
                   href={"https://iq-tech.uz/"}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="group flex items-center transition-all duration-300"
                 >
                   <img

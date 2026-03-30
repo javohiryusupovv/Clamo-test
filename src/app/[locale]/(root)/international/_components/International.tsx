@@ -4,7 +4,6 @@ import { ChevronRight } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { useEffect } from "react";
-import "aos/dist/aos.css";
 
 export default function International() {
   const t = useTranslations("InternationalPage");

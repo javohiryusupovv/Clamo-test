@@ -4,8 +4,7 @@ export async function getFilterFromAPI(): Promise<FilterItem[]> {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/reyester/types/`,
     {
-      next: { revalidate: 60 },
-      cache: "no-store",
+      next: { revalidate: 60 }
     }
   );
 

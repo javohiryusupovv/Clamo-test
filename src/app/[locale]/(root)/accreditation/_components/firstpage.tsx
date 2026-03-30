@@ -2,11 +2,13 @@
 
 import { useLocale, useTranslations } from "next-intl";
 import { Inter } from "next/font/google";
-import "aos/dist/aos.css";
+
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
+  display: "swap",
+  preload: true
 });
 import Link from "next/link";
 import { useEffect } from "react";
@@ -88,6 +90,7 @@ export default function AccredationHead() {
               <Link
                 href={`https://my.gov.uz/uz/service/519`}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="w-full"
               >
                 <button className="group font-inter w-full px-5 h-[37px] flex items-center justify-center gap-[11.5px] hover:bg-[hsl(200,97%,65%)] bg-[#23b3fc] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">

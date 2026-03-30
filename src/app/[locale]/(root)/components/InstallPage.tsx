@@ -43,9 +43,9 @@ export default function InstallPage() {
 
         {/* Content Section */}
         <div className="w-full lg:w-1/2 z-20 mt-6 lg:mt-0 max-xl:translate-x-3 max-lg:translate-x-0">
-          <h6 className="text-[20px] sm:text-[24px] font-vk font-bold text-white mb-2">
+          <h2 className="text-[20px] sm:text-[24px] font-vk font-bold text-white mb-2">
             {t("install_app")}
-          </h6>
+          </h2>
           <p className="text-sm text-white opacity-60 font-vk leading-relaxed mb-4">
             {t("appeal_title")}
           </p>
@@ -54,6 +54,7 @@ export default function InstallPage() {
             <Link
               href={"https://apps.apple.com/uz/app/sharh/id6454791625"}
               target="_blank"
+              rel="noopener noreferrer"
               className="flex hover:bg-white/30 transition-all duration-200 items-center px-4 py-2 bg-white/20 rounded-lg gap-2"
             >
               <SiApple className="w-[30px] h-[30px] text-white" />
@@ -69,6 +70,7 @@ export default function InstallPage() {
                 "https://play.google.com/store/apps/details?id=io.commeta.sharhuz&hl=ru"
               }
               target="_blank"
+              rel="noopener noreferrer"
               className="group hover:bg-white/30 transition-all duration-200 flex items-center px-4 py-2 bg-white/20 rounded-lg gap-2"
             >
               <FaGooglePlay className="w-[30px] h-[30px] text-white" />
@@ -82,6 +84,7 @@ export default function InstallPage() {
             <Link
               href={"https://appgallery.huawei.com/app/C109615407"}
               target="_blank"
+              rel="noopener noreferrer"
               className="flex hover:bg-white/30 transition-all duration-200 items-center px-4 py-2 bg-white/20 rounded-lg gap-2"
             >
               <img

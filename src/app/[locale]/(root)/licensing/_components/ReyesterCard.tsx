@@ -75,7 +75,7 @@ export default function ReyesterCard({
             </div>
           </div>
         </div>
-        <Link href={`/${locale}/cabinet-clamo`} className=" group font-inter flex items-center justify-center gap-1 mt-2 sm:mt-0 text-[10px] sm:text-xs md:text-sm text-[#23B3FC] font-medium bg-blue-50 px-1.5 sm:px-2 md:px-3 py-1.5 sm:py-2 rounded-md hover:bg-blue-100 transition-colors">
+        <Link href={`/${locale}/cabinet-clamo`} className=" group font-inter flex items-center justify-center gap-1 mt-2 sm:mt-0 text-[12px] sm:text-xs md:text-sm text-[#23B3FC] font-medium bg-blue-50 px-1.5 sm:px-2 md:px-3 py-1.5 sm:py-2 rounded-md hover:bg-blue-100 transition-colors">
           {t("view_license")}
           <FaArrowRightLong className="group-hover:rotate-[1deg] group-hover:scale-105 transition-all duration-100 -rotate-45" />
         </Link>

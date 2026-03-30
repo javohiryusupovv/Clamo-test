@@ -8,8 +8,9 @@
     "aboutss": "Markaz haqida",
     "international": "Xalqaro hamkorlik",
     "consulting": "Konsultatsiya",
-    "regulatorydocuments": "Normativ Hujjatlar",
-    "fight_against_corruption": "Korrupsiyaga qarshi kurash"
+    "regulatorydocuments": "Normativ hujjatlar",
+    "fight_against_corruption": "Korrupsiyaga qarshi kurash",
+    "news": "Yangiliklar"
   },
   "ComingSoon": {
     "message": "Bu funksionallik tez orada ishga tushiriladi.",
@@ -276,7 +277,7 @@
     }
   },
   "ContactPage": {
-    "contactTitle": "Bog‘lanish uchun",
+    "contactTitle": "Bog'lanish uchun",
     "contactDescription": "Siz tizimdan chiqishingiz mumkin bo'lgan quyidagi usullardan foydalanib biz bilan bog'laning",
     "addressLabel": "Ofisimizga tashrif buyuring",
     "address": "Toshkent shahri, Parkent ko’chasi, 51-uy",

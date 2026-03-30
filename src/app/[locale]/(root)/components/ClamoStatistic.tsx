@@ -63,7 +63,7 @@ export default function ClamoStatistic({ numbers }: { numbers: NumbersType }) {
                 <div className="w-full sm:rounded-[36px] rounded-2xl bg-[#0653C9] overflow-hidden relative z-[12] md:mb-[80px] mb-[50px] lg:mt-[100px] max-lg:mt-[100px] max-sm:mt-[80px] max-ll:mt-[40px]">
                     <div className="lg:flex block gap-6 lg:gap-10 w-full justify-center pt-10">
                         <div className="relative flex-1 mb-[30px] lg:mb-0 lg:pl-8 px-4">
-                            <p className="font-medium font-vk text-sm uppercase text-white/60 pb-2">
+                            <p className="font-medium font-vk text-sm uppercase text-white/80 pb-2">
                                 {t("aboutUs")}
                             </p>
                             <h1 className="font-bold font-vk text-2xl sm:text-3xl lg:text-[32px] leading-[100%] text-white pb-7">

@@ -50,6 +50,7 @@ export default function SochealMedia() {
         }
         aria-label="Clamo Facebook"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <div className="flex items-center md:justify-center md:gap-5 ml-5 gap-2 group hover:cursor-pointer">
           <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0650C3]/[18%] transition duration-200 group-hover:bg-[#0650C3] cursor-pointer">

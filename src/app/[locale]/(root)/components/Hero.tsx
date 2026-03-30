@@ -1,11 +1,11 @@
 "use client";
 import { useEffect } from "react";
 import { FaChevronRight } from "react-icons/fa";
-import "aos/dist/aos.css";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 // import Image from "next/image";
 // import KlinikBino from "../../../../../public/icons/whiteTooltip1.svg"
 // import TibbiyotXodim from "../../../../../public/icons/whiteTootlip2.svg"
@@ -43,7 +43,7 @@ export default function Hero() {
     if (typeof window !== "undefined") {
       loadAOS();
     }
-  }, [usePathname()]);
+  }, []);
 
   const scrollToContactSection = () => {
     const section = document.getElementById("contact-section");
@@ -58,7 +58,7 @@ export default function Hero() {
         <div className="relative z-[12] flex flex-col justify-center">
           <p className="uppercase text-[#3D445E] font-inter md:text-[14px] text-[12px] font-medium lg:w-[582px] pb-[11px] max-sm:w-[250px]" data-aos="fade-right">
             {firstTitle} {secondTitle} {thirtTitle} {fourTitle}{" "}
-            <span className="md:text-sm text-[10px] font-bold font-inter bg-[#23B3FC] text-white py-[3px] px-2 rounded-md">
+            <span className="md:text-sm text-[12px] font-bold font-inter bg-[#23B3FC] text-white py-[3px] px-2 rounded-md">
               {fiveTitle} {sexTitle} {sevenTitle}
             </span>
           </p>
@@ -96,19 +96,27 @@ export default function Hero() {
         </div>
 
         <div className="relative top-0 left-0 flex flex-col justify-center items-center w-auto -right-10">
-          <img
+          {/* Logo — LCP emas, lazy yuklansin */}
+          <Image
             src="/logo/clamoLogo.png"
-            alt="LogoClamo"
+            alt="Clamo logotipi"
             width={200}
             height={200}
+            loading="lazy"
             className="max-md:w-[170px] max-smm:w-[110px] absolute bottom-[47%] xl:bottom-[50%] max-lg:bottom-[48%] max-sm:bottom-[40%] md:left-[38%] z-[1] logoAnim lg:left-[33%]"
           />
-          <img
+
+          {/* ✅ LCP element — priority, animatsiya yo'q */}
+          <Image
             src="/logo/LogoDisplay.png"
             alt="Display Clamo"
             width={750}
             height={650}
+            priority              // ✅ preload qilinadi
+            fetchPriority="high"  // ✅ eng yuqori prioritet
+            quality={85}          // ✅ WebP, hajm kamayadi
             className="w-[900px] max-xl:translate-y-[80px] xl:translate-y-[40px]"
+          // data-aos yo'q ✅ — LCP animatsiya kutmasin
           />
           <div className="test-clamoLogo"></div>
         </div>

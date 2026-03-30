@@ -4,7 +4,6 @@ import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa6";
 import { useEffect } from "react";
-import "aos/dist/aos.css";
 
 export default function DocumentsHero() {
     const t = useTranslations("RegulatorydocumentsPage");

@@ -47,7 +47,7 @@ export default function MedicalLegal() {
               {item.description}
             </p>
             <div className="w-full max-lg:flex max-lg:justify-center">
-              <Link href={`${locale}/license`} aria-label="Litsensiya">
+              <Link href={`${locale}/license`} aria-label="Litsenziya sahifasiga kirish">
                 <LearnMore />
               </Link>
             </div>

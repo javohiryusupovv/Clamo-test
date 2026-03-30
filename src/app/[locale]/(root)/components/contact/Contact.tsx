@@ -118,9 +118,9 @@ export default function Contact() {
       <div className="container relative left-0 z-[40] max-lg:p-4 flex flex-col md:flex-row items-center justify-between w-full bg-[#0653C9] lg:rounded-[36px] rounded-2xl">
         {/* Contact Info */}
         <div className="w-full lg:w-[450px] md:pl-6 md:pr-6 py-10 lg:pl-14 lg:py-14">
-          <h6 className="text-[24px] sm:text-[28px] lg:text-[32px] font-semibold text-white mb-2 font-vk">
+          <h2 className="text-[24px] sm:text-[28px] lg:text-[32px] font-semibold text-white mb-2 font-vk">
             {t('contactTitle')}
-          </h6>
+          </h2>
           <p className="text-[14px] sm:text-[15px] lg:text-[16px] font-normal text-white text-opacity-[60%] mb-6 lg:mb-9 font-vk">
             {t('contactDescription')}
           </p>
@@ -221,7 +221,7 @@ export default function Contact() {
             <h5 className="text-[24px] sm:text-[28px] font-vk lg:text-[32px] font-bold leading-[120%] text-[#3D445E] mb-3">
               {t('formTitle')}
             </h5>
-            <p className="text-[#838CAF] text-[14px] font-vk sm:text-[15px] lg:text-[16px] font-normal leading-[130%]">
+            <p className="text-[#4B5563] text-[14px] font-vk sm:text-[15px] lg:text-[16px] font-normal leading-[130%]">
               {t('formSubtitle')}
             </p>
           </article>

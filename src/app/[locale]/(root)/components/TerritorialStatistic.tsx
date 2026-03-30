@@ -185,7 +185,7 @@ export default function TerritorialStatistic() {
                         {item.icon}
                       </span>
                       <div>
-                        <p className="m-0 text-[10px] sm:text-[12px] text-[#012548]/80 leading-tight">{item.label}</p>
+                        <p className="m-0 text-[12px] sm:text-[12px] text-[#012548]/80 leading-tight">{item.label}</p>
                         <p className="m-0 text-[17px] sm:text-[20px] font-bold text-[#3D445E]">{item.value}</p>
                       </div>
                     </div>

@@ -28,6 +28,7 @@ const GovernmentDecisions: React.FC = () => {
                 "https://drive.google.com/file/d/1e5sC3gxg08Ix63cFm94ngFSMGv3IgEkm/view"
               }
               target="_blank"
+              rel="noopener noreferrer"
             >
                  <button className="group font-inter w-full sm:w-[272px] h-[40px] flex items-center justify-center gap-[11.5px] bg-[#23b3fc] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">                    
                 {t("downloadBtn")}{" "}
@@ -60,6 +61,7 @@ const GovernmentDecisions: React.FC = () => {
                 "https://drive.google.com/file/d/1Wooo7lz4YjjMgTowweq8_QvvXxhd2oUR/view"
               }
               target="_blank"
+              rel="noopener noreferrer"
             >
                  <button className="group font-inter w-full sm:w-[272px] h-[40px] flex items-center justify-center gap-[11.5px] bg-[#23b3fc] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">                    
                 {t("downloadBtn")}{" "}
@@ -81,6 +83,7 @@ const GovernmentDecisions: React.FC = () => {
                 "https://drive.google.com/file/d/1PxNyLM_huofYpB_9y6NeiZyZb-IOE3ZR/view"
               }
               target="_blank"
+              rel="noopener noreferrer"
             >
               <button className="group font-inter w-full sm:w-[272px] h-[40px] flex items-center justify-center gap-[11.5px] bg-[#23b3fc] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">                    
                 {t("downloadBtn")}

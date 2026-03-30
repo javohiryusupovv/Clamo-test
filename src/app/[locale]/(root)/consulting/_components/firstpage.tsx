@@ -2,7 +2,6 @@
 
 import { useTranslations } from "next-intl";
 import { useEffect } from "react";
-import "aos/dist/aos.css";
 import Link from "next/link";
 
 export default function ConsultingPages() {

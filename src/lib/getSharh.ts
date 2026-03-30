@@ -4,8 +4,7 @@ export async function getReviews(): Promise<CommentSharh[]> {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_SHARH_URL}`,
     {
-      next: { revalidate: 60 },
-      cache: "no-store",
+      next: { revalidate: 60 }
     }
   );
 

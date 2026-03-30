@@ -3,8 +3,7 @@ export async function getServicec() {
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/home/services/
 `,
     {
-      next: { revalidate: 60 },
-      cache: "no-store",
+      next: { revalidate: 3600 }
     }
   );
 

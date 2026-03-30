@@ -39,7 +39,7 @@ export default function ContactPage() {
 
           <div className=" group flex items-center gap-3">
             <FaPhoneAlt className="text-blue-600" />
-            <Link href="tel:+998555143003" target="_blank">
+            <Link href="tel:+998555143003" target="_blank" rel="noopener noreferrer">
               <p className="text-sm font-vk">{t("phone_number")}</p>
               <p className="font-medium font-vk group-hover:underline">
                 {item.phone}
@@ -49,7 +49,7 @@ export default function ContactPage() {
 
           <div className="group flex items-center gap-3">
             <FaEnvelope className="text-blue-600" />
-            <Link href="mailto:info@clamo.uz" target="_blank">
+            <Link href="mailto:info@clamo.uz" target="_blank" rel="noopener noreferrer">
               <p className="text-sm font-vk">{t("email")}</p>
               <p className="font-medium font-vk group-hover:underline">
                 {item.email}

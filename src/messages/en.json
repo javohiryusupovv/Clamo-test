@@ -8,8 +8,9 @@
     "aboutss": "About the Center",
     "international": "International Cooperation",
     "consulting": "Consulting",
-    "regulatorydocuments": "Regulatory Documents",
-    "fight_against_corruption": "Fight against corruption"
+    "regulatorydocuments": "Regulatory documents",
+    "fight_against_corruption": "Fight against corruption",
+    "news": "News"
   },
   "ComingSoon": {
     "message": "This feature will be available soon.",

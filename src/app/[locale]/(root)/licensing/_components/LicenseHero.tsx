@@ -5,7 +5,6 @@ import { useLocale, useTranslations } from "next-intl";
 import { FaChevronRight } from "react-icons/fa";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
-import "aos/dist/aos.css";
 
 
 export default function LicenseHero() {
@@ -75,6 +74,7 @@ export default function LicenseHero() {
                 <Link
                   href={`https://license.gov.uz/`}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full"
                 >
                   <button className="group font-inter w-[290px] max-md:w-full h-[37px] flex items-center justify-center gap-[11.5px] hover:bg-[hsl(200,97%,65%)] bg-[#23b3fc] transition-all duration-200 rounded-lg text-sm font-medium text-white leading-[130%] ">
@@ -134,6 +134,7 @@ export default function LicenseHero() {
                 href={"https://office.clamo.uz/"}
                 aria-label="Litsenziya"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <button className="group flex font-inter justify-center items-center gap-[4px] w-full sm:w-[373px] px-[24px] py-[10px] bg-[#23B3FC] text-[#FFFFFFFF] rounded-lg hover:bg-[#46c1ff] transition">
                   <span className="group flex items-center gap-1 text-[14px] font-medium leading-[130%]">

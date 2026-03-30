@@ -39,11 +39,11 @@ export default function FaqAccordion({ faqData }: Props) {
                 value={`item-${index}`}
                 className="border border-[#E3E8E9] lg:rounded-3xl rounded-xl hover:bg-[#0653C9]/10 hover:border-[#0653C9] transition-all duration-200"
               >
-                <AccordionTrigger className="md:text-2xl text-base text-[#3D445E] font-vk font-extrabold px-8 h-[80px] py-2">
-                  {localQuestion}
+                <AccordionTrigger className="md:text-2xl text-base text-[#3D445E] font-vk font-extrabold px-8 h-[70px] py-2">
+                  <h3>{localQuestion}</h3>
                 </AccordionTrigger>
                 <AccordionContent className="md:text-[18px] text-[14px] font-normal leading-[140%] text-[#3D445E] font-vk px-8 md:py-2">
-                  {localAnswer}
+                  <p>{localAnswer}</p>
                 </AccordionContent>
               </AccordionItem>
             );

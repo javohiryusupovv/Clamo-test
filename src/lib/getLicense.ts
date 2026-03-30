@@ -11,8 +11,7 @@ export async function getReyestersFromAPI(page = 1): Promise<PaginatedReyesterRe
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_BASE_URL}/reyester/?page=${page}`,
     {
-      next: { revalidate: 60 },
-      cache: "no-store",
+      next: { revalidate: 3600 }
     }
   );
 
@@ -34,7 +33,7 @@ export async function getReyestersFromAPI(page = 1): Promise<PaginatedReyesterRe
 
 export async function getReyesterTypes() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/reyester/types/`, {
-    cache: "no-store", // yoki ISR qilsangiz: next: { revalidate: 60 }
+    next: {revalidate: 60}
   });
   if (!res.ok) throw new Error("Turlarni olishda xatolik");
   const data = await res.json();

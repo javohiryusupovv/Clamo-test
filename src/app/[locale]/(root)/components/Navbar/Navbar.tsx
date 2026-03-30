@@ -130,22 +130,31 @@ export default function NavbarClient() {
 
               </ul>
               <ul className="hidden lg:flex items-center gap-10">
-                <article className="relative">
+                <li className="relative">
                   <DropMenyu />
-                </article>
+                </li>
 
-                <article>
-                  <OurServiceMenyu/>
-                </article>
-                  <li>
-                      <Link
-                          href={`/${locale}/fight-against-corruption`}
-                          aria-label="Fight Against Corruption"
-                          className="text-sm font-medium text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200"
-                      >
-                          {t("fight_against_corruption")}
-                      </Link>
-                  </li>
+                <li>
+                  <OurServiceMenyu />
+                </li>
+                <li>
+                  <Link
+                    href={`/${locale}/fight-against-corruption`}
+                    aria-label="Fight Against Corruption"
+                    className="text-sm font-medium text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200"
+                  >
+                    {t("fight_against_corruption")}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={`/${locale}/news`}
+                    aria-label="Contacts"
+                    className="text-sm font-medium text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200"
+                  >
+                    {t("news")}
+                  </Link>
+                </li>
                 <li>
                   <Link
                     href={`/${locale}/contacts`}
@@ -158,13 +167,15 @@ export default function NavbarClient() {
 
               </ul>
               <ul className="hidden items-center lg:gap-10 gap-5 lg:mr-0 mr-10 sm:flex">
-                <div className="relative top-0 left-0">
+                <li className="relative top-0 left-0">
                   <DropLanguage />
-                </div>
-                <Link href="tel:1369" aria-label="Phone" className="flex items-center gap-[6px]">
-                  <img src="/icons/phone.svg" alt="Phone icon" width={17} height={17} />
-                  <p className="text-base font-bold text-[#3D445E]">1369</p>
-                </Link>
+                </li>
+                <li>
+                  <Link href="tel:1369" aria-label="Phone" className="flex items-center gap-[6px]">
+                    <img src="/icons/phone.svg" alt="Phone icon" width={17} height={17} />
+                    <p className="text-base font-bold text-[#3D445E]">1369</p>
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -223,11 +234,16 @@ export default function NavbarClient() {
                   {t("licens")}
                 </Link>
               </li>
-                <li>
-                    <Link href={`/${locale}/fight-against-corruption`} aria-label="Fight Against Corruption Page" onClick={() => setIsMobileMenuOpen(false)} className="text-[15px] font-medium sm:text-[17px] sm:font-semibold text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200">
-                        {t("fight_against_corruption")}
-                    </Link>
-                </li>
+              <li>
+                <Link href={`/${locale}/fight-against-corruption`} aria-label="Fight Against Corruption Page" onClick={() => setIsMobileMenuOpen(false)} className="text-[15px] font-medium sm:text-[17px] sm:font-semibold text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200">
+                  {t("fight_against_corruption")}
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/news`} aria-label="News Page" onClick={() => setIsMobileMenuOpen(false)} className="text-[15px] font-medium sm:text-[17px] sm:font-semibold text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200">
+                  {t("news")}
+                </Link>
+              </li>
               <li>
                 <Link href={`/${locale}/contacts`} aria-label="Contacts Page" onClick={() => setIsMobileMenuOpen(false)} className="text-[15px] font-medium sm:text-[17px] sm:font-semibold text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200">
                   {t("contacts")}
@@ -330,7 +346,7 @@ export default function NavbarClient() {
                             RU
                           </p>
                         </li>
-                        
+
                       </ul>
                     </div>
                   )}

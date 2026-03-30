@@ -45,10 +45,10 @@ export default function DropLanguage() {
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
-        <li className="text-sm font-medium text-[#3D445E] cursor-pointer flex items-center gap-[6px]">
+        <button className="text-sm font-medium text-[#3D445E] cursor-pointer flex items-center gap-[6px]">
           {current ? (
             <>
-              <img src={current.flag} alt={current.label} width={20} height={20} />
+              <img src={current.flag} alt="" width={20} height={20} />
               {current.label}
             </>
           ) : (
@@ -59,7 +59,7 @@ export default function DropLanguage() {
               open ? "-rotate-90 text-[#23B3FC]" : "rotate-90"
             }`}
           />
-        </li>
+        </button>
       </PopoverTrigger>
       <PopoverContent className="p-0">
         <ul className="bg-[#E8F4FC] shadow-md rounded py-2">
@@ -69,7 +69,7 @@ export default function DropLanguage() {
               onClick={() => handleLangChange(lang.code)}
               className="flex items-center gap-2 cursor-pointer hover:bg-[#D2EDFD] transition-all duration-200 px-4 py-2"
             >
-              <img src={lang.flag} alt={lang.label} width={20} height={20} />
+              <img src={lang.flag} alt="" width={20} height={20} />
               <span className="text-sm font-medium text-[#3D445E]">{lang.label}</span>
             </li>
           ))}

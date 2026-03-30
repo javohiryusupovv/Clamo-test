@@ -48,7 +48,7 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#051425]/85 via-[#051425]/60 to-[#051425]/40"></div>
-              <p className="absolute text-[#EDF0EF] top-4 left-4 font-vk text-[10px] sm:text-[16px] z-10">
+              <p className="absolute text-[#EDF0EF] top-4 left-4 font-vk text-[12px] sm:text-[16px] z-10">
                 {formatDate(slicedNews[0].created_at)}
               </p>
               <div className="absolute bottom-4 left-4 right-4 text-white z-10">
@@ -79,7 +79,7 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
               key={slicedNews[1].id}
             >
               <div className="bg-[#F6F9FC] group hover:border-[#23B3FC] border border-transparent sm:p-6 p-4 rounded-[16px] sm:min-h-[240px] min-h-[140px] flex flex-col justify-between h-full">
-                <p className="text-[10px] font-vk sm:text-[12px] md:text-[16px] text-[#74807B]">
+                <p className="text-[12px] font-vk sm:text-[12px] md:text-[16px] text-[#4B5563]">
                   {formatDate(slicedNews[0].created_at)}
                 </p>
                 <h3 className="font-bold font-vk text-[#3D445E] text-[14px] md:text-[16px] lg:text-[24px] leading-[130%] pb-3">
@@ -89,9 +89,9 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
                     locale
                   )}
                 </h3>
-                <button className="hover:underline font-vk text-[#74807B] font-medium text-[12px] sm:text-[16px] flex items-center gap-4">
+                <button className="hover:underline font-vk text-[#4B5563] font-medium text-[12px] sm:text-[16px] flex items-center gap-4">
                   {t("detailed_button")}
-                  <div className="border border-[#74807B] py-2 px-2 rounded-full relative group-hover:border-[#23B3FC]">
+                  <div className="border border-[#4B5563] py-2 px-2 rounded-full relative group-hover:border-[#23B3FC]">
                     <FaArrowRightLong className="w-4 h-4 -translate-x-2 transition-all duration-200 group-hover:translate-x-0" />
                   </div>
                 </button>
@@ -109,7 +109,7 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
                     key={slicedNews[i].id}
                   >
                     <div className="bg-[#F6F9FC] group hover:border-[#23B3FC] border border-transparent p-4 rounded-[16px] h-full flex flex-col justify-between">
-                      <p className="text-[10px] font-vk sm:text-[12px] md:text-[16px] text-[#74807B]">
+                      <p className="text-[12px] font-vk sm:text-[12px] md:text-[16px] text-[#4B5563]">
                         {formatDate(slicedNews[0].created_at)}
                       </p>
                       <h3 className="font-bold font-vk line-clamp-2 text-[#3D445E] text-[14px] md:text-[16px] lg:text-[24px] leading-[130%]">
@@ -119,9 +119,9 @@ export default function NewsPage({ news }: { news: NewsTypes[] }) {
                           locale
                         )}
                       </h3>
-                      <button className="hover:underline font-vk text-[#74807B] font-medium text-[12px] sm:text-[16px] flex items-center gap-4">
+                      <button className="hover:underline font-vk text-[#4B5563] font-medium text-[12px] sm:text-[16px] flex items-center gap-4">
                         {t("detailed_button")}
-                        <div className="border border-[#74807B] py-2 px-2 rounded-full relative group-hover:border-[#23B3FC]">
+                        <div className="border border-[#4B5563] py-2 px-2 rounded-full relative group-hover:border-[#23B3FC]">
                           <FaArrowRightLong className="w-4 h-4 -translate-x-2 transition-all duration-200 group-hover:translate-x-0" />
                         </div>
                       </button>
