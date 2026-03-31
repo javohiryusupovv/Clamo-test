@@ -249,6 +249,15 @@ export default function NavbarClient() {
                 </Link>
               </li>
               <li>
+                  <Link
+                    href={`/${locale}/licensing#reyester-view`}
+                    aria-label="Reyester Klinikalar"
+                    className="text-sm font-medium text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200"
+                  >
+                    {t("reyester")}
+                  </Link>
+                </li>
+              <li>
                 <Link href={`/${locale}/news`} aria-label="News Page" onClick={() => setIsMobileMenuOpen(false)} className="text-[15px] font-medium sm:text-[17px] sm:font-semibold text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200">
                   {t("news")}
                 </Link>
