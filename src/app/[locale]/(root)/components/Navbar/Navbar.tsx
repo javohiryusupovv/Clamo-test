@@ -253,6 +253,7 @@ export default function NavbarClient() {
                     href={`/${locale}/licensing#reyester-view`}
                     aria-label="Reyester Klinikalar"
                     className="text-sm font-medium text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200"
+                    onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {t("reyester")}
                   </Link>
