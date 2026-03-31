@@ -103,7 +103,7 @@ export default function ReyesterClient({
 
 
   return (
-    <div>
+    <div id="reyester-view">
       {/* Filters */}
       <div className="max-lg:flex-col flex justify-between gap-2 sm:gap-4 lg:mb-11 md:mb-6 mb-4">
         <h3 className="lg:text-5xl md:text-4xl text-3xl font-bold font-vk text-[#3D445E]">{t("clinics_titile")}</h3>
