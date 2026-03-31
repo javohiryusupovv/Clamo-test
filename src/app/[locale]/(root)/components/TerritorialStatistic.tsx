@@ -157,25 +157,25 @@ export default function TerritorialStatistic({ regionsData, statistics }: Props)
   const statsData = [
     {
       id: 1,
-      icon: "/icons/whiteTootlip1.svg",
+      icon: Tooltip1,
       number: statistics?.clinics_count?.toLocaleString("ru-RU"),
       label: t("kliniknomi"),
     },
     {
       id: 2,
-      icon: "/icons/whiteTootlip2.svg",
+      icon: Tooltip2,
       number: statistics?.employees_count?.toLocaleString("ru-RU"),
       label: t("health_num"),
     },
     {
       id: 3,
-      icon: "/icons/whiteTootlip3.svg",
+      icon: Tooltip3,
       number: statistics.licenses_count.toLocaleString("ru-RU"),
       label: t("activelitsenz"),
     },
     {
       id: 4,
-      icon: "/icons/whiteTooltip4.svg",
+      icon: Tooltip4,
       number: statistics?.accreditations_count?.toLocaleString("ru-RU"),
       label: t("accredationshare"),
     },
@@ -184,7 +184,7 @@ export default function TerritorialStatistic({ regionsData, statistics }: Props)
   return (
     <section className="relative z-50 w-full bg-[#f6f9fc] overflow-visible">
       <div className="container mx-auto px-4 py-10">
-        {/* <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full mb-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full mb-10">
           {statsData?.map((item, index) => (
             <div
               key={item.id}
@@ -218,7 +218,7 @@ export default function TerritorialStatistic({ regionsData, statistics }: Props)
               </div>
             </div>
           ))}
-        </div> */}
+        </div>
         <div className="mb-8">
           <h2
             className="text-[25px] sm:text-[35px] md:text-[48px] leading-[100%] font-bold text-[#3D445E]"
