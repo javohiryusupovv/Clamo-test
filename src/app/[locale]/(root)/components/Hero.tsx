@@ -90,6 +90,9 @@ export default function Hero() {
             height={200}
             loading="lazy"
             className="max-md:w-[170px] max-smm:w-[110px] absolute bottom-[47%] xl:bottom-[50%] max-lg:bottom-[48%] max-sm:bottom-[40%] md:left-[38%] z-[1] logoAnim lg:left-[33%]"
+            aos-data="fade-up"
+            aos-delay="500"
+
           />
 
           {/* ✅ LCP element — priority, animatsiya yo'q */}
@@ -101,6 +104,7 @@ export default function Hero() {
             fetchPriority="high"  // ✅ eng yuqori prioritet
             decoding="sync"
             className="w-[900px] max-xl:translate-y-[80px] xl:translate-y-[40px]"
+            data-aos="fade-up" data-aos-delay="600"
           // data-aos yo'q ✅ — LCP animatsiya kutmasin
           />
           <div className="test-clamoLogo"></div>

@@ -149,7 +149,7 @@ export default function NavbarClient() {
                 <li>
                   <Link
                     href={`/${locale}/licensing#reyester-view`}
-                    aria-label="Reyester Klinikalar"
+                    aria-label="Reyester Page"
                     className="text-sm font-medium text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200"
                   >
                     {t("reyester")}
@@ -251,7 +251,7 @@ export default function NavbarClient() {
               <li>
                   <Link
                     href={`/${locale}/licensing#reyester-view`}
-                    aria-label="Reyester Klinikalar"
+                    aria-label="Reyester Page"
                     className="text-sm font-medium text-[#3D445E] hover:text-[#23B3FC] transition-all duration-200"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
