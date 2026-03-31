@@ -26,7 +26,7 @@ export default function LicenseHero() {
   return (
     <>
       {/* Hero section */}
-      <div className="relative h-screen max-ms:h-[60vh] overflow-visible flex max-sm:pt-[50px]">
+      <div className="relative h-[65vh] max-ms:h-[70vh] overflow-visible flex max-sm:pt-[50px]">
         <div className="absolute -left-[300px] top-28 blur-[200px] bg-[#6EB8E8] w-[580px] h-[360px] rounded-full"></div>
 
         <div className="container mx-auto px-4">
@@ -98,7 +98,7 @@ export default function LicenseHero() {
                   alt="Pechat Clamo"
                   width={482}
                   height={416}
-                  className=" absolute -top-10 -left-10 z-[2] logoAnim"
+                  className=" absolute -top-10 -left-5 z-[2] logoAnim"
                   data-aos="fade-up-left"
                   data-aos-duration="3000"
                 />

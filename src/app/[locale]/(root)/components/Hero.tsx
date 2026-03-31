@@ -88,7 +88,7 @@ export default function Hero() {
             alt="Clamo logotipi"
             width={200}
             height={200}
-            decoding="sync"
+            decoding="async"
             className="max-md:w-[170px] max-smm:w-[110px] absolute bottom-[47%] xl:bottom-[50%] max-lg:bottom-[48%] max-sm:bottom-[40%] md:left-[38%] z-[1] logoAnim lg:left-[33%]"
             data-aos="fade-up"
             data-aos-delay="200"        // ✅ avval chiqadi
