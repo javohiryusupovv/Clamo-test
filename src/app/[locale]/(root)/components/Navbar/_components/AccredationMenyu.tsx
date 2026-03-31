@@ -28,7 +28,8 @@ export default function AccredationMenyu({ pages }: AccreditationMenyuProps) {
         <PopoverTrigger asChild>
           <button
             className="text-sm font-medium text-[#3D445E] cursor-pointer flex items-center gap-[6px]"
-          >
+            suppressHydrationWarning
+            >
             {t("accredation")}
             <ChevronRight className={`w-5 h-5 transition-transform duration-300 ${ open ? "-rotate-90 text-[#23B3FC]" : "rotate-90"}`} />
           </button>

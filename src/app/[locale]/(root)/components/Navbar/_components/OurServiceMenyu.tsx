@@ -26,7 +26,7 @@ export default function OurServiceMenyu() {
     <div>
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
-          <button className="text-sm font-medium text-[#3D445E] cursor-pointer flex items-center gap-[6px]">
+          <button className="text-sm font-medium text-[#3D445E] cursor-pointer flex items-center gap-[6px]" suppressHydrationWarning>
             {t("our-service")}
             <ChevronRight
               className={`w-5 h-5 transition-transform duration-300 ${

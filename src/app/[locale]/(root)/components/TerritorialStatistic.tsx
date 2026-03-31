@@ -3,6 +3,14 @@
 import { useState, useRef } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Tooltip1 from "../../../../../public/icons/whiteTooltip1.svg";
+import Tooltip2 from "../../../../../public/icons/whiteTootlip2.svg";
+import Tooltip3 from "../../../../../public/icons/whiteTootlip3.svg";
+import Tooltip4 from "../../../../../public/icons/whiteTooltip4.svg";
+import BuildTooltip from "../../../../../public/icons/buildingTooltip.svg"
+import DoctorTooltip from "../../../../../public/icons/docsTooltip.svg"
+import LitsenziyaTooltip from "../../../../../public/icons/litsenziyaicons.svg"
+import CertificateTooltip from "../../../../../public/icons/CertificateTooltip.svg"
 
 
 // SVG path data (from mapSVG.svg - each path's d attribute)
@@ -125,32 +133,31 @@ export default function TerritorialStatistic({ regionsData, statistics }: Props)
 
   const statsItems = data ? [
     {
-      icon: <Image src="/icons/buildingTooltip.svg" width={22} height={22} alt="" aria-hidden="true" />,
+      icon: <Image src={BuildTooltip} width={22} height={22} alt="" aria-hidden="true" />,
       label: t("kliniknomi"),
       value: data.clinics.toLocaleString("ru-RU"),
     },
     {
-      icon: <Image src="/icons/doctorTooltip.svg" width={22} height={22} alt="" aria-hidden="true" />,
+      icon: <Image src={DoctorTooltip} width={22} height={22} alt="" aria-hidden="true" />,
       label: t("health_num"),
       value: data.staff.toLocaleString("ru-RU"),
     },
     {
-      icon: <Image src="/icons/litsenziyaicons.svg" width={22} height={22} alt="" aria-hidden="true" />,
+      icon: <Image src={LitsenziyaTooltip} width={22} height={22} alt="" aria-hidden="true" />,
       label: t("activelitsenz"),
       value: data.licenses.toLocaleString("ru-RU"),
     },
     {
-      icon: <Image src="/icons/CertificateTooltip.svg" width={22} height={22} alt="" aria-hidden="true" />,
+      icon: <Image src={CertificateTooltip} width={22} height={22} alt="" aria-hidden="true" />,
       label: t("accredationshare"),
       value: data.accreditations.toLocaleString("ru-RU"),
     },
   ] : [];
 
-
   const statsData = [
     {
       id: 1,
-      icon: "/icons/whiteTooltip1.svg",
+      icon: "/icons/whiteTootlip1.svg",
       number: statistics?.clinics_count?.toLocaleString("ru-RU"),
       label: t("kliniknomi"),
     },
@@ -169,7 +176,7 @@ export default function TerritorialStatistic({ regionsData, statistics }: Props)
     {
       id: 4,
       icon: "/icons/whiteTooltip4.svg",
-      number: statistics?.accreditations_count?.toLocaleString("ru-RU") + "+",
+      number: statistics?.accreditations_count?.toLocaleString("ru-RU"),
       label: t("accredationshare"),
     },
   ];
@@ -177,7 +184,7 @@ export default function TerritorialStatistic({ regionsData, statistics }: Props)
   return (
     <section className="relative z-50 w-full bg-[#f6f9fc] overflow-visible">
       <div className="container mx-auto px-4 py-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full mb-10">
+        {/* <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full mb-10">
           {statsData?.map((item, index) => (
             <div
               key={item.id}
@@ -188,14 +195,18 @@ export default function TerritorialStatistic({ regionsData, statistics }: Props)
             >
               <div className="absolute -top-5 left-0 w-full h-20 bg-[#6EB8E8] blur-[50px] opacity-65 rounded-full" />
               <div className="relative z-10">
-                <Image
-                  src={item.icon}
-                  width={42}
-                  height={47}
-                  alt=""
-                  aria-hidden="true"
-                  className="mb-4"
-                />
+                {item.icon ? ( // ✅ bo'sh string bo'lsa render qilmasin
+                  <Image
+                    src={item.icon}
+                    width={42}
+                    height={47}
+                    alt=""
+                    aria-hidden="true"
+                    className="mb-4"
+                  />
+                ) : (
+                  <div className="w-[42px] h-[47px] mb-4" /> // ✅ placeholder
+                )}
               </div>
               <div className="relative z-10">
                 <p className="text-[28px] md:text-[33px] lg:text-[35px] xl:text-[40px] font-bold leading-none">
@@ -207,7 +218,7 @@ export default function TerritorialStatistic({ regionsData, statistics }: Props)
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
         <div className="mb-8">
           <h2
             className="text-[25px] sm:text-[35px] md:text-[48px] leading-[100%] font-bold text-[#3D445E]"
