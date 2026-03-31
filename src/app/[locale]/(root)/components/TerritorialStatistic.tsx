@@ -3,14 +3,14 @@
 import { useState, useRef } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Tooltip1 from "../../../../../public/icons/whiteTooltip1.svg";
-import Tooltip2 from "../../../../../public/icons/whiteTootlip2.svg";
-import Tooltip3 from "../../../../../public/icons/whiteTootlip3.svg";
-import Tooltip4 from "../../../../../public/icons/whiteTooltip4.svg";
-import BuildTooltip from "../../../../../public/icons/buildingTooltip.svg"
-import DoctorTooltip from "../../../../../public/icons/docsTooltip.svg"
-import LitsenziyaTooltip from "../../../../../public/icons/litsenziyaicons.svg"
-import CertificateTooltip from "../../../../../public/icons/CertificateTooltip.svg"
+import Tooltip1 from "/icons/whiteTooltip1.svg";
+import Tooltip2 from "/icons/whiteTootlip2.svg";
+import Tooltip3 from "/icons/whiteTootlip3.svg";
+import Tooltip4 from "/icons/whiteTooltip4.svg";
+import BuildTooltip from "/icons/buildingTooltip.svg"
+import DoctorTooltip from "/icons/docsTooltip.svg"
+import LitsenziyaTooltip from "/icons/litsenziyaicons.svg"
+import CertificateTooltip from "/icons/CertificateTooltip.svg"
 
 
 // SVG path data (from mapSVG.svg - each path's d attribute)
@@ -133,22 +133,22 @@ export default function TerritorialStatistic({ regionsData, statistics }: Props)
 
   const statsItems = data ? [
     {
-      icon: <Image src={BuildTooltip} width={22} height={22} alt="" aria-hidden="true" />,
+      icon: <Image src="/icons/buildingTooltip.svg" width={22} height={22} alt="" aria-hidden="true" />,
       label: t("kliniknomi"),
       value: data.clinics.toLocaleString("ru-RU"),
     },
     {
-      icon: <Image src={DoctorTooltip} width={22} height={22} alt="" aria-hidden="true" />,
+      icon: <Image src="/icons/docsTooltip.svg" width={22} height={22} alt="" aria-hidden="true" />,
       label: t("health_num"),
       value: data.staff.toLocaleString("ru-RU"),
     },
     {
-      icon: <Image src={LitsenziyaTooltip} width={22} height={22} alt="" aria-hidden="true" />,
+      icon: <Image src="/icons/litsenziyaicons.svg" width={22} height={22} alt="" aria-hidden="true" />,
       label: t("activelitsenz"),
       value: data.licenses.toLocaleString("ru-RU"),
     },
     {
-      icon: <Image src={CertificateTooltip} width={22} height={22} alt="" aria-hidden="true" />,
+      icon: <Image src="/icons/CertificateTooltip.svg" width={22} height={22} alt="" aria-hidden="true" />,
       label: t("accredationshare"),
       value: data.accreditations.toLocaleString("ru-RU"),
     },
@@ -157,25 +157,25 @@ export default function TerritorialStatistic({ regionsData, statistics }: Props)
   const statsData = [
     {
       id: 1,
-      icon: Tooltip1,
+      icon: "/icons/whiteTooltip1.svg",
       number: statistics?.clinics_count?.toLocaleString("ru-RU"),
       label: t("kliniknomi"),
     },
     {
       id: 2,
-      icon: Tooltip2,
+      icon: "/icons/whiteTootlip2.svg",
       number: statistics?.employees_count?.toLocaleString("ru-RU"),
       label: t("health_num"),
     },
     {
       id: 3,
-      icon: Tooltip3,
+      icon: "/icons/whiteTootlip3.svg",
       number: statistics.licenses_count.toLocaleString("ru-RU"),
       label: t("activelitsenz"),
     },
     {
       id: 4,
-      icon: Tooltip4,
+      icon: "/icons/whiteTooltip4.svg",
       number: statistics?.accreditations_count?.toLocaleString("ru-RU"),
       label: t("accredationshare"),
     },
