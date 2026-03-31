@@ -88,10 +88,11 @@ export default function Hero() {
             alt="Clamo logotipi"
             width={200}
             height={200}
-            loading="lazy"
+            decoding="sync"
             className="max-md:w-[170px] max-smm:w-[110px] absolute bottom-[47%] xl:bottom-[50%] max-lg:bottom-[48%] max-sm:bottom-[40%] md:left-[38%] z-[1] logoAnim lg:left-[33%]"
-            aos-data="fade-up"
-            aos-delay="500"
+            data-aos="fade-up"
+            data-aos-delay="200"        // ✅ avval chiqadi
+            data-aos-duration="800"
 
           />
 
@@ -104,14 +105,15 @@ export default function Hero() {
             fetchPriority="high"  // ✅ eng yuqori prioritet
             decoding="sync"
             className="w-[900px] max-xl:translate-y-[80px] xl:translate-y-[40px]"
-            data-aos="fade-up" data-aos-delay="600"
-          // data-aos yo'q ✅ — LCP animatsiya kutmasin
+            data-aos="fade-up"          // ✅ to'g'ri attribute nomi
+            data-aos-delay="700"        // ✅ keyin chiqadi (500ms farq)
+            data-aos-duration="800"
           />
           <div className="test-clamoLogo"></div>
         </div>
         {/* oq soya */}
         <div className="absolute bottom-[-258px] left-[20%] w-[361px] h-[361px] blur-[220.64999389648438px] rounded-full bg-[#6eb8e8] firefox-bg max-md:hidden"></div>
-        
+
       </section>
     </>
   );
