@@ -3,14 +3,6 @@
 import { useState, useRef } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Tooltip1 from "/icons/whiteTooltip1.svg";
-import Tooltip2 from "/icons/whiteTootlip2.svg";
-import Tooltip3 from "/icons/whiteTootlip3.svg";
-import Tooltip4 from "/icons/whiteTooltip4.svg";
-import BuildTooltip from "/icons/buildingTooltip.svg"
-import DoctorTooltip from "/icons/docsTooltip.svg"
-import LitsenziyaTooltip from "/icons/litsenziyaicons.svg"
-import CertificateTooltip from "/icons/CertificateTooltip.svg"
 
 
 // SVG path data (from mapSVG.svg - each path's d attribute)
