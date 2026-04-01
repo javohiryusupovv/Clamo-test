@@ -406,8 +406,8 @@ export const getBgImg: backgroundImage[] = [
 
 export const getContactInfo: ContactData[] = [
   {
-    phone: "+998 (55) 514 30 03",
-    email: "clamosocial@gmail.com",
+    phone: "1369",
+    email: "info@clamo.uz",
     website: "Clamo.uz",
     address: "г. Ташкент, ул. Паркент, дом 51",
   },
