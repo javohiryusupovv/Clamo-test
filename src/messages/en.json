@@ -99,37 +99,28 @@
       "name_one": "Dilorom Abdullaeva",
       "time_one": "10 minutes ago",
       "comment_one": "Getting a license through the online system was very easy and convenient. No paperwork, everything is clear and automated. I'm very grateful!",
-
       "fikr": "Feedback on CLAMO",
-
       "name_two": "Jasur Ikromov",
       "time_two": "1 hour ago",
       "comment_two": "Submitting the application and documents electronically was much faster than expected. All steps were automated, which made the process easier.",
-
       "name_three": "Shaxnoza Saidova",
       "time_three": "25 minutes ago",
       "comment_three": "At first, I was skeptical, but the platform is really well made. I sent my documents and received a response without waiting.",
-
       "name_four": "Murod Rahimov",
       "time_four": "40 minutes ago",
       "comment_four": "I was tired of the bureaucracy in the licensing process. This online service made things much easier. Thank you all!",
-
       "name_five": "Nargiza Xolmuhamedova",
       "time_five": "5 minutes ago",
       "comment_five": "The unified electronic system made the licensing steps very convenient. The website interface is clear and modern.",
-
       "name_six": "Shakhnaz Kamolova",
       "time_six": "3 minutes ago",
       "comment_six": "The process is greatly simplified. As a user, I understood everything easily and had no issues.",
-
       "name_seven": "Aziz Bakhriddinov",
       "time_seven": "1 minute ago",
       "comment_seven": "The app interface is very user-friendly. I had no difficulties uploading my documents.",
-
       "name_eight": "Oybek Rahimov",
       "time_eight": "1 hour ago",
       "comment_eight": "The new system really works efficiently. All steps are clearly explained, no more waiting in line.",
-
       "name_nine": "Gulchehra Yusupova",
       "time_nine": "2 hours ago",
       "comment_nine": "The digital system saved me a lot of time. No more standing in lines like before — everything is handled online."
@@ -187,7 +178,7 @@
   "AboutPage": {
     "plan": "Our plans:",
     "abouttitle": "Enhancing the quality and safety of medical institutions.",
-    "about_des1": "Ensuring the licensing and accreditation of medical organizations, carrying out control over the quality of medical services, compliance with licensing requirements and conditions, and developing requirements based on advanced international experience. Improving the quality of local medical services and introducing “safe medicine” standards through the engagement of internationally recognized accreditation organizations. Developing modern mechanisms for state support of the non-governmental medical sector, as well as a strategy for its sustainable development. Participating in the process of obtaining internationally recognized accreditation for non-governmental medical organizations and providing them with support.",
+    "about_des1": "Ensuring licensing and accreditation of medical organizations Exercising control over the quality of medical services and compliance with licensing requirements and conditions Developing requirements based on advanced international experience Improving the quality of local medical services and introducing 'safe medicine' standards by engaging internationally recognized accreditation bodies Developing modern mechanisms of state support for the non-governmental healthcare sector Developing a sustainable development strategy for non-governmental medical organizations Participating in and supporting non-governmental medical organizations in obtaining internationally recognized accreditation",
     "service": "Services provided by the center",
     "service_des": "Process management and quality assurance complex.",
     "team_title": "Our Team",
