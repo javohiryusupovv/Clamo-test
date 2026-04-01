@@ -169,24 +169,26 @@ import Image from "next/image";
                     </Link>
                   </li>
                 </ul>
-                <div className="mt-6 flex flex-col items-center bg-white border border-gray-200 rounded-[24px] px-5 py-4 shadow-sm w-fit">
-                  <div className="flex items-center gap-3 mb-2">
-                    <img src="/sharhLogo.svg" alt="Sharh Platform Logos" width={100} height={100} />
-                  </div>
+                <Link href={`https://sharh.commeta.uz/en/clamo`} target="_blank" rel="noopener noreferrer">
+                  <div className="mt-6 flex flex-col items-center bg-white border border-gray-200 rounded-[24px] px-5 py-4 shadow-sm w-fit">
+                    <div className="flex items-center gap-3 mb-2">
+                      <img src="/sharhLogo.svg" alt="Sharh Platform Logos" width={100} height={100} />
+                    </div>
 
-                  {/* Yulduzchalar (5 ta yashil kvadrat) */}
-                  <div className="flex gap-1.5 my-2">
-                    {[1, 2, 3, 4, 5].map((i) => (
-                      <Image key={i} src="/star.svg" alt="Star" width={20} height={20} />
-                    ))}
-                  </div>
+                    {/* Yulduzchalar (5 ta yashil kvadrat) */}
+                    <div className="flex gap-1.5 my-2">
+                      {[1, 2, 3, 4, 5].map((i) => (
+                        <Image key={i} src="/star.svg" alt="Star" width={20} height={20} />
+                      ))}
+                    </div>
 
-                  {/* Reyting matni */}
-                  <div className="text-[#6c757d] text-lg font-medium font-vk flex items-center gap-2">
-                    <span>Рейтинг</span>
-                    <span className="text-[#3D445E] font-bold">4.0</span>
+                    {/* Reyting matni */}
+                    <div className="text-[#6c757d] text-lg font-medium font-vk flex items-center gap-2">
+                      <span>Рейтинг</span>
+                      <span className="text-[#3D445E] font-bold">4.0</span>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
