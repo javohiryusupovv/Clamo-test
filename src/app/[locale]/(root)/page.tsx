@@ -37,6 +37,7 @@ export default async function Main() {
   };
   const safeRegionsData = statistickbyRegion ?? [];
   
+  
 
   return (
     <div className="overflow-hidden">
