@@ -8,7 +8,25 @@
   import { usePathname } from "next/navigation";
 import Image from "next/image";
 
-  export default function FooterLayout() {
+interface CompanyData {
+  id: number;
+  location: string;
+  location_uz: string;
+  location_en: string;
+  location_ru: string;
+  phone: string;
+  email: string;
+  logo: string;
+}
+
+interface FooterProps {
+  sharh: {
+    review_count: number;
+  };
+  company: CompanyData | null;
+}
+
+  export default function FooterLayout({ sharh, company }: FooterProps) {
     const t = useTranslations("FooterPage");
     const locale = useLocale();
     const menuItems = [
@@ -37,7 +55,7 @@ import Image from "next/image";
 
     return (
       <div className="md:pt-20 pt-8  bg-[#F6F9FC] p-4">
-        <Contact />
+        <Contact company={company} />
 
         <div className="relative w-full sm:h-[500px] h-[900px] bg-[#F6F9FC] overflow-hidden">
           <div className="container relative z-[50]">
@@ -104,7 +122,7 @@ import Image from "next/image";
                     </Link>
                     <Link
                       href={
-                        "https://www.linkedin.com/in/clamo-social-3a1454364/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                        "https://www.linkedin.com/company/clamo-uz/?viewAsMember=true"
                       }
                       target="_blank"
                       rel="noopener noreferrer"
@@ -178,14 +196,14 @@ import Image from "next/image";
                     {/* Yulduzchalar (5 ta yashil kvadrat) */}
                     <div className="flex gap-1.5 my-2">
                       {[1, 2, 3, 4, 5].map((i) => (
-                        <Image key={i} src="/star.svg" alt="Star" width={20} height={20} />
+                        <Image key={i} src="/star.svg" alt="Star" width={20} height={20} style={{ filter: i <= Math.round(sharh?.review_count || 0) ? "none" : "grayscale(100%)" }} />
                       ))}
                     </div>
 
                     {/* Reyting matni */}
                     <div className="text-[#6c757d] text-lg font-medium font-vk flex items-center gap-2">
-                      <span>Рейтинг</span>
-                      <span className="text-[#3D445E] font-bold">4.0</span>
+                      <span>{t("rating")}</span>
+                      <span className="text-[#3D445E] font-bold">{sharh?.review_count}</span>
                     </div>
                   </div>
                 </Link>
@@ -227,7 +245,7 @@ import Image from "next/image";
                   href={"https://iq-tech.uz/"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center transition-all duration-300"
+                  className="group flex items-start gap-2 transition-all duration-300"
                 >
                   <img
                     src="/logo/devLogo.svg"
@@ -236,9 +254,10 @@ import Image from "next/image";
                     width={35}
                     height={35}
                   />
-                  <span className="max-ms:translate-x-1 ms:translate-x-[20px] max-ms:text-[16px] ms:opacity-0 ms:group-hover:translate-x-[8px] ms:group-hover:opacity-[1] transition-all duration-300 text-[18px] font-bold">
-                    IQ Tech
-                  </span>
+                  <span className=" text-lg font-bold">IQ Tech</span>
+                  {/* <span className="max-ms:translate-x-1 ms:translate-x-[20px] max-ms:text-[16px] ms:opacity-0 ms:group-hover:translate-x-[8px] ms:group-hover:opacity-[1] transition-all duration-300 text-[18px] font-bold">
+                    
+                  </span> */}
                 </Link>
               </div>
             </div>

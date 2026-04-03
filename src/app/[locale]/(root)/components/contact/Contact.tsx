@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { LoaderCircle } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -12,10 +12,41 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import emailjs from '@emailjs/browser';
 import ReCaptchaComponent from '@/components/ReCaptcha';
+import { getLocalizedValue, pickStringProps } from '@/lib/getLocalization';
 
-export default function Contact() {
+interface CompanyData {
+  id: number;
+  location: string;
+  location_uz: string;
+  location_en: string;
+  location_ru: string;
+  phone: string;
+  email: string;
+  logo: string;
+}
+
+export default function Contact({ company }: { company: CompanyData | null }) {
   const t = useTranslations('ContactPage');
   const zod = useTranslations('ZodForm');
+  const locale = useLocale();
+  const lang = locale.split('-')[0];
+
+  console.log(company);
+  
+
+  const phone = company?.phone || '+998555143003';
+  const email = company?.email || 'info@clamo.uz';
+  const address = company
+    ? getLocalizedValue(pickStringProps(company), 'location', lang)
+    : t('address');
+
+  const formatPhone = (p: string) => {
+    const digits = p.replace(/\D/g, '');
+    if (digits.length === 12) {
+      return `+${digits.slice(0, 3)} (${digits.slice(3, 5)}) ${digits.slice(5, 8)} ${digits.slice(8, 10)} ${digits.slice(10)}`;
+    }
+    return p;
+  };
   const formSchema = getFormSchema(zod);
   const [isLoading, setIsLoading] = useState(false);
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
@@ -147,7 +178,7 @@ export default function Contact() {
                   {t('addressLabel')}
                 </span>
                 <p className="text-[14px] sm:text-[16px] font-medium text-white line-clamp-1">
-                  {t('address')}
+                  {address}
                 </p>
               </article>
             </Link>
@@ -156,7 +187,7 @@ export default function Contact() {
 
             {/* Email */}
             <a
-              href="mailto:info@clamo.uz"
+              href={`mailto:${email}`}
               aria-label="Email"
               target="_blank"
               rel="noopener noreferrer"
@@ -176,7 +207,7 @@ export default function Contact() {
                   {t('emailLabel')}
                 </span>
                 <p className="text-[14px] sm:text-[16px] font-medium font-vk text-white line-clamp-1">
-                  info@clamo.uz
+                  {email}
                 </p>
               </article>
             </a>
@@ -198,15 +229,10 @@ export default function Contact() {
                   {t('phonee')}
                 </span>
 
-                      <a href="tel:+998555143003"
+                      <a href={`tel:${phone}`}
                          aria-label="Phone number"
                          className="text-[14px] sm:text-[16px] font-medium font-vk text-white line-clamp-1 cursor-pointer hover:text-white/80 transition-colors">
-                          +998 (55) 514 30 03
-                      </a>
-                      <a href="tel:+998555163003"
-                         aria-label="Phone number"
-                         className="text-[14px] sm:text-[16px] font-medium font-vk text-white line-clamp-1 cursor-pointer hover:text-white/80 transition-colors">
-                          +998 (55) 516 30 03
+                          {formatPhone(phone)}
                       </a>
 
 

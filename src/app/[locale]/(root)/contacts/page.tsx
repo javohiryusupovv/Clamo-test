@@ -3,19 +3,17 @@ import Map from "./_components/Map";
 import SochealMedia from "./_components/Sochealmedia";
 import { getLocalizedValue } from "@/lib/getLocalization";
 
-
-
 export async function generateMetadata({ params }: { params: Promise<{locale: string }>}) {
   const {locale} = await params
     const content = {
-    title_uz: "Biz bilan bog‘laning — CLAMO",
-    description_uz: "Savollaringiz bormi? CLAMO jamoasi bilan tez va oson bog‘laning. Sizga yordam berishga tayyormiz!",
+    title_uz: "Biz bilan bog'laning — CLAMO",
+    description_uz: "Savollaringiz bormi? CLAMO jamoasi bilan tez va oson bog'laning. Sizga yordam berishga tayyormiz!",
 
     title_ru: "Свяжитесь с нами — CLAMO",
     description_ru: "Есть вопросы? Свяжитесь с командой CLAMO быстро и удобно. Мы всегда готовы помочь!",
 
     title_en: "Contact Us — CLAMO",
-    description_en: "Have questions? Reach out to the CLAMO team quickly and easily. We’re here to help!",
+    description_en: "Have questions? Reach out to the CLAMO team quickly and easily. We're here to help!",
   };
 
   return {
@@ -23,8 +21,6 @@ export async function generateMetadata({ params }: { params: Promise<{locale: st
     description: getLocalizedValue(content, "description", locale),
   };
 }
-
-
 
 export default function Contacts() {
   const t = useTranslations("ContactPageLayout");
@@ -39,7 +35,6 @@ export default function Contacts() {
           {t("contact_subtitle")}
         </p>
       </div>
-      {/* <span></span> */}
       <Map />
       <SochealMedia />
     </div>

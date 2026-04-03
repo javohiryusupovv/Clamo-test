@@ -36,8 +36,7 @@ export default async function Main() {
     accreditations_count: 0,
   };
   const safeRegionsData = statistickbyRegion ?? [];
-  
-  
+    
 
   return (
     <div className="overflow-hidden">
