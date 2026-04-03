@@ -30,9 +30,7 @@ const CenterRegulations = () => {
         <div className="relative z-10">
           {" "}
           {/* Ensure content is above the watermark */}
-          <h2 className="text-2xl font-vk md:text-3xl font-semibold text-[#3D445E] mb-4">
-            {t("centerRegulationsSubtitle")}
-          </h2>
+         
           <p className="font-vk leading-relaxed mb-4 text-[#3D445E]">
             {t("centerRegulationsParagraph1")}
           </p>
@@ -48,10 +46,10 @@ const CenterRegulations = () => {
           <p className="text-[#3D445E] font-vk leading-relaxed mb-6">
             {t("centerRegulationsParagraph3")}
           </p>
-          <button className="group font-vk hover:bg-[#23B3FC]/[80%] w-[272px] h-[40px] flex items-center justify-center gap-[11.5px] bg-[#23B3FC] rounded-lg text-sm font-medium  leading-[130%] mt-[50px] text-[white]">
+          {/* <button className="group font-vk hover:bg-[#23B3FC]/[80%] w-[272px] h-[40px] flex items-center justify-center gap-[11.5px] bg-[#23B3FC] rounded-lg text-sm font-medium  leading-[130%] mt-[50px] text-[white]">
             {t("downloadButton")}{" "}
             <FaAngleRight className="md:group-hover:translate-x-2 transition-all duration-200" />
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
