@@ -36,9 +36,14 @@ export default function ContactPage() {
 
   const phone = company?.phone || "+998555143003";
   const email = company?.email || "info@clamo.uz";
-  const address = company
-    ? getLocalizedValue(pickStringProps(company), "location", lang)
-    : "";
+  const address =
+  (lang === "uz"
+    ? company?.location_uz
+    : lang === "ru"
+      ? company?.location_ru
+      : company?.location_en) ||
+  company?.location ||
+  "51 Parkent Street, Tashkent";
 
   const formatPhone = (p: string) => {
     const digits = p.replace(/\D/g, "");
@@ -48,6 +53,9 @@ export default function ContactPage() {
     return p;
   };
 
+  console.log(company);
+  
+  
   return (
     <div className="relative w-full md:h-[550px] h-[450px] mb-20">
       <iframe
