@@ -176,9 +176,20 @@
     "work_direction_subtitle": "Explore our departments — all of our services are convenient and tailored to your needs."
   },
   "AboutPage": {
+    "markazfaoliyat": "Center Activities",
+    "markazfaoliyatDescription": "The center's activities are carried out in accordance with the legislation of the Republic of Uzbekistan, regulatory legal acts in the field of healthcare, as well as the internal regulations and assigned tasks of the Center.",
+    "goals": {
+      "item1": "Further improving the quality and safety of medical institutions",
+      "item2": "Ensuring licensing and accreditation of medical organizations",
+      "item3": "Monitoring compliance with medical service quality standards and license requirements and conditions",
+      "item4": "Developing requirements based on advanced international experience",
+      "item5": "Improving the quality of local medical services and introducing \"safe medicine\" standards by engaging internationally recognized accreditation organizations",
+      "item6": "Developing modern mechanisms of state support for the non-governmental healthcare sector",
+      "item7": "Developing a sustainable development strategy for non-governmental medical organizations",
+      "item8": "Participating in and supporting non-governmental medical organizations in obtaining internationally recognized accreditation"
+    },
     "plan": "Our plans:",
     "abouttitle": "Enhancing the quality and safety of medical institutions.",
-    "about_des1": "Ensuring licensing and accreditation of medical organizations Exercising control over the quality of medical services and compliance with licensing requirements and conditions Developing requirements based on advanced international experience Improving the quality of local medical services and introducing 'safe medicine' standards by engaging internationally recognized accreditation bodies Developing modern mechanisms of state support for the non-governmental healthcare sector Developing a sustainable development strategy for non-governmental medical organizations Participating in and supporting non-governmental medical organizations in obtaining internationally recognized accreditation",
     "service": "Services provided by the center",
     "service_des": "Process management and quality assurance complex.",
     "team_title": "Our Team",
@@ -301,7 +312,7 @@
     "law3Title": "№2 Law on Accreditation",
     "law3Content": "This is a brief description of the second law on accreditation.",
     "linkText2": "Link",
-    "centerRegulationsTitle": "The main charter and internal regulations defining the activities of the center.",
+    "centerRegulationsTitle": "Center Regulations",
     "centerRegulationsDescription": "All essential services to improve healthcare quality and processes in one place with convenient and efficient solutions.",
     "centerRegulationsSubtitle": "Center Regulations",
     "centerRegulationsParagraph1": "Our center's operations are carried out in accordance with the laws of the Republic of Uzbekistan, regulatory legal acts in the healthcare sector, as well as the internal regulations and assigned tasks of the Center.",

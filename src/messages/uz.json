@@ -99,35 +99,27 @@
       "time_one": "10 daqiqa oldin",
       "comment_one": "Onlayn tizim orqali litsenziya olish juda oson va qulay bo‘ldi. Qog‘ozbozlik yo‘q, hamma narsa aniq va avtomatlashtirilgan. Juda minnatdorman!",
       "fikr": "CLAMO haqidagi fikr",
-
       "name_two": "Jasur Ikromov",
       "time_two": "1 soat oldin",
       "comment_two": "Elektron ariza topshirish va hujjat yuborish jarayoni kutilgandan ancha tez bo‘ldi. Barcha bosqichlar avtomatlashtirilgan ishlarni yengillashtirdi.",
-
       "name_three": "Shaxnoza Saidova",
       "time_three": "25 daqiqa oldin",
       "comment_three": "Boshida biroz ishonmagan edim, lekin platforma haqiqatdan ham yaxshi ishlangan. Hujjatlarimni yubordim va kutib turmasdan javob oldim.",
-
       "name_four": "Murod Rahimov",
       "time_four": "40 daqiqa oldin",
       "comment_four": "Litsenziyalash jarayonida byurokratiyadan bezib qolgan edim. Bu onlayn servis ishlarimni ancha osonlashtirdi. Sizlarga rahmat!",
-
       "name_five": "Nargiza Xolmuhamedova",
       "time_five": "5 daqiqa oldin",
       "comment_five": "Yagona elektron tizim orqali litsenziya olish bosqichlari juda kulay. Interfeys veb-sayti tushunarli va zamonaviy.",
-
       "name_six": "Shaxnoza Kamolova",
       "time_six": "3 daqiqa oldin",
       "comment_six": "Jarayon ancha soddalashtirilgan. Foydalanuvchi sifatida oson tushundim va muammosiz foydalandim.",
-
       "name_seven": "Aziz Bahriddinov",
       "time_seven": "1 daqiqa oldin",
       "comment_seven": "Ilova interfeysi juda qulay. Hujjatlarimni yuklashda hech qanday qiyinchilik bo‘lmadi.",
-
       "name_eight": "Oybek Rahimov",
       "time_eight": "1 soat oldin",
       "comment_eight": "Yangi tizim haqiqatan ham samarali ishlayapti. Barcha bosqichlar aniq ko‘rsatilgan, navbat kutishlar yo‘q.",
-
       "name_nine": "Gulchehra Yusupova",
       "time_nine": "2 soat oldin",
       "comment_nine": "Raqamli tizim yordamida ko‘plab vaqtimni tejadim. Avvalgi kabi navbatlarda turishga hojat yo‘q — barchasi onlayn amalga oshadi."
@@ -183,9 +175,20 @@
     "work_direction_subtitle": "Bizning bo‘limlariz bilan tanishing, bizda barcha bo‘limlariz xizmati juda qulay va siz uchun mos keladi."
   },
   "AboutPage": {
+    "markazfaoliyat": "Markaz faoliyati",
+    "markazfaoliyatDescription": "Oʻzbekiston Respublikasi Sogʻliqni saqlash vazirligi huzuridagi Tibbiyot tashkilotlarini litsenziyalash va akkreditatsiyalash markazi O‘zbekistonda tibbiy xizmatlar sifatini oshirish, bemor xavfsizligini ta’minlash hamda tibbiyot muassasalari faoliyatini baholashga qaratilgan faoliyatni amalga oshiradi.",
+    "goals": {
+      "item1": "Tibbiyot muassasalarining sifati va xavfsizligini yanada oshirish",
+      "item2": "Tibbiyot tashkilotlarini litsenziyalash va akkreditatsiyalashni ta'minlash",
+      "item3": "Litsenziyalarning tibbiy xizmatlar sifati hamda litsenziya talab va shartlariga rioya etilishi ustidan nazoratni amalga oshirish",
+      "item4": "Ilg'or xalqaro tajribaga asoslangan talablarni ishlab chiqish",
+      "item5": "Xalqaro tan olingan akkreditatsiya tashkilotlarini jalb qilish orqali mahalliy tibbiy xizmatlar sifatini oshirish va \"xavfsiz tibbiyot\" standartlarini joriy etish",
+      "item6": "Tibbiyotning nodavlat sektorini davlat tomonidan qo'llab-quvvatlashning zamonaviy mexanizmlarini ishlab chiqish",
+      "item7": "Nodavlat tibbiyot tashkilotlarini barqaror rivojlantirish strategiyasini ishlab chiqish",
+      "item8": "Nodavlat tibbiyot tashkilotlarini xalqaro tan olingan akkreditatsiyadan o'tkazishda qatnashish va ularni qo'llab-quvvatlash"
+    },
     "plan": "Bizning rejalar:",
     "abouttitle": "Tibbiyot muassasalarining sifati va xavfsizligini yanada oshirish",
-    "about_des1": "Tibbiyot tashkilotlarini litsenziyalash va akkreditatsiyalashni ta’minlash Litsenziyalarning tibbiy xizmatlar sifati hamda litsenziya talab va shartlariga rioya etilishi ustidan nazoratni amalga oshirish Ilg‘or xalqaro tajribaga asoslangan talablarni ishlab chiqish Xalqaro tan olingan akkreditatsiya tashkilotlarini jalb qilish orqali mahalliy tibbiy xizmatlar sifatini oshirish va “xavfsiz tibbiyot” standartlarini joriy etish Tibbiyotning nodavlat sektorini davlat tomonidan qo‘llab-quvvatlashning zamonaviy mexanizmlarini ishlab chiqish Nodavlat tibbiyot tashkilotlarini barqaror rivojlantirish strategiyasini ishlab chiqish Nodavlat tibbiyot tashkilotlarini xalqaro tan olingan akkreditatsiyadan o‘tkazishda qatnashish va ularni qo‘llab-quvvatlash",
     "service": "Markaz ko'rsatadigan xizmatlar",
     "service_des": "Jarayonlarni yengilashtiruvchi va sifatni kafolatlovchi xizmatlar majmuasi.",
     "team_title": "Markaz jamoasi",
@@ -308,7 +311,7 @@
     "law3Title": "Akkreditatsiyalash bo‘yicha 2-qonun",
     "law3Content": "Bu yerda akkreditatsiya bo‘yicha ikkinchi qonunning qisqacha tavsifi.",
     "linkText2": "Havola",
-    "centerRegulationsTitle": "Markaz faoliyatini belgilovchi asosiy nizom va ichki tartib-qoidalar.",
+    "centerRegulationsTitle": "Markaz Nizomi va Ichki qoidalari",
     "centerRegulationsDescription": "Tibbiyot sifati va jarayonlarini yaxshilash uchun kerakli barcha xizmatlar bir joyda, qulay va samarali yechimlar bilan.",
     "centerRegulationsSubtitle": "Markaz nizomlari",
     "centerRegulationsParagraph1": "Markazimiz faoliyati O'zbekiston Respublikasi qonunlariga, sog'liqni saqlash sohasidagi normativ-huquqiy hujjatlarga, shuningdek, Markazning ichki nizomi va belgilangan vazifalariga muvofiq amalga oshiriladi.",
