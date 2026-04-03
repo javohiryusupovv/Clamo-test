@@ -8,7 +8,6 @@ import {
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { getLocalizedValue, pickStringProps } from "@/lib/getLocalization";
 
 interface CompanyData {
   location: string;
@@ -52,8 +51,6 @@ export default function ContactPage() {
     }
     return p;
   };
-
-  console.log(company);
   
   
   return (
